@@ -1,0 +1,243 @@
+<https://w3id.org/mint/modelCatalog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/mint/modelCatalog> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/mint/modelCatalog/0.0.1> .
+<https://w3id.org/mint/modelCatalog> <http://purl.org/dc/elements/1.1/contributor> "Jay Pujara"@en .
+<https://w3id.org/mint/modelCatalog> <http://purl.org/dc/elements/1.1/creator> "Daniel Garijo"@en .
+<https://w3id.org/mint/modelCatalog> <http://purl.org/dc/elements/1.1/creator> "Varun Ratnakar"@en .
+<https://w3id.org/mint/modelCatalog> <http://purl.org/dc/elements/1.1/creator> "Yolanda Gil"@en .
+<https://w3id.org/mint/modelCatalog> <http://purl.org/dc/elements/1.1/license> "http://creativecommons.org/licenses/by/2.0/"@en .
+<https://w3id.org/mint/modelCatalog> <http://purl.org/dc/elements/1.1/title> "The MINT Model Catalog Ontology"@en .
+<https://w3id.org/mint/modelCatalog> <http://purl.org/vocab/vann/preferredNamespacePrefix> "https://w3id.org/mint/modelCatalog#"@en .
+<https://w3id.org/mint/modelCatalog> <http://purl.org/vocab/vann/preferredNamespacePrefix> "mc"@en .
+<https://w3id.org/mint/modelCatalog> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology for describing models and their linkages to variables."@en .
+<https://w3id.org/mint/modelCatalog> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/license
+<http://purl.org/dc/elements/1.1/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/mint/modelCatalog#correspondsToStandardVariable
+<https://w3id.org/mint/modelCatalog#correspondsToStandardVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/mint/modelCatalog#correspondsToStandardVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/modelCatalog#VariablePresentation> .
+<https://w3id.org/mint/modelCatalog#correspondsToStandardVariable> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mint/modelCatalog#Variable> .
+<https://w3id.org/mint/modelCatalog#correspondsToStandardVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links a variable presentation to the general variable concept it represents."@en .
+<https://w3id.org/mint/modelCatalog#correspondsToStandardVariable> <http://www.w3.org/2000/01/rdf-schema#label> "corresponds to standard variable"@en .
+# 
+# https://w3id.org/mint/modelCatalog#hasConfiguration
+<https://w3id.org/mint/modelCatalog#hasConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/mint/modelCatalog#hasConfiguration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/modelCatalog#Model> .
+<https://w3id.org/mint/modelCatalog#hasConfiguration> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mint/modelCatalog#ModelConfiguration> .
+<https://w3id.org/mint/modelCatalog#hasConfiguration> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links a model to one of its configurations. A model may have multiple configurations, each of which is unique in terms of the inputs and outputs it uses."@en .
+<https://w3id.org/mint/modelCatalog#hasConfiguration> <http://www.w3.org/2000/01/rdf-schema#label> "has configuration"@en .
+# 
+# https://w3id.org/mint/modelCatalog#hasInput
+<https://w3id.org/mint/modelCatalog#hasInput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/mint/modelCatalog#hasInput> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/modelCatalog#ModelConfiguration> .
+<https://w3id.org/mint/modelCatalog#hasInput> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mint/modelCatalog#Input> .
+<https://w3id.org/mint/modelCatalog#hasInput> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links a model configuration to the input types expected by it."@en .
+<https://w3id.org/mint/modelCatalog#hasInput> <http://www.w3.org/2000/01/rdf-schema#label> "has input"@en .
+# 
+# https://w3id.org/mint/modelCatalog#hasModule
+<https://w3id.org/mint/modelCatalog#hasModule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/mint/modelCatalog#hasModule> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/modelCatalog#ModelConfiguration> .
+<https://w3id.org/mint/modelCatalog#hasModule> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mint/modelCatalog#Module> .
+<https://w3id.org/mint/modelCatalog#hasModule> <http://www.w3.org/2000/01/rdf-schema#comment> "link between a model configuration and a module being used on it"@en .
+<https://w3id.org/mint/modelCatalog#hasModule> <http://www.w3.org/2000/01/rdf-schema#label> "has module"@en .
+# 
+# https://w3id.org/mint/modelCatalog#hasOutput
+<https://w3id.org/mint/modelCatalog#hasOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/mint/modelCatalog#hasOutput> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/modelCatalog#ModelConfiguration> .
+<https://w3id.org/mint/modelCatalog#hasOutput> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mint/modelCatalog#Output> .
+<https://w3id.org/mint/modelCatalog#hasOutput> <http://www.w3.org/2000/01/rdf-schema#comment> "Preoperty that expresses what are the outputs of a model"@en .
+<https://w3id.org/mint/modelCatalog#hasOutput> <http://www.w3.org/2000/01/rdf-schema#label> "has output"@en .
+# 
+# https://w3id.org/mint/modelCatalog#hasVariablePresentation
+<https://w3id.org/mint/modelCatalog#hasVariablePresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/mint/modelCatalog#hasVariablePresentation> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#Input> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#Output> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/mint/modelCatalog#hasVariablePresentation> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mint/modelCatalog#VariablePresentation> .
+<https://w3id.org/mint/modelCatalog#hasVariablePresentation> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links an input or output to the variable type it must contain. For example, you expect that one of the inputs of a model is a NetCDF file with temperature values expressed in Celsius degrees."@en .
+<https://w3id.org/mint/modelCatalog#hasVariablePresentation> <http://www.w3.org/2000/01/rdf-schema#label> "has variable presentation"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/mint/modelCatalog#followsStandard
+<https://w3id.org/mint/modelCatalog#followsStandard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mint/modelCatalog#followsStandard> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/modelCatalog#Model> .
+<https://w3id.org/mint/modelCatalog#followsStandard> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/mint/modelCatalog#followsStandard> <http://www.w3.org/2000/01/rdf-schema#comment> "Standard that an input file has to follow (e.g., NetCDF v1.0.0), in order for a model to work."@en .
+<https://w3id.org/mint/modelCatalog#followsStandard> <http://www.w3.org/2000/01/rdf-schema#label> "follows standard"@en .
+# 
+# https://w3id.org/mint/modelCatalog#hasAssumption
+<https://w3id.org/mint/modelCatalog#hasAssumption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mint/modelCatalog#hasAssumption> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/modelCatalog#Model> .
+<https://w3id.org/mint/modelCatalog#hasAssumption> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/mint/modelCatalog#hasAssumption> <http://www.w3.org/2000/01/rdf-schema#comment> "Assumptions of a model, e.g. the solver being used."@en .
+<https://w3id.org/mint/modelCatalog#hasAssumption> <http://www.w3.org/2000/01/rdf-schema#label> "has Assumption"@en .
+# 
+# https://w3id.org/mint/modelCatalog#hasFormat
+<https://w3id.org/mint/modelCatalog#hasFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mint/modelCatalog#hasFormat> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#Input> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#Output> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/mint/modelCatalog#hasFormat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/mint/modelCatalog#hasFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "Format followed by a file. For example, txt, nc, etc."@en .
+<https://w3id.org/mint/modelCatalog#hasFormat> <http://www.w3.org/2000/01/rdf-schema#label> "has format"@en .
+# 
+# https://w3id.org/mint/modelCatalog#hasName
+<https://w3id.org/mint/modelCatalog#hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mint/modelCatalog#hasName> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#Variable> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#VariablePresentation> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/mint/modelCatalog#hasName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/mint/modelCatalog#hasName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of a variable or variable presentation"@en .
+<https://w3id.org/mint/modelCatalog#hasName> <http://www.w3.org/2000/01/rdf-schema#label> "has name"@en .
+# 
+# https://w3id.org/mint/modelCatalog#hasStandardName
+<https://w3id.org/mint/modelCatalog#hasStandardName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mint/modelCatalog#hasStandardName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/mint/modelCatalog#hasName> .
+<https://w3id.org/mint/modelCatalog#hasStandardName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/modelCatalog#Variable> .
+<https://w3id.org/mint/modelCatalog#hasStandardName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/mint/modelCatalog#hasStandardName> <http://www.w3.org/2000/01/rdf-schema#comment> "Standard name associated to this variable"@en .
+<https://w3id.org/mint/modelCatalog#hasStandardName> <http://www.w3.org/2000/01/rdf-schema#label> "has standard name"@en .
+# 
+# https://w3id.org/mint/modelCatalog#hasTimeInterval
+<https://w3id.org/mint/modelCatalog#hasTimeInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mint/modelCatalog#hasTimeInterval> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/modelCatalog#Input> .
+<https://w3id.org/mint/modelCatalog#hasTimeInterval> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/mint/modelCatalog#hasTimeInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "Interval at which the model expects an input to be captured (monthly, daily, etc.)"@en .
+<https://w3id.org/mint/modelCatalog#hasTimeInterval> <http://www.w3.org/2000/01/rdf-schema#label> "has time interval"@en .
+# 
+# https://w3id.org/mint/modelCatalog#hasTimeRepresentation
+<https://w3id.org/mint/modelCatalog#hasTimeRepresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mint/modelCatalog#hasTimeRepresentation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/modelCatalog#Input> .
+<https://w3id.org/mint/modelCatalog#hasTimeRepresentation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/mint/modelCatalog#hasTimeRepresentation> <http://www.w3.org/2000/01/rdf-schema#comment> "Representation of the time used in an input, as required by the model"@en .
+<https://w3id.org/mint/modelCatalog#hasTimeRepresentation> <http://www.w3.org/2000/01/rdf-schema#label> "has time representation"@en .
+# 
+# https://w3id.org/mint/modelCatalog#hasUnits
+<https://w3id.org/mint/modelCatalog#hasUnits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mint/modelCatalog#hasUnits> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/modelCatalog#VariablePresentation> .
+<https://w3id.org/mint/modelCatalog#hasUnits> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/mint/modelCatalog#hasUnits> <http://www.w3.org/2000/01/rdf-schema#comment> "Units used in variable presentation"@en .
+<https://w3id.org/mint/modelCatalog#hasUnits> <http://www.w3.org/2000/01/rdf-schema#label> "has units"@en .
+# 
+# https://w3id.org/mint/modelCatalog#needsResolution
+<https://w3id.org/mint/modelCatalog#needsResolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mint/modelCatalog#needsResolution> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/modelCatalog#Model> .
+<https://w3id.org/mint/modelCatalog#needsResolution> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/mint/modelCatalog#needsResolution> <http://www.w3.org/2000/01/rdf-schema#comment> "Resolution needed by a model."@en .
+<https://w3id.org/mint/modelCatalog#needsResolution> <http://www.w3.org/2000/01/rdf-schema#label> "needs resolution"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://ontosoft.org/software#Function
+<http://ontosoft.org/software#Function> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontosoft.org/software#Function> <http://www.w3.org/2000/01/rdf-schema#comment> "\"Function\" is part of an Ontosoft extension currently being developed"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://ontosoft.org/software#Function> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://ontosoft.org/software#"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# http://ontosoft.org/software#Software
+<http://ontosoft.org/software#Software> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://ontosoft.org/software#Software> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://ontosoft.org/software#"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+# 
+# https://w3id.org/mint/modelCatalog#Input
+<https://w3id.org/mint/modelCatalog#Input> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mint/modelCatalog#Input> <http://www.w3.org/2000/01/rdf-schema#comment> "An input file used by a model configuration. It may be a parameter or a dataset."@en .
+<https://w3id.org/mint/modelCatalog#Input> <http://www.w3.org/2000/01/rdf-schema#label> "Input"@en .
+# 
+# https://w3id.org/mint/modelCatalog#Model
+<https://w3id.org/mint/modelCatalog#Model> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mint/modelCatalog#Model> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontosoft.org/software#Software> .
+<https://w3id.org/mint/modelCatalog#Model> <http://www.w3.org/2000/01/rdf-schema#comment> "A scientific model (from Hydrology, Agronomy, etc.) that represents a set of processes (infiltration, outflow, etc.) to be simulated."@en .
+<https://w3id.org/mint/modelCatalog#Model> <http://www.w3.org/2000/01/rdf-schema#label> "Model"@en .
+# 
+# https://w3id.org/mint/modelCatalog#ModelConfiguration
+<https://w3id.org/mint/modelCatalog#ModelConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mint/modelCatalog#ModelConfiguration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontosoft.org/software#Function> .
+<https://w3id.org/mint/modelCatalog#ModelConfiguration> <http://www.w3.org/2000/01/rdf-schema#comment> "A model may be configured in different ways depending on the data that is avaialble. For example, if topological information is available,  a groundwater model may use it to produce a better estimation of the water budget of an aquifer. A model configuration represents a unique setting of inputs and outputs of a given model designed for a particular functionality."@en .
+<https://w3id.org/mint/modelCatalog#ModelConfiguration> <http://www.w3.org/2000/01/rdf-schema#label> "Model configuration"@en .
+# 
+# https://w3id.org/mint/modelCatalog#Module
+<https://w3id.org/mint/modelCatalog#Module> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mint/modelCatalog#Module> <http://www.w3.org/2000/01/rdf-schema#comment> "A module is an optional software package that can be configured to run in a model configuration."@en .
+<https://w3id.org/mint/modelCatalog#Module> <http://www.w3.org/2000/01/rdf-schema#label> "Module"@en .
+# 
+# https://w3id.org/mint/modelCatalog#Output
+<https://w3id.org/mint/modelCatalog#Output> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mint/modelCatalog#Output> <http://www.w3.org/2000/01/rdf-schema#comment> "An output produced by a model configuration"@en .
+<https://w3id.org/mint/modelCatalog#Output> <http://www.w3.org/2000/01/rdf-schema#label> "Output"@en .
+# 
+# https://w3id.org/mint/modelCatalog#Variable
+<https://w3id.org/mint/modelCatalog#Variable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mint/modelCatalog#Variable> <http://www.w3.org/2000/01/rdf-schema#comment> "A symbol that represents a quantity in an input or output"@en .
+<https://w3id.org/mint/modelCatalog#Variable> <http://www.w3.org/2000/01/rdf-schema#label> "Variable"@en .
+# 
+# https://w3id.org/mint/modelCatalog#VariablePresentation
+<https://w3id.org/mint/modelCatalog#VariablePresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mint/modelCatalog#VariablePresentation> <http://www.w3.org/2000/01/rdf-schema#comment> "Concept used to represent an instantiation of a variable in an input/output dataset. For example, a model A may use an input file with temperature expressed in Farenheit (variablePresentation1), while a model B may produce an output with temperature in Celsius (variablePresentation2). Both variable presentations refer to the concept of temperature."@en .
+<https://w3id.org/mint/modelCatalog#VariablePresentation> <http://www.w3.org/2000/01/rdf-schema#label> "Variable presentation"@en .
+# 
+# Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/

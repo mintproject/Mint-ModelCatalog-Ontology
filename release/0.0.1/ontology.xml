@@ -118,7 +118,14 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/mint/modelCatalog#hasInput">
-        <rdfs:domain rdf:resource="https://w3id.org/mint/modelCatalog#ModelConfiguration"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/mint/modelCatalog#ModelConfiguration"/>
+                    <rdf:Description rdf:about="https://w3id.org/mint/modelCatalog#Module"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/mint/modelCatalog#Input"/>
         <rdfs:comment xml:lang="en">Property that links a model configuration to the input types expected by it.</rdfs:comment>
         <rdfs:label xml:lang="en">has input</rdfs:label>
@@ -130,7 +137,14 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/mint/modelCatalog#hasModule">
-        <rdfs:domain rdf:resource="https://w3id.org/mint/modelCatalog#ModelConfiguration"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/mint/modelCatalog#Model"/>
+                    <rdf:Description rdf:about="https://w3id.org/mint/modelCatalog#ModelConfiguration"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/mint/modelCatalog#Module"/>
         <rdfs:comment xml:lang="en">link between a model configuration and a module being used on it</rdfs:comment>
         <rdfs:label xml:lang="en">has module</rdfs:label>
@@ -142,7 +156,14 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/mint/modelCatalog#hasOutput">
-        <rdfs:domain rdf:resource="https://w3id.org/mint/modelCatalog#ModelConfiguration"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/mint/modelCatalog#ModelConfiguration"/>
+                    <rdf:Description rdf:about="https://w3id.org/mint/modelCatalog#Module"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/mint/modelCatalog#Output"/>
         <rdfs:comment xml:lang="en">Preoperty that expresses what are the outputs of a model</rdfs:comment>
         <rdfs:label xml:lang="en">has output</rdfs:label>

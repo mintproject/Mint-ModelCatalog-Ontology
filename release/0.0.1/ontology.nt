@@ -62,36 +62,60 @@
 # 
 # https://w3id.org/mint/modelCatalog#hasInput
 <https://w3id.org/mint/modelCatalog#hasInput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/mint/modelCatalog#hasInput> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/modelCatalog#ModelConfiguration> .
+<https://w3id.org/mint/modelCatalog#hasInput> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#ModelConfiguration> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#Module> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <https://w3id.org/mint/modelCatalog#hasInput> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mint/modelCatalog#Input> .
 <https://w3id.org/mint/modelCatalog#hasInput> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links a model configuration to the input types expected by it."@en .
 <https://w3id.org/mint/modelCatalog#hasInput> <http://www.w3.org/2000/01/rdf-schema#label> "has input"@en .
 # 
 # https://w3id.org/mint/modelCatalog#hasModule
 <https://w3id.org/mint/modelCatalog#hasModule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/mint/modelCatalog#hasModule> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/modelCatalog#ModelConfiguration> .
+<https://w3id.org/mint/modelCatalog#hasModule> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#Model> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#ModelConfiguration> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <https://w3id.org/mint/modelCatalog#hasModule> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mint/modelCatalog#Module> .
 <https://w3id.org/mint/modelCatalog#hasModule> <http://www.w3.org/2000/01/rdf-schema#comment> "link between a model configuration and a module being used on it"@en .
 <https://w3id.org/mint/modelCatalog#hasModule> <http://www.w3.org/2000/01/rdf-schema#label> "has module"@en .
 # 
 # https://w3id.org/mint/modelCatalog#hasOutput
 <https://w3id.org/mint/modelCatalog#hasOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/mint/modelCatalog#hasOutput> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/modelCatalog#ModelConfiguration> .
+<https://w3id.org/mint/modelCatalog#hasOutput> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#ModelConfiguration> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#Module> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <https://w3id.org/mint/modelCatalog#hasOutput> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mint/modelCatalog#Output> .
 <https://w3id.org/mint/modelCatalog#hasOutput> <http://www.w3.org/2000/01/rdf-schema#comment> "Preoperty that expresses what are the outputs of a model"@en .
 <https://w3id.org/mint/modelCatalog#hasOutput> <http://www.w3.org/2000/01/rdf-schema#label> "has output"@en .
 # 
 # https://w3id.org/mint/modelCatalog#hasVariablePresentation
 <https://w3id.org/mint/modelCatalog#hasVariablePresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/mint/modelCatalog#hasVariablePresentation> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#Input> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#Output> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/mint/modelCatalog#hasVariablePresentation> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid10 <http://www.w3.org/2002/07/owl#unionOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#Input> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#Output> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <https://w3id.org/mint/modelCatalog#hasVariablePresentation> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mint/modelCatalog#VariablePresentation> .
 <https://w3id.org/mint/modelCatalog#hasVariablePresentation> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links an input or output to the variable type it must contain. For example, you expect that one of the inputs of a model is a NetCDF file with temperature values expressed in Celsius degrees."@en .
 <https://w3id.org/mint/modelCatalog#hasVariablePresentation> <http://www.w3.org/2000/01/rdf-schema#label> "has variable presentation"@en .
@@ -121,30 +145,30 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # https://w3id.org/mint/modelCatalog#hasFormat
 <https://w3id.org/mint/modelCatalog#hasFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/mint/modelCatalog#hasFormat> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#Input> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#Output> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/mint/modelCatalog#hasFormat> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid13 <http://www.w3.org/2002/07/owl#unionOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#Input> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#Output> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <https://w3id.org/mint/modelCatalog#hasFormat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/mint/modelCatalog#hasFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "Format followed by a file. For example, txt, nc, etc."@en .
 <https://w3id.org/mint/modelCatalog#hasFormat> <http://www.w3.org/2000/01/rdf-schema#label> "has format"@en .
 # 
 # https://w3id.org/mint/modelCatalog#hasName
 <https://w3id.org/mint/modelCatalog#hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/mint/modelCatalog#hasName> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid7 .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid9 .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#Variable> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#VariablePresentation> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/mint/modelCatalog#hasName> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid16 <http://www.w3.org/2002/07/owl#unionOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#Variable> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#VariablePresentation> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <https://w3id.org/mint/modelCatalog#hasName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/mint/modelCatalog#hasName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of a variable or variable presentation"@en .
 <https://w3id.org/mint/modelCatalog#hasName> <http://www.w3.org/2000/01/rdf-schema#label> "has name"@en .

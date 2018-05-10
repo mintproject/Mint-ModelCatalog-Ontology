@@ -69,7 +69,11 @@
 
 ###  https://w3id.org/mint/modelCatalog#hasInput
 :hasInput rdf:type owl:ObjectProperty ;
-          rdfs:domain :ModelConfiguration ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( :ModelConfiguration
+                                      :Module
+                                    )
+                      ] ;
           rdfs:range :Input ;
           rdfs:comment "Property that links a model configuration to the input types expected by it."@en ;
           rdfs:label "has input"@en .
@@ -77,7 +81,11 @@
 
 ###  https://w3id.org/mint/modelCatalog#hasModule
 :hasModule rdf:type owl:ObjectProperty ;
-           rdfs:domain :ModelConfiguration ;
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( :Model
+                                       :ModelConfiguration
+                                     )
+                       ] ;
            rdfs:range :Module ;
            rdfs:comment "link between a model configuration and a module being used on it"@en ;
            rdfs:label "has module"@en .
@@ -85,7 +93,11 @@
 
 ###  https://w3id.org/mint/modelCatalog#hasOutput
 :hasOutput rdf:type owl:ObjectProperty ;
-           rdfs:domain :ModelConfiguration ;
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( :ModelConfiguration
+                                       :Module
+                                     )
+                       ] ;
            rdfs:range :Output ;
            rdfs:comment "Preoperty that expresses what are the outputs of a model"@en ;
            rdfs:label "has output"@en .

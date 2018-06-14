@@ -1,0 +1,808 @@
+<h2  id="crossreference" class="list">Cross reference for The MINT Commons Ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by The MINT Commons Ontology.
+<div id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">
+            <span>concept</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://schema.org/Dataset" title="http://schema.org/Dataset">
+            <span>dataset</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/mint/dataCatalog#Dataset" title="https://w3id.org/mint/dataCatalog#Dataset">Dataset</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/mint/ModelCatalog#DatasetSpecification"
+            title="https://w3id.org/mint/ModelCatalog#DatasetSpecification">Dataset specification</a>
+      </li>
+      <li>
+         <a href="#http://schema.org/Place" title="http://schema.org/Place">
+            <span>place</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/mint/dataCatalog#StandardVariable"
+            title="https://w3id.org/mint/dataCatalog#StandardVariable">Standard variable</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/mint/dataCatalog#TimeConvention" title="https://w3id.org/mint/dataCatalog#TimeConvention">Time Convention</a>
+      </li>
+      <li>
+         <a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">
+            <span>unit</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/mint/dataCatalog#Unit" title="https://w3id.org/mint/dataCatalog#Unit">Unit</a>
+      </li>
+      <li>
+         <a href="#http://www.geoscienceontology.org/geo-upper#Variable"
+            title="http://www.geoscienceontology.org/geo-upper#Variable">
+            <span>variable</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/mint/dataCatalog#Variable" title="https://w3id.org/mint/dataCatalog#Variable">Variable</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/mint/dataCatalog#VariablePresentation"
+            title="https://w3id.org/mint/dataCatalog#VariablePresentation">VariablePresentation</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://www.w3.org/2004/02/skos/core#Concept">
+      <h3>concept<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Concept</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core">http://www.w3.org/2004/02/skos/core</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://schema.org/Dataset">
+      <h3>dataset<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/Dataset</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://schema.org/">http://schema.org/</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/mint/dataCatalog#Dataset" title="https://w3id.org/mint/dataCatalog#Dataset">Dataset</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/mint/ModelCatalog#DatasetSpecification"
+               title="https://w3id.org/mint/ModelCatalog#DatasetSpecification">Dataset specification</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://schema.org/spatialCoverage" title="http://schema.org/spatialCoverage">spatial coverage</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://schema.org/temporalCoverage" title="http://schema.org/temporalCoverage">temporal coverage</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/mint/dataCatalog#Dataset">
+      <h3>Dataset<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/dataCatalog#Dataset</p>
+      <div class="comment">
+         <span class="markdown">Extension of the W3C Data Catalog dataset that has additional properties for the MINT data catalog</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://schema.org/Dataset" title="http://schema.org/Dataset">dataset</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/ns/dcat#Dataset">dataset</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/mint/ModelCatalog#DatasetSpecification">
+      <h3>Dataset specification<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/ModelCatalog#DatasetSpecification</p>
+      <div class="comment">
+         <span class="markdown">Class designed to describe a type of input or output used or produced by a model. For example, Topoflow has several inputs. One of them is a text file with precipitation values. The representation of this input is an instance of a dataset specification.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://schema.org/Dataset" title="http://schema.org/Dataset">dataset</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://schema.org/Place">
+      <h3>place<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/Place</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://schema.org/">http://schema.org/</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://schema.org/spatialCoverage" title="http://schema.org/spatialCoverage">spatial coverage</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/mint/dataCatalog#StandardVariable">
+      <h3>Standard variable<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/dataCatalog#StandardVariable</p>
+      <div class="comment">
+         <span class="markdown">A standard variable, necessary to refer to all the variable using the same nomenclature in a domain ontology</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#http://www.geoscienceontology.org/geo-upper#Variable"
+               title="http://www.geoscienceontology.org/geo-upper#Variable">variable</a>
+            <sup class="type-c" title="class">c</sup> 
+            <span class="logic">or</span> 
+            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://w3id.org/mint/dataCatalog#hasStandardVariable"
+               title="https://w3id.org/mint/dataCatalog#hasStandardVariable">has standard variable</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/mint/dataCatalog#TimeConvention">
+      <h3>Time Convention<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/dataCatalog#TimeConvention</p>
+      <div class="comment">
+         <span class="markdown">The convention used for modeling time values.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://w3id.org/mint/dataCatalog#usesTimeConvention"
+               title="https://w3id.org/mint/dataCatalog#usesTimeConvention">uses time convention</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://qudt.org/schema/qudt/Unit">
+      <h3>unit<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://qudt.org/schema/qudt/Unit</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://qudt.org/schema/qudt/">http://qudt.org/schema/qudt/</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/mint/dataCatalog#Unit" title="https://w3id.org/mint/dataCatalog#Unit">Unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://qudt.org/schema/qudt/hasDenominatorPart" title="http://qudt.org/schema/qudt/hasDenominatorPart">has denominator part</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://qudt.org/schema/qudt/hasNumeratorPart" title="http://qudt.org/schema/qudt/hasNumeratorPart">has numerator part</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://qudt.org/schema/qudt/hasDenominatorPart" title="http://qudt.org/schema/qudt/hasDenominatorPart">has denominator part</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://qudt.org/schema/qudt/hasNumeratorPart" title="http://qudt.org/schema/qudt/hasNumeratorPart">has numerator part</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/mint/dataCatalog#Unit">
+      <h3>Unit<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/dataCatalog#Unit</p>
+      <div class="comment">
+         <span class="markdown">Class designed to distinguish the different types of units that are available in variables from datasets</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">unit</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://w3id.org/mint/dataCatalog#usesUnit" title="https://w3id.org/mint/dataCatalog#usesUnit">uses Unit</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.geoscienceontology.org/geo-upper#Variable">
+      <h3>variable<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.geoscienceontology.org/geo-upper#Variable</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.geoscienceontology.org/geo-upper">http://www.geoscienceontology.org/geo-upper</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/mint/dataCatalog#Variable" title="https://w3id.org/mint/dataCatalog#Variable">Variable</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/mint/dataCatalog#Variable">
+      <h3>Variable<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/dataCatalog#Variable</p>
+      <div class="comment">
+         <span class="markdown">A symbol that represents a quantity in a dataset or a dataset specification</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.geoscienceontology.org/geo-upper#Variable"
+               title="http://www.geoscienceontology.org/geo-upper#Variable">variable</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/mint/dataCatalog#VariablePresentation"
+               title="https://w3id.org/mint/dataCatalog#VariablePresentation">VariablePresentation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://w3id.org/mint/dataCatalog#hasDescription" title="https://w3id.org/mint/dataCatalog#hasDescription">has description</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/mint/dataCatalog#hasShortName" title="https://w3id.org/mint/dataCatalog#hasShortName">has short name</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/mint/dataCatalog#VariablePresentation">
+      <h3>VariablePresentation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/dataCatalog#VariablePresentation</p>
+      <div class="comment">
+         <span class="markdown">Concept used to represent an instantiation of a variable in an input/output dataset. For example, a model A may use an input file with temperature expressed in Farenheit (variablePresentation1), while a model B may produce an output with temperature in Celsius (variablePresentation2). Both variable presentations refer to the concept of temperature.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/mint/dataCatalog#Variable" title="https://w3id.org/mint/dataCatalog#Variable">Variable</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://w3id.org/mint/dataCatalog#hasDataset" title="https://w3id.org/mint/dataCatalog#hasDataset">has dataset</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/mint/dataCatalog#hasStandardVariable"
+               title="https://w3id.org/mint/dataCatalog#hasStandardVariable">has standard variable</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/mint/dataCatalog#usesUnit" title="https://w3id.org/mint/dataCatalog#usesUnit">uses Unit</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/mint/dataCatalog#usesScale" title="https://w3id.org/mint/dataCatalog#usesScale">uses scale</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/mint/dataCatalog#usesTimeConvention"
+               title="https://w3id.org/mint/dataCatalog#usesTimeConvention">uses time convention</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://w3id.org/mint/dataCatalog#hasPresentation"
+               title="https://w3id.org/mint/dataCatalog#hasPresentation">has presentation</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://w3id.org/mint/dataCatalog#hasDataset" title="https://w3id.org/mint/dataCatalog#hasDataset">has dataset</a>
+      </li>
+      <li>
+         <a href="#http://qudt.org/schema/qudt/hasDenominatorPart" title="http://qudt.org/schema/qudt/hasDenominatorPart">
+            <span>has denominator part</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://qudt.org/schema/qudt/hasNumeratorPart" title="http://qudt.org/schema/qudt/hasNumeratorPart">
+            <span>has numerator part</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/mint/dataCatalog#hasPresentation"
+            title="https://w3id.org/mint/dataCatalog#hasPresentation">has presentation</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/mint/dataCatalog#hasStandardVariable"
+            title="https://w3id.org/mint/dataCatalog#hasStandardVariable">has standard variable</a>
+      </li>
+      <li>
+         <a href="#http://schema.org/spatialCoverage" title="http://schema.org/spatialCoverage">
+            <span>spatial coverage</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/mint/dataCatalog#usesTimeConvention"
+            title="https://w3id.org/mint/dataCatalog#usesTimeConvention">uses time convention</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/mint/dataCatalog#usesUnit" title="https://w3id.org/mint/dataCatalog#usesUnit">uses Unit</a>
+      </li>
+   </ul>
+   <div class="entity" id="https://w3id.org/mint/dataCatalog#hasDataset">
+      <h3>has dataset<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/dataCatalog#hasDataset</p>
+      <div class="comment">
+         <span class="markdown">Associates a presentation with a dataset where the presentation occurs</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/mint/dataCatalog#VariablePresentation"
+                  title="https://w3id.org/mint/dataCatalog#VariablePresentation">VariablePresentation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://w3id.org/mint/ModelCatalog#DatasetSpecification"
+                  title="https://w3id.org/mint/ModelCatalog#DatasetSpecification">Dataset specification</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#https://w3id.org/mint/dataCatalog#Dataset" title="https://w3id.org/mint/dataCatalog#Dataset">Dataset</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/mint/dataCatalog#hasPresentation"
+                  title="https://w3id.org/mint/dataCatalog#hasPresentation">has presentation</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://qudt.org/schema/qudt/hasDenominatorPart">
+      <h3>has denominator part<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://qudt.org/schema/qudt/hasDenominatorPart</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://qudt.org/schema/qudt/">http://qudt.org/schema/qudt/</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">unit</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">unit</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://qudt.org/schema/qudt/hasNumeratorPart">
+      <h3>has numerator part<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://qudt.org/schema/qudt/hasNumeratorPart</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://qudt.org/schema/qudt/">http://qudt.org/schema/qudt/</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">unit</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">unit</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/mint/dataCatalog#hasPresentation">
+      <h3>has presentation<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/dataCatalog#hasPresentation</p>
+      <div class="comment">
+         <span class="markdown">Property that links an instance of a dataset (or a dataset specification) to the presentation of a variable contained (or expected to be contained) on it.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/mint/ModelCatalog#DatasetSpecification"
+                  title="https://w3id.org/mint/ModelCatalog#DatasetSpecification">Dataset specification</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#https://w3id.org/mint/dataCatalog#Dataset" title="https://w3id.org/mint/dataCatalog#Dataset">Dataset</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://w3id.org/mint/dataCatalog#VariablePresentation"
+                  title="https://w3id.org/mint/dataCatalog#VariablePresentation">VariablePresentation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#https://w3id.org/mint/dataCatalog#hasDataset" title="https://w3id.org/mint/dataCatalog#hasDataset">has dataset</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/mint/dataCatalog#hasStandardVariable">
+      <h3>has standard variable<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/dataCatalog#hasStandardVariable</p>
+      <div class="comment">
+         <span class="markdown">The standard name of a variable</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/mint/dataCatalog#VariablePresentation"
+                  title="https://w3id.org/mint/dataCatalog#VariablePresentation">VariablePresentation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://w3id.org/mint/dataCatalog#StandardVariable"
+                  title="https://w3id.org/mint/dataCatalog#StandardVariable">Standard variable</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://schema.org/spatialCoverage">
+      <h3>spatial coverage<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/spatialCoverage</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://schema.org/">http://schema.org/</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://schema.org/Dataset" title="http://schema.org/Dataset">dataset</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://schema.org/Place" title="http://schema.org/Place">place</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/mint/dataCatalog#usesTimeConvention">
+      <h3>uses time convention<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/dataCatalog#usesTimeConvention</p>
+      <div class="comment">
+         <span class="markdown">Records the time convention used by a presentation</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/mint/dataCatalog#VariablePresentation"
+                  title="https://w3id.org/mint/dataCatalog#VariablePresentation">VariablePresentation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://w3id.org/mint/dataCatalog#TimeConvention" title="https://w3id.org/mint/dataCatalog#TimeConvention">Time Convention</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/mint/dataCatalog#usesUnit">
+      <h3>uses Unit<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/dataCatalog#usesUnit</p>
+      <div class="comment">
+         <span class="markdown">Records the unit of measurement used by a presentation</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/mint/dataCatalog#VariablePresentation"
+                  title="https://w3id.org/mint/dataCatalog#VariablePresentation">VariablePresentation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://w3id.org/mint/dataCatalog#Unit" title="https://w3id.org/mint/dataCatalog#Unit">Unit</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://w3id.org/mint/dataCatalog#hasDescription" title="https://w3id.org/mint/dataCatalog#hasDescription">has description</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/mint/dataCatalog#hasShortName" title="https://w3id.org/mint/dataCatalog#hasShortName">has short name</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/mint/dataCatalog#hasSpatialDescription"
+            title="https://w3id.org/mint/dataCatalog#hasSpatialDescription">has spatial description</a>
+      </li>
+      <li>
+         <a href="#http://schema.org/temporalCoverage" title="http://schema.org/temporalCoverage">
+            <span>temporal coverage</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/mint/dataCatalog#usesScale" title="https://w3id.org/mint/dataCatalog#usesScale">uses scale</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/mint/dataCatalog#usesSpatialResolution"
+            title="https://w3id.org/mint/dataCatalog#usesSpatialResolution">uses spatial resolution</a>
+      </li>
+   </ul>
+   <div class="entity" id="https://w3id.org/mint/dataCatalog#hasDescription">
+      <h3>has description<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/dataCatalog#hasDescription</p>
+      <div class="comment">
+         <span class="markdown">A human-readable description of a variable, which may include additional contextual information used to map to a standard name</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/mint/dataCatalog#Variable" title="https://w3id.org/mint/dataCatalog#Variable">Variable</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/mint/dataCatalog#hasShortName">
+      <h3>has short name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/dataCatalog#hasShortName</p>
+      <div class="comment">
+         <span class="markdown">A short name (e.g., temperature) capturing the high-level concept of the variable</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/mint/dataCatalog#Variable" title="https://w3id.org/mint/dataCatalog#Variable">Variable</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/mint/dataCatalog#hasSpatialDescription">
+      <h3>has spatial description<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/dataCatalog#hasSpatialDescription</p>
+      <div class="comment">
+         <span class="markdown">A human-readable description of the spatial region (e.g., South Sudan or Hudson River Valley) the dataset encompasses</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/mint/ModelCatalog#DatasetSpecification"
+                  title="https://w3id.org/mint/ModelCatalog#DatasetSpecification">Dataset specification</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#https://w3id.org/mint/dataCatalog#Dataset" title="https://w3id.org/mint/dataCatalog#Dataset">Dataset</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://schema.org/temporalCoverage">
+      <h3>temporal coverage<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://schema.org/temporalCoverage</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://schema.org/">http://schema.org/</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://schema.org/Dataset" title="http://schema.org/Dataset">dataset</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/mint/dataCatalog#usesScale">
+      <h3>uses scale<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/dataCatalog#usesScale</p>
+      <div class="comment">
+         <span class="markdown">A numerical value for the scale used in measurements</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/mint/dataCatalog#VariablePresentation"
+                  title="https://w3id.org/mint/dataCatalog#VariablePresentation">VariablePresentation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/mint/dataCatalog#usesSpatialResolution">
+      <h3>uses spatial resolution<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/dataCatalog#usesSpatialResolution</p>
+      <div class="comment">
+         <span class="markdown">A numerical value for the spatial resolution data is recorded at in a dataset</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/mint/ModelCatalog#DatasetSpecification"
+                  title="https://w3id.org/mint/ModelCatalog#DatasetSpecification">Dataset specification</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#https://w3id.org/mint/dataCatalog#Dataset" title="https://w3id.org/mint/dataCatalog#Dataset">Dataset</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>

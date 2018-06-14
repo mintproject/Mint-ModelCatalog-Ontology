@@ -1,0 +1,401 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/mint/commons#"
+     xml:base="https://w3id.org/mint/commons"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="https://w3id.org/mint/commons">
+        <owl:versionIRI rdf:resource="https://w3id.org/mint/commons/0.0.1"/>
+        <dc:abstract xml:lang="en">An ontology for describing the shared terms among all MINT ontologies</dc:abstract>
+        <dc:contributor xml:lang="en">Arunkumar Rajendran</dc:contributor>
+        <dc:contributor xml:lang="en">Binh Vu</dc:contributor>
+        <dc:contributor xml:lang="en">Craig Knoblock</dc:contributor>
+        <dc:contributor xml:lang="en">Dan Feldman</dc:contributor>
+        <dc:contributor xml:lang="en">Varun Ratnakar</dc:contributor>
+        <dc:contributor xml:lang="en">Yao-Yi Chiang</dc:contributor>
+        <dc:contributor xml:lang="en">Yolanda Gil</dc:contributor>
+        <dc:creator xml:lang="en">Daniel Garijo</dc:creator>
+        <dc:creator xml:lang="en">Jay Pujara</dc:creator>
+        <dc:title xml:lang="en">The MINT Commons Ontology</dc:title>
+        <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/2.0/</terms:license>
+        <vann:preferredNamespacePrefix xml:lang="en">mc</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceURI rdf:resource="http://w3id.org/mint/commons"/>
+        <rdfs:comment xml:lang="en">An ontology for describing the shared concepts between MINT ontologies</rdfs:comment>
+        <owl:versionInfo xml:lang="en">0.0.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://qudt.org/schema/qudt/hasDenominatorPart -->
+
+
+    <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/hasDenominatorPart">
+        <rdfs:domain rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/schema/qudt/"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/hasNumeratorPart -->
+
+
+    <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/hasNumeratorPart">
+        <rdfs:domain rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/schema/qudt/"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/spatialCoverage -->
+
+
+    <owl:ObjectProperty rdf:about="http://schema.org/spatialCoverage">
+        <rdfs:domain rdf:resource="http://schema.org/Dataset"/>
+        <rdfs:range rdf:resource="http://schema.org/Place"/>
+        <rdfs:isDefinedBy rdf:resource="http://schema.org/"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mint/dataCatalog#hasDataset -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mint/dataCatalog#hasDataset">
+        <owl:inverseOf rdf:resource="https://w3id.org/mint/dataCatalog#hasPresentation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/mint/dataCatalog#VariablePresentation"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/mint/ModelCatalog#DatasetSpecification"/>
+                    <rdf:Description rdf:about="https://w3id.org/mint/dataCatalog#Dataset"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Associates a presentation with a dataset where the presentation occurs</rdfs:comment>
+        <rdfs:label xml:lang="en">has dataset</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mint/dataCatalog#hasPresentation -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mint/dataCatalog#hasPresentation">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/mint/ModelCatalog#DatasetSpecification"/>
+                    <rdf:Description rdf:about="https://w3id.org/mint/dataCatalog#Dataset"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/mint/dataCatalog#VariablePresentation"/>
+        <rdfs:comment xml:lang="en">Property that links an instance of a dataset (or a dataset specification) to the presentation of a variable contained (or expected to be contained) on it.</rdfs:comment>
+        <rdfs:label xml:lang="en">has presentation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mint/dataCatalog#hasStandardVariable -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mint/dataCatalog#hasStandardVariable">
+        <rdfs:domain rdf:resource="https://w3id.org/mint/dataCatalog#VariablePresentation"/>
+        <rdfs:range rdf:resource="https://w3id.org/mint/dataCatalog#StandardVariable"/>
+        <rdfs:comment xml:lang="en">The standard name of a variable</rdfs:comment>
+        <rdfs:label xml:lang="en">has standard variable</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mint/dataCatalog#usesTimeConvention -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mint/dataCatalog#usesTimeConvention">
+        <rdfs:domain rdf:resource="https://w3id.org/mint/dataCatalog#VariablePresentation"/>
+        <rdfs:range rdf:resource="https://w3id.org/mint/dataCatalog#TimeConvention"/>
+        <rdfs:comment xml:lang="en">Records the time convention used by a presentation</rdfs:comment>
+        <rdfs:label xml:lang="en">uses time convention</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/mint/dataCatalog#usesUnit -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mint/dataCatalog#usesUnit">
+        <rdfs:domain rdf:resource="https://w3id.org/mint/dataCatalog#VariablePresentation"/>
+        <rdfs:range rdf:resource="https://w3id.org/mint/dataCatalog#Unit"/>
+        <rdfs:comment xml:lang="en">Records the unit of measurement used by a presentation</rdfs:comment>
+        <rdfs:label xml:lang="en">uses Unit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://schema.org/temporalCoverage -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/temporalCoverage">
+        <rdfs:domain rdf:resource="http://schema.org/Dataset"/>
+        <rdfs:isDefinedBy rdf:resource="http://schema.org/"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mint/dataCatalog#hasDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mint/dataCatalog#hasDescription">
+        <rdfs:domain rdf:resource="https://w3id.org/mint/dataCatalog#Variable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A human-readable description of a variable, which may include additional contextual information used to map to a standard name</rdfs:comment>
+        <rdfs:label xml:lang="en">has description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mint/dataCatalog#hasShortName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mint/dataCatalog#hasShortName">
+        <rdfs:domain rdf:resource="https://w3id.org/mint/dataCatalog#Variable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A short name (e.g., temperature) capturing the high-level concept of the variable</rdfs:comment>
+        <rdfs:label xml:lang="en">has short name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mint/dataCatalog#hasSpatialDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mint/dataCatalog#hasSpatialDescription">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/mint/ModelCatalog#DatasetSpecification"/>
+                    <rdf:Description rdf:about="https://w3id.org/mint/dataCatalog#Dataset"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A human-readable description of the spatial region (e.g., South Sudan or Hudson River Valley) the dataset encompasses</rdfs:comment>
+        <rdfs:label xml:lang="en">has spatial description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mint/dataCatalog#usesScale -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mint/dataCatalog#usesScale">
+        <rdfs:domain rdf:resource="https://w3id.org/mint/dataCatalog#VariablePresentation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">A numerical value for the scale used in measurements</rdfs:comment>
+        <rdfs:label xml:lang="en">uses scale</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mint/dataCatalog#usesSpatialResolution -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mint/dataCatalog#usesSpatialResolution">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/mint/ModelCatalog#DatasetSpecification"/>
+                    <rdf:Description rdf:about="https://w3id.org/mint/dataCatalog#Dataset"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">A numerical value for the spatial resolution data is recorded at in a dataset</rdfs:comment>
+        <rdfs:label xml:lang="en">uses spatial resolution</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://qudt.org/schema/qudt/Unit -->
+
+
+    <owl:Class rdf:about="http://qudt.org/schema/qudt/Unit">
+        <rdfs:isDefinedBy rdf:resource="http://qudt.org/schema/qudt/"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Dataset -->
+
+
+    <owl:Class rdf:about="http://schema.org/Dataset">
+        <rdfs:isDefinedBy rdf:resource="http://schema.org/"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Place -->
+
+
+    <owl:Class rdf:about="http://schema.org/Place">
+        <rdfs:isDefinedBy rdf:resource="http://schema.org/"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.geoscienceontology.org/geo-upper#Variable -->
+
+
+    <owl:Class rdf:about="http://www.geoscienceontology.org/geo-upper#Variable">
+        <rdfs:isDefinedBy rdf:resource="http://www.geoscienceontology.org/geo-upper"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#Dataset -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Dataset"/>
+    
+
+
+    <!-- https://w3id.org/mint/ModelCatalog#DatasetSpecification -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mint/ModelCatalog#DatasetSpecification">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Dataset"/>
+        <rdfs:comment xml:lang="en">Class designed to describe a type of input or output used or produced by a model. For example, Topoflow has several inputs. One of them is a text file with precipitation values. The representation of this input is an instance of a dataset specification.</rdfs:comment>
+        <rdfs:label xml:lang="en">Dataset specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mint/dataCatalog#Dataset -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mint/dataCatalog#Dataset">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Dataset"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <rdfs:comment xml:lang="en">Extension of the W3C Data Catalog dataset that has additional properties for the MINT data catalog</rdfs:comment>
+        <rdfs:label xml:lang="en">Dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mint/dataCatalog#StandardVariable -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mint/dataCatalog#StandardVariable">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.geoscienceontology.org/geo-upper#Variable"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">A standard variable, necessary to refer to all the variable using the same nomenclature in a domain ontology</rdfs:comment>
+        <rdfs:label xml:lang="en">Standard variable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mint/dataCatalog#TimeConvention -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mint/dataCatalog#TimeConvention">
+        <rdfs:comment xml:lang="en">The convention used for modeling time values.</rdfs:comment>
+        <rdfs:label xml:lang="en">Time Convention</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mint/dataCatalog#Unit -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mint/dataCatalog#Unit">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Unit"/>
+        <rdfs:comment xml:lang="en">Class designed to distinguish the different types of units that are available in variables from datasets</rdfs:comment>
+        <rdfs:label xml:lang="en">Unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mint/dataCatalog#Variable -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mint/dataCatalog#Variable">
+        <rdfs:subClassOf rdf:resource="http://www.geoscienceontology.org/geo-upper#Variable"/>
+        <rdfs:comment xml:lang="en">A symbol that represents a quantity in a dataset or a dataset specification</rdfs:comment>
+        <rdfs:label xml:lang="en">Variable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mint/dataCatalog#VariablePresentation -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mint/dataCatalog#VariablePresentation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mint/dataCatalog#Variable"/>
+        <rdfs:comment xml:lang="en">Concept used to represent an instantiation of a variable in an input/output dataset. For example, a model A may use an input file with temperature expressed in Farenheit (variablePresentation1), while a model B may produce an output with temperature in Celsius (variablePresentation2). Both variable presentations refer to the concept of temperature.</rdfs:comment>
+        <rdfs:label xml:lang="en">VariablePresentation</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/ -->
+
+

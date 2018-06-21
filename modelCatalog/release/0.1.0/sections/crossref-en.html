@@ -1,0 +1,485 @@
+<h2  id="crossreference" class="list">Cross reference for The MINT Model Catalog Ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by The MINT Model Catalog Ontology.
+<div id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#DatasetSpecification"
+            title="https://w3id.org/mint/modelCatalog#DatasetSpecification">Dataset specification</a>
+      </li>
+      <li>
+         <a href="#http://ontosoft.org/software#Function" title="http://ontosoft.org/software#Function">
+            <span>function</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Model" title="https://w3id.org/mint/modelCatalog#Model">Model</a>
+      </li>
+      <li>
+         <a href="#ModelConfiguration"
+            title="https://w3id.org/mint/modelCatalog#ModelConfiguration">Model configuration</a>
+      </li>
+      <li>
+         <a href="#Module" title="https://w3id.org/mint/modelCatalog#Module">Module</a>
+      </li>
+      <li>
+         <a href="#http://ontosoft.org/software#Software" title="http://ontosoft.org/software#Software">
+            <span>software</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="DatasetSpecification">
+      <h3>Dataset specification<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/modelCatalog#DatasetSpecification</p>
+      <div class="comment">
+         <span class="markdown">Class designed to describe a type of input or output used or produced by a model. For example, Topoflow has several inputs. One of them is a text file with precipitation values. The representation of this input is an instance of a dataset specification.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasFormat" title="https://w3id.org/mint/modelCatalog#hasFormat">has format</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasTimeInterval"
+               title="https://w3id.org/mint/modelCatalog#hasTimeInterval">has time interval</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasTimeRepresentation"
+               title="https://w3id.org/mint/modelCatalog#hasTimeRepresentation">has time representation</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasInput" title="https://w3id.org/mint/modelCatalog#hasInput">has input</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasOutput" title="https://w3id.org/mint/modelCatalog#hasOutput">has output</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://ontosoft.org/software#Function">
+      <h3>function<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://ontosoft.org/software#Function</p>
+      <div class="comment">
+         <span class="markdown">"Function" is part of an Ontosoft extension currently being developed</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>https://w3id.org/mint/modelCatalog</dd>
+      </dl>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#ModelConfiguration"
+               title="https://w3id.org/mint/modelCatalog#ModelConfiguration">Model configuration</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Model">
+      <h3>Model<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/modelCatalog#Model</p>
+      <div class="comment">
+         <span class="markdown">A scientific model (from Hydrology, Agronomy, etc.) that represents a set of processes (infiltration, outflow, etc.) to be simulated.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://ontosoft.org/software#Software" title="http://ontosoft.org/software#Software">software</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#followsStandard"
+               title="https://w3id.org/mint/modelCatalog#followsStandard">follows standard</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasAssumption" title="https://w3id.org/mint/modelCatalog#hasAssumption">has Assumption</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasConfiguration"
+               title="https://w3id.org/mint/modelCatalog#hasConfiguration">has configuration</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#needsResolution"
+               title="https://w3id.org/mint/modelCatalog#needsResolution">needs resolution</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ModelConfiguration">
+      <h3>Model configuration<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/modelCatalog#ModelConfiguration</p>
+      <div class="comment">
+         <span class="markdown">A model may be configured in different ways depending on the data that is avaialble. For example, if topological information is available,  a groundwater model may use it to produce a better estimation of the water budget of an aquifer. A model configuration represents a unique setting of inputs and outputs of a given model designed for a particular functionality.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://ontosoft.org/software#Function" title="http://ontosoft.org/software#Function">function</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasConfiguration"
+               title="https://w3id.org/mint/modelCatalog#hasConfiguration">has configuration</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Module">
+      <h3>Module<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/modelCatalog#Module</p>
+      <div class="comment">
+         <span class="markdown">A module is an optional software package that can be configured to run in a model configuration.</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasModule" title="https://w3id.org/mint/modelCatalog#hasModule">has module</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://ontosoft.org/software#Software">
+      <h3>software<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://ontosoft.org/software#Software</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>https://w3id.org/mint/modelCatalog</dd>
+      </dl>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Model" title="https://w3id.org/mint/modelCatalog#Model">Model</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#hasConfiguration"
+            title="https://w3id.org/mint/modelCatalog#hasConfiguration">has configuration</a>
+      </li>
+      <li>
+         <a href="#hasInput" title="https://w3id.org/mint/modelCatalog#hasInput">has input</a>
+      </li>
+      <li>
+         <a href="#hasModule" title="https://w3id.org/mint/modelCatalog#hasModule">has module</a>
+      </li>
+      <li>
+         <a href="#hasOutput" title="https://w3id.org/mint/modelCatalog#hasOutput">has output</a>
+      </li>
+   </ul>
+   <div class="entity" id="hasConfiguration">
+      <h3>has configuration<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/modelCatalog#hasConfiguration</p>
+      <div class="comment">
+         <span class="markdown">Property that links a model to one of its configurations. A model may have multiple configurations, each of which is unique in terms of the inputs and outputs it uses.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Model" title="https://w3id.org/mint/modelCatalog#Model">Model</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ModelConfiguration"
+                  title="https://w3id.org/mint/modelCatalog#ModelConfiguration">Model configuration</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasInput">
+      <h3>has input<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/modelCatalog#hasInput</p>
+      <div class="comment">
+         <span class="markdown">Property that links a model configuration to the input types expected by it.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ModelConfiguration"
+                  title="https://w3id.org/mint/modelCatalog#ModelConfiguration">Model configuration</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Module" title="https://w3id.org/mint/modelCatalog#Module">Module</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#DatasetSpecification"
+                  title="https://w3id.org/mint/modelCatalog#DatasetSpecification">Dataset specification</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasModule">
+      <h3>has module<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/modelCatalog#hasModule</p>
+      <div class="comment">
+         <span class="markdown">link between a model configuration and a module being used on it</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Model" title="https://w3id.org/mint/modelCatalog#Model">Model</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#ModelConfiguration"
+                  title="https://w3id.org/mint/modelCatalog#ModelConfiguration">Model configuration</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Module" title="https://w3id.org/mint/modelCatalog#Module">Module</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasOutput">
+      <h3>has output<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/modelCatalog#hasOutput</p>
+      <div class="comment">
+         <span class="markdown">Preoperty that expresses what are the outputs of a model</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ModelConfiguration"
+                  title="https://w3id.org/mint/modelCatalog#ModelConfiguration">Model configuration</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Module" title="https://w3id.org/mint/modelCatalog#Module">Module</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#DatasetSpecification"
+                  title="https://w3id.org/mint/modelCatalog#DatasetSpecification">Dataset specification</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#followsStandard"
+            title="https://w3id.org/mint/modelCatalog#followsStandard">follows standard</a>
+      </li>
+      <li>
+         <a href="#hasAssumption" title="https://w3id.org/mint/modelCatalog#hasAssumption">has Assumption</a>
+      </li>
+      <li>
+         <a href="#hasFormat" title="https://w3id.org/mint/modelCatalog#hasFormat">has format</a>
+      </li>
+      <li>
+         <a href="#hasTimeInterval"
+            title="https://w3id.org/mint/modelCatalog#hasTimeInterval">has time interval</a>
+      </li>
+      <li>
+         <a href="#hasTimeRepresentation"
+            title="https://w3id.org/mint/modelCatalog#hasTimeRepresentation">has time representation</a>
+      </li>
+      <li>
+         <a href="#needsResolution"
+            title="https://w3id.org/mint/modelCatalog#needsResolution">needs resolution</a>
+      </li>
+   </ul>
+   <div class="entity" id="followsStandard">
+      <h3>follows standard<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/modelCatalog#followsStandard</p>
+      <div class="comment">
+         <span class="markdown">Standard that an input file has to follow (e.g., NetCDF v1.0.0), in order for a model to work.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Model" title="https://w3id.org/mint/modelCatalog#Model">Model</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasAssumption">
+      <h3>has Assumption<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/modelCatalog#hasAssumption</p>
+      <div class="comment">
+         <span class="markdown">Assumptions of a model, e.g. the solver being used.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Model" title="https://w3id.org/mint/modelCatalog#Model">Model</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasFormat">
+      <h3>has format<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/modelCatalog#hasFormat</p>
+      <div class="comment">
+         <span class="markdown">Format followed by a file. For example, txt, nc, etc.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DatasetSpecification"
+                  title="https://w3id.org/mint/modelCatalog#DatasetSpecification">Dataset specification</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasTimeInterval">
+      <h3>has time interval<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/modelCatalog#hasTimeInterval</p>
+      <div class="comment">
+         <span class="markdown">Interval at which the model expects an input to be captured (monthly, daily, etc.)</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DatasetSpecification"
+                  title="https://w3id.org/mint/modelCatalog#DatasetSpecification">Dataset specification</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasTimeRepresentation">
+      <h3>has time representation<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/modelCatalog#hasTimeRepresentation</p>
+      <div class="comment">
+         <span class="markdown">Representation of the time used in an input, as required by the model</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DatasetSpecification"
+                  title="https://w3id.org/mint/modelCatalog#DatasetSpecification">Dataset specification</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="needsResolution">
+      <h3>needs resolution<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/modelCatalog#needsResolution</p>
+      <div class="comment">
+         <span class="markdown">Resolution needed by a model.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Model" title="https://w3id.org/mint/modelCatalog#Model">Model</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>

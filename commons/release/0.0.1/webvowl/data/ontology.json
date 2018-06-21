@@ -33,7 +33,17 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "en",
+        "value" : "Binh Vu",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "en",
         "value" : "Dan Feldman",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "en",
+        "value" : "Arunkumar Rajendran",
         "type" : "label"
       }, {
         "identifier" : "contributor",
@@ -43,7 +53,7 @@
       }, {
         "identifier" : "contributor",
         "language" : "en",
-        "value" : "Arunkumar Rajendran",
+        "value" : "Varun Ratnakar",
         "type" : "label"
       }, {
         "identifier" : "contributor",
@@ -55,22 +65,18 @@
         "language" : "en",
         "value" : "Craig Knoblock",
         "type" : "label"
-      }, {
-        "identifier" : "contributor",
-        "language" : "en",
-        "value" : "Binh Vu",
-        "type" : "label"
-      }, {
-        "identifier" : "contributor",
-        "language" : "en",
-        "value" : "Varun Ratnakar",
-        "type" : "label"
       } ],
       "preferredNamespacePrefix" : [ {
         "identifier" : "preferredNamespacePrefix",
         "language" : "en",
         "value" : "mc",
         "type" : "label"
+      } ],
+      "preferredNamespaceURI" : [ {
+        "identifier" : "preferredNamespaceURI",
+        "language" : "undefined",
+        "value" : "http://w3id.org/mint/commons",
+        "type" : "iri"
       } ],
       "abstract" : [ {
         "identifier" : "abstract",
@@ -83,12 +89,6 @@
         "language" : "en",
         "value" : "0.0.1",
         "type" : "label"
-      } ],
-      "preferredNamespaceURI" : [ {
-        "identifier" : "preferredNamespaceURI",
-        "language" : "undefined",
-        "value" : "http://w3id.org/mint/commons",
-        "type" : "iri"
       } ],
       "title" : [ {
         "identifier" : "title",
@@ -113,72 +113,66 @@
     "type" : "owl:Class"
   }, {
     "id" : "3",
-    "type" : "owl:Class"
+    "type" : "rdfs:Datatype"
   }, {
     "id" : "4",
-    "type" : "owl:Class"
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:Datatype"
   }, {
     "id" : "6",
-    "type" : "owl:unionOf"
+    "type" : "rdfs:Datatype"
   }, {
-    "id" : "11",
+    "id" : "7",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "8",
     "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:Literal"
   }, {
     "id" : "9",
     "type" : "owl:Class"
   }, {
-    "id" : "12",
-    "type" : "owl:Class"
-  }, {
-    "id" : "1",
-    "type" : "owl:Class"
-  }, {
-    "id" : "19",
-    "type" : "owl:Class"
-  }, {
-    "id" : "10",
-    "type" : "owl:Class"
-  }, {
-    "id" : "25",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "8",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "26",
+    "id" : "22",
     "type" : "owl:unionOf"
   }, {
-    "id" : "27",
-    "type" : "rdfs:Datatype"
+    "id" : "24",
+    "type" : "owl:unionOf"
   }, {
-    "id" : "28",
-    "type" : "rdfs:Datatype"
+    "id" : "20",
+    "type" : "owl:Class"
   }, {
     "id" : "29",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "30",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "32",
-    "type" : "rdfs:Literal"
-  }, {
-    "id" : "36",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "37",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "14",
     "type" : "owl:Class"
   }, {
-    "id" : "41",
+    "id" : "12",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "33",
     "type" : "owl:Class"
   }, {
     "id" : "17",
     "type" : "owl:Class"
   }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
     "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -213,6 +207,41 @@
     "attributes" : [ "external" ],
     "id" : "2"
   }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "3",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "4",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "6",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "7",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
     "iri" : "http://qudt.org/schema/qudt/Unit",
     "baseIri" : "http://qudt.org/schema/qudt",
     "instances" : 0,
@@ -227,9 +256,16 @@
     "label" : {
       "IRI-based" : "Unit"
     },
-    "subClasses" : [ "4" ],
+    "subClasses" : [ "9" ],
     "attributes" : [ "external" ],
-    "id" : "3"
+    "id" : "8"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "10",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
   }, {
     "iri" : "https://w3id.org/mint/dataCatalog#Unit",
     "baseIri" : "https://w3id.org/mint/dataCatalog",
@@ -242,8 +278,49 @@
       "en" : "Class designed to distinguish the different types of units that are available in variables from datasets"
     },
     "attributes" : [ "external" ],
-    "id" : "4",
-    "superClasses" : [ "3" ]
+    "id" : "9",
+    "superClasses" : [ "8" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "23", "20" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "22"
+  }, {
+    "instances" : 0,
+    "union" : [ "23", "20" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "24"
+  }, {
+    "iri" : "https://w3id.org/mint/dataCatalog#Dataset",
+    "baseIri" : "https://w3id.org/mint/dataCatalog",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Dataset",
+      "en" : "Dataset"
+    },
+    "comment" : {
+      "en" : "Extension of the W3C Data Catalog dataset that has additional properties for the MINT data catalog"
+    },
+    "attributes" : [ "external" ],
+    "id" : "20",
+    "superClasses" : [ "28", "30" ]
+  }, {
+    "iri" : "http://schema.org/Place",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Place"
+    },
+    "attributes" : [ "external" ],
+    "id" : "29"
   }, {
     "iri" : "https://w3id.org/mint/dataCatalog#StandardVariable",
     "baseIri" : "https://w3id.org/mint/dataCatalog",
@@ -252,13 +329,13 @@
       "IRI-based" : "StandardVariable",
       "en" : "Standard variable"
     },
-    "union" : [ "11", "2" ],
-    "subClasses" : [ "9", "10" ],
+    "union" : [ "33", "2" ],
+    "subClasses" : [ "17", "32" ],
     "comment" : {
       "en" : "A standard variable, necessary to refer to all the variable using the same nomenclature in a domain ontology"
     },
-    "attributes" : [ "external", "union" ],
-    "id" : "6"
+    "attributes" : [ "union", "external" ],
+    "id" : "12"
   }, {
     "iri" : "http://www.geoscienceontology.org/geo-upper#Variable",
     "baseIri" : "http://www.geoscienceontology.org/geo-upper",
@@ -276,7 +353,7 @@
     },
     "subClasses" : [ "1" ],
     "attributes" : [ "external" ],
-    "id" : "11"
+    "id" : "33"
   }, {
     "iri" : "https://w3id.org/mint/dataCatalog#ICASAVariable",
     "baseIri" : "https://w3id.org/mint/dataCatalog",
@@ -289,8 +366,18 @@
       "en" : "Variable that follows the ICASA standard for agriculture: https://dssat.net/data/standards_v2"
     },
     "attributes" : [ "external" ],
-    "id" : "9",
-    "superClasses" : [ "6" ]
+    "id" : "17",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#Dataset",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Dataset"
+    },
+    "subClasses" : [ "20" ],
+    "attributes" : [ "external" ],
+    "id" : "30"
   }, {
     "iri" : "https://w3id.org/mint/dataCatalog#TimeConvention",
     "baseIri" : "https://w3id.org/mint/dataCatalog",
@@ -303,7 +390,7 @@
       "en" : "The convention used for modeling time values."
     },
     "attributes" : [ "external" ],
-    "id" : "12"
+    "id" : "15"
   }, {
     "iri" : "https://w3id.org/mint/dataCatalog#Variable",
     "baseIri" : "https://w3id.org/mint/dataCatalog",
@@ -318,138 +405,7 @@
     },
     "attributes" : [ "external" ],
     "id" : "1",
-    "superClasses" : [ "11" ]
-  }, {
-    "iri" : "https://w3id.org/mint/modelCatalog#DatasetSpecification",
-    "baseIri" : "https://w3id.org/mint/modelCatalog",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "DatasetSpecification",
-      "en" : "Dataset specification"
-    },
-    "comment" : {
-      "en" : "Class designed to describe a type of input or output used or produced by a model. For example, Topoflow has several inputs. One of them is a text file with precipitation values. The representation of this input is an instance of a dataset specification."
-    },
-    "attributes" : [ "external" ],
-    "id" : "19",
-    "superClasses" : [ "15" ]
-  }, {
-    "iri" : "https://w3id.org/mint/dataCatalog#GSNVariable",
-    "baseIri" : "https://w3id.org/mint/dataCatalog",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "GSNVariable",
-      "en" : "GSN variable"
-    },
-    "comment" : {
-      "en" : "Variable that follows the GSN standard: http://geoscienceontology.org/"
-    },
-    "attributes" : [ "external" ],
-    "id" : "10",
-    "superClasses" : [ "6" ]
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "25",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "8",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "instances" : 0,
-    "union" : [ "19", "14" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "26"
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "27",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#float",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "28",
-    "label" : {
-      "IRI-based" : "float"
-    }
-  }, {
-    "instances" : 0,
-    "union" : [ "19", "14" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "29"
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#float",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "30",
-    "label" : {
-      "IRI-based" : "float"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "32",
-    "label" : {
-      "IRI-based" : "Literal",
-      "undefined" : "Literal"
-    }
-  }, {
-    "instances" : 0,
-    "union" : [ "19", "14" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "36"
-  }, {
-    "instances" : 0,
-    "union" : [ "19", "14" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "37"
-  }, {
-    "iri" : "https://w3id.org/mint/dataCatalog#Dataset",
-    "baseIri" : "https://w3id.org/mint/dataCatalog",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Dataset",
-      "en" : "Dataset"
-    },
-    "comment" : {
-      "en" : "Extension of the W3C Data Catalog dataset that has additional properties for the MINT data catalog"
-    },
-    "attributes" : [ "external" ],
-    "id" : "14",
-    "superClasses" : [ "15", "17" ]
-  }, {
-    "iri" : "http://schema.org/Place",
-    "baseIri" : "http://schema.org",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://schema.org/",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "Place"
-    },
-    "attributes" : [ "external" ],
-    "id" : "41"
-  }, {
-    "iri" : "http://www.w3.org/ns/dcat#Dataset",
-    "baseIri" : "http://www.w3.org/ns/dcat",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Dataset"
-    },
-    "subClasses" : [ "14" ],
-    "attributes" : [ "external" ],
-    "id" : "17"
+    "superClasses" : [ "33" ]
   }, {
     "iri" : "http://schema.org/Dataset",
     "baseIri" : "http://schema.org",
@@ -465,81 +421,105 @@
     "label" : {
       "IRI-based" : "Dataset"
     },
-    "subClasses" : [ "19", "14" ],
+    "subClasses" : [ "20" ],
     "attributes" : [ "external" ],
-    "id" : "15"
+    "id" : "28"
+  }, {
+    "iri" : "https://w3id.org/mint/modelCatalog#DatasetSpecification",
+    "baseIri" : "https://w3id.org/mint/modelCatalog",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DatasetSpecification",
+      "en" : "Dataset specification"
+    },
+    "comment" : {
+      "en" : "Class designed to describe a type of input or output used or produced by a model. For example, Topoflow has several inputs. One of them is a text file with precipitation values. The representation of this input is an instance of a dataset specification."
+    },
+    "attributes" : [ "external" ],
+    "id" : "23"
+  }, {
+    "iri" : "https://w3id.org/mint/dataCatalog#GSNVariable",
+    "baseIri" : "https://w3id.org/mint/dataCatalog",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GSNVariable",
+      "en" : "GSN variable"
+    },
+    "comment" : {
+      "en" : "Variable that follows the GSN standard: http://geoscienceontology.org/"
+    },
+    "attributes" : [ "external" ],
+    "id" : "32",
+    "superClasses" : [ "12" ]
   } ],
   "property" : [ {
-    "id" : "5",
+    "id" : "11",
     "type" : "owl:objectProperty"
-  }, {
-    "id" : "7",
-    "type" : "owl:datatypeProperty"
   }, {
     "id" : "13",
     "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "16",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "18",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
-    "id" : "20",
-    "type" : "rdfs:SubClassOf"
+    "id" : "19",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "21",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:datatypeProperty"
   }, {
-    "id" : "22",
-    "type" : "rdfs:SubClassOf"
+    "id" : "25",
+    "type" : "owl:objectProperty"
   }, {
-    "id" : "23",
-    "type" : "rdfs:SubClassOf"
+    "id" : "26",
+    "type" : "owl:objectProperty"
   }, {
-    "id" : "24",
-    "type" : "rdfs:SubClassOf"
+    "id" : "27",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "31",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "33",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "34",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "35",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "37",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "38",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "39",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "36",
     "type" : "owl:objectProperty"
   }, {
     "id" : "40",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "41",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "42",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "43",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "45",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "44",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "46",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
   } ],
   "propertyAttribute" : [ {
     "iri" : "https://w3id.org/mint/dataCatalog#hasStandardVariable",
     "baseIri" : "https://w3id.org/mint/dataCatalog",
-    "range" : "6",
+    "range" : "12",
     "label" : {
       "IRI-based" : "hasStandardVariable",
       "en" : "has standard variable"
@@ -549,65 +529,16 @@
       "en" : "The standard name of a variable"
     },
     "attributes" : [ "external", "object" ],
-    "id" : "5"
+    "id" : "11"
   }, {
-    "iri" : "https://w3id.org/mint/dataCatalog#hasShortName",
-    "baseIri" : "https://w3id.org/mint/dataCatalog",
     "range" : "8",
-    "label" : {
-      "IRI-based" : "hasShortName",
-      "en" : "has short name"
-    },
-    "domain" : "1",
-    "comment" : {
-      "en" : "A short name (e.g., temperature) capturing the high-level concept of the variable"
-    },
-    "attributes" : [ "datatype", "external" ],
-    "id" : "7"
-  }, {
-    "range" : "15",
-    "domain" : "14",
+    "domain" : "9",
     "attributes" : [ "anonymous", "object" ],
     "id" : "13"
   }, {
-    "range" : "17",
-    "domain" : "14",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "16"
-  }, {
-    "range" : "11",
-    "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "18"
-  }, {
-    "range" : "15",
-    "domain" : "19",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "20"
-  }, {
-    "range" : "1",
-    "domain" : "0",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "21"
-  }, {
-    "range" : "3",
-    "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "22"
-  }, {
-    "range" : "6",
-    "domain" : "10",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "23"
-  }, {
-    "range" : "6",
-    "domain" : "9",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "24"
-  }, {
     "iri" : "https://w3id.org/mint/dataCatalog#usesTimeConvention",
     "baseIri" : "https://w3id.org/mint/dataCatalog",
-    "range" : "12",
+    "range" : "15",
     "label" : {
       "IRI-based" : "usesTimeConvention",
       "en" : "uses time convention"
@@ -617,11 +548,16 @@
       "en" : "Records the time convention used by a presentation"
     },
     "attributes" : [ "external", "object" ],
-    "id" : "31"
+    "id" : "14"
+  }, {
+    "range" : "12",
+    "domain" : "17",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "16"
   }, {
     "iri" : "http://qudt.org/schema/qudt/hasNumeratorPart",
     "baseIri" : "http://qudt.org/schema/qudt",
-    "range" : "3",
+    "range" : "8",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -633,27 +569,27 @@
     "label" : {
       "IRI-based" : "hasNumeratorPart"
     },
-    "domain" : "3",
+    "domain" : "8",
     "attributes" : [ "external", "object" ],
-    "id" : "33"
+    "id" : "18"
   }, {
     "iri" : "https://w3id.org/mint/dataCatalog#hasSpatialDescription",
     "baseIri" : "https://w3id.org/mint/dataCatalog",
-    "range" : "27",
+    "range" : "5",
     "label" : {
       "IRI-based" : "hasSpatialDescription",
       "en" : "has spatial description"
     },
-    "domain" : "26",
+    "domain" : "20",
     "comment" : {
       "en" : "A human-readable description of the spatial region (e.g., South Sudan or Hudson River Valley) the dataset encompasses"
     },
-    "attributes" : [ "datatype", "external" ],
-    "id" : "34"
+    "attributes" : [ "external", "datatype" ],
+    "id" : "19"
   }, {
     "iri" : "https://w3id.org/mint/dataCatalog#usesScale",
     "baseIri" : "https://w3id.org/mint/dataCatalog",
-    "range" : "28",
+    "range" : "6",
     "label" : {
       "IRI-based" : "usesScale",
       "en" : "uses scale"
@@ -662,12 +598,12 @@
     "comment" : {
       "en" : "A numerical value for the scale used in measurements"
     },
-    "attributes" : [ "datatype", "external" ],
-    "id" : "35"
+    "attributes" : [ "external", "datatype" ],
+    "id" : "21"
   }, {
     "iri" : "https://w3id.org/mint/dataCatalog#usesUnit",
     "baseIri" : "https://w3id.org/mint/dataCatalog",
-    "range" : "4",
+    "range" : "9",
     "label" : {
       "IRI-based" : "usesUnit",
       "en" : "uses Unit"
@@ -677,11 +613,11 @@
       "en" : "Records the unit of measurement used by a presentation"
     },
     "attributes" : [ "external", "object" ],
-    "id" : "38"
+    "id" : "25"
   }, {
     "iri" : "http://qudt.org/schema/qudt/hasDenominatorPart",
     "baseIri" : "http://qudt.org/schema/qudt",
-    "range" : "3",
+    "range" : "8",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -693,13 +629,13 @@
     "label" : {
       "IRI-based" : "hasDenominatorPart"
     },
-    "domain" : "3",
+    "domain" : "8",
     "attributes" : [ "external", "object" ],
-    "id" : "39"
+    "id" : "26"
   }, {
     "iri" : "http://schema.org/spatialCoverage",
     "baseIri" : "http://schema.org",
-    "range" : "41",
+    "range" : "29",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -711,28 +647,42 @@
     "label" : {
       "IRI-based" : "spatialCoverage"
     },
-    "domain" : "15",
+    "domain" : "28",
     "attributes" : [ "external", "object" ],
-    "id" : "40"
+    "id" : "27"
+  }, {
+    "iri" : "https://w3id.org/mint/dataCatalog#hasShortName",
+    "baseIri" : "https://w3id.org/mint/dataCatalog",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasShortName",
+      "en" : "has short name"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "A short name (e.g., temperature) capturing the high-level concept of the variable"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "31"
   }, {
     "iri" : "https://w3id.org/mint/dataCatalog#usesSpatialResolution",
     "baseIri" : "https://w3id.org/mint/dataCatalog",
-    "range" : "30",
+    "range" : "7",
     "label" : {
       "IRI-based" : "usesSpatialResolution",
       "en" : "uses spatial resolution"
     },
-    "domain" : "29",
+    "domain" : "20",
     "comment" : {
       "en" : "A numerical value for the spatial resolution data is recorded at in a dataset"
     },
-    "attributes" : [ "datatype", "external" ],
-    "id" : "42"
+    "attributes" : [ "external", "datatype" ],
+    "id" : "34"
   }, {
     "iri" : "https://w3id.org/mint/dataCatalog#hasDataset",
-    "inverse" : "44",
+    "inverse" : "36",
     "baseIri" : "https://w3id.org/mint/dataCatalog",
-    "range" : "36",
+    "range" : "22",
     "label" : {
       "IRI-based" : "hasDataset",
       "en" : "has dataset"
@@ -742,11 +692,11 @@
       "en" : "Associates a presentation with a dataset where the presentation occurs"
     },
     "attributes" : [ "external", "object" ],
-    "id" : "43"
+    "id" : "35"
   }, {
     "iri" : "https://w3id.org/mint/dataCatalog#hasDescription",
     "baseIri" : "https://w3id.org/mint/dataCatalog",
-    "range" : "25",
+    "range" : "3",
     "label" : {
       "IRI-based" : "hasDescription",
       "en" : "has description"
@@ -755,8 +705,18 @@
     "comment" : {
       "en" : "A human-readable description of a variable, which may include additional contextual information used to map to a standard name"
     },
-    "attributes" : [ "datatype", "external" ],
-    "id" : "45"
+    "attributes" : [ "external", "datatype" ],
+    "id" : "37"
+  }, {
+    "range" : "28",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "38"
+  }, {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "39"
   }, {
     "iri" : "https://w3id.org/mint/dataCatalog#hasPresentation",
     "baseIri" : "https://w3id.org/mint/dataCatalog",
@@ -765,16 +725,21 @@
       "IRI-based" : "hasPresentation",
       "en" : "has presentation"
     },
-    "domain" : "37",
+    "domain" : "24",
     "comment" : {
       "en" : "Property that links an instance of a dataset (or a dataset specification) to the presentation of a variable contained (or expected to be contained) on it."
     },
     "attributes" : [ "external", "object" ],
-    "id" : "44"
+    "id" : "36"
+  }, {
+    "range" : "12",
+    "domain" : "32",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "40"
   }, {
     "iri" : "http://schema.org/temporalCoverage",
     "baseIri" : "http://schema.org",
-    "range" : "32",
+    "range" : "10",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -786,8 +751,18 @@
     "label" : {
       "IRI-based" : "temporalCoverage"
     },
-    "domain" : "15",
-    "attributes" : [ "datatype", "external" ],
-    "id" : "46"
+    "domain" : "28",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "41"
+  }, {
+    "range" : "30",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "42"
+  }, {
+    "range" : "33",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "43"
   } ]
 }

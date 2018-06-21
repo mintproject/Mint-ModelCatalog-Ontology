@@ -57,14 +57,6 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  https://w3id.org/mint/modelCatalog#correspondsToStandardVariable
-:correspondsToStandardVariable rdf:type owl:ObjectProperty ;
-                               rdfs:domain :VariablePresentation ;
-                               rdfs:range :Variable ;
-                               rdfs:comment "Property that links a variable presentation to the general variable concept it represents."@en ;
-                               rdfs:label "corresponds to standard variable"@en .
-
-
 ###  https://w3id.org/mint/modelCatalog#hasConfiguration
 :hasConfiguration rdf:type owl:ObjectProperty ;
                   rdfs:domain :Model ;
@@ -80,7 +72,7 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                                       :Module
                                     )
                       ] ;
-          rdfs:range :Input ;
+          rdfs:range :DatasetSpecification ;
           rdfs:comment "Property that links a model configuration to the input types expected by it."@en ;
           rdfs:label "has input"@en .
 
@@ -104,21 +96,9 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                                        :Module
                                      )
                        ] ;
-           rdfs:range :Output ;
+           rdfs:range :DatasetSpecification ;
            rdfs:comment "Preoperty that expresses what are the outputs of a model"@en ;
            rdfs:label "has output"@en .
-
-
-###  https://w3id.org/mint/modelCatalog#hasVariablePresentation
-:hasVariablePresentation rdf:type owl:ObjectProperty ;
-                         rdfs:domain [ rdf:type owl:Class ;
-                                       owl:unionOf ( :Input
-                                                     :Output
-                                                   )
-                                     ] ;
-                         rdfs:range :VariablePresentation ;
-                         rdfs:comment "Property that links an input or output to the variable type it must contain. For example, you expect that one of the inputs of a model is a NetCDF file with temperature values expressed in Celsius degrees."@en ;
-                         rdfs:label "has variable presentation"@en .
 
 
 #################################################################
@@ -143,40 +123,15 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/mint/modelCatalog#hasFormat
 :hasFormat rdf:type owl:DatatypeProperty ;
-           rdfs:domain [ rdf:type owl:Class ;
-                         owl:unionOf ( :Input
-                                       :Output
-                                     )
-                       ] ;
+           rdfs:domain :DatasetSpecification ;
            rdfs:range xsd:string ;
            rdfs:comment "Format followed by a file. For example, txt, nc, etc."@en ;
            rdfs:label "has format"@en .
 
 
-###  https://w3id.org/mint/modelCatalog#hasName
-:hasName rdf:type owl:DatatypeProperty ;
-         rdfs:domain [ rdf:type owl:Class ;
-                       owl:unionOf ( :Variable
-                                     :VariablePresentation
-                                   )
-                     ] ;
-         rdfs:range xsd:string ;
-         rdfs:comment "Name of a variable or variable presentation"@en ;
-         rdfs:label "has name"@en .
-
-
-###  https://w3id.org/mint/modelCatalog#hasStandardName
-:hasStandardName rdf:type owl:DatatypeProperty ;
-                 rdfs:subPropertyOf :hasName ;
-                 rdfs:domain :Variable ;
-                 rdfs:range xsd:string ;
-                 rdfs:comment "Standard name associated to this variable"@en ;
-                 rdfs:label "has standard name"@en .
-
-
 ###  https://w3id.org/mint/modelCatalog#hasTimeInterval
 :hasTimeInterval rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :Input ;
+                 rdfs:domain :DatasetSpecification ;
                  rdfs:range xsd:string ;
                  rdfs:comment "Interval at which the model expects an input to be captured (monthly, daily, etc.)"@en ;
                  rdfs:label "has time interval"@en .
@@ -184,18 +139,10 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/mint/modelCatalog#hasTimeRepresentation
 :hasTimeRepresentation rdf:type owl:DatatypeProperty ;
-                       rdfs:domain :Input ;
+                       rdfs:domain :DatasetSpecification ;
                        rdfs:range xsd:string ;
                        rdfs:comment "Representation of the time used in an input, as required by the model"@en ;
                        rdfs:label "has time representation"@en .
-
-
-###  https://w3id.org/mint/modelCatalog#hasUnits
-:hasUnits rdf:type owl:DatatypeProperty ;
-          rdfs:domain :VariablePresentation ;
-          rdfs:range xsd:string ;
-          rdfs:comment "Units used in variable presentation"@en ;
-          rdfs:label "has units"@en .
 
 
 ###  https://w3id.org/mint/modelCatalog#needsResolution
@@ -221,12 +168,6 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                                         rdfs:isDefinedBy "http://ontosoft.org/software#"^^xsd:anyURI .
 
 
-###  https://w3id.org/mint/modelCatalog#Input
-:Input rdf:type owl:Class ;
-       rdfs:comment "An input file used by a model configuration. It may be a parameter or a dataset."@en ;
-       rdfs:label "Input"@en .
-
-
 ###  https://w3id.org/mint/modelCatalog#Model
 :Model rdf:type owl:Class ;
        rdfs:subClassOf <http://ontosoft.org/software#Software> ;
@@ -245,24 +186,6 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
 :Module rdf:type owl:Class ;
         rdfs:comment "A module is an optional software package that can be configured to run in a model configuration."@en ;
         rdfs:label "Module"@en .
-
-
-###  https://w3id.org/mint/modelCatalog#Output
-:Output rdf:type owl:Class ;
-        rdfs:comment "An output produced by a model configuration"@en ;
-        rdfs:label "Output"@en .
-
-
-###  https://w3id.org/mint/modelCatalog#Variable
-:Variable rdf:type owl:Class ;
-          rdfs:comment "A symbol that represents a quantity in an input or output"@en ;
-          rdfs:label "Variable"@en .
-
-
-###  https://w3id.org/mint/modelCatalog#VariablePresentation
-:VariablePresentation rdf:type owl:Class ;
-                      rdfs:comment "Concept used to represent an instantiation of a variable in an input/output dataset. For example, a model A may use an input file with temperature expressed in Farenheit (variablePresentation1), while a model B may produce an output with temperature in Celsius (variablePresentation2). Both variable presentations refer to the concept of temperature."@en ;
-                      rdfs:label "Variable presentation"@en .
 
 
 ###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi

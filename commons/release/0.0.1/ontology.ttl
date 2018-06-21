@@ -127,11 +127,7 @@
 
 ###  https://w3id.org/mint/dataCatalog#hasSpatialDescription
 <https://w3id.org/mint/dataCatalog#hasSpatialDescription> rdf:type owl:DatatypeProperty ;
-                                                          rdfs:domain [ rdf:type owl:Class ;
-                                                                        owl:unionOf ( <https://w3id.org/mint/dataCatalog#Dataset>
-                                                                                      <https://w3id.org/mint/modelCatalog#DatasetSpecification>
-                                                                                    )
-                                                                      ] ;
+                                                          rdfs:domain <https://w3id.org/mint/dataCatalog#Dataset> ;
                                                           rdfs:range xsd:string ;
                                                           rdfs:comment "A human-readable description of the spatial region (e.g., South Sudan or Hudson River Valley) the dataset encompasses"@en ;
                                                           rdfs:label "has spatial description"@en .
@@ -147,11 +143,7 @@
 
 ###  https://w3id.org/mint/dataCatalog#usesSpatialResolution
 <https://w3id.org/mint/dataCatalog#usesSpatialResolution> rdf:type owl:DatatypeProperty ;
-                                                          rdfs:domain [ rdf:type owl:Class ;
-                                                                        owl:unionOf ( <https://w3id.org/mint/dataCatalog#Dataset>
-                                                                                      <https://w3id.org/mint/modelCatalog#DatasetSpecification>
-                                                                                    )
-                                                                      ] ;
+                                                          rdfs:domain <https://w3id.org/mint/dataCatalog#Dataset> ;
                                                           rdfs:range xsd:float ;
                                                           rdfs:comment "A numerical value for the spatial resolution data is recorded at in a dataset"@en ;
                                                           rdfs:label "uses spatial resolution"@en .
@@ -252,7 +244,6 @@
 
 ###  https://w3id.org/mint/modelCatalog#DatasetSpecification
 <https://w3id.org/mint/modelCatalog#DatasetSpecification> rdf:type owl:Class ;
-                                                          rdfs:subClassOf <http://schema.org/Dataset> ;
                                                           rdfs:comment "Class designed to describe a type of input or output used or produced by a model. For example, Topoflow has several inputs. One of them is a text file with precipitation values. The representation of this input is an instance of a dataset specification."@en ;
                                                           rdfs:label "Dataset specification"@en .
 

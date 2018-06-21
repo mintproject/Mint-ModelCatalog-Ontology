@@ -1,0 +1,199 @@
+@prefix : <https://w3id.org/mint/dataCatalog#> .
+@prefix geo-lower-abstraction: <http://www.geoscienceontology.org/geo-lower/abstraction#> .
+@prefix geo-lower-variable: <http://www.geoscienceontology.org/geo-lower/variable#> .
+@prefix geo-upper: <http://www.geoscienceontology.org/geo-upper#> .
+@prefix cf: <http://purl.oclc.org/NET/ssnx/cf/cf-feature#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix om: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix qudt: <http://qudt.org/1.1/vocab/> .
+@base <https://w3id.org/mint/dataCatalog> .
+
+<https://w3id.org/mint/dataCatalog> rdf:type owl:Ontology ;
+                                      owl:versionIRI <https://w3id.org/mint/dataCatalog/0.1.0> ;
+                                      <http://purl.org/dc/elements/1.1/contributor> "Daniel Garijo"@en ,
+										  											"Yao-Yi Chiang"@en ,
+																					"Binh Vu"@en ,
+										  											"Craig Knoblock"@en,
+																					"Arunkumar Rajendran"@en,
+																					"Dan Feldman"@en;
+                                      <http://purl.org/dc/elements/1.1/creator> "Jay Pujara"@en ;
+                                      <http://purl.org/dc/elements/1.1/license> "http://creativecommons.org/licenses/by/2.0/"@en ;
+                                      <http://purl.org/dc/elements/1.1/title> "The MINT Data Catalog Ontology"@en ;
+                                      <http://purl.org/vocab/vann/preferredNamespacePrefix> "datacatalog"@en ;
+                                      rdfs:comment "An ontology for describing datasets, the variables they contain, and other representational details."@en ;
+		                              owl:imports <http://www.geoscienceontology.org/geo-upper> ,
+		                                          <http://www.w3.org/ns/dcat> ;
+                                      owl:versionInfo "0.1.0"^^xsd:string .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+:hasCKANid rdf:type owl:ObjectProperty ;
+			rdfs:label "has CKAN id"@en ;
+			rdfs:comment "A mapping from a dataset to a CKAN identifier"@en ;
+			rdfs:domain :Dataset ;
+			rdfs:range :CKANIdentifier .
+
+
+:hasDataOffset rdf:type owl:ObjectProperty ;
+			rdfs:label "has data offset"@en ;
+			rdfs:comment "Specifies the location of a variable in a file"@en ;
+			rdfs:domain :Presentation ;				 
+			rdfs:range :DataOffset .
+
+:hasDataset rdf:type owl:ObjectProperty ;
+			rdfs:label "has dataset"@en ;
+			rdfs:comment "Associates a presentation with a dataset where the presentation occurs"@en ;
+			rdfs:domain :Presentation ;
+			rdfs:range :Dataset .
+
+:hasStandardName rdf:type owl:ObjectProperty ;
+			rdfs:label "has standard name"@en ;
+			rdfs:comment "The standard name of a variable contained in the data catalog"@en ;
+			rdfs:domain :Variable ;
+			rdfs:range :StandardName .
+
+:hasStoragePath rdf:type owl:ObjectProperty ;
+			rdfs:label "has storage path"@en ;
+			rdfs:comment "Associates a dataset with its storage path"@en ;
+			rdfs:domain :Dataset ;
+			rdfs:range :StoragePath .
+
+:hasVariable rdf:type owl:ObjectProperty ;
+			rdfs:label "has variable"@en ;
+			rdfs:comment "Associates a presentation with the variable the presentation represents"@en ;
+			rdfs:domain :Presentation ;
+			rdfs:range :Variable .
+
+:inDataset rdf:type owl:ObjectProperty ;
+			rdfs:label "in dataset"@en ;
+			rdfs:comment "Associates a variable with a dataset that includes the variable"@en ;
+            rdfs:domain :Variable ;
+            rdfs:range :Dataset .
+
+
+:usesAggregationMethod rdf:type owl:ObjectProperty ;
+			rdfs:label "uses aggregation method"@en ;
+			rdfs:comment "Records the aggregation method used to combine data points or resample data"@en ;
+			rdfs:domain :Presentation ;
+			rdfs:range :AggregationMethod .
+
+
+:usesMissingValueIndicator rdf:type owl:ObjectProperty ;
+			rdfs:label "uses missing value indicator"@en ;
+			rdfs:comment "Records the missing value indicator or approach in a presentation"@en ;
+			rdfs:domain :Presentation ;
+			rdfs:range :MissingValueIndicator .
+
+:usesTimeConvention rdf:type owl:ObjectProperty ;
+			rdfs:label "uses time convention"@en ;
+			rdfs:comment "Records the time convention used by a presentation"@en ;
+			rdfs:domain :Presentation ;
+			rdfs:range :TimeConvention .
+
+:usesUnit rdf:type owl:ObjectProperty ;
+			rdfs:label "uses Unit"@en ;
+			rdfs:comment "Records the unit of measurement used by a presentation"@en ;
+			rdfs:domain :Presentation ;
+			rdfs:range  [ rdf:type owl:Class ;
+							owl:unionOf (	cco:MeasurementUnit 
+											qudt:Unit
+										)
+						] .
+
+
+#################################################################
+#    Data properties
+#################################################################
+:hasDescription rdf:type owl:DatatypeProperty ;
+			rdfs:label "has description"@en ;
+			rdfs:comment "A human-readable description of a variable, which may include additional contextual information used to map to a standard name"@en ;
+			rdfs:domain :Variable ;
+			rdfs:range xsd:string .
+
+:hasShortName rdf:type owl:DatatypeProperty ;
+			rdfs:label "has short name"@en ;
+			rdfs:comment "A short name (e.g., temperature) capturing the high-level concept of the variable"@en ;
+			rdfs:domain :Variable ;
+			rdfs:range xsd:string .
+
+:hasSpatialDescription rdf:type owl:DatatypeProperty ;
+			rdfs:label "has spatial description"@en ;
+			rdfs:comment "A human-readable description of the spatial region (e.g., South Sudan or Hudson River Valley) the dataset encompasses"@en ;
+			rdfs:domain :Dataset ;
+			rdfs:range xsd:string .
+
+:usesScale rdf:type owl:DatatypeProperty ;
+			rdfs:label "uses scale"@en ;
+			rdfs:comment "A numerical value for the scale used in measurements"@en ;
+            rdfs:domain :Presentation ;
+            rdfs:range xsd:float .
+
+:usesSpatialResolution rdf:type owl:DatatypeProperty ;
+			rdfs:label "uses spatial resolution"@en ;
+			rdfs:comment "A numerical value for the spatial resolution data is recorded at in a dataset"@en ;
+			rdfs:domain :Dataset ;
+			rdfs:range xsd:float .
+
+
+#################################################################
+#    Classes
+#################################################################
+:AggregationMethod rdf:type owl:Class ;
+	rdfs:label "Aggregation Method"@en ;
+	rdfs:comment "Method used to aggregate data in presentation of variable"@en .
+
+
+:CKANIdentifier rdf:type owl:Class ;
+	rdfs:label "CKAN Identifier"@en ;
+	rdfs:comment "An identifier for this dataset in the CKAN system"@en .
+
+
+:DataOffset rdf:type owl:Class ;
+	rdfs:label "Data Offset"@en ;
+	rdfs:comment "An offset specifying the location of a variable in a dataset, such as a column number or byte offset"@en .
+
+
+:Dataset rdf:type owl:Class ;
+	rdfs:subClassOf dcat:Dataset ;
+	rdfs:label "Dataset"@en ;
+	rdfs:comment "Extension of the W3C Data Catalog dataset that has additional properties for the MINT data catalog"@en .
+
+
+:MissingValueIndicator rdf:type owl:Class ;
+	rdfs:label "Missing Value Indicator"@en ;
+	rdfs:comment "The indicator used to denote missing values"@en .
+
+:Presentation rdf:type owl:Class ;
+	rdfs:label "Presentation"@en ;
+	rdfs:comment "The presentation of a variable in a dataset."@en .
+
+:StandardName rdf:type owl:Class ;
+	owl:unionOf (
+					geo-upper:Variable
+					skos:Concept
+				) ;
+	rdfs:label "Standard Name"@en ;
+	rdfs:comment "A standard name in a domain ontology"@en .
+
+:StoragePath rdf:type owl:Class ;
+	rdfs:label "Storage Path"@en ;
+	rdfs:comment "The physical or network location of a dataset."@en .
+
+:TimeConvention rdf:type owl:Class ;
+	rdfs:label "Time Convention"@en ;
+	rdfs:comment "The convention used for modeling time values."@en .
+
+:Variable rdf:type owl:Class ;
+	rdfs:label "Variable"@en ;
+	rdfs:comment "A Variable with associated datasets stored in the Data Catalog"@en .
+
+

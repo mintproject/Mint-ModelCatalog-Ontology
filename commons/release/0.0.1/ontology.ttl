@@ -19,7 +19,7 @@
                                  <http://purl.org/dc/elements/1.1/creator> "Daniel Garijo"@en ,
                                                                            "Jay Pujara"@en ;
                                  <http://purl.org/dc/elements/1.1/title> "The MINT Commons Ontology"@en ;
-                                 <http://purl.org/dc/terms/license> "http://creativecommons.org/licenses/by/2.0/"^^xsd:string ;
+                                 <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/2.0/> ;
                                  <http://purl.org/vocab/vann/preferredNamespacePrefix> "mc"@en ;
                                  <http://purl.org/vocab/vann/preferredNamespaceURI> <http://w3id.org/mint/commons> ;
                                  rdfs:comment "An ontology for describing the shared concepts between MINT ontologies"@en ;
@@ -55,8 +55,8 @@
                                                owl:inverseOf <https://w3id.org/mint/dataCatalog#hasPresentation> ;
                                                rdfs:domain <https://w3id.org/mint/dataCatalog#VariablePresentation> ;
                                                rdfs:range [ rdf:type owl:Class ;
-                                                            owl:unionOf ( <https://w3id.org/mint/ModelCatalog#DatasetSpecification>
-                                                                          <https://w3id.org/mint/dataCatalog#Dataset>
+                                                            owl:unionOf ( <https://w3id.org/mint/dataCatalog#Dataset>
+                                                                          <https://w3id.org/mint/modelCatalog#DatasetSpecification>
                                                                         )
                                                           ] ;
                                                rdfs:comment "Associates a presentation with a dataset where the presentation occurs"@en ;
@@ -66,8 +66,8 @@
 ###  https://w3id.org/mint/dataCatalog#hasPresentation
 <https://w3id.org/mint/dataCatalog#hasPresentation> rdf:type owl:ObjectProperty ;
                                                     rdfs:domain [ rdf:type owl:Class ;
-                                                                  owl:unionOf ( <https://w3id.org/mint/ModelCatalog#DatasetSpecification>
-                                                                                <https://w3id.org/mint/dataCatalog#Dataset>
+                                                                  owl:unionOf ( <https://w3id.org/mint/dataCatalog#Dataset>
+                                                                                <https://w3id.org/mint/modelCatalog#DatasetSpecification>
                                                                               )
                                                                 ] ;
                                                     rdfs:range <https://w3id.org/mint/dataCatalog#VariablePresentation> ;
@@ -128,8 +128,8 @@
 ###  https://w3id.org/mint/dataCatalog#hasSpatialDescription
 <https://w3id.org/mint/dataCatalog#hasSpatialDescription> rdf:type owl:DatatypeProperty ;
                                                           rdfs:domain [ rdf:type owl:Class ;
-                                                                        owl:unionOf ( <https://w3id.org/mint/ModelCatalog#DatasetSpecification>
-                                                                                      <https://w3id.org/mint/dataCatalog#Dataset>
+                                                                        owl:unionOf ( <https://w3id.org/mint/dataCatalog#Dataset>
+                                                                                      <https://w3id.org/mint/modelCatalog#DatasetSpecification>
                                                                                     )
                                                                       ] ;
                                                           rdfs:range xsd:string ;
@@ -148,8 +148,8 @@
 ###  https://w3id.org/mint/dataCatalog#usesSpatialResolution
 <https://w3id.org/mint/dataCatalog#usesSpatialResolution> rdf:type owl:DatatypeProperty ;
                                                           rdfs:domain [ rdf:type owl:Class ;
-                                                                        owl:unionOf ( <https://w3id.org/mint/ModelCatalog#DatasetSpecification>
-                                                                                      <https://w3id.org/mint/dataCatalog#Dataset>
+                                                                        owl:unionOf ( <https://w3id.org/mint/dataCatalog#Dataset>
+                                                                                      <https://w3id.org/mint/modelCatalog#DatasetSpecification>
                                                                                     )
                                                                       ] ;
                                                           rdfs:range xsd:float ;
@@ -190,19 +190,26 @@
 <http://www.w3.org/ns/dcat#Dataset> rdf:type owl:Class .
 
 
-###  https://w3id.org/mint/ModelCatalog#DatasetSpecification
-<https://w3id.org/mint/ModelCatalog#DatasetSpecification> rdf:type owl:Class ;
-                                                          rdfs:subClassOf <http://schema.org/Dataset> ;
-                                                          rdfs:comment "Class designed to describe a type of input or output used or produced by a model. For example, Topoflow has several inputs. One of them is a text file with precipitation values. The representation of this input is an instance of a dataset specification."@en ;
-                                                          rdfs:label "Dataset specification"@en .
-
-
 ###  https://w3id.org/mint/dataCatalog#Dataset
 <https://w3id.org/mint/dataCatalog#Dataset> rdf:type owl:Class ;
                                             rdfs:subClassOf <http://schema.org/Dataset> ,
                                                             <http://www.w3.org/ns/dcat#Dataset> ;
                                             rdfs:comment "Extension of the W3C Data Catalog dataset that has additional properties for the MINT data catalog"@en ;
                                             rdfs:label "Dataset"@en .
+
+
+###  https://w3id.org/mint/dataCatalog#GSNVariable
+<https://w3id.org/mint/dataCatalog#GSNVariable> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/mint/dataCatalog#StandardVariable> ;
+                                                rdfs:comment "Variable that follows the GSN standard: http://geoscienceontology.org/"@en ;
+                                                rdfs:label "GSN variable"@en .
+
+
+###  https://w3id.org/mint/dataCatalog#ICASAVariable
+<https://w3id.org/mint/dataCatalog#ICASAVariable> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <https://w3id.org/mint/dataCatalog#StandardVariable> ;
+                                                  rdfs:comment "Variable that follows the ICASA standard for agriculture: https://dssat.net/data/standards_v2"@en ;
+                                                  rdfs:label "ICASA variable"@en .
 
 
 ###  https://w3id.org/mint/dataCatalog#StandardVariable
@@ -241,6 +248,13 @@
                                                          rdfs:subClassOf <https://w3id.org/mint/dataCatalog#Variable> ;
                                                          rdfs:comment "Concept used to represent an instantiation of a variable in an input/output dataset. For example, a model A may use an input file with temperature expressed in Farenheit (variablePresentation1), while a model B may produce an output with temperature in Celsius (variablePresentation2). Both variable presentations refer to the concept of temperature."@en ;
                                                          rdfs:label "VariablePresentation"@en .
+
+
+###  https://w3id.org/mint/modelCatalog#DatasetSpecification
+<https://w3id.org/mint/modelCatalog#DatasetSpecification> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://schema.org/Dataset> ;
+                                                          rdfs:comment "Class designed to describe a type of input or output used or produced by a model. For example, Topoflow has several inputs. One of them is a text file with precipitation values. The representation of this input is an instance of a dataset specification."@en ;
+                                                          rdfs:label "Dataset specification"@en .
 
 
 ###  Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/

@@ -17,8 +17,14 @@ This section provides details for each class and property defined by The MINT Co
          <a href="#https://w3id.org/mint/dataCatalog#Dataset" title="https://w3id.org/mint/dataCatalog#Dataset">Dataset</a>
       </li>
       <li>
-         <a href="#https://w3id.org/mint/ModelCatalog#DatasetSpecification"
-            title="https://w3id.org/mint/ModelCatalog#DatasetSpecification">Dataset specification</a>
+         <a href="#https://w3id.org/mint/modelCatalog#DatasetSpecification"
+            title="https://w3id.org/mint/modelCatalog#DatasetSpecification">Dataset specification</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/mint/dataCatalog#GSNVariable" title="https://w3id.org/mint/dataCatalog#GSNVariable">GSN variable</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/mint/dataCatalog#ICASAVariable" title="https://w3id.org/mint/dataCatalog#ICASAVariable">ICASA variable</a>
       </li>
       <li>
          <a href="#http://schema.org/Place" title="http://schema.org/Place">
@@ -85,8 +91,8 @@ This section provides details for each class and property defined by The MINT Co
          <dt>has sub-classes</dt>
          <dd>
             <a href="#https://w3id.org/mint/dataCatalog#Dataset" title="https://w3id.org/mint/dataCatalog#Dataset">Dataset</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/mint/ModelCatalog#DatasetSpecification"
-               title="https://w3id.org/mint/ModelCatalog#DatasetSpecification">Dataset specification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/mint/modelCatalog#DatasetSpecification"
+               title="https://w3id.org/mint/modelCatalog#DatasetSpecification">Dataset specification</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -119,13 +125,13 @@ This section provides details for each class and property defined by The MINT Co
          </dd>
       </dl>
    </div>
-   <div class="entity" id="https://w3id.org/mint/ModelCatalog#DatasetSpecification">
+   <div class="entity" id="https://w3id.org/mint/modelCatalog#DatasetSpecification">
       <h3>Dataset specification<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/mint/ModelCatalog#DatasetSpecification</p>
+         <strong>IRI:</strong> https://w3id.org/mint/modelCatalog#DatasetSpecification</p>
       <div class="comment">
          <span class="markdown">Class designed to describe a type of input or output used or produced by a model. For example, Topoflow has several inputs. One of them is a text file with precipitation values. The representation of this input is an instance of a dataset specification.</span>
       </div>
@@ -133,6 +139,44 @@ This section provides details for each class and property defined by The MINT Co
          <dt>has super-classes</dt>
          <dd>
             <a href="#http://schema.org/Dataset" title="http://schema.org/Dataset">dataset</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/mint/dataCatalog#GSNVariable">
+      <h3>GSN variable<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/dataCatalog#GSNVariable</p>
+      <div class="comment">
+         <span class="markdown">Variable that follows the GSN standard: http://geoscienceontology.org/</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/mint/dataCatalog#StandardVariable"
+               title="https://w3id.org/mint/dataCatalog#StandardVariable">Standard variable</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://w3id.org/mint/dataCatalog#ICASAVariable">
+      <h3>ICASA variable<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/dataCatalog#ICASAVariable</p>
+      <div class="comment">
+         <span class="markdown">Variable that follows the ICASA standard for agriculture: https://dssat.net/data/standards_v2</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/mint/dataCatalog#StandardVariable"
+               title="https://w3id.org/mint/dataCatalog#StandardVariable">Standard variable</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -176,6 +220,12 @@ This section provides details for each class and property defined by The MINT Co
             <sup class="type-c" title="class">c</sup> 
             <span class="logic">or</span> 
             <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/mint/dataCatalog#GSNVariable" title="https://w3id.org/mint/dataCatalog#GSNVariable">GSN variable</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/mint/dataCatalog#ICASAVariable" title="https://w3id.org/mint/dataCatalog#ICASAVariable">ICASA variable</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in range of</dt>
@@ -405,11 +455,11 @@ This section provides details for each class and property defined by The MINT Co
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#https://w3id.org/mint/ModelCatalog#DatasetSpecification"
-                  title="https://w3id.org/mint/ModelCatalog#DatasetSpecification">Dataset specification</a>
+               <a href="#https://w3id.org/mint/dataCatalog#Dataset" title="https://w3id.org/mint/dataCatalog#Dataset">Dataset</a>
                <sup class="type-c" title="class">c</sup> 
                <span class="logic">or</span> 
-               <a href="#https://w3id.org/mint/dataCatalog#Dataset" title="https://w3id.org/mint/dataCatalog#Dataset">Dataset</a>
+               <a href="#https://w3id.org/mint/modelCatalog#DatasetSpecification"
+                  title="https://w3id.org/mint/modelCatalog#DatasetSpecification">Dataset specification</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
@@ -491,11 +541,11 @@ This section provides details for each class and property defined by The MINT Co
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#https://w3id.org/mint/ModelCatalog#DatasetSpecification"
-                  title="https://w3id.org/mint/ModelCatalog#DatasetSpecification">Dataset specification</a>
+               <a href="#https://w3id.org/mint/dataCatalog#Dataset" title="https://w3id.org/mint/dataCatalog#Dataset">Dataset</a>
                <sup class="type-c" title="class">c</sup> 
                <span class="logic">or</span> 
-               <a href="#https://w3id.org/mint/dataCatalog#Dataset" title="https://w3id.org/mint/dataCatalog#Dataset">Dataset</a>
+               <a href="#https://w3id.org/mint/modelCatalog#DatasetSpecification"
+                  title="https://w3id.org/mint/modelCatalog#DatasetSpecification">Dataset specification</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -707,11 +757,11 @@ This section provides details for each class and property defined by The MINT Co
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#https://w3id.org/mint/ModelCatalog#DatasetSpecification"
-                  title="https://w3id.org/mint/ModelCatalog#DatasetSpecification">Dataset specification</a>
+               <a href="#https://w3id.org/mint/dataCatalog#Dataset" title="https://w3id.org/mint/dataCatalog#Dataset">Dataset</a>
                <sup class="type-c" title="class">c</sup> 
                <span class="logic">or</span> 
-               <a href="#https://w3id.org/mint/dataCatalog#Dataset" title="https://w3id.org/mint/dataCatalog#Dataset">Dataset</a>
+               <a href="#https://w3id.org/mint/modelCatalog#DatasetSpecification"
+                  title="https://w3id.org/mint/modelCatalog#DatasetSpecification">Dataset specification</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -783,11 +833,11 @@ This section provides details for each class and property defined by The MINT Co
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#https://w3id.org/mint/ModelCatalog#DatasetSpecification"
-                  title="https://w3id.org/mint/ModelCatalog#DatasetSpecification">Dataset specification</a>
+               <a href="#https://w3id.org/mint/dataCatalog#Dataset" title="https://w3id.org/mint/dataCatalog#Dataset">Dataset</a>
                <sup class="type-c" title="class">c</sup> 
                <span class="logic">or</span> 
-               <a href="#https://w3id.org/mint/dataCatalog#Dataset" title="https://w3id.org/mint/dataCatalog#Dataset">Dataset</a>
+               <a href="#https://w3id.org/mint/modelCatalog#DatasetSpecification"
+                  title="https://w3id.org/mint/modelCatalog#DatasetSpecification">Dataset specification</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>

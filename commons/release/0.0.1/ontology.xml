@@ -22,7 +22,7 @@
         <dc:creator xml:lang="en">Daniel Garijo</dc:creator>
         <dc:creator xml:lang="en">Jay Pujara</dc:creator>
         <dc:title xml:lang="en">The MINT Commons Ontology</dc:title>
-        <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/2.0/</terms:license>
+        <terms:license rdf:resource="http://creativecommons.org/licenses/by/2.0/"/>
         <vann:preferredNamespacePrefix xml:lang="en">mc</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceURI rdf:resource="http://w3id.org/mint/commons"/>
         <rdfs:comment xml:lang="en">An ontology for describing the shared concepts between MINT ontologies</rdfs:comment>
@@ -85,8 +85,8 @@
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/mint/ModelCatalog#DatasetSpecification"/>
                     <rdf:Description rdf:about="https://w3id.org/mint/dataCatalog#Dataset"/>
+                    <rdf:Description rdf:about="https://w3id.org/mint/modelCatalog#DatasetSpecification"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -103,8 +103,8 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/mint/ModelCatalog#DatasetSpecification"/>
                     <rdf:Description rdf:about="https://w3id.org/mint/dataCatalog#Dataset"/>
+                    <rdf:Description rdf:about="https://w3id.org/mint/modelCatalog#DatasetSpecification"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -204,8 +204,8 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/mint/ModelCatalog#DatasetSpecification"/>
                     <rdf:Description rdf:about="https://w3id.org/mint/dataCatalog#Dataset"/>
+                    <rdf:Description rdf:about="https://w3id.org/mint/modelCatalog#DatasetSpecification"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -235,8 +235,8 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/mint/ModelCatalog#DatasetSpecification"/>
                     <rdf:Description rdf:about="https://w3id.org/mint/dataCatalog#Dataset"/>
+                    <rdf:Description rdf:about="https://w3id.org/mint/modelCatalog#DatasetSpecification"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -311,17 +311,6 @@
     
 
 
-    <!-- https://w3id.org/mint/ModelCatalog#DatasetSpecification -->
-
-
-    <owl:Class rdf:about="https://w3id.org/mint/ModelCatalog#DatasetSpecification">
-        <rdfs:subClassOf rdf:resource="http://schema.org/Dataset"/>
-        <rdfs:comment xml:lang="en">Class designed to describe a type of input or output used or produced by a model. For example, Topoflow has several inputs. One of them is a text file with precipitation values. The representation of this input is an instance of a dataset specification.</rdfs:comment>
-        <rdfs:label xml:lang="en">Dataset specification</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/mint/dataCatalog#Dataset -->
 
 
@@ -330,6 +319,28 @@
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <rdfs:comment xml:lang="en">Extension of the W3C Data Catalog dataset that has additional properties for the MINT data catalog</rdfs:comment>
         <rdfs:label xml:lang="en">Dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mint/dataCatalog#GSNVariable -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mint/dataCatalog#GSNVariable">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mint/dataCatalog#StandardVariable"/>
+        <rdfs:comment xml:lang="en">Variable that follows the GSN standard: http://geoscienceontology.org/</rdfs:comment>
+        <rdfs:label xml:lang="en">GSN variable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mint/dataCatalog#ICASAVariable -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mint/dataCatalog#ICASAVariable">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/mint/dataCatalog#StandardVariable"/>
+        <rdfs:comment xml:lang="en">Variable that follows the ICASA standard for agriculture: https://dssat.net/data/standards_v2</rdfs:comment>
+        <rdfs:label xml:lang="en">ICASA variable</rdfs:label>
     </owl:Class>
     
 
@@ -391,6 +402,17 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/mint/dataCatalog#Variable"/>
         <rdfs:comment xml:lang="en">Concept used to represent an instantiation of a variable in an input/output dataset. For example, a model A may use an input file with temperature expressed in Farenheit (variablePresentation1), while a model B may produce an output with temperature in Celsius (variablePresentation2). Both variable presentations refer to the concept of temperature.</rdfs:comment>
         <rdfs:label xml:lang="en">VariablePresentation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/mint/modelCatalog#DatasetSpecification -->
+
+
+    <owl:Class rdf:about="https://w3id.org/mint/modelCatalog#DatasetSpecification">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Dataset"/>
+        <rdfs:comment xml:lang="en">Class designed to describe a type of input or output used or produced by a model. For example, Topoflow has several inputs. One of them is a text file with precipitation values. The representation of this input is an instance of a dataset specification.</rdfs:comment>
+        <rdfs:label xml:lang="en">Dataset specification</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 

@@ -11,7 +11,7 @@
 <https://w3id.org/mint/commons> <http://purl.org/dc/elements/1.1/creator> "Daniel Garijo"@en .
 <https://w3id.org/mint/commons> <http://purl.org/dc/elements/1.1/creator> "Jay Pujara"@en .
 <https://w3id.org/mint/commons> <http://purl.org/dc/elements/1.1/title> "The MINT Commons Ontology"@en .
-<https://w3id.org/mint/commons> <http://purl.org/dc/terms/license> "http://creativecommons.org/licenses/by/2.0/" .
+<https://w3id.org/mint/commons> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/2.0/> .
 <https://w3id.org/mint/commons> <http://purl.org/vocab/vann/preferredNamespacePrefix> "mc"@en .
 <https://w3id.org/mint/commons> <http://purl.org/vocab/vann/preferredNamespaceURI> <http://w3id.org/mint/commons> .
 <https://w3id.org/mint/commons> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology for describing the shared concepts between MINT ontologies"@en .
@@ -51,10 +51,10 @@
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/ModelCatalog#DatasetSpecification> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/dataCatalog#Dataset> .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/dataCatalog#Dataset> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#DatasetSpecification> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <https://w3id.org/mint/dataCatalog#hasDataset> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a presentation with a dataset where the presentation occurs"@en .
 <https://w3id.org/mint/dataCatalog#hasDataset> <http://www.w3.org/2000/01/rdf-schema#label> "has dataset"@en .
@@ -65,10 +65,10 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/ModelCatalog#DatasetSpecification> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/dataCatalog#Dataset> .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/dataCatalog#Dataset> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#DatasetSpecification> .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <https://w3id.org/mint/dataCatalog#hasPresentation> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mint/dataCatalog#VariablePresentation> .
 <https://w3id.org/mint/dataCatalog#hasPresentation> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links an instance of a dataset (or a dataset specification) to the presentation of a variable contained (or expected to be contained) on it."@en .
@@ -129,10 +129,10 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid9 .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/ModelCatalog#DatasetSpecification> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/dataCatalog#Dataset> .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/dataCatalog#Dataset> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#DatasetSpecification> .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <https://w3id.org/mint/dataCatalog#hasSpatialDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/mint/dataCatalog#hasSpatialDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "A human-readable description of the spatial region (e.g., South Sudan or Hudson River Valley) the dataset encompasses"@en .
@@ -151,10 +151,10 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid10 <http://www.w3.org/2002/07/owl#unionOf> _:genid12 .
 _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/ModelCatalog#DatasetSpecification> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/dataCatalog#Dataset> .
 _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
 _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/dataCatalog#Dataset> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#DatasetSpecification> .
 _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <https://w3id.org/mint/dataCatalog#usesSpatialResolution> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
 <https://w3id.org/mint/dataCatalog#usesSpatialResolution> <http://www.w3.org/2000/01/rdf-schema#comment> "A numerical value for the spatial resolution data is recorded at in a dataset"@en .
@@ -192,18 +192,24 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 # http://www.w3.org/ns/dcat#Dataset
 <http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
-# https://w3id.org/mint/ModelCatalog#DatasetSpecification
-<https://w3id.org/mint/ModelCatalog#DatasetSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/mint/ModelCatalog#DatasetSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Dataset> .
-<https://w3id.org/mint/ModelCatalog#DatasetSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Class designed to describe a type of input or output used or produced by a model. For example, Topoflow has several inputs. One of them is a text file with precipitation values. The representation of this input is an instance of a dataset specification."@en .
-<https://w3id.org/mint/ModelCatalog#DatasetSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset specification"@en .
-# 
 # https://w3id.org/mint/dataCatalog#Dataset
 <https://w3id.org/mint/dataCatalog#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/mint/dataCatalog#Dataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Dataset> .
 <https://w3id.org/mint/dataCatalog#Dataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dcat#Dataset> .
 <https://w3id.org/mint/dataCatalog#Dataset> <http://www.w3.org/2000/01/rdf-schema#comment> "Extension of the W3C Data Catalog dataset that has additional properties for the MINT data catalog"@en .
 <https://w3id.org/mint/dataCatalog#Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset"@en .
+# 
+# https://w3id.org/mint/dataCatalog#GSNVariable
+<https://w3id.org/mint/dataCatalog#GSNVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mint/dataCatalog#GSNVariable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mint/dataCatalog#StandardVariable> .
+<https://w3id.org/mint/dataCatalog#GSNVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Variable that follows the GSN standard: http://geoscienceontology.org/"@en .
+<https://w3id.org/mint/dataCatalog#GSNVariable> <http://www.w3.org/2000/01/rdf-schema#label> "GSN variable"@en .
+# 
+# https://w3id.org/mint/dataCatalog#ICASAVariable
+<https://w3id.org/mint/dataCatalog#ICASAVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mint/dataCatalog#ICASAVariable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mint/dataCatalog#StandardVariable> .
+<https://w3id.org/mint/dataCatalog#ICASAVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Variable that follows the ICASA standard for agriculture: https://dssat.net/data/standards_v2"@en .
+<https://w3id.org/mint/dataCatalog#ICASAVariable> <http://www.w3.org/2000/01/rdf-schema#label> "ICASA variable"@en .
 # 
 # https://w3id.org/mint/dataCatalog#StandardVariable
 <https://w3id.org/mint/dataCatalog#StandardVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -241,5 +247,11 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <https://w3id.org/mint/dataCatalog#VariablePresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mint/dataCatalog#Variable> .
 <https://w3id.org/mint/dataCatalog#VariablePresentation> <http://www.w3.org/2000/01/rdf-schema#comment> "Concept used to represent an instantiation of a variable in an input/output dataset. For example, a model A may use an input file with temperature expressed in Farenheit (variablePresentation1), while a model B may produce an output with temperature in Celsius (variablePresentation2). Both variable presentations refer to the concept of temperature."@en .
 <https://w3id.org/mint/dataCatalog#VariablePresentation> <http://www.w3.org/2000/01/rdf-schema#label> "VariablePresentation"@en .
+# 
+# https://w3id.org/mint/modelCatalog#DatasetSpecification
+<https://w3id.org/mint/modelCatalog#DatasetSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mint/modelCatalog#DatasetSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Dataset> .
+<https://w3id.org/mint/modelCatalog#DatasetSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Class designed to describe a type of input or output used or produced by a model. For example, Topoflow has several inputs. One of them is a text file with precipitation values. The representation of this input is an instance of a dataset specification."@en .
+<https://w3id.org/mint/modelCatalog#DatasetSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset specification"@en .
 # 
 # Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/

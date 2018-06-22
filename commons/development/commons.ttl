@@ -1,4 +1,4 @@
-@prefix : <https://w3id.org/mint/dataCatalog#> .
+@prefix : <https://w3id.org/mint/commons#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -18,7 +18,7 @@
                                  owl:versionInfo "0.0.1"@en ;
                                  <http://purl.org/dc/elements/1.1/creator> "Daniel Garijo"@en ;
                                  <http://purl.org/dc/elements/1.1/contributor> "Dan Feldman"@en ;
-                                 <http://purl.org/vocab/vann/preferredNamespaceURI> <http://w3id.org/mint/commons> ;
+                                 <http://purl.org/vocab/vann/preferredNamespaceURI> <https://w3id.org/mint/commons#> ;
                                  <http://purl.org/dc/elements/1.1/contributor> "Yao-Yi Chiang"@en ;
                                  <http://purl.org/dc/elements/1.1/title> "The MINT Commons Ontology"@en ;
                                  <http://purl.org/dc/elements/1.1/contributor> "Binh Vu"@en ;
@@ -43,19 +43,12 @@
                                                rdfs:isDefinedBy <http://qudt.org/schema/qudt/> .
 
 
-###  http://schema.org/spatialCoverage
-<http://schema.org/spatialCoverage> rdf:type owl:ObjectProperty ;
-                                    rdfs:domain <http://schema.org/Dataset> ;
-                                    rdfs:range <http://schema.org/Place> ;
-                                    rdfs:isDefinedBy <http://schema.org/> .
-
-
-###  https://w3id.org/mint/dataCatalog#hasDataset
+###  https://w3id.org/mint/commons#hasDataset
 :hasDataset rdf:type owl:ObjectProperty ;
             owl:inverseOf :hasPresentation ;
             rdfs:domain :VariablePresentation ;
             rdfs:range [ rdf:type owl:Class ;
-                         owl:unionOf ( :Dataset
+                         owl:unionOf ( <https://w3id.org/mint/dataCatalog#Dataset>
                                        <https://w3id.org/mint/modelCatalog#DatasetSpecification>
                                      )
                        ] ;
@@ -63,10 +56,10 @@
             rdfs:label "has dataset"@en .
 
 
-###  https://w3id.org/mint/dataCatalog#hasPresentation
+###  https://w3id.org/mint/commons#hasPresentation
 :hasPresentation rdf:type owl:ObjectProperty ;
                  rdfs:domain [ rdf:type owl:Class ;
-                               owl:unionOf ( :Dataset
+                               owl:unionOf ( <https://w3id.org/mint/dataCatalog#Dataset>
                                              <https://w3id.org/mint/modelCatalog#DatasetSpecification>
                                            )
                              ] ;
@@ -75,7 +68,7 @@
                  rdfs:label "has presentation"@en .
 
 
-###  https://w3id.org/mint/dataCatalog#hasStandardVariable
+###  https://w3id.org/mint/commons#hasStandardVariable
 :hasStandardVariable rdf:type owl:ObjectProperty ;
                      rdfs:domain :VariablePresentation ;
                      rdfs:range :StandardVariable ;
@@ -83,7 +76,7 @@
                      rdfs:label "has standard variable"@en .
 
 
-###  https://w3id.org/mint/dataCatalog#usesTimeConvention
+###  https://w3id.org/mint/commons#usesTimeConvention
 :usesTimeConvention rdf:type owl:ObjectProperty ;
                     rdfs:domain :VariablePresentation ;
                     rdfs:range :TimeConvention ;
@@ -91,7 +84,7 @@
                     rdfs:label "uses time convention"@en .
 
 
-###  https://w3id.org/mint/dataCatalog#usesUnit
+###  https://w3id.org/mint/commons#usesUnit
 :usesUnit rdf:type owl:ObjectProperty ;
           rdfs:domain :VariablePresentation ;
           rdfs:range :Unit ;
@@ -103,13 +96,7 @@
 #    Data properties
 #################################################################
 
-###  http://schema.org/temporalCoverage
-<http://schema.org/temporalCoverage> rdf:type owl:DatatypeProperty ;
-                                     rdfs:domain <http://schema.org/Dataset> ;
-                                     rdfs:isDefinedBy <http://schema.org/> .
-
-
-###  https://w3id.org/mint/dataCatalog#hasDescription
+###  https://w3id.org/mint/commons#hasDescription
 :hasDescription rdf:type owl:DatatypeProperty ;
                 rdfs:domain :Variable ;
                 rdfs:range xsd:string ;
@@ -117,7 +104,7 @@
                 rdfs:label "has description"@en .
 
 
-###  https://w3id.org/mint/dataCatalog#hasShortName
+###  https://w3id.org/mint/commons#hasShortName
 :hasShortName rdf:type owl:DatatypeProperty ;
               rdfs:domain :Variable ;
               rdfs:range xsd:string ;
@@ -125,28 +112,12 @@
               rdfs:label "has short name"@en .
 
 
-###  https://w3id.org/mint/dataCatalog#hasSpatialDescription
-:hasSpatialDescription rdf:type owl:DatatypeProperty ;
-                       rdfs:domain :Dataset ;
-                       rdfs:range xsd:string ;
-                       rdfs:comment "A human-readable description of the spatial region (e.g., South Sudan or Hudson River Valley) the dataset encompasses"@en ;
-                       rdfs:label "has spatial description"@en .
-
-
-###  https://w3id.org/mint/dataCatalog#usesScale
+###  https://w3id.org/mint/commons#usesScale
 :usesScale rdf:type owl:DatatypeProperty ;
            rdfs:domain :VariablePresentation ;
            rdfs:range xsd:float ;
            rdfs:comment "A numerical value for the scale used in measurements"@en ;
            rdfs:label "uses scale"@en .
-
-
-###  https://w3id.org/mint/dataCatalog#usesSpatialResolution
-:usesSpatialResolution rdf:type owl:DatatypeProperty ;
-                       rdfs:domain :Dataset ;
-                       rdfs:range xsd:float ;
-                       rdfs:comment "A numerical value for the spatial resolution data is recorded at in a dataset"@en ;
-                       rdfs:label "uses spatial resolution"@en .
 
 
 #################################################################
@@ -196,15 +167,7 @@
                rdfs:label "ICASA variable"@en .
 
 
-###  https://w3id.org/mint/dataCatalog#Dataset
-:Dataset rdf:type owl:Class ;
-         rdfs:subClassOf <http://schema.org/Dataset> ,
-                         <http://www.w3.org/ns/dcat#Dataset> ;
-         rdfs:comment "Extension of the W3C Data Catalog dataset that has additional properties for the MINT data catalog"@en ;
-         rdfs:label "Dataset"@en .
-
-
-###  https://w3id.org/mint/dataCatalog#StandardVariable
+###  https://w3id.org/mint/commons#StandardVariable
 :StandardVariable rdf:type owl:Class ;
                   owl:equivalentClass [ rdf:type owl:Class ;
                                         owl:unionOf ( <http://www.geoscienceontology.org/geo-upper#Variable>
@@ -215,31 +178,39 @@
                   rdfs:label "Standard variable"@en .
 
 
-###  https://w3id.org/mint/dataCatalog#TimeConvention
+###  https://w3id.org/mint/commons#TimeConvention
 :TimeConvention rdf:type owl:Class ;
                 rdfs:comment "The convention used for modeling time values."@en ;
                 rdfs:label "Time Convention"@en .
 
 
-###  https://w3id.org/mint/dataCatalog#Unit
+###  https://w3id.org/mint/commons#Unit
 :Unit rdf:type owl:Class ;
       rdfs:subClassOf <http://qudt.org/schema/qudt/Unit> ;
       rdfs:comment "Class designed to distinguish the different types of units that are available in variables from datasets"@en ;
       rdfs:label "Unit"@en .
 
 
-###  https://w3id.org/mint/dataCatalog#Variable
+###  https://w3id.org/mint/commons#Variable
 :Variable rdf:type owl:Class ;
           rdfs:subClassOf <http://www.geoscienceontology.org/geo-upper#Variable> ;
           rdfs:comment "A symbol that represents a quantity in a dataset or a dataset specification"@en ;
           rdfs:label "Variable"@en .
 
 
-###  https://w3id.org/mint/dataCatalog#VariablePresentation
+###  https://w3id.org/mint/commons#VariablePresentation
 :VariablePresentation rdf:type owl:Class ;
                       rdfs:subClassOf :Variable ;
                       rdfs:comment "Concept used to represent an instantiation of a variable in an input/output dataset. For example, a model A may use an input file with temperature expressed in Farenheit (variablePresentation1), while a model B may produce an output with temperature in Celsius (variablePresentation2). Both variable presentations refer to the concept of temperature."@en ;
                       rdfs:label "VariablePresentation"@en .
+
+
+###  https://w3id.org/mint/dataCatalog#Dataset
+<https://w3id.org/mint/dataCatalog#Dataset> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://schema.org/Dataset> ,
+                                                            <http://www.w3.org/ns/dcat#Dataset> ;
+                                            rdfs:comment "Extension of the W3C Data Catalog dataset that has additional properties for the MINT data catalog"@en ;
+                                            rdfs:label "Dataset"@en .
 
 
 ###  https://w3id.org/mint/modelCatalog#DatasetSpecification

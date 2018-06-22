@@ -13,7 +13,7 @@
 <https://w3id.org/mint/commons> <http://purl.org/dc/elements/1.1/title> "The MINT Commons Ontology"@en .
 <https://w3id.org/mint/commons> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/2.0/> .
 <https://w3id.org/mint/commons> <http://purl.org/vocab/vann/preferredNamespacePrefix> "mc"@en .
-<https://w3id.org/mint/commons> <http://purl.org/vocab/vann/preferredNamespaceURI> <http://w3id.org/mint/commons> .
+<https://w3id.org/mint/commons> <http://purl.org/vocab/vann/preferredNamespaceURI> <https://w3id.org/mint/commons#> .
 <https://w3id.org/mint/commons> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology for describing the shared concepts between MINT ontologies"@en .
 <https://w3id.org/mint/commons> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1"@en .
 # 
@@ -37,17 +37,11 @@
 <http://qudt.org/schema/qudt/hasNumeratorPart> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/Unit> .
 <http://qudt.org/schema/qudt/hasNumeratorPart> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://qudt.org/schema/qudt/> .
 # 
-# http://schema.org/spatialCoverage
-<http://schema.org/spatialCoverage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://schema.org/spatialCoverage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Dataset> .
-<http://schema.org/spatialCoverage> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/Place> .
-<http://schema.org/spatialCoverage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
-# 
-# https://w3id.org/mint/dataCatalog#hasDataset
-<https://w3id.org/mint/dataCatalog#hasDataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/mint/dataCatalog#hasDataset> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/mint/dataCatalog#hasPresentation> .
-<https://w3id.org/mint/dataCatalog#hasDataset> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/dataCatalog#VariablePresentation> .
-<https://w3id.org/mint/dataCatalog#hasDataset> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
+# https://w3id.org/mint/commons#hasDataset
+<https://w3id.org/mint/commons#hasDataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/mint/commons#hasDataset> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/mint/commons#hasPresentation> .
+<https://w3id.org/mint/commons#hasDataset> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/commons#VariablePresentation> .
+<https://w3id.org/mint/commons#hasDataset> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
@@ -56,12 +50,12 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#DatasetSpecification> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://w3id.org/mint/dataCatalog#hasDataset> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a presentation with a dataset where the presentation occurs"@en .
-<https://w3id.org/mint/dataCatalog#hasDataset> <http://www.w3.org/2000/01/rdf-schema#label> "has dataset"@en .
+<https://w3id.org/mint/commons#hasDataset> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a presentation with a dataset where the presentation occurs"@en .
+<https://w3id.org/mint/commons#hasDataset> <http://www.w3.org/2000/01/rdf-schema#label> "has dataset"@en .
 # 
-# https://w3id.org/mint/dataCatalog#hasPresentation
-<https://w3id.org/mint/dataCatalog#hasPresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/mint/dataCatalog#hasPresentation> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
+# https://w3id.org/mint/commons#hasPresentation
+<https://w3id.org/mint/commons#hasPresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/mint/commons#hasPresentation> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid4 .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
@@ -70,30 +64,30 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#DatasetSpecification> .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://w3id.org/mint/dataCatalog#hasPresentation> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mint/dataCatalog#VariablePresentation> .
-<https://w3id.org/mint/dataCatalog#hasPresentation> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links an instance of a dataset (or a dataset specification) to the presentation of a variable contained (or expected to be contained) on it."@en .
-<https://w3id.org/mint/dataCatalog#hasPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "has presentation"@en .
+<https://w3id.org/mint/commons#hasPresentation> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mint/commons#VariablePresentation> .
+<https://w3id.org/mint/commons#hasPresentation> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links an instance of a dataset (or a dataset specification) to the presentation of a variable contained (or expected to be contained) on it."@en .
+<https://w3id.org/mint/commons#hasPresentation> <http://www.w3.org/2000/01/rdf-schema#label> "has presentation"@en .
 # 
-# https://w3id.org/mint/dataCatalog#hasStandardVariable
-<https://w3id.org/mint/dataCatalog#hasStandardVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/mint/dataCatalog#hasStandardVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/dataCatalog#VariablePresentation> .
-<https://w3id.org/mint/dataCatalog#hasStandardVariable> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mint/dataCatalog#StandardVariable> .
-<https://w3id.org/mint/dataCatalog#hasStandardVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "The standard name of a variable"@en .
-<https://w3id.org/mint/dataCatalog#hasStandardVariable> <http://www.w3.org/2000/01/rdf-schema#label> "has standard variable"@en .
+# https://w3id.org/mint/commons#hasStandardVariable
+<https://w3id.org/mint/commons#hasStandardVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/mint/commons#hasStandardVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/commons#VariablePresentation> .
+<https://w3id.org/mint/commons#hasStandardVariable> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mint/commons#StandardVariable> .
+<https://w3id.org/mint/commons#hasStandardVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "The standard name of a variable"@en .
+<https://w3id.org/mint/commons#hasStandardVariable> <http://www.w3.org/2000/01/rdf-schema#label> "has standard variable"@en .
 # 
-# https://w3id.org/mint/dataCatalog#usesTimeConvention
-<https://w3id.org/mint/dataCatalog#usesTimeConvention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/mint/dataCatalog#usesTimeConvention> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/dataCatalog#VariablePresentation> .
-<https://w3id.org/mint/dataCatalog#usesTimeConvention> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mint/dataCatalog#TimeConvention> .
-<https://w3id.org/mint/dataCatalog#usesTimeConvention> <http://www.w3.org/2000/01/rdf-schema#comment> "Records the time convention used by a presentation"@en .
-<https://w3id.org/mint/dataCatalog#usesTimeConvention> <http://www.w3.org/2000/01/rdf-schema#label> "uses time convention"@en .
+# https://w3id.org/mint/commons#usesTimeConvention
+<https://w3id.org/mint/commons#usesTimeConvention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/mint/commons#usesTimeConvention> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/commons#VariablePresentation> .
+<https://w3id.org/mint/commons#usesTimeConvention> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mint/commons#TimeConvention> .
+<https://w3id.org/mint/commons#usesTimeConvention> <http://www.w3.org/2000/01/rdf-schema#comment> "Records the time convention used by a presentation"@en .
+<https://w3id.org/mint/commons#usesTimeConvention> <http://www.w3.org/2000/01/rdf-schema#label> "uses time convention"@en .
 # 
-# https://w3id.org/mint/dataCatalog#usesUnit
-<https://w3id.org/mint/dataCatalog#usesUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/mint/dataCatalog#usesUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/dataCatalog#VariablePresentation> .
-<https://w3id.org/mint/dataCatalog#usesUnit> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mint/dataCatalog#Unit> .
-<https://w3id.org/mint/dataCatalog#usesUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Records the unit of measurement used by a presentation"@en .
-<https://w3id.org/mint/dataCatalog#usesUnit> <http://www.w3.org/2000/01/rdf-schema#label> "uses Unit"@en .
+# https://w3id.org/mint/commons#usesUnit
+<https://w3id.org/mint/commons#usesUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/mint/commons#usesUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/commons#VariablePresentation> .
+<https://w3id.org/mint/commons#usesUnit> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mint/commons#Unit> .
+<https://w3id.org/mint/commons#usesUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Records the unit of measurement used by a presentation"@en .
+<https://w3id.org/mint/commons#usesUnit> <http://www.w3.org/2000/01/rdf-schema#label> "uses Unit"@en .
 # 
 # 
 # 
@@ -104,45 +98,26 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # #################################################################
 # 
 # 
-# http://schema.org/temporalCoverage
-<http://schema.org/temporalCoverage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://schema.org/temporalCoverage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Dataset> .
-<http://schema.org/temporalCoverage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
+# https://w3id.org/mint/commons#hasDescription
+<https://w3id.org/mint/commons#hasDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mint/commons#hasDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/commons#Variable> .
+<https://w3id.org/mint/commons#hasDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/mint/commons#hasDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "A human-readable description of a variable, which may include additional contextual information used to map to a standard name"@en .
+<https://w3id.org/mint/commons#hasDescription> <http://www.w3.org/2000/01/rdf-schema#label> "has description"@en .
 # 
-# https://w3id.org/mint/dataCatalog#hasDescription
-<https://w3id.org/mint/dataCatalog#hasDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/mint/dataCatalog#hasDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/dataCatalog#Variable> .
-<https://w3id.org/mint/dataCatalog#hasDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/mint/dataCatalog#hasDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "A human-readable description of a variable, which may include additional contextual information used to map to a standard name"@en .
-<https://w3id.org/mint/dataCatalog#hasDescription> <http://www.w3.org/2000/01/rdf-schema#label> "has description"@en .
+# https://w3id.org/mint/commons#hasShortName
+<https://w3id.org/mint/commons#hasShortName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mint/commons#hasShortName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/commons#Variable> .
+<https://w3id.org/mint/commons#hasShortName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/mint/commons#hasShortName> <http://www.w3.org/2000/01/rdf-schema#comment> "A short name (e.g., temperature) capturing the high-level concept of the variable"@en .
+<https://w3id.org/mint/commons#hasShortName> <http://www.w3.org/2000/01/rdf-schema#label> "has short name"@en .
 # 
-# https://w3id.org/mint/dataCatalog#hasShortName
-<https://w3id.org/mint/dataCatalog#hasShortName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/mint/dataCatalog#hasShortName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/dataCatalog#Variable> .
-<https://w3id.org/mint/dataCatalog#hasShortName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/mint/dataCatalog#hasShortName> <http://www.w3.org/2000/01/rdf-schema#comment> "A short name (e.g., temperature) capturing the high-level concept of the variable"@en .
-<https://w3id.org/mint/dataCatalog#hasShortName> <http://www.w3.org/2000/01/rdf-schema#label> "has short name"@en .
-# 
-# https://w3id.org/mint/dataCatalog#hasSpatialDescription
-<https://w3id.org/mint/dataCatalog#hasSpatialDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/mint/dataCatalog#hasSpatialDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/dataCatalog#Dataset> .
-<https://w3id.org/mint/dataCatalog#hasSpatialDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/mint/dataCatalog#hasSpatialDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "A human-readable description of the spatial region (e.g., South Sudan or Hudson River Valley) the dataset encompasses"@en .
-<https://w3id.org/mint/dataCatalog#hasSpatialDescription> <http://www.w3.org/2000/01/rdf-schema#label> "has spatial description"@en .
-# 
-# https://w3id.org/mint/dataCatalog#usesScale
-<https://w3id.org/mint/dataCatalog#usesScale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/mint/dataCatalog#usesScale> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/dataCatalog#VariablePresentation> .
-<https://w3id.org/mint/dataCatalog#usesScale> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<https://w3id.org/mint/dataCatalog#usesScale> <http://www.w3.org/2000/01/rdf-schema#comment> "A numerical value for the scale used in measurements"@en .
-<https://w3id.org/mint/dataCatalog#usesScale> <http://www.w3.org/2000/01/rdf-schema#label> "uses scale"@en .
-# 
-# https://w3id.org/mint/dataCatalog#usesSpatialResolution
-<https://w3id.org/mint/dataCatalog#usesSpatialResolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/mint/dataCatalog#usesSpatialResolution> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/dataCatalog#Dataset> .
-<https://w3id.org/mint/dataCatalog#usesSpatialResolution> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<https://w3id.org/mint/dataCatalog#usesSpatialResolution> <http://www.w3.org/2000/01/rdf-schema#comment> "A numerical value for the spatial resolution data is recorded at in a dataset"@en .
-<https://w3id.org/mint/dataCatalog#usesSpatialResolution> <http://www.w3.org/2000/01/rdf-schema#label> "uses spatial resolution"@en .
+# https://w3id.org/mint/commons#usesScale
+<https://w3id.org/mint/commons#usesScale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mint/commons#usesScale> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/commons#VariablePresentation> .
+<https://w3id.org/mint/commons#usesScale> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<https://w3id.org/mint/commons#usesScale> <http://www.w3.org/2000/01/rdf-schema#comment> "A numerical value for the scale used in measurements"@en .
+<https://w3id.org/mint/commons#usesScale> <http://www.w3.org/2000/01/rdf-schema#label> "uses scale"@en .
 # 
 # 
 # 
@@ -176,28 +151,21 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # http://www.w3.org/ns/dcat#Dataset
 <http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
-# https://w3id.org/mint/dataCatalog#Dataset
-<https://w3id.org/mint/dataCatalog#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/mint/dataCatalog#Dataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Dataset> .
-<https://w3id.org/mint/dataCatalog#Dataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dcat#Dataset> .
-<https://w3id.org/mint/dataCatalog#Dataset> <http://www.w3.org/2000/01/rdf-schema#comment> "Extension of the W3C Data Catalog dataset that has additional properties for the MINT data catalog"@en .
-<https://w3id.org/mint/dataCatalog#Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset"@en .
+# https://w3id.org/mint/commons#GSNVariable
+<https://w3id.org/mint/commons#GSNVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mint/commons#GSNVariable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mint/commons#StandardVariable> .
+<https://w3id.org/mint/commons#GSNVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Variable that follows the GSN standard: http://geoscienceontology.org/"@en .
+<https://w3id.org/mint/commons#GSNVariable> <http://www.w3.org/2000/01/rdf-schema#label> "GSN variable"@en .
 # 
-# https://w3id.org/mint/dataCatalog#GSNVariable
-<https://w3id.org/mint/dataCatalog#GSNVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/mint/dataCatalog#GSNVariable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mint/dataCatalog#StandardVariable> .
-<https://w3id.org/mint/dataCatalog#GSNVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Variable that follows the GSN standard: http://geoscienceontology.org/"@en .
-<https://w3id.org/mint/dataCatalog#GSNVariable> <http://www.w3.org/2000/01/rdf-schema#label> "GSN variable"@en .
+# https://w3id.org/mint/commons#ICASAVariable
+<https://w3id.org/mint/commons#ICASAVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mint/commons#ICASAVariable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mint/commons#StandardVariable> .
+<https://w3id.org/mint/commons#ICASAVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Variable that follows the ICASA standard for agriculture: https://dssat.net/data/standards_v2"@en .
+<https://w3id.org/mint/commons#ICASAVariable> <http://www.w3.org/2000/01/rdf-schema#label> "ICASA variable"@en .
 # 
-# https://w3id.org/mint/dataCatalog#ICASAVariable
-<https://w3id.org/mint/dataCatalog#ICASAVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/mint/dataCatalog#ICASAVariable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mint/dataCatalog#StandardVariable> .
-<https://w3id.org/mint/dataCatalog#ICASAVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Variable that follows the ICASA standard for agriculture: https://dssat.net/data/standards_v2"@en .
-<https://w3id.org/mint/dataCatalog#ICASAVariable> <http://www.w3.org/2000/01/rdf-schema#label> "ICASA variable"@en .
-# 
-# https://w3id.org/mint/dataCatalog#StandardVariable
-<https://w3id.org/mint/dataCatalog#StandardVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/mint/dataCatalog#StandardVariable> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid7 .
+# https://w3id.org/mint/commons#StandardVariable
+<https://w3id.org/mint/commons#StandardVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mint/commons#StandardVariable> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid7 .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid9 .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
@@ -206,31 +174,38 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://w3id.org/mint/dataCatalog#StandardVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "A standard variable, necessary to refer to all the variable using the same nomenclature in a domain ontology"@en .
-<https://w3id.org/mint/dataCatalog#StandardVariable> <http://www.w3.org/2000/01/rdf-schema#label> "Standard variable"@en .
+<https://w3id.org/mint/commons#StandardVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "A standard variable, necessary to refer to all the variable using the same nomenclature in a domain ontology"@en .
+<https://w3id.org/mint/commons#StandardVariable> <http://www.w3.org/2000/01/rdf-schema#label> "Standard variable"@en .
 # 
-# https://w3id.org/mint/dataCatalog#TimeConvention
-<https://w3id.org/mint/dataCatalog#TimeConvention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/mint/dataCatalog#TimeConvention> <http://www.w3.org/2000/01/rdf-schema#comment> "The convention used for modeling time values."@en .
-<https://w3id.org/mint/dataCatalog#TimeConvention> <http://www.w3.org/2000/01/rdf-schema#label> "Time Convention"@en .
+# https://w3id.org/mint/commons#TimeConvention
+<https://w3id.org/mint/commons#TimeConvention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mint/commons#TimeConvention> <http://www.w3.org/2000/01/rdf-schema#comment> "The convention used for modeling time values."@en .
+<https://w3id.org/mint/commons#TimeConvention> <http://www.w3.org/2000/01/rdf-schema#label> "Time Convention"@en .
 # 
-# https://w3id.org/mint/dataCatalog#Unit
-<https://w3id.org/mint/dataCatalog#Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/mint/dataCatalog#Unit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://qudt.org/schema/qudt/Unit> .
-<https://w3id.org/mint/dataCatalog#Unit> <http://www.w3.org/2000/01/rdf-schema#comment> "Class designed to distinguish the different types of units that are available in variables from datasets"@en .
-<https://w3id.org/mint/dataCatalog#Unit> <http://www.w3.org/2000/01/rdf-schema#label> "Unit"@en .
+# https://w3id.org/mint/commons#Unit
+<https://w3id.org/mint/commons#Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mint/commons#Unit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://qudt.org/schema/qudt/Unit> .
+<https://w3id.org/mint/commons#Unit> <http://www.w3.org/2000/01/rdf-schema#comment> "Class designed to distinguish the different types of units that are available in variables from datasets"@en .
+<https://w3id.org/mint/commons#Unit> <http://www.w3.org/2000/01/rdf-schema#label> "Unit"@en .
 # 
-# https://w3id.org/mint/dataCatalog#Variable
-<https://w3id.org/mint/dataCatalog#Variable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/mint/dataCatalog#Variable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.geoscienceontology.org/geo-upper#Variable> .
-<https://w3id.org/mint/dataCatalog#Variable> <http://www.w3.org/2000/01/rdf-schema#comment> "A symbol that represents a quantity in a dataset or a dataset specification"@en .
-<https://w3id.org/mint/dataCatalog#Variable> <http://www.w3.org/2000/01/rdf-schema#label> "Variable"@en .
+# https://w3id.org/mint/commons#Variable
+<https://w3id.org/mint/commons#Variable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mint/commons#Variable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.geoscienceontology.org/geo-upper#Variable> .
+<https://w3id.org/mint/commons#Variable> <http://www.w3.org/2000/01/rdf-schema#comment> "A symbol that represents a quantity in a dataset or a dataset specification"@en .
+<https://w3id.org/mint/commons#Variable> <http://www.w3.org/2000/01/rdf-schema#label> "Variable"@en .
 # 
-# https://w3id.org/mint/dataCatalog#VariablePresentation
-<https://w3id.org/mint/dataCatalog#VariablePresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/mint/dataCatalog#VariablePresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mint/dataCatalog#Variable> .
-<https://w3id.org/mint/dataCatalog#VariablePresentation> <http://www.w3.org/2000/01/rdf-schema#comment> "Concept used to represent an instantiation of a variable in an input/output dataset. For example, a model A may use an input file with temperature expressed in Farenheit (variablePresentation1), while a model B may produce an output with temperature in Celsius (variablePresentation2). Both variable presentations refer to the concept of temperature."@en .
-<https://w3id.org/mint/dataCatalog#VariablePresentation> <http://www.w3.org/2000/01/rdf-schema#label> "VariablePresentation"@en .
+# https://w3id.org/mint/commons#VariablePresentation
+<https://w3id.org/mint/commons#VariablePresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mint/commons#VariablePresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mint/commons#Variable> .
+<https://w3id.org/mint/commons#VariablePresentation> <http://www.w3.org/2000/01/rdf-schema#comment> "Concept used to represent an instantiation of a variable in an input/output dataset. For example, a model A may use an input file with temperature expressed in Farenheit (variablePresentation1), while a model B may produce an output with temperature in Celsius (variablePresentation2). Both variable presentations refer to the concept of temperature."@en .
+<https://w3id.org/mint/commons#VariablePresentation> <http://www.w3.org/2000/01/rdf-schema#label> "VariablePresentation"@en .
+# 
+# https://w3id.org/mint/dataCatalog#Dataset
+<https://w3id.org/mint/dataCatalog#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mint/dataCatalog#Dataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Dataset> .
+<https://w3id.org/mint/dataCatalog#Dataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dcat#Dataset> .
+<https://w3id.org/mint/dataCatalog#Dataset> <http://www.w3.org/2000/01/rdf-schema#comment> "Extension of the W3C Data Catalog dataset that has additional properties for the MINT data catalog"@en .
+<https://w3id.org/mint/dataCatalog#Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset"@en .
 # 
 # https://w3id.org/mint/modelCatalog#DatasetSpecification
 <https://w3id.org/mint/modelCatalog#DatasetSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

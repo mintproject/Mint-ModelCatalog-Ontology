@@ -1,0 +1,10 @@
+https://w3id.org/mint/modelCatalog#DatasetSpecification,http://www.w3.org/2000/01/rdf-schema#label,https://w3id.org/mint/commons#hasPresentation,https://w3id.org/mint/modelCatalog#hasFormat,https://w3id.org/mint/modelCatalog#followsStandard
+pihm_aggr_files,PIHM aggregated inputs,,tar.gz,
+pihm_forc,PIHM .forc file,PIHM_PRCP,forc,
+pihm_forc2,PIHM .forc file with additional exposed variables,PIHM_PRCP;PIHM_TRMP;PIHM_WINF;PIHM_RH,forc,
+pihm_aggregatedOutput,PIHM aggregated outputs,,tar.gz,
+cycles_aggr_files,Cycles aggregated intputs,,tar.gz,
+cycles_reinit,Cycles Reinit file,Cycles_SMC_L1,reinit,
+cycles_aggregatedOutput,Cycles aggregated outputs,Cycles_snow_sub;Cycles_precipitation;Cycles_forage_yield,tar.gz,
+cycles_weather,Cycles weather file,Cycles_pp,weather,
+cycles_points,Cycles point(s) where to execute the model,,,

@@ -1,0 +1,10 @@
+https://w3id.org/mint/commons#VariablePresentation,https://w3id.org/mint/commons#hasShortName,https://w3id.org/mint/commons#hasStandardVariable,https://w3id.org/mint/commons#usesUnit,https://w3id.org/mint/commons#hasDescription
+PIHM_PRCP,PRCP,atmosphere_water__precipitation_volume_flux,m/day,Value of Precipitation
+PIHM_TRMP,TRMP,atmosphere_bottom_air__temperature,C,Value of Temperature
+PIHM_WINF,WINF,atmosphere_bottom_wind__speed,m/day,Value of wind speed
+PIHM_RH,RH,atmosphere_air_water~vapor__relative_saturation,percentage/100,Value of relative humidity
+Cycles_SMC_L1,SMC_L1,soil_layer~1_water__volume_fraction,m3/m3,Soil moisture content in layer 1
+Cycles_snow_sub,SNOW SUB,land_surface_snow__volume-per-area_sublimation_rate,mm/day,Sublimation from snow cover
+Cycles_pp,PP,atmosphere_water__time_integral_of_precipitation_volume_flux,mm,Precipitation in mm
+Cycles_precipitation,PRECIPITATION,atmosphere_water__time_integral_of_precipitation_volume_flux,mm,Precipitation
+Cycles_forage_yield,FORAGE YIELD,crop_residue_biomass__forage_yield,Mg/ha,Forage yield or removed residue biomass at harvest.

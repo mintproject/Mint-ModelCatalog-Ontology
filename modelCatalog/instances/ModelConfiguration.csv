@@ -1,8 +1,9 @@
 https://w3id.org/mint/modelCatalog#ModelConfiguration,http://www.w3.org/2000/01/rdf-schema#label,https://w3id.org/mint/modelCatalog#hasInput,https://w3id.org/mint/modelCatalog#hasOutput
 pihm_cfg_simple,PIHM simple configuration,pihm_forc;pihm_aggr_files,pihm_aggregatedOutput
 pihm_cfg_simple2,PIHM simple configuration with additional input variables,pihm_forc2;pihm_aggr_files,pihm_aggregatedOutput
-cycles_cfg_simple,Cycles simple configuration,cycles_aggr_files;cycles_reinit;cycles_weather;cycles_points,cycles_aggregatedOutput
+cycles_cfg_simple,Cycles simple configuration,cycles_reinit;cycles_weather,cycles_aggregatedOutput
 kimetrica_land_use_cfg_simple,Kimetrica land use simple configuration,,
 economic_land_quality_cfg_simple,Economic model for land quality with simpla configuration,,
 topoflow_cfg_simple,TopoFlow with basic configuration,topo_rain;topo_aggr_files,topo_aggregatedOutput
-dssat_cfg_simple,DSSAT simple configurations,dssat_aggr_files,dssat_aggregatedOutput
+dssat_cfg_simple,DSSAT simple configuration,dssat_aggr_files,dssat_aggregatedOutput
+dssat_cfg_simple2,DSSAT simple configuration with explicit outputs,dssat_aggr_files,dssat_inh;dssat_inp;dssat_sol;dssat_cli;dssat_summary;dssat_warning

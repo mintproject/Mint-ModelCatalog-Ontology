@@ -4,7 +4,7 @@ PIHM_TRMP,TRMP,atmosphere_bottom_air__temperature,C,Value of Temperature
 PIHM_WINF,WINF,atmosphere_bottom_wind__speed,m/day,Value of wind speed
 PIHM_RH,RH,atmosphere_air_water~vapor__relative_saturation,percentage/100,Value of relative humidity
 PIHM_INFD,infD,,m,Top soil layer across which infiltration is calculcated
-PIHM_THETAR,ThetaR,soil_water__residual_volume_fraction,m3/m3,Residual water content
+PIHM_THETAR,ThetaR,soil__residual_porosity,m3/m3,Residual water content
 Cycles_snow_sub,SNOW SUB,land_surface_snow__volume-per-area_sublimation_rate,mm/day,Sublimation from snow cover
 Cycles_pp,PP,atmosphere_water__time_integral_of_precipitation_volume_flux,mm,Precipitation in mm
 Cycles_precipitation,PRECIPITATION,atmosphere_water__time_integral_of_precipitation_volume_flux,mm,Precipitation

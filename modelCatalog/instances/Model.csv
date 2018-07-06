@@ -4,4 +4,4 @@ CYCLES,Cycles,cycles_cfg_simple;cycles_cfg_simple2
 KIMETRICA_LAND_USE,Kimetrica land use model,kimetrica_land_use_cfg_simple
 ECONOMIC_LAND_QUALITY,Economic model for land quality,economic_land_quality_cfg_simple
 TOPOFLOW,TopoFlow,topoflow_cfg_simple
-DSSAT,DSSAT,dssat_cfg_simple
+DSSAT,DSSAT,dssat_cfg_simple;dssat_cfg_simple2

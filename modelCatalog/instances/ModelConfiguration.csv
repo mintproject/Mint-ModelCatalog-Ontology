@@ -4,5 +4,5 @@ pihm_cfg_simple2,PIHM simple configuration with additional input variables,pihm_
 cycles_cfg_simple,Cycles simple configuration,cycles_aggr_files;cycles_reinit;cycles_weather;cycles_points,cycles_aggregatedOutput
 kimetrica_land_use_cfg_simple,Kimetrica land use simple configuration,,
 economic_land_quality_cfg_simple,Economic model for land quality with simpla configuration,,
-topoflow_cfg_simple,TopoFlow with basic configuration,,
-dssat_cfg_simple,DSSAT simple configurations,,
+topoflow_cfg_simple,TopoFlow with basic configuration,topo_rain;topo_aggr_files,topo_aggregatedOutput
+dssat_cfg_simple,DSSAT simple configurations,dssat_aggr_files,dssat_aggregatedOutput

@@ -1,8 +1,10 @@
 package edu.isi.csvtordf;
 
 import java.io.BufferedReader;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.OutputStream;
 import org.apache.jena.ontology.Individual;
 import org.apache.jena.ontology.OntClass;
 import org.apache.jena.ontology.OntModel;
@@ -73,14 +75,32 @@ public class CSV2RDF {
         }
     }
     
+    /**
+     * Function to export the stored model as an RDF file, using ttl syntax
+     * @param outFile name and path of the outFile must be created.
+     */
+    public static void exportRDFFile(String outFile, OntModel model, String mode){
+        OutputStream out;
+        try {
+            out = new FileOutputStream(outFile);
+            model.write(out,mode);
+            //model.write(out,"RDF/XML");
+            out.close();
+        } catch (Exception ex) {
+            System.out.println("Error while writing the model to file "+ex.getMessage() + " oufile "+outFile);
+        }
+    }
+    
     public static void main(String[] args){
         CSV2RDF test = new CSV2RDF();
-        test.processFile("C:\\Users\\dgarijo\\Desktop\\ModelCatalogPopulation\\Model.csv");
-        test.processFile("C:\\Users\\dgarijo\\Desktop\\ModelCatalogPopulation\\ModelConfiguration.csv");
-        test.processFile("C:\\Users\\dgarijo\\Desktop\\ModelCatalogPopulation\\DatasetSpecification.csv");
-        test.processFile("C:\\Users\\dgarijo\\Desktop\\ModelCatalogPopulation\\VariablePresentation.csv");
-        test.instances.write(System.out,"JSON-LD");
+        test.processFile("C:\\Users\\dgarijo\\Documents\\GitHub\\Mint-ModelCatalog-Ontology\\modelCatalog\\instances\\Model.csv");
+        test.processFile("C:\\Users\\dgarijo\\Documents\\GitHub\\Mint-ModelCatalog-Ontology\\modelCatalog\\instances\\ModelConfiguration.csv");
+        test.processFile("C:\\Users\\dgarijo\\Documents\\GitHub\\Mint-ModelCatalog-Ontology\\modelCatalog\\instances\\DatasetSpecification.csv");
+        test.processFile("C:\\Users\\dgarijo\\Documents\\GitHub\\Mint-ModelCatalog-Ontology\\modelCatalog\\instances\\VariablePresentation.csv");
+//        test.instances.write(System.out,"JSON-LD");
 //        test.instances.write(System.out,"TTL");
+        exportRDFFile("modelCatalog.ttl", test.instances, "TTL");
+        exportRDFFile("modelCatalog.json", test.instances, "JSON-LD");
     }
     
 }

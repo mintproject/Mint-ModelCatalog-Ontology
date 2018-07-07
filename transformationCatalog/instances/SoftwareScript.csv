@@ -1,1 +1,6 @@
 http://ontosoft.org/software#Software,http://www.w3.org/2000/01/rdf-schema#label,http://ontosoft.org/software#hasInput,http://ontosoft.org/software#hasOutput
+ldas2cycles,Script designed to transform LDAS data into a format acceptable by Cycles,mint_config;cycles_config;ldas_weather_data,cycles_weather
+ldas2pihm,Script designed to transform LDAS data into a format acceptable by PIHM,mint_config;ldas_weather_data;pihm_aggr_files;fldas2pihm_r,pihm_forc
+ldas2pihm2,Script designed to transform LDAS data into a format acceptable by PIHM (extended variables exposed),mint_config;ldas_weather_data;pihm_aggr_files;fldas2pihm_r,pihm_forc2
+pihm2cycles,Script designed to transform PIHM results into Cycles,mint_config;pihm_aggregatedOutput;cycles_config,cycles_reinit
+ldasDataDownload,Script designed to retrieve and download data from LDAS,ldas_inputQuery;mint_config,ldas_weather_data

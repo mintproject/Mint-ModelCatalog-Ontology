@@ -26,6 +26,7 @@ public class CSV2RDF {
         mcOntology = ModelFactory.createOntologyModel();
         mcOntology.read("https://w3id.org/mint/modelCatalog");
         mcOntology.read("https://w3id.org/mint/commons");//for some reason it's not loading imported ontologies.
+        mcOntology.read("http://ontosoft.org/ontology/software/ontosoft-v1.0.owl");//for some reason, it doesn't do the negotiation rihgt.
 //        mcOntology.write(System.out);
         System.out.println("MINT model catalog ontology loaded");
     }
@@ -62,7 +63,12 @@ public class CSV2RDF {
                                         }
                                     }
                                 }else{
-                                    ind.addProperty((Property) p, instances.createIndividual(instance_URI+rowValue,range));
+                                    //Assumming only a single type per row
+                                    if(p.toString().equals("http://www.w3.org/1999/02/22-rdf-syntax-ns#type")){
+                                        ind.addProperty((Property) p, instances.createIndividual(rowValue,range));
+                                    }else{
+                                        ind.addProperty((Property) p, instances.createIndividual(instance_URI+rowValue,range));
+                                    }
                                 }
                             }
                         }
@@ -99,6 +105,7 @@ public class CSV2RDF {
         test.processFile("C:\\Users\\dgarijo\\Documents\\GitHub\\Mint-ModelCatalog-Ontology\\modelCatalog\\instances\\VariablePresentation.csv");
 //        test.instances.write(System.out,"JSON-LD");
 //        test.instances.write(System.out,"TTL");
+        test.processFile("C:\\Users\\dgarijo\\Documents\\GitHub\\Mint-ModelCatalog-Ontology\\transformationCatalog\\instances\\SoftwareScript.csv");
         exportRDFFile("modelCatalog.ttl", test.instances, "TTL");
         exportRDFFile("modelCatalog.json", test.instances, "JSON-LD");
     }

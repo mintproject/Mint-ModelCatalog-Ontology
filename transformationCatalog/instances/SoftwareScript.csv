@@ -4,3 +4,4 @@ ldas2pihm,Script designed to transform LDAS data into a format acceptable by PIH
 ldas2pihm2,Script designed to transform LDAS data into a format acceptable by PIHM (extended variables exposed),mint_config;ldas_weather_data;pihm_aggr_files;fldas2pihm_r,pihm_forc2
 pihm2cycles,Script designed to transform PIHM results into Cycles,mint_config;pihm_aggregatedOutput;cycles_config,cycles_reinit
 ldasDataDownload,Script designed to retrieve and download data from LDAS,ldas_inputQuery;mint_config,ldas_weather_data
+cycles2crop,Scripts designed to convert cycles outputs into a format acceptable by the economic model,cycles_aggregatedOutput,econ_yield_input

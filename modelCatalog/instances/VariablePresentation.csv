@@ -3,8 +3,9 @@ PIHM_PRCP,PRCP,atmosphere_water__precipitation_volume_flux,m/day,Value of Precip
 PIHM_TRMP,TRMP,atmosphere_bottom_air__temperature,C,Value of Temperature
 PIHM_WINF,WINF,atmosphere_bottom_wind__speed,m/day,Value of wind speed
 PIHM_RH,RH,atmosphere_air_water~vapor__relative_saturation,percentage/100,Value of relative humidity
-PIHM_INFD,infD,,m,Top soil layer across which infiltration is calculcated
 PIHM_THETAR,ThetaR,soil__residual_porosity,m3/m3,Residual water content
+PIHM_INF_RATE,infiltration rate,land_surface_water__infiltration_rate,m/d,infiltration rate
+PIHM_EVAP,evaporation from ground surface,land_surface_water__evaporation_rate,m/d,evaporation from ground surface
 Cycles_snow_sub,SNOW SUB,land_surface_snow__volume-per-area_sublimation_rate,mm/day,Sublimation from snow cover
 Cycles_pp,PP,atmosphere_water__time_integral_of_precipitation_volume_flux,mm,Precipitation in mm
 Cycles_precipitation,PRECIPITATION,atmosphere_water__time_integral_of_precipitation_volume_flux,mm,Precipitation
@@ -21,3 +22,6 @@ DSSAT_cwam,CWAM,crop_tops__maturity_dry_mass-per-area_yield,kg/ha,Tops dry weigh
 DSSAT_tav,TAV,air__yearly_average_of_temperature,C,Temperature average for whole year
 DSSAT_tmax,TMAX,atmosphere_air__daily_maximum_of_temperature,C,Temperature of air- maximum
 DSSAT_tmin,TMIN,atmosphere_air__daily_minimum_of_temperature,C,Temperature of air- minimum
+ECON_landuse,landuse,land__usage_prediction,kha,Land-use prediction by parcel
+ECON_crop_production,production,land_crop__volume-per-area_yield,mkg,Crop production
+ECON_yield,yieldN,crop_biomass_residue__harvested_forage_yield,,Yield

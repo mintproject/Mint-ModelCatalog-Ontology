@@ -3,7 +3,9 @@ pihm_cfg_simple,PIHM simple configuration,pihm_forc;pihm_aggr_files,pihm_aggrega
 pihm_cfg_simple2,PIHM simple configuration with additional input variables,pihm_forc2;pihm_aggr_files,pihm_aggregatedOutput
 cycles_cfg_simple,Cycles simple configuration,cycles_reinit;cycles_weather,cycles_aggregatedOutput
 kimetrica_land_use_cfg_simple,Kimetrica land use simple configuration,,
-economic_land_quality_cfg_simple,Economic model for land quality with simple configuration,econ_yield_input,econ_landuse_result
+economic_land_quality_cfg_simple,Economic model for land quality with simple configuration,econ_yield_input;econ_price_input,econ_landuse_result
 topoflow_cfg_simple,TopoFlow with basic configuration,topo_rain;topo_aggr_files,topo_aggregatedOutput
 dssat_cfg_simple,DSSAT simple configuration,dssat_aggr_files,dssat_aggregatedOutput
 dssat_cfg_simple2,DSSAT simple configuration with explicit outputs,dssat_aggr_files,dssat_inh;dssat_inp;dssat_sol;dssat_cli;dssat_summary;dssat_warning
+topoflow_cfg_fk,TopoFlow with fake configuration to emulate PIHM,pihm_forc;pihm_aggr_files,pihm_aggregatedOutput
+dssat_cfg_fk,DSSTA with fake configuration to emulate Cycles,cycles_reinit;cycles_weather,cycles_aggregatedOutput

@@ -10,6 +10,7 @@ Cycles_snow_sub,SNOW SUB,land_surface_snow__volume-per-area_sublimation_rate,mm/
 Cycles_pp,PP,atmosphere_water__time_integral_of_precipitation_volume_flux,mm,Precipitation in mm
 Cycles_precipitation,PRECIPITATION,atmosphere_water__time_integral_of_precipitation_volume_flux,mm,Precipitation
 Cycles_forage_yield,FORAGE YIELD,crop_biomass_residue__harvested_forage_yield,Mg/ha,Forage yield or removed residue biomass at harvest.
+Cycles_soil_evap,SOIL EVAP,soil_surface_water__volume-per-area_evaporation_rate,mm/day,Evaporation from the soil surface.
 Cycles_SMC_L1,SMC_L1,soil_top_water__volume_fraction,m3/m4,Soil moisture content in layer 1
 Topo_p,P,atmosphere_water__precipitation_leq-volume_flux,mm/h,Precipitation rate
 Topo_qs,qs,soil_water__saturated_volume_fraction,,Saturated soil water content
@@ -24,4 +25,7 @@ DSSAT_tmax,TMAX,atmosphere_air__daily_maximum_of_temperature,C,Temperature of ai
 DSSAT_tmin,TMIN,atmosphere_air__daily_minimum_of_temperature,C,Temperature of air- minimum
 ECON_landuse,landuse,land__usage_prediction,kha,Land-use prediction by parcel
 ECON_crop_production,production,land_crop__volume-per-area_yield,mkg,Crop production
-ECON_yield,yieldN,crop_biomass_residue__harvested_forage_yield,,Yield
+ECON_yield,yieldN,crop_biomass_residue__harvested_forage_yield,kg/ha,Yield
+ECON_price,cropPrice,crop__nominal_per-yield_price,,Crop price
+LDAS_RAIN,rainfall,rainfall__mass_flux,,Rainfall flux
+LDAS_SM,soil moisture,soil_moisture__vertical_integral_of_mass-per-volume_concentration,,Soil moisture content in layer 1

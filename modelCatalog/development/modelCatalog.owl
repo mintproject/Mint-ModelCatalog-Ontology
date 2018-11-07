@@ -11,7 +11,7 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://w3id.org/mint/modelCatalog">
         <owl:versionIRI rdf:resource="https://w3id.org/mint/modelCatalog/0.1.0"/>
-        <owl:imports rdf:resource="https://w3id.org/mint/commons/0.0.1"/>
+        <owl:imports rdf:resource="https://knowledgecaptureanddiscovery.github.io/Mint-ModelCatalog-Ontology/commons/release/0.0.1/ontology.ttl"/>
         <vann:preferredNamespacePrefix xml:lang="en">https://w3id.org/mint/modelCatalog#</vann:preferredNamespacePrefix>
         <dc:abstract xml:lang="en">An ontology for describing models and their linkages to variables.</dc:abstract>
         <owl:priorVersion rdf:resource="https://w3id.org/mint/modelCatalog/0.0.1"/>

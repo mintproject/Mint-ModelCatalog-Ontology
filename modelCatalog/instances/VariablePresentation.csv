@@ -1,31 +1,31 @@
-https://w3id.org/mint/commons#VariablePresentation,https://w3id.org/mint/commons#hasShortName,https://w3id.org/mint/commons#hasStandardVariable,https://w3id.org/mint/commons#usesUnit,https://w3id.org/mint/commons#hasDescription
-PIHM_PRCP,PRCP,atmosphere_water__precipitation_volume_flux,m/day,Value of Precipitation
-PIHM_TRMP,TRMP,atmosphere_bottom_air__temperature,C,Value of Temperature
-PIHM_WINF,WINF,atmosphere_bottom_wind__speed,m/day,Value of wind speed
-PIHM_RH,RH,atmosphere_air_water~vapor__relative_saturation,percentage/100,Value of relative humidity
-PIHM_THETAR,ThetaR,soil__residual_porosity,m3/m3,Residual water content
-PIHM_INF_RATE,infiltration rate,land_surface_water__infiltration_rate,m/d,infiltration rate
-PIHM_EVAP,evaporation from ground surface,land_surface_water__evaporation_rate,m/d,evaporation from ground surface
-Cycles_snow_sub,SNOW SUB,land_surface_snow__volume-per-area_sublimation_rate,mm/day,Sublimation from snow cover
-Cycles_pp,PP,atmosphere_water__time_integral_of_precipitation_volume_flux,mm,Precipitation in mm
-Cycles_precipitation,PRECIPITATION,atmosphere_water__time_integral_of_precipitation_volume_flux,mm,Precipitation
-Cycles_forage_yield,FORAGE YIELD,crop_biomass_residue__harvested_forage_yield,Mg/ha,Forage yield or removed residue biomass at harvest.
-Cycles_soil_evap,SOIL EVAP,soil_surface_water__volume-per-area_evaporation_rate,mm/day,Evaporation from the soil surface.
-Cycles_SMC_L1,SMC_L1,soil_top_water__volume_fraction,m3/m4,Soil moisture content in layer 1
-Topo_p,P,atmosphere_water__precipitation_leq-volume_flux,mm/h,Precipitation rate
-Topo_qs,qs,soil_water__saturated_volume_fraction,,Saturated soil water content
-Topo_albedo,albedo,land_surface__albedo,,surface albedo in [0-1]
-DSSAT_rain,RAIN,atmosphere_water__one-day_time_integral_of_precipitation_leq-volume_flux,mm/day,Rainfall (including moisture in snow) in one day
-DSSAT_sh20,SH2O,soil_column_water__initial_volume_fraction,cm3/cm3,Initial water concentration by layer
-DSSAT_salb,SALB,land_soil~dry_surface__albedo,,Soil albedo- dry soil
-DSSAT_hwam,HWAM,crop__maturity_dry_harvested_mass-per-area_yield,kg/ha,Harvest yield at harvest maturity (dry wt)
-DSSAT_cwam,CWAM,crop_tops__maturity_dry_mass-per-area_yield,kg/ha,Tops dry weight at maturity
-DSSAT_tav,TAV,air__yearly_average_of_temperature,C,Temperature average for whole year
-DSSAT_tmax,TMAX,atmosphere_air__daily_maximum_of_temperature,C,Temperature of air- maximum
-DSSAT_tmin,TMIN,atmosphere_air__daily_minimum_of_temperature,C,Temperature of air- minimum
-ECON_landuse,landuse,land__usage_prediction,kha,Land-use prediction by parcel
-ECON_crop_production,production,land_crop__volume-per-area_yield,mkg,Crop production
-ECON_yield,yieldN,crop_biomass_residue__harvested_forage_yield,kg/ha,Yield
-ECON_price,cropPrice,crop__nominal_per-yield_price,,Crop price
-LDAS_RAIN,rainfall,rainfall__mass_flux,,Rainfall flux
-LDAS_SM,soil moisture,soil_moisture__vertical_integral_of_mass-per-volume_concentration,,Soil moisture content in layer 1
+https://w3id.org/mint/commons#VariablePresentation,https://w3id.org/mint/commons#hasShortName,https://w3id.org/mint/commons#hasLongName,https://w3id.org/mint/commons#hasStandardVariable,https://w3id.org/mint/commons#usesUnit,https://w3id.org/mint/commons#hasDescription
+PIHM_PRCP,PRCP,precipitation,atmosphere_water__precipitation_volume_flux,m/day,Value of Precipitation
+PIHM_TRMP,TRMP,temperature,atmosphere_bottom_air__temperature,C,Value of Temperature
+PIHM_WINF,WINF,wind speed,atmosphere_bottom_wind__speed,m/day,Value of wind speed
+PIHM_RH,RH,relative humidity,atmosphere_air_water~vapor__relative_saturation,percentage/100,Value of relative humidity
+PIHM_THETAR,ThetaR,soil porosity,soil__residual_porosity,m3/m3,Residual water content
+PIHM_INF_RATE,INF_Rate,Infiltration rate,land_surface_water__infiltration_rate,m/d,infiltration rate
+PIHM_EVAP,EVAP,Evaporation,land_surface_water__evaporation_rate,m/d,evaporation from ground surface
+Cycles_snow_sub,SNOW SUB,snow sublimation,land_surface_snow__volume-per-area_sublimation_rate,mm/day,Sublimation from snow cover
+Cycles_pp,PP,precipitation,atmosphere_water__time_integral_of_precipitation_volume_flux,mm,Precipitation in mm
+Cycles_precipitation,PRECIPITATION,precipitation,atmosphere_water__time_integral_of_precipitation_volume_flux,mm,Precipitation
+Cycles_forage_yield,FORAGE YIELD,forage yield,crop_biomass_residue__harvested_forage_yield,Mg/ha,Forage yield or removed residue biomass at harvest.
+Cycles_soil_evap,SOIL EVAP,soil evaporation,soil_surface_water__volume-per-area_evaporation_rate,mm/day,Evaporation from the soil surface.
+Cycles_SMC_L1,SMC_L1,soil moisture,soil_top_water__volume_fraction,m3/m4,Soil moisture content in layer 1
+Topo_p,P,precipitation,atmosphere_water__precipitation_leq-volume_flux,mm/h,Precipitation rate
+Topo_qs,qs,soil water content,soil_water__saturated_volume_fraction,,Saturated soil water content
+Topo_albedo,albedo,albedo,land_surface__albedo,,surface albedo in [0-1]
+DSSAT_rain,RAIN,precipitation,atmosphere_water__one-day_time_integral_of_precipitation_leq-volume_flux,mm/day,Rainfall (including moisture in snow) in one day
+DSSAT_sh20,SH2O,initial water content,soil_column_water__initial_volume_fraction,cm3/cm3,Initial water concentration by layer
+DSSAT_salb,SALB,albedo,land_soil~dry_surface__albedo,,Soil albedo- dry soil
+DSSAT_hwam,HWAM,harvest yield,crop__maturity_dry_harvested_mass-per-area_yield,kg/ha,Harvest yield at harvest maturity (dry wt)
+DSSAT_cwam,CWAM,tops dry weigth,crop_tops__maturity_dry_mass-per-area_yield,kg/ha,Tops dry weight at maturity
+DSSAT_tav,TAV,mean annual temperature,air__yearly_average_of_temperature,C,Temperature average for whole year
+DSSAT_tmax,TMAX,maximum air temperature,atmosphere_air__daily_maximum_of_temperature,C,Temperature of air- maximum
+DSSAT_tmin,TMIN,minimum air temperature,atmosphere_air__daily_minimum_of_temperature,C,Temperature of air- minimum
+ECON_landuse,landuse,land use,land__usage_prediction,kha,Land-use prediction by parcel
+ECON_crop_production,production,crop production,land_crop__volume-per-area_yield,mkg,Crop production
+ECON_yield,yieldN,crop yiekd,crop_biomass_residue__harvested_forage_yield,kg/ha,Yield
+ECON_price,cropPrice,crop price,crop__nominal_per-yield_price,,Crop price
+LDAS_RAIN,rainfall,precipitation,rainfall__mass_flux,,Rainfall flux
+LDAS_SM,soil moisture,soil moisture ,soil_moisture__vertical_integral_of_mass-per-volume_concentration,,Soil moisture content in layer 1

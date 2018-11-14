@@ -97,6 +97,7 @@
     <!-- https://w3id.org/mint/commons#usesUnit -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/mint/commons#usesUnit">
+        <rdfs:domain rdf:resource="https://w3id.org/mint/modelCatalog#TimeInterval"/>
         <rdfs:range rdf:resource="http://qudt.org/schema/qudt/Unit"/>
     </owl:ObjectProperty>
     
@@ -260,6 +261,14 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- https://w3id.org/mint/commons#hasShortName -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/mint/commons#hasShortName">
+        <rdfs:domain rdf:resource="https://w3id.org/mint/commons#VariablePresentation"/>
+    </owl:DatatypeProperty>
     
 
 

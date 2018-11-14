@@ -6,6 +6,7 @@ PIHM_RH,RH,relative humidity,atmosphere_air_water~vapor__relative_saturation,per
 PIHM_THETAR,ThetaR,soil porosity,soil__residual_porosity,m3/m3,Residual water content
 PIHM_INF_RATE,INF_Rate,Infiltration rate,land_surface_water__infiltration_rate,m/d,infiltration rate
 PIHM_EVAP,EVAP,Evaporation,land_surface_water__evaporation_rate,m/d,evaporation from ground surface
+PIHM_SURF,surf,surface water depth,land_surface_water__depth,m/d,depth of water on land surface
 Cycles_snow_sub,SNOW SUB,snow sublimation,land_surface_snow__volume-per-area_sublimation_rate,mm/day,Sublimation from snow cover
 Cycles_pp,PP,precipitation,atmosphere_water__time_integral_of_precipitation_volume_flux,mm,Precipitation in mm
 Cycles_precipitation,PRECIPITATION,precipitation,atmosphere_water__time_integral_of_precipitation_volume_flux,mm,Precipitation

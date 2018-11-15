@@ -1,0 +1,1303 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.4), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.geoscienceontology.org/geo-upper", "http://qudt.org/schema/qudt", "http://schema.org", "http://ontosoft.org/software", "https://w3id.org/mint/commons", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://www.w3.org/ns/dcat", "https://w3id.org/mint/dataCatalog", "https://w3id.org/mint/modelCatalog", "http://www.w3.org/2004/02/skos/core" ],
+    "title" : {
+      "en" : "The MINT Model Catalog Ontology"
+    },
+    "iri" : "https://w3id.org/mint/modelCatalog",
+    "version" : "0.2.0",
+    "author" : [ "Yolanda Gil", "Deborah Khider", "Varun Ratnakar", "Daniel Garijo" ],
+    "comments" : {
+      "en" : "An ontology for describing models and their linkages to variables."
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "http://creativecommons.org/licenses/by/2.0/",
+        "type" : "iri"
+      } ],
+      "priorVersion" : [ {
+        "identifier" : "priorVersion",
+        "language" : "undefined",
+        "value" : "https://w3id.org/mint/modelCatalog/0.0.1",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Varun Ratnakar",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Deborah Khider",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Yolanda Gil",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Daniel Garijo",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "en",
+        "value" : "Jay Pujara",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "en",
+        "value" : "https://w3id.org/mint/modelCatalog#",
+        "type" : "label"
+      }, {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "en",
+        "value" : "mc",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "en",
+        "value" : "An ontology for describing models and their linkages to variables.",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "0.2.0",
+        "type" : "label"
+      } ],
+      "preferredNamespaceURI" : [ {
+        "identifier" : "preferredNamespaceURI",
+        "language" : "undefined",
+        "value" : "https://w3id.org/mint/modelCatalog#",
+        "type" : "iri"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "The MINT Model Catalog Ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "metrics" : {
+    "classCount" : 16,
+    "objectPropertyCount" : 14,
+    "datatypePropertyCount" : 7,
+    "individualCount" : 0
+  },
+  "class" : [ {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "51",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "39",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "48",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "43",
+    "type" : "owl:Class"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "67",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "65",
+    "type" : "owl:Class"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "27",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "73",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "77",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/mint/modelCatalog#ModelVersion",
+    "baseIri" : "https://w3id.org/mint/modelCatalog",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ModelVersion",
+      "en" : "Model Version"
+    },
+    "comment" : {
+      "en" : "The version of the model"
+    },
+    "id" : "9",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#Concept",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Concept"
+    },
+    "attributes" : [ "external" ],
+    "id" : "11"
+  }, {
+    "iri" : "https://w3id.org/mint/modelCatalog#Model",
+    "baseIri" : "https://w3id.org/mint/modelCatalog",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Model",
+      "en" : "Model"
+    },
+    "comment" : {
+      "en" : "A scientific model (from Hydrology, Agronomy, etc.) that represents a set of processes (infiltration, outflow, etc.) to be simulated."
+    },
+    "id" : "7",
+    "superClasses" : [ "15" ]
+  }, {
+    "iri" : "http://qudt.org/schema/qudt/Unit",
+    "baseIri" : "http://qudt.org/schema/qudt",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://qudt.org/schema/qudt/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Unit"
+    },
+    "subClasses" : [ "23" ],
+    "attributes" : [ "external" ],
+    "id" : "22"
+  }, {
+    "iri" : "https://w3id.org/mint/modelCatalog#TimeInterval",
+    "baseIri" : "https://w3id.org/mint/modelCatalog",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TimeInterval",
+      "en" : "Time interval"
+    },
+    "comment" : {
+      "en" : "The time step of the model."
+    },
+    "id" : "13"
+  }, {
+    "iri" : "http://ontosoft.org/software#Software",
+    "baseIri" : "http://ontosoft.org/software",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://ontosoft.org/software#",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Software"
+    },
+    "subClasses" : [ "7" ],
+    "attributes" : [ "external" ],
+    "id" : "15"
+  }, {
+    "iri" : "http://www.geoscienceontology.org/geo-upper#Variable",
+    "baseIri" : "http://www.geoscienceontology.org/geo-upper",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.geoscienceontology.org/geo-upper",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Variable"
+    },
+    "subClasses" : [ "35" ],
+    "attributes" : [ "external" ],
+    "id" : "51"
+  }, {
+    "iri" : "https://w3id.org/mint/modelCatalog#Process",
+    "baseIri" : "https://w3id.org/mint/modelCatalog",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Process",
+      "en" : "Process"
+    },
+    "comment" : {
+      "en" : "The biophysical or socio-economical behavior the model is simulating."
+    },
+    "id" : "21"
+  }, {
+    "iri" : "https://w3id.org/mint/commons#Variable",
+    "baseIri" : "https://w3id.org/mint/commons",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Variable",
+      "en" : "Variable"
+    },
+    "subClasses" : [ "26" ],
+    "comment" : {
+      "en" : "A symbol that represents a quantity in a dataset or a dataset specification"
+    },
+    "attributes" : [ "external" ],
+    "id" : "35",
+    "superClasses" : [ "51" ]
+  }, {
+    "iri" : "https://w3id.org/mint/commons#TimeConvention",
+    "baseIri" : "https://w3id.org/mint/commons",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TimeConvention",
+      "en" : "Time Convention"
+    },
+    "comment" : {
+      "en" : "The convention used for modeling time values."
+    },
+    "attributes" : [ "external" ],
+    "id" : "56"
+  }, {
+    "instances" : 0,
+    "union" : [ "26", "13" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "17"
+  }, {
+    "iri" : "https://w3id.org/mint/modelCatalog#CAG",
+    "baseIri" : "https://w3id.org/mint/modelCatalog",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CAG",
+      "en" : "Causal analysis graph"
+    },
+    "comment" : {
+      "undefined" : "Causal analysis graph describing the processes being modeled and the relationship among them"
+    },
+    "id" : "20"
+  }, {
+    "instances" : 0,
+    "union" : [ "23", "22" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "18"
+  }, {
+    "iri" : "https://w3id.org/mint/modelCatalog#DatasetSpecification",
+    "baseIri" : "https://w3id.org/mint/modelCatalog",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DatasetSpecification",
+      "en" : "Dataset specification"
+    },
+    "comment" : {
+      "en" : "Class designed to describe a type of input or output used or produced by a model. For example, Topoflow has several inputs. One of them is a text file with precipitation values. The representation of this input is an instance of a dataset specification."
+    },
+    "id" : "1"
+  }, {
+    "iri" : "https://w3id.org/mint/commons#ICASAVariable",
+    "baseIri" : "https://w3id.org/mint/commons",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ICASAVariable",
+      "en" : "ICASA variable"
+    },
+    "comment" : {
+      "en" : "Variable that follows the ICASA standard for agriculture: https://dssat.net/data/standards_v2"
+    },
+    "attributes" : [ "external" ],
+    "id" : "38",
+    "superClasses" : [ "39" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "8", "7" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "60"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "14",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "35", "26" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "4"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "54",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/mint/commons#StandardVariable",
+    "baseIri" : "https://w3id.org/mint/commons",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StandardVariable",
+      "en" : "Standard variable"
+    },
+    "union" : [ "51", "11" ],
+    "subClasses" : [ "43", "38" ],
+    "comment" : {
+      "en" : "A standard variable, necessary to refer to all the variable using the same nomenclature in a domain ontology"
+    },
+    "attributes" : [ "external", "union" ],
+    "id" : "39"
+  }, {
+    "instances" : 0,
+    "union" : [ "1", "32" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "48"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "36",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/mint/commons#GSNVariable",
+    "baseIri" : "https://w3id.org/mint/commons",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GSNVariable",
+      "en" : "GSN variable"
+    },
+    "comment" : {
+      "en" : "Variable that follows the GSN standard: http://geoscienceontology.org/"
+    },
+    "attributes" : [ "external" ],
+    "id" : "43",
+    "superClasses" : [ "39" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#float",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "66",
+    "label" : {
+      "IRI-based" : "float"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "67",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://ontosoft.org/software#SoftwareVersion",
+    "baseIri" : "http://ontosoft.org/software",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://ontosoft.org/software#",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "SoftwareVersion"
+    },
+    "subClasses" : [ "9" ],
+    "attributes" : [ "external" ],
+    "id" : "10"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "63",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "41",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/mint/modelCatalog#Module",
+    "baseIri" : "https://w3id.org/mint/modelCatalog",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Module",
+      "en" : "Module"
+    },
+    "comment" : {
+      "en" : "A module is an optional software package that can be configured to run in a model configuration."
+    },
+    "id" : "65"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "69",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "1", "32" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "27"
+  }, {
+    "instances" : 0,
+    "union" : [ "1", "32" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "73"
+  }, {
+    "iri" : "https://w3id.org/mint/modelCatalog#DataStructureDefinition",
+    "baseIri" : "https://w3id.org/mint/modelCatalog",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataStructureDefinition",
+      "en" : "Data structure definition"
+    },
+    "comment" : {
+      "en" : "The schema the file follows. To make the input or output machin readable, we need to know how the file is organized."
+    },
+    "id" : "2"
+  }, {
+    "iri" : "https://w3id.org/mint/dataCatalog#Dataset",
+    "baseIri" : "https://w3id.org/mint/dataCatalog",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Dataset",
+      "en" : "Dataset"
+    },
+    "comment" : {
+      "en" : "Extension of the W3C Data Catalog dataset that has additional properties for the MINT data catalog"
+    },
+    "attributes" : [ "external" ],
+    "id" : "32",
+    "superClasses" : [ "33", "45" ]
+  }, {
+    "iri" : "https://w3id.org/mint/modelCatalog#Grid",
+    "baseIri" : "https://w3id.org/mint/modelCatalog",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Grid",
+      "en" : "Grid"
+    },
+    "comment" : {
+      "en" : "Datasets are often regridded before a simulation. Describes the grid convention being followed"
+    },
+    "id" : "49"
+  }, {
+    "iri" : "http://schema.org/Place",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Place"
+    },
+    "attributes" : [ "external" ],
+    "id" : "77"
+  }, {
+    "iri" : "https://w3id.org/mint/commons#VariablePresentation",
+    "baseIri" : "https://w3id.org/mint/commons",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "VariablePresentation",
+      "en" : "VariablePresentation"
+    },
+    "comment" : {
+      "en" : "Concept used to represent an instantiation of a variable in an input/output dataset. For example, a model A may use an input file with temperature expressed in Farenheit (variablePresentation1), while a model B may produce an output with temperature in Celsius (variablePresentation2). Both variable presentations refer to the concept of temperature."
+    },
+    "attributes" : [ "external" ],
+    "id" : "26",
+    "superClasses" : [ "35" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/dcat#Dataset",
+    "baseIri" : "http://www.w3.org/ns/dcat",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Dataset"
+    },
+    "subClasses" : [ "32" ],
+    "attributes" : [ "external" ],
+    "id" : "45"
+  }, {
+    "iri" : "https://w3id.org/mint/commons#Unit",
+    "baseIri" : "https://w3id.org/mint/commons",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Unit",
+      "en" : "Unit"
+    },
+    "comment" : {
+      "en" : "Class designed to distinguish the different types of units that are available in variables from datasets"
+    },
+    "attributes" : [ "external" ],
+    "id" : "23",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "http://schema.org/Dataset",
+    "baseIri" : "http://schema.org",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Dataset"
+    },
+    "subClasses" : [ "32" ],
+    "attributes" : [ "external" ],
+    "id" : "33"
+  }, {
+    "iri" : "https://w3id.org/mint/modelCatalog#ModelConfiguration",
+    "baseIri" : "https://w3id.org/mint/modelCatalog",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ModelConfiguration",
+      "en" : "Model configuration"
+    },
+    "comment" : {
+      "en" : "A model may be configured in different ways depending on the data that is avaialble. For example, if topological information is available,  a groundwater model may use it to produce a better estimation of the water budget of an aquifer. A model configuration represents a unique setting of inputs and outputs of a given model designed for a particular functionality."
+    },
+    "id" : "8",
+    "superClasses" : [ "30" ]
+  }, {
+    "iri" : "http://ontosoft.org/software#Function",
+    "baseIri" : "http://ontosoft.org/software",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://ontosoft.org/software#",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Function"
+    },
+    "subClasses" : [ "8" ],
+    "comment" : {
+      "undefined" : "\"Function\" is part of an Ontosoft extension currently being developed"
+    },
+    "attributes" : [ "external" ],
+    "id" : "30"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "6",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "16",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "19",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "24",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "25",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "34",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "40",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "47",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "50",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "52",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "53",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "61",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "68",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "70",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "71",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "72",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "74",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "75",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "76",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "28",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "79",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "80",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "81",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/mint/modelCatalog#hasFileStructure",
+    "baseIri" : "https://w3id.org/mint/modelCatalog",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "hasFileStructure",
+      "en" : "has file structure"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Relates a dataset specification to the data structure definition"
+    },
+    "attributes" : [ "object" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://w3id.org/mint/commons#hasShortName",
+    "baseIri" : "https://w3id.org/mint/commons",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "hasShortName",
+      "en" : "has short name"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "A short name (e.g., temperature) capturing the high-level concept of the variable"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "3"
+  }, {
+    "iri" : "https://w3id.org/mint/modelCatalog#hasConfiguration",
+    "baseIri" : "https://w3id.org/mint/modelCatalog",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "hasConfiguration",
+      "en" : "has configuration"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Property that links a model to one of its configurations. A model may have multiple configurations, each of which is unique in terms of the inputs and outputs it uses."
+    },
+    "attributes" : [ "object" ],
+    "id" : "6"
+  }, {
+    "iri" : "https://w3id.org/mint/modelCatalog#hasValue",
+    "baseIri" : "https://w3id.org/mint/modelCatalog",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "hasValue",
+      "en" : "has value"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "The numerical value associated with the object."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "12"
+  }, {
+    "iri" : "https://w3id.org/mint/commons#usesUnit",
+    "baseIri" : "https://w3id.org/mint/commons",
+    "range" : "18",
+    "label" : {
+      "IRI-based" : "usesUnit",
+      "en" : "uses Unit"
+    },
+    "domain" : "17",
+    "comment" : {
+      "en" : "Records the unit of measurement used by a presentation"
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "16"
+  }, {
+    "iri" : "https://w3id.org/mint/modelCatalog#has_part",
+    "baseIri" : "https://w3id.org/mint/modelCatalog",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "has_part",
+      "en" : "has part"
+    },
+    "domain" : "20",
+    "comment" : {
+      "en" : "Relates the CAG to the process"
+    },
+    "attributes" : [ "object" ],
+    "id" : "19"
+  }, {
+    "iri" : "https://w3id.org/mint/modelCatalog#hasInput",
+    "baseIri" : "https://w3id.org/mint/modelCatalog",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasInput",
+      "en" : "has input"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "Property that links a model configuration to the input types expected by it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "24"
+  }, {
+    "iri" : "https://w3id.org/mint/commons#hasDataset",
+    "inverse" : "28",
+    "baseIri" : "https://w3id.org/mint/commons",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "hasDataset",
+      "en" : "has dataset"
+    },
+    "domain" : "26",
+    "comment" : {
+      "en" : "Associates a presentation with a dataset where the presentation occurs"
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "25"
+  }, {
+    "range" : "30",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "29"
+  }, {
+    "range" : "33",
+    "domain" : "32",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "31"
+  }, {
+    "iri" : "https://w3id.org/mint/commons#hasDescription",
+    "baseIri" : "https://w3id.org/mint/commons",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "hasDescription",
+      "en" : "has description"
+    },
+    "domain" : "35",
+    "comment" : {
+      "en" : "A human-readable description of a variable, which may include additional contextual information used to map to a standard name"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "34"
+  }, {
+    "range" : "39",
+    "domain" : "38",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "37"
+  }, {
+    "iri" : "https://w3id.org/mint/modelCatalog#hasLongName",
+    "baseIri" : "https://w3id.org/mint/modelCatalog",
+    "range" : "41",
+    "label" : {
+      "IRI-based" : "hasLongName",
+      "en" : "has long name"
+    },
+    "domain" : "26",
+    "comment" : {
+      "en" : "Properties that relate the variable representation to its long name. The long name is useful for context (e.g., precipitation is less ambiguous than P) but not as precise as the standard name."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "40"
+  }, {
+    "range" : "39",
+    "domain" : "43",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "42"
+  }, {
+    "range" : "45",
+    "domain" : "32",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "44"
+  }, {
+    "range" : "10",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "46"
+  }, {
+    "iri" : "https://w3id.org/mint/modelCatalog#hadGrid",
+    "baseIri" : "https://w3id.org/mint/modelCatalog",
+    "range" : "49",
+    "label" : {
+      "IRI-based" : "hadGrid",
+      "en" : "has grid"
+    },
+    "domain" : "48",
+    "comment" : {
+      "en" : "Links the variable presentation to its grid"
+    },
+    "attributes" : [ "object" ],
+    "id" : "47"
+  }, {
+    "iri" : "https://w3id.org/mint/modelCatalog#hasProcess",
+    "baseIri" : "https://w3id.org/mint/modelCatalog",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "hasProcess",
+      "en" : "has process"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "Relates the model configuration to the processes being simulated."
+    },
+    "attributes" : [ "object" ],
+    "id" : "50"
+  }, {
+    "iri" : "https://w3id.org/mint/modelCatalog#hasOutput",
+    "baseIri" : "https://w3id.org/mint/modelCatalog",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasOutput",
+      "en" : "has output"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "Preoperty that expresses what are the outputs of a model"
+    },
+    "attributes" : [ "object" ],
+    "id" : "52"
+  }, {
+    "iri" : "https://w3id.org/mint/modelCatalog#hasVersionNumber",
+    "baseIri" : "https://w3id.org/mint/modelCatalog",
+    "range" : "54",
+    "label" : {
+      "IRI-based" : "hasVersionNumber",
+      "en" : "has version number"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Relates the model version to its number"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "53"
+  }, {
+    "range" : "51",
+    "domain" : "35",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "55"
+  }, {
+    "range" : "15",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "57"
+  }, {
+    "range" : "35",
+    "domain" : "26",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "58"
+  }, {
+    "range" : "22",
+    "domain" : "23",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "59"
+  }, {
+    "iri" : "https://w3id.org/mint/modelCatalog#hasTimeInterval",
+    "baseIri" : "https://w3id.org/mint/modelCatalog",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "hasTimeInterval",
+      "en" : "has time interval"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "Property that relates the model configuration to the time interval on which it's being run."
+    },
+    "attributes" : [ "object" ],
+    "id" : "61"
+  }, {
+    "iri" : "https://w3id.org/mint/modelCatalog#hasFormat",
+    "baseIri" : "https://w3id.org/mint/modelCatalog",
+    "range" : "63",
+    "label" : {
+      "IRI-based" : "hasFormat",
+      "en" : "has format"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Format followed by a file. For example, txt, nc, etc."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "62"
+  }, {
+    "iri" : "https://w3id.org/mint/modelCatalog#hasModule",
+    "baseIri" : "https://w3id.org/mint/modelCatalog",
+    "range" : "65",
+    "label" : {
+      "IRI-based" : "hasModule",
+      "en" : "has module"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "link between a model configuration and a module being used on it"
+    },
+    "attributes" : [ "object" ],
+    "id" : "64"
+  }, {
+    "iri" : "https://w3id.org/mint/modelCatalog#hasInvocationScript",
+    "baseIri" : "https://w3id.org/mint/modelCatalog",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "hasInvocationScript",
+      "en" : "has invocation script"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "Relates the model configuration to the script needed to invoke it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "68"
+  }, {
+    "iri" : "http://qudt.org/schema/qudt/hasNumeratorPart",
+    "baseIri" : "http://qudt.org/schema/qudt",
+    "range" : "22",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://qudt.org/schema/qudt/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasNumeratorPart"
+    },
+    "domain" : "22",
+    "attributes" : [ "external", "object" ],
+    "id" : "70"
+  }, {
+    "iri" : "https://w3id.org/mint/commons#usesScale",
+    "baseIri" : "https://w3id.org/mint/commons",
+    "range" : "66",
+    "label" : {
+      "IRI-based" : "usesScale",
+      "en" : "uses scale"
+    },
+    "domain" : "26",
+    "comment" : {
+      "en" : "A numerical value for the scale used in measurements"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "71"
+  }, {
+    "iri" : "https://w3id.org/mint/modelCatalog#hasCAG",
+    "baseIri" : "https://w3id.org/mint/modelCatalog",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "hasCAG",
+      "en" : "has CAG"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "Relates a model configuration to its CAG"
+    },
+    "attributes" : [ "object" ],
+    "id" : "72"
+  }, {
+    "iri" : "http://qudt.org/schema/qudt/hasDenominatorPart",
+    "baseIri" : "http://qudt.org/schema/qudt",
+    "range" : "22",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://qudt.org/schema/qudt/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasDenominatorPart"
+    },
+    "domain" : "22",
+    "attributes" : [ "external", "object" ],
+    "id" : "74"
+  }, {
+    "iri" : "https://w3id.org/mint/modelCatalog#hasModelCategory",
+    "baseIri" : "https://w3id.org/mint/modelCatalog",
+    "range" : "69",
+    "label" : {
+      "IRI-based" : "hasModelCategory",
+      "en" : "has model category"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Realates a model to its category. For instance, Topoflow has category hydrology. Useful to quickly retrieve relevant models."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "75"
+  }, {
+    "iri" : "https://w3id.org/mint/commons#usesTimeConvention",
+    "baseIri" : "https://w3id.org/mint/commons",
+    "range" : "56",
+    "label" : {
+      "IRI-based" : "usesTimeConvention",
+      "en" : "uses time convention"
+    },
+    "domain" : "26",
+    "comment" : {
+      "en" : "Records the time convention used by a presentation"
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "76"
+  }, {
+    "iri" : "https://w3id.org/mint/modelCatalog#hasVersion",
+    "baseIri" : "https://w3id.org/mint/modelCatalog",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "hasVersion",
+      "en" : "has version"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Property that links a model to its version"
+    },
+    "attributes" : [ "object" ],
+    "id" : "78"
+  }, {
+    "iri" : "https://w3id.org/mint/commons#hasPresentation",
+    "baseIri" : "https://w3id.org/mint/commons",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "hasPresentation",
+      "en" : "has presentation"
+    },
+    "domain" : "73",
+    "comment" : {
+      "en" : "Property that links an instance of a dataset (or a dataset specification) to the presentation of a variable contained (or expected to be contained) on it."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "28"
+  }, {
+    "iri" : "https://w3id.org/mint/modelCatalog#influences",
+    "baseIri" : "https://w3id.org/mint/modelCatalog",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "influences",
+      "en" : "influences"
+    },
+    "domain" : "21",
+    "comment" : {
+      "en" : "Describe the realationship between two processes"
+    },
+    "attributes" : [ "object" ],
+    "id" : "79"
+  }, {
+    "iri" : "https://w3id.org/mint/modelCatalog#hasAssumption",
+    "baseIri" : "https://w3id.org/mint/modelCatalog",
+    "range" : "67",
+    "label" : {
+      "IRI-based" : "hasAssumption",
+      "en" : "has assumption"
+    },
+    "domain" : "60",
+    "comment" : {
+      "en" : "Assumptions of a model, e.g. the solver being used."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "80"
+  }, {
+    "iri" : "https://w3id.org/mint/commons#hasStandardVariable",
+    "baseIri" : "https://w3id.org/mint/commons",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "hasStandardVariable",
+      "en" : "has standard variable"
+    },
+    "domain" : "26",
+    "comment" : {
+      "en" : "The standard name of a variable"
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "81"
+  } ]
+}

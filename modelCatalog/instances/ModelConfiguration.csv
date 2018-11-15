@@ -1,11 +1,11 @@
-https://w3id.org/mint/modelCatalog#ModelConfiguration,http://www.w3.org/2000/01/rdf-schema#label,https://w3id.org/mint/modelCatalog#hasInput,https://w3id.org/mint/modelCatalog#hasOutput
-pihm_cfg_simple,PIHM simple configuration,pihm_forc;pihm_aggr_files,pihm_aggregatedOutput
-pihm_cfg_simple2,PIHM simple configuration with additional input variables,pihm_forc2;pihm_aggr_files,pihm_aggregatedOutput
-cycles_cfg_simple,Cycles simple configuration,cycles_reinit;cycles_weather,cycles_aggregatedOutput
-kimetrica_land_use_cfg_simple,Kimetrica land use simple configuration,,
-economic_land_quality_cfg_simple,Economic model for land quality with simple configuration,econ_yield_input;econ_price_input,econ_landuse_result
-topoflow_cfg_simple,TopoFlow with basic configuration,topo_rain;topo_aggr_files,topo_aggregatedOutput
-dssat_cfg_simple,DSSAT simple configuration,dssat_aggr_files,dssat_aggregatedOutput
-dssat_cfg_simple2,DSSAT simple configuration with explicit outputs,dssat_aggr_files,dssat_inh;dssat_inp;dssat_sol;dssat_cli;dssat_summary;dssat_warning
-topoflow_cfg_fk,TopoFlow with fake configuration to emulate PIHM,pihm_forc;pihm_aggr_files,pihm_aggregatedOutput
-dssat_cfg_fk,DSSTA with fake configuration to emulate Cycles,cycles_reinit;cycles_weather,cycles_aggregatedOutput
+https://w3id.org/mint/modelCatalog#ModelConfiguration,http://www.w3.org/2000/01/rdf-schema#label,https://w3id.org/mint/modelCatalog#hasInput,https://w3id.org/mint/modelCatalog#hasOutput,https://w3id.org/mint/modelCatalog#hasGrid,https://w3id.org/mint/modelCatalog#hasModule,https://w3id.org/mint/modelCatalog#hasTimeInterval,https://w3id.org/mint/modelCatalog#hasCAG,https://w3id.org/mint/modelCatalog#hasProcess,https://w3id.org/mint/modelCatalog#hasInvocationScript
+pihm_cfg_simple,PIHM simple configuration,pihm_forc;pihm_aggr_files,pihm_aggregatedOutput,,,pihm_cfg_simple_TI,pihm_cfg_simple_CAG,precipitation;solarradiation;transpiration;evaporation;runoff;infiltration,
+pihm_cfg_simple2,PIHM simple configuration with additional input variables,pihm_forc2;pihm_aggr_files,pihm_aggregatedOutput,,,pihm_cfg_simple2_TI,pihm_cfg_simple2_CAG,precipitation;solarradiation;transpiration;evaporation;runoff;infiltration,
+cycles_cfg_simple,Cycles simple configuration,cycles_reinit;cycles_weather,cycles_aggregatedOutput,,,cycles_cfg_simple_TI,cycles_cfg_simple_CAG,,
+kimetrica_land_use_cfg_simple,Kimetrica land use simple configuration,,,,,kimetrica_land_use_cfg_simple_TI,kimetrica_land_use_cfg_simple_CAG,,
+economic_aggregate_crop_supply,aggregate crop supply response model for the country of South Sudan configuration,econ_yield_input;econ_price_input,econ_landuse_result,,,economic_aggregate_crop_supply_TI,economic_aggregate_crop_supply_CAG,crop_yield_elasticity;crop_prices;fertilizer_prices;land_use;fertilizer_use;crop_supply;crop_yield,
+topoflow_cfg_simple,TopoFlow with basic configuration,topo_rain;topo_aggr_files,topo_aggregatedOutput,,,topoflow_cfg_simple_TI,topoflow_cfg_simple_CAG,,
+dssat_cfg_simple,DSSAT simple configuration,dssat_aggr_files,dssat_aggregatedOutput,,,dssat_cfg_simple_TI,dssat_cfg_simple_CAG,,
+dssat_cfg_simple2,DSSAT simple configuration with explicit outputs,dssat_aggr_files,dssat_inh;dssat_inp;dssat_sol;dssat_cli;dssat_summary;dssat_warning,,,dssat_cfg_simple2_TI,dssat_cfg_simple2_CAG,,
+topoflow_cfg_fk,TopoFlow with fake configuration to emulate PIHM,pihm_forc;pihm_aggr_files,pihm_aggregatedOutput,,tf_meteorology;tf_channels_kin_wave;tf_channels_diff_wave;tf_channels_dynam_wave;tf_snow_degree_day;tf_snow_energy_balance;tf_evap_priestley_taylor;tf_evap_energy_balance;tf_evap_read_file;tf_infil_green_ampt;tf_infil_smith_parlange;tf_infil_richards_ld;tf_infil_beven;tf_stazone_darcy_layers;tf_diversions_fraction_method;tf_ice_gc2d,topoflow_cfg_fk_TI,topoflow_cfg_fk_CAG,,
+dssat_cfg_fk,DSSAT with fake configuration to emulate Cycles,cycles_reinit;cycles_weather,cycles_aggregatedOutput,,,dssat_cfg_fk_TI,dssat_cfg_fk_CAG,,

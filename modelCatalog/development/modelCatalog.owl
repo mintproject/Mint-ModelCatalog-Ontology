@@ -1,488 +1,444 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/mint/modelCatalog#"
-     xml:base="https://w3id.org/mint/modelCatalog"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:terms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="https://w3id.org/mint/modelCatalog">
-        <owl:versionIRI rdf:resource="https://w3id.org/mint/modelCatalog/0.2.0"/>
-        <owl:imports rdf:resource="https://knowledgecaptureanddiscovery.github.io/Mint-ModelCatalog-Ontology/commons/release/0.0.1/ontology.ttl"/>
-        <dc:abstract xml:lang="en">An ontology for describing models and their linkages to variables.</dc:abstract>
-        <dc:contributor xml:lang="en">Jay Pujara</dc:contributor>
-        <dc:creator xml:lang="en">Daniel Garijo</dc:creator>
-        <dc:creator>Deborah Khider</dc:creator>
-        <dc:creator xml:lang="en">Varun Ratnakar</dc:creator>
-        <dc:creator xml:lang="en">Yolanda Gil</dc:creator>
-        <dc:title xml:lang="en">The MINT Model Catalog Ontology</dc:title>
-        <terms:license rdf:resource="http://creativecommons.org/licenses/by/2.0/"/>
-        <vann:preferredNamespacePrefix xml:lang="en">https://w3id.org/mint/modelCatalog#</vann:preferredNamespacePrefix>
-        <vann:preferredNamespacePrefix xml:lang="en">mc</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceURI rdf:resource="https://w3id.org/mint/modelCatalog#"/>
-        <rdfs:comment xml:lang="en">An ontology for describing models and their linkages to variables.</rdfs:comment>
-        <owl:priorVersion rdf:resource="https://w3id.org/mint/modelCatalog/0.0.1"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.2.0</owl:versionInfo>
-    </owl:Ontology>
-    
+@prefix : <https://w3id.org/mint/modelCatalog#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@base <https://w3id.org/mint/modelCatalog> .
+
+<https://w3id.org/mint/modelCatalog> rdf:type owl:Ontology ;
+                                      owl:versionIRI <https://w3id.org/mint/modelCatalog/0.2.0> ;
+                                      dc:abstract "An ontology for describing models and their linkages to variables."@en ;
+                                      dc:contributor "Jay Pujara"@en ;
+                                      dc:creator "Daniel Garijo"@en ,
+                                                 "Deborah Khider" ,
+                                                 "Varun Ratnakar"@en ,
+                                                 "Yolanda Gil"@en ;
+                                      dc:title "The MINT Model Catalog Ontology"@en ;
+                                      terms:license <http://creativecommons.org/licenses/by/2.0/> ;
+                                      vann:preferredNamespacePrefix "https://w3id.org/mint/modelCatalog#"@en ,
+                                                                    "mc"@en ;
+                                      vann:preferredNamespaceURI : ;
+                                      rdfs:comment "An ontology for describing models and their linkages to variables."@en ;
+                                      owl:priorVersion <https://w3id.org/mint/modelCatalog/0.0.1> ;
+                                      owl:versionInfo "0.2.0"^^xsd:string .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/contributor
+dc:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/license
+dc:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#priorVersion
+owl:priorVersion rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/mint/commons#usesUnit
+<https://w3id.org/mint/commons#usesUnit> rdf:type owl:ObjectProperty ;
+                                         rdfs:domain :TimeInterval ,
+                                                     :VariablePresentation ;
+                                         rdfs:range <http://qudt.org/schema/qudt/Unit> ,
+                                                    :Unit .
+
+
+###  https://w3id.org/mint/modelCatalog#hadGrid
+:hadGrid rdf:type owl:ObjectProperty ;
+         rdfs:domain [ rdf:type owl:Class ;
+                       owl:unionOf ( <https://w3id.org/mint/dataCatalog#Dataset>
+                                     :DatasetSpecification
+                                   )
+                     ] ;
+         rdfs:range :Grid ;
+         rdfs:comment "Links the variable presentation to its grid"@en ;
+         rdfs:label "has grid"@en .
+
+
+###  https://w3id.org/mint/modelCatalog#hasCAG
+:hasCAG rdf:type owl:ObjectProperty ;
+        rdfs:domain :ModelConfiguration ;
+        rdfs:range :CAG ;
+        rdfs:comment "Relates a model configuration to its CAG"@en ;
+        rdfs:label "has CAG"@en .
+
+
+###  https://w3id.org/mint/modelCatalog#hasConfiguration
+:hasConfiguration rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Model ;
+                  rdfs:range :ModelConfiguration ;
+                  rdfs:comment "Property that links a model to one of its configurations. A model may have multiple configurations, each of which is unique in terms of the inputs and outputs it uses."@en ;
+                  rdfs:label "has configuration"@en .
+
+
+###  https://w3id.org/mint/modelCatalog#hasDataset
+:hasDataset rdf:type owl:ObjectProperty ;
+            owl:inverseOf :hasPresentation ;
+            rdfs:domain :VariablePresentation ;
+            rdfs:range [ rdf:type owl:Class ;
+                         owl:unionOf ( <https://w3id.org/mint/dataCatalog#Dataset>
+                                       :DatasetSpecification
+                                     )
+                       ] ;
+            rdfs:comment "Associates a presentation with a dataset where the presentation occurs"@en ;
+            rdfs:label "has dataset"@en .
+
+
+###  https://w3id.org/mint/modelCatalog#hasFileStructure
+:hasFileStructure rdf:type owl:ObjectProperty ;
+                  rdfs:domain :DatasetSpecification ;
+                  rdfs:range :DataStructureDefinition ;
+                  rdfs:comment "Relates a dataset specification to the data structure definition"@en ;
+                  rdfs:label "has file structure"@en .
+
+
+###  https://w3id.org/mint/modelCatalog#hasInput
+:hasInput rdf:type owl:ObjectProperty ;
+          rdfs:domain :ModelConfiguration ;
+          rdfs:range :DatasetSpecification ;
+          rdfs:comment "Property that links a model configuration to the input types expected by it."@en ;
+          rdfs:label "has input"@en .
+
+
+###  https://w3id.org/mint/modelCatalog#hasInvocationScript
+:hasInvocationScript rdf:type owl:ObjectProperty ;
+                     rdfs:domain :ModelConfiguration ;
+                     rdfs:range <http://ontosoft.org/software#Software> ;
+                     rdfs:comment "Relates the model configuration to the script needed to invoke it."@en ;
+                     rdfs:label "has invocation script"@en .
+
+
+###  https://w3id.org/mint/modelCatalog#hasModule
+:hasModule rdf:type owl:ObjectProperty ;
+           rdfs:domain :ModelConfiguration ;
+           rdfs:range :Module ;
+           rdfs:comment "link between a model configuration and a module being used on it"@en ;
+           rdfs:label "has module"@en .
+
+
+###  https://w3id.org/mint/modelCatalog#hasOutput
+:hasOutput rdf:type owl:ObjectProperty ;
+           rdfs:domain :ModelConfiguration ;
+           rdfs:range :DatasetSpecification ;
+           rdfs:comment "Preoperty that expresses what are the outputs of a model"@en ;
+           rdfs:label "has output"@en .
+
+
+###  https://w3id.org/mint/modelCatalog#hasPresentation
+:hasPresentation rdf:type owl:ObjectProperty ;
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( <https://w3id.org/mint/dataCatalog#Dataset>
+                                             :DatasetSpecification
+                                           )
+                             ] ;
+                 rdfs:range :VariablePresentation ;
+                 rdfs:comment "Property that links an instance of a dataset (or a dataset specification) to the presentation of a variable contained (or expected to be contained) on it."@en ;
+                 rdfs:label "has presentation"@en .
+
+
+###  https://w3id.org/mint/modelCatalog#hasProcess
+:hasProcess rdf:type owl:ObjectProperty ;
+            rdfs:domain :ModelConfiguration ;
+            rdfs:range :Process ;
+            rdfs:comment "Relates the model configuration to the processes being simulated."@en ;
+            rdfs:label "has process"@en .
+
+
+###  https://w3id.org/mint/modelCatalog#hasStandardVariable
+:hasStandardVariable rdf:type owl:ObjectProperty ;
+                     rdfs:domain :VariablePresentation ;
+                     rdfs:range :StandardVariable ;
+                     rdfs:comment "the standard name of a variable"@en ;
+                     rdfs:label "has standard variable"@en .
+
+
+###  https://w3id.org/mint/modelCatalog#hasTimeInterval
+:hasTimeInterval rdf:type owl:ObjectProperty ;
+                 rdfs:domain :ModelConfiguration ;
+                 rdfs:range :TimeInterval ;
+                 rdfs:comment "Property that relates the model configuration to the time interval on which it's being run."@en ;
+                 rdfs:label "has time interval"@en .
+
+
+###  https://w3id.org/mint/modelCatalog#hasVersion
+:hasVersion rdf:type owl:ObjectProperty ;
+            rdfs:domain :Model ;
+            rdfs:range :ModelVersion ;
+            rdfs:comment "Property that links a model to its version"@en ;
+            rdfs:label "has version"@en .
+
+
+###  https://w3id.org/mint/modelCatalog#has_part
+:has_part rdf:type owl:ObjectProperty ;
+          rdfs:domain :CAG ;
+          rdfs:range :Process ;
+          rdfs:comment "Relates the CAG to the process"@en ;
+          rdfs:label "has part"@en .
+
+
+###  https://w3id.org/mint/modelCatalog#influences
+:influences rdf:type owl:ObjectProperty ;
+            rdfs:domain :Process ;
+            rdfs:range :Process ;
+            rdfs:comment "Describe the realationship between two processes"@en ;
+            rdfs:label "influences"@en .
 
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+#################################################################
+#    Data properties
+#################################################################
 
-    
+###  https://w3id.org/mint/modelCatalog#hasAssumption
+:hasAssumption rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Model ,
+                           :ModelConfiguration ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Assumptions of a model, e.g. the solver being used."@en ;
+               rdfs:label "has assumption"@en .
 
 
-    <!-- http://purl.org/dc/elements/1.1/contributor -->
+###  https://w3id.org/mint/modelCatalog#hasDescription
+:hasDescription rdf:type owl:DatatypeProperty ;
+                rdfs:domain :VariablePresentation ;
+                rdfs:range xsd:string ;
+                rdfs:comment "A human-readable description of a variable, which may include additional contextual information used to map to a standard name"@en ;
+                rdfs:label "has description"@en .
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
-    
 
+###  https://w3id.org/mint/modelCatalog#hasFormat
+:hasFormat rdf:type owl:DatatypeProperty ;
+           rdfs:domain :DatasetSpecification ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Format followed by a file. For example, txt, nc, etc."@en ;
+           rdfs:label "has format"@en .
 
-    <!-- http://purl.org/dc/elements/1.1/creator -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
-    
+###  https://w3id.org/mint/modelCatalog#hasLongName
+:hasLongName rdf:type owl:DatatypeProperty ;
+             rdfs:domain :VariablePresentation ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Properties that relate the variable representation to its long name. The long name is useful for context (e.g., precipitation is less ambiguous than P) but not as precise as the standard name."@en ;
+             rdfs:label "has long name"@en .
 
 
-    <!-- http://purl.org/dc/elements/1.1/license -->
+###  https://w3id.org/mint/modelCatalog#hasModelCategory
+:hasModelCategory rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Model ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Realates a model to its category. For instance, Topoflow has category hydrology. Useful to quickly retrieve relevant models."@en ;
+                  rdfs:label "has model category"@en .
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/license"/>
-    
 
+###  https://w3id.org/mint/modelCatalog#hasShortName
+:hasShortName rdf:type owl:DatatypeProperty ;
+              rdfs:domain :VariablePresentation ;
+              rdfs:range xsd:string ;
+              rdfs:comment "A short name (e.g., temperature) capturing the high-level concept of the variable"@en ;
+              rdfs:label "has short name"@en .
 
-    <!-- http://purl.org/dc/elements/1.1/title -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
-    
+###  https://w3id.org/mint/modelCatalog#hasValue
+:hasValue rdf:type owl:DatatypeProperty ;
+          rdfs:domain :TimeInterval ;
+          rdfs:range xsd:float ;
+          rdfs:comment "The numerical value associated with the object."@en ;
+          rdfs:label "has value"@en .
 
 
-    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+###  https://w3id.org/mint/modelCatalog#hasVersionNumber
+:hasVersionNumber rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :ModelVersion ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Relates the model version to its number"@en ;
+                  rdfs:label "has version number"@en .
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
-    
 
+#################################################################
+#    Classes
+#################################################################
 
-    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+###  http://ontosoft.org/software#Function
+<http://ontosoft.org/software#Function> rdf:type owl:Class ;
+                                        rdfs:comment "\"Function\" is part of an Ontosoft extension currently being developed"^^xsd:anyURI ;
+                                        rdfs:isDefinedBy "http://ontosoft.org/software#"^^xsd:anyURI .
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
-    
 
+###  http://ontosoft.org/software#Software
+<http://ontosoft.org/software#Software> rdf:type owl:Class ;
+                                        rdfs:isDefinedBy "http://ontosoft.org/software#"^^xsd:anyURI .
 
-    <!-- http://www.w3.org/2002/07/owl#priorVersion -->
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#priorVersion"/>
-    
+###  http://ontosoft.org/software#SoftwareVersion
+<http://ontosoft.org/software#SoftwareVersion> rdf:type owl:Class ;
+                                               rdfs:isDefinedBy "http://ontosoft.org/software#"^^xsd:anyURI .
 
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+###  http://qudt.org/schema/qudt/Unit
+<http://qudt.org/schema/qudt/Unit> rdf:type owl:Class ;
+                                   rdfs:isDefinedBy <http://qudt.org/schema/qudt/> .
 
-    
 
+###  http://schema.org/Dataset
+<http://schema.org/Dataset> rdf:type owl:Class .
 
-    <!-- https://w3id.org/mint/commons#usesUnit -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/mint/commons#usesUnit">
-        <rdfs:domain rdf:resource="https://w3id.org/mint/modelCatalog#TimeInterval"/>
-        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/Unit"/>
-    </owl:ObjectProperty>
-    
+###  http://schema.org/Place
+<http://schema.org/Place> rdf:type owl:Class ;
+                          rdfs:isDefinedBy "http://schema.org"@en .
 
 
-    <!-- https://w3id.org/mint/modelCatalog#hadGrid -->
+###  http://www.geoscienceontology.org/geo-upper#Variable
+<http://www.geoscienceontology.org/geo-upper#Variable> rdf:type owl:Class ;
+                                                       owl:equivalentClass :GSNVariable ;
+                                                       rdfs:isDefinedBy <http://www.geoscienceontology.org/geo-upper> .
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/mint/modelCatalog#hadGrid">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/mint/dataCatalog#Dataset"/>
-                    <rdf:Description rdf:about="https://w3id.org/mint/modelCatalog#DatasetSpecification"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="https://w3id.org/mint/modelCatalog#Grid"/>
-        <rdfs:comment xml:lang="en">Links the variable presentation to its grid</rdfs:comment>
-        <rdfs:label xml:lang="en">has grid</rdfs:label>
-    </owl:ObjectProperty>
-    
 
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class ;
+                                              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> .
 
-    <!-- https://w3id.org/mint/modelCatalog#hasCAG -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/mint/modelCatalog#hasCAG">
-        <rdfs:domain rdf:resource="https://w3id.org/mint/modelCatalog#ModelConfiguration"/>
-        <rdfs:range rdf:resource="https://w3id.org/mint/modelCatalog#CAG"/>
-        <rdfs:comment xml:lang="en">Relates a model configuration to its CAG</rdfs:comment>
-        <rdfs:label xml:lang="en">has CAG</rdfs:label>
-    </owl:ObjectProperty>
-    
+###  http://www.w3.org/ns/dcat#Dataset
+<http://www.w3.org/ns/dcat#Dataset> rdf:type owl:Class .
 
 
-    <!-- https://w3id.org/mint/modelCatalog#hasConfiguration -->
+###  https://w3id.org/mint/dataCatalog#Dataset
+<https://w3id.org/mint/dataCatalog#Dataset> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://schema.org/Dataset> ,
+                                                            <http://www.w3.org/ns/dcat#Dataset> ;
+                                            rdfs:comment "Extension of the W3C Data Catalog dataset that has additional properties for the MINT data catalog"@en ;
+                                            rdfs:label "Dataset"@en .
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/mint/modelCatalog#hasConfiguration">
-        <rdfs:domain rdf:resource="https://w3id.org/mint/modelCatalog#Model"/>
-        <rdfs:range rdf:resource="https://w3id.org/mint/modelCatalog#ModelConfiguration"/>
-        <rdfs:comment xml:lang="en">Property that links a model to one of its configurations. A model may have multiple configurations, each of which is unique in terms of the inputs and outputs it uses.</rdfs:comment>
-        <rdfs:label xml:lang="en">has configuration</rdfs:label>
-    </owl:ObjectProperty>
-    
 
+###  https://w3id.org/mint/modelCatalog#CAG
+:CAG rdf:type owl:Class ;
+     rdfs:comment "Causal analysis graph describing the processes being modeled and the relationship among them" ;
+     rdfs:label "Causal analysis graph"@en .
 
-    <!-- https://w3id.org/mint/modelCatalog#hasFileStructure -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/mint/modelCatalog#hasFileStructure">
-        <rdfs:domain rdf:resource="https://w3id.org/mint/modelCatalog#DatasetSpecification"/>
-        <rdfs:range rdf:resource="https://w3id.org/mint/modelCatalog#DataStructureDefinition"/>
-        <rdfs:comment xml:lang="en">Relates a dataset specification to the data structure definition</rdfs:comment>
-        <rdfs:label xml:lang="en">has file structure</rdfs:label>
-    </owl:ObjectProperty>
-    
+###  https://w3id.org/mint/modelCatalog#DataStructureDefinition
+:DataStructureDefinition rdf:type owl:Class ;
+                         rdfs:comment "The schema the file follows. To make the input or output machin readable, we need to know how the file is organized."@en ;
+                         rdfs:label "Data structure definition"@en .
 
 
-    <!-- https://w3id.org/mint/modelCatalog#hasInput -->
+###  https://w3id.org/mint/modelCatalog#DatasetSpecification
+:DatasetSpecification rdf:type owl:Class ;
+                      rdfs:comment "Class designed to describe a type of input or output used or produced by a model. For example, Topoflow has several inputs. One of them is a text file with precipitation values. The representation of this input is an instance of a dataset specification."@en ;
+                      rdfs:label "Dataset specification"@en .
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/mint/modelCatalog#hasInput">
-        <rdfs:domain rdf:resource="https://w3id.org/mint/modelCatalog#ModelConfiguration"/>
-        <rdfs:range rdf:resource="https://w3id.org/mint/modelCatalog#DatasetSpecification"/>
-        <rdfs:comment xml:lang="en">Property that links a model configuration to the input types expected by it.</rdfs:comment>
-        <rdfs:label xml:lang="en">has input</rdfs:label>
-    </owl:ObjectProperty>
-    
 
+###  https://w3id.org/mint/modelCatalog#GSNVariable
+:GSNVariable rdf:type owl:Class ;
+             rdfs:subClassOf :StandardVariable ;
+             rdfs:comment "Variable that follows the GSN standard: http://geoscienceontology.org/"@en ;
+             rdfs:label "GSN variable"@en .
 
-    <!-- https://w3id.org/mint/modelCatalog#hasInvocationScript -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/mint/modelCatalog#hasInvocationScript">
-        <rdfs:domain rdf:resource="https://w3id.org/mint/modelCatalog#ModelConfiguration"/>
-        <rdfs:range rdf:resource="http://ontosoft.org/software#Software"/>
-        <rdfs:comment xml:lang="en">Relates the model configuration to the script needed to invoke it.</rdfs:comment>
-        <rdfs:label xml:lang="en">has invocation script</rdfs:label>
-    </owl:ObjectProperty>
-    
+###  https://w3id.org/mint/modelCatalog#Grid
+:Grid rdf:type owl:Class ;
+      rdfs:comment "Datasets are often regridded before a simulation. Describes the grid convention being followed"@en ;
+      rdfs:label "Grid"@en .
 
 
-    <!-- https://w3id.org/mint/modelCatalog#hasModule -->
+###  https://w3id.org/mint/modelCatalog#ICASAVariable
+:ICASAVariable rdf:type owl:Class ;
+               rdfs:subClassOf :StandardVariable ;
+               rdfs:comment "Variable that follows the ICASA standard for agriculture: https://dssat.net/data/standards_v2"@en ;
+               rdfs:label "ICASA variable"@en .
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/mint/modelCatalog#hasModule">
-        <rdfs:domain rdf:resource="https://w3id.org/mint/modelCatalog#ModelConfiguration"/>
-        <rdfs:range rdf:resource="https://w3id.org/mint/modelCatalog#Module"/>
-        <rdfs:comment xml:lang="en">link between a model configuration and a module being used on it</rdfs:comment>
-        <rdfs:label xml:lang="en">has module</rdfs:label>
-    </owl:ObjectProperty>
-    
 
+###  https://w3id.org/mint/modelCatalog#Model
+:Model rdf:type owl:Class ;
+       rdfs:subClassOf <http://ontosoft.org/software#Software> ;
+       rdfs:comment "A scientific model (from Hydrology, Agronomy, etc.) that represents a set of processes (infiltration, outflow, etc.) to be simulated."@en ;
+       rdfs:label "Model"@en .
 
-    <!-- https://w3id.org/mint/modelCatalog#hasOutput -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/mint/modelCatalog#hasOutput">
-        <rdfs:domain rdf:resource="https://w3id.org/mint/modelCatalog#ModelConfiguration"/>
-        <rdfs:range rdf:resource="https://w3id.org/mint/modelCatalog#DatasetSpecification"/>
-        <rdfs:comment xml:lang="en">Preoperty that expresses what are the outputs of a model</rdfs:comment>
-        <rdfs:label xml:lang="en">has output</rdfs:label>
-    </owl:ObjectProperty>
-    
+###  https://w3id.org/mint/modelCatalog#ModelConfiguration
+:ModelConfiguration rdf:type owl:Class ;
+                    rdfs:subClassOf <http://ontosoft.org/software#Function> ;
+                    rdfs:comment "A model may be configured in different ways depending on the data that is avaialble. For example, if topological information is available,  a groundwater model may use it to produce a better estimation of the water budget of an aquifer. A model configuration represents a unique setting of inputs and outputs of a given model designed for a particular functionality."@en ;
+                    rdfs:label "Model configuration"@en .
 
 
-    <!-- https://w3id.org/mint/modelCatalog#hasProcess -->
+###  https://w3id.org/mint/modelCatalog#ModelVersion
+:ModelVersion rdf:type owl:Class ;
+              rdfs:subClassOf <http://ontosoft.org/software#SoftwareVersion> ;
+              rdfs:comment "The version of the model"@en ;
+              rdfs:label "Model Version"@en .
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/mint/modelCatalog#hasProcess">
-        <rdfs:domain rdf:resource="https://w3id.org/mint/modelCatalog#ModelConfiguration"/>
-        <rdfs:range rdf:resource="https://w3id.org/mint/modelCatalog#Process"/>
-        <rdfs:comment xml:lang="en">Relates the model configuration to the processes being simulated.</rdfs:comment>
-        <rdfs:label xml:lang="en">has process</rdfs:label>
-    </owl:ObjectProperty>
-    
 
+###  https://w3id.org/mint/modelCatalog#Module
+:Module rdf:type owl:Class ;
+        rdfs:comment "A module is an optional software package that can be configured to run in a model configuration."@en ;
+        rdfs:label "Module"@en .
 
-    <!-- https://w3id.org/mint/modelCatalog#hasTimeInterval -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/mint/modelCatalog#hasTimeInterval">
-        <rdfs:domain rdf:resource="https://w3id.org/mint/modelCatalog#ModelConfiguration"/>
-        <rdfs:range rdf:resource="https://w3id.org/mint/modelCatalog#TimeInterval"/>
-        <rdfs:comment xml:lang="en">Property that relates the model configuration to the time interval on which it&apos;s being run.</rdfs:comment>
-        <rdfs:label xml:lang="en">has time interval</rdfs:label>
-    </owl:ObjectProperty>
-    
+###  https://w3id.org/mint/modelCatalog#Process
+:Process rdf:type owl:Class ;
+         rdfs:comment "The biophysical or socio-economical behavior the model is simulating."@en ;
+         rdfs:label "Process"@en .
 
 
-    <!-- https://w3id.org/mint/modelCatalog#hasVersion -->
+###  https://w3id.org/mint/modelCatalog#StandardVariable
+:StandardVariable rdf:type owl:Class ;
+                  rdfs:subClassOf :Variable ;
+                  rdfs:comment "A standard variable, necessary to refer to all the variable using the same nomenclature in a domain ontology"@en ;
+                  rdfs:label "Standard variable"@en .
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/mint/modelCatalog#hasVersion">
-        <rdfs:domain rdf:resource="https://w3id.org/mint/modelCatalog#Model"/>
-        <rdfs:range rdf:resource="https://w3id.org/mint/modelCatalog#ModelVersion"/>
-        <rdfs:comment xml:lang="en">Property that links a model to its version</rdfs:comment>
-        <rdfs:label xml:lang="en">has version</rdfs:label>
-    </owl:ObjectProperty>
-    
 
+###  https://w3id.org/mint/modelCatalog#TimeInterval
+:TimeInterval rdf:type owl:Class ;
+              rdfs:comment "The time step of the model."@en ;
+              rdfs:label "Time interval"@en .
 
-    <!-- https://w3id.org/mint/modelCatalog#has_part -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/mint/modelCatalog#has_part">
-        <rdfs:domain rdf:resource="https://w3id.org/mint/modelCatalog#CAG"/>
-        <rdfs:range rdf:resource="https://w3id.org/mint/modelCatalog#Process"/>
-        <rdfs:comment xml:lang="en">Relates the CAG to the process</rdfs:comment>
-        <rdfs:label xml:lang="en">has part</rdfs:label>
-    </owl:ObjectProperty>
-    
+###  https://w3id.org/mint/modelCatalog#Unit
+:Unit rdf:type owl:Class ;
+      rdfs:subClassOf <http://qudt.org/schema/qudt/Unit> ;
+      rdfs:comment "Class designed to distinguish the different types of units that are available in variables from datasets"@en ;
+      rdfs:label "Unit"@en .
 
 
-    <!-- https://w3id.org/mint/modelCatalog#influences -->
+###  https://w3id.org/mint/modelCatalog#Variable
+:Variable rdf:type owl:Class ;
+          rdfs:comment "A symbol that represents a quanity in a dataset or dataset specification"@en ;
+          rdfs:label "Variable"@en .
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/mint/modelCatalog#influences">
-        <rdfs:domain rdf:resource="https://w3id.org/mint/modelCatalog#Process"/>
-        <rdfs:range rdf:resource="https://w3id.org/mint/modelCatalog#Process"/>
-        <rdfs:comment xml:lang="en">Describe the realationship between two processes</rdfs:comment>
-        <rdfs:label xml:lang="en">influences</rdfs:label>
-    </owl:ObjectProperty>
-    
 
+###  https://w3id.org/mint/modelCatalog#VariablePresentation
+:VariablePresentation rdf:type owl:Class ;
+                      rdfs:subClassOf :Variable ;
+                      rdfs:comment "Concept used to represent an instantiation of a variable in an input/output dataset. For example, a model A may use an input file with temperature expressed in Farenheit (variablePresentation1), while a model B may produce an output with temperature in Celsius (variablePresentation2). Both variable presentations refer to the concept of temperature."@en ;
+                      rdfs:label "Variable presentation"@en .
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
 
-    
-
-
-    <!-- https://w3id.org/mint/commons#hasShortName -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/mint/commons#hasShortName">
-        <rdfs:domain rdf:resource="https://w3id.org/mint/commons#VariablePresentation"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/mint/modelCatalog#hasAssumption -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/mint/modelCatalog#hasAssumption">
-        <rdfs:domain rdf:resource="https://w3id.org/mint/modelCatalog#Model"/>
-        <rdfs:domain rdf:resource="https://w3id.org/mint/modelCatalog#ModelConfiguration"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Assumptions of a model, e.g. the solver being used.</rdfs:comment>
-        <rdfs:label xml:lang="en">has assumption</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/mint/modelCatalog#hasFormat -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/mint/modelCatalog#hasFormat">
-        <rdfs:domain rdf:resource="https://w3id.org/mint/modelCatalog#DatasetSpecification"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Format followed by a file. For example, txt, nc, etc.</rdfs:comment>
-        <rdfs:label xml:lang="en">has format</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/mint/modelCatalog#hasLongName -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/mint/modelCatalog#hasLongName">
-        <rdfs:domain rdf:resource="https://w3id.org/mint/commons#VariablePresentation"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Properties that relate the variable representation to its long name. The long name is useful for context (e.g., precipitation is less ambiguous than P) but not as precise as the standard name.</rdfs:comment>
-        <rdfs:label xml:lang="en">has long name</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/mint/modelCatalog#hasModelCategory -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/mint/modelCatalog#hasModelCategory">
-        <rdfs:domain rdf:resource="https://w3id.org/mint/modelCatalog#Model"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Realates a model to its category. For instance, Topoflow has category hydrology. Useful to quickly retrieve relevant models.</rdfs:comment>
-        <rdfs:label xml:lang="en">has model category</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/mint/modelCatalog#hasValue -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/mint/modelCatalog#hasValue">
-        <rdfs:domain rdf:resource="https://w3id.org/mint/modelCatalog#TimeInterval"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-        <rdfs:comment xml:lang="en">The numerical value associated with the object.</rdfs:comment>
-        <rdfs:label xml:lang="en">has value</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/mint/modelCatalog#hasVersionNumber -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/mint/modelCatalog#hasVersionNumber">
-        <rdfs:domain rdf:resource="https://w3id.org/mint/modelCatalog#ModelVersion"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Relates the model version to its number</rdfs:comment>
-        <rdfs:label xml:lang="en">has version number</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://ontosoft.org/software#Function -->
-
-    <owl:Class rdf:about="http://ontosoft.org/software#Function">
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">&quot;Function&quot; is part of an Ontosoft extension currently being developed</rdfs:comment>
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ontosoft.org/software#</rdfs:isDefinedBy>
-    </owl:Class>
-    
-
-
-    <!-- http://ontosoft.org/software#Software -->
-
-    <owl:Class rdf:about="http://ontosoft.org/software#Software">
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ontosoft.org/software#</rdfs:isDefinedBy>
-    </owl:Class>
-    
-
-
-    <!-- http://ontosoft.org/software#SoftwareVersion -->
-
-    <owl:Class rdf:about="http://ontosoft.org/software#SoftwareVersion">
-        <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ontosoft.org/software#</rdfs:isDefinedBy>
-    </owl:Class>
-    
-
-
-    <!-- http://qudt.org/schema/qudt/Unit -->
-
-    <owl:Class rdf:about="http://qudt.org/schema/qudt/Unit"/>
-    
-
-
-    <!-- https://w3id.org/mint/commons#VariablePresentation -->
-
-    <owl:Class rdf:about="https://w3id.org/mint/commons#VariablePresentation"/>
-    
-
-
-    <!-- https://w3id.org/mint/dataCatalog#Dataset -->
-
-    <owl:Class rdf:about="https://w3id.org/mint/dataCatalog#Dataset"/>
-    
-
-
-    <!-- https://w3id.org/mint/modelCatalog#CAG -->
-
-    <owl:Class rdf:about="https://w3id.org/mint/modelCatalog#CAG">
-        <rdfs:comment>Causal analysis graph describing the processes being modeled and the relationship among them</rdfs:comment>
-        <rdfs:label xml:lang="en">Causal analysis graph</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/mint/modelCatalog#DataStructureDefinition -->
-
-    <owl:Class rdf:about="https://w3id.org/mint/modelCatalog#DataStructureDefinition">
-        <rdfs:comment xml:lang="en">The schema the file follows. To make the input or output machin readable, we need to know how the file is organized.</rdfs:comment>
-        <rdfs:label xml:lang="en">Data structure definition</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/mint/modelCatalog#DatasetSpecification -->
-
-    <owl:Class rdf:about="https://w3id.org/mint/modelCatalog#DatasetSpecification"/>
-    
-
-
-    <!-- https://w3id.org/mint/modelCatalog#Grid -->
-
-    <owl:Class rdf:about="https://w3id.org/mint/modelCatalog#Grid">
-        <rdfs:comment xml:lang="en">Datasets are often regridded before a simulation. Describes the grid convention being followed</rdfs:comment>
-        <rdfs:label xml:lang="en">Grid</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/mint/modelCatalog#Model -->
-
-    <owl:Class rdf:about="https://w3id.org/mint/modelCatalog#Model">
-        <rdfs:subClassOf rdf:resource="http://ontosoft.org/software#Software"/>
-        <rdfs:comment xml:lang="en">A scientific model (from Hydrology, Agronomy, etc.) that represents a set of processes (infiltration, outflow, etc.) to be simulated.</rdfs:comment>
-        <rdfs:label xml:lang="en">Model</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/mint/modelCatalog#ModelConfiguration -->
-
-    <owl:Class rdf:about="https://w3id.org/mint/modelCatalog#ModelConfiguration">
-        <rdfs:subClassOf rdf:resource="http://ontosoft.org/software#Function"/>
-        <rdfs:comment xml:lang="en">A model may be configured in different ways depending on the data that is avaialble. For example, if topological information is available,  a groundwater model may use it to produce a better estimation of the water budget of an aquifer. A model configuration represents a unique setting of inputs and outputs of a given model designed for a particular functionality.</rdfs:comment>
-        <rdfs:label xml:lang="en">Model configuration</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/mint/modelCatalog#ModelVersion -->
-
-    <owl:Class rdf:about="https://w3id.org/mint/modelCatalog#ModelVersion">
-        <rdfs:subClassOf rdf:resource="http://ontosoft.org/software#SoftwareVersion"/>
-        <rdfs:comment xml:lang="en">The version of the model</rdfs:comment>
-        <rdfs:label xml:lang="en">Model Version</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/mint/modelCatalog#Module -->
-
-    <owl:Class rdf:about="https://w3id.org/mint/modelCatalog#Module">
-        <rdfs:comment xml:lang="en">A module is an optional software package that can be configured to run in a model configuration.</rdfs:comment>
-        <rdfs:label xml:lang="en">Module</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/mint/modelCatalog#Process -->
-
-    <owl:Class rdf:about="https://w3id.org/mint/modelCatalog#Process">
-        <rdfs:comment xml:lang="en">The biophysical or socio-economical behavior the model is simulating.</rdfs:comment>
-        <rdfs:label xml:lang="en">Process</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/mint/modelCatalog#TimeInterval -->
-
-    <owl:Class rdf:about="https://w3id.org/mint/modelCatalog#TimeInterval">
-        <rdfs:comment xml:lang="en">The time step of the model.</rdfs:comment>
-        <rdfs:label xml:lang="en">Time interval</rdfs:label>
-    </owl:Class>
-</rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
-
+###  Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi

@@ -2,14 +2,43 @@
 <div id="changelog">
 <h2 id="changes" class="list">Changes from last version</h2>
 <h3 id="changeClass" class="list">Classes</h3>
-<p><u>Added classes</u></p>
+<p><u>Modified classes</u></p>
+<ul><li><a href="#Variable">https://w3id.org/mint/modelCatalog#Variable</a>
+<ul>
+<li>Added: rdfs:comment "A symbol that represents a quanity in a dataset or dataset specification"@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "A symbol that represents a quantity in an input or output"@en</li>
+</ul>
+</li>
+<li><a href="#VariablePresentation">https://w3id.org/mint/modelCatalog#VariablePresentation</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/mint/modelCatalog#Variable</li>
+</ul>
+</li>
+</ul><p><u>Added classes</u></p>
 <ul><li><a href="#http://ontosoft.org/software#SoftwareVersion">http://ontosoft.org/software#SoftwareVersion</a>
 </li>
 <li><a href="#http://qudt.org/schema/qudt/Unit">http://qudt.org/schema/qudt/Unit</a>
 </li>
-<li><a href="#https://w3id.org/mint/commons#VariablePresentation">https://w3id.org/mint/commons#VariablePresentation</a>
+<li><a href="#http://schema.org/Dataset">http://schema.org/Dataset</a>
+</li>
+<li><a href="#http://schema.org/Place">http://schema.org/Place</a>
+</li>
+<li><a href="#http://www.geoscienceontology.org/geo-upper#Variable">http://www.geoscienceontology.org/geo-upper#Variable</a>
+<ul>
+<li>Added: EquivalentClasses EquivalentClasses(&lt;http://www.geoscienceontology.org/geo-upper#Variable&gt; &lt;https://w3id.org/mint/modelCatalog#GSNVariable&gt; )</li>
+</ul>
+</li>
+<li><a href="#http://www.w3.org/2004/02/skos/core#Concept">http://www.w3.org/2004/02/skos/core#Concept</a>
+</li>
+<li><a href="#http://www.w3.org/ns/dcat#Dataset">http://www.w3.org/ns/dcat#Dataset</a>
 </li>
 <li><a href="#https://w3id.org/mint/dataCatalog#Dataset">https://w3id.org/mint/dataCatalog#Dataset</a>
+<ul>
+<li>Added: SubClass of http://schema.org/Dataset</li>
+<li>Added: SubClass of http://www.w3.org/ns/dcat#Dataset</li>
+</ul>
 </li>
 <li><a href="#CAG">https://w3id.org/mint/modelCatalog#CAG</a>
 </li>
@@ -17,7 +46,18 @@
 </li>
 <li><a href="#DatasetSpecification">https://w3id.org/mint/modelCatalog#DatasetSpecification</a>
 </li>
+<li><a href="#GSNVariable">https://w3id.org/mint/modelCatalog#GSNVariable</a>
+<ul>
+<li>Added: EquivalentClasses EquivalentClasses(&lt;http://www.geoscienceontology.org/geo-upper#Variable&gt; &lt;https://w3id.org/mint/modelCatalog#GSNVariable&gt; )</li>
+<li>Added: SubClass of https://w3id.org/mint/modelCatalog#StandardVariable</li>
+</ul>
+</li>
 <li><a href="#Grid">https://w3id.org/mint/modelCatalog#Grid</a>
+</li>
+<li><a href="#ICASAVariable">https://w3id.org/mint/modelCatalog#ICASAVariable</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/mint/modelCatalog#StandardVariable</li>
+</ul>
 </li>
 <li><a href="#ModelVersion">https://w3id.org/mint/modelCatalog#ModelVersion</a>
 <ul>
@@ -26,16 +66,22 @@
 </li>
 <li><a href="#Process">https://w3id.org/mint/modelCatalog#Process</a>
 </li>
+<li><a href="#StandardVariable">https://w3id.org/mint/modelCatalog#StandardVariable</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/mint/modelCatalog#Variable</li>
+</ul>
+</li>
 <li><a href="#TimeInterval">https://w3id.org/mint/modelCatalog#TimeInterval</a>
+</li>
+<li><a href="#Unit">https://w3id.org/mint/modelCatalog#Unit</a>
+<ul>
+<li>Added: SubClass of http://qudt.org/schema/qudt/Unit</li>
+</ul>
 </li>
 </ul><p><u>Deleted classes</u></p>
 <ul><li><a href="#Input">https://w3id.org/mint/modelCatalog#Input</a>
 </li>
 <li><a href="#Output">https://w3id.org/mint/modelCatalog#Output</a>
-</li>
-<li><a href="#Variable">https://w3id.org/mint/modelCatalog#Variable</a>
-</li>
-<li><a href="#VariablePresentation">https://w3id.org/mint/modelCatalog#VariablePresentation</a>
 </li>
 </ul><h3 id="changeProp" class="list">Object Properties</h3>
 <p><u>Modified properties</u></p>
@@ -71,7 +117,9 @@
 <ul><li><a href="#https://w3id.org/mint/commons#usesUnit">https://w3id.org/mint/commons#usesUnit</a>
 <ul>
 <li>Added: Range http://qudt.org/schema/qudt/Unit</li>
+<li>Added: domain https://w3id.org/mint/modelCatalog#VariablePresentation</li>
 <li>Added: domain https://w3id.org/mint/modelCatalog#TimeInterval</li>
+<li>Added: Range https://w3id.org/mint/modelCatalog#Unit</li>
 </ul>
 </li>
 <li><a href="#hadGrid">https://w3id.org/mint/modelCatalog#hadGrid</a>
@@ -86,6 +134,13 @@
 <li>Added: Range https://w3id.org/mint/modelCatalog#CAG</li>
 </ul>
 </li>
+<li><a href="#hasDataset">https://w3id.org/mint/modelCatalog#hasDataset</a>
+<ul>
+<li>Added: Range Union of (https://w3id.org/mint/dataCatalog#Dataset, https://w3id.org/mint/modelCatalog#DatasetSpecification)</li>
+<li>Added: domain https://w3id.org/mint/modelCatalog#VariablePresentation</li>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;https://w3id.org/mint/modelCatalog#hasDataset&gt; &lt;https://w3id.org/mint/modelCatalog#hasPresentation&gt;)</li>
+</ul>
+</li>
 <li><a href="#hasFileStructure">https://w3id.org/mint/modelCatalog#hasFileStructure</a>
 <ul>
 <li>Added: domain https://w3id.org/mint/modelCatalog#DatasetSpecification</li>
@@ -98,10 +153,23 @@
 <li>Added: Range http://ontosoft.org/software#Software</li>
 </ul>
 </li>
+<li><a href="#hasPresentation">https://w3id.org/mint/modelCatalog#hasPresentation</a>
+<ul>
+<li>Added: Range https://w3id.org/mint/modelCatalog#VariablePresentation</li>
+<li>Added: domain Union of (https://w3id.org/mint/dataCatalog#Dataset, https://w3id.org/mint/modelCatalog#DatasetSpecification)</li>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;https://w3id.org/mint/modelCatalog#hasDataset&gt; &lt;https://w3id.org/mint/modelCatalog#hasPresentation&gt;)</li>
+</ul>
+</li>
 <li><a href="#hasProcess">https://w3id.org/mint/modelCatalog#hasProcess</a>
 <ul>
 <li>Added: domain https://w3id.org/mint/modelCatalog#ModelConfiguration</li>
 <li>Added: Range https://w3id.org/mint/modelCatalog#Process</li>
+</ul>
+</li>
+<li><a href="#hasStandardVariable">https://w3id.org/mint/modelCatalog#hasStandardVariable</a>
+<ul>
+<li>Added: domain https://w3id.org/mint/modelCatalog#VariablePresentation</li>
+<li>Added: Range https://w3id.org/mint/modelCatalog#StandardVariable</li>
 </ul>
 </li>
 <li><a href="#hasTimeInterval">https://w3id.org/mint/modelCatalog#hasTimeInterval</a>
@@ -153,21 +221,28 @@
 </ul>
 </li>
 </ul><p><u>Added data properties</u></p>
-<ul><li><a href="#https://w3id.org/mint/commons#hasShortName">https://w3id.org/mint/commons#hasShortName</a>
+<ul><li><a href="#hasDescription">https://w3id.org/mint/modelCatalog#hasDescription</a>
 <ul>
-<li>Added: Domain https://w3id.org/mint/commons#VariablePresentation</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: Domain https://w3id.org/mint/modelCatalog#VariablePresentation</li>
 </ul>
 </li>
 <li><a href="#hasLongName">https://w3id.org/mint/modelCatalog#hasLongName</a>
 <ul>
 <li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
-<li>Added: Domain https://w3id.org/mint/commons#VariablePresentation</li>
+<li>Added: Domain https://w3id.org/mint/modelCatalog#VariablePresentation</li>
 </ul>
 </li>
 <li><a href="#hasModelCategory">https://w3id.org/mint/modelCatalog#hasModelCategory</a>
 <ul>
 <li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
 <li>Added: Domain https://w3id.org/mint/modelCatalog#Model</li>
+</ul>
+</li>
+<li><a href="#hasShortName">https://w3id.org/mint/modelCatalog#hasShortName</a>
+<ul>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: Domain https://w3id.org/mint/modelCatalog#VariablePresentation</li>
 </ul>
 </li>
 <li><a href="#hasValue">https://w3id.org/mint/modelCatalog#hasValue</a>

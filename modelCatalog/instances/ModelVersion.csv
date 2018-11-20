@@ -1,10 +1,10 @@
 http://w31d.org/mint/modelCatalog#ModelVersion,http://www.w3.org/2000/01/rdf-schema#label,http://w31d.org/mint/modelCatalog#hasVersionNumber
 pihm_2.2,PIHM v2.2,2.2
-cycles_0.0,Cycles v0.0,0
+cycles_0.8.0_alpha,Cycles v0.8.0 alpha,0.8.0 alpha
 kimetrica_0.0,Kimetrica lv0.o0,0
-EACS_1.0,EACS 1.0,1.0
+EACS_2.0,EACS 2.0,2.0
 topoflow_3.5,Topoflow v3.5,3.5
 dssat_4.7,DSSAT v4.7,4.7
 modflow_nwt,Modflow NWT,nwt
 modflow_2005,Modflow 2005,2005
-cycles_to_econ_1.0,Cycles to econo v 1,1.0
+cycles_to_econ_1.0,Cycles to econo v 1,1

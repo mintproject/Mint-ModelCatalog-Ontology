@@ -10,3 +10,4 @@ dssat_cfg_simple2,DSSAT simple configuration with explicit outputs,dssat_aggr_fi
 topoflow_cfg_fk,TopoFlow with fake configuration to emulate PIHM,pihm_forc;pihm_aggr_files,pihm_aggregatedOutput,,tf_meteorology;tf_channels_kin_wave;tf_channels_diff_wave;tf_channels_dynam_wave;tf_snow_degree_day;tf_snow_energy_balance;tf_evap_priestley_taylor;tf_evap_energy_balance;tf_evap_read_file;tf_infil_green_ampt;tf_infil_smith_parlange;tf_infil_richards_ld;tf_infil_beven;tf_stazone_darcy_layers;tf_diversions_fraction_method;tf_ice_gc2d,topoflow_cfg_fk_TI,topoflow_cfg_fk_CAG,,
 dssat_cfg_fk,DSSAT with fake configuration to emulate Cycles,cycles_reinit;cycles_weather,cycles_aggregatedOutput,,,dssat_cfg_fk_TI,dssat_cfg_fk_CAG,,
 cycles_to_econ_cfg,Cycles to economic configuration for one year only,cycles_aggregatedOutput,econ_yield_input,,,,,,
+pihm_to_cycles_cfg,Pihm to cycles configuration,pihm_aggregatedOutput,cycles_reinit,,,,,,

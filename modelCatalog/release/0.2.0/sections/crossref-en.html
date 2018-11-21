@@ -221,6 +221,15 @@ This section provides details for each class and property defined by The MINT Mo
                title="https://w3id.org/mint/modelCatalog#ModelConfiguration">Model configuration</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://ontosoft.org/software#hasContainer" title="http://ontosoft.org/software#hasContainer">has container</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://ontosoft.org/software#hasImplementationScriptLocation"
+               title="http://ontosoft.org/software#hasImplementationScriptLocation">has implementation script location</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasSupportScriptLocation"
+               title="https://w3id.org/mint/modelCatalog#hasSupportScriptLocation">has support script location</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="Grid">
@@ -297,8 +306,7 @@ This section provides details for each class and property defined by The MINT Mo
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#hasAssumption" title="https://w3id.org/mint/modelCatalog#hasAssumption">has assumption</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasConfiguration"
+            <a href="#hasConfiguration"
                title="https://w3id.org/mint/modelCatalog#hasConfiguration">has configuration</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasModelCategory"
                title="https://w3id.org/mint/modelCatalog#hasModelCategory">has model category</a>
@@ -326,10 +334,7 @@ This section provides details for each class and property defined by The MINT Mo
          <dt>is in domain of</dt>
          <dd>
             <a href="#hasCAG" title="https://w3id.org/mint/modelCatalog#hasCAG">has CAG</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasAssumption" title="https://w3id.org/mint/modelCatalog#hasAssumption">has assumption</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasInput" title="https://w3id.org/mint/modelCatalog#hasInput">has input</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasInvocationScript"
-               title="https://w3id.org/mint/modelCatalog#hasInvocationScript">has invocation script</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasInput" title="https://w3id.org/mint/modelCatalog#hasInput">has input</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasModule" title="https://w3id.org/mint/modelCatalog#hasModule">has module</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasOutput" title="https://w3id.org/mint/modelCatalog#hasOutput">has output</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasProcess" title="https://w3id.org/mint/modelCatalog#hasProcess">has process</a>
@@ -446,12 +451,6 @@ This section provides details for each class and property defined by The MINT Mo
             <a href="#Model" title="https://w3id.org/mint/modelCatalog#Model">Model</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#hasInvocationScript"
-               title="https://w3id.org/mint/modelCatalog#hasInvocationScript">has invocation script</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
       </dl>
    </div>
    <div class="entity" id="http://ontosoft.org/software#SoftwareVersion">
@@ -517,8 +516,7 @@ This section provides details for each class and property defined by The MINT Mo
          <dt>is in domain of</dt>
          <dd>
             <a href="#hasValue" title="https://w3id.org/mint/modelCatalog#hasValue">has value</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/mint/commons#usesUnit" title="https://w3id.org/mint/commons#usesUnit">uses unit</a>
-            <sup class="type-op" title="object property">op</sup>
+            <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
@@ -549,7 +547,7 @@ This section provides details for each class and property defined by The MINT Mo
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#https://w3id.org/mint/commons#usesUnit" title="https://w3id.org/mint/commons#usesUnit">uses unit</a>
+            <a href="#usesUnit" title="https://w3id.org/mint/modelCatalog#usesUnit">Uses unit</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -569,11 +567,6 @@ This section provides details for each class and property defined by The MINT Mo
          <dd>
             <a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">unit</a>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#https://w3id.org/mint/commons#usesUnit" title="https://w3id.org/mint/commons#usesUnit">uses unit</a>
-            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -638,13 +631,10 @@ This section provides details for each class and property defined by The MINT Mo
          <dt>is in domain of</dt>
          <dd>
             <a href="#hasDataset" title="https://w3id.org/mint/modelCatalog#hasDataset">has dataset</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasDescription"
-               title="https://w3id.org/mint/modelCatalog#hasDescription">has description</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasLongName" title="https://w3id.org/mint/modelCatalog#hasLongName">has long name</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasLongName" title="https://w3id.org/mint/modelCatalog#hasLongName">has long name</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#hasShortName" title="https://w3id.org/mint/modelCatalog#hasShortName">has short name</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#hasStandardVariable"
                title="https://w3id.org/mint/modelCatalog#hasStandardVariable">has standard variable</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/mint/commons#usesUnit" title="https://w3id.org/mint/commons#usesUnit">uses unit</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
@@ -666,6 +656,11 @@ This section provides details for each class and property defined by The MINT Mo
             title="https://w3id.org/mint/modelCatalog#hasConfiguration">has configuration</a>
       </li>
       <li>
+         <a href="#http://ontosoft.org/software#hasContainer" title="http://ontosoft.org/software#hasContainer">
+            <span>has container</span>
+         </a>
+      </li>
+      <li>
          <a href="#hasDataset" title="https://w3id.org/mint/modelCatalog#hasDataset">has dataset</a>
       </li>
       <li>
@@ -677,10 +672,6 @@ This section provides details for each class and property defined by The MINT Mo
       </li>
       <li>
          <a href="#hasInput" title="https://w3id.org/mint/modelCatalog#hasInput">has input</a>
-      </li>
-      <li>
-         <a href="#hasInvocationScript"
-            title="https://w3id.org/mint/modelCatalog#hasInvocationScript">has invocation script</a>
       </li>
       <li>
          <a href="#hasModule" title="https://w3id.org/mint/modelCatalog#hasModule">has module</a>
@@ -713,9 +704,7 @@ This section provides details for each class and property defined by The MINT Mo
          <a href="#influences" title="https://w3id.org/mint/modelCatalog#influences">influences</a>
       </li>
       <li>
-         <a href="#https://w3id.org/mint/commons#usesUnit" title="https://w3id.org/mint/commons#usesUnit">
-            <span>uses unit</span>
-         </a>
+         <a href="#usesUnit" title="https://w3id.org/mint/modelCatalog#usesUnit">Uses unit</a>
       </li>
    </ul>
    <div class="entity" id="hasCAG">
@@ -765,6 +754,31 @@ This section provides details for each class and property defined by The MINT Mo
             <dd>
                <a href="#ModelConfiguration"
                   title="https://w3id.org/mint/modelCatalog#ModelConfiguration">Model configuration</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://ontosoft.org/software#hasContainer">
+      <h3>has container<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://ontosoft.org/software#hasContainer</p>
+      <div class="comment">
+         <span class="markdown">Function to link a function with its corresponding container</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://ontosoft.org/software#Function" title="http://ontosoft.org/software#Function">function</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://ontosoft.org/software#Container">container</span>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -884,32 +898,6 @@ This section provides details for each class and property defined by The MINT Mo
             <dd>
                <a href="#DatasetSpecification"
                   title="https://w3id.org/mint/modelCatalog#DatasetSpecification">Dataset specification</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasInvocationScript">
-      <h3>has invocation script<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/mint/modelCatalog#hasInvocationScript</p>
-      <div class="comment">
-         <span class="markdown">Relates the model configuration to the script needed to invoke it.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#ModelConfiguration"
-                  title="https://w3id.org/mint/modelCatalog#ModelConfiguration">Model configuration</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#http://ontosoft.org/software#Software" title="http://ontosoft.org/software#Software">software</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -1157,21 +1145,23 @@ This section provides details for each class and property defined by The MINT Mo
          </dl>
       </div>
    </div>
-   <div class="entity" id="https://w3id.org/mint/commons#usesUnit">
-      <h3>uses unit<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="usesUnit">
+      <h3>Uses unit<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/mint/commons#usesUnit</p>
+         <strong>IRI:</strong> https://w3id.org/mint/modelCatalog#usesUnit</p>
+      <div class="comment">
+         <span class="markdown">Property used to link a variable presentation or time interval to the unit they are represented in</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
                <a href="#TimeInterval" title="https://w3id.org/mint/modelCatalog#TimeInterval">Time interval</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dd>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
                <a href="#VariablePresentation"
                   title="https://w3id.org/mint/modelCatalog#VariablePresentation">Variable presentation</a>
                <sup class="type-c" title="class">c</sup>
@@ -1179,10 +1169,6 @@ This section provides details for each class and property defined by The MINT Mo
             <dt>has range</dt>
             <dd>
                <a href="#http://qudt.org/schema/qudt/Unit" title="http://qudt.org/schema/qudt/Unit">unit</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dd>
-               <a href="#Unit" title="https://w3id.org/mint/modelCatalog#Unit">Unit</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -1199,7 +1185,29 @@ This section provides details for each class and property defined by The MINT Mo
             title="https://w3id.org/mint/modelCatalog#hasDescription">has description</a>
       </li>
       <li>
+         <a href="#http://ontosoft.org/software#hasExecutionCommand" title="http://ontosoft.org/software#hasExecutionCommand">
+            <span>has execution command</span>
+         </a>
+      </li>
+      <li>
          <a href="#hasFormat" title="https://w3id.org/mint/modelCatalog#hasFormat">has format</a>
+      </li>
+      <li>
+         <a href="#http://ontosoft.org/software#hasIdentifier" title="http://ontosoft.org/software#hasIdentifier">
+            <span>has identifier</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://ontosoft.org/software#hasImplementationScriptLocation"
+            title="http://ontosoft.org/software#hasImplementationScriptLocation">
+            <span>has implementation script location</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://ontosoft.org/software#hasInstallationInstructions"
+            title="http://ontosoft.org/software#hasInstallationInstructions">
+            <span>has installation instructions</span>
+         </a>
       </li>
       <li>
          <a href="#hasLongName" title="https://w3id.org/mint/modelCatalog#hasLongName">has long name</a>
@@ -1210,6 +1218,12 @@ This section provides details for each class and property defined by The MINT Mo
       </li>
       <li>
          <a href="#hasShortName" title="https://w3id.org/mint/modelCatalog#hasShortName">has short name</a>
+      </li>
+      <li>
+         <a href="#hasSupportScriptLocation"
+            title="https://w3id.org/mint/modelCatalog#hasSupportScriptLocation">
+            <span>has support script location</span>
+         </a>
       </li>
       <li>
          <a href="#hasValue" title="https://w3id.org/mint/modelCatalog#hasValue">has value</a>
@@ -1234,9 +1248,8 @@ This section provides details for each class and property defined by The MINT Mo
             <dt>has domain</dt>
             <dd>
                <a href="#Model" title="https://w3id.org/mint/modelCatalog#Model">Model</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dd>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
                <a href="#ModelConfiguration"
                   title="https://w3id.org/mint/modelCatalog#ModelConfiguration">Model configuration</a>
                <sup class="type-c" title="class">c</sup>
@@ -1256,14 +1269,32 @@ This section provides details for each class and property defined by The MINT Mo
       <p>
          <strong>IRI:</strong> https://w3id.org/mint/modelCatalog#hasDescription</p>
       <div class="comment">
-         <span class="markdown">A human-readable description of a variable, which may include additional contextual information used to map to a standard name</span>
+         <span class="markdown">A human-readable description of a resource, including models, variables, functions or containers.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://ontosoft.org/software#hasExecutionCommand">
+      <h3>has execution command<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://ontosoft.org/software#hasExecutionCommand</p>
+      <div class="comment">
+         <span class="markdown">Execution instructions on how to run the image</span>
       </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#VariablePresentation"
-                  title="https://w3id.org/mint/modelCatalog#VariablePresentation">Variable presentation</a>
+               <span class="dotted" title="http://ontosoft.org/software#Container">container</span>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1289,6 +1320,72 @@ This section provides details for each class and property defined by The MINT Mo
             <dd>
                <a href="#DatasetSpecification"
                   title="https://w3id.org/mint/modelCatalog#DatasetSpecification">Dataset specification</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://ontosoft.org/software#hasIdentifier">
+      <h3>has identifier<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://ontosoft.org/software#hasIdentifier</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://ontosoft.org/software#Container">container</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://ontosoft.org/software#hasImplementationScriptLocation">
+      <h3>has implementation script location<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://ontosoft.org/software#hasImplementationScriptLocation</p>
+      <div class="comment">
+         <span class="markdown">Property that points to the main runnable script for the current function</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://ontosoft.org/software#Function" title="http://ontosoft.org/software#Function">function</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://ontosoft.org/software#hasInstallationInstructions">
+      <h3>has installation instructions<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://ontosoft.org/software#hasInstallationInstructions</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <span class="dotted" title="http://ontosoft.org/software#Container">container</span>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1368,6 +1465,30 @@ This section provides details for each class and property defined by The MINT Mo
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasSupportScriptLocation">
+      <h3>has support script location<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/modelCatalog#hasSupportScriptLocation</p>
+      <div class="comment">
+         <span class="markdown">Property that links to the location of scripts that may be used from the main runnable script.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://ontosoft.org/software#Function" title="http://ontosoft.org/software#Function">function</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
             </dd>
          </dl>
       </div>

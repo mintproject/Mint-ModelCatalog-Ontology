@@ -17,7 +17,9 @@
 </ul>
 </li>
 </ul><p><u>Added classes</u></p>
-<ul><li><a href="#http://ontosoft.org/software#SoftwareVersion">http://ontosoft.org/software#SoftwareVersion</a>
+<ul><li><a href="#http://ontosoft.org/software#Container">http://ontosoft.org/software#Container</a>
+</li>
+<li><a href="#http://ontosoft.org/software#SoftwareVersion">http://ontosoft.org/software#SoftwareVersion</a>
 </li>
 <li><a href="#http://qudt.org/schema/qudt/Unit">http://qudt.org/schema/qudt/Unit</a>
 </li>
@@ -114,12 +116,10 @@
 </ul>
 </li>
 </ul><p><u>Added properties</u></p>
-<ul><li><a href="#https://w3id.org/mint/commons#usesUnit">https://w3id.org/mint/commons#usesUnit</a>
+<ul><li><a href="#http://ontosoft.org/software#hasContainer">http://ontosoft.org/software#hasContainer</a>
 <ul>
-<li>Added: Range http://qudt.org/schema/qudt/Unit</li>
-<li>Added: domain https://w3id.org/mint/modelCatalog#VariablePresentation</li>
-<li>Added: domain https://w3id.org/mint/modelCatalog#TimeInterval</li>
-<li>Added: Range https://w3id.org/mint/modelCatalog#Unit</li>
+<li>Added: Range http://ontosoft.org/software#Container</li>
+<li>Added: domain http://ontosoft.org/software#Function</li>
 </ul>
 </li>
 <li><a href="#hadGrid">https://w3id.org/mint/modelCatalog#hadGrid</a>
@@ -145,12 +145,6 @@
 <ul>
 <li>Added: domain https://w3id.org/mint/modelCatalog#DatasetSpecification</li>
 <li>Added: Range https://w3id.org/mint/modelCatalog#DataStructureDefinition</li>
-</ul>
-</li>
-<li><a href="#hasInvocationScript">https://w3id.org/mint/modelCatalog#hasInvocationScript</a>
-<ul>
-<li>Added: domain https://w3id.org/mint/modelCatalog#ModelConfiguration</li>
-<li>Added: Range http://ontosoft.org/software#Software</li>
 </ul>
 </li>
 <li><a href="#hasPresentation">https://w3id.org/mint/modelCatalog#hasPresentation</a>
@@ -196,6 +190,12 @@
 <li>Added: domain https://w3id.org/mint/modelCatalog#Process</li>
 </ul>
 </li>
+<li><a href="#usesUnit">https://w3id.org/mint/modelCatalog#usesUnit</a>
+<ul>
+<li>Added: domain Union of (https://w3id.org/mint/modelCatalog#TimeInterval, https://w3id.org/mint/modelCatalog#VariablePresentation)</li>
+<li>Added: Range http://qudt.org/schema/qudt/Unit</li>
+</ul>
+</li>
 </ul><p><u>Deleted properties</u></p>
 <ul><li><a href="#correspondsToStandardVariable">https://w3id.org/mint/modelCatalog#correspondsToStandardVariable</a>
 </li>
@@ -205,11 +205,12 @@
 <p><u>Modified data properties</u></p>
 <ul><li><a href="#hasAssumption">https://w3id.org/mint/modelCatalog#hasAssumption</a>
 <ul>
-<li>Added: Domain https://w3id.org/mint/modelCatalog#ModelConfiguration</li>
+<li>Added: Domain Union of (https://w3id.org/mint/modelCatalog#Model, https://w3id.org/mint/modelCatalog#ModelConfiguration)</li>
 <li>Added: rdfs:label "has assumption"@en</li>
 </ul>
 <ul>
 <li>Deleted: rdfs:label "has Assumption"@en</li>
+<li>Deleted: Domain https://w3id.org/mint/modelCatalog#Model</li>
 </ul>
 </li>
 <li><a href="#hasFormat">https://w3id.org/mint/modelCatalog#hasFormat</a>
@@ -221,10 +222,33 @@
 </ul>
 </li>
 </ul><p><u>Added data properties</u></p>
-<ul><li><a href="#hasDescription">https://w3id.org/mint/modelCatalog#hasDescription</a>
+<ul><li><a href="#http://ontosoft.org/software#hasExecutionCommand">http://ontosoft.org/software#hasExecutionCommand</a>
+<ul>
+<li>Added: Domain http://ontosoft.org/software#Container</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+</ul>
+</li>
+<li><a href="#http://ontosoft.org/software#hasIdentifier">http://ontosoft.org/software#hasIdentifier</a>
 <ul>
 <li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
-<li>Added: Domain https://w3id.org/mint/modelCatalog#VariablePresentation</li>
+<li>Added: Domain http://ontosoft.org/software#Container</li>
+</ul>
+</li>
+<li><a href="#http://ontosoft.org/software#hasImplementationScriptLocation">http://ontosoft.org/software#hasImplementationScriptLocation</a>
+<ul>
+<li>Added: Domain http://ontosoft.org/software#Function</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#anyURI</li>
+</ul>
+</li>
+<li><a href="#http://ontosoft.org/software#hasInstallationInstructions">http://ontosoft.org/software#hasInstallationInstructions</a>
+<ul>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: Domain http://ontosoft.org/software#Container</li>
+</ul>
+</li>
+<li><a href="#hasDescription">https://w3id.org/mint/modelCatalog#hasDescription</a>
+<ul>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
 </ul>
 </li>
 <li><a href="#hasLongName">https://w3id.org/mint/modelCatalog#hasLongName</a>
@@ -243,6 +267,12 @@
 <ul>
 <li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
 <li>Added: Domain https://w3id.org/mint/modelCatalog#VariablePresentation</li>
+</ul>
+</li>
+<li><a href="#hasSupportScriptLocation">https://w3id.org/mint/modelCatalog#hasSupportScriptLocation</a>
+<ul>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#anyURI</li>
+<li>Added: Domain http://ontosoft.org/software#Function</li>
 </ul>
 </li>
 <li><a href="#hasValue">https://w3id.org/mint/modelCatalog#hasValue</a>

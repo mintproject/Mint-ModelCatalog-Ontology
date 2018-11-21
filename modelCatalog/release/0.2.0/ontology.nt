@@ -2,6 +2,7 @@
 <https://w3id.org/mint/modelCatalog> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/mint/modelCatalog/0.2.0> .
 <https://w3id.org/mint/modelCatalog> <http://purl.org/dc/elements/1.1/abstract> "An ontology for describing models and their linkages to variables."@en .
 <https://w3id.org/mint/modelCatalog> <http://purl.org/dc/elements/1.1/contributor> "Jay Pujara"@en .
+<https://w3id.org/mint/modelCatalog> <http://purl.org/dc/elements/1.1/contributor> "Lucas Carvalho"@en .
 <https://w3id.org/mint/modelCatalog> <http://purl.org/dc/elements/1.1/creator> "Daniel Garijo"@en .
 <https://w3id.org/mint/modelCatalog> <http://purl.org/dc/elements/1.1/creator> "Varun Ratnakar"@en .
 <https://w3id.org/mint/modelCatalog> <http://purl.org/dc/elements/1.1/creator> "Yolanda Gil"@en .
@@ -53,12 +54,11 @@
 # #################################################################
 # 
 # 
-# https://w3id.org/mint/commons#usesUnit
-<https://w3id.org/mint/commons#usesUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/mint/commons#usesUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/modelCatalog#TimeInterval> .
-<https://w3id.org/mint/commons#usesUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/modelCatalog#VariablePresentation> .
-<https://w3id.org/mint/commons#usesUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/Unit> .
-<https://w3id.org/mint/commons#usesUnit> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mint/modelCatalog#Unit> .
+# http://ontosoft.org/software#hasContainer
+<http://ontosoft.org/software#hasContainer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontosoft.org/software#hasContainer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontosoft.org/software#Function> .
+<http://ontosoft.org/software#hasContainer> <http://www.w3.org/2000/01/rdf-schema#range> <http://ontosoft.org/software#Container> .
+<http://ontosoft.org/software#hasContainer> <http://www.w3.org/2000/01/rdf-schema#comment> "Function to link a function with its corresponding container"@en .
 # 
 # https://w3id.org/mint/modelCatalog#hadGrid
 <https://w3id.org/mint/modelCatalog#hadGrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -118,13 +118,6 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <https://w3id.org/mint/modelCatalog#hasInput> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mint/modelCatalog#DatasetSpecification> .
 <https://w3id.org/mint/modelCatalog#hasInput> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links a model configuration to the input types expected by it."@en .
 <https://w3id.org/mint/modelCatalog#hasInput> <http://www.w3.org/2000/01/rdf-schema#label> "has input"@en .
-# 
-# https://w3id.org/mint/modelCatalog#hasInvocationScript
-<https://w3id.org/mint/modelCatalog#hasInvocationScript> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/mint/modelCatalog#hasInvocationScript> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/modelCatalog#ModelConfiguration> .
-<https://w3id.org/mint/modelCatalog#hasInvocationScript> <http://www.w3.org/2000/01/rdf-schema#range> <http://ontosoft.org/software#Software> .
-<https://w3id.org/mint/modelCatalog#hasInvocationScript> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates the model configuration to the script needed to invoke it."@en .
-<https://w3id.org/mint/modelCatalog#hasInvocationScript> <http://www.w3.org/2000/01/rdf-schema#label> "has invocation script"@en .
 # 
 # https://w3id.org/mint/modelCatalog#hasModule
 <https://w3id.org/mint/modelCatalog#hasModule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -197,6 +190,21 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <https://w3id.org/mint/modelCatalog#influences> <http://www.w3.org/2000/01/rdf-schema#comment> "Describe the realationship between two processes"@en .
 <https://w3id.org/mint/modelCatalog#influences> <http://www.w3.org/2000/01/rdf-schema#label> "influences"@en .
 # 
+# https://w3id.org/mint/modelCatalog#usesUnit
+<https://w3id.org/mint/modelCatalog#usesUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/mint/modelCatalog#usesUnit> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid10 <http://www.w3.org/2002/07/owl#unionOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#TimeInterval> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#VariablePresentation> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/mint/modelCatalog#usesUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/Unit> .
+<https://w3id.org/mint/modelCatalog#usesUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Property used to link a variable presentation or time interval to the unit they are represented in"@en .
+<https://w3id.org/mint/modelCatalog#usesUnit> <http://www.w3.org/2000/01/rdf-schema#label> "Uses unit"@en .
+# 
 # 
 # 
 # #################################################################
@@ -206,19 +214,47 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # #################################################################
 # 
 # 
+# http://ontosoft.org/software#hasExecutionCommand
+<http://ontosoft.org/software#hasExecutionCommand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontosoft.org/software#hasExecutionCommand> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontosoft.org/software#Container> .
+<http://ontosoft.org/software#hasExecutionCommand> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://ontosoft.org/software#hasExecutionCommand> <http://www.w3.org/2000/01/rdf-schema#comment> "Execution instructions on how to run the image"@en .
+# 
+# http://ontosoft.org/software#hasIdentifier
+<http://ontosoft.org/software#hasIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontosoft.org/software#hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontosoft.org/software#Container> .
+<http://ontosoft.org/software#hasIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# http://ontosoft.org/software#hasImplementationScriptLocation
+<http://ontosoft.org/software#hasImplementationScriptLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontosoft.org/software#hasImplementationScriptLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontosoft.org/software#Function> .
+<http://ontosoft.org/software#hasImplementationScriptLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<http://ontosoft.org/software#hasImplementationScriptLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that points to the main runnable script for the current function"@en .
+# 
+# http://ontosoft.org/software#hasInstallationInstructions
+<http://ontosoft.org/software#hasInstallationInstructions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontosoft.org/software#hasInstallationInstructions> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontosoft.org/software#Container> .
+<http://ontosoft.org/software#hasInstallationInstructions> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
 # https://w3id.org/mint/modelCatalog#hasAssumption
 <https://w3id.org/mint/modelCatalog#hasAssumption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/mint/modelCatalog#hasAssumption> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/modelCatalog#Model> .
-<https://w3id.org/mint/modelCatalog#hasAssumption> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/modelCatalog#ModelConfiguration> .
+<https://w3id.org/mint/modelCatalog#hasAssumption> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid13 <http://www.w3.org/2002/07/owl#unionOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#Model> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mint/modelCatalog#ModelConfiguration> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <https://w3id.org/mint/modelCatalog#hasAssumption> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/mint/modelCatalog#hasAssumption> <http://www.w3.org/2000/01/rdf-schema#comment> "Assumptions of a model, e.g. the solver being used."@en .
 <https://w3id.org/mint/modelCatalog#hasAssumption> <http://www.w3.org/2000/01/rdf-schema#label> "has assumption"@en .
 # 
 # https://w3id.org/mint/modelCatalog#hasDescription
 <https://w3id.org/mint/modelCatalog#hasDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/mint/modelCatalog#hasDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/modelCatalog#VariablePresentation> .
 <https://w3id.org/mint/modelCatalog#hasDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/mint/modelCatalog#hasDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "A human-readable description of a variable, which may include additional contextual information used to map to a standard name"@en .
+<https://w3id.org/mint/modelCatalog#hasDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "A human-readable description of a resource, including models, variables, functions or containers."@en .
 <https://w3id.org/mint/modelCatalog#hasDescription> <http://www.w3.org/2000/01/rdf-schema#label> "has description"@en .
 # 
 # https://w3id.org/mint/modelCatalog#hasFormat
@@ -249,6 +285,12 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <https://w3id.org/mint/modelCatalog#hasShortName> <http://www.w3.org/2000/01/rdf-schema#comment> "A short name (e.g., temperature) capturing the high-level concept of the variable"@en .
 <https://w3id.org/mint/modelCatalog#hasShortName> <http://www.w3.org/2000/01/rdf-schema#label> "has short name"@en .
 # 
+# https://w3id.org/mint/modelCatalog#hasSupportScriptLocation
+<https://w3id.org/mint/modelCatalog#hasSupportScriptLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mint/modelCatalog#hasSupportScriptLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontosoft.org/software#Function> .
+<https://w3id.org/mint/modelCatalog#hasSupportScriptLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/mint/modelCatalog#hasSupportScriptLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links to the location of scripts that may be used from the main runnable script."@en .
+# 
 # https://w3id.org/mint/modelCatalog#hasValue
 <https://w3id.org/mint/modelCatalog#hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/mint/modelCatalog#hasValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/modelCatalog#TimeInterval> .
@@ -271,6 +313,9 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # #
 # #################################################################
 # 
+# 
+# http://ontosoft.org/software#Container
+<http://ontosoft.org/software#Container> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://ontosoft.org/software#Function
 <http://ontosoft.org/software#Function> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

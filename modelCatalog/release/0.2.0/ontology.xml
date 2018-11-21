@@ -24,7 +24,7 @@
         <vann:preferredNamespacePrefix xml:lang="en">mc</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceURI rdf:resource="https://w3id.org/mint/modelCatalog#"/>
         <rdfs:comment xml:lang="en">An ontology for describing models and their linkages to variables.</rdfs:comment>
-        <owl:priorVersion rdf:resource="https://w3id.org/mint/modelCatalog/0.0.1"/>
+        <owl:priorVersion rdf:resource="https://w3id.org/mint/modelCatalog/0.1.0"/>
         <owl:versionInfo>0.2.0</owl:versionInfo>
     </owl:Ontology>
     

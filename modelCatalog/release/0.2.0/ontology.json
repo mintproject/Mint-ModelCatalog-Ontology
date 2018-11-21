@@ -252,7 +252,7 @@
     "@value" : "An ontology for describing models and their linkages to variables."
   } ],
   "http://www.w3.org/2002/07/owl#priorVersion" : [ {
-    "@id" : "https://w3id.org/mint/modelCatalog/0.0.1"
+    "@id" : "https://w3id.org/mint/modelCatalog/0.1.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
     "@id" : "https://w3id.org/mint/modelCatalog/0.2.0"

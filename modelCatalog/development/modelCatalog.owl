@@ -13,7 +13,7 @@
                                       owl:versionIRI <https://w3id.org/mint/modelCatalog/0.2.0> ;
                                       vann:preferredNamespacePrefix "https://w3id.org/mint/modelCatalog#"@en ;
                                       dc:abstract "An ontology for describing models and their linkages to variables."@en ;
-                                      owl:priorVersion <https://w3id.org/mint/modelCatalog/0.0.1> ;
+                                      owl:priorVersion <https://w3id.org/mint/modelCatalog/0.1.0> ;
                                       rdfs:comment "An ontology for describing models and their linkages to variables."@en ;
                                       dc:contributor "Jay Pujara"@en ;
                                       vann:preferredNamespacePrefix "mc"@en ;

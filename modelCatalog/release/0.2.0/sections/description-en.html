@@ -1,6 +1,10 @@
 <html>
 <h2 id="desc" class="list">The MINT Model Catalog Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+The image below shows a simple overview of the main concepts used in the Model Catalog ontology. A numerical model like PIHM (referred to as *Model*) is a type of *Software* that may have have multiple *Versions*. Each version may have different ways of configuring the model (i.e., different *Model Configurations*) according to the *inputs* and *outputs* that a modeler may be interested in varying. For example, PIHM has many possible inputs, but a modeler may be interested in varying a force file while keeping the rest of the inputs constant. In that case, the modeler may expose a configuration of PIHM that accepts two inputs, one being the target force file and another one being an aggregation of the rest of the files. A configuration may vary its inputs and outputs depending on the *processes* being modeled. 
+
+Finally, each input or output will contain different *Variable Presentations*. Variable presentations are representations of variables that are local to an input at hand, and always correspond to a GSN variable. Thanks to the variables included in different inputs and outputs, we understand what different models expect in their files. The image below summarizes the different dependencies among the concept introduced above:
+</span>
+<img src="images/overview.png"></img>
 
 </html>

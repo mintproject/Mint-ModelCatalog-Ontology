@@ -1,4 +1,4 @@
-https://w3id.org/mint/commons#VariablePresentation,http://www.w3.org/2000/01/rdf-schema#label,https://w3id.org/mint/commons#hasShortName,https://w3id.org/mint/commons#hasLongName,https://w3id.org/mint/commons#hasStandardVariable,https://w3id.org/mint/commons#usesUnit,http://purl.org/dc/terms/description
+https://w3id.org/mint/modelCatalog#VariablePresentation,http://www.w3.org/2000/01/rdf-schema#label,https://w3id.org/mint/modelCatalog#hasShortName,https://w3id.org/mint/modelCatalog#hasLongName,https://w3id.org/mint/modelCatalog#hasStandardVariable,https://w3id.org/mint/modelCatalog#usesUnit,http://purl.org/dc/terms/description
 PIHM_PRCP,PRCP,PRCP,precipitation,atmosphere_water__precipitation_volume_flux,m/day,Value of Precipitation
 PIHM_TRMP,TRMP,TRMP,temperature,atmosphere_bottom_air__temperature,C,Value of Temperature
 PIHM_WINF,WINF,WINF,wind speed,atmosphere_bottom_wind__speed,m/day,Value of wind speed
@@ -51,12 +51,12 @@ cycles_silt,SILT,SILT,silt percentage,soil(~no-rock?)_silt__mass_fraction,kg/kg,
 cycles_rv,RV,RV,rock volume,soil_rock__volume_fraction,m3/m3,Rock volume expressed as volume over total volume
 cycles_bd,BD,BD,bulk density,soil~dry(~no-rock?)__bulk_mass-per-volume_density,Mg/m3,Soil mass dry and witout rock divided by the sampled volume
 cycles_som,SOM,SOM,soil organic matter,soil_matter~organic__mass_fraction,kg/kg x 100,Soil organic matter per unit of non-rock soil expressed as percentage over total mass
-cycles_smc,SMC,SMC,soil moisture content,soil_water__volume_fraction,m3/m3,"Soil moisture content of each layer, indexed from top to bottom"
+cycles_smc,SMC,SMC,soil moisture content,soil_water__volume_fraction,m3/m3,Soil moisture content of each layer indexed from top to bottom
 cycles_infiltration,INFILTRATION,INFILTRATION,infiltration,soil_water__volume-per-area_infiltration_rate,mm/day,Net infiltration into soil
-cycles_total_biomass,TOTAL BIOMASS,TOTAL BIOMASS,total plant biomass,plant__mass-per-area_harvest_forage_density,Mg/ha,"Total plant mass at time of grain or forage harvest, or death"
-cycles_root_biomass,ROOT BIOMASS,ROOT BIOMASS,root biomass,plant_root__mass-per-area_harvest_density,Mg/ha,"Root biomass at time of grain or forage harvests, or death"
-cycles_grain_yield,GRAIN YIELD,GRAIN YIELD,grain yield,grain__dry_mass-per-area_yield,Mg/ha,"Grain yield removed from the field, dry basis"
-cycles_forage_yield,FORAGE YIELD,FORAGE YIELD,forage yield,plant_residue__mass-per-area_harvest_forage_yield,Mg/ha,"Forage yield or removed residue biomass at harvest, dry basis"
+cycles_total_biomass,TOTAL BIOMASS,TOTAL BIOMASS,total plant biomass,plant__mass-per-area_harvest_forage_density,Mg/ha,Total plant mass at time of grain or forage harvest or death
+cycles_root_biomass,ROOT BIOMASS,ROOT BIOMASS,root biomass,plant_root__mass-per-area_harvest_density,Mg/ha,Root biomass at time of grain or forage harvests or death
+cycles_grain_yield,GRAIN YIELD,GRAIN YIELD,grain yield,grain__dry_mass-per-area_yield,Mg/ha,Grain yield removed from the field dry basis
+cycles_forage_yield,FORAGE YIELD,FORAGE YIELD,forage yield,plant_residue__mass-per-area_harvest_forage_yield,Mg/ha,Forage yield or removed residue biomass at harvest dry basis
 cycles_snow_sub,SNOW SUB,SNOW SUB,water evaporation from snow,land_surface_snow__volume-per-area_sublimation_rate,mm/day,Sublimation from snow cover
 cycles_soil_evap,SOIL EVAP,SOIL EVAP,water evaporation from soil,soil_surface_water__volume-per-area_evaporation_rate,mm/day,Evaporation from the soil surface.
 cycles_residue_evap,RESIDUE EVAP,RESIDUE EVAP,water evaporation from residues on soil,soil_plant_residue_water__volume-per-area_evaporation_rate,mm/day,Evaporation from soil residues

@@ -1,4 +1,4 @@
-http://w31d.org/mint/modelCatalog#ModelVersion,http://www.w3.org/2000/01/rdf-schema#label,http://w31d.org/mint/modelCatalog#hasVersionNumber,http://w3id.org/mint/modelCatalog#hasConfiguration
+https://w3id.org/mint/modelCatalog#ModelVersion,http://www.w3.org/2000/01/rdf-schema#label,https://w3id.org/mint/modelCatalog#hasVersionNumber,https://w3id.org/mint/modelCatalog#hasConfiguration
 pihm_2.2,PIHM v2.2,2.2,pihm_cfg_simple;pihm_cfg_simple2
 cycles_0.8.0_alpha,Cycles v0.8.0 alpha,0.8.0,cycles_cfg_simple;cycles_cfg_simple2
 kimetrica_0.0,Kimetrica lv0.o0,0,kimterica_land_use_cfg_simple

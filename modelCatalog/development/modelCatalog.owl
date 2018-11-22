@@ -1,58 +1,55 @@
 @prefix : <https://w3id.org/mint/modelCatalog#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix vann: <http://purl.org/vocab/vann/> .
-@prefix terms: <http://purl.org/dc/terms/> .
 @base <https://w3id.org/mint/modelCatalog> .
 
 <https://w3id.org/mint/modelCatalog> rdf:type owl:Ontology ;
                                       owl:versionIRI <https://w3id.org/mint/modelCatalog/0.2.0> ;
-                                      vann:preferredNamespacePrefix "https://w3id.org/mint/modelCatalog#"@en ;
-                                      dc:abstract "An ontology for describing models and their linkages to variables."@en ;
+                                      <http://purl.org/vocab/vann/preferredNamespacePrefix> "https://w3id.org/mint/modelCatalog#"@en ;
+                                      <http://purl.org/dc/elements/1.1/abstract> "An ontology for describing models and their linkages to variables."@en ;
                                       owl:priorVersion <https://w3id.org/mint/modelCatalog/0.1.0> ;
                                       rdfs:comment "An ontology for describing models and their linkages to variables."@en ;
-                                      dc:contributor "Jay Pujara"@en ;
-                                      vann:preferredNamespacePrefix "mc"@en ;
-                                      dc:contributor "Lucas Carvalho"@en ;
-                                      dc:creator "Varun Ratnakar"@en ,
-                                                 "Deborah Khider" ,
-                                                 "Daniel Garijo"@en ,
-                                                 "Yolanda Gil"@en ;
-                                      owl:versionInfo "0.2.0"^^xsd:string ;
-                                      terms:license <http://creativecommons.org/licenses/by/2.0/> ;
-                                      dc:title "The MINT Model Catalog Ontology"@en ;
-                                      vann:preferredNamespaceURI : .
+                                      owl:versionInfo "0.2.0" ;
+                                      <http://purl.org/dc/elements/1.1/contributor> "Jay Pujara"@en ,
+                                                                                    "Lucas Carvalho"@en ;
+                                      <http://purl.org/vocab/vann/preferredNamespacePrefix> "mc"@en ;
+                                      <http://purl.org/dc/elements/1.1/creator> "Varun Ratnakar"@en ,
+                                                                                "Deborah Khider" ,
+                                                                                "Daniel Garijo"@en ,
+                                                                                "Yolanda Gil"@en ;
+                                      <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/2.0/> ;
+                                      <http://purl.org/dc/elements/1.1/title> "The MINT Model Catalog Ontology"@en ;
+                                      <http://purl.org/vocab/vann/preferredNamespaceURI> : .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
 ###  http://purl.org/dc/elements/1.1/contributor
-dc:contributor rdf:type owl:AnnotationProperty .
+<http://purl.org/dc/elements/1.1/contributor> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/creator
-dc:creator rdf:type owl:AnnotationProperty .
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/license
-dc:license rdf:type owl:AnnotationProperty .
+<http://purl.org/dc/elements/1.1/license> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/title
-dc:title rdf:type owl:AnnotationProperty .
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
-vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespaceUri
-vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2002/07/owl#priorVersion
@@ -67,8 +64,7 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
 <http://ontosoft.org/software#hasContainer> rdf:type owl:ObjectProperty ;
                                             rdfs:domain <http://ontosoft.org/software#Function> ;
                                             rdfs:range <http://ontosoft.org/software#Container> ;
-                                            rdfs:comment "Function to link a function with its corresponding container"@en ;
-                                            rdfs:isDefinedBy < http://ontosoft.org/software#> .
+                                            rdfs:comment "Function to link a function with its corresponding container"@en .
 
 
 ###  https://w3id.org/mint/modelCatalog#hadGrid
@@ -93,7 +89,7 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/mint/modelCatalog#hasConfiguration
 :hasConfiguration rdf:type owl:ObjectProperty ;
-                  rdfs:domain :Model ;
+                  rdfs:domain :ModelVersion ;
                   rdfs:range :ModelConfiguration ;
                   rdfs:comment "Property that links a model to one of its configurations. A model may have multiple configurations, each of which is unique in terms of the inputs and outputs it uses."@en ;
                   rdfs:label "has configuration"@en .
@@ -144,6 +140,14 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
            rdfs:label "has output"@en .
 
 
+###  https://w3id.org/mint/modelCatalog#hasPart
+:hasPart rdf:type owl:ObjectProperty ;
+         rdfs:domain :CAG ;
+         rdfs:range :Process ;
+         rdfs:comment "Relates the CAG to the process"@en ;
+         rdfs:label "has part"@en .
+
+
 ###  https://w3id.org/mint/modelCatalog#hasPresentation
 :hasPresentation rdf:type owl:ObjectProperty ;
                  rdfs:domain [ rdf:type owl:Class ;
@@ -188,14 +192,6 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
             rdfs:label "has version"@en .
 
 
-###  https://w3id.org/mint/modelCatalog#has_part
-:has_part rdf:type owl:ObjectProperty ;
-          rdfs:domain :CAG ;
-          rdfs:range :Process ;
-          rdfs:comment "Relates the CAG to the process"@en ;
-          rdfs:label "has part"@en .
-
-
 ###  https://w3id.org/mint/modelCatalog#influences
 :influences rdf:type owl:ObjectProperty ;
             rdfs:domain :Process ;
@@ -224,30 +220,31 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
 <http://ontosoft.org/software#hasExecutionCommand> rdf:type owl:DatatypeProperty ;
                                                    rdfs:domain <http://ontosoft.org/software#Container> ;
                                                    rdfs:range xsd:string ;
-                                                   rdfs:comment "Execution instructions on how to run the image"@en ;
-                                                   rdfs:isDefinedBy < http://ontosoft.org/software#> .
+                                                   rdfs:comment "Execution instructions on how to run the image"@en .
 
 
 ###  http://ontosoft.org/software#hasIdentifier
 <http://ontosoft.org/software#hasIdentifier> rdf:type owl:DatatypeProperty ;
                                              rdfs:domain <http://ontosoft.org/software#Container> ;
-                                             rdfs:range xsd:string ;
-                                             rdfs:isDefinedBy < http://ontosoft.org/software#> .
+                                             rdfs:range xsd:string .
 
 
 ###  http://ontosoft.org/software#hasImplementationScriptLocation
 <http://ontosoft.org/software#hasImplementationScriptLocation> rdf:type owl:DatatypeProperty ;
                                                                rdfs:domain <http://ontosoft.org/software#Function> ;
                                                                rdfs:range xsd:anyURI ;
-                                                               rdfs:comment "Property that points to the main runnable script for the current function"@en ;
-                                                               rdfs:isDefinedBy < http://ontosoft.org/software#> .
+                                                               rdfs:comment "Property that points to the main runnable script for the current function"@en .
 
 
 ###  http://ontosoft.org/software#hasInstallationInstructions
 <http://ontosoft.org/software#hasInstallationInstructions> rdf:type owl:DatatypeProperty ;
                                                            rdfs:domain <http://ontosoft.org/software#Container> ;
-                                                           rdfs:range xsd:string ;
-                                                           rdfs:isDefinedBy < http://ontosoft.org/software#> .
+                                                           rdfs:range xsd:string .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:DatatypeProperty ;
+                                       rdfs:isDefinedBy <http://purl.org/dc/terms/> .
 
 
 ###  https://w3id.org/mint/modelCatalog#hasAssumption
@@ -260,13 +257,6 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                rdfs:range xsd:string ;
                rdfs:comment "Assumptions of a model, e.g. the solver being used."@en ;
                rdfs:label "has assumption"@en .
-
-
-###  https://w3id.org/mint/modelCatalog#hasDescription
-:hasDescription rdf:type owl:DatatypeProperty ;
-                rdfs:range xsd:string ;
-                rdfs:comment "A human-readable description of a resource, including models, variables, functions or containers."@en ;
-                rdfs:label "has description"@en .
 
 
 ###  https://w3id.org/mint/modelCatalog#hasFormat
@@ -305,8 +295,7 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
 :hasSupportScriptLocation rdf:type owl:DatatypeProperty ;
                           rdfs:domain <http://ontosoft.org/software#Function> ;
                           rdfs:range xsd:anyURI ;
-                          rdfs:comment "Property that links to the location of scripts that may be used from the main runnable script."@en ;
-                          rdfs:isDefinedBy < http://ontosoft.org/software#> .
+                          rdfs:comment "Property that links to the location of scripts that may be used from the main runnable script."@en .
 
 
 ###  https://w3id.org/mint/modelCatalog#hasValue
@@ -330,8 +319,7 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
 #################################################################
 
 ###  http://ontosoft.org/software#Container
-<http://ontosoft.org/software#Container> rdf:type owl:Class ;
-                                         rdfs:isDefinedBy < http://ontosoft.org/software#> .
+<http://ontosoft.org/software#Container> rdf:type owl:Class .
 
 
 ###  http://ontosoft.org/software#Function

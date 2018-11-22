@@ -89,7 +89,7 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/mint/modelCatalog#hasConfiguration
 :hasConfiguration rdf:type owl:ObjectProperty ;
-                  rdfs:domain :Model ;
+                  rdfs:domain :ModelVersion ;
                   rdfs:range :ModelConfiguration ;
                   rdfs:comment "Property that links a model to one of its configurations. A model may have multiple configurations, each of which is unique in terms of the inputs and outputs it uses."@en ;
                   rdfs:label "has configuration"@en .
@@ -140,6 +140,14 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
            rdfs:label "has output"@en .
 
 
+###  https://w3id.org/mint/modelCatalog#hasPart
+:hasPart rdf:type owl:ObjectProperty ;
+         rdfs:domain :CAG ;
+         rdfs:range :Process ;
+         rdfs:comment "Relates the CAG to the process"@en ;
+         rdfs:label "has part"@en .
+
+
 ###  https://w3id.org/mint/modelCatalog#hasPresentation
 :hasPresentation rdf:type owl:ObjectProperty ;
                  rdfs:domain [ rdf:type owl:Class ;
@@ -182,14 +190,6 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
             rdfs:range :ModelVersion ;
             rdfs:comment "Property that links a model to its version"@en ;
             rdfs:label "has version"@en .
-
-
-###  https://w3id.org/mint/modelCatalog#has_part
-:has_part rdf:type owl:ObjectProperty ;
-          rdfs:domain :CAG ;
-          rdfs:range :Process ;
-          rdfs:comment "Relates the CAG to the process"@en ;
-          rdfs:label "has part"@en .
 
 
 ###  https://w3id.org/mint/modelCatalog#influences
@@ -242,6 +242,11 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                                                            rdfs:range xsd:string .
 
 
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:DatatypeProperty ;
+                                       rdfs:isDefinedBy <http://purl.org/dc/terms/> .
+
+
 ###  https://w3id.org/mint/modelCatalog#hasAssumption
 :hasAssumption rdf:type owl:DatatypeProperty ;
                rdfs:domain [ rdf:type owl:Class ;
@@ -252,13 +257,6 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                rdfs:range xsd:string ;
                rdfs:comment "Assumptions of a model, e.g. the solver being used."@en ;
                rdfs:label "has assumption"@en .
-
-
-###  https://w3id.org/mint/modelCatalog#hasDescription
-:hasDescription rdf:type owl:DatatypeProperty ;
-                rdfs:range xsd:string ;
-                rdfs:comment "A human-readable description of a resource, including models, variables, functions or containers."@en ;
-                rdfs:label "has description"@en .
 
 
 ###  https://w3id.org/mint/modelCatalog#hasFormat

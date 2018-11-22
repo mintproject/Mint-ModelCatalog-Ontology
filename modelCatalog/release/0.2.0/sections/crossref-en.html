@@ -109,7 +109,7 @@ This section provides details for each class and property defined by The MINT Mo
       <dl class="description">
          <dt>is in domain of</dt>
          <dd>
-            <a href="#has_part" title="https://w3id.org/mint/modelCatalog#has_part">has part</a>
+            <a href="#hasPart" title="https://w3id.org/mint/modelCatalog#hasPart">has part</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
@@ -306,9 +306,7 @@ This section provides details for each class and property defined by The MINT Mo
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#hasConfiguration"
-               title="https://w3id.org/mint/modelCatalog#hasConfiguration">has configuration</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasModelCategory"
+            <a href="#hasModelCategory"
                title="https://w3id.org/mint/modelCatalog#hasModelCategory">has model category</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#hasVersion" title="https://w3id.org/mint/modelCatalog#hasVersion">has version</a>
             <sup class="type-op" title="object property">op</sup>
@@ -368,7 +366,9 @@ This section provides details for each class and property defined by The MINT Mo
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#hasVersionNumber"
+            <a href="#hasConfiguration"
+               title="https://w3id.org/mint/modelCatalog#hasConfiguration">has configuration</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasVersionNumber"
                title="https://w3id.org/mint/modelCatalog#hasVersionNumber">has version number</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
@@ -427,7 +427,7 @@ This section provides details for each class and property defined by The MINT Mo
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#has_part" title="https://w3id.org/mint/modelCatalog#has_part">has part</a>
+            <a href="#hasPart" title="https://w3id.org/mint/modelCatalog#hasPart">has part</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasProcess" title="https://w3id.org/mint/modelCatalog#hasProcess">has process</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#influences" title="https://w3id.org/mint/modelCatalog#influences">influences</a>
             <sup class="type-op" title="object property">op</sup>
@@ -680,7 +680,7 @@ This section provides details for each class and property defined by The MINT Mo
          <a href="#hasOutput" title="https://w3id.org/mint/modelCatalog#hasOutput">has output</a>
       </li>
       <li>
-         <a href="#has_part" title="https://w3id.org/mint/modelCatalog#has_part">has part</a>
+         <a href="#hasPart" title="https://w3id.org/mint/modelCatalog#hasPart">has part</a>
       </li>
       <li>
          <a href="#hasPresentation"
@@ -747,7 +747,7 @@ This section provides details for each class and property defined by The MINT Mo
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Model" title="https://w3id.org/mint/modelCatalog#Model">Model</a>
+               <a href="#ModelVersion" title="https://w3id.org/mint/modelCatalog#ModelVersion">Model Version</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -956,13 +956,13 @@ This section provides details for each class and property defined by The MINT Mo
          </dl>
       </div>
    </div>
-   <div class="entity" id="has_part">
+   <div class="entity" id="hasPart">
       <h3>has part<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/mint/modelCatalog#has_part</p>
+         <strong>IRI:</strong> https://w3id.org/mint/modelCatalog#hasPart</p>
       <div class="comment">
          <span class="markdown">Relates the CAG to the process</span>
       </div>
@@ -1178,11 +1178,12 @@ This section provides details for each class and property defined by The MINT Mo
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#hasAssumption" title="https://w3id.org/mint/modelCatalog#hasAssumption">has assumption</a>
+         <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+            <span>description</span>
+         </a>
       </li>
       <li>
-         <a href="#hasDescription"
-            title="https://w3id.org/mint/modelCatalog#hasDescription">has description</a>
+         <a href="#hasAssumption" title="https://w3id.org/mint/modelCatalog#hasAssumption">has assumption</a>
       </li>
       <li>
          <a href="#http://ontosoft.org/software#hasExecutionCommand" title="http://ontosoft.org/software#hasExecutionCommand">
@@ -1233,6 +1234,20 @@ This section provides details for each class and property defined by The MINT Mo
             title="https://w3id.org/mint/modelCatalog#hasVersionNumber">has version number</a>
       </li>
    </ul>
+   <div class="entity" id="http://purl.org/dc/terms/description">
+      <h3>description<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/description</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://purl.org/dc/terms/">http://purl.org/dc/terms/</a>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="hasAssumption">
       <h3>has assumption<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -1254,25 +1269,6 @@ This section provides details for each class and property defined by The MINT Mo
                   title="https://w3id.org/mint/modelCatalog#ModelConfiguration">Model configuration</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasDescription">
-      <h3>has description<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/mint/modelCatalog#hasDescription</p>
-      <div class="comment">
-         <span class="markdown">A human-readable description of a resource, including models, variables, functions or containers.</span>
-      </div>
-      <div class="description">
-         <dl>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>

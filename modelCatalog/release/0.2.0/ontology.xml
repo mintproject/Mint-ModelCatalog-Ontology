@@ -149,7 +149,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/mint/modelCatalog#hasConfiguration">
-        <rdfs:domain rdf:resource="https://w3id.org/mint/modelCatalog#Model"/>
+        <rdfs:domain rdf:resource="https://w3id.org/mint/modelCatalog#ModelVersion"/>
         <rdfs:range rdf:resource="https://w3id.org/mint/modelCatalog#ModelConfiguration"/>
         <rdfs:comment xml:lang="en">Property that links a model to one of its configurations. A model may have multiple configurations, each of which is unique in terms of the inputs and outputs it uses.</rdfs:comment>
         <rdfs:label xml:lang="en">has configuration</rdfs:label>
@@ -225,6 +225,18 @@
     
 
 
+    <!-- https://w3id.org/mint/modelCatalog#hasPart -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/mint/modelCatalog#hasPart">
+        <rdfs:domain rdf:resource="https://w3id.org/mint/modelCatalog#CAG"/>
+        <rdfs:range rdf:resource="https://w3id.org/mint/modelCatalog#Process"/>
+        <rdfs:comment xml:lang="en">Relates the CAG to the process</rdfs:comment>
+        <rdfs:label xml:lang="en">has part</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/mint/modelCatalog#hasPresentation -->
 
 
@@ -288,18 +300,6 @@
         <rdfs:range rdf:resource="https://w3id.org/mint/modelCatalog#ModelVersion"/>
         <rdfs:comment xml:lang="en">Property that links a model to its version</rdfs:comment>
         <rdfs:label xml:lang="en">has version</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/mint/modelCatalog#has_part -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/mint/modelCatalog#has_part">
-        <rdfs:domain rdf:resource="https://w3id.org/mint/modelCatalog#CAG"/>
-        <rdfs:range rdf:resource="https://w3id.org/mint/modelCatalog#Process"/>
-        <rdfs:comment xml:lang="en">Relates the CAG to the process</rdfs:comment>
-        <rdfs:label xml:lang="en">has part</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -389,6 +389,15 @@
     
 
 
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/description">
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/mint/modelCatalog#hasAssumption -->
 
 
@@ -404,17 +413,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Assumptions of a model, e.g. the solver being used.</rdfs:comment>
         <rdfs:label xml:lang="en">has assumption</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/mint/modelCatalog#hasDescription -->
-
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/mint/modelCatalog#hasDescription">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">A human-readable description of a resource, including models, variables, functions or containers.</rdfs:comment>
-        <rdfs:label xml:lang="en">has description</rdfs:label>
     </owl:DatatypeProperty>
     
 

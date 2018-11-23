@@ -67,6 +67,14 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                                             rdfs:comment "Function to link a function with its corresponding container"@en .
 
 
+###  http://ontosoft.org/software#hasSoftwareVersion
+<http://ontosoft.org/software#hasSoftwareVersion> rdf:type owl:ObjectProperty ;
+                                                  rdfs:domain <http://ontosoft.org/software#Software> ;
+                                                  rdfs:range <http://ontosoft.org/software#SoftwareVersion> ;
+                                                  rdfs:isDefinedBy <http://ontosoft.org/software#> ;
+                                                  rdfs:label "has software version"@en .
+
+
 ###  https://w3id.org/mint/modelCatalog#hadGrid
 :hadGrid rdf:type owl:ObjectProperty ;
          rdfs:domain [ rdf:type owl:Class ;
@@ -182,14 +190,6 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                  rdfs:range :TimeInterval ;
                  rdfs:comment "Property that relates the model configuration to the time interval on which it's being run."@en ;
                  rdfs:label "has time interval"@en .
-
-
-###  https://w3id.org/mint/modelCatalog#hasVersion
-:hasVersion rdf:type owl:ObjectProperty ;
-            rdfs:domain :Model ;
-            rdfs:range :ModelVersion ;
-            rdfs:comment "Property that links a model to its version"@en ;
-            rdfs:label "has version"@en .
 
 
 ###  https://w3id.org/mint/modelCatalog#influences

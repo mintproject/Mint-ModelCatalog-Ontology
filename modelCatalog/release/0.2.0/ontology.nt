@@ -60,6 +60,13 @@
 <http://ontosoft.org/software#hasContainer> <http://www.w3.org/2000/01/rdf-schema#range> <http://ontosoft.org/software#Container> .
 <http://ontosoft.org/software#hasContainer> <http://www.w3.org/2000/01/rdf-schema#comment> "Function to link a function with its corresponding container"@en .
 # 
+# http://ontosoft.org/software#hasSoftwareVersion
+<http://ontosoft.org/software#hasSoftwareVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://ontosoft.org/software#hasSoftwareVersion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontosoft.org/software#Software> .
+<http://ontosoft.org/software#hasSoftwareVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://ontosoft.org/software#SoftwareVersion> .
+<http://ontosoft.org/software#hasSoftwareVersion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://ontosoft.org/software#> .
+<http://ontosoft.org/software#hasSoftwareVersion> <http://www.w3.org/2000/01/rdf-schema#label> "has software version"@en .
+# 
 # https://w3id.org/mint/modelCatalog#hadGrid
 <https://w3id.org/mint/modelCatalog#hadGrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/mint/modelCatalog#hadGrid> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
@@ -175,13 +182,6 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <https://w3id.org/mint/modelCatalog#hasTimeInterval> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mint/modelCatalog#TimeInterval> .
 <https://w3id.org/mint/modelCatalog#hasTimeInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that relates the model configuration to the time interval on which it's being run."@en .
 <https://w3id.org/mint/modelCatalog#hasTimeInterval> <http://www.w3.org/2000/01/rdf-schema#label> "has time interval"@en .
-# 
-# https://w3id.org/mint/modelCatalog#hasVersion
-<https://w3id.org/mint/modelCatalog#hasVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/mint/modelCatalog#hasVersion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/modelCatalog#Model> .
-<https://w3id.org/mint/modelCatalog#hasVersion> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mint/modelCatalog#ModelVersion> .
-<https://w3id.org/mint/modelCatalog#hasVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links a model to its version"@en .
-<https://w3id.org/mint/modelCatalog#hasVersion> <http://www.w3.org/2000/01/rdf-schema#label> "has version"@en .
 # 
 # https://w3id.org/mint/modelCatalog#influences
 <https://w3id.org/mint/modelCatalog#influences> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

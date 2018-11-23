@@ -114,6 +114,18 @@
     
 
 
+    <!-- http://ontosoft.org/software#hasSoftwareVersion -->
+
+
+    <owl:ObjectProperty rdf:about="http://ontosoft.org/software#hasSoftwareVersion">
+        <rdfs:domain rdf:resource="http://ontosoft.org/software#Software"/>
+        <rdfs:range rdf:resource="http://ontosoft.org/software#SoftwareVersion"/>
+        <rdfs:isDefinedBy rdf:resource="http://ontosoft.org/software#"/>
+        <rdfs:label xml:lang="en">has software version</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/mint/modelCatalog#hadGrid -->
 
 
@@ -288,18 +300,6 @@
         <rdfs:range rdf:resource="https://w3id.org/mint/modelCatalog#TimeInterval"/>
         <rdfs:comment xml:lang="en">Property that relates the model configuration to the time interval on which it&apos;s being run.</rdfs:comment>
         <rdfs:label xml:lang="en">has time interval</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/mint/modelCatalog#hasVersion -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/mint/modelCatalog#hasVersion">
-        <rdfs:domain rdf:resource="https://w3id.org/mint/modelCatalog#Model"/>
-        <rdfs:range rdf:resource="https://w3id.org/mint/modelCatalog#ModelVersion"/>
-        <rdfs:comment xml:lang="en">Property that links a model to its version</rdfs:comment>
-        <rdfs:label xml:lang="en">has version</rdfs:label>
     </owl:ObjectProperty>
     
 

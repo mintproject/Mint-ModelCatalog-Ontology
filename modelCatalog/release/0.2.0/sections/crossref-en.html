@@ -308,8 +308,7 @@ This section provides details for each class and property defined by The MINT Mo
          <dd>
             <a href="#hasModelCategory"
                title="https://w3id.org/mint/modelCatalog#hasModelCategory">has model category</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasVersion" title="https://w3id.org/mint/modelCatalog#hasVersion">has version</a>
-            <sup class="type-op" title="object property">op</sup>
+            <sup class="type-dp" title="data property">dp</sup>
          </dd>
       </dl>
    </div>
@@ -371,11 +370,6 @@ This section provides details for each class and property defined by The MINT Mo
             <sup class="type-op" title="object property">op</sup>, <a href="#hasVersionNumber"
                title="https://w3id.org/mint/modelCatalog#hasVersionNumber">has version number</a>
             <sup class="type-dp" title="data property">dp</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#hasVersion" title="https://w3id.org/mint/modelCatalog#hasVersion">has version</a>
-            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -451,6 +445,11 @@ This section provides details for each class and property defined by The MINT Mo
             <a href="#Model" title="https://w3id.org/mint/modelCatalog#Model">Model</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://ontosoft.org/software#hasSoftwareVersion" title="http://ontosoft.org/software#hasSoftwareVersion">has software version</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="http://ontosoft.org/software#SoftwareVersion">
@@ -469,6 +468,11 @@ This section provides details for each class and property defined by The MINT Mo
          <dd>
             <a href="#ModelVersion" title="https://w3id.org/mint/modelCatalog#ModelVersion">Model Version</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://ontosoft.org/software#hasSoftwareVersion" title="http://ontosoft.org/software#hasSoftwareVersion">has software version</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -690,15 +694,15 @@ This section provides details for each class and property defined by The MINT Mo
          <a href="#hasProcess" title="https://w3id.org/mint/modelCatalog#hasProcess">has process</a>
       </li>
       <li>
+         <a href="#http://ontosoft.org/software#hasSoftwareVersion" title="http://ontosoft.org/software#hasSoftwareVersion">has software version</a>
+      </li>
+      <li>
          <a href="#hasStandardVariable"
             title="https://w3id.org/mint/modelCatalog#hasStandardVariable">has standard variable</a>
       </li>
       <li>
          <a href="#hasTimeInterval"
             title="https://w3id.org/mint/modelCatalog#hasTimeInterval">has time interval</a>
-      </li>
-      <li>
-         <a href="#hasVersion" title="https://w3id.org/mint/modelCatalog#hasVersion">has version</a>
       </li>
       <li>
          <a href="#influences" title="https://w3id.org/mint/modelCatalog#influences">influences</a>
@@ -1042,6 +1046,34 @@ This section provides details for each class and property defined by The MINT Mo
          </dl>
       </div>
    </div>
+   <div class="entity" id="http://ontosoft.org/software#hasSoftwareVersion">
+      <h3>has software version<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://ontosoft.org/software#hasSoftwareVersion</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://ontosoft.org/software#">http://ontosoft.org/software#</a>
+         </dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://ontosoft.org/software#Software" title="http://ontosoft.org/software#Software">software</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://ontosoft.org/software#SoftwareVersion" title="http://ontosoft.org/software#SoftwareVersion">software version</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasStandardVariable">
       <h3>has standard variable<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1090,31 +1122,6 @@ This section provides details for each class and property defined by The MINT Mo
             <dt>has range</dt>
             <dd>
                <a href="#TimeInterval" title="https://w3id.org/mint/modelCatalog#TimeInterval">Time interval</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasVersion">
-      <h3>has version<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/mint/modelCatalog#hasVersion</p>
-      <div class="comment">
-         <span class="markdown">Property that links a model to its version</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Model" title="https://w3id.org/mint/modelCatalog#Model">Model</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#ModelVersion" title="https://w3id.org/mint/modelCatalog#ModelVersion">Model Version</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>

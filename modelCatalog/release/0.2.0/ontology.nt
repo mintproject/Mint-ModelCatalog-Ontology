@@ -236,6 +236,13 @@ _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <http://ontosoft.org/software#hasInstallationInstructions> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontosoft.org/software#Container> .
 <http://ontosoft.org/software#hasInstallationInstructions> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 # 
+# http://ontosoft.org/software#hasVersionId
+<http://ontosoft.org/software#hasVersionId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://ontosoft.org/software#hasVersionId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontosoft.org/software#SoftwareVersion> .
+<http://ontosoft.org/software#hasVersionId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://ontosoft.org/software#hasVersionId> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://ontosoft.org/software#> .
+<http://ontosoft.org/software#hasVersionId> <http://www.w3.org/2000/01/rdf-schema#label> "has version id"@en .
+# 
 # http://purl.org/dc/terms/description
 <http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://purl.org/dc/terms/description> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
@@ -295,13 +302,6 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <https://w3id.org/mint/modelCatalog#hasValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
 <https://w3id.org/mint/modelCatalog#hasValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The numerical value associated with the object."@en .
 <https://w3id.org/mint/modelCatalog#hasValue> <http://www.w3.org/2000/01/rdf-schema#label> "has value"@en .
-# 
-# https://w3id.org/mint/modelCatalog#hasVersionNumber
-<https://w3id.org/mint/modelCatalog#hasVersionNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/mint/modelCatalog#hasVersionNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/modelCatalog#ModelVersion> .
-<https://w3id.org/mint/modelCatalog#hasVersionNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/mint/modelCatalog#hasVersionNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates the model version to its number"@en .
-<https://w3id.org/mint/modelCatalog#hasVersionNumber> <http://www.w3.org/2000/01/rdf-schema#label> "has version number"@en .
 # 
 # 
 # 

@@ -367,9 +367,7 @@ This section provides details for each class and property defined by The MINT Mo
          <dd>
             <a href="#hasConfiguration"
                title="https://w3id.org/mint/modelCatalog#hasConfiguration">has configuration</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasVersionNumber"
-               title="https://w3id.org/mint/modelCatalog#hasVersionNumber">has version number</a>
-            <sup class="type-dp" title="data property">dp</sup>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -468,6 +466,11 @@ This section provides details for each class and property defined by The MINT Mo
          <dd>
             <a href="#ModelVersion" title="https://w3id.org/mint/modelCatalog#ModelVersion">Model Version</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://ontosoft.org/software#hasVersionId" title="http://ontosoft.org/software#hasVersionId">has version id</a>
+            <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
@@ -1237,8 +1240,7 @@ This section provides details for each class and property defined by The MINT Mo
          <a href="#hasValue" title="https://w3id.org/mint/modelCatalog#hasValue">has value</a>
       </li>
       <li>
-         <a href="#hasVersionNumber"
-            title="https://w3id.org/mint/modelCatalog#hasVersionNumber">has version number</a>
+         <a href="#http://ontosoft.org/software#hasVersionId" title="http://ontosoft.org/software#hasVersionId">has version id</a>
       </li>
    </ul>
    <div class="entity" id="http://purl.org/dc/terms/description">
@@ -1520,21 +1522,24 @@ This section provides details for each class and property defined by The MINT Mo
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasVersionNumber">
-      <h3>has version number<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="http://ontosoft.org/software#hasVersionId">
+      <h3>has version id<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/mint/modelCatalog#hasVersionNumber</p>
-      <div class="comment">
-         <span class="markdown">Relates the model version to its number</span>
-      </div>
+         <strong>IRI:</strong> http://ontosoft.org/software#hasVersionId</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://ontosoft.org/software#">http://ontosoft.org/software#</a>
+         </dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#ModelVersion" title="https://w3id.org/mint/modelCatalog#ModelVersion">Model Version</a>
+               <a href="#http://ontosoft.org/software#SoftwareVersion" title="http://ontosoft.org/software#SoftwareVersion">software version</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>

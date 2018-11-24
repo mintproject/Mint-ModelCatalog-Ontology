@@ -242,6 +242,14 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                                                            rdfs:range xsd:string .
 
 
+###  http://ontosoft.org/software#hasVersionId
+<http://ontosoft.org/software#hasVersionId> rdf:type owl:DatatypeProperty ;
+                                            rdfs:domain <http://ontosoft.org/software#SoftwareVersion> ;
+                                            rdfs:range xsd:string ;
+                                            rdfs:isDefinedBy <http://ontosoft.org/software#> ;
+                                            rdfs:label "has version id"@en .
+
+
 ###  http://purl.org/dc/terms/description
 <http://purl.org/dc/terms/description> rdf:type owl:DatatypeProperty ;
                                        rdfs:isDefinedBy <http://purl.org/dc/terms/> .
@@ -304,14 +312,6 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
           rdfs:range xsd:float ;
           rdfs:comment "The numerical value associated with the object."@en ;
           rdfs:label "has value"@en .
-
-
-###  https://w3id.org/mint/modelCatalog#hasVersionNumber
-:hasVersionNumber rdf:type owl:DatatypeProperty ;
-                  rdfs:domain :ModelVersion ;
-                  rdfs:range xsd:string ;
-                  rdfs:comment "Relates the model version to its number"@en ;
-                  rdfs:label "has version number"@en .
 
 
 #################################################################

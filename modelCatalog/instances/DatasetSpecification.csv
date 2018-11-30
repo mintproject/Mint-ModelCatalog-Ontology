@@ -11,14 +11,10 @@ cycles_aggregatedOutput,Cycles aggregated outputs,cycles_total_biomass;cycles_ro
 topo_rain,Rain rate txt file,Topo_p,txt,https://w3id.org/wings/export/MINT#TOPO_Rain
 topo_aggr_files,TopoFlow aggregated inputs,,,https://w3id.org/wings/export/MINT#TOPO_Aggregation
 topo_aggregatedOutput,TopoFlow aggregated outputs,Topo_qs;Topo_albedo,tar.gz,https://w3id.org/wings/export/MINT#TOPO_Aggregation
-dssat_aggr_files,DSSAT aggregated inputs,DSSAT_rain;DSSAT_tav;DSSAT_tmax;DSSAT_tmin;DSSAT_salb;DSSAT_sh20,tar.gz,https://w3id.org/wings/export/MINT#DSSAT_Aggregation
-dssat_aggregatedOutput,DSSAT aggregated outputs,DSSAT_hwam;DSSAT_cwam,tar.gz,https://w3id.org/wings/export/MINT#DSSAT_Aggregation
-dssat_inh,DSSAT inh file,,inh,https://w3id.org/wings/export/MINT#INH
-dssat_cli,DSSAT climate file,,cli,https://w3id.org/wings/export/MINT#Climate
-dssat_sol,DSSAT soil file,,sol,https://w3id.org/wings/export/MINT#Soil
-dssat_summary,DSSAT Summary file,DSSAT_hwam;DSSAT_cwam,out,https://w3id.org/wings/export/MINT#Summary
-dssat_warning,DSSAT Warning file,,out,https://w3id.org/wings/export/MINT#Warning
-dssat_inp,DSSAT INP file,,inp,https://w3id.org/wings/export/MINT#INP
+DSSAT_simulationFile,DSSAT simulation file,DSSAT_FAMN;DSSAT_FDATE;DSSAT_FDEP;DSSAT_XCRD;DSSAT_YCRD;DSSAT_ICBL;DSSAT_SH2O;DSSAT_SNH4;DSSAT_SNO3;DSSAT_CR;DSSAT_INGENO;DSSAT_PDATE;DSSAT_PLDP;DSSAT_PLRS;DSSAT_PPOP,x,https://w3id.org/wings/export/MINT#DSSAT_SIMULATION
+DSSAT_weatherFile,DSSAT weather file,DSSAT_LAT;DSSAT_LONG;DSSAT_RAIN;DSSAT_SRAD;DSSAT_TAV;DSSAT_TMAX;DSSAT_TMIN;DSSAT_WSTA,wth,https://w3id.org/wings/export/DSSAT_WEATHER
+DSSAT_sol,DSSAT soil file,DSSAT_SALB;DSSAT_SBDM;DSSAT_SDUL;DSSAT_SLB;DSSAT_SLCL;DSSAT_SLLL;DSSAT_SLOC;DSSAT_SLSI;DSSAT_SSAT;DSSAT_SSKS,sol,https://w3id.org/wings/export/MINT#Soil
+DSSAT_summary,DSSAT Summary file,DSSAT_hwam;DSSAT_cwam,csv,https://w3id.org/wings/export/MINT#Summary
 ldas_inputQuery,LDAS Query to retireve data,,,https://w3id.org/wings/export/MINT#LDAS_Query
 mint_config,Configuration file for running Gel-Aliab scenario,,txt,https://w3id.org/wings/export/MINT#MINT_Config
 ldas_weather_data,LDAS weather data aggregated file,LDAS_RAIN;LDAS_SM,targ.gz,https://w3id.org/wings/export/MINT#LDAS_Weather

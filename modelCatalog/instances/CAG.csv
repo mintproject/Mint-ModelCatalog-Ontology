@@ -5,7 +5,6 @@ cycles_cfg_simple_CAG,CAG for Cycles simple configuration,cycles_precipitation;c
 kimetrica_land_use_cfg_simple_CAG,CAG for Kimetrica land use simple configuration,
 economic_aggregate_crop_supply_CAG,CAG for Economic model for aggregate crop supply response model for the country of South Sudan configuration,crop_yield_elasticity;crop_prices;fertilizer_prices;land_use;fertilizer_use;crop_supply;crop_yield
 topoflow_cfg_simple_CAG,CAG forTopoFlow with basic configuration,
-dssat_cfg_simple_CAG,CAG for DSSAT simple configuration,
-dssat_cfg_simple2_CAG,CAG for DSSAT simple configuration with explicit outputs,
+dssat_cfg_simple_CAG,CAG for DSSAT simple configuration with explicit outputs,
 topoflow_cfg_fk_CAG,CAG for TopoFlow with fake configuration to emulate PIHM,
 dssat_cfg_fk_CAG,CAG for DSSAT with fake configuration to emulate Cycles,

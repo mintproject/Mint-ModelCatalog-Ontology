@@ -4,6 +4,6 @@ cycles_0.8.0_alpha,Cycles v0.8.0 alpha,0.8.0,cycles_cfg_simple;cycles_cfg_simple
 kimetrica_0.0,Kimetrica lv0.o0,0,kimterica_land_use_cfg_simple
 EACS_2.0,EACS 2.0,2,economic_aggregate_crop_supply
 topoflow_3.5,Topoflow v3.5,3.5,topoflow_cfg_simple
-dssat_4.7,DSSAT v4.7,4.7,dssat_cfg_simple;dssat_cfg_simple2
+DSSAT_4.7,DSSAT v4.7,4.7,DSSAT_cfg_simple;DSSAT_cfg_simple2
 modflow_nwt,Modflow NWT,nwt,modflow_nwt_cfg
 modflow_2005,Modflow 2005,2005,modflow_2005_cfg

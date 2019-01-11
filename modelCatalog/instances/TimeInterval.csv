@@ -6,6 +6,5 @@ kimetrica_land_use_cfg_simple_TI,Simple kimetrica time interval,Time interval us
 economic_aggregate_crop_supply_TI,Simple economic time interval,Time interval used in the aggregate crop supply response model for the country of South Sudan configuration,1,year
 topoflow_cfg_simple_TI,Simple topoflow time interval,Time interval used in the TopoFlow with basic configuration,,
 dssat_cfg_simple_TI,Simple dssat time interval,Time interval used in the DSSAT simple configuration,,
-dssat_cfg_simple2_TI,Simple dssat time interval,Time interval used in the DSSAT simple configuration with explicit outputs,,
 topoflow_cfg_fk_TI,Simple topoflow time interval,Time interval used in the TopoFlow with fake configuration to emulate PIHM,,
 dssat_cfg_fk_TI,Simple dssat time interval,Time interval used in the  DSSAT with fake configuration to emulate Cycles,,

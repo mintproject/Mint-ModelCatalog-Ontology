@@ -4,3 +4,5 @@ ldas2pihm,LDAS to PIHM script,Script designed to transform LDAS data into a form
 pihm2cycles,PIHM to Cycles script,Script designed to transform PIHM results into Cycles,pihm2cycles_v1,Hydrology;Agriculture,
 ldasDataDownload,LDAS data download script,Script designed to retrieve and download data from LDAS,ldasdd_v1,,
 cycles2econ,Cycles to economic script,Cycles_to_econ calculates the yield elasticity under increased fertilizer uses from cycles for use in the aggregate crop supply response model,cycles2econ_v1,Agriculture;Economic,The model assumes a 10% increase in fertilizer use compared to the baseline cycles run.
+FLDAS2WGEN,FLDAS data to WGEN,Transforms FLDAS data for use with weather generator WGEN,FLDAS2WGEN_v1,weather,Requires both monthly and daily data
+WGEN2FLDAS,WGEN output to FLDAS like format,Transforms the output of the weather generator wgen to FLDAS like data,WGEN2FLDAS_v1,weather,

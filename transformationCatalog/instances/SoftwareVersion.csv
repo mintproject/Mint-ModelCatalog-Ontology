@@ -4,3 +4,5 @@ ldas2pihm_v1,LDAS to Pihm Version 1,1,ldas2pihm_v1_cfg
 pihm2cycles_v1,PIHM to Cycles Version 1,1,pihm_to_cycles_cfg
 ldasdd_v1,LDAS data download Version 1,1,ldasdd_v1_cfg
 cycles2econ_v1,CYCLES to Econ Version 1,1,cycles_to_econ_cfg
+FLDAS2WGEN_v1,,,
+WGEN2FLDAS_v1,,,

@@ -7,3 +7,5 @@ topoflow_3.5,Topoflow v3.5,3.5,topoflow_cfg_simple
 DSSAT_4.7,DSSAT v4.7,4.7,DSSAT_cfg_simple;DSSAT_cfg_simple2
 modflow_nwt,Modflow NWT,nwt,modflow_nwt_cfg
 modflow_2005,Modflow 2005,2005,modflow_2005_cfg
+wgen_1.0.1,wgen v1.0.1,1.0.1,wgen_1.0.1_cfg
+ClimComp_0.0.2,climcompv0.0.2,0.0.2,climcomp_0.0.2_P_cfg;climcomp_0.0.2_T_cfg

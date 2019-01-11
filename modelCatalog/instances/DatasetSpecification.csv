@@ -25,3 +25,9 @@ econ_sim_input,ontains the economic data used in the simulation analysis,econ_p;
 econ_econ_input,contains data on observed prices for each crop and supply elasticities and the costs of production for each crop,econ_p;econ_eta;econ_c1;econ_c2,csv,https://w3id.org/wings/export/MINT#econ_econ
 econ_cycles_input,contains the yield elasticities to fertilizer use that are derived from Cycles output,econ_ybarN,csv,https://w3id.org/wings/export/MINT#econ_cycles
 econ_crop_result,Crop results,econ_fert_subsidy;econ_land_area;econ_obsyield;econ_production;econ_Nfert,txt,https://w3id.org/wings/export/MINT#econ_crop
+wgen_input,Input to the weather generator,wgen_stationid;wgen_lon;wgen_lat;wgen_year;wgen_month;wgen_minT;wgen_maxT;wgen_cloudfraction;wgen_windspeed;wgen_wetdays;wgen_prcp,csv,https://w3id.org/wings/export/MINT#wgen_input
+wgen_output,Output from the weather generator,wgen_stationid;wgen_year;wgen_month;wgen_day;wgen_minT;wgen_maxT;wgen_cloudfraction;wgen_windspeed;wgen_wetdays;wgen_prcp,csv,https://w3id.org/wings/export/MINT#wgen_output
+climcomp_FLDAS_P,Precipitation input to climcomp,climcomp_FLDAS_P,netcdf,https://w3id.org/wings/export/MINT#climcomp_FLDAS_P_input
+climcomp_P_out,Precipitation output from climcomp,climcomp_P,csv,https://w3id.org/wings/export/MINT#climcomp_P_output
+climcomp_FLDAS_T,temperature input to climcomp,climcomp_FLDAS_T,netcdf,https://w3id.org/wings/export/MINT#climcomp_FLDAS_T_input
+climcomp_T_out,temperature output to climcomp,climcomp_T,csv,https://w3id.org/wings/export/MINT#climcomp_T_output

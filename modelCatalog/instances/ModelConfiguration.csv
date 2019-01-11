@@ -14,3 +14,6 @@ ldas2pihm_v1_cfg;,LDAS to PIHM configuration,LDAS to PIHM configuration,mint_con
 ldasdd_v1_cfg,LDAS data download configuration,LDAS data download configuration,ldas_inputQuery;mint_config,ldas_weather_data,,,,,,,,
 modflow_nwt_cfg,MODFLOW NWT configuration,MODFLOW NWT configuration sample using recharge files,,,,,,,,,,
 modflow_2005_cfg,MODFLOW 2005 configuration,MODFLOW 2005 configuration using variable recharge files,,,,,,,,,,
+wgen_1.0.1_cfg,WGEN Basic configuration,wgen basic configuration,wgen_input,wgen_output,,,wgen_1.0.1_cfg_timeinterval,,,,,
+climcomp_0.0.2_P_cfg,ClimComp configuration for precipitation,This configuration accepts the precipitation input from FLDAS dataset,climcomp_FLDAS_P,climcomp_P_out,,,climcomp_0.0.2_P_cfg_TI,,,,,
+climcomp_0.0.2_T_cfg,ClimComp configuration for temperature,This configuration accepts the temperature input from FLDAS data,climcomp_FLDAS_T,climcomp_T_out,,,climcomp_0.0.2_T_cfg_TI,,,,,

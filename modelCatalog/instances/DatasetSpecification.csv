@@ -1,45 +1,60 @@
-https://w3id.org/mint/modelCatalog#DatasetSpecification,http://www.w3.org/2000/01/rdf-schema#label,http://purl.org/dc/terms/description,https://w3id.org/mint/modelCatalog#hasPresentation,https://w3id.org/mint/modelCatalog#hasFormat,http://www.w3.org/1999/02/22-rdf-syntax-ns#type
-pihm_aggr_files,PIHM aggregated inputs,,PIHM_THETAR,tar.gz,https://w3id.org/wings/export/MINT#PIHM_Aggregation
-pihm_forc,PIHM .forc file,,PIHM_PRCP,forc,https://w3id.org/wings/export/MINT#FORCE
-pihm_forc2,PIHM .forc file with additional exposed variables,,PIHM_PRCP;PIHM_TRMP;PIHM_WINF;PIHM_RH,forc,https://w3id.org/wings/export/MINT#FORCE
-pihm_aggregatedOutput,PIHM aggregated outputs,,PIHM_INF_RATE;PIHM_EVAP,tar.gz,https://w3id.org/wings/export/MINT#PIHM_Aggregation
-cycles_reinit,Cyles reinit file,,cycles_doy,reinit,https://w3id.org/wings/export/MINT#Cycles_reinit
-cycles_weather,Cycles weather file,,cycles_pp;cycles_tx;cycles_tn;cycles_sr;cycles_hx;cycles_hn;cycles_ws,weather,https://w3id.org/wings/export/MINT#Cycles_weather
-cycles_soil,Cycles soil file,,cycles_cn;cycles_slope;cycles_layer;cycles_dz;cycles_clay;cycles_silt;cycles_rv;cycles_bd;cycles_som;cycles_smc,soil,https://w3id.org/wings/export/MINT#Cycles_soil
-cycles_config,Cycles configuration file,"Cycles configuration file, including crop names and percent fertilizer with subsidies to be used in the simulation",,txt,https://w3id.org/wings/export/MINT#CyclesConfig
-cycles_soilProfile,Cycles soil profile file,,,dat,https://w3id.org/wings/export/MINT#CyclesAnnualSoilProfile
-cycles_som,Cycles annual SOM file,,,dat,https://w3id.org/wings/export/MINT#CyclesAnnualSOM
-cyles_crop,Cycles crop output file,,,dat,https://w3id.org/wings/export/MINT#CyclesCropOutput
-cycles_nitrogen,Cycles Nitrogen file,,,dat,https://w3id.org/wings/export/MINT#CyclesNitrogen
-cycles_season,Cycles Season file,,,dat,https://w3id.org/wings/export/MINT#CyclesSeason
-cycles_summary,Cycles summary file,,,dat,https://w3id.org/wings/export/MINT#CyclesSummary
-cycles_weatherOutput,Cycles weather output file,,,dat,https://w3id.org/wings/export/MINT#CyclesWeatherOutput
-cycles_water,Cycles water file,,,dat,https://w3id.org/wings/export/MINT#CyclesWaterOutput
-cycles_seasonConfig,Cycles season configuration file,This file is an auxiliary means to simplify the execution of the workflow,,txt,https://w3id.org/wings/export/MINT#CyclesSeasonConfig
-topo_rain,Rain rate txt file,,Topo_p,txt,https://w3id.org/wings/export/MINT#TOPO_Rain
-topo_aggr_files,TopoFlow aggregated inputs,,,,https://w3id.org/wings/export/MINT#TOPO_Aggregation
-topo_aggregatedOutput,TopoFlow aggregated outputs,,Topo_qs;Topo_albedo,tar.gz,https://w3id.org/wings/export/MINT#TOPO_Aggregation
-DSSAT_simulationFile,DSSAT simulation file,,DSSAT_FAMN;DSSAT_FDATE;DSSAT_FDEP;DSSAT_XCRD;DSSAT_YCRD;DSSAT_ICBL;DSSAT_SH2O;DSSAT_SNH4;DSSAT_SNO3;DSSAT_CR;DSSAT_INGENO;DSSAT_PDATE;DSSAT_PLDP;DSSAT_PLRS;DSSAT_PPOP,x,https://w3id.org/wings/export/MINT#DSSAT_SIMULATION
-DSSAT_weatherFile,DSSAT weather file,,DSSAT_LAT;DSSAT_LONG;DSSAT_RAIN;DSSAT_SRAD;DSSAT_TAV;DSSAT_TMAX;DSSAT_TMIN;DSSAT_WSTA,wth,https://w3id.org/wings/export/DSSAT_WEATHER
-DSSAT_sol,DSSAT soil file,,DSSAT_SALB;DSSAT_SBDM;DSSAT_SDUL;DSSAT_SLB;DSSAT_SLCL;DSSAT_SLLL;DSSAT_SLOC;DSSAT_SLSI;DSSAT_SSAT;DSSAT_SSKS,sol,https://w3id.org/wings/export/MINT#Soil
-DSSAT_summary,DSSAT Summary file,,DSSAT_hwam;DSSAT_cwam,csv,https://w3id.org/wings/export/MINT#Summary
-ldas_inputQuery,LDAS Query to retireve data,,,,https://w3id.org/wings/export/MINT#LDAS_Query
-mint_config,Configuration file for running Gel-Aliab scenario,,,txt,https://w3id.org/wings/export/MINT#MINT_Config
-ldas_weather_data,LDAS weather data aggregated file,,LDAS_RAIN;LDAS_SM,targ.gz,https://w3id.org/wings/export/MINT#LDAS_Weather
-fldas2pihm_r,FLDAS to PIHM file,,,,https://w3id.org/wings/export/MINT#FLDAS2PIHM
-econ_calib_input,contains data on land planted to each crop and fertilizer use and observed yields. These data are used to calibrate the production function in the model.,,econ_xbar1;econ_xbar2;econ_ybar,csv,https://w3id.org/wings/export/MINT#econ_calib
-econ_sim_input,ontains the economic data used in the simulation analysis,,econ_p;econ_eta;econ_c1;econ_c2,csv,https://w3id.org/wings/export/MINT#econ_sim
-econ_econ_input,contains data on observed prices for each crop and supply elasticities and the costs of production for each crop,,econ_p;econ_eta;econ_c1;econ_c2,csv,https://w3id.org/wings/export/MINT#econ_econ
-econ_yield,contains the yield elasticities to fertilizer use that are derived from Cycles output,,econ_ybarN,csv,https://w3id.org/wings/export/MINT#econ_cycles
-econ_crop_result,Crop results,,econ_fert_subsidy;econ_land_area;econ_obsyield;econ_production;econ_Nfert,txt,https://w3id.org/wings/export/MINT#econ_crop
-wgen_input,Input to the weather generator,,wgen_stationid;wgen_lon;wgen_lat;wgen_year;wgen_month;wgen_minT;wgen_maxT;wgen_cloudfraction;wgen_windspeed;wgen_wetdays;wgen_prcp,csv,https://w3id.org/wings/export/MINT#wgen_input
-wgen_output,Output from the weather generator,,wgen_stationid;wgen_year;wgen_month;wgen_day;wgen_minT;wgen_maxT;wgen_cloudfraction;wgen_windspeed;wgen_wetdays;wgen_prcp,csv,https://w3id.org/wings/export/MINT#wgen_output
-climcomp_FLDAS_P,Precipitation input to climcomp,,climcomp_FLDAS_P,netcdf,https://w3id.org/wings/export/MINT#climcomp_FLDAS_P_input
-climcomp_P_out,Precipitation output from climcomp,,climcomp_P,csv,https://w3id.org/wings/export/MINT#climcomp_P_output
-climcomp_FLDAS_T,temperature input to climcomp,,climcomp_FLDAS_T,netcdf,https://w3id.org/wings/export/MINT#climcomp_FLDAS_T_input
-climcomp_T_out,temperature output to climcomp,,climcomp_T,csv,https://w3id.org/wings/export/MINT#climcomp_T_output
-,,,,,
-,,,,,
-,,,,,
-,,,,,
-cycles_aggregatedOutput,Cycles aggregated outputs,,cycles_total_biomass;cycles_root_biomass;cycles_grain_yield;cycles_forage_yield;cycles_snow_sub;cycles_soil_evap;cycles_residue_evap;cycles_plant_evap;cycles_swc,tar.gz,https://w3id.org/wings/export/MINT#CYCLES_Aggregation
+https://w3id.org/mint/modelCatalog#DatasetSpecification,http://www.w3.org/2000/01/rdf-schema#label,http://purl.org/dc/terms/description,https://w3id.org/mint/modelCatalog#hasPresentation,https://w3id.org/mint/modelCatalog#hasFormat,https://w3id.org/mint/modelCatalog#hasDimensionality,http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+cycles_reinit,Cyles reinit file,Cycles reinit file,cycles_doy;cycles_rot_year;cycles_smc_l1;cycles_infiltration,reinit,0,https://w3id.org/wings/export/MINT#CyclesREINIT
+cycles_weather,Cycles weather file,Cycles weather file,cycles_pp;cycles_tx;cycles_tn;cycles_sr;cycles_hx;cycles_hn;cycles_ws,weather,0,https://w3id.org/wings/export/MINT#CyclesWeather
+cycles_soil,Cycles soil file,Cyclse soil file,cycles_cn;cycles_slope;cycles_layer;cycles_dz;cycles_clay;cycles_silt;cycles_rv;cycles_bd;cycles_som;cycles_smc,soil,0,https://w3id.org/wings/export/MINT#CyclesSoil
+cycles_config,Cycles configuration file,"Cycles configuration file, including crop names and percent fertilizer with subsidies to be used in the simulation",,txt,0,https://w3id.org/wings/export/MINT#CyclesConfig
+cycles_soilProfile,Cycles soil profile file,,cycles_c_diff;cycles_final_c;cycles_humified_c;cycles_init_c_mass;cycles_res_biomass_in;cycles_res_c_decomp;cycles_respired_c;cycles_root_biomass_in;cycles_root_c_decomp;cycles_year,dat,0,https://w3id.org/wings/export/MINT#CyclesAnnualSoilProfile
+cycles_som,Cycles annual SOM file,,cycles_bulk_density;cycles_c_sat._ratio;cycles_soil_c;cycles_thickness;cycles_year,dat,0,https://w3id.org/wings/export/MINT#CyclesAnnualSOM
+cyles_crop,Cycles crop output file,,cycles_ag_biomass;cycles_ag_n;cycles_ag_n_concn;cycles_crop;cycles_cum._biomass;cycles_date;cycles_frac_intercep;cycles_n_added;cycles_n_fixation;cycles_n_stress;cycles_potential_tr;cycles_root_biomass;cycles_root_n;cycles_stage;cycles_thermal_time;cycles_total_n;cycles_water_stress,dat,0,https://w3id.org/wings/export/MINT#CyclesCropOutput
+cycles_nitrogen,Cycles Nitrogen file,,cycles_date;cycles_immobilization;cycles_mineralization;cycles_n2o_from_denit;cycles_n2o_from_nitrif;cycles_net_mineraliz;cycles_nh4_leaching;cycles_nh4_nitrificat;cycles_nh4_volatiliz;cycles_no3_denitrif;cycles_no3_leaching;cycles_org_soil_n;cycles_prof_soil_nh4;cycles_prof_soil_no3,dat,0,https://w3id.org/wings/export/MINT#CyclesNitrogen
+cycles_season,Cycles Season file,,cycles_actual_tr;cycles_ag_residue;cycles_crop;cycles_cum._n_stress;cycles_date;cycles_forage_n;cycles_forage_yield;cycles_grain_n;cycles_grain_yield;cycles_harvest_index;cycles_n_concn_forage;cycles_n_in_harvest;cycles_n_in_residue;cycles_potential_tr;cycles_root_biomass;cycles_root_n;cycles_soil_evap;cycles_total_biomass;cycles_total_n,dat,0,https://w3id.org/wings/export/MINT#CyclesSeason
+cycles_summary,Cycles summary file,,cycles_avg_gross_n_min;cycles_avg_n_immob;cycles_avg_n2o_fr_deni;cycles_avg_n2o_fr_nit;cycles_avg_net_n_min;cycles_avg_nh3_volatil;cycles_avg_nh4_leach;cycles_avg_nh4_nitrif;cycles_avg_no3_denit;cycles_avg_no3_leach;cycles_avg_tot_n2o_emi;cycles_final_prof_c;cycles_humified_c;cycles_init_prof_c;cycles_produced_root;cycles_prof_c_diff;cycles_res_c_input;cycles_resp_res_c;cycles_resp_soil_c;cycles_retained_res;cycles_root_c_input;cycles_soil_c_chg/yr,dat,0,https://w3id.org/wings/export/MINT#CyclesSummary
+cycles_weatherOutput,Cycles weather output file,,cycles_avg_tmp;cycles_date;cycles_max_tmp;cycles_min_tmp;cycles_precipitation;cycles_reference_et,dat,0,https://w3id.org/wings/export/MINT#CyclesWeatherOutput
+cycles_water,Cycles water file,,cycles_date;cycles_drainage;cycles_infiltration;cycles_irrigation;cycles_res_evap;cycles_plant_evap;cycles_runoff;cycles_snow_sub;cycles_soil_evap;cycles_transpiration;cycles_swc,dat,0,https://w3id.org/wings/export/MINT#CyclesWaterOutput
+cycles_seasonConfig,Cycles season configuration file,This file is an auxiliary means to simplify the execution of the workflow,,txt,0,https://w3id.org/wings/export/MINT#CyclesSeasonConfig
+,,,,,,
+cycles_to_crop_cycles_season,Cycles Season file,,cycles_actual_tr;cycles_ag_residue;cycles_crop;cycles_cum._n_stress;cycles_date;cycles_forage_n;cycles_forage_yield;cycles_grain_n;cycles_grain_yield;cycles_harvest_index;cycles_n_concn_forage;cycles_n_in_harvest;cycles_n_in_residue;cycles_potential_tr;cycles_root_biomass;cycles_root_n;cycles_soil_evap;cycles_total_biomass;cycles_total_n,dat,0,https://w3id.org/wings/export/MINT#CyclesSeason
+cycles_to_crop_seasonConfig,Cycles season configuration file,This file is an auxiliary means to simplify the execution of the workflow,,txt,1,https://w3id.org/wings/export/MINT#CyclesSeasonConfig
+cycles_crop_yield,Crop yield file,File that contains the yield elasticities to fertilizer use that are derived from Cycles output,econ_ybarN,csv,1,https://w3id.org/wings/export/MINT#CropYield
+cycles_to_crop_mintConfig,MINT configuration file,Configuration indicating the region and temporal values to run the simulation,,txt,0,https://w3id.org/wings/export/MINT#MINTConfig
+,,,,,,
+econ_calib,Calibration data,contains data on land planted to each crop and fertilizer use and observed yields. These data are used to calibrate the production function in the model.,econ_xbar1;econ_xbar2;econ_ybar,csv,0,https://w3id.org/wings/export/MINT#EconomicCalibData
+econ_sim,Simulation Data,ontains the economic data used in the simulation analysis,econ_p;econ_eta;econ_c1;econ_c2,csv,0,https://w3id.org/wings/export/MINT#EconomicSimData
+econ_data,Economic Data,contains data on observed prices for each crop and supply elasticities and the costs of production for each crop,econ_p;econ_eta;econ_c1;econ_c2,csv,0,https://w3id.org/wings/export/MINT#EconomicData
+econ_subsidies,Subsidy,File indicating the economic subsidies to use on each iteration of the model,,txt,0,https://w3id.org/wings/export/MINT#EconomicSubsidies
+econ_yield,Crop Yield data,Contains the yield elasticities to fertilizer use that are derived from Cycles output,econ_ybarN,csv,0,https://w3id.org/wings/export/MINT#CropYield
+econ_land_use,Economic Land Use results,Economic land use results,econ_fert_subsidy;econ_land_area;econ_obsyield;econ_production;econ_Nfert,txt,0,https://w3id.org/wings/export/MINT#EconomicLandUse
+,,,,,,
+,,,,,,
+,,,,,,
+topo_rain,Rain rate txt file,,Topo_p,txt,,https://w3id.org/wings/export/MINT#TOPO_Rain
+topo_aggr_files,TopoFlow aggregated inputs,,,,,https://w3id.org/wings/export/MINT#TOPO_Aggregation
+topo_aggregatedOutput,TopoFlow aggregated outputs,,Topo_qs;Topo_albedo,tar.gz,,https://w3id.org/wings/export/MINT#TOPO_Aggregation
+DSSAT_simulationFile,DSSAT simulation file,,DSSAT_FAMN;DSSAT_FDATE;DSSAT_FDEP;DSSAT_XCRD;DSSAT_YCRD;DSSAT_ICBL;DSSAT_SH2O;DSSAT_SNH4;DSSAT_SNO3;DSSAT_CR;DSSAT_INGENO;DSSAT_PDATE;DSSAT_PLDP;DSSAT_PLRS;DSSAT_PPOP,x,,https://w3id.org/wings/export/MINT#DSSAT_SIMULATION
+DSSAT_weatherFile,DSSAT weather file,,DSSAT_LAT;DSSAT_LONG;DSSAT_RAIN;DSSAT_SRAD;DSSAT_TAV;DSSAT_TMAX;DSSAT_TMIN;DSSAT_WSTA,wth,,https://w3id.org/wings/export/DSSAT_WEATHER
+DSSAT_sol,DSSAT soil file,,DSSAT_SALB;DSSAT_SBDM;DSSAT_SDUL;DSSAT_SLB;DSSAT_SLCL;DSSAT_SLLL;DSSAT_SLOC;DSSAT_SLSI;DSSAT_SSAT;DSSAT_SSKS,sol,,https://w3id.org/wings/export/MINT#Soil
+DSSAT_summary,DSSAT Summary file,,DSSAT_hwam;DSSAT_cwam,csv,,https://w3id.org/wings/export/MINT#Summary
+ldas_inputQuery,LDAS Query to retireve data,,,,,https://w3id.org/wings/export/MINT#LDAS_Query
+mint_config,Configuration file for running Gel-Aliab scenario,,,txt,,https://w3id.org/wings/export/MINT#MINT_Config
+ldas_weather_data,LDAS weather data aggregated file,,LDAS_RAIN;LDAS_SM,targ.gz,,https://w3id.org/wings/export/MINT#LDAS_Weather
+fldas2pihm_r,FLDAS to PIHM file,,,,,https://w3id.org/wings/export/MINT#FLDAS2PIHM
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+wgen_input,Input to the weather generator,,wgen_stationid;wgen_lon;wgen_lat;wgen_year;wgen_month;wgen_minT;wgen_maxT;wgen_cloudfraction;wgen_windspeed;wgen_wetdays;wgen_prcp,csv,,https://w3id.org/wings/export/MINT#wgen_input
+wgen_output,Output from the weather generator,,wgen_stationid;wgen_year;wgen_month;wgen_day;wgen_minT;wgen_maxT;wgen_cloudfraction;wgen_windspeed;wgen_wetdays;wgen_prcp,csv,,https://w3id.org/wings/export/MINT#wgen_output
+climcomp_FLDAS_P,Precipitation input to climcomp,,climcomp_FLDAS_P,netcdf,,https://w3id.org/wings/export/MINT#climcomp_FLDAS_P_input
+climcomp_P_out,Precipitation output from climcomp,,climcomp_P,csv,,https://w3id.org/wings/export/MINT#climcomp_P_output
+climcomp_FLDAS_T,temperature input to climcomp,,climcomp_FLDAS_T,netcdf,,https://w3id.org/wings/export/MINT#climcomp_FLDAS_T_input
+climcomp_T_out,temperature output to climcomp,,climcomp_T,csv,,https://w3id.org/wings/export/MINT#climcomp_T_output
+,,,,,,
+,,,,,,
+,,,,,,
+cycles_aggregatedOutput,Cycles aggregated outputs,,cycles_total_biomass;cycles_root_biomass;cycles_grain_yield;cycles_forage_yield;cycles_snow_sub;cycles_soil_evap;cycles_residue_evap;cycles_plant_evap;cycles_swc,tar.gz,,https://w3id.org/wings/export/MINT#CYCLES_Aggregation
+,,,,,,
+pihm_aggr_files,PIHM aggregated inputs,,PIHM_THETAR,tar.gz,,https://w3id.org/wings/export/MINT#PIHM_Aggregation
+pihm_forc,PIHM .forc file,,PIHM_PRCP,forc,,https://w3id.org/wings/export/MINT#FORCE
+pihm_forc2,PIHM .forc file with additional exposed variables,,PIHM_PRCP;PIHM_TRMP;PIHM_WINF;PIHM_RH,forc,,https://w3id.org/wings/export/MINT#FORCE
+pihm_aggregatedOutput,PIHM aggregated outputs,,PIHM_INF_RATE;PIHM_EVAP,tar.gz,,https://w3id.org/wings/export/MINT#PIHM_Aggregation

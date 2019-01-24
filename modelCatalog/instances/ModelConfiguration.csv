@@ -9,14 +9,14 @@ pihm_to_cycles_soil_cfg,PIHM to Cycles soil file transformation configuration,Tr
 pihm_cropland_cfg,PIHM to Cycles transformation for crop lands configuration,Transformation step to adapt the output from PIHM to cycles in terms of the crop land,pihm_cropland_modelInfo,pihm_cropland,,,,,,,mintproject/pihm:latest,https://raw.githubusercontent.com/KnowledgeCaptureAndDiscovery/MINT-WorkflowDomain/master/WINGSWorkflowComponents/GeneralDataPreparation/pihm_cropland/run,,https://github.com/KnowledgeCaptureAndDiscovery/MINT-WorkflowDomain/raw/master/WINGSWorkflowComponents/GeneralDataPreparation/pihm_cropland/pihm_cropland.zip
 pihm_cfg,PIHM configuration ,PIHM configuration for the region of South Sudan,pihm_config;pihm_att;pihm_forc;pihm_modelinfo;pihm_soil;pihm_riv;pihm_geol;pihm_ibc;pihm_lc;pihm_base,pihm_groundwater;pihm_infiltration;pihm_snow;pihm_surf;pihm_unsat;pihm_et0;pihm_et1;pihm_et2;pihm_stage;pihm_rbed;pihm_rivFlx0;pihm_rivF;lx1;pihm_rivFlx2;pihm_rivFlx3;pihm_rivFlx4;pihm_rivFlx5;pihm_rivFlx6;pihm_rivFlx7;pihm_rivFlx8;pihm_rivFlx9;pihm_rivFlx10;pihm_is,,,,pihm_cfg_simple_TI,"pihm_cfg_simple_CAG
 ",solarradiation;evaporation;transpiration;infiltration;runoff;precipitation,mintproject/pihm:latest,https://raw.githubusercontent.com/KnowledgeCaptureAndDiscovery/MINT-WorkflowDomain/master/WINGSWorkflowComponents/pihm/run,,https://github.com/KnowledgeCaptureAndDiscovery/MINT-WorkflowDomain/raw/master/WINGSWorkflowComponents/pihm/pihm.zip
+pihm_flooding_cfg,PIHM flooding configuration,Transformation to obtain flooding information from PIHM,pihm_flooding_surf,pihm_flooding,pihm_flooding_threshold,,,,,,mintproject/pihm2cycles:1.2,https://raw.githubusercontent.com/KnowledgeCaptureAndDiscovery/MINT-WorkflowDomain/master/WINGSWorkflowComponents/GeneralDataPreparation/pihm_flooding/run,,https://github.com/KnowledgeCaptureAndDiscovery/MINT-WorkflowDomain/raw/master/WINGSWorkflowComponents/GeneralDataPreparation/pihm_flooding/pihm_flooding.zip
+fldas_to_PIHM_cfg,FLDAS transformation to PIHM configuration,FLDAS data download configuration,fldas_to_PIHM_config;fldas_to_PIHM_fldas_weather_data;fldas_to_PIHM_pihm_base,fldas_to_PIHM_force_file,,,,,,,mintproject/pihm:latest,https://raw.githubusercontent.com/KnowledgeCaptureAndDiscovery/MINT-WorkflowDomain/master/WINGSWorkflowComponents/GeneralDataPreparation/fldas_to_pihm/run,,https://github.com/KnowledgeCaptureAndDiscovery/MINT-WorkflowDomain/raw/master/WINGSWorkflowComponents/GeneralDataPreparation/fldas_to_pihm/fldas_to_pihm.zip
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,
+wgen_1.0.1_cfg,WGEN Basic configuration,wgen basic configuration,wgen_input,wgen_output,,,,wgen_1.0.1_cfg_timeinterval,,,,,,
+climcomp_0.0.2_P_cfg,ClimComp configuration for precipitation,This configuration accepts the precipitation input from FLDAS dataset,climcomp_FLDAS_P,climcomp_P_out,,,,climcomp_0.0.2_P_cfg_TI,,,,,,
+climcomp_0.0.2_T_cfg,ClimComp configuration for temperature,This configuration accepts the temperature input from FLDAS data,climcomp_FLDAS_T,climcomp_T_out,,,,climcomp_0.0.2_T_cfg_TI,,,,,,
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,
 ,,,,,,,,,,,,,,
@@ -30,9 +30,6 @@ topoflow_cfg_fk,TopoFlow with fake configuration to emulate PIHM,TopoFlow with f
 pihm_to_cycles_cfg,Pihm to cycles configuration,Pihm to cycles configuration,mint_config;pihm_aggregatedOutput,cycles_reinit,,,,,,,,,,
 ldas2cycles_cfg,LDAS to Cycles configuration,LDAS to Cycles configuration,mint_config;cycles_config;ldas_weather_data,cycles_weather,,,,,,,,,,
 ldas2pihm_v1_cfg;,LDAS to PIHM configuration,LDAS to PIHM configuration,mint_config;ldas_weather_data;pihm_aggr_files;fldas2pihm_r,pihm_forc,,,,,,,,,,
-ldasdd_v1_cfg,LDAS data download configuration,LDAS data download configuration,ldas_inputQuery;mint_config,ldas_weather_data,,,,,,,,,,
+,,,,,,,,,,,,,,
 modflow_nwt_cfg,MODFLOW NWT configuration,MODFLOW NWT configuration sample using recharge files,,,,https://w3id.org/wings/export/MINT,,,,,,,,
 modflow_2005_cfg,MODFLOW 2005 configuration,MODFLOW 2005 configuration using variable recharge files,,,,,,,,,,,,
-wgen_1.0.1_cfg,WGEN Basic configuration,wgen basic configuration,wgen_input,wgen_output,,,,wgen_1.0.1_cfg_timeinterval,,,,,,
-climcomp_0.0.2_P_cfg,ClimComp configuration for precipitation,This configuration accepts the precipitation input from FLDAS dataset,climcomp_FLDAS_P,climcomp_P_out,,,,climcomp_0.0.2_P_cfg_TI,,,,,,
-climcomp_0.0.2_T_cfg,ClimComp configuration for temperature,This configuration accepts the temperature input from FLDAS data,climcomp_FLDAS_T,climcomp_T_out,,,,climcomp_0.0.2_T_cfg_TI,,,,,,

@@ -1,8 +1,13 @@
 http://ontosoft.org/software#SoftwareVersion,http://www.w3.org/2000/01/rdf-schema#label,http://ontosoft.org/software#hasVersionId,https://w3id.org/mint/modelCatalog#hasConfiguration
-ldas2cycles_v1,LDAS to Cycles Version 1,1,ldas2cycles_cfg
-ldas2pihm_v1,LDAS to Pihm Version 1,1,ldas2pihm_v1_cfg
-pihm2cycles_v1,PIHM to Cycles Version 1,1,pihm_to_cycles_cfg
-ldasdd_v1,LDAS data download Version 1,1,ldasdd_v1_cfg
-cycles2econ_v1,CYCLES to Econ Version 1,1,cycles_to_econ_cfg
+ldas2pihm_v1,LDAS to Pihm Version 1,1,fldas_to_PIHM_cfg
+pihm2cyclesReinit_v1,PIHM to Cycles Version 1,1,pihm_to_cycles_reinit_cfg
+pihm_forcing_to_cycles_weather_v1,FORCING to Cycles version 1,1,pihm_forcing_to_cycles_weather_cfg
+pihm_to_cycles_soil_v1,PIHM to Cycles Version 1,1,pihm_to_cycles_soil_cfg
+pihm_cropland_v1,PIHM Cropland creation script Version 1,1,pihm_cropland_cfg
+pihm_flooding_v1,PIHM Flooding creation script Version 1,1,pihm_flooding_cfg
+ldasdd_v1,LDAS data download Version 1,1,ldas_data_find_cfg
+cycles2econ_v1,CYCLES to Econ Version 1,1,cycles_to_crop_cfg
+economic_to_vis_v1,ECONOMIC To_Vis creation script Version ,,
+,,,
 FLDAS2WGEN_v1,FLDAS to WGEN Version 1,1,FLDAS2WGEN_cfg
 WGEN2FLDAS_v1,WGEN to FLDAS-like Version 1,1,WGEN2FLDAS_cfg

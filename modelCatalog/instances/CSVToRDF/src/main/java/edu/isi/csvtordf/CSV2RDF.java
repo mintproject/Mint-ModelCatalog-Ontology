@@ -5,6 +5,7 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.Arrays;
 import org.apache.jena.ontology.Individual;
 import org.apache.jena.ontology.OntClass;
 import org.apache.jena.ontology.OntModel;
@@ -25,7 +26,8 @@ public class CSV2RDF {
         instances = ModelFactory.createOntologyModel();   
         mcOntology = ModelFactory.createOntologyModel();
         mcOntology.read("https://w3id.org/mint/modelCatalog");
-        mcOntology.read("https://w3id.org/mint/commons");//for some reason it's not loading imported ontologies.
+       // mcOntology.read("http://purl.org/dc/terms/");
+//        mcOntology.read("https://knowledgecaptureanddiscovery.github.io/Mint-ModelCatalog-Ontology/modelCatalog/release/0.2.0/ontology.xml");
         mcOntology.read("http://ontosoft.org/ontology/software/ontosoft-v1.0.owl");//for some reason, it doesn't do the negotiation rihgt.
 //        mcOntology.write(System.out);
         System.out.println("MINT model catalog ontology loaded");
@@ -35,6 +37,7 @@ public class CSV2RDF {
         String line = "";
         String cvsSplitBy = ",";
         String[] colHeaders = null;
+        System.out.println("\nProcessing: "+path);
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {
             while ((line = br.readLine()) != null) {
                 String[] values = line.split(cvsSplitBy);
@@ -42,32 +45,46 @@ public class CSV2RDF {
                     colHeaders = values;//first line
                 }else{
                     //add individual (col 0)
-                    Individual ind = instances.createClass(colHeaders[0]).createIndividual(instance_URI+values[0]);
-                    for(int i =1; i<values.length;i++){
-                        String rowValue = values[i].trim();
-                        if(!rowValue.equals("")){
-                            String property = colHeaders[i];
-                            OntProperty p = mcOntology.getOntProperty(property);
-                            OntClass range = p.getRange().asClass();
-                            if(p.isDatatypeProperty()|| p.isAnnotationProperty()//to include rdfs label too
-                                    ||p.toString().contains("usesUnit")||p.toString().contains("StandardVariable")){//HACK, THESE WILL BE PROPERTIES IN THE FUTURE.
-                                //System.out.print(rowValue+" ");
-                                ind.addProperty(p, rowValue);
-                            }else{
-                                //this works under the assumption that there is range class for a property.
-                                if(rowValue.contains(";")){//multiple values
-                                    String[] valuesAux = rowValue.split(";");
-                                    for(String a:valuesAux){
-                                        if(!a.equals("")){
-                                            ind.addProperty((Property) p, instances.createIndividual(instance_URI+a,range));
-                                        }
-                                    }
+//                    System.out.println("Values: "+Arrays.toString(values));
+                    if( values!=null && values.length>0){//empty line
+                        Individual ind = instances.createClass(colHeaders[0]).createIndividual(instance_URI+values[0]);
+                        for(int i =1; i<values.length;i++){
+                            String rowValue = values[i].trim();
+                            if(!rowValue.equals("")){
+                                String property = colHeaders[i];
+//                                System.out.println("Processing "+ property);
+//                                System.out.println(rowValue);
+                                OntProperty p;
+                                //this is a hack because this prop is not on the ontology
+                                if(property.contains("https://w3id.org/mint/modelCatalog#hasCanonicalName")){ 
+    //                                    ||
+    //                                    property.contains("http://ontosoft.org/software#hasDocumentation")){
+                                    p = (OntProperty) mcOntology.createDatatypeProperty(property);
+                                }
+                                else{
+                                    p = mcOntology.getOntProperty(property);
+                                }
+                                if(p.isDatatypeProperty()|| p.isAnnotationProperty()//to include rdfs label too
+                                        ||p.toString().contains("usesUnit")||p.toString().contains("StandardVariable")){//HACK, THESE WILL BE PROPERTIES IN THE FUTURE.
+                                    //System.out.print(rowValue+" ");
+                                    ind.addProperty(p, rowValue);
                                 }else{
-                                    //Assumming only a single type per row
-                                    if(p.toString().equals("http://www.w3.org/1999/02/22-rdf-syntax-ns#type")){
-                                        ind.addProperty((Property) p, instances.createIndividual(rowValue,range));
+                                    OntClass range = p.getRange().asClass();
+                                    //this works under the assumption that there is range class for a property.
+                                    if(rowValue.contains(";")){//multiple values
+                                        String[] valuesAux = rowValue.split(";");
+                                        for(String a:valuesAux){
+                                            if(!a.equals("")){
+                                                ind.addProperty((Property) p, instances.createIndividual(instance_URI+a,range));
+                                            }
+                                        }
                                     }else{
-                                        ind.addProperty((Property) p, instances.createIndividual(instance_URI+rowValue,range));
+                                        //Assumming only a single type per row
+                                        if(p.toString().equals("http://www.w3.org/1999/02/22-rdf-syntax-ns#type")){
+                                            ind.addProperty((Property) p, instances.createIndividual(rowValue,range));
+                                        }else{
+                                            ind.addProperty((Property) p, instances.createIndividual(instance_URI+rowValue,range));
+                                        }
                                     }
                                 }
                             }
@@ -103,9 +120,15 @@ public class CSV2RDF {
         test.processFile("C:\\Users\\dgarijo\\Documents\\GitHub\\Mint-ModelCatalog-Ontology\\modelCatalog\\instances\\ModelConfiguration.csv");
         test.processFile("C:\\Users\\dgarijo\\Documents\\GitHub\\Mint-ModelCatalog-Ontology\\modelCatalog\\instances\\DatasetSpecification.csv");
         test.processFile("C:\\Users\\dgarijo\\Documents\\GitHub\\Mint-ModelCatalog-Ontology\\modelCatalog\\instances\\VariablePresentation.csv");
+        test.processFile("C:\\Users\\dgarijo\\Documents\\GitHub\\Mint-ModelCatalog-Ontology\\modelCatalog\\instances\\CAG.csv");
+        test.processFile("C:\\Users\\dgarijo\\Documents\\GitHub\\Mint-ModelCatalog-Ontology\\modelCatalog\\instances\\ModelVersion.csv");
+        test.processFile("C:\\Users\\dgarijo\\Documents\\GitHub\\Mint-ModelCatalog-Ontology\\modelCatalog\\instances\\Process.csv");
+        test.processFile("C:\\Users\\dgarijo\\Documents\\GitHub\\Mint-ModelCatalog-Ontology\\modelCatalog\\instances\\Parameter.csv");
+        test.processFile("C:\\Users\\dgarijo\\Documents\\GitHub\\Mint-ModelCatalog-Ontology\\modelCatalog\\instances\\TimeInterval.csv");
 //        test.instances.write(System.out,"JSON-LD");
 //        test.instances.write(System.out,"TTL");
         test.processFile("C:\\Users\\dgarijo\\Documents\\GitHub\\Mint-ModelCatalog-Ontology\\transformationCatalog\\instances\\SoftwareScript.csv");
+        test.processFile("C:\\Users\\dgarijo\\Documents\\GitHub\\Mint-ModelCatalog-Ontology\\transformationCatalog\\instances\\SoftwareVersion.csv");
         exportRDFFile("modelCatalog.ttl", test.instances, "TTL");
         exportRDFFile("modelCatalog.json", test.instances, "JSON-LD");
     }

@@ -1,2 +1,20 @@
 https://w3id.org/mint/modelCatalog#Parameter,http://www.w3.org/2000/01/rdf-schema#label,http://purl.org/dc/terms/description,https://w3id.org/mint/modelCatalog#hasDefaultValue,https://w3id.org/mint/modelCatalog#hasDataType
 pihm_flooding_threshold,PIHM flooding threshold,,0.05,float
+wgen_flagP,flag P,,Rain_f_tavg,string
+wgen_min_lon,minimum longitude,,24.15235,float
+wgen_max_lon,maximum longitude,,27.74012,float
+wgen_min_lat,minimum latiture,,6.700375,float
+wgen_max_lat,maximum latitude,,9.335303,float
+wgen_min_month,minimum month,,6,float
+wgen_max_month,maximum month,,8,float
+wgen_level,level,,0.6,float
+wgen_flagP_T,flag P,,Tair_f_tavg,string
+climcomp_datasource,dataset source,,FLDAS,string
+climcomp_flagP,flag P,,Rain_f_tavg,string
+climcomp_min_lon,minimum longitude,,24.15235,float
+climcomp_max_lon,maximum longitude,,27.74012,float
+climcomp_min_lat,minimum latiture,,6.700375,float
+climcomp_max_lat,maximum latitude,,9.335303,float
+climcomp_min_month,minimum month,,6,float
+climcomp_max_month,maximum month,,8,float
+climcomp_year,year,,2017,float

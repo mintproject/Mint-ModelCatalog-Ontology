@@ -286,6 +286,14 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                rdfs:label "has assumption"@en .
 
 
+###  https://w3id.org/mint/modelCatalog#hasComponentLocation
+:hasComponentLocation rdf:type owl:DatatypeProperty ;
+                      rdfs:domain <http://ontosoft.org/software#Function> ;
+                      rdfs:range xsd:anyURI ;
+                      rdfs:comment "Location of the aggregation of all the files needed to execute the component. Usually a zip file including the run script and support scripts"@en ,
+                                   "has component location"@en .
+
+
 ###  https://w3id.org/mint/modelCatalog#hasDataType
 :hasDataType rdf:type owl:DatatypeProperty ;
              rdfs:domain :Parameter ;

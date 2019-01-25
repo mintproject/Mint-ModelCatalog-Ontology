@@ -228,7 +228,9 @@ This section provides details for each class and property defined by The MINT Mo
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#http://ontosoft.org/software#hasContainer" title="http://ontosoft.org/software#hasContainer">has container</a>
+            <a href="#hasComponentLocation"
+               title="https://w3id.org/mint/modelCatalog#hasComponentLocation">has component location</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#http://ontosoft.org/software#hasContainer" title="http://ontosoft.org/software#hasContainer">has container</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#http://ontosoft.org/software#hasImplementationScriptLocation"
                title="http://ontosoft.org/software#hasImplementationScriptLocation">has implementation script location</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#hasSupportScriptLocation"
@@ -1254,6 +1256,12 @@ This section provides details for each class and property defined by The MINT Mo
          <a href="#hasAssumption" title="https://w3id.org/mint/modelCatalog#hasAssumption">has assumption</a>
       </li>
       <li>
+         <a href="#hasComponentLocation"
+            title="https://w3id.org/mint/modelCatalog#hasComponentLocation">
+            <span>has component location</span>
+         </a>
+      </li>
+      <li>
          <a href="#http://ontosoft.org/software#hasIdentifier" title="http://ontosoft.org/software#hasIdentifier">has container</a>
       </li>
       <li>
@@ -1353,6 +1361,30 @@ This section provides details for each class and property defined by The MINT Mo
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasComponentLocation">
+      <h3>has component location<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mint/modelCatalog#hasComponentLocation</p>
+      <div class="comment">
+         <span class="markdown">Location of the aggregation of all the files needed to execute the component. Usually a zip file including the run script and support scripts</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://ontosoft.org/software#Function" title="http://ontosoft.org/software#Function">function</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
             </dd>
          </dl>
       </div>

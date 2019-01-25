@@ -620,6 +620,22 @@
     "@id" : "https://w3id.org/mint/modelCatalog#CAG"
   } ]
 }, {
+  "@id" : "https://w3id.org/mint/modelCatalog#hasComponentLocation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Location of the aggregation of all the files needed to execute the component. Usually a zip file including the run script and support scripts"
+  }, {
+    "@language" : "en",
+    "@value" : "has component location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://ontosoft.org/software#Function"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ]
+}, {
   "@id" : "https://w3id.org/mint/modelCatalog#hasConfiguration",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {

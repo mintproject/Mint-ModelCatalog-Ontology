@@ -10,9 +10,9 @@
                                       owl:versionIRI <https://w3id.org/mint/modelCatalog/0.3.0> ;
                                       <http://purl.org/vocab/vann/preferredNamespacePrefix> "https://w3id.org/mint/modelCatalog#"@en ;
                                       <http://purl.org/dc/elements/1.1/abstract> "An ontology for describing models and their linkages to variables."@en ;
-                                      owl:priorVersion <https://w3id.org/mint/modelCatalog/0.1.0> ;
                                       rdfs:comment "An ontology for describing models and their linkages to variables."@en ;
                                       owl:versionInfo "0.3.0" ;
+                                      owl:priorVersion <https://w3id.org/mint/modelCatalog/0.2.0> ;
                                       <http://purl.org/dc/elements/1.1/contributor> "Jay Pujara"@en ;
                                       <http://purl.org/vocab/vann/preferredNamespacePrefix> "mc"@en ;
                                       <http://purl.org/dc/elements/1.1/contributor> "Lucas Carvalho"@en ;
@@ -284,6 +284,14 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                rdfs:range xsd:string ;
                rdfs:comment "Assumptions of a model, e.g. the solver being used."@en ;
                rdfs:label "has assumption"@en .
+
+
+###  https://w3id.org/mint/modelCatalog#hasComponentLocation
+:hasComponentLocation rdf:type owl:DatatypeProperty ;
+                      rdfs:domain <http://ontosoft.org/software#Function> ;
+                      rdfs:range xsd:anyURI ;
+                      rdfs:comment "Location of the aggregation of all the files needed to execute the component. Usually a zip file including the run script and support scripts"@en ,
+                                   "has component location"@en .
 
 
 ###  https://w3id.org/mint/modelCatalog#hasDataType

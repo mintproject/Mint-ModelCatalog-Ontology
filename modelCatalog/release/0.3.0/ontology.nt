@@ -279,6 +279,13 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <https://w3id.org/mint/modelCatalog#hasAssumption> <http://www.w3.org/2000/01/rdf-schema#comment> "Assumptions of a model, e.g. the solver being used."@en .
 <https://w3id.org/mint/modelCatalog#hasAssumption> <http://www.w3.org/2000/01/rdf-schema#label> "has assumption"@en .
 # 
+# https://w3id.org/mint/modelCatalog#hasComponentLocation
+<https://w3id.org/mint/modelCatalog#hasComponentLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mint/modelCatalog#hasComponentLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontosoft.org/software#Function> .
+<https://w3id.org/mint/modelCatalog#hasComponentLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/mint/modelCatalog#hasComponentLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Location of the aggregation of all the files needed to execute the component. Usually a zip file including the run script and support scripts"@en .
+<https://w3id.org/mint/modelCatalog#hasComponentLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "has component location"@en .
+# 
 # https://w3id.org/mint/modelCatalog#hasDataType
 <https://w3id.org/mint/modelCatalog#hasDataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/mint/modelCatalog#hasDataType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/modelCatalog#Parameter> .

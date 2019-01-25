@@ -1,0 +1,10 @@
+File,Short Name,Long Name,label,Units,Default Value,Description,Minimum Accepted Value,Maximum Accepted Value
+MINTCropSimple.txt,fert_subsidy,nitrogen fertilizer subsidy,fertilizer~nitrogen__application_reduced_cost_fraction,percent,,percent reduction in nitrogen fertilizer cost per unit applied,,
+MINTCropSimple.txt,land area,land allocation,land_crop__allocated_area,ha,,land area by crop (simulated),,
+MINTCropSimple.txt,obsyield,crop yields,land_crop__mass-per-area_yield,kg/ha,,crop yields per unit land area (simulated),,
+MINTCropSimple.txt,production,crop production,crop__produced_mass,kg,,total production by crop (simulated),,
+MINTCropSimple.txt,Nfert,nitrogen fertilizer applications,land_fertilizer~nitrogen__applied_mass-per-area_density,kg/ha,,nitrogen fertilizer applications (simulated),,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,

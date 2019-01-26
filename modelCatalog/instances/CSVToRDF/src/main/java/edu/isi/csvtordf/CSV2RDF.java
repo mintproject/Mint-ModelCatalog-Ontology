@@ -20,7 +20,7 @@ import org.apache.jena.rdf.model.Property;
 public class CSV2RDF {
     OntModel instances;
     OntModel mcOntology;
-    String instance_URI = "https://w3id.org/mint/instance#";
+    String instance_URI = "https://w3id.org/mint/instance/";
     
     public CSV2RDF(){
         instances = ModelFactory.createOntologyModel();   

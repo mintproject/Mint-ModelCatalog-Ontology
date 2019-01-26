@@ -11,7 +11,7 @@ fertilizer_prices,fertilizer prices,land_use;fertilizer_use
 land_use,land use,fertilizer_use;crop_supply;crop_yield
 fertilizer_use,fertilizer use,land_use;crop_yield
 crop_supply,crop supply,
-crop_yield,crop yield  ,crop_supply
+crop_yield,crop yield,crop_supply
 cycles_precipitation,precipitation in cycles,cycles_transpiration
 cycles_solarradiation,solar radiation in cycles,cycles_transpiration;biomassgrowth
 management,management,biomassgrowth

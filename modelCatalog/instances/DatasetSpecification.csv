@@ -53,40 +53,40 @@ pihm_att,Att file,PIHM attribute file with index values of variables for timeser
 pihm_forc,Forcing file,PIHM forcing file with the majority of the relevant variables,pihm_Height;pihm_IsFactor;pihm_LAI;pihm_MF;pihm_PRCP;pihm_RH;pihm_RL;pihm_NER;pihm_SS;pihm_Time;pihm_TRMP;pihm_VP;pihm_WINF,forc,0,https://w3id.org/wings/export/MINT#PIHMForcing
 pihm_modelinfo,PIHM model information,PIHM model information aggreagation file,pihm_Alpha;pihm_Beta;pihm_hAreaF;pihm_infD;pihm_KsatV;pihm_macKsatV;pihm_ThetaR;pihm_ThetaS,tar.gz,0,https://w3id.org/wings/export/MINT#PIHMModelInfo
 pihm_soil,Soil file,Soil parameters for the soil types,pihm_Alpha;pihm_Beta;pihm_hAreaF;pihm_infD;pihm_KsatV;pihm_macKsatV;pihm_ThetaR;pihm_ThetaS,soil,0,https://w3id.org/wings/export/MINT#PIHMSoil
-pihm_riv,River segments file,Spatial  geometry and material information of river segments ,pihm_Bed;pihm_Cwr;pihm_Depth;pihm_KsatH;pihm_KsatV;pihm_n;pi;m_Time;pihm_WT_Value;pihm_BC_Value,,0,https://w3id.org/wings/export/MINT#PIHMRiverSegments
-pihm_geol,Geologic file,Geologic file,pihm_Alpha;pihm_Beta;pihm_ginfD;pihm_KsatV;pihm_macD;pihm_macKsatH;pihm_gThetaR;pihm_gThetaS;pihm_vAreaF,,0,https://w3id.org/wings/export/MINT#PIHMGeologic
-pihm_ibc,Boundary Condidtion file,Boundary condition information for elements ,pihm_Time;pihm_Neumann_BCValue;pihm_Dirichlet_BCValue ,,0,https://w3id.org/wings/export/MINT#PIHMBoundaryCondition
-pihm_lc,Land cover file,Vegetation parameters of different land cover types ,pihm_Albedo;pihm_LAImax;pihm_n;pihm_Rmin;pihm_Rs_ref;pihm_RzD;pihm_VegFrac,,0,https://w3id.org/wings/export/MINT#PIHMLandCover
-pihm_base,Base file,Base file,,,0,https://w3id.org/wings/export/MINT#PIHMBase
-pihm_groundwater,Groundwater file,Groundwater file,pihm_gw,gw,0,https://w3id.org/wings/export/MINT#PIHMGroundwaterHead
+pihm_riv,River segments file,Spatial  geometry and material information of river segments,pihm_Bed;pihm_Cwr;pihm_Depth;pihm_KsatH;pihm_KsatV;pihm_n;pi;m_Time;pihm_WT_Value;pihm_BC_Value,riv,0,https://w3id.org/wings/export/MINT#PIHMRiverSegments
+pihm_geol,Geologic file,Geologic file,pihm_Alpha;pihm_Beta;pihm_ginfD;pihm_KsatV;pihm_macD;pihm_macKsatH;pihm_gThetaR;pihm_gThetaS;pihm_vAreaF,geol,0,https://w3id.org/wings/export/MINT#PIHMGeologic
+pihm_ibc,Boundary Condidtion file,Boundary condition information for elements,pihm_Time;pihm_Neumann_BCValue;pihm_Dirichlet_BCValue ,ibc,0,https://w3id.org/wings/export/MINT#PIHMBoundaryCondition
+pihm_lc,Land cover file,Vegetation parameters of different land cover types,pihm_Albedo;pihm_LAImax;pihm_n;pihm_Rmin;pihm_Rs_ref;pihm_RzD;pihm_VegFrac,lc,0,https://w3id.org/wings/export/MINT#PIHMLandCover
+pihm_base,Base file,Base file,,tar.gz,0,https://w3id.org/wings/export/MINT#PIHMBase
+pihm_groundwater,Groundwater file,Groundwater file,pihm_gw,GW,0,https://w3id.org/wings/export/MINT#PIHMGroundwaterHead
 pihm_infiltration,Infiltration file,Infiltration file,pihm_infil,infil,0,https://w3id.org/wings/export/MINT#PIHMInfiltration
 pihm_snow,Snow accumilation file,Snow accumilation file,pihm_snowV,snow,0,https://w3id.org/wings/export/MINT#PIHMSnowAccumulation
 pihm_surf,Surface water file,Surface water file,pihm_surfV,surf,0,https://w3id.org/wings/export/MINT#PIHMSurfaceWater
 pihm_unsat,Soil moisture file,Soil moisture file,pihm_unsatV,unsat,0,https://w3id.org/wings/export/MINT#PIHMSoilMoisture
-pihm_et0,Evaporation canopy file,Evaporation canopy file,pihm_et0V,,0,https://w3id.org/wings/export/MINT#PIHMEvaporationCanopy
-pihm_et1,Model fileTranspiration file,Model fileTranspiration file,pihm_transpiration,,0,https://w3id.org/wings/export/MINT#PIHMTranspiration
-pihm_et2,Evapotranspiration ground surface file,Evapotranspiration ground surface file,pihm_et2v,,0,https://w3id.org/wings/export/MINT#PIHMEvaporationGroundSurface
-pihm_stage,River stage file,River stage file,pihm_stagev,,0,https://w3id.org/wings/export/MINT#PIHMRechargeRate
-pihm_rbed,River bed storage file,River bed storage file,pihm_rbedv,,0,https://w3id.org/wings/export/MINT#PIHMRiverStage
-pihm_rivFlx0,lateral influs to the stream reach ,lateral influs to the stream reach ,pihm_rivFlx0v,,0,https://w3id.org/wings/export/MINT#PIHMRivFlx0
-pihm_rivFlx1,Lateral outflow from stream reach,Lateral outflow from stream reach,pihm_rivFlx1v,,0,https://w3id.org/wings/export/MINT#PIHMRivFlx1
-pihm_rivFlx2,Surface flow to stream reach from left terrain,Surface flow to stream reach from left terrain,pihm_rivFlx2v,,0,https://w3id.org/wings/export/MINT#PIHMRivFlx2
-pihm_rivFlx3,surface flow frow to stream reach from right terrain,surface flow frow to stream reach from right terrain,pihm_rivFlx3v,,0,https://w3id.org/wings/export/MINT#PIHMRivFlx3
-pihm_rivFlx4,Baseflow to stream reach from aquifer on the left,Baseflow to stream reach from aquifer on the left,pihm_rivFlx4v,,0,https://w3id.org/wings/export/MINT#PIHMRivFlx4
-pihm_rivFlx5,baseflow to stream reach from aquifer on the right,baseflow to stream reach from aquifer on the right,pihm_rivFlx5v,,0,https://w3id.org/wings/export/MINT#PIHMRivFlx5
-pihm_rivFlx6,leakage between stream reach and river bed,leakage between stream reach and river bed,pihm_rivFlx6v,,0,https://w3id.org/wings/export/MINT#PIHMRivFlx6
-pihm_rivFlx7,subsurface flow to the river bed from left aquifer,subsurface flow to the river bed from left aquifer,pihm_rivFlx7v,,0,https://w3id.org/wings/export/MINT#PIHMRivFlx7
-pihm_rivFlx8,subsurface flow to the river bed from right aquifer,subsurface flow to the river bed from right aquifer,pihm_rivFlx8v,,0,https://w3id.org/wings/export/MINT#PIHMRivFlx8
-pihm_rivFlx9,lateral outflux to the bed beneath river,lateral outflux to the bed beneath river,pihm_rivFlx9v,,0,https://w3id.org/wings/export/MINT#PIHMRivFlx9
-pihm_rivFlx10,lateral influx to the bed beneath river,lateral influx to the bed beneath river,pihm_rivFlx10v,,0,https://w3id.org/wings/export/MINT#PIHMRivFlx10
-pihm_is,Interception storage file,Interception storage file,pihm_isv,,0,https://w3id.org/wings/export/MINT#PIHMInterceptionStorage
+pihm_et0,Evaporation canopy file,Evaporation canopy file,pihm_et0V,et0,0,https://w3id.org/wings/export/MINT#PIHMEvaporationCanopy
+pihm_et1,Model fileTranspiration file,Model fileTranspiration file,pihm_transpiration,et1,0,https://w3id.org/wings/export/MINT#PIHMTranspiration
+pihm_et2,Evapotranspiration ground surface file,Evapotranspiration ground surface file,pihm_et2v,et2,0,https://w3id.org/wings/export/MINT#PIHMEvaporationGroundSurface
+pihm_stage,River stage file,River stage file,pihm_stagev,stage,0,https://w3id.org/wings/export/MINT#PIHMRechargeRate
+pihm_rbed,River bed storage file,River bed storage file,pihm_rbedv,rbed,0,https://w3id.org/wings/export/MINT#PIHMRiverStage
+pihm_rivFlx0,lateral influs to the stream reach ,lateral influs to the stream reach ,pihm_rivFlx0v,rivFlx0,0,https://w3id.org/wings/export/MINT#PIHMRivFlx0
+pihm_rivFlx1,Lateral outflow from stream reach,Lateral outflow from stream reach,pihm_rivFlx1v,rivFlx1,0,https://w3id.org/wings/export/MINT#PIHMRivFlx1
+pihm_rivFlx2,Surface flow to stream reach from left terrain,Surface flow to stream reach from left terrain,pihm_rivFlx2v,rivFlx2,0,https://w3id.org/wings/export/MINT#PIHMRivFlx2
+pihm_rivFlx3,surface flow frow to stream reach from right terrain,surface flow frow to stream reach from right terrain,pihm_rivFlx3v,rivFlx3,0,https://w3id.org/wings/export/MINT#PIHMRivFlx3
+pihm_rivFlx4,Baseflow to stream reach from aquifer on the left,Baseflow to stream reach from aquifer on the left,pihm_rivFlx4v,rivFlx4,0,https://w3id.org/wings/export/MINT#PIHMRivFlx4
+pihm_rivFlx5,baseflow to stream reach from aquifer on the right,baseflow to stream reach from aquifer on the right,pihm_rivFlx5v,rivFlx5,0,https://w3id.org/wings/export/MINT#PIHMRivFlx5
+pihm_rivFlx6,leakage between stream reach and river bed,leakage between stream reach and river bed,pihm_rivFlx6v,rivFlx6,0,https://w3id.org/wings/export/MINT#PIHMRivFlx6
+pihm_rivFlx7,subsurface flow to the river bed from left aquifer,subsurface flow to the river bed from left aquifer,pihm_rivFlx7v,rivFlx7,0,https://w3id.org/wings/export/MINT#PIHMRivFlx7
+pihm_rivFlx8,subsurface flow to the river bed from right aquifer,subsurface flow to the river bed from right aquifer,pihm_rivFlx8v,rivFlx8,0,https://w3id.org/wings/export/MINT#PIHMRivFlx8
+pihm_rivFlx9,lateral outflux to the bed beneath river,lateral outflux to the bed beneath river,pihm_rivFlx9v,rivFlx9,0,https://w3id.org/wings/export/MINT#PIHMRivFlx9
+pihm_rivFlx10,lateral influx to the bed beneath river,lateral influx to the bed beneath river,pihm_rivFlx10v,rivFlx10,0,https://w3id.org/wings/export/MINT#PIHMRivFlx10
+pihm_is,Interception storage file,Interception storage file,pihm_isv,is,0,https://w3id.org/wings/export/MINT#PIHMInterceptionStorage
 ,,,,,,
 pihm_flooding_surf,Surface water file,Surface water file,pihm_surfV,surf,0,https://w3id.org/wings/export/MINT#PIHMSurfaceWater
 pihm_flooding,Flooding file,,flooding_surfv,txt,0,https://w3id.org/wings/export/MINT#PIHMFlooding
 ,,,,,,
 fldas_to_PIHM_config,Config file,Configuration file indicating the location and temporal aspect of the model execution,,txt,0,https://w3id.org/wings/export/MINT#MINTConfig
 fldas_to_PIHM_fldas_weather_data,FLDAS weather data,,fldas_Evap_tavg;fldas_LWdown_f_tavg;fldas_Lwnet_tavg;fldas_Psurf_f_tavg;fldas_Qair_f_tavg;fldas_Qg_tavg;fldas_Qh_tavg;fldas_Qle_tavg;fldas_Qs_tavg;fldas_Qsb_tavg;fldas_RadT_tavg;fldas_Rainf_f_tavg;fldas_SM01_Percentile;fldas_SWdown_f_tavg;fldas_SoilMoi00_10cm_ta;fldas_SoilMoi100_200cm_;fldas_SoilMoi10_40cm_ta;fldas_SoilMoi40_100cm_t;fldas_SoilTemp00_10cm_t;fldas_SoilTemp100_200cm;fldas_SoilTemp10_40cm_t;fldas_SoilTemp40_100cm_;fldas_Swnet_tavg;fldas_Tair_f_tavg;fldas_Wind_f_tavg,tar.gz,0,https://w3id.org/wings/export/MINT#FLDAS
-fldas_to_PIHM_pihm_base,Base file,Base file,,,0,https://w3id.org/wings/export/MINT#PIHMBase
+fldas_to_PIHM_pihm_base,Base file,Base file,,tar.gz,0,https://w3id.org/wings/export/MINT#PIHMBase
 fldas_to_PIHM_force_file,Forcing file,PIHM forcing file with the majority of the relevant variables,pihm_Height;pihm_IsFactor;pihm_LAI;pihm_MF;pihm_PRCP;pihm_RH;pihm_RL;pihm_NER;pihm_SS;pihm_Time;pihm_TRMP;pihm_VP;pihm_WINF,forc,0,https://w3id.org/wings/export/MINT#PIHMForcing
 ,,,,,,
 wgen_daily,Input to the weather generator (daily),,wgen_stationid;wgen_lon;wgen_lat;wgen_year;wgen_month;wgen_minT;wgen_maxT;wgen_cloudfraction;wgen_windspeed;wgen_wetdays;wgen_prcp,tar.gz,0,https://w3id.org/wings/export/MINT#FLDAS
@@ -111,5 +111,5 @@ DSSAT_sol,DSSAT soil file,,DSSAT_SALB;DSSAT_SBDM;DSSAT_SDUL;DSSAT_SLB;DSSAT_SLCL
 DSSAT_summary,DSSAT Summary file,,DSSAT_hwam;DSSAT_cwam,csv,,https://w3id.org/wings/export/MINT#Summary
 ,,,,,,
 topo_rain,Rain rate txt file,,Topo_p,txt,,https://w3id.org/wings/export/MINT#TOPO_Rain
-topo_aggr_files,TopoFlow aggregated inputs,,,,,https://w3id.org/wings/export/MINT#TOPO_Aggregation
+topo_aggr_files,TopoFlow aggregated inputs,,,tar.gz,,https://w3id.org/wings/export/MINT#TOPO_Aggregation
 topo_aggregatedOutput,TopoFlow aggregated outputs,,Topo_qs;Topo_albedo,tar.gz,,https://w3id.org/wings/export/MINT#TOPO_Aggregation

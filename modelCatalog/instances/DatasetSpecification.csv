@@ -46,7 +46,7 @@ pihm_to_cycles_soil_gis_soil,GIS soil data,,,soil,0,https://w3id.org/wings/expor
 pihm_to_cycles_soil,Cycles soil file,Cycles soil file,cycles_cn;cycles_slope;cycles_layer;cycles_dz;cycles_clay;cycles_silt;cycles_rv;cycles_bd;cycles_som;cycles_smc,soil,0,https://w3id.org/wings/export/MINT#CyclesSoil
 ,,,,,,
 pihm_cropland_modelInfo,PIHM model information,,pihm_Alpha;pihm_Beta;pihm_hAreaF;pihm_infD;pihm_KsatV;pihm_macKsatV;pihm_ThetaR;pihm_ThetaS,tar.gz,0,https://w3id.org/wings/export/MINT#PIHMModelInfo
-pihm_cropland,Cropland file,,,csv,0,https://w3id.org/wings/export/MINT#PIHMCropland
+pihm_cropland_o,Cropland file,,,csv,0,https://w3id.org/wings/export/MINT#PIHMCropland
 ,,,,,,
 pihm_config,Config file,Configuration file indicating the location and temporal aspect of the model execution,,txt,0,https://w3id.org/wings/export/MINT#MINTConfig
 pihm_att,Att file,PIHM attribute file with index values of variables for timeseries,,att,0,https://w3id.org/wings/export/MINT#PIHMAttribute
@@ -82,7 +82,7 @@ pihm_rivFlx10,lateral influx to the bed beneath river,lateral influx to the bed 
 pihm_is,Interception storage file,Interception storage file,pihm_isv,is,0,https://w3id.org/wings/export/MINT#PIHMInterceptionStorage
 ,,,,,,
 pihm_flooding_surf,Surface water file,Surface water file,pihm_surfV,surf,0,https://w3id.org/wings/export/MINT#PIHMSurfaceWater
-pihm_flooding,Flooding file,,flooding_surfv,txt,0,https://w3id.org/wings/export/MINT#PIHMFlooding
+pihm_flooding_o,Flooding file,,flooding_surfv,txt,0,https://w3id.org/wings/export/MINT#PIHMFlooding
 ,,,,,,
 fldas_to_PIHM_config,Config file,Configuration file indicating the location and temporal aspect of the model execution,,txt,0,https://w3id.org/wings/export/MINT#MINTConfig
 fldas_to_PIHM_fldas_weather_data,FLDAS weather data,,fldas_Evap_tavg;fldas_LWdown_f_tavg;fldas_Lwnet_tavg;fldas_Psurf_f_tavg;fldas_Qair_f_tavg;fldas_Qg_tavg;fldas_Qh_tavg;fldas_Qle_tavg;fldas_Qs_tavg;fldas_Qsb_tavg;fldas_RadT_tavg;fldas_Rainf_f_tavg;fldas_SM01_Percentile;fldas_SWdown_f_tavg;fldas_SoilMoi00_10cm_ta;fldas_SoilMoi100_200cm_;fldas_SoilMoi10_40cm_ta;fldas_SoilMoi40_100cm_t;fldas_SoilTemp00_10cm_t;fldas_SoilTemp100_200cm;fldas_SoilTemp10_40cm_t;fldas_SoilTemp40_100cm_;fldas_Swnet_tavg;fldas_Tair_f_tavg;fldas_Wind_f_tavg,tar.gz,0,https://w3id.org/wings/export/MINT#FLDAS

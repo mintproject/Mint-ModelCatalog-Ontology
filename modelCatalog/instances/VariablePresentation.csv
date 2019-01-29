@@ -109,7 +109,7 @@ cycles_residue_evap,RESIDUE EVAP,RESIDUE EVAP,water evaporation from residues on
 cycles_plant_evap,PLANT EVAP,PLANT EVAP,water evaporation from leaving plants,Evaporation from living plants,plants~living_water__volume-per-area_evaporation_rate,mm/day,,,,
 cycles_swc,SWC,SWC,soil water content by layer,Soil moisture content (array of size = number of soil layers),soil_water__volume_fraction,m3/m3,,,,
 ,,,,,,,,,,
-wgen_stationid,id,id,station id,Satation ID,,,,,,
+wgen_stationid,id,id,station id,Station ID,,,,,,
 wgen_lon,lon,lon,longtiude,Longitude,,,,,,
 wgen_lat,lat,lat,latitude,Latitude,,,,,,
 wgen_year,year,year,year,year,,,,,,

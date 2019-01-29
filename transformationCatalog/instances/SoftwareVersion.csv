@@ -7,7 +7,10 @@ pihm_cropland_v1,PIHM Cropland creation script Version 1,1,pihm_cropland
 pihm_flooding_v1,PIHM Flooding creation script Version 1,1,pihm_flooding
 ldasdd_v1,LDAS data download Version 1,1,ldas_data_find
 cycles2econ_v1,CYCLES to Econ Version 1,1,cycles_to_crop
-economic_to_vis_v1,ECONOMIC To_Vis creation script Version ,,
+economic_to_vis_v1,ECONOMIC To_Vis creation script Version ,1,economic_to_vis
+pihm_cropland_to_points_v1,cropland to points,1,pihm_cropland_to_points
+pihm_flooding_netcdf_v1,flooding to netcdf,1,pihm_flooding_netcdf
+,,,
 ,,,
 FLDAS2WGEN_v1,FLDAS to WGEN Version 1,1,FLDAS2WGEN_cfg
 WGEN2FLDAS_v1,WGEN to FLDAS-like Version 1,1,WGEN2FLDAS_cfg

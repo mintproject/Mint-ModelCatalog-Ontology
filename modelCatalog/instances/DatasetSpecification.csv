@@ -38,7 +38,7 @@ pihm_forcing_to_cycles_weather_config,Config file,Configuration file indicating 
 pihm_forcing_to_cycles_weather_forc,Force file,Force file as it was used by PIHM,pihm_Height;pihm_IsFactor;pihm_LAI;pihm_MF;pihm_PRCP;pihm_RH;pihm_RL;pihm_NER;pihm_SS;pihm_Time;pihm_TRMP;pihm_VP;pihm_WINF,forc,0,https://w3id.org/wings/export/MINT#PIHMForcing
 pihm_forcing_to_cycles_weather_att,Att file,PIHM Configuration file with index values of variables for timeseries,,att,0,https://w3id.org/wings/export/MINT#PIHMAttribute
 pihm_forcing_to_cycles_weather_cropland,Cropland file,,,,0,https://w3id.org/wings/export/MINT#PIHMCropland
-pihm_forcing_to_cycles_weather,Cycles weather file,,cycles_pp;cycles_tx;cycles_tn;cycles_sr;cycles_hx;cycles_hn;cycles_ws,weather,0,https://w3id.org/wings/export/MINT#CyclesWeather
+pihm_forcing_to_cycles_weather_cycles-weather,Cycles weather file,,cycles_pp;cycles_tx;cycles_tn;cycles_sr;cycles_hx;cycles_hn;cycles_ws,weather,0,https://w3id.org/wings/export/MINT#CyclesWeather
 ,,,,,,
 pihm_to_cycles_soil_cropland,Cropland file,,,csv,0,https://w3id.org/wings/export/MINT#PIHMCropland
 pihm_to_cycles_soil_modelInfo,PIHM Model info file,,pihm_Alpha;pihm_Beta;pihm_hAreaF;pihm_infD;pihm_KsatV;pihm_macKsatV;pihm_ThetaR;pihm_ThetaS,tar.gz,0,https://w3id.org/wings/export/MINT#PIHMModelInfo
@@ -86,7 +86,7 @@ pihm_flooding_o,Flooding file,,flooding_surfv,txt,0,https://w3id.org/wings/expor
 ,,,,,,
 fldas_to_PIHM_config,Config file,Configuration file indicating the location and temporal aspect of the model execution,,txt,0,https://w3id.org/wings/export/MINT#MINTConfig
 fldas_to_PIHM_fldas_weather_data,FLDAS weather data,,fldas_Evap_tavg;fldas_LWdown_f_tavg;fldas_Lwnet_tavg;fldas_Psurf_f_tavg;fldas_Qair_f_tavg;fldas_Qg_tavg;fldas_Qh_tavg;fldas_Qle_tavg;fldas_Qs_tavg;fldas_Qsb_tavg;fldas_RadT_tavg;fldas_Rainf_f_tavg;fldas_SM01_Percentile;fldas_SWdown_f_tavg;fldas_SoilMoi00_10cm_ta;fldas_SoilMoi100_200cm_;fldas_SoilMoi10_40cm_ta;fldas_SoilMoi40_100cm_t;fldas_SoilTemp00_10cm_t;fldas_SoilTemp100_200cm;fldas_SoilTemp10_40cm_t;fldas_SoilTemp40_100cm_;fldas_Swnet_tavg;fldas_Tair_f_tavg;fldas_Wind_f_tavg,tar.gz,0,https://w3id.org/wings/export/MINT#FLDAS
-fldas_to_PIHM_pihm_base,Base file,Base file,,tar.gz,0,https://w3id.org/wings/export/MINT#PIHMBase
+fldas_to_pihm-gisdata,Base file,Base file,,tar.gz,0,https://w3id.org/wings/export/MINT#PIHMGISData
 fldas_to_PIHM_force_file,Forcing file,PIHM forcing file with the majority of the relevant variables,pihm_Height;pihm_IsFactor;pihm_LAI;pihm_MF;pihm_PRCP;pihm_RH;pihm_RL;pihm_NER;pihm_SS;pihm_Time;pihm_TRMP;pihm_VP;pihm_WINF,forc,0,https://w3id.org/wings/export/MINT#PIHMForcing
 ,,,,,,
 wgen_daily,Input to the weather generator (daily),,wgen_stationid;wgen_lon;wgen_lat;wgen_year;wgen_month;wgen_minT;wgen_maxT;wgen_cloudfraction;wgen_windspeed;wgen_wetdays;wgen_prcp,tar.gz,0,https://w3id.org/wings/export/MINT#FLDAS
@@ -105,11 +105,19 @@ ldas_data_find_cfg,Config file,Configuration file indicating the location and te
 ldas_data_find_query,Download query script,Script detailing the sources to download from FLDAS. This is a temporary script to retrieve data from the data catalog,,txt,0,https://w3id.org/wings/export/MINT#LDASDataFind
 ldas_data_find_weather,FLDAS weather data,,fldas_Evap_tavg;fldas_LWdown_f_tavg;fldas_Lwnet_tavg;fldas_Psurf_f_tavg;fldas_Qair_f_tavg;fldas_Qg_tavg;fldas_Qh_tavg;fldas_Qle_tavg;fldas_Qs_tavg;fldas_Qsb_tavg;fldas_RadT_tavg;fldas_Rainf_f_tavg;fldas_SM01_Percentile;fldas_SWdown_f_tavg;fldas_SoilMoi00_10cm_ta;fldas_SoilMoi100_200cm_;fldas_SoilMoi10_40cm_ta;fldas_SoilMoi40_100cm_t;fldas_SoilTemp00_10cm_t;fldas_SoilTemp100_200cm;fldas_SoilTemp10_40cm_t;fldas_SoilTemp40_100cm_;fldas_Swnet_tavg;fldas_Tair_f_tavg;fldas_Wind_f_tavg,tar.gz,0,https://w3id.org/wings/export/MINT#FLDAS
 ,,,,,,
-DSSAT_simulationFile,DSSAT simulation file,,DSSAT_FAMN;DSSAT_FDATE;DSSAT_FDEP;DSSAT_XCRD;DSSAT_YCRD;DSSAT_ICBL;DSSAT_SH2O;DSSAT_SNH4;DSSAT_SNO3;DSSAT_CR;DSSAT_INGENO;DSSAT_PDATE;DSSAT_PLDP;DSSAT_PLRS;DSSAT_PPOP,x,,https://w3id.org/wings/export/MINT#DSSAT_SIMULATION
-DSSAT_weatherFile,DSSAT weather file,,DSSAT_LAT;DSSAT_LONG;DSSAT_RAIN;DSSAT_SRAD;DSSAT_TAV;DSSAT_TMAX;DSSAT_TMIN;DSSAT_WSTA,wth,,https://w3id.org/wings/export/DSSAT_WEATHER
-DSSAT_sol,DSSAT soil file,,DSSAT_SALB;DSSAT_SBDM;DSSAT_SDUL;DSSAT_SLB;DSSAT_SLCL;DSSAT_SLLL;DSSAT_SLOC;DSSAT_SLSI;DSSAT_SSAT;DSSAT_SSKS,sol,,https://w3id.org/wings/export/MINT#Soil
-DSSAT_summary,DSSAT Summary file,,DSSAT_hwam;DSSAT_cwam,csv,,https://w3id.org/wings/export/MINT#Summary
+pihm_cropland_to_points_pihm-croplands,pihm croplands,,,,0,https://w3id.org/wings/export/MINT#PIHMCropland
+pihm_cropland_to_points_pihm_cropland,pihm cropland,,,,1,https://w3id.org/wings/export/MINT#PIHMCropland
 ,,,,,,
-topo_rain,Rain rate txt file,,Topo_p,txt,,https://w3id.org/wings/export/MINT#TOPO_Rain
-topo_aggr_files,TopoFlow aggregated inputs,,,tar.gz,,https://w3id.org/wings/export/MINT#TOPO_Aggregation
-topo_aggregatedOutput,TopoFlow aggregated outputs,,Topo_qs;Topo_albedo,tar.gz,,https://w3id.org/wings/export/MINT#TOPO_Aggregation
+pihm_flooding_netcdf_pihm-modelInfo,PIHM Model info file,,pihm_Alpha;pihm_Beta;pihm_hAreaF;pihm_infD;pihm_KsatV;pihm_macKsatV;pihm_ThetaR;pihm_ThetaS,tar.gz,0,https://w3id.org/wings/export/MINT#PIHMModelInfo
+pihm_flooding_netcdf_pihm_surf,Surface water file,Surface water file,pihm_surfV,surf,0,https://w3id.org/wings/export/MINT#PIHMSurfaceWater
+pihm_flooding_netcdf_pihm-flooding-netcdf,flooding results in netcdf,,,netcdf,0,https://w3id.org/wings/export/MINT#PIHMFloodingNetCDF
+,,,,,,
+,,,,,,
+DSSAT_simulationFile,DSSAT simulation file,,DSSAT_FAMN;DSSAT_FDATE;DSSAT_FDEP;DSSAT_XCRD;DSSAT_YCRD;DSSAT_ICBL;DSSAT_SH2O;DSSAT_SNH4;DSSAT_SNO3;DSSAT_CR;DSSAT_INGENO;DSSAT_PDATE;DSSAT_PLDP;DSSAT_PLRS;DSSAT_PPOP,x,0,https://w3id.org/wings/export/MINT#DSSAT_SIMULATION
+DSSAT_weatherFile,DSSAT weather file,,DSSAT_LAT;DSSAT_LONG;DSSAT_RAIN;DSSAT_SRAD;DSSAT_TAV;DSSAT_TMAX;DSSAT_TMIN;DSSAT_WSTA,wth,0,https://w3id.org/wings/export/DSSAT_WEATHER
+DSSAT_sol,DSSAT soil file,,DSSAT_SALB;DSSAT_SBDM;DSSAT_SDUL;DSSAT_SLB;DSSAT_SLCL;DSSAT_SLLL;DSSAT_SLOC;DSSAT_SLSI;DSSAT_SSAT;DSSAT_SSKS,sol,0,https://w3id.org/wings/export/MINT#Soil
+DSSAT_summary,DSSAT Summary file,,DSSAT_hwam;DSSAT_cwam,csv,0,https://w3id.org/wings/export/MINT#Summary
+,,,,,,
+topo_rain,Rain rate txt file,,Topo_p,txt,0,https://w3id.org/wings/export/MINT#TOPO_Rain
+topo_aggr_files,TopoFlow aggregated inputs,,,tar.gz,0,https://w3id.org/wings/export/MINT#TOPO_Aggregation
+topo_aggregatedOutput,TopoFlow aggregated outputs,,Topo_qs;Topo_albedo,tar.gz,0,https://w3id.org/wings/export/MINT#TOPO_Aggregation

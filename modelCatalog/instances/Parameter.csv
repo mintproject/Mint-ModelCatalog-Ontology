@@ -13,8 +13,15 @@ climcomp_datasource,dataset source,,FLDAS,string
 climcomp_flagP,flag P,,Rain_f_tavg,string
 climcomp_min_lon,minimum longitude,,24.15235,float
 climcomp_max_lon,maximum longitude,,27.74012,float
-climcomp_min_lat,minimum latiture,,6.700375,float
+climcomp_min_lat,minimum latitude,,6.700375,float
 climcomp_max_lat,maximum latitude,,9.335303,float
 climcomp_min_month,minimum month,,6,float
 climcomp_max_month,maximum month,,8,float
 climcomp_year,year,,2017,float
+cycles_planting-day-1,planting day 1,,100,int
+cycles_planting-day-1-duration,planting day 1 duration,,10,int
+cycles_planting-day-2,planting day 2,,225,int
+cycles_planting-day-2-duration,planting day 2 duration,,10,int
+pihm_start-date,start date,,2017-01-01,string
+pihm_end-date,end date,, 2017-12-31,string
+pihm_region-name,region name,,pg,string

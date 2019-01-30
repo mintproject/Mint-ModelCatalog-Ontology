@@ -22,16 +22,16 @@ cycles_planting-day-1,cycles_planting-day-1,planting day 1,100,int
 cycles_planting-day-1-duration,cycles_planting-day-1-duration,planting day 1 duration,10,int
 cycles_planting-day-2,cycles_planting-day-2,planting day 2,225,int
 cycles_planting-day-2-duration,cycles_planting-day-2-duration,planting day 2 duration,10,int
-pihm_start-date,pihm_start-date,start date,1/1/2017,string
+pihm_start-date,pihm_start-date,start date,2017-01-01,string
 pihm_end-date,pihm_end-date,end date, 2017-12-31,string
 pihm_region-name,pihm_region-name,region name,pg,string
-fldas_to_pihm_start-date,start-date,,1/1/2017,string
-fldas_to_pihm_end-date,end-date,,12/31/2017,string
+fldas_to_pihm_start-date,start-date,,2017-01-01,string
+fldas_to_pihm_end-date,end-date,, 2017-12-31,string
 pihm_cropland_to_points_num-points,num-points,,1,int
-pihm_forcing_to_cycles_weather_start-date,start-date,,1/1/2017,string
-pihm_forcing_to_cycles_weather_end-date,end-date,,12/31/2017,string
-pihm_flooding_netcdf_start-date,start-date,,1/1/2017,string
+pihm_forcing_to_cycles_weather_start-date,start-date,,2017-01-01,string
+pihm_forcing_to_cycles_weather_end-date,end-date,, 2017-12-31,string
+pihm_flooding_netcdf_start-date,start-date,,2017-01-01,string
 pihm_flooding_netcdf_flooding-threshold,flooding-threshold,,0.05,float
-cycles_to_crop_start-date,start-date,,1/1/2017,string
-economic_to_vis_start_date,start-date,,1/1/2017,string
+cycles_to_crop_start-date,start-date,,2017-01-01,string
+economic_to_vis_start_date,start-date,,2017-01-01,string
 economic_to_vis_region_name,region-name,,pg,string

@@ -13,3 +13,5 @@ pihmFloodingNetCDF,Script to transfrom flooding output into NetCDF,,pihm_floodin
 ,,,,,
 FLDAS2WGEN,FLDAS data to WGEN,Transforms FLDAS data for use with weather generator WGEN,FLDAS2WGEN_v1,Weather,Requires both monthly and daily data
 WGEN2FLDAS,WGEN output to FLDAS like format,Transforms the output of the weather generator wgen to FLDAS like data,WGEN2FLDAS_v1,Weather,
+RiverDepthEstimation,River depth remote sensing analysis,Remote sensing to calculate river depth,RiverDepthEstimation_V1,Hydrology,
+RiverDepthEstimationPreprocessing,River depth preprocessing,Preprocessing to prepare data for river depth calculation,RiverDepthEstimationPreprocessing_V1,Hydrology,

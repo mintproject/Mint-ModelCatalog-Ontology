@@ -366,6 +366,13 @@ _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <https://w3id.org/mint/modelCatalog#hasModelCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Realates a model to its category. For instance, Topoflow has category hydrology. Useful to quickly retrieve relevant models."@en .
 <https://w3id.org/mint/modelCatalog#hasModelCategory> <http://www.w3.org/2000/01/rdf-schema#label> "has model category"@en .
 # 
+# https://w3id.org/mint/modelCatalog#hasRule
+<https://w3id.org/mint/modelCatalog#hasRule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mint/modelCatalog#hasRule> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/modelCatalog#ModelConfiguration> .
+<https://w3id.org/mint/modelCatalog#hasRule> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/mint/modelCatalog#hasRule> <http://www.w3.org/2000/01/rdf-schema#comment> "Rule associated to the component"@en .
+<https://w3id.org/mint/modelCatalog#hasRule> <http://www.w3.org/2000/01/rdf-schema#label> "has rule"@en .
+# 
 # https://w3id.org/mint/modelCatalog#hasShortName
 <https://w3id.org/mint/modelCatalog#hasShortName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/mint/modelCatalog#hasShortName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mint/modelCatalog#VariablePresentation> .

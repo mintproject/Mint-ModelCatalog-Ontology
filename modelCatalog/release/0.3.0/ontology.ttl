@@ -370,6 +370,14 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                   rdfs:label "has model category"@en .
 
 
+###  https://w3id.org/mint/modelCatalog#hasRule
+:hasRule rdf:type owl:DatatypeProperty ;
+         rdfs:domain :ModelConfiguration ;
+         rdfs:range xsd:string ;
+         rdfs:comment "Rule associated to the component"@en ;
+         rdfs:label "has rule"@en .
+
+
 ###  https://w3id.org/mint/modelCatalog#hasShortName
 :hasShortName rdf:type owl:DatatypeProperty ;
               rdfs:domain :VariablePresentation ;

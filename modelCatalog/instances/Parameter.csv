@@ -34,4 +34,4 @@ pihm_flooding_netcdf_start-date,start-date,,2017-01-01,string,https://w3id.org/w
 pihm_flooding_netcdf_flooding-threshold,flooding-threshold,,0.05,float,https://w3id.org/wings/export/MINT#FloodingThreshold
 cycles_to_crop_start-date,start-date,,2017-01-01,string,https://w3id.org/wings/export/MINT#StartDate
 economic_to_vis_start_date,start-date,,2017-01-01,string,https://w3id.org/wings/export/MINT#StartDate
-economic_to_vis_region_name,region-name,,pg,string,https://w3id.org/wings/export/MINT#EndDate
+economic_to_vis_region_name,region-name,,pg,string,https://w3id.org/wings/export/MINT#RegionName

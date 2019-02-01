@@ -55,7 +55,7 @@ except:
 
 
 try:
-    var_pres = pd.read_csv( rel_dir + variables_mc )
+    var_pres = pd.read_csv( rel_dir + variables_mc ).fillna('')
 except:
     try:
         var_pres = pd.read_csv( rel_dir + variables_mc, encoding = 'iso-8859-1' )
@@ -72,7 +72,7 @@ shortname_col = 'https://w3id.org/mint/modelCatalog#hasShortName'
 
 for i in var_pres.index:
     model = var_pres.loc[i,model_col].split('_')[0]
-    if model == 'PIHM':
+    if model.lower() == 'pihm':
         sn = var_pres.loc[i,shortname_col]
         try:
             pihm_var = pihm.loc[pihm['Short Name']==sn,'GSN'].iloc[0]
@@ -82,7 +82,7 @@ for i in var_pres.index:
                 var_pres.loc[i,label_col] = pihm_var
         except:
             print('Warning! PIHM short name ',sn,' not found!')
-    if model == 'ldas':
+    if model.lower() == 'fldas':
         sn = var_pres.loc[i,shortname_col]
         try:
             fldas_var = fldas.loc[fldas['Short Name']==sn,'GSN'].iloc[0]
@@ -92,7 +92,7 @@ for i in var_pres.index:
                 var_pres.loc[i,label_col] = fldas_var
         except:
             print('Warning! FLDAS short name ',sn,' not found!')
-    if model == 'econ':
+    if model.lower() == 'econ':
         sn = var_pres.loc[i,shortname_col]
         try:
             econ_var = econ.loc[econ['Short Name']==sn,'GSN'].iloc[0]

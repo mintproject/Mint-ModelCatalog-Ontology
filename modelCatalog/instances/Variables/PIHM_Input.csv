@@ -8,7 +8,7 @@ File,Short Name,Long Name,Units,GSN,Default Value,Description,Minimum Accepted V
 .forc,RL,Roughness length,m,atmosphere_bottom_air_flow__log-law_roughness_length,,surface roughness length scale for wind,,,,,,,,,,,,,,,,,,,,
 .forc, ,Ner Radiaiton,MJ/m2/day,land_surface_radiation~net~total__energy_flux,,Value of net radiation,,,,,,,,,,,,,,,,,,,,
 .forc,SS,Source/Sink,m3/day,water~incoming-and-outgoing__volume_flow_rate,,Value of Source/Sink,,,,,,,,,,,,,,,,,,,,
-.forc,Time,Time,day,model_simulation__time,,Time,,,,,,,,,,,,,,,,,,,,
+.forc,Time,Time,day,,,Time,,,,,,,,,,,,,,,,,,,,
 .forc,TRMP,Temperature,C,land_surface_air__temperature,,Value of Temperature,,,,,,,,,,,,,,,,,,,,
 .forc,VP,Vapor  pressure,Pa,atmosphere_bottom_air_water~vapor__partial_pressure,,Value of vapor press,,,,,,,,,,,,,,,,,,,,
 .forc,WINF,wind speed,m/day,land_surface_wind__speed,,Value of wind speed,,,,,,,,,,,,,,,,,,,,

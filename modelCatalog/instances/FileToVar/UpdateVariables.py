@@ -74,33 +74,36 @@ for i in var_pres.index:
     model = var_pres.loc[i,model_col].split('_')[0]
     if model.lower() == 'pihm':
         sn = var_pres.loc[i,shortname_col]
-        try:
-            pihm_var = pihm.loc[pihm['Short Name']==sn,'GSN'].iloc[0]
-            label = var_pres.loc[i,label_col]
-            if label != pihm_var:
-                print('Changing variable label for PIHM ',sn,' from ',label,' to ',pihm_var,'.')
-                var_pres.loc[i,label_col] = pihm_var
-        except:
-            print('Warning! PIHM short name ',sn,' not found!')
+        if sn != '':
+            try:
+                pihm_var = pihm.loc[pihm['Short Name']==sn,'GSN'].iloc[0]
+                label = var_pres.loc[i,label_col]
+                if label != pihm_var:
+                    print('Changing variable label for PIHM ',sn,' from ',label,' to ',pihm_var,'.')
+                    var_pres.loc[i,label_col] = pihm_var
+            except:
+                print('Warning! PIHM short name ',sn,' not found!')
     if model.lower() == 'fldas':
         sn = var_pres.loc[i,shortname_col]
-        try:
-            fldas_var = fldas.loc[fldas['Short Name']==sn,'GSN'].iloc[0]
-            label = var_pres.loc[i,label_col]
-            if label != fldas_var:
-                print('Changing variable label for FLDAS ',sn,' from ',label,' to ',fldas_var,'.')
-                var_pres.loc[i,label_col] = fldas_var
-        except:
-            print('Warning! FLDAS short name ',sn,' not found!')
+        if sn != '':
+            try:
+                fldas_var = fldas.loc[fldas['Short Name']==sn,'GSN'].iloc[0]
+                label = var_pres.loc[i,label_col]
+                if label != fldas_var:
+                    print('Changing variable label for FLDAS ',sn,' from ',label,' to ',fldas_var,'.')
+                    var_pres.loc[i,label_col] = fldas_var
+            except:
+                print('Warning! FLDAS short name ',sn,' not found!')
     if model.lower() == 'econ':
         sn = var_pres.loc[i,shortname_col]
-        try:
-            econ_var = econ.loc[econ['Short Name']==sn,'GSN'].iloc[0]
-            label = var_pres.loc[i,label_col]
-            if label != econ_var:
-                print('Changing variable label for ECON ',sn,' from ',label,' to ',econ_var,'.')
-                var_pres.loc[i,label_col] = econ_var
-        except:
-            print('Warning! ECON short name ',sn,' not found!')
+        if sn!='':
+            try:
+                econ_var = econ.loc[econ['Short Name']==sn,'GSN'].iloc[0]
+                label = var_pres.loc[i,label_col]
+                if label != econ_var:
+                    print('Changing variable label for ECON ',sn,' from ',label,' to ',econ_var,'.')
+                    var_pres.loc[i,label_col] = econ_var
+            except:
+                print('Warning! ECON short name ',sn,' not found!')
 
 var_pres.to_csv( rel_dir + variables_mc, index = False)        

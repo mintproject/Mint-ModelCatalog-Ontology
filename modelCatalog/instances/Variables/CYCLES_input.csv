@@ -66,7 +66,7 @@ Soil Input File,SAND,,%,soil_layer_sand_particle__volume_fraction,sand particle 
 Soil Input File,SLOPE,slope of the field,%,land_surface__slope,"value is in %, or units of rise per 100 units of run.",,,
 Soil Input File,TOTAL_LAYERS,,unitless,soil_layer__count,value is simply the total number of soil layers described in the profile.,,,
 Weather Input File,PP,precipitation,mm,atmosphere_water__time_integral_of_precipitation_leq_volume_flux,Precipitation in mm,,,
-Weather Input File,RHn,relativey humidity minimum,%,atmosphere_air_water~vapor__min_of_relative_saturation,Minimum relative humidity in %,,,
+Weather Input File,RHn,relative humidity minimum,%,atmosphere_air_water~vapor__min_of_relative_saturation,Minimum relative humidity in %,,,
 Weather Input File,RHx,relative humidity maximum,%,atmosphere_air_water~vapor__max_of_relative_saturation,Maximum relative humidity in %,,,
 Weather Input File,Solar,solar radiation of the day ,MJ/m2/d,land_surface_radiation~solar__energy_flux,Solar Radiation in MJ/m2/d,,,
 Weather Input File,Tn,temperature minimum of the day,C,air__one-day_min_of_temperature,Minimum temperature in Celcius,,,

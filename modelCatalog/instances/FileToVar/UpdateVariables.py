@@ -26,30 +26,30 @@ variables_mc_backup = 'VariablePresentationBackup.csv'
 
 # read data:
 try:
-    pihm = pd.read_csv( rel_var_dir + PIHM_input, usecols = [ 'Short Name', 'GSN'] )
-    pihm = pihm.append(pd.read_csv( rel_var_dir + PIHM_output, usecols = [ 'Short Name', 'GSN'] )).fillna('')
+    pihm = pd.read_csv( rel_var_dir + PIHM_input, usecols = [ 'Short Name', 'Long Name', 'GSN'] )
+    pihm = pihm.append(pd.read_csv( rel_var_dir + PIHM_output, usecols = [ 'Short Name', 'Long Name', 'GSN'] )).fillna('')
 except: 
     try:
-        pihm = pd.read_csv( rel_var_dir + PIHM_input, usecols = [ 'Short Name', 'GSN'], encoding = 'iso-8859-1' )
-        pihm = pihm.append(pd.read_csv( rel_var_dir + PIHM_output, usecols = [ 'Short Name', 'GSN'], encoding = 'iso-8859-1' )).fillna('')
+        pihm = pd.read_csv( rel_var_dir + PIHM_input, usecols = [ 'Short Name', 'Long Name', 'GSN'], encoding = 'iso-8859-1' )
+        pihm = pihm.append(pd.read_csv( rel_var_dir + PIHM_output, usecols = [ 'Short Name', 'Long Name', 'GSN'], encoding = 'iso-8859-1' )).fillna('')
     except:
         print('PIHM file unreadable.')
         
 try:
-    fldas = pd.read_csv( rel_var_dir + FLDAS, usecols = [ 'Short Name', 'GSN'] ).fillna('')
+    fldas = pd.read_csv( rel_var_dir + FLDAS, usecols = [ 'Short Name', 'Long Name', 'GSN'] ).fillna('')
 except:
     try:
-        fldas = pd.read_csv( rel_var_dir + FLDAS, usecols = [ 'Short Name', 'GSN'], encoding = 'iso-8859-1' ).fillna('')
+        fldas = pd.read_csv( rel_var_dir + FLDAS, usecols = [ 'Short Name', 'Long Name', 'GSN'], encoding = 'iso-8859-1' ).fillna('')
     except:
         print('FLDAS file unreadable.')   
 
 try:
-    econ = pd.read_csv( rel_var_dir + ECON_input, usecols = [ 'Short Name', 'GSN'] )
-    econ = econ.append(pd.read_csv( rel_var_dir + ECON_output, usecols = [ 'Short Name', 'GSN'] )).fillna('')
+    econ = pd.read_csv( rel_var_dir + ECON_input, usecols = [ 'Short Name', 'Long Name', 'GSN'] )
+    econ = econ.append(pd.read_csv( rel_var_dir + ECON_output, usecols = [ 'Short Name', 'Long Name', 'GSN'] )).fillna('')
 except: 
     try:
-        econ = pd.read_csv( rel_var_dir + ECON_input, usecols = [ 'Short Name', 'GSN'], encoding = 'iso-8859-1' )
-        econ = econ.append(pd.read_csv( rel_var_dir + ECON_output, usecols = [ 'Short Name', 'GSN'], encoding = 'iso-8859-1' )).fillna('')
+        econ = pd.read_csv( rel_var_dir + ECON_input, usecols = [ 'Short Name', 'Long Name', 'GSN'], encoding = 'iso-8859-1' )
+        econ = econ.append(pd.read_csv( rel_var_dir + ECON_output, usecols = [ 'Short Name', 'Long Name', 'GSN'], encoding = 'iso-8859-1' )).fillna('')
     except:
         print('ECON file unreadable.')
 
@@ -69,14 +69,21 @@ if not var_pres is None:
 label_col = 'https://w3id.org/mint/modelCatalog#hasStandardVariable'
 model_col = 'https://w3id.org/mint/modelCatalog#VariablePresentation'
 shortname_col = 'https://w3id.org/mint/modelCatalog#hasShortName'
+longname_col = 'https://w3id.org/mint/modelCatalog#hasLongName'
 
 for i in var_pres.index:
     model = var_pres.loc[i,model_col].split('_')[0]
     if model.lower() == 'pihm':
         sn = var_pres.loc[i,shortname_col]
-        if sn != '':
+        ln = var_pres.loc[i,longname_col]
+        if (sn != '') or (ln != ''):
             try:
-                pihm_var = pihm.loc[pihm['Short Name']==sn,'GSN'].iloc[0]
+                pihm_var = []
+                if (sn != ''):
+                    pihm_var = pihm.loc[pihm['Short Name']==sn,'GSN']
+                if len(pihm_var) == 0:
+                    pihm_var = pihm.loc[pihm['Long Name']==ln,'GSN']
+                pihm_var = pihm_var.iloc[0]
                 label = var_pres.loc[i,label_col]
                 if label != pihm_var:
                     print('Changing variable label for PIHM ',sn,' from ',label,' to ',pihm_var,'.')

@@ -147,7 +147,7 @@ pihm_transpiration,transpiration,,transpiration,transpiration,land_vegetation_ca
 pihm_et2v,evaporation from ground surface,,evaporation from ground surface,evaporation from ground surface,land_surface_water__evaporation_volume_flux,m/d,,,,
 pihm_stagev,river stage,,river stage,river stage,channel~river_water__stage_height,m,,,,
 pihm_rbedv,river bed storage,,river bed storage,river bed storage,channel~river_bed_water__volume-per-area_storage_density,m,,,,
-pihm_rivFlx0v,lateral influs to the stream reach�,,lateral influs to the stream reach�,lateral influs to the stream reach�,channel~stream_reach_water~incoming__lateral_volume_flux,m/d,,,,
+pihm_rivFlx0v,lateral influs to the stream reach,,lateral influs to the stream reach,lateral influs to the stream reach,channel~stream_reach_water~incoming__lateral_volume_flux,m/d,,,,
 pihm_rivFlx1v,Lateral outflow from stream reach,,Lateral outflow from stream reach,Lateral outflow from stream reach,channel~stream_reach_water~outgoing__lateral_volume_flux,m/d,,,,
 pihm_rivFlx2v,Surface flow to stream reach from left terrain,,Surface flow to stream reach from left terrain,Surface flow to stream reach from left terrain,land_surface_terrain~left_channel~stream_reach_water__volume_flux,m/d,,,,
 pihm_rivFlx3v,surface flow frow to stream reach from right terrain,,surface flow frow to stream reach from right terrain,surface flow frow to stream reach from right terrain,land_surface_terrain~right_channel~stream_reach_water__volume_flux,m/d,,,,

@@ -40,5 +40,6 @@ river_depth_start_date,start_date,,2016-01-01,string,https://w3id.org/wings/expo
 river_depth_end_date,end_date,,2017-03-31,string,https://w3id.org/wings/export/MINT#EndDate
 river_depth_basin_id,basin_id,,100,string,https://w3id.org/wings/export/MINT#BasinID
 river_depth_numsamples,numsamples,,3,int,https://w3id.org/wings/export/MINT#NumSapmples
-
+pihm_to_netcdf_start_date,start-date,,2017-01-01,string,https://w3id.org/wings/export/MINT#StartDate
+pihm_to_netcdf_grid_space,grid-space,,0.05,float,https://w3id.org/wings/export/MINT#NumSapmples
 

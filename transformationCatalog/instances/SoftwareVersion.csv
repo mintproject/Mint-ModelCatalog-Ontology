@@ -13,7 +13,7 @@ pihm_cropland_to_points_v1,cropland to points,1,pihm_cropland_to_points
 pihm_flooding_netcdf_v1,flooding to netcdf,1,pihm_flooding_netcdf
 FLDAS2WGEN_v1,FLDAS to WGEN Version 1,1,FLDAS2WGEN_cfg
 WGEN2FLDAS_v1,WGEN to FLDAS-like Version 1,1,WGEN2FLDAS_cfg
-,,,
+PIHM_to_netcdfv1,PIHM to NetCDF version 1,1,pihm_to_netcdf
 ,,,
 RiverDepthEstimation_V1,River Depth Estimation,1,river_depth_estimation
 RiverDepthEstimationPreprocessing_V1,River Depth Estimation Preprocessing,1,river_depth_preprocessing

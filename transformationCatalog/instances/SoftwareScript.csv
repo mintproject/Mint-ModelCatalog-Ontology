@@ -11,6 +11,7 @@ economicVis,Script to visualize the economic results,Script to visualize the eco
 pihmCroplandToPoints,Script to transform cropland into points,,pihm_cropland_to_points_v1,Hydrology;Agriculture,
 pihmFloodingNetCDF,Script to transfrom flooding output into NetCDF,,pihm_flooding_netcdf_v1,Hydrology,
 pihmToNetCDF,pihm to NetCDF,Script to transform PIHM outputs into the NetCDF format,PIHM_to_netcdfv1,Hydrology,
+CyclesOutputs,Cycles outputs aggregator,Script to wrap up 2 cycles outputs in one,CyclesOutputsV1,Hydrology,
 ,,,,,
 FLDAS2WGEN,FLDAS data to WGEN,Transforms FLDAS data for use with weather generator WGEN,FLDAS2WGEN_v1,Weather,Requires both monthly and daily data
 WGEN2FLDAS,WGEN output to FLDAS like format,Transforms the output of the weather generator wgen to FLDAS like data,WGEN2FLDAS_v1,Weather,

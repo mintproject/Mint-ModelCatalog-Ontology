@@ -1,0 +1,713 @@
+@prefix UNK: <https://www.w3id.org/mint/unk/> .
+@prefix mint: <https://w3id.org/mint/instance/> .
+@prefix qudt: <http://qudt.org/1.1/schema/qudt#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mint:C a qudt:Unit ;
+    rdfs:label "C" ;
+    qudt:abbreviation "C" ;
+    qudt:hasPart mint:u_1_0_coulomb_C .
+
+mint:Cs_Cx_1 a qudt:Unit ;
+    rdfs:label "Cs Cx-1" ;
+    qudt:abbreviation "Cs Cx-1" ;
+    qudt:hasPart mint:u_Cs,
+        mint:u__1_Cx .
+
+mint:KTe a qudt:Unit ;
+    rdfs:label "K" ;
+    qudt:abbreviation "K" ;
+    qudt:hasDimension "Te" ;
+    qudt:hasPart mint:u_1_0_Te_kelvin_K .
+
+mint:MJ_m_2_d_1M_T_3 a qudt:Unit ;
+    rdfs:label "MJ m-2 d-1" ;
+    qudt:abbreviation "MJ m-2 d-1" ;
+    qudt:hasDimension "M T-3" ;
+    qudt:hasPart mint:u__1_86400_0_T_day_d,
+        mint:u__2_1_0_L_meter_m,
+        mint:u_mega_1000000_0_1_0_M_L2_T_2_joule_MJ .
+
+mint:MJ_m_2_day_1M_T_3 a qudt:Unit ;
+    rdfs:label "MJ m-2 day-1" ;
+    qudt:abbreviation "MJ m-2 day-1" ;
+    qudt:hasDimension "M T-3" ;
+    qudt:hasPart mint:u__1_86400_0_T_day_day,
+        mint:u__2_1_0_L_meter_m,
+        mint:u_mega_1000000_0_1_0_M_L2_T_2_joule_MJ .
+
+mint:Mg_CM a qudt:Unit ;
+    rdfs:label "Mg C" ;
+    qudt:abbreviation "Mg C" ;
+    qudt:hasDimension "M" ;
+    qudt:hasPart mint:u_1_0_coulomb_C,
+        mint:u_mega_1000000_0_0_0_M_gram_Mg .
+
+mint:Mg_C_year_1M a qudt:Unit ;
+    rdfs:label "Mg C year-1" ;
+    qudt:abbreviation "Mg C year-1" ;
+    qudt:hasDimension "M" ;
+    qudt:hasPart mint:u_1_0_coulomb_C,
+        mint:u__1_year,
+        mint:u_mega_1000000_0_0_0_M_gram_Mg .
+
+mint:Mg_Mg_1 a qudt:Unit ;
+    rdfs:label "Mg Mg-1" ;
+    qudt:abbreviation "Mg Mg-1" ;
+    qudt:hasPart mint:u__1_mega_1000000_0_0_0_M_gram_Mg,
+        mint:u_mega_1000000_0_0_0_M_gram_Mg .
+
+mint:Mg_ha_1M_L_2 a qudt:Unit ;
+    rdfs:label "Mg ha-1" ;
+    qudt:abbreviation "Mg ha-1" ;
+    qudt:hasDimension "M L-2" ;
+    qudt:hasPart mint:u__1_10000_0_L2_hectare_ha,
+        mint:u_mega_1000000_0_0_0_M_gram_Mg .
+
+mint:Mg_m_3M_L_3 a qudt:Unit ;
+    rdfs:label "Mg m-3" ;
+    qudt:abbreviation "Mg m-3" ;
+    qudt:hasDimension "M L-3" ;
+    qudt:hasPart mint:u__3_1_0_L_meter_m,
+        mint:u_mega_1000000_0_0_0_M_gram_Mg .
+
+mint:PaM_L_1_T_2 a qudt:Unit ;
+    rdfs:label "Pa" ;
+    qudt:abbreviation "Pa" ;
+    qudt:hasDimension "M L-1 T-2" ;
+    qudt:hasPart mint:u_1_0_M_L_1_T_2_pascal_Pa .
+
+mint:Pa_Pa_1_x_100 a qudt:Unit ;
+    rdfs:label "Pa Pa-1 x-100" ;
+    qudt:abbreviation "Pa Pa-1 x-100" ;
+    qudt:hasPart mint:u_1_0_M_L_1_T_2_pascal_Pa,
+        mint:u__100_x,
+        mint:u__1_1_0_M_L_1_T_2_pascal_Pa .
+
+mint:USD_ha_1L_2 a qudt:Unit ;
+    rdfs:label "USD ha-1" ;
+    qudt:abbreviation "USD ha-1" ;
+    qudt:hasDimension "L-2" ;
+    qudt:hasPart mint:u_USD,
+        mint:u__1_10000_0_L2_hectare_ha .
+
+mint:USD_kg_1M_1 a qudt:Unit ;
+    rdfs:label "USD kg-1" ;
+    qudt:abbreviation "USD kg-1" ;
+    qudt:hasDimension "M-1" ;
+    qudt:hasPart mint:u_USD,
+        mint:u__1_kilo_1000_0_0_0_M_gram_kg .
+
+mint:W_m_2M_T_3 a qudt:Unit ;
+    rdfs:label "W m-2" ;
+    qudt:abbreviation "W m-2" ;
+    qudt:hasDimension "M T-3" ;
+    qudt:hasPart mint:u_1_0_M_L2_T_3_watt_W,
+        mint:u__2_1_0_L_meter_m .
+
+mint:YYYY a qudt:Unit ;
+    rdfs:label "YYYY" ;
+    qudt:abbreviation "YYYY" ;
+    qudt:hasPart mint:u_YYYY .
+
+mint:cm3_cm_3 a qudt:Unit ;
+    rdfs:label "cm3 cm-3" ;
+    qudt:abbreviation "cm3 cm-3" ;
+    qudt:hasPart mint:u_3_centi_0_0_1_0_L_meter_cm,
+        mint:u__3_centi_0_0_1_0_L_meter_cm .
+
+mint:cmL a qudt:Unit ;
+    rdfs:label "cm" ;
+    qudt:abbreviation "cm" ;
+    qudt:hasDimension "L" ;
+    qudt:hasPart mint:u_centi_0_0_1_0_L_meter_cm .
+
+mint:cm_h_1L a qudt:Unit ;
+    rdfs:label "cm h-1" ;
+    qudt:abbreviation "cm h-1" ;
+    qudt:hasDimension "L" ;
+    qudt:hasPart mint:u__1_h,
+        mint:u_centi_0_0_1_0_L_meter_cm .
+
+mint:code a qudt:Unit ;
+    rdfs:label "code" ;
+    qudt:abbreviation "code" ;
+    qudt:hasPart mint:u_code .
+
+mint:date a qudt:Unit ;
+    rdfs:label "date" ;
+    qudt:abbreviation "date" ;
+    qudt:hasPart mint:u_date .
+
+mint:dayT a qudt:Unit ;
+    rdfs:label "day" ;
+    qudt:abbreviation "day" ;
+    qudt:hasDimension "T" ;
+    qudt:hasPart mint:u_86400_0_T_day_day .
+
+mint:day_m_1L_1_T a qudt:Unit ;
+    rdfs:label "day m-1" ;
+    qudt:abbreviation "day m-1" ;
+    qudt:hasDimension "L-1 T" ;
+    qudt:hasPart mint:u_86400_0_T_day_day,
+        mint:u__1_1_0_L_meter_m .
+
+mint:decimal_degrees a qudt:Unit ;
+    rdfs:label "decimal degrees" ;
+    qudt:abbreviation "decimal degrees" ;
+    qudt:hasPart mint:u_decimal,
+        mint:u_degrees .
+
+mint:deg_C a qudt:Unit ;
+    rdfs:label "deg C" ;
+    qudt:abbreviation "deg C" ;
+    qudt:hasPart mint:u_deg_C .
+
+mint:deg_KTe_D a qudt:Unit ;
+    rdfs:label "deg K" ;
+    qudt:abbreviation "deg K" ;
+    qudt:hasDimension "Te D" ;
+    qudt:hasPart mint:u_0_0_D_degreeangle_deg,
+        mint:u_1_0_Te_kelvin_K .
+
+mint:forage a qudt:Unit ;
+    rdfs:label "forage" ;
+    qudt:abbreviation "forage" ;
+    qudt:hasPart mint:u_forage .
+
+mint:g_100g_1 a qudt:Unit ;
+    rdfs:label "g 100g-1" ;
+    qudt:abbreviation "g 100g-1" ;
+    qudt:hasPart mint:u_0_0_M_gram_g,
+        mint:u__1_100_0_0_M_gram_g .
+
+mint:g_cm_3M_L_3 a qudt:Unit ;
+    rdfs:label "g cm-3" ;
+    qudt:abbreviation "g cm-3" ;
+    qudt:hasDimension "M L-3" ;
+    qudt:hasPart mint:u_0_0_M_gram_g,
+        mint:u__3_centi_0_0_1_0_L_meter_cm .
+
+mint:g_kg_1 a qudt:Unit ;
+    rdfs:label "g kg-1" ;
+    qudt:abbreviation "g kg-1" ;
+    qudt:hasPart mint:u_0_0_M_gram_g,
+        mint:u__1_kilo_1000_0_0_0_M_gram_kg .
+
+mint:haL2 a qudt:Unit ;
+    rdfs:label "ha" ;
+    qudt:abbreviation "ha" ;
+    qudt:hasDimension "L2" ;
+    qudt:hasPart mint:u_10000_0_L2_hectare_ha .
+
+mint:kg0 a qudt:Unit ;
+    rdfs:label "kg0" ;
+    qudt:abbreviation "kg0" ;
+    qudt:hasPart mint:u_0_kilo_1000_0_0_0_M_gram_kg .
+
+mint:kgM a qudt:Unit ;
+    rdfs:label "kg" ;
+    qudt:abbreviation "kg" ;
+    qudt:hasDimension "M" ;
+    qudt:hasPart mint:u_kilo_1000_0_0_0_M_gram_kg .
+
+mint:kg_CM a qudt:Unit ;
+    rdfs:label "kg C" ;
+    qudt:abbreviation "kg C" ;
+    qudt:hasDimension "M" ;
+    qudt:hasPart mint:u_1_0_coulomb_C,
+        mint:u_kilo_1000_0_0_0_M_gram_kg .
+
+mint:kg_N_ha_1M2_L_1_T_2 a qudt:Unit ;
+    rdfs:label "kg N ha-1" ;
+    qudt:abbreviation "kg N ha-1" ;
+    qudt:hasDimension "M2 L-1 T-2" ;
+    qudt:hasPart mint:u_1_0_M_L_T_2_newton_N,
+        mint:u__1_10000_0_L2_hectare_ha,
+        mint:u_kilo_1000_0_0_0_M_gram_kg .
+
+mint:kg_N_yr_1M2_L_T_3 a qudt:Unit ;
+    rdfs:label "kg N yr-1" ;
+    qudt:abbreviation "kg N yr-1" ;
+    qudt:hasDimension "M2 L T-3" ;
+    qudt:hasPart mint:u_1_0_M_L_T_2_newton_N,
+        mint:u__1_31536000_0_T_year365day_yr,
+        mint:u_kilo_1000_0_0_0_M_gram_kg .
+
+mint:kg_ha_1M_L_2 a qudt:Unit ;
+    rdfs:label "kg ha-1" ;
+    qudt:abbreviation "kg ha-1" ;
+    qudt:hasDimension "M L-2" ;
+    qudt:hasPart mint:u__1_10000_0_L2_hectare_ha,
+        mint:u_kilo_1000_0_0_0_M_gram_kg .
+
+mint:kg_kg_1_x_100 a qudt:Unit ;
+    rdfs:label "kg kg-1 x-100" ;
+    qudt:abbreviation "kg kg-1 x-100" ;
+    qudt:hasPart mint:u__100_x,
+        mint:u__1_kilo_1000_0_0_0_M_gram_kg,
+        mint:u_kilo_1000_0_0_0_M_gram_kg .
+
+mint:kg_m_2_s_1M_L_2_T_1 a qudt:Unit ;
+    rdfs:label "kg m-2 s-1" ;
+    qudt:abbreviation "kg m-2 s-1" ;
+    qudt:hasDimension "M L-2 T-1" ;
+    qudt:hasPart mint:u__1_1_0_T_secondtime_s,
+        mint:u__2_1_0_L_meter_m,
+        mint:u_kilo_1000_0_0_0_M_gram_kg .
+
+mint:m0 a qudt:Unit ;
+    rdfs:label "m0" ;
+    qudt:abbreviation "m0" ;
+    qudt:hasPart mint:u_0_1_0_L_meter_m .
+
+mint:m2_m_2 a qudt:Unit ;
+    rdfs:label "m2 m-2" ;
+    qudt:abbreviation "m2 m-2" ;
+    qudt:hasPart mint:u_2_1_0_L_meter_m,
+        mint:u__2_1_0_L_meter_m .
+
+mint:m3_day_1L3_T_1 a qudt:Unit ;
+    rdfs:label "m3 day-1" ;
+    qudt:abbreviation "m3 day-1" ;
+    qudt:hasDimension "L3 T-1" ;
+    qudt:hasPart mint:u_3_1_0_L_meter_m,
+        mint:u__1_86400_0_T_day_day .
+
+mint:m3_m_3 a qudt:Unit ;
+    rdfs:label "m3 m-3" ;
+    qudt:abbreviation "m3 m-3" ;
+    qudt:hasPart mint:u_3_1_0_L_meter_m,
+        mint:u__3_1_0_L_meter_m .
+
+mint:mL a qudt:Unit ;
+    rdfs:label "m" ;
+    qudt:abbreviation "m" ;
+    qudt:hasDimension "L" ;
+    qudt:hasPart mint:u_1_0_L_meter_m .
+
+mint:m_d_1L_T_1 a qudt:Unit ;
+    rdfs:label "m d-1" ;
+    qudt:abbreviation "m d-1" ;
+    qudt:hasDimension "L T-1" ;
+    qudt:hasPart mint:u_1_0_L_meter_m,
+        mint:u__1_86400_0_T_day_d .
+
+mint:m_day_1L_T_1 a qudt:Unit ;
+    rdfs:label "m day-1" ;
+    qudt:abbreviation "m day-1" ;
+    qudt:hasDimension "L T-1" ;
+    qudt:hasPart mint:u_1_0_L_meter_m,
+        mint:u__1_86400_0_T_day_day .
+
+mint:m_m_1 a qudt:Unit ;
+    rdfs:label "m m-1" ;
+    qudt:abbreviation "m m-1" ;
+    qudt:hasPart mint:u_1_0_L_meter_m,
+        mint:u__1_1_0_L_meter_m .
+
+mint:m_s_1L_T_1 a qudt:Unit ;
+    rdfs:label "m s-1" ;
+    qudt:abbreviation "m s-1" ;
+    qudt:hasDimension "L T-1" ;
+    qudt:hasPart mint:u_1_0_L_meter_m,
+        mint:u__1_1_0_T_secondtime_s .
+
+mint:mmL a qudt:Unit ;
+    rdfs:label "mm" ;
+    qudt:abbreviation "mm" ;
+    qudt:hasDimension "L" ;
+    qudt:hasPart mint:u_milli_0_0_1_0_L_meter_mm .
+
+mint:mm_day_1L_T_1 a qudt:Unit ;
+    rdfs:label "mm day-1" ;
+    qudt:abbreviation "mm day-1" ;
+    qudt:hasDimension "L T-1" ;
+    qudt:hasPart mint:u__1_86400_0_T_day_day,
+        mint:u_milli_0_0_1_0_L_meter_mm .
+
+mint:mm_h_1L a qudt:Unit ;
+    rdfs:label "mm h-1" ;
+    qudt:abbreviation "mm h-1" ;
+    qudt:hasDimension "L" ;
+    qudt:hasPart mint:u__1_h,
+        mint:u_milli_0_0_1_0_L_meter_mm .
+
+mint:number_m_2L_2 a qudt:Unit ;
+    rdfs:label "number m-2" ;
+    qudt:abbreviation "number m-2" ;
+    qudt:hasDimension "L-2" ;
+    qudt:hasPart mint:u__2_1_0_L_meter_m,
+        mint:u_number .
+
+mint:percent a qudt:Unit ;
+    rdfs:label "percent" ;
+    qudt:abbreviation "percent" ;
+    qudt:hasPart mint:u_percent .
+
+mint:ppm a qudt:Unit ;
+    rdfs:label "ppm" ;
+    qudt:abbreviation "ppm" ;
+    qudt:hasPart mint:u_ppm .
+
+mint:year a qudt:Unit ;
+    rdfs:label "year" ;
+    qudt:abbreviation "year" ;
+    qudt:hasPart mint:u_year .
+
+mint:u_0_0_D_degreeangle_deg qudt:conversion_multiplier "0.0174532925" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "D" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#DegreeAngle> ;
+    qudt:symbol "deg" .
+
+mint:u_0_1_0_L_meter_m qudt:conversion_multiplier "1.0" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "L" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#Meter> ;
+    qudt:symbol "m" ;
+    UNK:exponent "0" .
+
+mint:u_0_kilo_1000_0_0_0_M_gram_kg qudt:conversion_multiplier "0.001" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "M" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#Gram> ;
+    qudt:symbol "kg" ;
+    UNK:exponent "0" ;
+    UNK:prefix <http://data.nasa.gov/qudt/owl/unit#Kilo> ;
+    UNK:prefix_conversion_multiplier "1000.0" ;
+    UNK:prefix_conversion_offset "0.0" .
+
+mint:u_10000_0_L2_hectare_ha qudt:conversion_multiplier "10000.0" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "L2" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#Hectare> ;
+    qudt:symbol "ha" .
+
+mint:u_1_0_M_L2_T_3_watt_W qudt:conversion_multiplier "1.0" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "M L2 T-3" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#Watt> ;
+    qudt:symbol "W" .
+
+mint:u_2_1_0_L_meter_m qudt:conversion_multiplier "1.0" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "L" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#Meter> ;
+    qudt:symbol "m" ;
+    UNK:exponent "2" .
+
+mint:u_3_centi_0_0_1_0_L_meter_cm qudt:conversion_multiplier "1.0" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "L" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#Meter> ;
+    qudt:symbol "cm" ;
+    UNK:exponent "3" ;
+    UNK:prefix <http://data.nasa.gov/qudt/owl/unit#Centi> ;
+    UNK:prefix_conversion_multiplier "0.01" ;
+    UNK:prefix_conversion_offset "0.0" .
+
+mint:u_Cs qudt:conversion_multiplier "None" ;
+    qudt:conversion_offset "None" ;
+    qudt:hasDimension "UNKNOWN DIMENSION" ;
+    qudt:quantity "UNKNOWN TYPE" ;
+    qudt:symbol "Cs" .
+
+mint:u_YYYY qudt:conversion_multiplier "None" ;
+    qudt:conversion_offset "None" ;
+    qudt:hasDimension "UNKNOWN DIMENSION" ;
+    qudt:quantity "UNKNOWN TYPE" ;
+    qudt:symbol "YYYY" .
+
+mint:u__1_100_0_0_M_gram_g qudt:conversion_multiplier "0.001" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "M" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#Gram> ;
+    qudt:symbol "g" ;
+    UNK:exponent "-1" ;
+    UNK:multiplier "100" .
+
+mint:u__1_1_0_M_L_1_T_2_pascal_Pa qudt:conversion_multiplier "1.0" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "M L-1 T-2" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#Pascal> ;
+    qudt:symbol "Pa" ;
+    UNK:exponent "-1" .
+
+mint:u__1_31536000_0_T_year365day_yr qudt:conversion_multiplier "31536000.0" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "T" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#Year365Day> ;
+    qudt:symbol "yr" ;
+    UNK:exponent "-1" .
+
+mint:u__1_Cx qudt:conversion_multiplier "None" ;
+    qudt:conversion_offset "None" ;
+    qudt:hasDimension "UNKNOWN DIMENSION" ;
+    qudt:quantity "UNKNOWN TYPE" ;
+    qudt:symbol "Cx" ;
+    UNK:exponent "-1" .
+
+mint:u__1_mega_1000000_0_0_0_M_gram_Mg qudt:conversion_multiplier "0.001" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "M" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#Gram> ;
+    qudt:symbol "Mg" ;
+    UNK:exponent "-1" ;
+    UNK:prefix <http://data.nasa.gov/qudt/owl/unit#Mega> ;
+    UNK:prefix_conversion_multiplier "1000000.0" ;
+    UNK:prefix_conversion_offset "0.0" .
+
+mint:u__1_year qudt:conversion_multiplier "None" ;
+    qudt:conversion_offset "None" ;
+    qudt:hasDimension "UNKNOWN DIMENSION" ;
+    qudt:quantity "UNKNOWN TYPE" ;
+    qudt:symbol "year" ;
+    UNK:exponent "-1" .
+
+mint:u_code qudt:conversion_multiplier "None" ;
+    qudt:conversion_offset "None" ;
+    qudt:hasDimension "UNKNOWN DIMENSION" ;
+    qudt:quantity "UNKNOWN TYPE" ;
+    qudt:symbol "code" .
+
+mint:u_date qudt:conversion_multiplier "None" ;
+    qudt:conversion_offset "None" ;
+    qudt:hasDimension "UNKNOWN DIMENSION" ;
+    qudt:quantity "UNKNOWN TYPE" ;
+    qudt:symbol "date" .
+
+mint:u_decimal qudt:conversion_multiplier "None" ;
+    qudt:conversion_offset "None" ;
+    qudt:hasDimension "UNKNOWN DIMENSION" ;
+    qudt:quantity "UNKNOWN TYPE" ;
+    qudt:symbol "decimal" .
+
+mint:u_deg_C qudt:conversion_multiplier "None" ;
+    qudt:conversion_offset "None" ;
+    qudt:hasDimension "UNKNOWN DIMENSION" ;
+    qudt:quantity "UNKNOWN TYPE" ;
+    qudt:symbol "deg C" .
+
+mint:u_degrees qudt:conversion_multiplier "None" ;
+    qudt:conversion_offset "None" ;
+    qudt:hasDimension "UNKNOWN DIMENSION" ;
+    qudt:quantity "UNKNOWN TYPE" ;
+    qudt:symbol "degrees" .
+
+mint:u_forage qudt:conversion_multiplier "None" ;
+    qudt:conversion_offset "None" ;
+    qudt:hasDimension "UNKNOWN DIMENSION" ;
+    qudt:quantity "UNKNOWN TYPE" ;
+    qudt:symbol "forage" .
+
+mint:u_number qudt:conversion_multiplier "None" ;
+    qudt:conversion_offset "None" ;
+    qudt:hasDimension "UNKNOWN DIMENSION" ;
+    qudt:quantity "UNKNOWN TYPE" ;
+    qudt:symbol "number" .
+
+mint:u_percent qudt:conversion_multiplier "None" ;
+    qudt:conversion_offset "None" ;
+    qudt:hasDimension "UNKNOWN DIMENSION" ;
+    qudt:quantity "UNKNOWN TYPE" ;
+    qudt:symbol "percent" .
+
+mint:u_ppm qudt:conversion_multiplier "None" ;
+    qudt:conversion_offset "None" ;
+    qudt:hasDimension "UNKNOWN DIMENSION" ;
+    qudt:quantity "UNKNOWN TYPE" ;
+    qudt:symbol "ppm" .
+
+mint:u_year qudt:conversion_multiplier "None" ;
+    qudt:conversion_offset "None" ;
+    qudt:hasDimension "UNKNOWN DIMENSION" ;
+    qudt:quantity "UNKNOWN TYPE" ;
+    qudt:symbol "year" .
+
+mint:u_1_0_M_L_1_T_2_pascal_Pa qudt:conversion_multiplier "1.0" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "M L-1 T-2" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#Pascal> ;
+    qudt:symbol "Pa" .
+
+mint:u_1_0_M_L_T_2_newton_N qudt:conversion_multiplier "1.0" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "M L T-2" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#Newton> ;
+    qudt:symbol "N" .
+
+mint:u_1_0_Te_kelvin_K qudt:conversion_multiplier "1.0" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "Te" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#Kelvin> ;
+    qudt:symbol "K" .
+
+mint:u_3_1_0_L_meter_m qudt:conversion_multiplier "1.0" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "L" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#Meter> ;
+    qudt:symbol "m" ;
+    UNK:exponent "3" .
+
+mint:u_86400_0_T_day_day qudt:conversion_multiplier "86400.0" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "T" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#Day> ;
+    qudt:symbol "day" .
+
+mint:u_USD qudt:conversion_multiplier "None" ;
+    qudt:conversion_offset "None" ;
+    qudt:hasDimension "UNKNOWN DIMENSION" ;
+    qudt:quantity "UNKNOWN TYPE" ;
+    qudt:symbol "USD" .
+
+mint:u__100_x qudt:conversion_multiplier "None" ;
+    qudt:conversion_offset "None" ;
+    qudt:hasDimension "UNKNOWN DIMENSION" ;
+    qudt:quantity "UNKNOWN TYPE" ;
+    qudt:symbol "x" ;
+    UNK:exponent "-100" .
+
+mint:u__1_1_0_L_meter_m qudt:conversion_multiplier "1.0" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "L" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#Meter> ;
+    qudt:symbol "m" ;
+    UNK:exponent "-1" .
+
+mint:u__1_1_0_T_secondtime_s qudt:conversion_multiplier "1.0" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "T" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#SecondTime> ;
+    qudt:symbol "s" ;
+    UNK:exponent "-1" .
+
+mint:u__1_86400_0_T_day_d qudt:conversion_multiplier "86400.0" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "T" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#Day> ;
+    qudt:symbol "d" ;
+    UNK:exponent "-1" .
+
+mint:u__1_h qudt:conversion_multiplier "None" ;
+    qudt:conversion_offset "None" ;
+    qudt:hasDimension "UNKNOWN DIMENSION" ;
+    qudt:quantity "UNKNOWN TYPE" ;
+    qudt:symbol "h" ;
+    UNK:exponent "-1" .
+
+mint:u__3_1_0_L_meter_m qudt:conversion_multiplier "1.0" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "L" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#Meter> ;
+    qudt:symbol "m" ;
+    UNK:exponent "-3" .
+
+mint:u__3_centi_0_0_1_0_L_meter_cm qudt:conversion_multiplier "1.0" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "L" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#Meter> ;
+    qudt:symbol "cm" ;
+    UNK:exponent "-3" ;
+    UNK:prefix <http://data.nasa.gov/qudt/owl/unit#Centi> ;
+    UNK:prefix_conversion_multiplier "0.01" ;
+    UNK:prefix_conversion_offset "0.0" .
+
+mint:u_centi_0_0_1_0_L_meter_cm qudt:conversion_multiplier "1.0" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "L" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#Meter> ;
+    qudt:symbol "cm" ;
+    UNK:prefix <http://data.nasa.gov/qudt/owl/unit#Centi> ;
+    UNK:prefix_conversion_multiplier "0.01" ;
+    UNK:prefix_conversion_offset "0.0" .
+
+mint:u_mega_1000000_0_1_0_M_L2_T_2_joule_MJ qudt:conversion_multiplier "1.0" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "M L2 T-2" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#Joule> ;
+    qudt:symbol "MJ" ;
+    UNK:prefix <http://data.nasa.gov/qudt/owl/unit#Mega> ;
+    UNK:prefix_conversion_multiplier "1000000.0" ;
+    UNK:prefix_conversion_offset "0.0" .
+
+mint:u_0_0_M_gram_g qudt:conversion_multiplier "0.001" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "M" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#Gram> ;
+    qudt:symbol "g" .
+
+mint:u__1_kilo_1000_0_0_0_M_gram_kg qudt:conversion_multiplier "0.001" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "M" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#Gram> ;
+    qudt:symbol "kg" ;
+    UNK:exponent "-1" ;
+    UNK:prefix <http://data.nasa.gov/qudt/owl/unit#Kilo> ;
+    UNK:prefix_conversion_multiplier "1000.0" ;
+    UNK:prefix_conversion_offset "0.0" .
+
+mint:u_milli_0_0_1_0_L_meter_mm qudt:conversion_multiplier "1.0" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "L" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#Meter> ;
+    qudt:symbol "mm" ;
+    UNK:prefix <http://data.nasa.gov/qudt/owl/unit#Milli> ;
+    UNK:prefix_conversion_multiplier "0.001" ;
+    UNK:prefix_conversion_offset "0.0" .
+
+mint:u_1_0_coulomb_C qudt:conversion_multiplier "1.0" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "DIMENSION NOT IN MAPPING" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#Coulomb> ;
+    qudt:symbol "C" .
+
+mint:u__1_10000_0_L2_hectare_ha qudt:conversion_multiplier "10000.0" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "L2" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#Hectare> ;
+    qudt:symbol "ha" ;
+    UNK:exponent "-1" .
+
+mint:u__1_86400_0_T_day_day qudt:conversion_multiplier "86400.0" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "T" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#Day> ;
+    qudt:symbol "day" ;
+    UNK:exponent "-1" .
+
+mint:u_1_0_L_meter_m qudt:conversion_multiplier "1.0" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "L" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#Meter> ;
+    qudt:symbol "m" .
+
+mint:u_mega_1000000_0_0_0_M_gram_Mg qudt:conversion_multiplier "0.001" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "M" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#Gram> ;
+    qudt:symbol "Mg" ;
+    UNK:prefix <http://data.nasa.gov/qudt/owl/unit#Mega> ;
+    UNK:prefix_conversion_multiplier "1000000.0" ;
+    UNK:prefix_conversion_offset "0.0" .
+
+mint:u__2_1_0_L_meter_m qudt:conversion_multiplier "1.0" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "L" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#Meter> ;
+    qudt:symbol "m" ;
+    UNK:exponent "-2" .
+
+mint:u_kilo_1000_0_0_0_M_gram_kg qudt:conversion_multiplier "0.001" ;
+    qudt:conversion_offset "0.0" ;
+    qudt:hasDimension "M" ;
+    qudt:quantity <http://data.nasa.gov/qudt/owl/unit#Gram> ;
+    qudt:symbol "kg" ;
+    UNK:prefix <http://data.nasa.gov/qudt/owl/unit#Kilo> ;
+    UNK:prefix_conversion_multiplier "1000.0" ;
+    UNK:prefix_conversion_offset "0.0" .
+

@@ -18,7 +18,7 @@ management,management,biomassgrowth
 cycles_transpiration,transpiration in cycles,biomassgrowth;Nuptake
 biomassgrowth,biomass growth,cycles_transpiration;respiration;humification
 Nuptake,N uptake,Ntransport
-respiration,respiration,Nmineralizationandimmobolization
-humification,humification,Nmineralizationandimmobolization
+respiration,respiration,Nmineralizationandimmobalization
+humification,humification,Nmineralizationandimmobalization
 Ntransport,N transport,
 Nmineralizationandimmobalization,N mineralization and immobalization,Ntransport

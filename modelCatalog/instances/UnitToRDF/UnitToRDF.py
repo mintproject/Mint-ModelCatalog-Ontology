@@ -166,23 +166,27 @@ def json_to_rdf(parsed_response, store, MINT, qudtp, ccut):
         if "ccut:multiplier" in has_part[i]:
             store.add((has_part_url, ccut.multiplier, Literal(str(has_part[i]["ccut:multiplier"]))))
 
-        if "qudtp:conversion_multiplier" in has_part[i]:
-            store.add((has_part_url, qudtp.conversion_multiplier, Literal(str((has_part[i]["qudtp:conversion_multiplier"])))))
+        if "qudtp:conversionMultiplier" in has_part[i]:
+            store.add((has_part_url, qudtp.conversion_multiplier, Literal(str((has_part[i]["qudtp:conversionMultiplier"])))))
 
-        if "qudtp:conversion_offset" in has_part[i]:
-            store.add((has_part_url, qudtp.conversion_offset, Literal(str(has_part[i]["qudtp:conversion_offset"]))))
+        if "qudtp:conversionOffset" in has_part[i]:
+            store.add((has_part_url, qudtp.conversion_offset, Literal(str(has_part[i]["qudtp:conversionOffset"]))))
 
         if "ccut:hasDimension" in has_part[i]:
-            store.add((has_part_url, ccut.hasDimension, Literal(str(has_part[i]["ccut:hasDimension"]))))
+            if not str(has_part[i]["ccut:hasDimension"]).startswith("UNKNOWN"):
+                store.add((has_part_url, ccut.hasDimension, Literal(str(has_part[i]["ccut:hasDimension"]))))
 
         if "qudtp:quantityKind" in has_part[i]:
-            if str(has_part[i]["qudtp:quantityKind"]).startswith("UNKNOWN"):
-                store.add((has_part_url, qudtp.quantityKind, Literal(str(has_part[i]["qudtp:quantityKind"]))))
-            else:
+            if not str(has_part[i]["qudtp:quantityKind"]).startswith("UNKNOWN"):
+                #store.add((has_part_url, qudtp.quantityKind, Literal(str(has_part[i]["qudtp:quantityKind"]))))
+                #Do not add unknown stuff. @Amrish, you should add this in the error too.
+                #print("UNKNOWN part for: "+has_part_url)
+            #else:
                 store.add((has_part_url, qudtp.quantityKind, URIRef(has_part[i]["qudtp:quantityKind"])))
 
         if "qudtp:symbol" in has_part[i]:
             store.add((has_part_url, qudtp.symbol, Literal(str(has_part[i]["qudtp:symbol"]))))
+            store.add((has_part_url, RDFS.label, Literal(str(has_part[i]["qudtp:symbol"]))))
 
     # print_turtle(store)
     # turtle_file = metric_url_suffix +".txt"

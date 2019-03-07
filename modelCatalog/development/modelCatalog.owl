@@ -164,7 +164,7 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                                     :VariablePresentation
                                   )
                     ] ;
-         rdfs:comment "Relates the CAG to the process"@en ;
+         rdfs:comment "Property that relates a CAG to its contents (either processes or variables)"@en ;
          rdfs:label "has part"@en .
 
 
@@ -216,7 +216,7 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                                        :VariablePresentation
                                      )
                        ] ;
-            rdfs:comment "Describe the realationship between two processes"@en ;
+            rdfs:comment "Property that describe the causal relationship between two processes, two variables, a process and a variable or a variable and a process"@en ;
             rdfs:label "influences"@en .
 
 
@@ -399,7 +399,8 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
 :hasRelevanceLevel rdf:type owl:DatatypeProperty ;
                    rdfs:domain :VariablePresentation ;
                    rdfs:range xsd:positiveInteger ;
-                   rdfs:comment "A number indicating how important is the target variable presentation. Relevance level may be used to filter out variables to users. The lower the number is, the more relevant it is. That is, a level 1 variable is very important."@en .
+                   rdfs:comment "A number indicating how important is the target variable presentation. Relevance level may be used to filter out variables to users. The lower the number is, the more relevant it is. That is, a level 1 variable is very important."@en ;
+                   rdfs:label "has relevance level"@en .
 
 
 ###  https://w3id.org/mint/modelCatalog#hasShortName

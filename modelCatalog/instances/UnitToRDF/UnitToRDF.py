@@ -97,10 +97,10 @@ def get_dim_abbv_typ_from_json(parsed_response):
 # Other way can be to traverse only values of dictionary object
 def create_metric_hasPart_url(has_part):
     url = "u_"
-    keys_list = ["UNK:prefix_conversion_multiplier", "UNK:prefix_conversion_offset", "UNK:exponent", "UNK:multiplier", "qudt:conversion_multiplier", "qudt:conversion_offset"]
+    keys_list = ["CCUT:prefix_conversion_multiplier", "CCUT:prefix_conversion_offset", "CCUT:exponent", "CCUT:multiplier", "qudt:conversion_multiplier", "qudt:conversion_offset"]
     for i in sorted(has_part):
         # print ((i, has_part[i]))
-        if i =="UNK:prefix" or (i =="qudt:quantity" and has_part[i] != "UNKNOWN TYPE"):
+        if i =="CCUT:prefix" or (i =="qudt:quantity" and has_part[i] != "UNKNOWN TYPE"):
             url += has_part[i].split("#")[1].lower()
             url += "_"
         elif i in keys_list:
@@ -120,22 +120,22 @@ def create_metric_hasPart_url(has_part):
     return url[:-1]
 
 
-def json_to_rdf(parsed_response, store, MINT, QUDT, UNK):
+def json_to_rdf(parsed_response, store, MINT, QUDT, CCUT):
 
     metric_url_suffix = create_metric_url(parsed_response)
     metric_dimension, metric_abbreviation, metric_type = get_dim_abbv_typ_from_json(parsed_response)
     # store = Graph()
     # METRIC = "https://w3id.org/mint/instance/"
     # QUDT = "http://qudt.org/1.1/schema/qudt#"
-    # UNK = "https://www.w3id.org/mint/unk/"
+    # CCUT = "https://www.w3id.org/mint/ccut/"
     # # Bind a few prefix, namespace pairs for pretty output
     # store.bind("metric", METRIC)
     # store.bind("qudt", QUDT)
-    # store.bind("UNK", UNK)
+    # store.bind("CCUT", CCUT)
 
     metric = URIRef(MINT+metric_url_suffix)
     qudt = Namespace(QUDT)
-    unk = Namespace(UNK)
+    ccut = Namespace(CCUT)
 
 
     store.add((metric, qudt.abbreviation, Literal(metric_abbreviation)))
@@ -150,20 +150,20 @@ def json_to_rdf(parsed_response, store, MINT, QUDT, UNK):
         has_part_url = URIRef(MINT + hasPart_url_1)
         store.add((metric, qudt.hasPart, has_part_url))
 
-        if "UNK:prefix" in has_part[i]:
-            store.add((has_part_url, unk.prefix, URIRef(has_part[i]["UNK:prefix"])))
+        if "CCUT:prefix" in has_part[i]:
+            store.add((has_part_url, ccut.prefix, URIRef(has_part[i]["CCUT:prefix"])))
 
-        if "UNK:prefix_conversion_multiplier" in has_part[i]:
-            store.add((has_part_url, unk.prefix_conversion_multiplier, Literal(str(has_part[i]["UNK:prefix_conversion_multiplier"]))))
+        if "CCUT:prefix_conversion_multiplier" in has_part[i]:
+            store.add((has_part_url, ccut.prefix_conversion_multiplier, Literal(str(has_part[i]["CCUT:prefix_conversion_multiplier"]))))
 
-        if "UNK:prefix_conversion_offset" in has_part[i]:
-            store.add((has_part_url, unk.prefix_conversion_offset, Literal(str(has_part[i]["UNK:prefix_conversion_offset"]))))
+        if "CCUT:prefix_conversion_offset" in has_part[i]:
+            store.add((has_part_url, ccut.prefix_conversion_offset, Literal(str(has_part[i]["CCUT:prefix_conversion_offset"]))))
 
-        if "UNK:exponent" in has_part[i]:
-            store.add((has_part_url, unk.exponent, Literal(str(has_part[i]["UNK:exponent"]))))
+        if "CCUT:exponent" in has_part[i]:
+            store.add((has_part_url, ccut.exponent, Literal(str(has_part[i]["CCUT:exponent"]))))
 
-        if "UNK:multiplier" in has_part[i]:
-            store.add((has_part_url, unk.multiplier, Literal(str(has_part[i]["UNK:multiplier"]))))
+        if "CCUT:multiplier" in has_part[i]:
+            store.add((has_part_url, ccut.multiplier, Literal(str(has_part[i]["CCUT:multiplier"]))))
 
         if "qudt:conversion_multiplier" in has_part[i]:
             store.add((has_part_url, qudt.conversion_multiplier, Literal(str((has_part[i]["qudt:conversion_multiplier"])))))
@@ -194,13 +194,13 @@ def json_to_rdf(parsed_response, store, MINT, QUDT, UNK):
 def preprocess_turtle_file(store):
     MINT = "https://w3id.org/mint/instance/"
     QUDT = "http://qudt.org/1.1/schema/qudt#"
-    UNK = "https://www.w3id.org/mint/unk/"
+    CCUT = "https://www.w3id.org/mint/ccut#"
     # Bind a few prefix, namespace pairs for pretty output
     store.bind("mint", MINT)
     store.bind("qudt", QUDT)
-    store.bind("UNK", UNK)
+    store.bind("CCUT", CCUT)
 
-    return store, MINT, QUDT, UNK
+    return store, MINT, QUDT, CCUT
 
 def create_success_json(success_dict):
     with open('dict.json', 'w') as fp:
@@ -224,7 +224,7 @@ if __name__ == '__main__':
     success_dict = dict()
 
     store = Graph()
-    store, MINT, QUDT, UNK = preprocess_turtle_file(store)
+    store, MINT, QUDT, CCUT = preprocess_turtle_file(store)
 
     with open(input_file, "r") as read_file:
         data = json.load(read_file)
@@ -248,7 +248,7 @@ if __name__ == '__main__':
 
             if errorflag == 1:
                 try:
-                    URI, store = json_to_rdf(parsed_response, store, MINT, QUDT, UNK)
+                    URI, store = json_to_rdf(parsed_response, store, MINT, QUDT, CCUT)
                     success_dict[metric] = URI
                     # print URI
                     count+=1

@@ -150,27 +150,29 @@ def json_to_rdf(parsed_response, store, MINT, qudtp, ccut):
         hasPart_url_1 = create_metric_hasPart_url(has_part[i])
         has_part_url = URIRef(MINT + hasPart_url_1)
         store.add((metric, ccut.hasPart, has_part_url))
+        exponent = "1"
 
         if "ccut:prefix" in has_part[i]:
             store.add((has_part_url, ccut.prefix, URIRef(has_part[i]["ccut:prefix"])))
 
-        if "ccut:prefix_conversion_multiplier" in has_part[i]:
-            store.add((has_part_url, ccut.prefix_conversion_multiplier, Literal(str(has_part[i]["ccut:prefix_conversion_multiplier"]))))
+        if "ccut:prefixConversionMultiplier" in has_part[i]:
+            store.add((has_part_url, ccut.prefixConversionMultiplier, Literal(str(has_part[i]["ccut:prefixConversionMultiplier"]))))
 
-        if "ccut:prefix_conversion_offset" in has_part[i]:
-            store.add((has_part_url, ccut.prefix_conversion_offset, Literal(str(has_part[i]["ccut:prefix_conversion_offset"]))))
+        if "ccut:prefixConversionOffset" in has_part[i]:
+            store.add((has_part_url, ccut.prefixConversionOffset, Literal(str(has_part[i]["ccut:prefixConversionOffset"]))))
 
         if "ccut:exponent" in has_part[i]:
-            store.add((has_part_url, ccut.exponent, Literal(str(has_part[i]["ccut:exponent"]))))
+            exponent = str(has_part[i]["ccut:exponent"])
+            store.add((has_part_url, ccut.exponent, Literal(exponent)))
 
         if "ccut:multiplier" in has_part[i]:
             store.add((has_part_url, ccut.multiplier, Literal(str(has_part[i]["ccut:multiplier"]))))
 
         if "qudtp:conversionMultiplier" in has_part[i]:
-            store.add((has_part_url, qudtp.conversion_multiplier, Literal(str((has_part[i]["qudtp:conversionMultiplier"])))))
+            store.add((has_part_url, qudtp.conversionMultiplier, Literal(str((has_part[i]["qudtp:conversionMultiplier"])))))
 
         if "qudtp:conversionOffset" in has_part[i]:
-            store.add((has_part_url, qudtp.conversion_offset, Literal(str(has_part[i]["qudtp:conversionOffset"]))))
+            store.add((has_part_url, qudtp.conversionOffset, Literal(str(has_part[i]["qudtp:conversionOffset"]))))
 
         if "ccut:hasDimension" in has_part[i]:
             if not str(has_part[i]["ccut:hasDimension"]).startswith("UNKNOWN"):
@@ -186,7 +188,8 @@ def json_to_rdf(parsed_response, store, MINT, qudtp, ccut):
 
         if "qudtp:symbol" in has_part[i]:
             store.add((has_part_url, qudtp.symbol, Literal(str(has_part[i]["qudtp:symbol"]))))
-            store.add((has_part_url, RDFS.label, Literal(str(has_part[i]["qudtp:symbol"]))))
+            #assumption: all unit parts have a symbol.
+            store.add((has_part_url, RDFS.label, Literal(str(has_part[i]["qudtp:symbol"]) +"^"+ exponent)))
 
     # print_turtle(store)
     # turtle_file = metric_url_suffix +".txt"

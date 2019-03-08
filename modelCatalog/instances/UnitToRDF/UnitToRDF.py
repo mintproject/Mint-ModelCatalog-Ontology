@@ -201,7 +201,7 @@ def json_to_rdf(parsed_response, store, MINT, qudtp, ccut):
 
 def preprocess_turtle_file(store):
     MINT = "https://w3id.org/mint/instance/"
-    qudtp = "http://qudtp.org/1.1/schema/qudtp#"
+    qudtp = "http://qudt.org/1.1/schema/qudt#"# to fix when I get the right NS.
     ccut = "https://www.w3id.org/mint/ccut#"
     # Bind a few prefix, namespace pairs for pretty output
     store.bind("mint", MINT)

@@ -1,6 +1,6 @@
 @prefix ccut: <https://www.w3id.org/mint/ccut#> .
 @prefix mint: <https://w3id.org/mint/instance/> .
-@prefix qudtp: <http://qudt.org/1.1/schema/qudt#> .
+@prefix qudtp: <http://qudtp.org/1.1/schema/qudtp#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .

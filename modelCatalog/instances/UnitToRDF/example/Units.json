@@ -125,9 +125,6 @@
         "units": { "type": "literal" , "value": "W m-2" }
       } ,
       {
-        "units": { "type": "literal" , "value": "forage" }
-      } ,
-      {
         "units": { "type": "literal" , "value": "kg N/ha" }
       } ,
       {
@@ -167,19 +164,13 @@
         "units": { "type": "literal" , "value": "1/m" }
       } ,
       {
-        "units": { "type": "literal" , "value": "deg C" }
-      } ,
-      {
-        "units": { "type": "literal" , "value": "kg kg-1" }
+        "units": { "type": "literal" , "value": "kg/kg" }
       } ,
       {
         "units": { "type": "literal" , "value": "Mg/Mg" }
       } ,
       {
         "units": { "type": "literal" , "value": "m^3 m-3" }
-      } ,
-      {
-        "units": { "type": "literal" , "value": "crop_biomass~above-ground-and-roots__mass-per-area_density" }
       } ,
       {
         "units": { "type": "literal" , "value": "kg C" }
@@ -194,13 +185,10 @@
         "units": { "type": "literal" , "value": "m s-1" }
       } ,
       {
-        "units": { "type": "literal" , "value": "ground~above_crop_residue_pool_carbon__decomposed_mass-per-area_density" }
-      } ,
-      {
         "units": { "type": "literal" , "value": "Cs/Cx" }
       } ,
       {
-        "units": { "type": "literal" , "value": "crop_nitrogen__thermal-time-to-maturity_weighted_stress_fraction" }
+        "units": { "type": "literal" , "value": "degC" }
       }
     ]
   }

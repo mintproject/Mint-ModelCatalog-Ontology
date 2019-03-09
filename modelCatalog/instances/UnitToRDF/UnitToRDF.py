@@ -8,6 +8,7 @@ from rdflib import Graph, Literal, BNode, RDF, Namespace, URIRef
 from rdflib.namespace import RDFS
 import csv
 import sys
+import traceback
 
 pp = pprint.PrettyPrinter(indent=2)
 
@@ -76,8 +77,8 @@ def api_request(metric):
 
 
 def create_metric_url(parsed_response):
-    url_string = parsed_response["qudt:abbreviation"]
-    url_string1 = url_string + parsed_response["qudt:hasDimension"]
+    url_string = parsed_response["qudtp:abbreviation"]
+    url_string1 = url_string + parsed_response["ccut:hasDimension"]
     url_string2 = url_string1.replace("-", "_")
     url_string3 = url_string2.replace(" ","_")
     return url_string3
@@ -89,18 +90,18 @@ def print_turtle(store):
 
 
 def get_dim_abbv_typ_from_json(parsed_response):
-    abbreviation = parsed_response["qudt:abbreviation"]
-    dimension = parsed_response["qudt:hasDimension"]
-    type = parsed_response["rdf:type"]
-    return dimension, abbreviation, type
+    #print(parsed_response)
+    abbreviation = parsed_response["qudtp:abbreviation"]
+    dimension = parsed_response["ccut:hasDimension"]
+    return dimension, abbreviation
 
 # Other way can be to traverse only values of dictionary object
 def create_metric_hasPart_url(has_part):
     url = "u_"
-    keys_list = ["UNK:prefix_conversion_multiplier", "UNK:prefix_conversion_offset", "UNK:exponent", "UNK:multiplier", "qudt:conversion_multiplier", "qudt:conversion_offset"]
+    keys_list = ["ccut:prefix_conversion_multiplier", "ccut:prefix_conversion_offset", "ccut:exponent", "ccut:multiplier", "qudtp:conversion_multiplier", "qudtp:conversion_offset"]
     for i in sorted(has_part):
         # print ((i, has_part[i]))
-        if i =="UNK:prefix" or (i =="qudt:quantity" and has_part[i] != "UNKNOWN TYPE"):
+        if i =="ccut:prefix" or (i =="qudtp:quantityKind" and has_part[i] != "UNKNOWN TYPE"):
             url += has_part[i].split("#")[1].lower()
             url += "_"
         elif i in keys_list:
@@ -110,7 +111,7 @@ def create_metric_hasPart_url(has_part):
                 url_string3 = url_string2.replace(" ", "_")
                 url += url_string3
                 url += "_"
-        elif i == "qudt:symbol" or (i== "qudt:hasDimension" and has_part[i] != "UNKNOWN DIMENSION"
+        elif i == "qudtp:symbol" or (i== "ccut:hasDimension" and has_part[i] != "UNKNOWN DIMENSION"
                                     and has_part[i] != "DIMENSION NOT IN MAPPING"):
             url_string2 = has_part[i].replace("-", "_")
             url_string3 = url_string2.replace(" ", "_")
@@ -120,68 +121,75 @@ def create_metric_hasPart_url(has_part):
     return url[:-1]
 
 
-def json_to_rdf(parsed_response, store, MINT, QUDT, UNK):
+def json_to_rdf(parsed_response, store, MINT, qudtp, ccut):
 
     metric_url_suffix = create_metric_url(parsed_response)
-    metric_dimension, metric_abbreviation, metric_type = get_dim_abbv_typ_from_json(parsed_response)
+    metric_dimension, metric_abbreviation = get_dim_abbv_typ_from_json(parsed_response)
     # store = Graph()
     # METRIC = "https://w3id.org/mint/instance/"
-    # QUDT = "http://qudt.org/1.1/schema/qudt#"
-    # UNK = "https://www.w3id.org/mint/unk/"
+    # qudtp = "http://qudt.org/1.1/schema/qudt#"
+    # ccut = "https://www.w3id.org/mint/ccut/"
     # # Bind a few prefix, namespace pairs for pretty output
     # store.bind("metric", METRIC)
-    # store.bind("qudt", QUDT)
-    # store.bind("UNK", UNK)
+    # store.bind("qudtp", qudtp)
+    # store.bind("ccut", ccut)
 
     metric = URIRef(MINT+metric_url_suffix)
-    qudt = Namespace(QUDT)
-    unk = Namespace(UNK)
+    qudtp = Namespace(qudtp)
+    ccut = Namespace(ccut)
 
 
-    store.add((metric, qudt.abbreviation, Literal(metric_abbreviation)))
+    store.add((metric, qudtp.abbreviation, Literal(metric_abbreviation)))
     store.add((metric, RDFS.label, Literal(metric_abbreviation)))
     if metric_dimension != "":
-        store.add((metric, qudt.hasDimension, Literal(metric_dimension)))
-    store.add((metric, RDF.type, qudt.Unit))
+        store.add((metric, ccut.hasDimension, Literal(metric_dimension)))
+    store.add((metric, RDF.type, qudtp.Unit))
 
-    has_part = parsed_response["qudt:_hasPart_"]
+    has_part = parsed_response["ccut:hasPart"]
     for i in range(len(has_part)):
         hasPart_url_1 = create_metric_hasPart_url(has_part[i])
         has_part_url = URIRef(MINT + hasPart_url_1)
-        store.add((metric, qudt.hasPart, has_part_url))
+        store.add((metric, ccut.hasPart, has_part_url))
+        exponent = "1"
 
-        if "UNK:prefix" in has_part[i]:
-            store.add((has_part_url, unk.prefix, URIRef(has_part[i]["UNK:prefix"])))
+        if "ccut:prefix" in has_part[i]:
+            store.add((has_part_url, ccut.prefix, URIRef(has_part[i]["ccut:prefix"])))
 
-        if "UNK:prefix_conversion_multiplier" in has_part[i]:
-            store.add((has_part_url, unk.prefix_conversion_multiplier, Literal(str(has_part[i]["UNK:prefix_conversion_multiplier"]))))
+        if "ccut:prefixConversionMultiplier" in has_part[i]:
+            store.add((has_part_url, ccut.prefixConversionMultiplier, Literal(str(has_part[i]["ccut:prefixConversionMultiplier"]))))
 
-        if "UNK:prefix_conversion_offset" in has_part[i]:
-            store.add((has_part_url, unk.prefix_conversion_offset, Literal(str(has_part[i]["UNK:prefix_conversion_offset"]))))
+        if "ccut:prefixConversionOffset" in has_part[i]:
+            store.add((has_part_url, ccut.prefixConversionOffset, Literal(str(has_part[i]["ccut:prefixConversionOffset"]))))
 
-        if "UNK:exponent" in has_part[i]:
-            store.add((has_part_url, unk.exponent, Literal(str(has_part[i]["UNK:exponent"]))))
+        if "ccut:exponent" in has_part[i]:
+            exponent = str(has_part[i]["ccut:exponent"])
+            store.add((has_part_url, ccut.exponent, Literal(exponent)))
 
-        if "UNK:multiplier" in has_part[i]:
-            store.add((has_part_url, unk.multiplier, Literal(str(has_part[i]["UNK:multiplier"]))))
+        if "ccut:multiplier" in has_part[i]:
+            store.add((has_part_url, ccut.multiplier, Literal(str(has_part[i]["ccut:multiplier"]))))
 
-        if "qudt:conversion_multiplier" in has_part[i]:
-            store.add((has_part_url, qudt.conversion_multiplier, Literal(str((has_part[i]["qudt:conversion_multiplier"])))))
+        if "qudtp:conversionMultiplier" in has_part[i]:
+            store.add((has_part_url, qudtp.conversionMultiplier, Literal(str((has_part[i]["qudtp:conversionMultiplier"])))))
 
-        if "qudt:conversion_offset" in has_part[i]:
-            store.add((has_part_url, qudt.conversion_offset, Literal(str(has_part[i]["qudt:conversion_offset"]))))
+        if "qudtp:conversionOffset" in has_part[i]:
+            store.add((has_part_url, qudtp.conversionOffset, Literal(str(has_part[i]["qudtp:conversionOffset"]))))
 
-        if "qudt:hasDimension" in has_part[i]:
-            store.add((has_part_url, qudt.hasDimension, Literal(str(has_part[i]["qudt:hasDimension"]))))
+        if "ccut:hasDimension" in has_part[i]:
+            if not str(has_part[i]["ccut:hasDimension"]).startswith("UNKNOWN"):
+                store.add((has_part_url, ccut.hasDimension, Literal(str(has_part[i]["ccut:hasDimension"]))))
 
-        if "qudt:quantity" in has_part[i]:
-            if str(has_part[i]["qudt:quantity"]).startswith("UNKNOWN"):
-                store.add((has_part_url, qudt.quantity, Literal(str(has_part[i]["qudt:quantity"]))))
-            else:
-                store.add((has_part_url, qudt.quantity, URIRef(has_part[i]["qudt:quantity"])))
+        if "qudtp:quantityKind" in has_part[i]:
+            if not str(has_part[i]["qudtp:quantityKind"]).startswith("UNKNOWN"):
+                #store.add((has_part_url, qudtp.quantityKind, Literal(str(has_part[i]["qudtp:quantityKind"]))))
+                #Do not add unknown stuff. @Amrish, you should add this in the error too.
+                #print("UNKNOWN part for: "+has_part_url)
+            #else:
+                store.add((has_part_url, qudtp.quantityKind, URIRef(has_part[i]["qudtp:quantityKind"])))
 
-        if "qudt:symbol" in has_part[i]:
-            store.add((has_part_url, qudt.symbol, Literal(str(has_part[i]["qudt:symbol"]))))
+        if "qudtp:symbol" in has_part[i]:
+            store.add((has_part_url, qudtp.symbol, Literal(str(has_part[i]["qudtp:symbol"]))))
+            #assumption: all unit parts have a symbol.
+            store.add((has_part_url, RDFS.label, Literal(str(has_part[i]["qudtp:symbol"]) +"^"+ exponent)))
 
     # print_turtle(store)
     # turtle_file = metric_url_suffix +".txt"
@@ -193,14 +201,14 @@ def json_to_rdf(parsed_response, store, MINT, QUDT, UNK):
 
 def preprocess_turtle_file(store):
     MINT = "https://w3id.org/mint/instance/"
-    QUDT = "http://qudt.org/1.1/schema/qudt#"
-    UNK = "https://www.w3id.org/mint/unk/"
+    qudtp = "http://qudt.org/1.1/schema/qudt#"# to fix when I get the right NS.
+    ccut = "https://www.w3id.org/mint/ccut#"
     # Bind a few prefix, namespace pairs for pretty output
     store.bind("mint", MINT)
-    store.bind("qudt", QUDT)
-    store.bind("UNK", UNK)
+    store.bind("qudtp", qudtp)
+    store.bind("ccut", ccut)
 
-    return store, MINT, QUDT, UNK
+    return store, MINT, qudtp, ccut
 
 def create_success_json(success_dict):
     with open('dict.json', 'w') as fp:
@@ -213,18 +221,19 @@ def create_error_json(error_dict):
 
 
 def create_turtle_file(store):
-    f = open('units.ttl', "w")
+    f = open('units.ttl', "wb")
     f.write(store.serialize(format="turtle"))
     f.close()
 
 if __name__ == '__main__':
     input_file = "Units.json"
+    #Change this to be your file of choice
     # input_file = sys.argv[1]
     error_dict = dict()
     success_dict = dict()
 
     store = Graph()
-    store, MINT, QUDT, UNK = preprocess_turtle_file(store)
+    store, MINT, qudtp, ccut = preprocess_turtle_file(store)
 
     with open(input_file, "r") as read_file:
         data = json.load(read_file)
@@ -248,11 +257,13 @@ if __name__ == '__main__':
 
             if errorflag == 1:
                 try:
-                    URI, store = json_to_rdf(parsed_response, store, MINT, QUDT, UNK)
+                    URI, store = json_to_rdf(parsed_response, store, MINT, qudtp, ccut)
                     success_dict[metric] = URI
                     # print URI
                     count+=1
-                except:
+                except Exception as e:
+                    print(e)
+                    traceback.print_exc()
                     error_dict[metric] = "Input Error"
 
         create_success_json(success_dict)

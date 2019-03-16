@@ -72,7 +72,7 @@ econ_p,p,p,crop prices,crop prices received by farmer in USD,farmer_crop__receiv
 econ_eta,eta,eta,supply elasticities,percent change in crop supply divided by percent change in crop price,crop__supply_elasticity,,,,,,2,econ_obsyield;econ_land_area
 econ_c1,c1,c1,land cost,costs of production per unit land area,land_crop__production_cost-per-area,USD/ha,,,,,2,econ_obsyield;econ_land_area
 econ_c2,c2,c2,nitrogen fertilizer cost,costs of fertilizer use per unit applied,fertilizer~nitrogen__usage-cost-per-applied-mass,USD/kg,fertilizer~nitrogen__usage-cost-per-applied-mass,,,,1,econ_obsyield;econ_land_area
-econ_ybarN,ybarN,ybarN,yield elasticity,percent change in crop yield divided by percent change in nitrogen fertilizer use (from agriculture model such as Cycles),crop_fertilizer~nitrogen__yield_elasticity,,crop_fertilizer~nitrogen__yield_elasticity,,,,2,econ_land_area
+econ_ybarN,ybarN,ybarN,yield elasticity,percent change in crop yield divided by percent change in nitrogen fertilizer use (from agriculture model such as Cycles),crop_fertilizer~nitrogen__yield_elasticity,,crop_fertilizer~nitrogen__yield_elasticity,,,,1,econ_land_area
 econ_fert_subsidy,fert_subsidy,fert_subsidy,nitrogen fertilizer subsidy,percent reduction in nitrogen fertilizer cost per unit applied,fertilizer~nitrogen__application_reduced_cost_fraction,percent,,,,,2,
 econ_land_area,land area,land area,land allocation,land area by crop (simulated),land_crop__simulated_allocated_area,ha,land_crop__allocated_area,,,,1,econ_obsyield;econ_production
 econ_obsyield,obsyield,obsyield,crop yields,crop yields per unit land area (simulated),land_crop__simulated_mass-per-area_yield,kg/ha,land_crop__mass-per-area_yield,,,,1,econ_land_area;econ_production

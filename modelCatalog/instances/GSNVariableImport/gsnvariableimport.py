@@ -4,6 +4,7 @@ import json
 from SPARQLWrapper import SPARQLWrapper, JSON
 import rdflib
 import re
+import sys
 
 
 def create_turtle_file(store):
@@ -18,9 +19,15 @@ def create_error_file(error_dict):
 
 
 if __name__ == '__main__':
+    mode = sys.argv[1]
+    # mode = "interactive"
     store = Graph()
     error_dict = dict()
     property_object_list = list()
+    wiki_variable_list = set()
+    ccut = "https://www.w3id.org/mint/ccut#"
+    store.bind("ccut", ccut)
+    ccut = Namespace(ccut)
     sparql = SPARQLWrapper("http://ontosoft.isi.edu:3030/ds/query")
     sparql.setQuery("""
     PREFIX mc: <https://w3id.org/mint/modelCatalog#>
@@ -94,6 +101,15 @@ where {
                 if predicate.endswith("hasUnits"):
                     obj1 = obj.replace("^", "")
                     obj = obj1
+                    store.add((URIRef(subject), ccut.hasDimension, Literal(obj)))
+                    continue
+
+                if predicate.endswith("hasAssociatedWikipediaPage"):
+                    obj1 = str(obj).split("wiki/", 1)[1]
+                    obj1 = obj1.lower()
+                    obj2 = obj1.replace("_", " ")
+                    obj2 = str(obj2).split("#",1)[0]
+                    wiki_variable_list.add(obj2)
 
                 if property_result["b"]["type"] == "uri":
                     if property_result["c"]["type"] == "uri":
@@ -102,6 +118,57 @@ where {
                     else:
                         store.add((URIRef(subject), URIRef(predicate),
                                    Literal(obj)))
+    sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
+    for wiki_var in wiki_variable_list:
+        sparql_query = """
+        select ?a ?c where {?a rdfs:label \"""" + wiki_var +"""\"@en. 
+                            ?a schema:description ?c.
+                           FILTER (lang(?c) = 'en')}
+        """
+
+        sparql.setQuery(sparql_query)
+        sparql.setReturnFormat(JSON)
+        results2 = sparql.query().convert()
+        number_of_options = len(results2["results"]["bindings"])
+
+        if number_of_options == 0:
+            continue
+
+        if number_of_options == 1:
+            for res in results2["results"]["bindings"]:
+                value = res['c']['value']
+                store.add((Literal(wiki_var), URIRef("https://schema.org/description"), Literal(value)))
+
+        if mode == 'i':
+            if number_of_options > 1:
+                serial_number = 1
+                request = ""
+                for res in results2["results"]["bindings"]:
+                    value = res['c']['value']
+                    request += str(serial_number)+": " + str(value + "\n")
+                    serial_number+=1
+
+                option = raw_input("Please select the most appropriate option for the variable description\n"
+                                   "Variable :-" + wiki_var + "\n"
+                                   + request
+                                   )
+                try:
+                    option = int(option)
+                except:
+                    option = raw_input("Please input integer as option")
+                    option = int(option)
+                while option < 1 or option > number_of_options:
+                    print "Wrong Input."
+                    option = raw_input("Please input again")
+                    try:
+                        option = int(option)
+                    except ValueError:
+                        continue
+
+                res = results2["results"]["bindings"][option - 1]
+                value = res['c']['value']
+                store.add((Literal(wiki_var), URIRef("https://schema.org/description"), Literal(value)))
+
 
     create_turtle_file(store)
     create_error_file(error_dict)

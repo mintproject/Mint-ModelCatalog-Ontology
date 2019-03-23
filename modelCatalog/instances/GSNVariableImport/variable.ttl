@@ -2,13 +2,14 @@
 @prefix ns1: <http://www.geoscienceontology.org/svo/svu#> .
 @prefix ns2: <http://www.w3.org/2004/02/skos/core#> .
 @prefix ns3: <https://schema.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28%28channel_bottom%29%40context%257Eon_%28sediment_grain%29%29%40medium_water__hydraulic_conductivity> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "channel_bottom_sediment_grain_water__hydraulic_conductivity" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28channel_bottom%29%40context%257Eon> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/form#channel_bottom> ;
@@ -21,7 +22,7 @@
     ns2:prefLabel "channel_bottom_sediment_grain_water__hydraulic_conductivity" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28atmosphere_bottom%29%40context%257Ein_%28air%40medium_water%257Evapor%29__partial_pressure> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "atmosphere_bottom_air_water~vapor__partial_pressure" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28atmosphere_bottom%29%40context%257Ein> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/body#atmosphere_bottom> ;
@@ -34,7 +35,7 @@
     ns2:prefLabel "atmosphere_bottom_air_water~vapor__partial_pressure" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28atmosphere_bottom%29%40context%257Ein_%28air_flowing%29__log-law_roughness_length> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "atmosphere_bottom_air_flow__log-law_roughness_length" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28atmosphere_bottom%29%40context%257Ein> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/body#atmosphere_bottom> ;
@@ -46,7 +47,7 @@
     ns2:prefLabel "atmosphere_bottom_air_flow__log-law_roughness_length" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28atmosphere_bottom%29%40context%257Ein_air__average_of_temperature> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "atmosphere_bottom_air__average_of_temperature" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28atmosphere_bottom%29%40context%257Ein> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/body#atmosphere_bottom> ;
@@ -56,7 +57,7 @@
     ns2:prefLabel "atmosphere_bottom_air__average_of_temperature" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28atmosphere_bottom%29%40context%257Ein_air__temperature> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "atmosphere_bottom_air__temperature" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28atmosphere_bottom%29%40context%257Ein> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/body#atmosphere_bottom> ;
@@ -66,7 +67,7 @@
     ns2:prefLabel "atmosphere_bottom_air__temperature" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28channel%257Eriver_bed%29%40context%257Esink_%28water_flowing%29__lateral_volume_flux> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "channel~river_bed_water~incoming__lateral_volume_flux" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28channel%257Eriver_bed%29%40context%257Esink> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/body#channel%257Eriver_bed> ;
@@ -78,7 +79,7 @@
     ns2:prefLabel "channel~river_bed_water~incoming__lateral_volume_flux" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28channel%257Eriver_bed%29%40context%257Esource_%28water_flowing%29__lateral_volume_flux> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "channel~river_bed_water~outgoing__lateral_volume_flux" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28channel%257Eriver_bed%29%40context%257Esource> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/body#channel%257Eriver_bed> ;
@@ -90,7 +91,7 @@
     ns2:prefLabel "channel~river_bed_water~outgoing__lateral_volume_flux" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28channel%257Eriver_bed%29%40medium_water__volume-per-area_storage_capacity> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "channel~river_bed_water__volume-per-area_storage_capacity" ;
     ns1:containsMediumObject <http://www.geoscienceontology.org/svo/svl/body#channel%257Eriver_bed> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/body#channel%257Eriver_bed>,
@@ -100,7 +101,7 @@
     ns2:prefLabel "channel~river_bed_water__volume-per-area_storage_capacity" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28channel%257Eriver_bed%29%40role%257Eexchange_%28channel%257Estream%40context%257Epart_reach%29%40role%257Eexchange_%28water_flowing%29%40role%257Emain_leakage__leakage_volume_flux> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "channel~river_bed_channel~stream_reach_water__leakage_volume_flux" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#channel%257Estream%40context%257Epart> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/body#channel%257Estream> ;
@@ -117,7 +118,7 @@
     ns2:prefLabel "channel~river_bed_channel~stream_reach_water__leakage_volume_flux" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28channel%257Estream%40context%257Epart_reach%29%40context%257Esink_%28water_flowing%29__lateral_volume_flux> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "channel~stream_reach_water~incoming__lateral_volume_flux" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28channel%257Estream%40context%257Epart_reach%29%40context%257Esink>,
         <http://www.geoscienceontology.org/svo/svl/context#channel%257Estream%40context%257Epart> ;
@@ -132,7 +133,7 @@
     ns2:prefLabel "channel~stream_reach_water~incoming__lateral_volume_flux" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28channel%257Estream%40context%257Epart_reach%29%40context%257Esource_%28water_flowing%29__lateral_volume_flux> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "channel~stream_reach_water~outgoing__lateral_volume_flux" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28channel%257Estream%40context%257Epart_reach%29%40context%257Esource>,
         <http://www.geoscienceontology.org/svo/svl/context#channel%257Estream%40context%257Epart> ;
@@ -147,7 +148,7 @@
     ns2:prefLabel "channel~stream_reach_water~outgoing__lateral_volume_flux" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28channel_bed%29_%28channel%40context%257Epart_bank%29%40reference%257Ebelow__depth> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "channel_bed_below-channel-bank__depth" ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/body#channel_bed>,
         <http://www.geoscienceontology.org/svo/svl/phenomenon#%28channel_bed%29_%28channel%40context%257Epart_bank%29%40reference%257Ebelow> ;
@@ -155,7 +156,7 @@
     ns2:prefLabel "channel_bed_below-channel-bank__depth" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28crop_production%29%40role%257Enumerator_%28fertilizer%257Enitrogen_utilization%29%40role%257Edenominator__yield_elasticity> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "crop_fertilizer~nitrogen__yield_elasticity" ;
     ns1:describesProcess <http://www.geoscienceontology.org/svo/svl/process#production>,
         <http://www.geoscienceontology.org/svo/svl/process#utilization> ;
@@ -168,7 +169,7 @@
     ns2:prefLabel "crop_fertilizer~nitrogen__yield_elasticity" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28fertilizer%257Enitrogen_utilization%29%40role%257Enumerator_%28fertilizer%257Enitrogen_application%29%40role%257Edenominator__usage-cost-per-applied-mass> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "fertilizer~nitrogen__usage-cost-per-applied-mass" ;
     ns1:describesProcess <http://www.geoscienceontology.org/svo/svl/process#application>,
         <http://www.geoscienceontology.org/svo/svl/process#utilization> ;
@@ -181,7 +182,7 @@
     ns2:prefLabel "fertilizer~nitrogen__usage-cost-per-applied-mass" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_allocation%29%40medium_crop__observed_allocated_area> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_crop__observed_allocated_area" ;
     ns1:containsMediumObject <http://www.geoscienceontology.org/svo/svl/phenomenon#land_allocation> ;
     ns1:describesProcess <http://www.geoscienceontology.org/svo/svl/process#allocation> ;
@@ -193,7 +194,7 @@
     ns2:prefLabel "land_crop__observed_allocated_area" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_allocation%29%40medium_crop__simulated_allocated_area> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_crop__simulated_allocated_area" ;
     ns1:containsMediumObject <http://www.geoscienceontology.org/svo/svl/phenomenon#land_allocation> ;
     ns1:describesProcess <http://www.geoscienceontology.org/svo/svl/process#allocation> ;
@@ -205,7 +206,7 @@
     ns2:prefLabel "land_crop__simulated_allocated_area" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_subsurface%29%40context%257Eat_aquifer%257Eleft%40context%257Esource_%28channel%257Eriver_bed%29%40context%257Esink_%28water_flowing%29__volume_flux> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_subsurface_aquifer~left_channel~river_bed_water__volume_flux" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28channel%257Eriver_bed%29%40context%257Esink>,
         <http://www.geoscienceontology.org/svo/svl/context#%28land_subsurface%29%40context%257Eat>,
@@ -221,7 +222,7 @@
     ns2:prefLabel "land_subsurface_aquifer~left_channel~river_bed_water__volume_flux" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_subsurface%29%40context%257Eat_aquifer%257Eright%40context%257Esource_%28channel%257Eriver_bed%29%40context%257Esink_%28water_flowing%29__volume_flux> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_subsurface_aquifer~right_channel~river_bed_water__volume_flux" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28channel%257Eriver_bed%29%40context%257Esink>,
         <http://www.geoscienceontology.org/svo/svl/context#%28land_subsurface%29%40context%257Eat>,
@@ -237,7 +238,7 @@
     ns2:prefLabel "land_subsurface_aquifer~right_channel~river_bed_water__volume_flux" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_subsurface%29%40context%257Esource_%28water_runoff%29__runoff_mass_flux> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_subsurface_water__runoff_mass_flux" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28land_subsurface%29%40context%257Esource> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/body#land_subsurface> ;
@@ -249,7 +250,7 @@
     ns2:prefLabel "land_subsurface_water__runoff_mass_flux" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_surface%29%40context%257E0-to-10cm-below_%28soil%40medium_water%29__volume_fraction> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_surface~0-to-10cm-below_soil_water__volume_fraction" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28land_surface%29%40context%257E0-to-10cm-below> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/phenomenon#land_surface> ;
@@ -262,7 +263,7 @@
     ns2:prefLabel "land_surface~0-to-10cm-below_soil_water__volume_fraction" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_surface%29%40context%257E0-to-10cm-below_soil__temperature> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_surface~0-to-10cm-below_soil__temperature" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28land_surface%29%40context%257E0-to-10cm-below> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/phenomenon#land_surface> ;
@@ -272,7 +273,7 @@
     ns2:prefLabel "land_surface~0-to-10cm-below_soil__temperature" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_surface%29%40context%257E10-to-40cm-below_%28soil%40medium_water%29__volume_fraction> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_surface~10-to-40cm-below_soil_water__volume_fraction" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28land_surface%29%40context%257E10-to-40cm-below> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/phenomenon#land_surface> ;
@@ -285,7 +286,7 @@
     ns2:prefLabel "land_surface~10-to-40cm-below_soil_water__volume_fraction" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_surface%29%40context%257E10-to-40cm-below_soil__temperature> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_surface~10-to-40cm-below_soil__temperature" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28land_surface%29%40context%257E10-to-40cm-below> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/phenomenon#land_surface> ;
@@ -295,7 +296,7 @@
     ns2:prefLabel "land_surface~10-to-40cm-below_soil__temperature" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_surface%29%40context%257E100-to-200cm-below_%28soil%40medium_water%29__volume_fraction> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_surface~100-to-200cm-below_soil_water__volume_fraction" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28land_surface%29%40context%257E100-to-200cm-below> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/phenomenon#land_surface> ;
@@ -308,7 +309,7 @@
     ns2:prefLabel "land_surface~100-to-200cm-below_soil_water__volume_fraction" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_surface%29%40context%257E100-to-200cm-below_soil__temperature> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_surface~100-to-200cm-below_soil__temperature" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28land_surface%29%40context%257E100-to-200cm-below> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/phenomenon#land_surface> ;
@@ -318,7 +319,7 @@
     ns2:prefLabel "land_surface~100-to-200cm-below_soil__temperature" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_surface%29%40context%257E40-to-100cm-below_%28soil%40medium_water%29__volume_fraction> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_surface~40-to-100cm-below_soil_water__volume_fraction" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28land_surface%29%40context%257E40-to-100cm-below> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/phenomenon#land_surface> ;
@@ -331,7 +332,7 @@
     ns2:prefLabel "land_surface~40-to-100cm-below_soil_water__volume_fraction" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_surface%29%40context%257E40-to-100cm-below_soil__temperature> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_surface~40-to-100cm-below_soil__temperature" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28land_surface%29%40context%257E40-to-100cm-below> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/phenomenon#land_surface> ;
@@ -341,7 +342,7 @@
     ns2:prefLabel "land_surface~40-to-100cm-below_soil__temperature" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_surface%29%40context%257Eabove_air__pressure> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_surface_air__pressure" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28land_surface%29%40context%257Eabove> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/phenomenon#land_surface> ;
@@ -351,7 +352,7 @@
     ns2:prefLabel "land_surface_air__pressure" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_surface%29%40context%257Eabove_air__temperature> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_surface_air__temperature" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28land_surface%29%40context%257Eabove> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/phenomenon#land_surface> ;
@@ -361,7 +362,7 @@
     ns2:prefLabel "land_surface_air__temperature" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_surface%29%40context%257Eabove_wind__speed> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_surface_wind__speed" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28land_surface%29%40context%257Eabove> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/phenomenon#land_surface> ;
@@ -371,7 +372,7 @@
     ns2:prefLabel "land_surface_wind__speed" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_surface%29%40context%257Eabove_wind__speed_reference_height> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_surface_wind__speed_reference_height" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28land_surface%29%40context%257Eabove> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/phenomenon#land_surface> ;
@@ -381,7 +382,7 @@
     ns2:prefLabel "land_surface_wind__speed_reference_height" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_surface%29%40context%257Eat_air%40context%257Ein_radiation%257Elongwave%257Edownward__energy_flux> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_surface_air_radiation~longwave~downward__energy_flux" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28land_surface%29%40context%257Eat>,
         <http://www.geoscienceontology.org/svo/svl/context#air%40context%257Ein> ;
@@ -393,7 +394,7 @@
     ns2:prefLabel "land_surface_air_radiation~longwave~downward__energy_flux" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_surface%29%40context%257Eat_air%40context%257Ein_radiation%257Elongwave%257Edownwelling__energy_flux> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_surface_air_radiation~longwave~downwelling__energy_flux" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28land_surface%29%40context%257Eat>,
         <http://www.geoscienceontology.org/svo/svl/context#air%40context%257Ein> ;
@@ -405,7 +406,7 @@
     ns2:prefLabel "land_surface_air_radiation~longwave~downwelling__energy_flux" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_surface%29%40context%257Eat_air%40context%257Ein_radiation%257Eshortwave%257Edownwelling__energy_flux> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_surface_air_radiation~shortwave~downwelling__energy_flux" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28land_surface%29%40context%257Eat>,
         <http://www.geoscienceontology.org/svo/svl/context#air%40context%257Ein> ;
@@ -417,7 +418,7 @@
     ns2:prefLabel "land_surface_air_radiation~shortwave~downwelling__energy_flux" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_surface%29%40context%257Eat_radiation%257Eshortwave%257Edownward__energy_flux> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_surface_radiation~shortwave~downward__energy_flux" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28land_surface%29%40context%257Eat> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/phenomenon#land_surface> ;
@@ -427,7 +428,7 @@
     ns2:prefLabel "land_surface_radiation~shortwave~downward__energy_flux" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_surface%29%40context%257Eat_radiation%257Esolar__energy_flux> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_surface_radiation~solar__energy_flux" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28land_surface%29%40context%257Eat> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/phenomenon#land_surface> ;
@@ -437,14 +438,14 @@
     ns2:prefLabel "land_surface_radiation~solar__energy_flux" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_surface%29%40context%257Ebelow_ground%40context%257Ein_water__head> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "groundwater__head" ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/abstraction#%28land_surface%29%40context%257Ebelow_ground%40context%257Ein_water> ;
     ns1:hasProperty <http://www.geoscienceontology.org/svo/svl/property#head> ;
     ns2:prefLabel "groundwater__head" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_surface%29%40context%257Eexchange_radiation__energy_flux> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_surface_radiation~net~total__energy_flux" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28land_surface%29%40context%257Eexchange> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/phenomenon#land_surface> ;
@@ -456,7 +457,7 @@
     ns2:prefLabel "land_surface_radiation~net~total__energy_flux" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_surface%29%40context%257Eon_%28snow_accumulation%29__time_integral_of_accumulation_volume_flux> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_surface_snow__time_integral_of_accumulation_volume_flux" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28land_surface%29%40context%257Eon> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/phenomenon#land_surface> ;
@@ -466,7 +467,7 @@
     ns2:prefLabel "land_surface_snow__time_integral_of_accumulation_volume_flux" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_surface%29%40context%257Eon_%28vegetation%40context%257Epart_leaf%29__annual_time_max_of_leaf-area_index> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_vegetation__annual_time_max_of_leaf-area_index" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28land_surface%29%40context%257Eon>,
         <http://www.geoscienceontology.org/svo/svl/context#vegetation%40context%257Epart> ;
@@ -479,7 +480,7 @@
     ns2:prefLabel "land_vegetation__annual_time_max_of_leaf-area_index" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_surface%29%40context%257Eon_%28vegetation%40context%257Epart_leaf%29__leaf-area_index> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_vegetation__leaf-area_index" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28land_surface%29%40context%257Eon>,
         <http://www.geoscienceontology.org/svo/svl/context#vegetation%40context%257Epart> ;
@@ -492,7 +493,7 @@
     ns2:prefLabel "land_vegetation__leaf-area_index" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_surface%29%40context%257Eon_%28vegetation%40context%257Epart_stomata%29__reference_stomatal_resistance> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_vegetation__reference_stomatal_resistance" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28land_surface%29%40context%257Eon>,
         <http://www.geoscienceontology.org/svo/svl/context#vegetation%40context%257Epart> ;
@@ -505,7 +506,7 @@
     ns2:prefLabel "land_vegetation__reference_stomatal_resistance" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_surface%29%40context%257Eon_%28vegetation%40context%257Epart_stomata%29__time_min_of_stomatal_resistance> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_vegetation__time_min_of_stomatal_resistance" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28land_surface%29%40context%257Eon>,
         <http://www.geoscienceontology.org/svo/svl/context#vegetation%40context%257Epart> ;
@@ -518,7 +519,7 @@
     ns2:prefLabel "land_vegetation__time_min_of_stomatal_resistance" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_surface%29%40context%257Eon_%28water_runoff%29__runoff_mass_flux> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_surface_water__runoff_mass_flux" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28land_surface%29%40context%257Eon> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/phenomenon#land_surface> ;
@@ -530,7 +531,7 @@
     ns2:prefLabel "land_surface_water__runoff_mass_flux" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_surface%29%40context%257Eon_%28water_runoff%29__usdanrcs_runoff_curve_number> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_surface_water__usdanrcs_runoff_curve_number" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28land_surface%29%40context%257Eon> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/phenomenon#land_surface> ;
@@ -542,7 +543,7 @@
     ns2:prefLabel "land_surface_water__usdanrcs_runoff_curve_number" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_surface%29%40context%257Eon_water__depth> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_surface_water__depth" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28land_surface%29%40context%257Eon> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/phenomenon#land_surface> ;
@@ -552,7 +553,7 @@
     ns2:prefLabel "land_surface_water__depth" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_surface%29%40context%257Esource_%28water_evaporation%29__evaporation_volume_flux> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_surface_water__evaporation_volume_flux" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28land_surface%29%40context%257Esource> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/phenomenon#land_surface> ;
@@ -564,7 +565,7 @@
     ns2:prefLabel "land_surface_water__evaporation_volume_flux" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28land_surface%29%40context%257Esource_%28water_evapotranspiration%29__evapotranspiration_mass_flux> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_surface_water__evapotranspiration_mass_flux" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28land_surface%29%40context%257Esource> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/phenomenon#land_surface> ;
@@ -576,7 +577,7 @@
     ns2:prefLabel "land_surface_water__evapotranspiration_mass_flux" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28soil%40context%257Emedium_macropores%29%40medium_water__vertical_hydraulic_conductivity> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil_macropores_water__vertical_hydraulic_conductivity" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#soil%40context%257Emedium> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/matter#soil> ;
@@ -589,7 +590,7 @@
     ns2:prefLabel "soil_macropores_water__vertical_hydraulic_conductivity" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28soil_layer%257E1%29%40medium_water__volume_fraction> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil_layer~1_water__volume_fraction" ;
     ns1:containsMediumObject <http://www.geoscienceontology.org/svo/svl/body#soil_layer%257E1> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/body#soil_layer%257E1>,
@@ -599,7 +600,7 @@
     ns2:prefLabel "soil_layer~1_water__volume_fraction" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28soil_profile%29%40context%257Ein_ammonium-as-nitrogen__mass-per-area_density> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil_profile_ammonium-as-nitrogen__mass-per-area_density" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28soil_profile%29%40context%257Ein> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/phenomenon#soil_profile> ;
@@ -609,7 +610,7 @@
     ns2:prefLabel "soil_profile_ammonium-as-nitrogen__mass-per-area_density" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28soil_profile%29%40context%257Ein_nitrate-as-nitrogen__mass-per-area_density> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil_profile_nitrate-as-nitrogen__mass-per-area_density" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28soil_profile%29%40context%257Ein> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/phenomenon#soil_profile> ;
@@ -619,7 +620,7 @@
     ns2:prefLabel "soil_profile_nitrate-as-nitrogen__mass-per-area_density" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#%28soil_surface%29%40role%257Esink_water%40role%257Emain_infiltration__infiltration_volume_flux> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil_surface_water__infiltration_volume_flux" ;
     ns1:describesProcess <http://www.geoscienceontology.org/svo/svl/process#infiltration> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/matter#water>,
@@ -630,7 +631,7 @@
     ns2:prefLabel "soil_surface_water__infiltration_volume_flux" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#__daily_stress_fraction> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "crop_nitrogen__daily_stress_fraction",
         "crop_water__daily_stress_fraction" ;
     ns1:hasProperty <http://www.geoscienceontology.org/svo/svl/property#daily_stress_fraction> ;
@@ -638,19 +639,19 @@
         "crop_water__daily_stress_fraction" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#__thermal-time-to-maturity_weighted_stress_fraction> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "crop_nitrogen__thermal-time-to-maturity_weighted_stress_fraction" ;
     ns1:hasProperty <http://www.geoscienceontology.org/svo/svl/property#thermal-time-to-maturity_weighted_stress_fraction> ;
     ns2:prefLabel "crop_nitrogen__thermal-time-to-maturity_weighted_stress_fraction" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#__time_integral_of_transpiration_volume_flux> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "crop_water__time_integral_of_transpiration_volume_flux" ;
     ns1:hasProperty <http://www.geoscienceontology.org/svo/svl/property#time_integral_of_transpiration_volume_flux> ;
     ns2:prefLabel "crop_water__time_integral_of_transpiration_volume_flux" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#__volume_flux> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_surface_terrain~left_channel~stream_reach_water__volume_flux",
         "land_surface_terrain~right_channel~stream_reach_water__volume_flux" ;
     ns1:hasProperty <http://www.geoscienceontology.org/svo/svl/property#volume_flux> ;
@@ -658,21 +659,21 @@
         "land_surface_terrain~right_channel~stream_reach_water__volume_flux" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#air__temperature> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "air__temperature" ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/matter#air> ;
     ns1:hasProperty <http://www.geoscienceontology.org/svo/svl/property#temperature> ;
     ns2:prefLabel "air__temperature" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#air__yearly_average_of_temperature> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "air__yearly_average_of_temperature" ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/matter#air> ;
     ns1:hasProperty <http://www.geoscienceontology.org/svo/svl/property#yearly_average_of_temperature> ;
     ns2:prefLabel "air__yearly_average_of_temperature" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#aquifer%257Eleft%40role%257Esource_%28channel%257Estream%40context%257Epart_reach%29%40role%257Esink_%28water_flowing%29%40role%257Emain_baseflow__baseflow_volume_flux> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "aquifer~left_channel~stream_reach_water__baseflow_volume_flux" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#channel%257Estream%40context%257Epart> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/body#channel%257Estream> ;
@@ -689,7 +690,7 @@
     ns2:prefLabel "aquifer~left_channel~stream_reach_water__baseflow_volume_flux" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#aquifer%257Eright%40role%257Esource_%28channel%257Estream%40context%257Epart_reach%29%40role%257Esink_%28water_flowing%29%40role%257Emain_baseflow__baseflow_volume_flux> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "aquifer~right_channel~stream_reach_water__baseflow_volume_flux" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#channel%257Estream%40context%257Epart> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/body#channel%257Estream> ;
@@ -706,7 +707,7 @@
     ns2:prefLabel "aquifer~right_channel~stream_reach_water__baseflow_volume_flux" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#atmosphere%40context%257Ein_%28air%40medium_water%257Evapor%29__mass_saturation_ratio> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "atmosphere_air_water~vapor__specific_saturation" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#atmosphere%40context%257Ein> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/body#atmosphere> ;
@@ -719,7 +720,7 @@
     ns2:prefLabel "atmosphere_air_water~vapor__specific_saturation" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#atmosphere%40context%257Ein_%28air%40medium_water%257Evapor%29__max_of_saturation_ratio> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "atmosphere_air_water~vapor__max_of_relative_saturation" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#atmosphere%40context%257Ein> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/body#atmosphere> ;
@@ -732,7 +733,7 @@
     ns2:prefLabel "atmosphere_air_water~vapor__max_of_relative_saturation" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#atmosphere%40context%257Ein_%28air%40medium_water%257Evapor%29__min_of_saturation_ratio> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "atmosphere_air_water~vapor__min_of_relative_saturation" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#atmosphere%40context%257Ein> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/body#atmosphere> ;
@@ -745,7 +746,7 @@
     ns2:prefLabel "atmosphere_air_water~vapor__min_of_relative_saturation" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#atmosphere%40context%257Ein_%28air%40medium_water%257Evapor%29__saturation_ratio> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "atmosphere_air_water~vapor__relative_saturation" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#atmosphere%40context%257Ein> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/body#atmosphere> ;
@@ -758,7 +759,7 @@
     ns2:prefLabel "atmosphere_air_water~vapor__relative_saturation" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#atmosphere%40role%257Esource_rainfall%40role%257Emain_precipitation__precipitation_mass_flux> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "atmosphere_water__rainfall_mass_flux" ;
     ns1:describesProcess <http://www.geoscienceontology.org/svo/svl/process#precipitation> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/body#atmosphere>,
@@ -769,7 +770,7 @@
     ns2:prefLabel "atmosphere_water__rainfall_mass_flux" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#atmosphere%40role%257Esource_water%40role%257Emain_precipitation__precipitation_leq_volume_flux> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "atmosphere_water__precipitation_leq_volume_flux" ;
     ns1:describesProcess <http://www.geoscienceontology.org/svo/svl/process#precipitation> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/body#atmosphere>,
@@ -780,7 +781,7 @@
     ns2:prefLabel "atmosphere_water__precipitation_leq_volume_flux" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#atmosphere%40role%257Esource_water%40role%257Emain_precipitation__precipitation_mass_flux> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "atmosphere_water__precipitation_mass_flux" ;
     ns1:describesProcess <http://www.geoscienceontology.org/svo/svl/process#precipitation> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/body#atmosphere>,
@@ -791,7 +792,7 @@
     ns2:prefLabel "atmosphere_water__precipitation_mass_flux" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#atmosphere%40role%257Esource_water%40role%257Emain_precipitation__time_integral_of_precipitation_leq_volume_flux> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "atmosphere_water__time_integral_of_precipitation_leq_volume_flux" ;
     ns1:describesProcess <http://www.geoscienceontology.org/svo/svl/process#precipitation> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/body#atmosphere>,
@@ -802,7 +803,7 @@
     ns2:prefLabel "atmosphere_water__time_integral_of_precipitation_leq_volume_flux" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#biomass%257Eremoved%40context%257Ein_nitrogen__mass-per-area_density> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "biomass~removed_nitrogen__mass-per-area_density" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#biomass%257Eremoved%40context%257Ein> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/matter#biomass%257Eremoved> ;
@@ -812,7 +813,7 @@
     ns2:prefLabel "biomass~removed_nitrogen__mass-per-area_density" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#channel%257Eriver%40medium_water__stage_height> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "channel~river_water__stage_height" ;
     ns1:containsMediumObject <http://www.geoscienceontology.org/svo/svl/body#channel%257Eriver> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/body#channel%257Eriver>,
@@ -822,7 +823,7 @@
     ns2:prefLabel "channel~river_water__stage_height" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#channel%40context%257Ein_%28water_flowing%29__manning-formula_n_parameter> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "channel_water_flow__manning_n_parameter" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#channel%40context%257Ein> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/form#channel> ;
@@ -834,7 +835,7 @@
     ns2:prefLabel "channel_water_flow__manning_n_parameter" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#channel%40context%257Ein_water__discharge_coefficient> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "channel_water__discharge_coefficient" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#channel%40context%257Ein> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/form#channel> ;
@@ -844,14 +845,14 @@
     ns2:prefLabel "channel_water__discharge_coefficient" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#channel_bed__thickness> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "channel_bed__thickness" ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/body#channel_bed> ;
     ns1:hasProperty <http://www.geoscienceontology.org/svo/svl/property#thickness> ;
     ns2:prefLabel "channel_bed__thickness" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#crop%40context%257Esink_%28fertilizer%257Enitrogen_application%29__observed_applied_mass> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "crop_fertilizer~nitrogen__observed_applied_mass" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#crop%40context%257Esink> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/rolephenomenon#crop> ;
@@ -863,21 +864,21 @@
     ns2:prefLabel "crop_fertilizer~nitrogen__observed_applied_mass" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#crop-or-weed__species_identification_code> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "crop-or-weed__species_identification_code" ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/rolephenomenon#crop-or-weed> ;
     ns1:hasProperty <http://www.geoscienceontology.org/svo/svl/property#species_identification_code> ;
     ns2:prefLabel "crop-or-weed__species_identification_code" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#crop__supply_elasticity> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "crop__supply_elasticity" ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/rolephenomenon#crop> ;
     ns1:hasProperty <http://www.geoscienceontology.org/svo/svl/property#supply_elasticity> ;
     ns2:prefLabel "crop__supply_elasticity" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#crop_planting__count-per-area_planting_density> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "crop__count-per-area_planting_density" ;
     ns1:describesProcess <http://www.geoscienceontology.org/svo/svl/process#planting> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/phenomenon#crop_planting> ;
@@ -886,7 +887,7 @@
     ns2:prefLabel "crop__count-per-area_planting_density" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#crop_planting__planting_depth> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "crop__planting_depth" ;
     ns1:describesProcess <http://www.geoscienceontology.org/svo/svl/process#planting> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/phenomenon#crop_planting> ;
@@ -895,7 +896,7 @@
     ns2:prefLabel "crop__planting_depth" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#crop_planting__planting_or_sowing_date> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "crop__planting_or_sowing_date" ;
     ns1:describesProcess <http://www.geoscienceontology.org/svo/svl/process#planting> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/phenomenon#crop_planting> ;
@@ -904,7 +905,7 @@
     ns2:prefLabel "crop__planting_or_sowing_date" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#crop_production__simulated_produced_mass> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "crop__simulated_produced_mass" ;
     ns1:describesProcess <http://www.geoscienceontology.org/svo/svl/process#production> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/phenomenon#crop_production> ;
@@ -913,14 +914,14 @@
     ns2:prefLabel "crop__simulated_produced_mass" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#cultivar__line-or-genotype_identification_code> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "cultivar__line-or-genotype_identification_code" ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/body#cultivar> ;
     ns1:hasProperty <http://www.geoscienceontology.org/svo/svl/property#line-or-genotype_identification_code> ;
     ns2:prefLabel "cultivar__line-or-genotype_identification_code" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#farmer%40role%257Esink_crop%40role%257Eexchange__received_price-per-mass> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "farmer_crop__received_price-per-mass" ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/phenomenon#farmer%40role%257Esink_crop%40role%257Eexchange>,
         <http://www.geoscienceontology.org/svo/svl/rolephenomenon#crop>,
@@ -929,7 +930,7 @@
     ns2:prefLabel "farmer_crop__received_price-per-mass" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#fertilizer%257Enitrogen_application__application_reduced_cost_fraction> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "fertilizer~nitrogen__application_reduced_cost_fraction" ;
     ns1:describesProcess <http://www.geoscienceontology.org/svo/svl/process#application> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/phenomenon#fertilizer%257Enitrogen_application> ;
@@ -938,21 +939,21 @@
     ns2:prefLabel "fertilizer~nitrogen__application_reduced_cost_fraction" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#field__latitude> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "field__latitude" ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/body#field> ;
     ns1:hasProperty <http://www.geoscienceontology.org/svo/svl/property#latitude> ;
     ns2:prefLabel "field__latitude" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#field__longitude> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "field__longitude" ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/body#field> ;
     ns1:hasProperty <http://www.geoscienceontology.org/svo/svl/property#longitude> ;
     ns2:prefLabel "field__longitude" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#land%40context%257Eon_%28%28vegetation_canopy%29%40context%257Esource_%28water_evaporation%29%29__evaporation_volume_flux> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_vegetation_canopy_water__evaporation_volume_flux" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#%28vegetation_canopy%29%40context%257Esource>,
         <http://www.geoscienceontology.org/svo/svl/context#land%40context%257Eon> ;
@@ -967,7 +968,7 @@
     ns2:prefLabel "land_vegetation_canopy_water__evaporation_volume_flux" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#land%40context%257Eon_%28%28vegetation_canopy%29%40role%257Emain_water%40role%257Ein_interception%29__interception_storage_factor> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_vegetation_canopy_water__interception_storage_factor" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#land%40context%257Eon> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/body#land> ;
@@ -981,7 +982,7 @@
     ns2:prefLabel "land_vegetation_canopy_water__interception_storage_factor" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#land%40context%257Eon_%28%28vegetation_canopy%29%40role%257Esource_water%40role%257Emain_transpiration%29__transpiration_volume_flux> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_vegetation_canopy_water__transpiration_volume_flux" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#land%40context%257Eon> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/body#land> ;
@@ -995,7 +996,7 @@
     ns2:prefLabel "land_vegetation_canopy_water__transpiration_volume_flux" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#land%40medium_%28crop_production%29__observed_mass-per-area_yield> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_crop__observed_mass-per-area_yield" ;
     ns1:containsMediumObject <http://www.geoscienceontology.org/svo/svl/body#land> ;
     ns1:describesProcess <http://www.geoscienceontology.org/svo/svl/process#production> ;
@@ -1007,7 +1008,7 @@
     ns2:prefLabel "land_crop__observed_mass-per-area_yield" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#land%40medium_%28crop_production%29__production_cost-per-area> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_crop__production_cost-per-area" ;
     ns1:containsMediumObject <http://www.geoscienceontology.org/svo/svl/body#land> ;
     ns1:describesProcess <http://www.geoscienceontology.org/svo/svl/process#production> ;
@@ -1019,7 +1020,7 @@
     ns2:prefLabel "land_crop__production_cost-per-area" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#land%40medium_%28crop_production%29__simulated_mass-per-area_yield> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_crop__simulated_mass-per-area_yield" ;
     ns1:containsMediumObject <http://www.geoscienceontology.org/svo/svl/body#land> ;
     ns1:describesProcess <http://www.geoscienceontology.org/svo/svl/process#production> ;
@@ -1031,7 +1032,7 @@
     ns2:prefLabel "land_crop__simulated_mass-per-area_yield" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#land%40medium_%28vegetation_canopy%29__area_fraction> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_vegetation_canopy__area_fraction" ;
     ns1:containsMediumObject <http://www.geoscienceontology.org/svo/svl/body#land> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/body#land>,
@@ -1041,7 +1042,7 @@
     ns2:prefLabel "land_vegetation_canopy__area_fraction" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#land%40role%257Ein_fertilizer%257Enitrogen%40role%257Emain_application__simulated_applied_mass-per-area_density> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_fertilizer~nitrogen__simulated_applied_mass-per-area_density" ;
     ns1:describesProcess <http://www.geoscienceontology.org/svo/svl/process#application> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/body#land>,
@@ -1052,49 +1053,49 @@
     ns2:prefLabel "land_fertilizer~nitrogen__simulated_applied_mass-per-area_density" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#land_soil%257Edry_surface__albedo> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_soil~dry_surface__albedo" ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/phenomenon#land_soil%257Edry_surface> ;
     ns1:hasProperty <http://www.geoscienceontology.org/svo/svl/property#albedo> ;
     ns2:prefLabel "land_soil~dry_surface__albedo" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#land_surface__albedo> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_surface__albedo" ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/phenomenon#land_surface> ;
     ns1:hasProperty <http://www.geoscienceontology.org/svo/svl/property#albedo> ;
     ns2:prefLabel "land_surface__albedo" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#land_surface__effective_radiative_temperature> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_surface__effective_radiative_temperature" ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/phenomenon#land_surface> ;
     ns1:hasProperty <http://www.geoscienceontology.org/svo/svl/property#effective_radiative_temperature> ;
     ns2:prefLabel "land_surface__effective_radiative_temperature" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#land_surface__slope> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_surface__slope" ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/phenomenon#land_surface> ;
     ns1:hasProperty <http://www.geoscienceontology.org/svo/svl/property#slope> ;
     ns2:prefLabel "land_surface__slope" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#land_surface__upward_latent_heat_energy_flux> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_surface__upward_latent_heat_energy_flux" ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/phenomenon#land_surface> ;
     ns1:hasProperty <http://www.geoscienceontology.org/svo/svl/property#upward_latent_heat_energy_flux> ;
     ns2:prefLabel "land_surface__upward_latent_heat_energy_flux" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#land_surface__upward_sensible_heat_energy_flux> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "land_surface__upward_sensible_heat_energy_flux" ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/phenomenon#land_surface> ;
     ns1:hasProperty <http://www.geoscienceontology.org/svo/svl/property#upward_sensible_heat_energy_flux> ;
     ns2:prefLabel "land_surface__upward_sensible_heat_energy_flux" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#roots-and-rhizodeposits_production__time_integral_of_mass-per-area_production_rate> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "roots-and-rhizodeposits__time_integral_of_mass-per-area_production_rate" ;
     ns1:describesProcess <http://www.geoscienceontology.org/svo/svl/process#production> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/phenomenon#roots-and-rhizodeposits_production> ;
@@ -1103,7 +1104,7 @@
     ns2:prefLabel "roots-and-rhizodeposits__time_integral_of_mass-per-area_production_rate" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#snow-or-ice_melting__melt_factor> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "snow-or-ice__melt_factor" ;
     ns1:describesProcess <http://www.geoscienceontology.org/svo/svl/process#melting> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/phenomenon#snow-or-ice_melting> ;
@@ -1112,7 +1113,7 @@
     ns2:prefLabel "snow-or-ice__melt_factor" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#soil%257Eno-rock%40medium_silt__mass_fraction> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil~no-rock_silt__mass_fraction" ;
     ns1:containsMediumObject <http://www.geoscienceontology.org/svo/svl/matter#soil%257Eno-rock> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/matter#silt>,
@@ -1122,7 +1123,7 @@
     ns2:prefLabel "soil~no-rock_silt__mass_fraction" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#soil%40context%257Ein_water__van-genuchten_alpha_parameter> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil_water__van-genuchten_alpha_parameter" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#soil%40context%257Ein> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/matter#soil> ;
@@ -1132,7 +1133,7 @@
     ns2:prefLabel "soil_water__van-genuchten_alpha_parameter" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#soil%40context%257Ein_water__van-genuchten_beta_parameter> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil_water__van-genuchten_beta_parameter" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#soil%40context%257Ein> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/matter#soil> ;
@@ -1142,7 +1143,7 @@
     ns2:prefLabel "soil_water__van-genuchten_beta_parameter" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#soil%40context%257Emedium_macropores_%28land_surface%29%40reference%257Ebelow__depth> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil_macropores_below-land-surface__depth" ;
     ns1:containsContext <http://www.geoscienceontology.org/svo/svl/context#soil%40context%257Emedium> ;
     ns1:containsContextObject <http://www.geoscienceontology.org/svo/svl/matter#soil> ;
@@ -1152,7 +1153,7 @@
     ns2:prefLabel "soil_macropores_below-land-surface__depth" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#soil%40medium_%28clay_particle%29__volume_fraction> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil_clay_particle__volume_fraction" ;
     ns1:containsMediumObject <http://www.geoscienceontology.org/svo/svl/matter#soil> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/body#clay_particle>,
@@ -1162,7 +1163,7 @@
     ns2:prefLabel "soil_clay_particle__volume_fraction" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#soil%40medium_%28macropores_x-section%257Evertical%29__area_fraction> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil_macropores_x-section~vertical__area_fraction" ;
     ns1:containsMediumObject <http://www.geoscienceontology.org/svo/svl/matter#soil> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/matter#soil>,
@@ -1172,7 +1173,7 @@
     ns2:prefLabel "soil_macropores_x-section~vertical__area_fraction" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#soil%40medium__porosity> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil__porosity" ;
     ns1:containsMediumObject <http://www.geoscienceontology.org/svo/svl/matter#soil> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/matter#soil>,
@@ -1181,7 +1182,7 @@
     ns2:prefLabel "soil__porosity" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#soil%40medium__residual_porosity> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil__residual_porosity" ;
     ns1:containsMediumObject <http://www.geoscienceontology.org/svo/svl/matter#soil> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/matter#soil>,
@@ -1190,7 +1191,7 @@
     ns2:prefLabel "soil__residual_porosity" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#soil%40medium_ammonium-as-nitrogen%257Eelemental__dry_mass_fraction> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil_ammonium-as-nitrogen~elemental__dry_mass_fraction" ;
     ns1:containsMediumObject <http://www.geoscienceontology.org/svo/svl/matter#soil> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/matter#ammonium-as-nitrogen%257Eelemental>,
@@ -1200,7 +1201,7 @@
     ns2:prefLabel "soil_ammonium-as-nitrogen~elemental__dry_mass_fraction" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#soil%40medium_clay__mass_fraction> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil_clay__mass_fraction" ;
     ns1:containsMediumObject <http://www.geoscienceontology.org/svo/svl/matter#soil> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/matter#clay>,
@@ -1210,7 +1211,7 @@
     ns2:prefLabel "soil_clay__mass_fraction" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#soil%40medium_matter%257Eorganic__mass_fraction> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil_matter~organic__mass_fraction" ;
     ns1:containsMediumObject <http://www.geoscienceontology.org/svo/svl/matter#soil> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/matter#matter%257Eorganic>,
@@ -1220,7 +1221,7 @@
     ns2:prefLabel "soil_matter~organic__mass_fraction" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#soil%40medium_nitrate-as-nitrogen%257Eelemental__dry_mass_fraction> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil_nitrate-as-nitrogen~elemental__dry_mass_fraction" ;
     ns1:containsMediumObject <http://www.geoscienceontology.org/svo/svl/matter#soil> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/matter#nitrate-as-nitrogen%257Eelemental>,
@@ -1230,7 +1231,7 @@
     ns2:prefLabel "soil_nitrate-as-nitrogen~elemental__dry_mass_fraction" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#soil%40medium_rock__volume_fraction> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil_rock__volume_fraction" ;
     ns1:containsMediumObject <http://www.geoscienceontology.org/svo/svl/matter#soil> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/matter#rock>,
@@ -1240,7 +1241,7 @@
     ns2:prefLabel "soil_rock__volume_fraction" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#soil%40medium_saturated_water__saturated_hydraulic_conductivity> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil_water__saturated_hydraulic_conductivity" ;
     ns1:containsMediumObject <http://www.geoscienceontology.org/svo/svl/matter#soil> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/matter#soil>,
@@ -1250,7 +1251,7 @@
     ns2:prefLabel "soil_water__saturated_hydraulic_conductivity" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#soil%40medium_saturated_water__saturated_volume_fraction> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil_water__saturated_volume_fraction" ;
     ns1:containsMediumObject <http://www.geoscienceontology.org/svo/svl/matter#soil> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/matter#soil>,
@@ -1260,7 +1261,7 @@
     ns2:prefLabel "soil_water__saturated_volume_fraction" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#soil%40medium_saturated_water__vertical_saturated_hydraulic_conductivity> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil_water__vertical_saturated_hydraulic_conductivity" ;
     ns1:containsMediumObject <http://www.geoscienceontology.org/svo/svl/matter#soil> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/matter#soil>,
@@ -1270,7 +1271,7 @@
     ns2:prefLabel "soil_water__vertical_saturated_hydraulic_conductivity" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#soil%40medium_silt__mass_fraction> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil_silt__mass_fraction" ;
     ns1:containsMediumObject <http://www.geoscienceontology.org/svo/svl/matter#soil> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/matter#silt>,
@@ -1280,7 +1281,7 @@
     ns2:prefLabel "soil_silt__mass_fraction" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#soil%40medium_water__lower_limit_of_volume_fraction> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil_water__lower_limit_of_volume_fraction" ;
     ns1:containsMediumObject <http://www.geoscienceontology.org/svo/svl/matter#soil> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/matter#soil>,
@@ -1290,7 +1291,7 @@
     ns2:prefLabel "soil_water__lower_limit_of_volume_fraction" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#soil%40medium_water__volume-per-area_concentration> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil_water__volume-per-area_concentration" ;
     ns1:containsMediumObject <http://www.geoscienceontology.org/svo/svl/matter#soil> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/matter#soil>,
@@ -1300,7 +1301,7 @@
     ns2:prefLabel "soil_water__volume-per-area_concentration" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#soil%40medium_water__volume_fraction> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil_water__volume_fraction" ;
     ns1:containsMediumObject <http://www.geoscienceontology.org/svo/svl/matter#soil> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/matter#soil>,
@@ -1310,7 +1311,7 @@
     ns2:prefLabel "soil_water__volume_fraction" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#soil%40role%257Emain_nitrogen%40role%257Ein_denitrification__average_of_mass_denitrification_rate> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil_nitrogen__average_of_mass_denitrification_rate" ;
     ns1:describesProcess <http://www.geoscienceontology.org/svo/svl/process#denitrification> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/matter#nitrogen>,
@@ -1321,7 +1322,7 @@
     ns2:prefLabel "soil_nitrogen__average_of_mass_denitrification_rate" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#soil%40role%257Emain_nitrogen%40role%257Ein_nitrification__average_of_mass_nitrification_rate> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil_nitrogen__average_of_mass_nitrification_rate" ;
     ns1:describesProcess <http://www.geoscienceontology.org/svo/svl/process#nitrification> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/matter#nitrogen>,
@@ -1332,7 +1333,7 @@
     ns2:prefLabel "soil_nitrogen__average_of_mass_nitrification_rate" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#soil%40role%257Emain_water%40role%257Ein_interception__volume-per-area_interception_storage_capacity> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil_water__volume-per-area_interception_storage_capacity" ;
     ns1:describesProcess <http://www.geoscienceontology.org/svo/svl/process#interception> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/matter#soil>,
@@ -1343,7 +1344,7 @@
     ns2:prefLabel "soil_water__volume-per-area_interception_storage_capacity" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#soil%40role%257Esink_fertilizer%40role%257Emain_application__application_depth> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil_fertilizer__application_depth" ;
     ns1:describesProcess <http://www.geoscienceontology.org/svo/svl/process#application> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/matter#soil>,
@@ -1354,49 +1355,49 @@
     ns2:prefLabel "soil_fertilizer__application_depth" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#soil__downward_heat_energy_flux> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil__downward_heat_energy_flux" ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/matter#soil> ;
     ns1:hasProperty <http://www.geoscienceontology.org/svo/svl/property#downward_heat_energy_flux> ;
     ns2:prefLabel "soil__downward_heat_energy_flux" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#soil_layer%257Ebase__depth> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil_layer~base__depth" ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/body#soil_layer%257Ebase> ;
     ns1:hasProperty <http://www.geoscienceontology.org/svo/svl/property#depth> ;
     ns2:prefLabel "soil_layer~base__depth" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#soil_layer%257Etop__thickness> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil_layer~top__thickness" ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/body#soil_layer%257Etop> ;
     ns1:hasProperty <http://www.geoscienceontology.org/svo/svl/property#thickness> ;
     ns2:prefLabel "soil_layer~top__thickness" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#soil_layer__initial_depth> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil_layer__initial_depth" ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/body#soil_layer> ;
     ns1:hasProperty <http://www.geoscienceontology.org/svo/svl/property#initial_depth> ;
     ns2:prefLabel "soil_layer__initial_depth" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#soil_layer__thickness> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil_layer__thickness" ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/body#soil_layer> ;
     ns1:hasProperty <http://www.geoscienceontology.org/svo/svl/property#thickness> ;
     ns2:prefLabel "soil_layer__thickness" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#soil_root-zone__thickness> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "soil_root-zone__thickness" ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/body#soil_root-zone> ;
     ns1:hasProperty <http://www.geoscienceontology.org/svo/svl/property#thickness> ;
     ns2:prefLabel "soil_root-zone__thickness" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#water_flow%257Eincoming-and-outgoing__volume_flow_rate> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "water~incoming-and-outgoing__volume_flow_rate" ;
     ns1:describesProcess <http://www.geoscienceontology.org/svo/svl/process#flowing> ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/phenomenon#water_flow%257Eincoming-and-outgoing> ;
@@ -1405,24 +1406,16 @@
     ns2:prefLabel "water~incoming-and-outgoing__volume_flow_rate" .
 
 <http://www.geoscienceontology.org/svo/svl/variable#wind__speed> a ns1:Variable,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "wind__speed" ;
     ns1:hasObject <http://www.geoscienceontology.org/svo/svl/phenomenon#wind> ;
     ns1:hasProperty <http://www.geoscienceontology.org/svo/svl/property#speed> ;
     ns2:prefLabel "wind__speed" .
 
-"energy flux" ns3:description "rate of transfer of energy through a surface" .
-
-"hydraulic conductivity" ns3:description "measure of the ability of a porous material to allow water to pass through it" .
-
-"hydraulic head" ns3:description "specific measurement of liquid pressure above a geodetic datum" .
-
-"leaf area index" ns3:description "dimensionless quantity that characterizes plant canopies" .
-
 <http://www.geoscienceontology.org/svo/svl/property#annual_time_max_of_leaf-area_index> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "annual_time_max_of_leaf-area_index" ;
     ns1:hasOperator <http://www.geoscienceontology.org/svo/svl/operator#annual_time_max> ;
     ns1:isDerivedFrom <http://www.geoscienceontology.org/svo/svl/property#leaf-area_index> ;
@@ -1432,7 +1425,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#application_depth> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "application_depth" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#depth> ;
     ns1:quantifiesProcess <http://www.geoscienceontology.org/svo/svl/process#application> ;
@@ -1442,7 +1435,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#application_reduced_cost_fraction> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "application_reduced_cost_fraction" ;
     ns1:hasAttribute <http://www.geoscienceontology.org/svo/svl/attribute#reduced> ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#cost_fraction> ;
@@ -1453,7 +1446,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#average_of_temperature> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "average_of_temperature" ;
     ns1:hasOperator <http://www.geoscienceontology.org/svo/svl/operator#average> ;
     ns1:isDerivedFrom <http://www.geoscienceontology.org/svo/svl/property#temperature> ;
@@ -1463,7 +1456,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#count-per-area_planting_density> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "count-per-area_planting_density" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#count-per-area_density> ;
     ns1:quantifiesProcess <http://www.geoscienceontology.org/svo/svl/process#planting> ;
@@ -1473,7 +1466,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#daily_stress_fraction> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "daily_stress_fraction" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#stress_fraction> ;
     ns2:prefLabel "daily_stress_fraction" ;
@@ -1482,18 +1475,17 @@
 <http://www.geoscienceontology.org/svo/svl/property#discharge_coefficient> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "discharge_coefficient" ;
     ns1:hasAssociatedWikipediaPage "https://en.wikipedia.org/wiki/Discharge_coefficient" ;
     ns1:hasPropertyRole <http://www.geoscienceontology.org/svo/svl/role#coefficient> ;
-    rdfs:comment "https://en.wikipedia.org/wiki/Discharge_coefficient" ;
     ns2:prefLabel "discharge_coefficient" ;
     ccut:hasDimension "none" .
 
 <http://www.geoscienceontology.org/svo/svl/property#downward_heat_energy_flux> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "downward_heat_energy_flux" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#heat_energy_flux> ;
     ns2:prefLabel "downward_heat_energy_flux" ;
@@ -1502,7 +1494,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#effective_radiative_temperature> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "effective_radiative_temperature" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#temperature> ;
     ns2:prefLabel "effective_radiative_temperature" ;
@@ -1511,7 +1503,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#evapotranspiration_mass_flux> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "evapotranspiration_mass_flux" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#mass_flux> ;
     ns1:quantifiesProcess <http://www.geoscienceontology.org/svo/svl/process#evapotranspiration> ;
@@ -1521,17 +1513,18 @@
 <http://www.geoscienceontology.org/svo/svl/property#head> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "head" ;
     ns1:hasAssociatedWikipediaPage "https://en.wikipedia.org/wiki/Hydraulic_head#.22Head.22_in_fluid_dynamics" ;
-    rdfs:comment "https://en.wikipedia.org/wiki/Hydraulic_head#.22Head.22_in_fluid_dynamics" ;
+    owl:sameAs <http://www.wikidata.org/entity/Q2334900> ;
     ns2:prefLabel "head" ;
+    ns3:description "hydrological term" ;
     ccut:hasDimension "L" .
 
 <http://www.geoscienceontology.org/svo/svl/property#infiltration_volume_flux> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "infiltration_volume_flux" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#volume_flux> ;
     ns1:quantifiesProcess <http://www.geoscienceontology.org/svo/svl/process#infiltration> ;
@@ -1541,7 +1534,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#initial_depth> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "initial_depth" ;
     ns1:hasAttribute <http://www.geoscienceontology.org/svo/svl/attribute#initial> ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#depth> ;
@@ -1551,7 +1544,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#interception_storage_factor> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "interception_storage_factor" ;
     ns1:hasPropertyRole <http://www.geoscienceontology.org/svo/svl/role#factor> ;
     ns1:quantifiesProcess <http://www.geoscienceontology.org/svo/svl/process#interception> ;
@@ -1561,19 +1554,20 @@
 <http://www.geoscienceontology.org/svo/svl/property#latitude> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "latitude",
         "north_coordinate" ;
     ns1:hasAssociatedWikipediaPage "http://en.wikipedia.org/wiki/Latitude" ;
-    rdfs:comment "http://en.wikipedia.org/wiki/Latitude" ;
+    owl:sameAs <http://www.wikidata.org/entity/Q34027> ;
     ns2:altLabel "north_coordinate" ;
     ns2:prefLabel "latitude" ;
+    ns3:description "the angle between zenith and a plane parallel to the equator" ;
     ccut:hasDimension "none" .
 
 <http://www.geoscienceontology.org/svo/svl/property#leakage_volume_flux> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "leakage_volume_flux" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#volume_flux> ;
     ns1:quantifiesProcess <http://www.geoscienceontology.org/svo/svl/process#leakage> ;
@@ -1583,7 +1577,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#line-or-genotype_identification_code> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "line-or-genotype_identification_code" ;
     ns1:hasPropertyQuantification <http://www.geoscienceontology.org/svo/svl/property#code> ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#identification> ;
@@ -1593,7 +1587,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#log-law_roughness_length> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "log-law_roughness_length" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#roughness_length> ;
     ns2:prefLabel "log-law_roughness_length" ;
@@ -1602,19 +1596,20 @@
 <http://www.geoscienceontology.org/svo/svl/property#longitude> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "east_coordinate",
         "longitude" ;
     ns1:hasAssociatedWikipediaPage "http://en.wikipedia.org/wiki/Longitude" ;
-    rdfs:comment "http://en.wikipedia.org/wiki/Longitude" ;
+    owl:sameAs <http://www.wikidata.org/entity/Q36477> ;
     ns2:altLabel "east_coordinate" ;
     ns2:prefLabel "longitude" ;
+    ns3:description "geographic coordinate that specifies the east-west position of a point on the Earth's surface" ;
     ccut:hasDimension "none" .
 
 <http://www.geoscienceontology.org/svo/svl/property#lower_limit_of_volume_fraction> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "lower_limit_of_volume_fraction" ;
     ns1:hasOperator <http://www.geoscienceontology.org/svo/svl/operator#lower_limit> ;
     ns1:isDerivedFrom <http://www.geoscienceontology.org/svo/svl/property#volume_fraction> ;
@@ -1624,18 +1619,17 @@
 <http://www.geoscienceontology.org/svo/svl/property#manning-formula_n_parameter> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "manning-formula_n_parameter" ;
     ns1:hasAssociatedWikipediaPage "https://en.wikipedia.org/wiki/Manning_formula#Manning_coefficient_of_roughness" ;
     ns1:hasPropertyRole <http://www.geoscienceontology.org/svo/svl/role#parameter> ;
-    rdfs:comment "https://en.wikipedia.org/wiki/Manning_formula#Manning_coefficient_of_roughness" ;
     ns2:prefLabel "manning-formula_n_parameter" ;
     ccut:hasDimension "L-0.33 T" .
 
 <http://www.geoscienceontology.org/svo/svl/property#mass_saturation_ratio> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "specific_saturation" ;
     ns2:prefLabel "specific_saturation" ;
     ccut:hasDimension "none" .
@@ -1643,7 +1637,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#melt_factor> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "melt_factor" ;
     ns1:hasPropertyRole <http://www.geoscienceontology.org/svo/svl/role#factor> ;
     ns1:quantifiesProcess <http://www.geoscienceontology.org/svo/svl/process#melting> ;
@@ -1653,7 +1647,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#observed_allocated_area> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "observed_allocated_area" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#area> ;
     ns2:prefLabel "observed_allocated_area" ;
@@ -1662,7 +1656,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#observed_applied_mass> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "observed_applied_mass" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#mass> ;
     ns2:prefLabel "observed_applied_mass" ;
@@ -1671,7 +1665,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#observed_mass-per-area_yield> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "observed_mass-per-area_yield" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#mass-per-area_yield> ;
     ns2:prefLabel "observed_mass-per-area_yield" ;
@@ -1680,17 +1674,19 @@
 <http://www.geoscienceontology.org/svo/svl/property#partial_pressure> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "partial_pressure" ;
     ns1:hasAttribute <http://www.geoscienceontology.org/svo/svl/attribute#partial> ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#pressure> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q27165> ;
     ns2:prefLabel "partial_pressure" ;
+    ns3:description "hypothetical pressure of gas if it alone occupied the volume of the mixture at the same temperature" ;
     ccut:hasDimension "L-1 M T-2" .
 
 <http://www.geoscienceontology.org/svo/svl/property#planting_depth> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "planting_depth" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#depth> ;
     ns1:quantifiesProcess <http://www.geoscienceontology.org/svo/svl/process#planting> ;
@@ -1698,7 +1694,7 @@
     ccut:hasDimension "L" .
 
 <http://www.geoscienceontology.org/svo/svl/property#planting_or_sowing_date> a ns1:Property,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "planting_or_sowing_date" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#date> ;
     ns2:prefLabel "planting_or_sowing_date" .
@@ -1706,7 +1702,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#production_cost-per-area> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "production_cost-per-area" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#cost-per-area> ;
     ns1:quantifiesProcess <http://www.geoscienceontology.org/svo/svl/process#production> ;
@@ -1716,7 +1712,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#received_price-per-mass> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "received_price-per-mass" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#price-per-mass> ;
     ns2:prefLabel "received_price-per-mass" ;
@@ -1725,7 +1721,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#reference_stomatal_resistance> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "reference_stomatal_resistance" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#stomatal_resistance> ;
     ns2:prefLabel "reference_stomatal_resistance" ;
@@ -1734,7 +1730,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#residual_porosity> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "residual_porosity" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#porosity> ;
     ns2:prefLabel "residual_porosity" ;
@@ -1743,7 +1739,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#saturated_hydraulic_conductivity> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "saturated",
         "saturated_hydraulic_conductivity" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#hydraulic_conductivity> ;
@@ -1754,7 +1750,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#saturated_volume_fraction> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "saturated_volume_fraction" ;
     ns1:hasAttribute <http://www.geoscienceontology.org/svo/svl/attribute#saturated> ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#volume_fraction> ;
@@ -1764,7 +1760,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#saturation_ratio> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "percent_of_saturation",
         "relative_saturation" ;
     ns2:altLabel "percent_of_saturation" ;
@@ -1774,7 +1770,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#simulated_allocated_area> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "simulated_allocated_area" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#area> ;
     ns2:prefLabel "simulated_allocated_area" ;
@@ -1783,7 +1779,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#simulated_applied_mass-per-area_density> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "simulated_applied_mass-per-area_density" ;
     ns1:hasAttribute <http://www.geoscienceontology.org/svo/svl/attribute#applied> ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#mass-per-area_density> ;
@@ -1793,7 +1789,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#simulated_mass-per-area_yield> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "simulated_mass-per-area_yield" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#mass-per-area_yield> ;
     ns2:prefLabel "simulated_mass-per-area_yield" ;
@@ -1802,7 +1798,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#simulated_produced_mass> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "simulated_produced_mass" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#mass> ;
     ns2:prefLabel "simulated_produced_mass" ;
@@ -1811,19 +1807,20 @@
 <http://www.geoscienceontology.org/svo/svl/property#slope> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "slope",
         "steepness" ;
     ns1:hasAssociatedWikipediaPage "https://en.wikipedia.org/wiki/Slope" ;
-    rdfs:comment "https://en.wikipedia.org/wiki/Slope" ;
+    owl:sameAs <http://www.wikidata.org/entity/Q275447> ;
     ns2:altLabel "steepness" ;
     ns2:prefLabel "slope" ;
+    ns3:description "In mathematics, the slope or gradient of a line describes its steepness, incline, or grade; number that describes both the direction and the steepness of the line" ;
     ccut:hasDimension "none" .
 
 <http://www.geoscienceontology.org/svo/svl/property#species_identification_code> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "species_identification_code" ;
     ns1:hasPropertyQuantification <http://www.geoscienceontology.org/svo/svl/property#code> ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#identification> ;
@@ -1833,7 +1830,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#speed_reference_height> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "speed_reference_height" ;
     ns1:hasAttribute <http://www.geoscienceontology.org/svo/svl/attribute#reference> ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#height> ;
@@ -1843,7 +1840,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#stage_height> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "stage_height" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#height> ;
     ns2:prefLabel "stage_height" ;
@@ -1852,7 +1849,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#supply_elasticity> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "supply_elasticity" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#economic_elasticity> ;
     ns2:prefLabel "supply_elasticity" ;
@@ -1861,7 +1858,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#thermal-time-to-maturity_weighted_stress_fraction> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "thermal-time-to-maturity_weighted_stress_fraction" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#stress_fraction> ;
     ns2:prefLabel "thermal-time-to-maturity_weighted_stress_fraction" ;
@@ -1870,7 +1867,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#time_integral_of_accumulation_volume_flux> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "time_integral_of_accumulation_volume_flux" ;
     ns1:hasOperator <http://www.geoscienceontology.org/svo/svl/operator#time_integral> ;
     ns1:isDerivedFrom <http://www.geoscienceontology.org/svo/svl/property#accumulation_volume_flux> ;
@@ -1881,7 +1878,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#time_integral_of_mass-per-area_production_rate> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "time_integral_of_mass-per-area_production_rate" ;
     ns1:hasOperator <http://www.geoscienceontology.org/svo/svl/operator#time_integral> ;
     ns1:isDerivedFrom <http://www.geoscienceontology.org/svo/svl/property#mass-per-area_production_rate> ;
@@ -1892,7 +1889,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#time_integral_of_precipitation_leq_volume_flux> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "time_integral_of_precipitation_leq_volume_flux" ;
     ns1:hasOperator <http://www.geoscienceontology.org/svo/svl/operator#time_integral> ;
     ns1:isDerivedFrom <http://www.geoscienceontology.org/svo/svl/property#precipitation_leq_volume_flux> ;
@@ -1903,7 +1900,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#time_integral_of_transpiration_volume_flux> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "time_integral_of_transpiration_volume_flux" ;
     ns1:hasOperator <http://www.geoscienceontology.org/svo/svl/operator#time_integral> ;
     ns1:isDerivedFrom <http://www.geoscienceontology.org/svo/svl/property#transpiration_volume_flux> ;
@@ -1914,7 +1911,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#time_min_of_stomatal_resistance> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "time_min_of_stomatal_resistance" ;
     ns1:hasOperator <http://www.geoscienceontology.org/svo/svl/operator#time_min> ;
     ns1:isDerivedFrom <http://www.geoscienceontology.org/svo/svl/property#stomatal_resistance> ;
@@ -1924,7 +1921,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#upward_latent_heat_energy_flux> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "upward_latent_heat_energy_flux" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#latent_heat_energy_flux> ;
     ns2:prefLabel "upward_latent_heat_energy_flux" ;
@@ -1933,7 +1930,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#upward_sensible_heat_energy_flux> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "upward_sensible_heat_energy_flux" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#sensible_heat_energy_flux> ;
     ns2:prefLabel "upward_sensible_heat_energy_flux" ;
@@ -1942,7 +1939,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#usage-cost-per-applied-mass> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "usage-cost-per-applied-mass" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#cost-per-mass> ;
     ns2:prefLabel "usage-cost-per-applied-mass" ;
@@ -1951,7 +1948,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#usdanrcs_runoff_curve_number> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "scs_runoff_curve_number",
         "usdanrcs_runoff_curve_number" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#runoff_curve_number> ;
@@ -1963,7 +1960,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#van-genuchten_alpha_parameter> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "van-genuchten_alpha_parameter" ;
     ns1:hasPropertyRole <http://www.geoscienceontology.org/svo/svl/role#parameter> ;
     ns2:prefLabel "van-genuchten_alpha_parameter" ;
@@ -1972,20 +1969,22 @@
 <http://www.geoscienceontology.org/svo/svl/property#vertical_saturated_hydraulic_conductivity> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "saturated",
         "vertical",
         "vertical_saturated_hydraulic_conductivity" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#hydraulic_conductivity> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q2266685> ;
     ns2:altLabel "saturated",
         "vertical" ;
     ns2:prefLabel "vertical_saturated_hydraulic_conductivity" ;
+    ns3:description "for mining an geology in most cases synonym with vertical" ;
     ccut:hasDimension "L T-1" .
 
 <http://www.geoscienceontology.org/svo/svl/property#volume-per-area_concentration> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "volume-per-area_concentration" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#concentration> ;
     ns2:prefLabel "volume-per-area_concentration" ;
@@ -1994,7 +1993,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#volume-per-area_interception_storage_capacity> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "volume-per-area_interception_storage_capacity" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#volume-per-area_storage_capacity> ;
     ns1:quantifiesProcess <http://www.geoscienceontology.org/svo/svl/process#interception> ;
@@ -2004,7 +2003,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#volume_flow_rate> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "discharge",
         "volume_flow_rate",
         "volume_velocity",
@@ -2012,17 +2011,20 @@
     ns1:hasAssociatedWikipediaPage "http://en.wikipedia.org/wiki/Volume_flow_rate" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#volume_rate> ;
     ns1:quantifiesProcess <http://www.geoscienceontology.org/svo/svl/process#flowing> ;
-    rdfs:comment "http://en.wikipedia.org/wiki/Volume_flow_rate" ;
+    owl:sameAs <http://www.wikidata.org/entity/P2225>,
+        <http://www.wikidata.org/entity/Q1134348> ;
     ns2:altLabel "discharge",
         "volume_velocity",
         "volumetric_flow_rate" ;
     ns2:prefLabel "volume_flow_rate" ;
+    ns3:description "volume of fluid which passes per unit time",
+        "volume rate of water flow which is transported through a given cross-sectional area" ;
     ccut:hasDimension "L3 T-1" .
 
 <http://www.geoscienceontology.org/svo/svl/property#yearly_average_of_temperature> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "yearly_average_of_temperature" ;
     ns1:hasOperator <http://www.geoscienceontology.org/svo/svl/operator#yearly_average> ;
     ns1:isDerivedFrom <http://www.geoscienceontology.org/svo/svl/property#temperature> ;
@@ -2032,7 +2034,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#yield_elasticity> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "yield_elasticity" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#economic_elasticity> ;
     ns2:prefLabel "yield_elasticity" ;
@@ -2041,19 +2043,20 @@
 <http://www.geoscienceontology.org/svo/svl/property#albedo> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "albedo",
         "reflection_coefficient" ;
     ns1:hasAssociatedWikipediaPage "http://en.wikipedia.org/wiki/Albedo" ;
-    rdfs:comment "http://en.wikipedia.org/wiki/Albedo" ;
+    owl:sameAs <http://www.wikidata.org/entity/Q101038> ;
     ns2:altLabel "reflection_coefficient" ;
     ns2:prefLabel "albedo" ;
+    ns3:description "ratio of reflected radiation to incident radiation" ;
     ccut:hasDimension "none" .
 
 <http://www.geoscienceontology.org/svo/svl/property#area_fraction> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "area_fraction" ;
     ns2:prefLabel "area_fraction" ;
     ccut:hasDimension "none" .
@@ -2061,7 +2064,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#baseflow_volume_flux> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "baseflow_volume_flux" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#volume_flux> ;
     ns2:prefLabel "baseflow_volume_flux" ;
@@ -2070,7 +2073,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#dry_mass_fraction> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "dry_mass_fraction" ;
     ns1:hasAttribute <http://www.geoscienceontology.org/svo/svl/attribute#dry> ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#mass_fraction> ;
@@ -2080,7 +2083,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#evaporation_volume_flux> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "evaporation_volume_flux" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#volume_flux> ;
     ns1:quantifiesProcess <http://www.geoscienceontology.org/svo/svl/process#evaporation> ;
@@ -2090,31 +2093,31 @@
 <http://www.geoscienceontology.org/svo/svl/property#leaf-area_index> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "leaf-area_index" ;
     ns1:hasAssociatedWikipediaPage "https://en.wikipedia.org/wiki/Leaf_area_index" ;
     ns1:hasPropertyQuantification <http://www.geoscienceontology.org/svo/svl/property#index> ;
-    rdfs:comment "https://en.wikipedia.org/wiki/Leaf_area_index" ;
     ns2:prefLabel "leaf-area_index" ;
     ccut:hasDimension "none" .
 
 <http://www.geoscienceontology.org/svo/svl/property#porosity> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "porosity",
         "void_fraction" ;
     ns1:hasAssociatedWikipediaPage "http://en.wikipedia.org/wiki/Porosity" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#volume_fraction> ;
-    rdfs:comment "http://en.wikipedia.org/wiki/Porosity" ;
+    owl:sameAs <http://www.wikidata.org/entity/Q622669> ;
     ns2:altLabel "void_fraction" ;
     ns2:prefLabel "porosity" ;
+    ns3:description "measure of the void spaces in a material" ;
     ccut:hasDimension "none" .
 
 <http://www.geoscienceontology.org/svo/svl/property#precipitation_leq_volume_flux> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "precipitation_leq_volume_flux" ;
     ns1:hasAttribute <http://www.geoscienceontology.org/svo/svl/attribute#leq> ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#leq_volume_flux> ;
@@ -2125,7 +2128,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#precipitation_mass_flux> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "precipitation_mass_flux" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#mass_flux> ;
     ns1:quantifiesProcess <http://www.geoscienceontology.org/svo/svl/process#precipitation> ;
@@ -2135,19 +2138,20 @@
 <http://www.geoscienceontology.org/svo/svl/property#pressure> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "pressure",
         "total_pressure" ;
     ns1:hasAssociatedWikipediaPage "https://en.wikipedia.org/wiki/Pressure" ;
-    rdfs:comment "https://en.wikipedia.org/wiki/Pressure" ;
+    owl:sameAs <http://www.wikidata.org/entity/Q39552> ;
     ns2:altLabel "total_pressure" ;
     ns2:prefLabel "pressure" ;
+    ns3:description "ratio of force applied over an area" ;
     ccut:hasDimension "L-1 M T-2" .
 
 <http://www.geoscienceontology.org/svo/svl/property#runoff_mass_flux> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "runoff_mass_flux" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#mass_flux> ;
     ns1:quantifiesProcess <http://www.geoscienceontology.org/svo/svl/process#runoff> ;
@@ -2155,14 +2159,16 @@
     ccut:hasDimension "L-2 M T-1" .
 
 <http://www.geoscienceontology.org/svo/svl/property#speed> a ns1:Property,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "speed" ;
-    ns2:prefLabel "speed" .
+    owl:sameAs <http://www.wikidata.org/entity/Q3711325> ;
+    ns2:prefLabel "speed" ;
+    ns3:description "magnitude of velocity" .
 
 <http://www.geoscienceontology.org/svo/svl/property#transpiration_volume_flux> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "transpiration_volume_flux" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#volume_flux> ;
     ns1:quantifiesProcess <http://www.geoscienceontology.org/svo/svl/process#transpiration> ;
@@ -2172,45 +2178,28 @@
 <http://www.geoscienceontology.org/svo/svl/property#volume-per-area_storage_capacity> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "volume-per-area_storage_capacity" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#volume-per-area_capacity> ;
     ns2:prefLabel "volume-per-area_storage_capacity" ;
     ccut:hasDimension "L" .
 
-"albedo" ns3:description "ratio of reflected radiation to incident radiation" .
-
-"depth" ns3:description "vertical distance below the reference surface" .
-
-"latitude" ns3:description "the angle between zenith and a plane parallel to the equator" .
-
-"longitude" ns3:description "geographic coordinate that specifies the east-west position of a point on the Earth's surface" .
-
-"porosity" ns3:description "measure of the void spaces in a material" .
-
-"pressure" ns3:description "ratio of force applied over an area" .
-
-"slope" ns3:description "In mathematics, the slope or gradient of a line describes its steepness, incline, or grade; number that describes both the direction and the steepness of the line" .
-
-"temperature" ns3:description "physical property of matter that quantitatively expresses the common notions of hot and cold" .
-
-"thickness" ns3:description "extent from one surface to the opposite, usually in the smallest solid dimension" .
-
 <http://www.geoscienceontology.org/svo/svl/property#hydraulic_conductivity> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "hydraulic_conductivity" ;
     ns1:hasAssociatedWikipediaPage "http://en.wikipedia.org/wiki/Hydraulic_conductivity" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#conductivity> ;
-    rdfs:comment "http://en.wikipedia.org/wiki/Hydraulic_conductivity" ;
+    owl:sameAs <http://www.wikidata.org/entity/Q2783041> ;
     ns2:prefLabel "hydraulic_conductivity" ;
+    ns3:description "measure of the ability of a porous material to allow water to pass through it" ;
     ccut:hasDimension "L T-1" .
 
 <http://www.geoscienceontology.org/svo/svl/property#lateral_volume_flux> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "lateral_volume_flux" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#volume_flux> ;
     ns2:prefLabel "lateral_volume_flux" ;
@@ -2219,7 +2208,7 @@
 <http://www.geoscienceontology.org/svo/svl/property#mass-per-area_density> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "areal_density",
         "density_thickness",
         "mass-per-area_density",
@@ -2227,7 +2216,6 @@
         "surface_density" ;
     ns1:hasAssociatedWikipediaPage "https://en.wikipedia.org/wiki/Area_density" ;
     ns1:isTypeOf <http://www.geoscienceontology.org/svo/svl/property#density> ;
-    rdfs:comment "https://en.wikipedia.org/wiki/Area_density" ;
     ns2:altLabel "areal_density",
         "density_thickness",
         "superficial_density",
@@ -2238,49 +2226,53 @@
 <http://www.geoscienceontology.org/svo/svl/property#thickness> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "thickness" ;
     ns1:hasAssociatedWikipediaPage "http://en.wikipedia.org/wiki/Thickness" ;
-    rdfs:comment "http://en.wikipedia.org/wiki/Thickness" ;
+    owl:sameAs <http://www.wikidata.org/entity/Q3589038> ;
     ns2:prefLabel "thickness" ;
+    ns3:description "extent from one surface to the opposite, usually in the smallest solid dimension" ;
     ccut:hasDimension "L" .
 
 <http://www.geoscienceontology.org/svo/svl/property#mass_fraction> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "mass_fraction" ;
+    owl:sameAs <http://www.wikidata.org/entity/Q899138> ;
     ns2:prefLabel "mass_fraction" ;
+    ns3:description "ratio of one substance with mass to the mass of the total mixture" ;
     ccut:hasDimension "none" .
 
 <http://www.geoscienceontology.org/svo/svl/property#energy_flux> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "energy_flux" ;
     ns1:hasAssociatedWikipediaPage "http://en.wikipedia.org/wiki/Energy_flux" ;
-    rdfs:comment "http://en.wikipedia.org/wiki/Energy_flux" ;
+    owl:sameAs <http://www.wikidata.org/entity/Q5377054> ;
     ns2:prefLabel "energy_flux" ;
+    ns3:description "rate of transfer of energy through a surface" ;
     ccut:hasDimension "M T-3" .
 
 <http://www.geoscienceontology.org/svo/svl/property#depth> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "depth" ;
     ns1:hasAssociatedWikipediaPage "https://en.wikipedia.org/wiki/Depth" ;
-    rdfs:comment "https://en.wikipedia.org/wiki/Depth" ;
+    owl:sameAs <http://www.wikidata.org/entity/Q930412> ;
     ns2:prefLabel "depth" ;
+    ns3:description "vertical distance below the reference surface" ;
     ccut:hasDimension "L" .
 
 <http://www.geoscienceontology.org/svo/svl/property#volume_flux> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "volume_flux",
         "volumetric_flux" ;
     ns1:hasAssociatedWikipediaPage "https://en.wikipedia.org/wiki/Volumetric_flux" ;
-    rdfs:comment "https://en.wikipedia.org/wiki/Volumetric_flux" ;
     ns2:altLabel "volumetric_flux" ;
     ns2:prefLabel "volume_flux" ;
     ccut:hasDimension "L T-1" .
@@ -2288,18 +2280,21 @@
 <http://www.geoscienceontology.org/svo/svl/property#temperature> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "temperature" ;
     ns1:hasAssociatedWikipediaPage "http://en.wikipedia.org/wiki/Temperature" ;
-    rdfs:comment "http://en.wikipedia.org/wiki/Temperature" ;
+    owl:sameAs <http://www.wikidata.org/entity/Q11466> ;
     ns2:prefLabel "temperature" ;
+    ns3:description "physical property of matter that quantitatively expresses the common notions of hot and cold" ;
     ccut:hasDimension "O" .
 
 <http://www.geoscienceontology.org/svo/svl/property#volume_fraction> a ns1:Property,
         ns1:QuantitativeProperty,
         ns1:StandardizedProperty,
-        <http://www.w3.org/2002/07/owl#NamedIndividual> ;
+        owl:NamedIndividual ;
     rdfs:label "volume_fraction" ;
+    owl:sameAs <http://www.wikidata.org/entity/Q909482> ;
     ns2:prefLabel "volume_fraction" ;
+    ns3:description "dimensionless quantity" ;
     ccut:hasDimension "none" .
 

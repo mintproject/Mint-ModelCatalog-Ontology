@@ -9,6 +9,8 @@ from rdflib.namespace import RDFS
 import csv
 import sys
 import traceback
+from SPARQLWrapper import SPARQLWrapper, JSON
+import unicodedata
 
 pp = pprint.PrettyPrinter(indent=2)
 
@@ -61,10 +63,11 @@ def api_request(metric):
         'Content-Type': "application/json"
     }
     # For real interactions with the data catalog, use api.mint-data-catalog.org
-    url = "http://localhost:5000/get_canonical_json?"
+    url = "http://localhost:5000/get_canonical_json?u="+metric
+    resp = requests.get(url, headers=request_headers)
 
-    resp = requests.get(url + "u=" + metric,
-                         headers=request_headers)
+    # resp = requests.get(url + "u="+metric,
+    #                      headers=request_headers)
 
     # If request is successful, it will return 'result': 'success' along with a list of registered standard variables
     # and their record_ids. Those record_ids are unique identifiers (UUID) and you will need them down the road to
@@ -199,16 +202,132 @@ def json_to_rdf(parsed_response, store, MINT, qudtp, ccut):
     return metric, store
 
 
+def add_wiki_pages(store, qudtp, owl):
+    qudtp = Namespace(qudtp)
+    owl = Namespace(owl)
+    dict4 = {}
+    wiki_dict = {}
+    unit_symbol_wiki_dict = {}
+    exponent_symbol_list = list()
+    sparql = SPARQLWrapper("http://ontosoft.isi.edu:3030/ds/query")
+    sparql_query = """
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    select distinct ?symbol ?label
+    where {
+    ?part <https://www.w3id.org/mint/ccut#hasPart> ?symbol.
+    ?symbol rdfs:label ?label.
+    FILTER NOT EXISTS {
+    ?symbol <https://www.w3id.org/mint/ccut#hasPart> ?p
+    }
+  }
+            """
+    sparql.setQuery(sparql_query)
+    sparql.setReturnFormat(JSON)
+    results = sparql.query().convert()
+    for result in results["results"]["bindings"]:
+        key = result['symbol']['value']
+        value1 = result['label']['value']
+        dict4.update({key:value1})
+        value = value1.split("^")[0]
+        exponent = int(value1.split("^")[1])
+        if exponent != 1:
+            exponent_symbol_list.append(key)
+
+        wiki_dict.setdefault(value, []).append(key)
+
+    for unit_symbol in wiki_dict.keys():
+
+
+        sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
+        sparql_query = """
+        select ?a ?c where {
+  
+        ?a wdt:P5061 \"""" + unit_symbol + """\"@en.
+        ?a schema:description ?c.
+        FILTER (lang(?c) = 'en')
+        }
+        """
+
+        sparql.setQuery(sparql_query)
+        sparql.setReturnFormat(JSON)
+        results2 = sparql.query().convert()
+        number_of_options = len(results2["results"]["bindings"])
+        if number_of_options == 0:
+            continue
+
+        if number_of_options == 1:
+            for res in results2["results"]["bindings"]:
+                obj = res['a']['value']
+                unit_symbol_wiki_dict.update({unit_symbol:obj})
+                # store.add((URIRef(key), URIRef("http://www.geoscienceontology.org/svo/svu#hasAssociatedWikipediaPage"), URIRef(obj)))
+
+        if number_of_options > 1:
+            serial_number = 1
+            request = ""
+            for res in results2["results"]["bindings"]:
+                description = unicodedata.normalize('NFKD', res['c']['value']).encode('ascii','ignore')
+                request += str(serial_number) + ": " + description + "\n"
+                serial_number += 1
+
+            option = raw_input("Please select the most appropriate option for the variable description\n"
+                               "Variable :- " + unit_symbol + "\n"
+                               + request
+                               )
+            try:
+                option = int(option)
+            except:
+                option = input("Please input integer as option")
+                option = int(option)
+            while option < 1 or option > number_of_options:
+                print ("Wrong Input.")
+                option = input("Please input again")
+                try:
+                    option = int(option)
+                except ValueError:
+                    continue
+
+            res = results2["results"]["bindings"][option - 1]
+            obj = res['a']['value']
+            unit_symbol_wiki_dict.update({unit_symbol: obj})
+            # store.add((URIRef(key), URIRef("http://www.geoscienceontology.org/svo/svu#hasAssociatedWikipediaPage"), URIRef(obj)))
+
+    for key, value in unit_symbol_wiki_dict.items():
+        if key in wiki_dict.keys():
+            uri_list = wiki_dict[key]
+            for uri in uri_list:
+                store.add((URIRef(uri), qudtp.quantityKind, URIRef(value)))
+
+    for exponent_symbol in exponent_symbol_list:
+        URI = exponent_symbol
+        quantity_symbol = dict4[exponent_symbol]
+        sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
+        sparql_query = """
+        select ?a where {
+
+        ?a skos:altLabel \"""" + quantity_symbol + """\"@en.
+        }
+        """
+
+        sparql.setQuery(sparql_query)
+        sparql.setReturnFormat(JSON)
+        results3 = sparql.query().convert()
+        for res in results3["results"]["bindings"]:
+            obj = res['a']['value']
+            store.add((URIRef(URI), owl.sameAs, URIRef(obj)))
+
+
 def preprocess_turtle_file(store):
     MINT = "https://w3id.org/mint/instance/"
     qudtp = "http://qudt.org/1.1/schema/qudt#"# to fix when I get the right NS.
     ccut = "https://www.w3id.org/mint/ccut#"
+    owl = 'http://www.w3.org/2002/07/owl#'
     # Bind a few prefix, namespace pairs for pretty output
     store.bind("mint", MINT)
     store.bind("qudtp", qudtp)
     store.bind("ccut", ccut)
+    store.bind("owl", owl)
 
-    return store, MINT, qudtp, ccut
+    return store, MINT, qudtp, ccut, owl
 
 def create_success_json(success_dict):
     with open('dict.json', 'w') as fp:
@@ -233,7 +352,7 @@ if __name__ == '__main__':
     success_dict = dict()
 
     store = Graph()
-    store, MINT, qudtp, ccut = preprocess_turtle_file(store)
+    store, MINT, qudtp, ccut, owl = preprocess_turtle_file(store)
 
     with open(input_file, "r") as read_file:
         data = json.load(read_file)
@@ -268,6 +387,8 @@ if __name__ == '__main__':
 
         create_success_json(success_dict)
         create_error_json(error_dict)
+
+        add_wiki_pages(store, qudtp, owl)
         create_turtle_file(store)
     # parsed_response = api_request("C")
     # count =1

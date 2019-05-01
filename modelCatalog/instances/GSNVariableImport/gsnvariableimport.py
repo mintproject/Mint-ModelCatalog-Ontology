@@ -19,8 +19,8 @@ def create_error_file(error_dict):
 
 
 if __name__ == '__main__':
-    mode = sys.argv[1]
-    # mode = "i"
+    # mode = sys.argv[1]
+    mode = "i"
     store = Graph()
     error_dict = dict()
     property_object_list = list()
@@ -101,6 +101,8 @@ where {
             obj = str(property_result["c"]["value"])
 
             if not predicate.endswith("subLabel") and not predicate.endswith("comment"):
+                if predicate.endswith("isTypeOf"):
+                    property_object_list.append(obj)
                 if predicate.endswith("hasUnits"):
                     obj1 = obj.replace("^", "")
                     obj = obj1

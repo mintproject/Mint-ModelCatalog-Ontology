@@ -1,4 +1,4 @@
-This UnitToRDF.py converts various units into their respective rdf graphs.
+UnitToRDF.py converts various units into their respective rdf graphs.
 
 Units.json contains all the units which are needed to be converted.
 

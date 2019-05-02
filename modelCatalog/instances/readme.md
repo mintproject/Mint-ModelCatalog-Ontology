@@ -1,5 +1,6 @@
-TO DO: 
-General readme instructions for populating model catalog as we have it.
+#Model catalog: Population and linking
+
+This repository contains the resources necessary to populate and curate the model catalog.
 
 Explain the organization of the Data folder
 

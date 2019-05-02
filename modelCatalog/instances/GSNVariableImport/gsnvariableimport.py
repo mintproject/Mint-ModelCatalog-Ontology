@@ -9,7 +9,7 @@ import sys
 
 def create_turtle_file(store):
     f = open('variable.ttl', "w")
-    f.write(store.serialize(format="turtle"))
+    f.write(store.serialize(format="turtle").decode('utf-8'))
     f.close()
 
 
@@ -19,8 +19,8 @@ def create_error_file(error_dict):
 
 
 if __name__ == '__main__':
-    # mode = sys.argv[1]
-    mode = "i"
+    mode = sys.argv[1]
+    #mode = "i"
     store = Graph()
     error_dict = dict()
     property_object_list = list()
@@ -32,7 +32,7 @@ if __name__ == '__main__':
     store.bind("owl", owl)
     ccut = Namespace(ccut)
     owl = Namespace(owl)
-    sparql = SPARQLWrapper("http://ontosoft.isi.edu:3030/ds/query")
+    sparql = SPARQLWrapper("http://endpoint.mint.isi.edu/ds/query")
     sparql.setQuery("""
     PREFIX mc: <https://w3id.org/mint/modelCatalog#>
 
@@ -162,18 +162,18 @@ where {
                     request += str(serial_number)+": " + str(value + "\n")
                     serial_number+=1
 
-                option = raw_input("Please select the most appropriate option for the variable description\n"
+                option = input("Please select the most appropriate option for the variable description\n"
                                    "Variable :-" + wiki_var + "\n"
                                    + request
                                    )
                 try:
                     option = int(option)
                 except:
-                    option = raw_input("Please input integer as option")
+                    option = input("Please input integer as option")
                     option = int(option)
                 while option < 1 or option > number_of_options:
-                    print "Wrong Input."
-                    option = raw_input("Please input again")
+                    print ("Wrong Input.")
+                    option = input("Please input again")
                     try:
                         option = int(option)
                     except ValueError:

@@ -8,3 +8,5 @@ https://docs.google.com/document/d/1Vay-M6JW3iJdmVabNiuQBKehlc2S5UZK9W1WqLimLpQ/
 and
 
 https://docs.google.com/document/d/1Q7S16xngZCFNQHDrgJbwK43XQiMfAMVgSRqlMFF4Abc/edit#
+
+Latest Ontology Version URI: https://w3id.org/mint/modelCatalog#

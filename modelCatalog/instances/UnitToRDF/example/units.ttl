@@ -163,10 +163,11 @@ mint:decimal_degrees a qudtp:Unit ;
     ccut:hasPart mint:u_decimal,
         mint:u_degrees .
 
-mint:deg_C a qudtp:Unit ;
-    rdfs:label "deg C" ;
-    qudtp:abbreviation "deg C" ;
-    ccut:hasPart mint:u_deg_C .
+mint:degCTe a qudtp:Unit ;
+    rdfs:label "degC" ;
+    qudtp:abbreviation "degC" ;
+    ccut:hasDimension "Te" ;
+    ccut:hasPart mint:u_Te_degreecelsius_degC .
 
 mint:deg_KTe_D a qudtp:Unit ;
     rdfs:label "deg K" ;
@@ -174,11 +175,6 @@ mint:deg_KTe_D a qudtp:Unit ;
     ccut:hasDimension "Te D" ;
     ccut:hasPart mint:u_D_degreeangle_deg,
         mint:u_Te_kelvin_K .
-
-mint:forage a qudtp:Unit ;
-    rdfs:label "forage" ;
-    qudtp:abbreviation "forage" ;
-    ccut:hasPart mint:u_forage .
 
 mint:g_100g_1 a qudtp:Unit ;
     rdfs:label "g 100g-1" ;
@@ -204,11 +200,6 @@ mint:haL2 a qudtp:Unit ;
     qudtp:abbreviation "ha" ;
     ccut:hasDimension "L2" ;
     ccut:hasPart mint:u_L2_hectare_ha .
-
-mint:kg0 a qudtp:Unit ;
-    rdfs:label "kg0" ;
-    qudtp:abbreviation "kg0" ;
-    ccut:hasPart mint:u_0_M_kilo_gram_kg .
 
 mint:kgM a qudtp:Unit ;
     rdfs:label "kg" ;
@@ -245,6 +236,12 @@ mint:kg_ha_1M_L_2 a qudtp:Unit ;
     ccut:hasDimension "M L-2" ;
     ccut:hasPart mint:u_M_kilo_gram_kg,
         mint:u__1_L2_hectare_ha .
+
+mint:kg_kg_1 a qudtp:Unit ;
+    rdfs:label "kg kg-1" ;
+    qudtp:abbreviation "kg kg-1" ;
+    ccut:hasPart mint:u_M_kilo_gram_kg,
+        mint:u__1_M_kilo_gram_kg .
 
 mint:kg_kg_1_x_100 a qudtp:Unit ;
     rdfs:label "kg kg-1 x-100" ;
@@ -370,17 +367,6 @@ mint:u_0_L_meter_m rdfs:label "m^0" ;
     ccut:exponent "0" ;
     ccut:hasDimension "L" .
 
-mint:u_0_M_kilo_gram_kg rdfs:label "kg^0" ;
-    qudtp:conversionMultiplier "0.001" ;
-    qudtp:conversionOffset "0.0" ;
-    qudtp:quantityKind <http://www.qudt.org/qudt/owl/1.0.0/unit/Instances.html#Gram> ;
-    qudtp:symbol "kg" ;
-    ccut:exponent "0" ;
-    ccut:hasDimension "M" ;
-    ccut:prefix <http://www.qudt.org/qudt/owl/1.0.0/unit/Instances.html#Kilo> ;
-    ccut:prefixConversionMultiplier "1000.0" ;
-    ccut:prefixConversionOffset "0.0" .
-
 mint:u_2_L_meter_m rdfs:label "m^2" ;
     qudtp:conversionMultiplier "1.0" ;
     qudtp:conversionOffset "0.0" ;
@@ -443,6 +429,13 @@ mint:u_T_year365day_year rdfs:label "year^1" ;
     qudtp:quantityKind <http://www.qudt.org/qudt/owl/1.0.0/unit/Instances.html#Year365Day> ;
     qudtp:symbol "year" ;
     ccut:hasDimension "T" .
+
+mint:u_Te_degreecelsius_degC rdfs:label "degC^1" ;
+    qudtp:conversionMultiplier "1.0" ;
+    qudtp:conversionOffset "273.15" ;
+    qudtp:quantityKind <http://www.qudt.org/qudt/owl/1.0.0/unit/Instances.html#DegreeCelsius> ;
+    qudtp:symbol "degC" ;
+    ccut:hasDimension "Te" .
 
 mint:u_YYYY rdfs:label "YYYY^1" ;
     qudtp:conversionMultiplier "None" ;
@@ -517,20 +510,10 @@ mint:u_decimal rdfs:label "decimal^1" ;
     qudtp:conversionOffset "None" ;
     qudtp:symbol "decimal" .
 
-mint:u_deg_C rdfs:label "deg C^1" ;
-    qudtp:conversionMultiplier "None" ;
-    qudtp:conversionOffset "None" ;
-    qudtp:symbol "deg C" .
-
 mint:u_degrees rdfs:label "degrees^1" ;
     qudtp:conversionMultiplier "None" ;
     qudtp:conversionOffset "None" ;
     qudtp:symbol "degrees" .
-
-mint:u_forage rdfs:label "forage^1" ;
-    qudtp:conversionMultiplier "None" ;
-    qudtp:conversionOffset "None" ;
-    qudtp:symbol "forage" .
 
 mint:u_number rdfs:label "number^1" ;
     qudtp:conversionMultiplier "None" ;
@@ -699,6 +682,15 @@ mint:u_M_gram_g rdfs:label "g^1" ;
     qudtp:symbol "g" ;
     ccut:hasDimension "M" .
 
+mint:u__1_L2_hectare_ha rdfs:label "ha^-1" ;
+    qudtp:conversionMultiplier "10000.0" ;
+    qudtp:conversionOffset "0.0" ;
+    qudtp:quantityKind <http://www.qudt.org/qudt/owl/1.0.0/unit/Instances.html#Hectare>,
+        <http://www.wikidata.org/entity/Q35852> ;
+    qudtp:symbol "ha" ;
+    ccut:exponent "-1" ;
+    ccut:hasDimension "L2" .
+
 mint:u__1_M_kilo_gram_kg rdfs:label "kg^-1" ;
     qudtp:conversionMultiplier "0.001" ;
     qudtp:conversionOffset "0.0" ;
@@ -710,15 +702,6 @@ mint:u__1_M_kilo_gram_kg rdfs:label "kg^-1" ;
     ccut:prefix <http://www.qudt.org/qudt/owl/1.0.0/unit/Instances.html#Kilo> ;
     ccut:prefixConversionMultiplier "1000.0" ;
     ccut:prefixConversionOffset "0.0" .
-
-mint:u__1_L2_hectare_ha rdfs:label "ha^-1" ;
-    qudtp:conversionMultiplier "10000.0" ;
-    qudtp:conversionOffset "0.0" ;
-    qudtp:quantityKind <http://www.qudt.org/qudt/owl/1.0.0/unit/Instances.html#Hectare>,
-        <http://www.wikidata.org/entity/Q35852> ;
-    qudtp:symbol "ha" ;
-    ccut:exponent "-1" ;
-    ccut:hasDimension "L2" .
 
 mint:u__1_T_day_day rdfs:label "day^-1" ;
     qudtp:conversionMultiplier "86400.0" ;

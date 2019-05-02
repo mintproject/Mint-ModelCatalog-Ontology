@@ -21,7 +21,7 @@ Explain the code organization in the repository
     docker run -d -p 5000:5000 ccut_docker run -h 0.0.0.0 -p 5000
 
     6. cd UnitToRDF
-    7. python UnitToRDF.
+    7. python UnitToRDF. This is an interactive process where the program will ask the user in case of ambiguous terms.
     
 2) Generate SVOs
     Summarize main points here

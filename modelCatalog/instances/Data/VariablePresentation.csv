@@ -81,8 +81,8 @@ econ_Nfert,Nfert,Nfert,nitrogen fertilizer applications,nitrogen fertilizer appl
 ,,,,,,,,,,,,
 cycles_doy,DOY,DOY,day of the year,Calendar day from 1 to 366,,,,,,,2,
 cycles_pp,PP,PP,precipitation,Precipitation,atmosphere_water__time_integral_of_precipitation_leq_volume_flux,mm,atmosphere_water__precipitation_volume_flux,,,,1,cycles_infiltration
-cycles_tx,Tx,Tx,temperature air maximum of the day,Maximum air temperature recorded or model-generated for that day at 1.5 m above the surface,air__daily_max_of_temperature,C,,,,,1,cycles_cropGrowth;cycles_transpiration;cycles_soil_evapr;cycles_soil_evap
-cycles_tn,Tn,Tn,temperature minimum of the day,Minimum air temperature recorded or model-generated for that day at 1.5 m above the surface,air__daily_min_of_temperature,C,,,,,1,cycles_cropGrowth;cycles_transpiration;cycles_soil_evapr;cycles_soil_evap
+cycles_tx,Tx,Tx,temperature air maximum of the day,Maximum air temperature recorded or model-generated for that day at 1.5 m above the surface,air__daily_max_of_temperature,degC,,,,,1,cycles_cropGrowth;cycles_transpiration;cycles_soil_evapr;cycles_soil_evap
+cycles_tn,Tn,Tn,temperature minimum of the day,Minimum air temperature recorded or model-generated for that day at 1.5 m above the surface,air__daily_min_of_temperature,degC,,,,,1,cycles_cropGrowth;cycles_transpiration;cycles_soil_evapr;cycles_soil_evap
 cycles_sr,Solar,Solar,solar radiation of the day,Shortwave incoming radiation on a horizontal surface at elevation of the location,land_surface~horizontal_radiation~incoming~shortwave__energy_flux,MJ/m2/day,,,,,1,cycles_cropGrowth;cycles_transpiration;cycles_soil_evapr;cycles_soil_evap
 cycles_hx,RHx,RHx,relative humidity maximum,relative humidity maximum,atmosphere_air_water~vapor__max_of_relative_saturation,Pa/Pa x 100,,,,,1,cycles_cropGrowth;cycles_transpiration;cycles_soil_evapr;cycles_soil_evap
 cycles_hn,RHn,RHn,relative humidity minimum,relative humidity minimum,atmosphere_air_water~vapor__min_of_relative_saturation,%,,,,,1,cycles_cropGrowth;cycles_transpiration;cycles_soil_evapr;cycles_soil_evap
@@ -276,7 +276,7 @@ cycles_n_fixation,N FIXATION,N FIXATION,,Cumulative N fixation by legume crops.,
 cycles_n_stress,N STRESS,N STRESS,,Daily N stress value of the crop.,crop_nitrogen__daily_stress_fraction,%,,,,,2,cycles_cropGrowth
 cycles_potential_tr,POTENTIAL TR,POTENTIAL TR,,Potential transpiration of the crop.,crop__potential_transpiration_volume_flux,mm/day,,,,,3,
 cycles_stage,STAGE,STAGE,,The phenological stage.,crop__phenological_stage,,,,,,3,
-cycles_thermal_time,THERMAL TIME,THERMAL TIME,,The cumulative thermal time since the crop was planted.,crop_from-planting__cumulative_thermal_time,C-day,,,,,3,
+cycles_thermal_time,THERMAL TIME,THERMAL TIME,,The cumulative thermal time since the crop was planted.,crop_from-planting__cumulative_thermal_time,degC/day,,,,,3,
 cycles_water_stress,WATER STRESS,WATER STRESS,,Daily water stress value of the crop.,crop_water__daily_stress_fraction,%,,,,,3,
 ,,,,,,,,,,,,
 cycles_bulk_density,BULK DENSITY,BULK DENSITY,,The bulk density of each soil layer.,soil_layer__bulk_mass-per-volume_density,Mg/m3,,,,,3,

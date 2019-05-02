@@ -10,6 +10,7 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.net.URI;
 import java.net.URLEncoder;
 import java.util.Arrays;
 import org.apache.jena.ontology.Individual;
@@ -17,6 +18,11 @@ import org.apache.jena.ontology.OntClass;
 import org.apache.jena.ontology.OntModel;
 import org.apache.jena.ontology.OntProperty;
 import org.apache.jena.ontology.OntResource;
+import org.apache.jena.query.Query;
+import org.apache.jena.query.QueryExecution;
+import org.apache.jena.query.QueryExecutionFactory;
+import org.apache.jena.query.QueryFactory;
+import org.apache.jena.query.ResultSet;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Property;
 
@@ -31,9 +37,12 @@ public class CSV2RDF {
     
     /**
      * @param unitDictionaryFile File containing a dictionary between unit labels and their URIs.
+     * @param scientificVariableFile  File containing the RDF extraction from GSN.
      */
-    public CSV2RDF(String unitDictionaryFile) throws FileNotFoundException{
-        instances = ModelFactory.createOntologyModel();   
+    public CSV2RDF(String unitDictionaryFile, String scientificVariableFile) throws FileNotFoundException{
+        instances = ModelFactory.createOntologyModel();
+        //we read all the variables, as they will be part of the model catalog.
+        instances.read(scientificVariableFile);
         mcOntology = ModelFactory.createOntologyModel();
         mcOntology.read("https://w3id.org/mint/modelCatalog");
        // mcOntology.read("http://purl.org/dc/terms/");
@@ -80,10 +89,9 @@ public class CSV2RDF {
                                 else{
                                     p = mcOntology.getOntProperty(property);
                                 }
-                                if(p.isDatatypeProperty()|| p.isAnnotationProperty()//to include rdfs label too
-                                        ||p.toString().contains("StandardVariable")){//HACK, THESE WILL BE PROPERTIES IN THE FUTURE.
-                                    //System.out.print(rowValue+" ");
+                                if(p.isDatatypeProperty()|| p.isAnnotationProperty()){//to include rdfs label too
                                     ind.addProperty(p, rowValue);
+                                    //System.out.print(rowValue+" ");
                                 }else{
                                     OntClass range = p.getRange().asClass();
                                     //this works under the assumption that there is a single range class for a property.
@@ -118,8 +126,26 @@ public class CSV2RDF {
                                                 emptyUnit.addLabel(rowValue, null);
                                                 ind.addProperty((Property) p, emptyUnit);
                                             }
-                                            
-                                        }else{
+                                        }else if(p.toString().contains("hasStandardVariable")){
+                                            /**
+                                            read label, try to find one in the svo file (there should be).
+                                            * If found, then use that URI. IF not found, then create one.
+                                            **/
+                                           Query query = QueryFactory.create("select ?var where {"
+                                                   + "?var <http://www.w3.org/2000/01/rdf-schema#label> \""+rowValue+"\"}");
+                                           // Execute the query and obtain results
+                                           QueryExecution qe = QueryExecutionFactory.create(query, instances);
+                                           ResultSet rs =  qe.execSelect();
+                                           if(rs.hasNext()){
+                                               ind.addProperty(p, rs.next().getResource("?var"));
+                                           }else{
+                                               //no variable found: create variable, add label
+                                               Individual userInstance = instances.createClass("http://www.geoscienceontology.org/svo/svu#Variable").
+                                                       createIndividual(instance_URI+encode(rowValue));
+                                               userInstance.addLabel(rowValue, null);
+                                           }
+                                        }
+                                        else{
                                             Individual targetIndividual = instances.getIndividual(instance_URI+rowValue);
                                             if(targetIndividual == null){
                                                 if(range.isUnionClass()){
@@ -143,6 +169,32 @@ public class CSV2RDF {
     }
     
     /**
+     * Encoding of the name to avoid any trouble with spacial characters and spaces
+     * @param name Name to encode
+     * @return encoded name
+     */
+    public static String encode(String name){
+        name = name.replace("http://","");
+        String prenom = name.substring(0, name.indexOf("/")+1);
+        //remove tabs and new lines
+        String nom = name.replace(prenom, "");       
+        nom = nom.replace("\\n", "");
+        nom = nom.replace("\n", "");
+        nom = nom.replace("\b", "");
+        nom = nom.replace("/","_");
+        nom = nom.replace("=","_");
+        nom = nom.trim();
+        nom = nom.toUpperCase();
+        try {
+            nom = new URI(null,nom,null).toASCIIString();//URLEncoder.encode(nom, "UTF-8");
+        }
+        catch (Exception ex) {
+            System.err.println("Problem encoding the URI:" + nom + " " + ex.getMessage() );
+        }
+        return prenom+nom;
+    }
+    
+    /**
      * Function to export the stored model as an RDF file, using ttl syntax
      * @param outFile name and path of the outFile must be created.
      */
@@ -160,23 +212,24 @@ public class CSV2RDF {
     
     public static void main(String[] args){
         try{
-            CSV2RDF test = new CSV2RDF("C:\\Users\\dgarijo\\Documents\\GitHub\\Mint-ModelCatalog-Ontology\\modelCatalog\\instances\\Units\\dict.json");
+            //TO DO: Read path to data folder from input. Assuming the structure.
+            String pathToInstancesDataFolder = "C:\\Users\\dgarijo\\Documents\\GitHub\\Mint-ModelCatalog-Ontology\\modelCatalog\\instances\\Data";
+            String pathToTransformationsDataFolder = "C:\\Users\\dgarijo\\Documents\\GitHub\\Mint-ModelCatalog-Ontology\\transformationCatalog\\instances";
+            CSV2RDF test = new CSV2RDF(pathToInstancesDataFolder+"\\Units\\dict.json", pathToInstancesDataFolder+"\\SVO\\variable.ttl");
             
-        test.processFile("C:\\Users\\dgarijo\\Documents\\GitHub\\Mint-ModelCatalog-Ontology\\modelCatalog\\instances\\Model.csv");
-        test.processFile("C:\\Users\\dgarijo\\Documents\\GitHub\\Mint-ModelCatalog-Ontology\\modelCatalog\\instances\\ModelConfiguration.csv");
-        test.processFile("C:\\Users\\dgarijo\\Documents\\GitHub\\Mint-ModelCatalog-Ontology\\modelCatalog\\instances\\DatasetSpecification.csv");
-        test.processFile("C:\\Users\\dgarijo\\Documents\\GitHub\\Mint-ModelCatalog-Ontology\\modelCatalog\\instances\\VariablePresentation.csv");
-        test.processFile("C:\\Users\\dgarijo\\Documents\\GitHub\\Mint-ModelCatalog-Ontology\\modelCatalog\\instances\\ModelVersion.csv");
-        test.processFile("C:\\Users\\dgarijo\\Documents\\GitHub\\Mint-ModelCatalog-Ontology\\modelCatalog\\instances\\Process.csv");
-        test.processFile("C:\\Users\\dgarijo\\Documents\\GitHub\\Mint-ModelCatalog-Ontology\\modelCatalog\\instances\\Parameter.csv");
-        test.processFile("C:\\Users\\dgarijo\\Documents\\GitHub\\Mint-ModelCatalog-Ontology\\modelCatalog\\instances\\TimeInterval.csv");
-        test.processFile("C:\\Users\\dgarijo\\Documents\\GitHub\\Mint-ModelCatalog-Ontology\\modelCatalog\\instances\\CAG.csv");
-//        test.instances.write(System.out,"JSON-LD");
-//        test.instances.write(System.out,"TTL");
-        test.processFile("C:\\Users\\dgarijo\\Documents\\GitHub\\Mint-ModelCatalog-Ontology\\transformationCatalog\\instances\\SoftwareScript.csv");
-        test.processFile("C:\\Users\\dgarijo\\Documents\\GitHub\\Mint-ModelCatalog-Ontology\\transformationCatalog\\instances\\SoftwareVersion.csv");
-        exportRDFFile("modelCatalog.ttl", test.instances, "TTL");
-        exportRDFFile("modelCatalog.json", test.instances, "JSON-LD");
+            test.processFile(pathToInstancesDataFolder+"\\Model.csv");
+            test.processFile(pathToInstancesDataFolder+"\\ModelConfiguration.csv");
+            test.processFile(pathToInstancesDataFolder+"\\DatasetSpecification.csv");
+            test.processFile(pathToInstancesDataFolder+"\\VariablePresentation.csv");
+            test.processFile(pathToInstancesDataFolder+"\\ModelVersion.csv");
+            test.processFile(pathToInstancesDataFolder+"\\Process.csv");
+            test.processFile(pathToInstancesDataFolder+"\\Parameter.csv");
+            test.processFile(pathToInstancesDataFolder+"\\TimeInterval.csv");
+            test.processFile(pathToInstancesDataFolder+"\\CAG.csv");
+            test.processFile(pathToTransformationsDataFolder+"\\SoftwareScript.csv");
+            test.processFile(pathToTransformationsDataFolder+"\\SoftwareVersion.csv");
+            exportRDFFile("modelCatalog.ttl", test.instances, "TTL");
+            exportRDFFile("modelCatalog.json", test.instances, "JSON-LD");
         }catch (Exception e){
             System.err.println("Error: "+e);
         }

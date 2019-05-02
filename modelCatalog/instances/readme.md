@@ -33,7 +33,7 @@ Explain the code organization in the repository
     
 2) Generate Scientific Variable Links.
     Summarize main points here
-    (connects to Wikidata!)
+    TBD
     
 3) Ongoing: Container descriptions
     

@@ -10,7 +10,7 @@
 mint:C a qudtp:Unit ;
     rdfs:label "C" ;
     qudtp:abbreviation "C" ;
-    ccut:hasPart mint:u_coulomb_C .
+    ccut:hasPart mint:u_cord_C .
 
 mint:Cs_Cx_1T a qudtp:Unit ;
     rdfs:label "Cs Cx-1" ;
@@ -46,7 +46,7 @@ mint:Mg_CM a qudtp:Unit ;
     qudtp:abbreviation "Mg C" ;
     ccut:hasDimension "M" ;
     ccut:hasPart mint:u_M_mega_gram_Mg,
-        mint:u_coulomb_C .
+        mint:u_cord_C .
 
 mint:Mg_C_year_1M_T_1 a qudtp:Unit ;
     rdfs:label "Mg C year-1" ;
@@ -54,7 +54,7 @@ mint:Mg_C_year_1M_T_1 a qudtp:Unit ;
     ccut:hasDimension "M T-1" ;
     ccut:hasPart mint:u_M_mega_gram_Mg,
         mint:u__1_T_year365day_year,
-        mint:u_coulomb_C .
+        mint:u_cord_C .
 
 mint:Mg_Mg_1 a qudtp:Unit ;
     rdfs:label "Mg Mg-1" ;
@@ -212,7 +212,7 @@ mint:kg_CM a qudtp:Unit ;
     qudtp:abbreviation "kg C" ;
     ccut:hasDimension "M" ;
     ccut:hasPart mint:u_M_kilo_gram_kg,
-        mint:u_coulomb_C .
+        mint:u_cord_C .
 
 mint:kg_N_ha_1M2_L_1_T_2 a qudtp:Unit ;
     rdfs:label "kg N ha-1" ;
@@ -351,6 +351,8 @@ mint:ppm a qudtp:Unit ;
     rdfs:label "ppm" ;
     qudtp:abbreviation "ppm" ;
     ccut:hasPart mint:u_ppm .
+
+mint:u_coulomb_C qudtp:quantityKind <http://www.wikidata.org/entity/Q25406> .
 
 mint:yearT a qudtp:Unit ;
     rdfs:label "year" ;
@@ -711,11 +713,10 @@ mint:u__1_T_day_day rdfs:label "day^-1" ;
     ccut:exponent "-1" ;
     ccut:hasDimension "T" .
 
-mint:u_coulomb_C rdfs:label "C^1" ;
-    qudtp:conversionMultiplier "1.0" ;
+mint:u_cord_C rdfs:label "C^1" ;
+    qudtp:conversionMultiplier "3.62" ;
     qudtp:conversionOffset "0.0" ;
-    qudtp:quantityKind <http://www.qudt.org/qudt/owl/1.0.0/unit/Instances.html#Coulomb>,
-        <http://www.wikidata.org/entity/Q25406> ;
+    qudtp:quantityKind <http://www.qudt.org/qudt/owl/1.0.0/unit/Instances.html#Cord> ;
     qudtp:symbol "C" ;
     ccut:hasDimension "DIMENSION NOT IN MAPPING" .
 

@@ -266,10 +266,11 @@ def add_wiki_pages(store, qudtp, owl):
             request = ""
             for res in results2["results"]["bindings"]:
                 description = unicodedata.normalize('NFKD', res['c']['value']).encode('ascii','ignore')
-                request += str(serial_number) + ": " + description + "\n"
+                # print(description)
+                request += str(serial_number) + ": " + description.decode('utf-8') + "\n"
                 serial_number += 1
 
-            option = raw_input("Please select the most appropriate option for the variable description\n"
+            option = input("Please select the most appropriate option for the variable description\n"
                                "Variable :- " + unit_symbol + "\n"
                                + request
                                )
@@ -345,7 +346,7 @@ def create_turtle_file(store):
     f.close()
 
 if __name__ == '__main__':
-    input_file = "Units.json"
+    input_file = "run/Units.json"
     #Change this to be your file of choice
     # input_file = sys.argv[1]
     error_dict = dict()
@@ -359,7 +360,7 @@ if __name__ == '__main__':
 
         list_dict =  data["results"]["bindings"]
         unit_list = list()
-        # print list_dict
+        #print (list_dict)
         for unit_dict in list_dict:
             unit_list.append(unit_dict["units"]["value"])
 

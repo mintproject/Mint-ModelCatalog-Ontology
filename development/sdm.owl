@@ -1,0 +1,477 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/okn/o/sdm#"
+     xml:base="https://w3id.org/okn/o/sdm"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/okn/o/sdm">
+        <owl:versionIRI rdf:resource="https://w3id.org/okn/o/sdm/1.0.0"/>
+        <owl:imports rdf:resource="https://w3id.org/okn/o/sd/1.1.0"/>
+        <dc:title xml:lang="en">The Software Description Ontology for Models</dc:title>
+        <vann:preferredNamespacePrefix rdf:resource="https://w3id.org/okn/o/sdm#"/>
+        <vann:preferredNamespacePrefix xml:lang="en">sdm</vann:preferredNamespacePrefix>
+        <owl:versionInfo xml:lang="en">1.0.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://schema.org/geo -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/geo">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Region"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/okn/o/sdm#GeoCoordinates"/>
+                    <rdf:Description rdf:about="https://w3id.org/okn/o/sdm#GeoShape"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#adjustableVariable -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#adjustableVariable">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
+        <rdfs:range rdf:resource="https://w3id.org/okn/o/sd#VariablePresentation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#calibratedVariable -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#calibratedVariable">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
+        <rdfs:range rdf:resource="https://w3id.org/okn/o/sd#VariablePresentation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#calibrationTargetVariable -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#calibrationTargetVariable">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
+        <rdfs:range rdf:resource="https://w3id.org/okn/o/sd#VariablePresentation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#geo -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#geo">
+        <rdfs:subPropertyOf rdf:resource="http://schema.org/geo"/>
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Region"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/okn/o/sdm#GeoCoordinates"/>
+                    <rdf:Description rdf:about="https://w3id.org/okn/o/sdm#GeoShape"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#hasCalibration -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasCalibration">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
+        <rdfs:range rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#hasCausalDiagram -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasCausalDiagram">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
+        <rdfs:range rdf:resource="https://w3id.org/okn/o/sdm#CausalDiagram"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#hasEquation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasEquation">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
+        <rdfs:range rdf:resource="https://w3id.org/okn/o/sdm#Equation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#hasExpertTunedModel -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasExpertTunedModel">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
+        <rdfs:range rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#hasGrid -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasGrid">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
+        <rdfs:range rdf:resource="https://w3id.org/okn/o/sdm#Grid"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#hasOuputTimeInterval -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasOuputTimeInterval">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
+        <rdfs:range rdf:resource="https://w3id.org/okn/o/sdm#TimeInterval"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#hasPart -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasPart">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#CausalDiagram"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/okn/o/sd#VariablePresentation"/>
+                    <rdf:Description rdf:about="https://w3id.org/okn/o/sdm#Process"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#hasProcess -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasProcess">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
+        <rdfs:range rdf:resource="https://w3id.org/okn/o/sdm#Process"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#hasRegion -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasRegion">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
+        <rdfs:range rdf:resource="https://w3id.org/okn/o/sdm#Region"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#influences -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#influences">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Process"/>
+        <rdfs:range rdf:resource="https://w3id.org/okn/o/sdm#Process"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://schema.org/latitude -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/latitude"/>
+    
+
+
+    <!-- http://schema.org/longitude -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/longitude"/>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#calibrationMethod -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#calibrationMethod">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#hasCoordinateSystem -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#hasCoordinateSystem">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Grid"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#hasDimension -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#hasDimension">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Grid"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#hasModelCategory -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#hasModelCategory">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#hasModelResultTable -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#hasModelResultTable">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#hasShape -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#hasShape">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Grid"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Grids may be: rectangular, triangular, hexagonal, hybrid, unstructured, block structure, etc.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#hasSpatialResolution -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#hasSpatialResolution">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Grid"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#hasValue">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/okn/o/sdm#SpatialResolution"/>
+                    <rdf:Description rdf:about="https://w3id.org/okn/o/sdm#TimeInterval"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#latitude -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#latitude">
+        <rdfs:subPropertyOf rdf:resource="http://schema.org/latitude"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#longitude -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#longitude">
+        <rdfs:subPropertyOf rdf:resource="http://schema.org/longitude"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#parameterAssignmentMethod -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#parameterAssignmentMethod">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://schema.org/GeoCoordinates -->
+
+    <owl:Class rdf:about="http://schema.org/GeoCoordinates"/>
+    
+
+
+    <!-- http://schema.org/GeoShape -->
+
+    <owl:Class rdf:about="http://schema.org/GeoShape"/>
+    
+
+
+    <!-- http://schema.org/Place -->
+
+    <owl:Class rdf:about="http://schema.org/Place"/>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#CausalDiagram -->
+
+    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#CausalDiagram"/>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#EmpiricalModel -->
+
+    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#EmpiricalModel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#Emulator -->
+
+    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#Emulator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#Equation -->
+
+    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#Equation"/>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#GeoCoordinates -->
+
+    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#GeoCoordinates">
+        <rdfs:subClassOf rdf:resource="http://schema.org/GeoCoordinates"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#GeoShape -->
+
+    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#GeoShape">
+        <rdfs:subClassOf rdf:resource="http://schema.org/GeoShape"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#Grid -->
+
+    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#Grid">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/okn/o/sd#DatasetSpecification"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#HybridModel -->
+
+    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#HybridModel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#Model -->
+
+    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#Model">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/okn/o/sd#Software"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#ModelConfiguration -->
+
+    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#ModelConfiguration">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/okn/o/sd#SoftwareConfiguration"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#PointBasedGrid -->
+
+    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#PointBasedGrid">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/okn/o/sdm#Grid"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#Process -->
+
+    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#Process"/>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#Region -->
+
+    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#Region">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Place"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#SpatialResolution -->
+
+    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#SpatialResolution"/>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#SpatiallyDistributedGrid -->
+
+    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#SpatiallyDistributedGrid">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/okn/o/sdm#Grid"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#Theory-GuidedModel -->
+
+    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#Theory-GuidedModel">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#TimeInterval -->
+
+    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#TimeInterval"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

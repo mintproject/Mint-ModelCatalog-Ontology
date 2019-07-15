@@ -95,19 +95,21 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://w3id.org/okn/o/sd#Software"
+      "@id" : "https://w3id.org/okn/o/sd#Organization"
     }, {
-      "@id" : "https://w3id.org/okn/o/sd#SourceCode"
+      "@id" : "https://w3id.org/okn/o/sd#Person"
+    }, {
+      "@id" : "https://w3id.org/okn/o/sd#Software"
     } ]
   } ]
 }, {
-  "@id" : "_:genid38",
+  "@id" : "_:genid39",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://w3id.org/okn/o/sdm#GeoCoordinates"
+      "@id" : "https://w3id.org/okn/o/sd#Software"
     }, {
-      "@id" : "https://w3id.org/okn/o/sdm#GeoShape"
+      "@id" : "https://w3id.org/okn/o/sd#SourceCode"
     } ]
   } ]
 }, {
@@ -121,17 +123,19 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid41",
+  "@id" : "_:genid42",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://w3id.org/okn/o/sdm#SpatialResolution"
+      "@id" : "https://w3id.org/okn/o/sd#Organization"
     }, {
-      "@id" : "https://w3id.org/okn/o/sdm#TimeInterval"
+      "@id" : "https://w3id.org/okn/o/sd#Person"
+    }, {
+      "@id" : "https://w3id.org/okn/o/sd#Software"
     } ]
   } ]
 }, {
-  "@id" : "_:genid44",
+  "@id" : "_:genid46",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -141,7 +145,27 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid47",
+  "@id" : "_:genid49",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/okn/o/sdm#SpatialResolution"
+    }, {
+      "@id" : "https://w3id.org/okn/o/sdm#TimeInterval"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid52",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/okn/o/sdm#GeoCoordinates"
+    }, {
+      "@id" : "https://w3id.org/okn/o/sdm#GeoShape"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid55",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -1233,7 +1257,7 @@
   "@id" : "https://w3id.org/okn/o/sd#identifier",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/okn/o/sd#Software"
+    "@id" : "_:genid35"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1265,7 +1289,7 @@
   "@id" : "https://w3id.org/okn/o/sd#license",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid35"
+    "@id" : "_:genid39"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
@@ -1456,7 +1480,7 @@
     "@value" : "Website of the software"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/okn/o/sd#Software"
+    "@id" : "_:genid42"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1629,7 +1653,7 @@
   "@id" : "https://w3id.org/okn/o/sdm#elevation",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid38"
+    "@id" : "_:genid46"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -1792,7 +1816,7 @@
   "@id" : "https://w3id.org/okn/o/sdm#hasValue",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid41"
+    "@id" : "_:genid49"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -1810,7 +1834,7 @@
   "@id" : "https://w3id.org/okn/o/sdm#latitude",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid44"
+    "@id" : "_:genid52"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -1822,7 +1846,7 @@
   "@id" : "https://w3id.org/okn/o/sdm#longitude",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid47"
+    "@id" : "_:genid55"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"

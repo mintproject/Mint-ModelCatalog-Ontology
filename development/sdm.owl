@@ -136,9 +136,9 @@
     
 
 
-    <!-- https://w3id.org/okn/o/sdm#hasOuputTimeInterval -->
+    <!-- https://w3id.org/okn/o/sdm#hasOutputTimeInterval -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasOuputTimeInterval">
+    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasOutputTimeInterval">
         <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
         <rdfs:range rdf:resource="https://w3id.org/okn/o/sdm#TimeInterval"/>
     </owl:ObjectProperty>

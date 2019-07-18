@@ -117,6 +117,15 @@
     
 
 
+    <!-- https://w3id.org/okn/o/sdm#hasExplanationDiagram -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasExplanationDiagram">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
+        <rdfs:range rdf:resource="https://w3id.org/okn/o/sd#Image"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/okn/o/sdm#hasGrid -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasGrid">

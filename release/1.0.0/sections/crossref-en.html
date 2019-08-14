@@ -151,6 +151,9 @@ This section provides details for each class and property defined by The Softwar
       <li>
          <a href="#https://w3id.org/okn/o/sd#VariablePresentation" title="https://w3id.org/okn/o/sd#VariablePresentation">Variable presentation</a>
       </li>
+      <li>
+         <a href="#https://w3id.org/okn/o/sd#Visualization" title="https://w3id.org/okn/o/sd#Visualization">Visualization</a>
+      </li>
    </ul>
    <div class="entity" id="http://purl.org/linked-data/cube#DataStructureDefinition">
       <h3>data structure definition<sup class="type-c" title="class">c</sup>
@@ -200,8 +203,8 @@ This section provides details for each class and property defined by The Softwar
          <dd>
             <a href="#https://w3id.org/okn/o/sd#hasDimensionality" title="https://w3id.org/okn/o/sd#hasDimensionality">has dimensionality</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/okn/o/sd#hasFileStructure" title="https://w3id.org/okn/o/sd#hasFileStructure">has file structure</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/okn/o/sd#hasFormat" title="https://w3id.org/okn/o/sd#hasFormat">has format</a>
-            <sup class="type-dp" title="data property">dp</sup>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/okn/o/sd#hasFixedResource" title="https://w3id.org/okn/o/sd#hasFixedResource">has fixed resource</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
@@ -361,7 +364,6 @@ This section provides details for each class and property defined by The Softwar
          <dt>is in range of</dt>
          <dd>
             <a href="#hasExplanationDiagram" title="https://w3id.org/okn/o/sdm#hasExplanationDiagram">has explanation diagram</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/okn/o/sd#hasSampleVisualization" title="https://w3id.org/okn/o/sd#hasSampleVisualization">has sample visualization</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/okn/o/sd#logo" title="https://w3id.org/okn/o/sd#logo">logo</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/okn/o/sd#screenshot" title="https://w3id.org/okn/o/sd#screenshot">screenshot</a>
             <sup class="type-op" title="object property">op</sup>
@@ -416,7 +418,7 @@ This section provides details for each class and property defined by The Softwar
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#adjustableVariable" title="https://w3id.org/okn/o/sdm#adjustableVariable">adjustable variable</a>
+            <a href="#adjustableParameter" title="https://w3id.org/okn/o/sdm#adjustableParameter">adjustable parameter</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#calibratedVariable" title="https://w3id.org/okn/o/sdm#calibratedVariable">calibrated variable</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#calibrationMethod" title="https://w3id.org/okn/o/sdm#calibrationMethod">calibration method</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#calibrationTargetVariable"
@@ -494,7 +496,9 @@ This section provides details for each class and property defined by The Softwar
       <dl class="description">
          <dt>is in domain of</dt>
          <dd>
-            <a href="#https://w3id.org/okn/o/sd#hasDataType" title="https://w3id.org/okn/o/sd#hasDataType">has data type</a>
+            <a href="#https://w3id.org/okn/o/sd#adjustsVariable" title="https://w3id.org/okn/o/sd#adjustsVariable">adjustsVariable</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/okn/o/sd#hasDataType" title="https://w3id.org/okn/o/sd#hasDataType">has data type</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://w3id.org/okn/o/sd#hasFixedValue" title="https://w3id.org/okn/o/sd#hasFixedValue">hasFixedValue</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
@@ -631,7 +635,7 @@ This section provides details for each class and property defined by The Softwar
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#https://w3id.org/okn/o/sd#hasFixedValue" title="https://w3id.org/okn/o/sd#hasFixedValue">has fixed value</a>
+            <a href="#https://w3id.org/okn/o/sd#hasFixedResource" title="https://w3id.org/okn/o/sd#hasFixedResource">has fixed resource</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/okn/o/sd#hasSampleResult" title="https://w3id.org/okn/o/sd#hasSampleResult">has sample result</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
@@ -696,6 +700,7 @@ This section provides details for each class and property defined by The Softwar
          <dd>
             <a href="#https://w3id.org/okn/o/sd#compatibleVisualizationSoftware"
                title="https://w3id.org/okn/o/sd#compatibleVisualizationSoftware">compatible visualization software</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/okn/o/sd#wasDerivedFromSoftware" title="https://w3id.org/okn/o/sd#wasDerivedFromSoftware">was derived from software</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -957,6 +962,11 @@ This section provides details for each class and property defined by The Softwar
             <a href="#https://w3id.org/okn/o/sd#SVOVariable" title="https://w3id.org/okn/o/sd#SVOVariable">SVO variable</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://w3id.org/okn/o/sd#adjustsVariable" title="https://w3id.org/okn/o/sd#adjustsVariable">adjustsVariable</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="https://w3id.org/okn/o/sd#Variable">
@@ -1005,7 +1015,7 @@ This section provides details for each class and property defined by The Softwar
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#adjustableVariable" title="https://w3id.org/okn/o/sdm#adjustableVariable">adjustable variable</a>
+            <a href="#adjustableParameter" title="https://w3id.org/okn/o/sdm#adjustableParameter">adjustable parameter</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#calibratedVariable" title="https://w3id.org/okn/o/sdm#calibratedVariable">calibrated variable</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#calibrationTargetVariable"
                title="https://w3id.org/okn/o/sdm#calibrationTargetVariable">calibration target variable</a>
@@ -1014,13 +1024,39 @@ This section provides details for each class and property defined by The Softwar
          </dd>
       </dl>
    </div>
+   <div class="entity" id="https://w3id.org/okn/o/sd#Visualization">
+      <h3>Visualization<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sd#Visualization</p>
+      <div class="comment">
+         <span class="markdown">Class to represent any type of visualization related to a software. For exmaple, a dynamic HTML page, a video, etc.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://w3id.org/okn/o/sd#wasDerivedFromSoftware" title="https://w3id.org/okn/o/sd#wasDerivedFromSoftware">was derived from software</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://w3id.org/okn/o/sd#hasSampleVisualization" title="https://w3id.org/okn/o/sd#hasSampleVisualization">has sample visualization</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
 </div><div id="objectproperties">
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#adjustableVariable" title="https://w3id.org/okn/o/sdm#adjustableVariable">
-            <span>adjustable variable</span>
+         <a href="#adjustableParameter" title="https://w3id.org/okn/o/sdm#adjustableParameter">
+            <span>adjustable parameter</span>
          </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/okn/o/sd#adjustsVariable" title="https://w3id.org/okn/o/sd#adjustsVariable">adjustsVariable</a>
       </li>
       <li>
          <a href="#http://schema.org/author" title="http://schema.org/author">
@@ -1100,7 +1136,7 @@ This section provides details for each class and property defined by The Softwar
          <a href="#https://w3id.org/okn/o/sd#hasFileStructure" title="https://w3id.org/okn/o/sd#hasFileStructure">has file structure</a>
       </li>
       <li>
-         <a href="#https://w3id.org/okn/o/sd#hasFixedValue" title="https://w3id.org/okn/o/sd#hasFixedValue">has fixed value</a>
+         <a href="#https://w3id.org/okn/o/sd#hasFixedResource" title="https://w3id.org/okn/o/sd#hasFixedResource">has fixed resource</a>
       </li>
       <li>
          <a href="#hasGrid" title="https://w3id.org/okn/o/sdm#hasGrid">
@@ -1197,14 +1233,19 @@ This section provides details for each class and property defined by The Softwar
       <li>
          <a href="#https://w3id.org/okn/o/sd#usesUnit" title="https://w3id.org/okn/o/sd#usesUnit">uses unit</a>
       </li>
+      <li>
+         <a href="#https://w3id.org/okn/o/sd#wasDerivedFromSoftware" title="https://w3id.org/okn/o/sd#wasDerivedFromSoftware">
+            <span>was derived from software</span>
+         </a>
+      </li>
    </ul>
-   <div class="entity" id="adjustableVariable">
-      <h3>adjustable variable<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="adjustableParameter">
+      <h3>adjustable parameter<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/okn/o/sdm#adjustableVariable</p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sdm#adjustableParameter</p>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -1215,6 +1256,32 @@ This section provides details for each class and property defined by The Softwar
             <dt>has range</dt>
             <dd>
                <a href="#https://w3id.org/okn/o/sd#VariablePresentation" title="https://w3id.org/okn/o/sd#VariablePresentation">Variable presentation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/okn/o/sd#adjustsVariable">
+      <h3>adjustsVariable<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sd#adjustsVariable</p>
+      <div class="comment">
+         <span class="markdown">Property that links parameter with the variable they adjust. This property can be used when parameters quantify variables without directly representing them. For example, a "fertilizer percentage adjustment" parameter can quantify a "fertilizer price" variable</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/okn/o/sd#Parameter" title="https://w3id.org/okn/o/sd#Parameter">Parameter</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.geoscienceontology.org/geo-upper#Variable"
+                  title="http://www.geoscienceontology.org/geo-upper#Variable">variable</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -1623,13 +1690,13 @@ This section provides details for each class and property defined by The Softwar
          </dl>
       </div>
    </div>
-   <div class="entity" id="https://w3id.org/okn/o/sd#hasFixedValue">
-      <h3>has fixed value<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="https://w3id.org/okn/o/sd#hasFixedResource">
+      <h3>has fixed resource<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/okn/o/sd#hasFixedValue</p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sd#hasFixedResource</p>
       <div class="comment">
          <span class="markdown">Property that links a parameter or an input to a fixed value. For example, in a given configuration a parameter with the planting date for a model could be fixed to avoid the user changing it for that region.</span>
       </div>
@@ -1638,9 +1705,6 @@ This section provides details for each class and property defined by The Softwar
             <dt>has domain</dt>
             <dd>
                <a href="#https://w3id.org/okn/o/sd#DatasetSpecification" title="https://w3id.org/okn/o/sd#DatasetSpecification">Dataset specification</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#https://w3id.org/okn/o/sd#Parameter" title="https://w3id.org/okn/o/sd#Parameter">Parameter</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1857,8 +1921,16 @@ This section provides details for each class and property defined by The Softwar
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/okn/o/sdm#hasRegion</p>
+      <div class="comment">
+         <span class="markdown">Property linking a region to a model configuration/calibration. This property implies that the described model configuration is prepared to execute in that target region</span>
+      </div>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://schema.org/contentLocation">content location</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#ModelConfiguration" title="https://w3id.org/okn/o/sdm#ModelConfiguration">model configuration</a>
@@ -1935,7 +2007,7 @@ This section provides details for each class and property defined by The Softwar
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#https://w3id.org/okn/o/sd#Image" title="https://w3id.org/okn/o/sd#Image">Image</a>
+               <a href="#https://w3id.org/okn/o/sd#Visualization" title="https://w3id.org/okn/o/sd#Visualization">Visualization</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -2214,6 +2286,33 @@ This section provides details for each class and property defined by The Softwar
          </dl>
       </div>
    </div>
+   <div class="entity" id="https://w3id.org/okn/o/sd#wasDerivedFromSoftware">
+      <h3>was derived from software<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sd#wasDerivedFromSoftware</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/ns/prov#wasDerivedFrom">was derived from</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/okn/o/sd#Visualization" title="https://w3id.org/okn/o/sd#Visualization">Visualization</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://w3id.org/okn/o/sd#Software" title="https://w3id.org/okn/o/sd#Software">Software</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
 </div><div id="dataproperties">
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
@@ -2383,12 +2482,10 @@ This section provides details for each class and property defined by The Softwar
          </a>
       </li>
       <li>
-         <a href="#hasValue" title="https://w3id.org/okn/o/sdm#hasValue">
-            <span>has value</span>
-         </a>
+         <a href="#https://w3id.org/okn/o/sd#hasVersionId" title="https://w3id.org/okn/o/sd#hasVersionId">has version id</a>
       </li>
       <li>
-         <a href="#https://w3id.org/okn/o/sd#hasVersionId" title="https://w3id.org/okn/o/sd#hasVersionId">has version id</a>
+         <a href="#https://w3id.org/okn/o/sd#hasFixedValue" title="https://w3id.org/okn/o/sd#hasFixedValue">hasFixedValue</a>
       </li>
       <li>
          <a href="#http://schema.org/identifier" title="http://schema.org/identifier">
@@ -2449,6 +2546,9 @@ This section provides details for each class and property defined by The Softwar
             title="https://w3id.org/okn/o/sdm#parameterAssignmentMethod">
             <span>parameter assignment method</span>
          </a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/okn/o/sd#position" title="https://w3id.org/okn/o/sd#position">position</a>
       </li>
       <li>
          <a href="#https://w3id.org/okn/o/sd#processorRequirements" title="https://w3id.org/okn/o/sd#processorRequirements">
@@ -3145,6 +3245,9 @@ This section provides details for each class and property defined by The Softwar
             <dt>has domain</dt>
             <dd>
                <a href="#https://w3id.org/okn/o/sd#DatasetSpecification" title="https://w3id.org/okn/o/sd#DatasetSpecification">Dataset specification</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#https://w3id.org/okn/o/sd#Visualization" title="https://w3id.org/okn/o/sd#Visualization">Visualization</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -3243,10 +3346,6 @@ This section provides details for each class and property defined by The Softwar
                <a href="#https://w3id.org/okn/o/sd#VariablePresentation" title="https://w3id.org/okn/o/sd#VariablePresentation">Variable presentation</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
-            </dd>
          </dl>
       </div>
    </div>
@@ -3269,10 +3368,6 @@ This section provides details for each class and property defined by The Softwar
                <span class="logic">or</span> 
                <a href="#https://w3id.org/okn/o/sd#VariablePresentation" title="https://w3id.org/okn/o/sd#VariablePresentation">Variable presentation</a>
                <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
             </dd>
          </dl>
       </div>
@@ -3454,30 +3549,6 @@ This section provides details for each class and property defined by The Softwar
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasValue">
-      <h3>has value<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/okn/o/sdm#hasValue</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <span class="dotted" title="https://w3id.org/okn/o/sdm#SpatialResolution">spatial resolution</span>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <span class="dotted" title="https://w3id.org/okn/o/sdm#TimeInterval">time interval</span>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="https://w3id.org/okn/o/sd#hasVersionId">
       <h3>has version id<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -3500,6 +3571,23 @@ This section provides details for each class and property defined by The Softwar
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/okn/o/sd#hasFixedValue">
+      <h3>hasFixedValue<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sd#hasFixedValue</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/okn/o/sd#Parameter" title="https://w3id.org/okn/o/sd#Parameter">Parameter</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -3836,6 +3924,33 @@ This section provides details for each class and property defined by The Softwar
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://w3id.org/okn/o/sd#position">
+      <h3>position<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sd#position</p>
+      <div class="comment">
+         <span class="markdown">Position of the parameter or input/output in the model configuration. This property is needed to know how to organize the I/O of the component on execution</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/okn/o/sd#DatasetSpecification" title="https://w3id.org/okn/o/sd#DatasetSpecification">Dataset specification</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#https://w3id.org/okn/o/sd#Parameter" title="https://w3id.org/okn/o/sd#Parameter">Parameter</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#int">int</span>
             </dd>
          </dl>
       </div>

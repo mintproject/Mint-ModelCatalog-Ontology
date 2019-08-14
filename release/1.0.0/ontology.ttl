@@ -67,6 +67,10 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                            rdfs:isDefinedBy <http://schema.org/> .
 
 
+###  http://schema.org/contentLocation
+<http://schema.org/contentLocation> rdf:type owl:ObjectProperty .
+
+
 ###  http://schema.org/contributor
 <http://schema.org/contributor> rdf:type owl:ObjectProperty ;
                                 rdfs:isDefinedBy <http://schema.org/> .
@@ -93,12 +97,24 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
 <http://www.w3.org/ns/prov#used> rdf:type owl:ObjectProperty .
 
 
+###  http://www.w3.org/ns/prov#wasDerivedFrom
+<http://www.w3.org/ns/prov#wasDerivedFrom> rdf:type owl:ObjectProperty .
+
+
 ###  http://www.w3.org/ns/prov#wasGeneratedBy
 <http://www.w3.org/ns/prov#wasGeneratedBy> rdf:type owl:ObjectProperty .
 
 
 ###  https://codemeta.github.io/terms/funding
 <https://codemeta.github.io/terms/funding> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/okn/o/sd#adjustsVariable
+<https://w3id.org/okn/o/sd#adjustsVariable> rdf:type owl:ObjectProperty ;
+                                            rdfs:domain <https://w3id.org/okn/o/sd#Parameter> ;
+                                            rdfs:range <http://www.geoscienceontology.org/geo-upper#Variable> ;
+                                            rdfs:comment "Property that links parameter with the variable they adjust. This property can be used when parameters quantify variables without directly representing them. For example, a \"fertilizer percentage adjustment\" parameter can quantify a \"fertilizer price\" variable"@en ;
+                                            rdfs:label "adjustsVariable"@en .
 
 
 ###  https://w3id.org/okn/o/sd#author
@@ -156,16 +172,12 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                                              rdfs:label "has file structure"@en .
 
 
-###  https://w3id.org/okn/o/sd#hasFixedValue
-<https://w3id.org/okn/o/sd#hasFixedValue> rdf:type owl:ObjectProperty ;
-                                          rdfs:domain [ rdf:type owl:Class ;
-                                                        owl:unionOf ( <https://w3id.org/okn/o/sd#DatasetSpecification>
-                                                                      <https://w3id.org/okn/o/sd#Parameter>
-                                                                    )
-                                                      ] ;
-                                          rdfs:range <https://w3id.org/okn/o/sd#SampleResource> ;
-                                          rdfs:comment "Property that links a parameter or an input to a fixed value. For example, in a given configuration a parameter with the planting date for a model could be fixed to avoid the user changing it for that region."@en ;
-                                          rdfs:label "has fixed value"@en .
+###  https://w3id.org/okn/o/sd#hasFixedResource
+<https://w3id.org/okn/o/sd#hasFixedResource> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <https://w3id.org/okn/o/sd#DatasetSpecification> ;
+                                             rdfs:range <https://w3id.org/okn/o/sd#SampleResource> ;
+                                             rdfs:comment "Property that links a parameter or an input to a fixed value. For example, in a given configuration a parameter with the planting date for a model could be fixed to avoid the user changing it for that region."@en ;
+                                             rdfs:label "has fixed resource"@en .
 
 
 ###  https://w3id.org/okn/o/sd#hasInput
@@ -220,7 +232,7 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/okn/o/sd#hasSampleVisualization
 <https://w3id.org/okn/o/sd#hasSampleVisualization> rdf:type owl:ObjectProperty ;
                                                    rdfs:domain <https://w3id.org/okn/o/sd#Software> ;
-                                                   rdfs:range <https://w3id.org/okn/o/sd#Image> ;
+                                                   rdfs:range <https://w3id.org/okn/o/sd#Visualization> ;
                                                    rdfs:comment "A typical sample visualization of the softwware outputs"@en .
 
 
@@ -294,10 +306,17 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                                      rdfs:label "uses unit"@en .
 
 
-###  https://w3id.org/okn/o/sdm#adjustableVariable
-:adjustableVariable rdf:type owl:ObjectProperty ;
-                    rdfs:domain :ModelConfiguration ;
-                    rdfs:range <https://w3id.org/okn/o/sd#VariablePresentation> .
+###  https://w3id.org/okn/o/sd#wasDerivedFromSoftware
+<https://w3id.org/okn/o/sd#wasDerivedFromSoftware> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasDerivedFrom> ;
+                                                   rdfs:domain <https://w3id.org/okn/o/sd#Visualization> ;
+                                                   rdfs:range <https://w3id.org/okn/o/sd#Software> .
+
+
+###  https://w3id.org/okn/o/sdm#adjustableParameter
+:adjustableParameter rdf:type owl:ObjectProperty ;
+                     rdfs:domain :ModelConfiguration ;
+                     rdfs:range <https://w3id.org/okn/o/sd#VariablePresentation> .
 
 
 ###  https://w3id.org/okn/o/sdm#calibratedVariable
@@ -383,8 +402,10 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/okn/o/sdm#hasRegion
 :hasRegion rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf <http://schema.org/contentLocation> ;
            rdfs:domain :ModelConfiguration ;
-           rdfs:range :Region .
+           rdfs:range :Region ;
+           rdfs:comment "Property linking a region to a model configuration/calibration. This property implies that the described model configuration is prepared to execute in that target region"@en .
 
 
 ###  https://w3id.org/okn/o/sdm#influences
@@ -633,9 +654,19 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                                    rdfs:range xsd:string .
 
 
+###  https://w3id.org/okn/o/sd#hasFixedValue
+<https://w3id.org/okn/o/sd#hasFixedValue> rdf:type owl:DatatypeProperty ;
+                                          rdfs:domain <https://w3id.org/okn/o/sd#Parameter> ;
+                                          rdfs:label "hasFixedValue"@en .
+
+
 ###  https://w3id.org/okn/o/sd#hasFormat
 <https://w3id.org/okn/o/sd#hasFormat> rdf:type owl:DatatypeProperty ;
-                                      rdfs:domain <https://w3id.org/okn/o/sd#DatasetSpecification> ;
+                                      rdfs:domain [ rdf:type owl:Class ;
+                                                    owl:unionOf ( <https://w3id.org/okn/o/sd#DatasetSpecification>
+                                                                  <https://w3id.org/okn/o/sd#Visualization>
+                                                                )
+                                                  ] ;
                                       rdfs:range xsd:string ;
                                       rdfs:comment "Format followed by a file. For example, txt, nc, etc."@en ;
                                       rdfs:label "has format"@en .
@@ -671,7 +702,6 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                                                                                 <https://w3id.org/okn/o/sd#VariablePresentation>
                                                                               )
                                                                 ] ;
-                                                    rdfs:range xsd:float ;
                                                     rdfs:comment "Maximum accepted value of a variable presentation (or a parameter)"@en ;
                                                     rdfs:label "has maximum accepted value"@en .
 
@@ -683,7 +713,6 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                                                                                 <https://w3id.org/okn/o/sd#VariablePresentation>
                                                                               )
                                                                 ] ;
-                                                    rdfs:range xsd:float ;
                                                     rdfs:comment "Minimum accepted value of a variable presentation (or a parameter)"@en ;
                                                     rdfs:label "has minimum accepted value"@en .
 
@@ -775,6 +804,18 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                                              rdfs:subPropertyOf <http://schema.org/operatingSystems> ;
                                              rdfs:domain <https://w3id.org/okn/o/sd#Software> ;
                                              rdfs:range xsd:string .
+
+
+###  https://w3id.org/okn/o/sd#position
+<https://w3id.org/okn/o/sd#position> rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain [ rdf:type owl:Class ;
+                                                   owl:unionOf ( <https://w3id.org/okn/o/sd#DatasetSpecification>
+                                                                 <https://w3id.org/okn/o/sd#Parameter>
+                                                               )
+                                                 ] ;
+                                     rdfs:range xsd:int ;
+                                     rdfs:comment "Position of the parameter or input/output in the model configuration. This property is needed to know how to organize the I/O of the component on execution"@en ;
+                                     rdfs:label "position"@en .
 
 
 ###  https://w3id.org/okn/o/sd#processorRequirements
@@ -889,16 +930,6 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
 :hasSpatialResolution rdf:type owl:DatatypeProperty ;
                       rdfs:domain :Grid ;
                       rdfs:range xsd:string .
-
-
-###  https://w3id.org/okn/o/sdm#hasValue
-:hasValue rdf:type owl:DatatypeProperty ;
-          rdfs:domain [ rdf:type owl:Class ;
-                        owl:unionOf ( :SpatialResolution
-                                      :TimeInterval
-                                    )
-                      ] ;
-          rdfs:range xsd:string .
 
 
 ###  https://w3id.org/okn/o/sdm#latitude
@@ -1097,6 +1128,12 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                                                  rdfs:subClassOf <https://w3id.org/okn/o/sd#Variable> ;
                                                  rdfs:comment "Concept used to represent an instantiation of a variable in an input/output dataset. For example, a model A may use an input file with temperature expressed in Farenheit (variablePresentation1), while a model B may produce an output with temperature in Celsius (variablePresentation2). Both variable presentations refer to the concept of temperature."@en ;
                                                  rdfs:label "Variable presentation"@en .
+
+
+###  https://w3id.org/okn/o/sd#Visualization
+<https://w3id.org/okn/o/sd#Visualization> rdf:type owl:Class ;
+                                          rdfs:comment "Class to represent any type of visualization related to a software. For exmaple, a dynamic HTML page, a video, etc."@en ;
+                                          rdfs:label "Visualization"@en .
 
 
 ###  https://w3id.org/okn/o/sdm#CausalDiagram

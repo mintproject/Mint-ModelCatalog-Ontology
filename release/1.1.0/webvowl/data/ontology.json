@@ -12,14 +12,14 @@
     "other" : {
       "license" : [ {
         "identifier" : "license",
-        "language" : "undefined",
-        "value" : "https://w3id.org/okn/o/%3Chttp://creativecommons.org/licenses/by/2.0/%3E",
-        "type" : "iri"
-      }, {
-        "identifier" : "license",
         "language" : "en",
         "value" : "<http://creativecommons.org/licenses/by/2.0/>",
         "type" : "label"
+      }, {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://w3id.org/okn/o/%3Chttp://creativecommons.org/licenses/by/2.0/%3E",
+        "type" : "iri"
       } ],
       "priorVersion" : [ {
         "identifier" : "priorVersion",
@@ -30,15 +30,20 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "en",
-        "value" : "Daniel Garijo",
+        "value" : "Deborah Khider",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "en",
-        "value" : "Deborah Khider",
+        "value" : "Daniel Garijo",
         "type" : "label"
       } ],
       "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "en",
+        "value" : "Armen Kemanian",
+        "type" : "label"
+      }, {
         "identifier" : "contributor",
         "language" : "en",
         "value" : "Christopher Duffy",
@@ -56,11 +61,6 @@
       }, {
         "identifier" : "contributor",
         "language" : "en",
-        "value" : "Armen Kemanian",
-        "type" : "label"
-      }, {
-        "identifier" : "contributor",
-        "language" : "en",
         "value" : "Yolanda Gil",
         "type" : "label"
       } ],
@@ -70,17 +70,17 @@
         "value" : "sdm",
         "type" : "label"
       } ],
-      "abstract" : [ {
-        "identifier" : "abstract",
-        "language" : "en",
-        "value" : "The Software Description Ontology for Models (SDM) expands the software description ontology (SD) to add information about scientific software models. Examples of scientific software models are hydrology models, agriculture models or economy models.",
-        "type" : "label"
-      } ],
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
         "language" : "undefined",
         "value" : "https://w3id.org/okn/o/sdm#",
         "type" : "iri"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "en",
+        "value" : "The Software Description Ontology for Models (SDM) expands the software description ontology (SD) to add information about scientific software models. Examples of scientific software models are hydrology models, agriculture models or economy models.",
+        "type" : "label"
       } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
@@ -113,7 +113,7 @@
     "id" : "17",
     "type" : "owl:Class"
   }, {
-    "id" : "55",
+    "id" : "57",
     "type" : "owl:Class"
   }, {
     "id" : "65",
@@ -188,7 +188,7 @@
     "id" : "25",
     "type" : "owl:Class"
   }, {
-    "id" : "168",
+    "id" : "170",
     "type" : "owl:unionOf"
   }, {
     "id" : "34",
@@ -296,13 +296,13 @@
     "id" : "260",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "171",
+    "id" : "168",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "7",
     "type" : "owl:unionOf"
   }, {
-    "id" : "58",
+    "id" : "56",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "262",
@@ -332,13 +332,13 @@
     "id" : "94",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "31",
+    "id" : "29",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "277",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "169",
+    "id" : "171",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "240",
@@ -365,7 +365,7 @@
     "id" : "264",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "56",
+    "id" : "58",
     "type" : "owl:Class"
   }, {
     "id" : "150",
@@ -392,7 +392,7 @@
     "id" : "166",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "181",
+    "id" : "183",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "295",
@@ -404,7 +404,7 @@
     "id" : "200",
     "type" : "owl:unionOf"
   }, {
-    "id" : "183",
+    "id" : "181",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "63",
@@ -482,7 +482,7 @@
     "id" : "21",
     "type" : "owl:Class"
   }, {
-    "id" : "29",
+    "id" : "31",
     "type" : "owl:Class"
   }, {
     "id" : "107",
@@ -583,6 +583,11 @@
         "language" : "undefined",
         "value" : "http://qudt.org/schema/qudt/",
         "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://qudt.org/schema/qudt/",
+        "type" : "iri"
       } ]
     },
     "label" : {
@@ -641,8 +646,8 @@
       "en" : "Person"
     },
     "attributes" : [ "external" ],
-    "id" : "55",
-    "superClasses" : [ "56" ]
+    "id" : "57",
+    "superClasses" : [ "58" ]
   }, {
     "iri" : "https://w3id.org/okn/o/sd#Variable",
     "baseIri" : "https://w3id.org/okn/o/sd",
@@ -651,7 +656,7 @@
       "IRI-based" : "Variable",
       "en" : "Variable"
     },
-    "subClasses" : [ "25", "29" ],
+    "subClasses" : [ "25", "31" ],
     "comment" : {
       "en" : "A symbol that represents a quanity in a dataset or dataset specification"
     },
@@ -774,6 +779,11 @@
         "language" : "undefined",
         "value" : "http://purl.org/linked-data/cube#",
         "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.org/linked-data/cube#",
+        "type" : "iri"
       } ]
     },
     "label" : {
@@ -822,7 +832,7 @@
     "comment" : {
       "en" : "Variable that follows the Scientific Variables Ontology: http://geoscienceontology.org/"
     },
-    "attributes" : [ "equivalent", "external" ],
+    "attributes" : [ "external", "equivalent" ],
     "id" : "24",
     "superClasses" : [ "25" ]
   }, {
@@ -839,6 +849,11 @@
     "instances" : 0,
     "annotations" : {
       "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "http://schema.org/",
@@ -862,12 +877,17 @@
         "language" : "undefined",
         "value" : "http://www.geoscienceontology.org/geo-upper",
         "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.geoscienceontology.org/geo-upper",
+        "type" : "iri"
       } ]
     },
     "label" : {
       "IRI-based" : "Variable"
     },
-    "attributes" : [ "equivalent", "external" ],
+    "attributes" : [ "external", "equivalent" ],
     "id" : "148"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#Software",
@@ -920,8 +940,8 @@
   }, {
     "instances" : 0,
     "union" : [ "162", "1" ],
-    "attributes" : [ "union", "anonymous" ],
-    "id" : "168"
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "170"
   }, {
     "iri" : "http://www.w3.org/ns/prov#Activity",
     "baseIri" : "http://www.w3.org/ns/prov",
@@ -996,7 +1016,7 @@
   }, {
     "instances" : 0,
     "union" : [ "33", "10", "13" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "227"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -1028,8 +1048,8 @@
     }
   }, {
     "instances" : 0,
-    "union" : [ "29", "118" ],
-    "attributes" : [ "union", "anonymous" ],
+    "union" : [ "31", "118" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "233"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#GeoCoordinates",
@@ -1057,8 +1077,8 @@
     }
   }, {
     "instances" : 0,
-    "union" : [ "29", "13" ],
-    "attributes" : [ "union", "anonymous" ],
+    "union" : [ "31", "13" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "241"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -1069,8 +1089,8 @@
     }
   }, {
     "instances" : 0,
-    "union" : [ "33", "162", "11", "125", "4", "148", "17", "118", "67", "41", "55" ],
-    "attributes" : [ "union", "anonymous" ],
+    "union" : [ "33", "162", "11", "125", "4", "148", "17", "118", "67", "41", "57" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "243"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -1138,7 +1158,7 @@
   }, {
     "instances" : 0,
     "union" : [ "1", "118" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "253"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#DatasetSpecification",
@@ -1189,7 +1209,7 @@
   }, {
     "instances" : 0,
     "union" : [ "11", "125" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "178"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -1201,19 +1221,19 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "171",
+    "id" : "168",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "instances" : 0,
-    "union" : [ "11", "4", "55" ],
-    "attributes" : [ "union", "anonymous" ],
+    "union" : [ "11", "4", "57" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "7"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "58",
+    "id" : "56",
     "label" : {
       "IRI-based" : "string"
     }
@@ -1268,13 +1288,13 @@
     }
   }, {
     "instances" : 0,
-    "union" : [ "29", "118" ],
-    "attributes" : [ "union", "anonymous" ],
+    "union" : [ "31", "118" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "275"
   }, {
     "instances" : 0,
-    "union" : [ "29", "118" ],
-    "attributes" : [ "union", "anonymous" ],
+    "union" : [ "31", "118" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "218"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -1286,7 +1306,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "31",
+    "id" : "29",
     "label" : {
       "IRI-based" : "string"
     }
@@ -1300,7 +1320,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "169",
+    "id" : "171",
     "label" : {
       "IRI-based" : "string"
     }
@@ -1328,7 +1348,7 @@
   }, {
     "instances" : 0,
     "union" : [ "80", "87" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "279"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -1340,7 +1360,7 @@
   }, {
     "instances" : 0,
     "union" : [ "80", "87" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "175"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#Grid",
@@ -1370,14 +1390,19 @@
         "language" : "undefined",
         "value" : "http://schema.org/",
         "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
       } ]
     },
     "label" : {
       "IRI-based" : "Person"
     },
-    "subClasses" : [ "55" ],
+    "subClasses" : [ "57" ],
     "attributes" : [ "external" ],
-    "id" : "56"
+    "id" : "58"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#FundingInformation",
     "baseIri" : "https://w3id.org/okn/o/sd",
@@ -1450,7 +1475,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "181",
+    "id" : "183",
     "label" : {
       "IRI-based" : "string"
     }
@@ -1471,12 +1496,12 @@
   }, {
     "instances" : 0,
     "union" : [ "80", "87" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "200"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "183",
+    "id" : "181",
     "label" : {
       "IRI-based" : "string"
     }
@@ -1501,8 +1526,8 @@
     "id" : "184"
   }, {
     "instances" : 0,
-    "union" : [ "11", "4", "55" ],
-    "attributes" : [ "union", "anonymous" ],
+    "union" : [ "11", "4", "57" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "282"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -1598,27 +1623,27 @@
   }, {
     "instances" : 0,
     "union" : [ "1", "118" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "305"
   }, {
     "instances" : 0,
-    "union" : [ "4", "55" ],
-    "attributes" : [ "union", "anonymous" ],
+    "union" : [ "4", "57" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "146"
   }, {
     "instances" : 0,
-    "union" : [ "29", "118" ],
-    "attributes" : [ "union", "anonymous" ],
+    "union" : [ "31", "118" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "101"
   }, {
     "instances" : 0,
     "union" : [ "80", "87" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "301"
   }, {
     "instances" : 0,
-    "union" : [ "29", "22" ],
-    "attributes" : [ "union", "anonymous" ],
+    "union" : [ "31", "22" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "297"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -1666,12 +1691,12 @@
       "en" : "Concept used to represent an instantiation of a variable in an input/output dataset. For example, a model A may use an input file with temperature expressed in Farenheit (variablePresentation1), while a model B may produce an output with temperature in Celsius (variablePresentation2). Both variable presentations refer to the concept of temperature."
     },
     "attributes" : [ "external" ],
-    "id" : "29",
+    "id" : "31",
     "superClasses" : [ "65" ]
   }, {
     "instances" : 0,
-    "union" : [ "4", "55" ],
-    "attributes" : [ "union", "anonymous" ],
+    "union" : [ "4", "57" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "107"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#SoftwareConfiguration",
@@ -1690,8 +1715,8 @@
     "superClasses" : [ "11" ]
   }, {
     "instances" : 0,
-    "union" : [ "4", "55" ],
-    "attributes" : [ "union", "anonymous" ],
+    "union" : [ "4", "57" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "303"
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
@@ -1912,10 +1937,10 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "28",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "30",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "32",
     "type" : "rdfs:SubClassOf"
@@ -1941,7 +1966,7 @@
     "id" : "52",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "57",
+    "id" : "55",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "59",
@@ -2103,7 +2128,7 @@
     "id" : "167",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "170",
+    "id" : "169",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "172",
@@ -2230,13 +2255,13 @@
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "249",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "250",
     "type" : "owl:objectProperty"
   }, {
     "id" : "251",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "254",
     "type" : "owl:datatypeProperty"
@@ -2399,7 +2424,7 @@
   }, {
     "range" : "5",
     "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "3"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#identifier",
@@ -2415,17 +2440,17 @@
   }, {
     "range" : "11",
     "domain" : "10",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "9"
   }, {
     "range" : "11",
     "domain" : "13",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "12"
   }, {
     "range" : "11",
     "domain" : "15",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "14"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasSampleResult",
@@ -2436,12 +2461,12 @@
       "en" : "has sample result"
     },
     "domain" : "13",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "16"
   }, {
     "range" : "11",
     "domain" : "19",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "18"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#hasProcess",
@@ -2457,31 +2482,17 @@
   }, {
     "range" : "25",
     "domain" : "24",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "23"
   }, {
     "range" : "25",
     "domain" : "27",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "26"
-  }, {
-    "iri" : "https://w3id.org/okn/o/sd#partOfDataset",
-    "baseIri" : "https://w3id.org/okn/o/sd",
-    "range" : "1",
-    "label" : {
-      "IRI-based" : "partOfDataset",
-      "en" : "part of dataset"
-    },
-    "domain" : "29",
-    "comment" : {
-      "en" : "Associates a presentation with a dataset where the presentation occurs"
-    },
-    "attributes" : [ "object", "external" ],
-    "id" : "28"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasPurpose",
     "baseIri" : "https://w3id.org/okn/o/sd",
-    "range" : "31",
+    "range" : "29",
     "label" : {
       "IRI-based" : "hasPurpose",
       "en" : "has purpose"
@@ -2491,11 +2502,25 @@
       "en" : "Objective or main functionality that can be achieved by running this software"
     },
     "attributes" : [ "external", "datatype" ],
+    "id" : "28"
+  }, {
+    "iri" : "https://w3id.org/okn/o/sd#partOfDataset",
+    "baseIri" : "https://w3id.org/okn/o/sd",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "partOfDataset",
+      "en" : "part of dataset"
+    },
+    "domain" : "31",
+    "comment" : {
+      "en" : "Associates a presentation with a dataset where the presentation occurs"
+    },
+    "attributes" : [ "external", "object" ],
     "id" : "30"
   }, {
     "range" : "34",
     "domain" : "33",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "32"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasAssumption",
@@ -2521,6 +2546,11 @@
         "language" : "undefined",
         "value" : "http://schema.org/",
         "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
       } ]
     },
     "label" : {
@@ -2528,7 +2558,7 @@
     },
     "domain" : "39",
     "subproperty" : [ "40" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "38"
   }, {
     "iri" : "http://schema.org/elevation",
@@ -2550,6 +2580,11 @@
         "language" : "undefined",
         "value" : "http://schema.org/",
         "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
       } ]
     },
     "label" : {
@@ -2567,7 +2602,7 @@
     },
     "domain" : "39",
     "subproperty" : [ "49" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "48"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#hasExplanationDiagram",
@@ -2600,14 +2635,14 @@
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasVersionId",
     "baseIri" : "https://w3id.org/okn/o/sd",
-    "range" : "58",
+    "range" : "56",
     "label" : {
       "IRI-based" : "hasVersionId",
       "en" : "has version id"
     },
     "domain" : "15",
     "attributes" : [ "external", "datatype" ],
-    "id" : "57"
+    "id" : "55"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasOutput",
     "baseIri" : "https://w3id.org/okn/o/sd",
@@ -2620,7 +2655,7 @@
     "comment" : {
       "en" : "Preoperty that expresses what are the outputs of a model"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "59"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#parameterAssignmentMethod",
@@ -2636,25 +2671,25 @@
   }, {
     "range" : "64",
     "domain" : "63",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "62"
   }, {
     "range" : "67",
     "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "66"
   }, {
     "range" : "41",
     "domain" : "42",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "72"
   }, {
     "range" : "65",
     "domain" : "25",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "73"
   }, {
-    "iri" : "http://schema.org/codeRepository",
+    "iri" : "http://schema.org/description",
     "baseIri" : "http://schema.org",
     "range" : "75",
     "annotations" : {
@@ -2663,20 +2698,7 @@
         "language" : "undefined",
         "value" : "http://schema.org/",
         "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "codeRepository"
-    },
-    "domain" : "39",
-    "attributes" : [ "external", "datatype" ],
-    "id" : "74"
-  }, {
-    "iri" : "http://schema.org/description",
-    "baseIri" : "http://schema.org",
-    "range" : "77",
-    "annotations" : {
-      "isDefinedBy" : [ {
+      }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "http://schema.org/",
@@ -2688,16 +2710,39 @@
     },
     "domain" : "39",
     "attributes" : [ "external", "datatype" ],
+    "id" : "74"
+  }, {
+    "iri" : "http://schema.org/codeRepository",
+    "baseIri" : "http://schema.org",
+    "range" : "77",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "codeRepository"
+    },
+    "domain" : "39",
+    "attributes" : [ "external", "datatype" ],
     "id" : "76"
   }, {
     "range" : "65",
-    "domain" : "29",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "31",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "78"
   }, {
     "range" : "81",
     "domain" : "80",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "79"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasDownloadURL",
@@ -2727,7 +2772,7 @@
   }, {
     "range" : "88",
     "domain" : "87",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "86"
   }, {
     "iri" : "http://schema.org/keywords",
@@ -2735,6 +2780,11 @@
     "range" : "90",
     "annotations" : {
       "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "http://schema.org/",
@@ -2766,7 +2816,7 @@
       "IRI-based" : "hasShortName",
       "en" : "has short name"
     },
-    "domain" : "29",
+    "domain" : "31",
     "comment" : {
       "en" : "A short name (e.g., temperature) capturing the high-level concept of the variable"
     },
@@ -2784,7 +2834,7 @@
     "comment" : {
       "en" : "Function to link a function with its corresponding container"
     },
-    "attributes" : [ "object", "functional", "external" ],
+    "attributes" : [ "external", "functional", "object" ],
     "id" : "95"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasFAQ",
@@ -2822,7 +2872,7 @@
     "comment" : {
       "en" : "Property used to link a variable presentation or time interval to the unit they are represented in"
     },
-    "attributes" : [ "object", "functional", "external" ],
+    "attributes" : [ "external", "functional", "object" ],
     "id" : "100"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#author",
@@ -2834,7 +2884,7 @@
     },
     "superproperty" : [ "108" ],
     "domain" : "11",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "106"
   }, {
     "iri" : "http://www.w3.org/ns/prov#value",
@@ -2842,6 +2892,11 @@
     "range" : "110",
     "annotations" : {
       "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
+      }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/prov#",
@@ -2919,7 +2974,7 @@
       "en" : "has software version"
     },
     "domain" : "11",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "120"
   }, {
     "iri" : "http://schema.org/latitude",
@@ -2952,6 +3007,11 @@
         "language" : "undefined",
         "value" : "http://schema.org/",
         "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
       } ]
     },
     "label" : {
@@ -2959,7 +3019,7 @@
     },
     "domain" : "39",
     "subproperty" : [ "128" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "127"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#dateCreated",
@@ -2980,7 +3040,7 @@
       "IRI-based" : "logo"
     },
     "domain" : "11",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "131"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#hasCalibration",
@@ -3005,7 +3065,7 @@
     "comment" : {
       "en" : "Relates a dataset specification to the data structure definition"
     },
-    "attributes" : [ "object", "functional", "external" ],
+    "attributes" : [ "external", "functional", "object" ],
     "id" : "134"
   }, {
     "iri" : "http://www.w3.org/ns/prov#wasDerivedFrom",
@@ -3017,6 +3077,11 @@
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/prov#",
         "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
       } ]
     },
     "label" : {
@@ -3024,7 +3089,7 @@
     },
     "domain" : "39",
     "subproperty" : [ "137" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "136"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#adjustableParameter",
@@ -3032,18 +3097,18 @@
     "range" : "118",
     "label" : {
       "IRI-based" : "adjustableParameter",
-      "en" : "Adjustable parameter"
+      "en" : "adjustable parameter"
     },
     "domain" : "13",
     "comment" : {
       "en" : "Parameter that can be adjusted in a configuration"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "138"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#calibrationTargetVariable",
     "baseIri" : "https://w3id.org/okn/o/sdm",
-    "range" : "29",
+    "range" : "31",
     "label" : {
       "IRI-based" : "calibrationTargetVariable",
       "en" : "calibration target variable"
@@ -3100,7 +3165,7 @@
     },
     "superproperty" : [ "147" ],
     "domain" : "11",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "145"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#fundingSource",
@@ -3112,7 +3177,7 @@
     },
     "superproperty" : [ "48" ],
     "domain" : "150",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "49"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#supportDetails",
@@ -3134,7 +3199,7 @@
     },
     "domain" : "39",
     "subproperty" : [ "153" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "152"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#referencePublication",
@@ -3171,7 +3236,7 @@
     },
     "superproperty" : [ "38" ],
     "domain" : "39",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "40"
   }, {
     "iri" : "http://schema.org/name",
@@ -3179,6 +3244,11 @@
     "range" : "102",
     "annotations" : {
       "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "http://schema.org/",
@@ -3217,7 +3287,7 @@
     "comment" : {
       "en" : "A typical sample visualization of the softwware outputs"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "161"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#copyrightHolder",
@@ -3229,7 +3299,7 @@
     },
     "superproperty" : [ "164" ],
     "domain" : "39",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "163"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#hasModelCategory",
@@ -3243,30 +3313,30 @@
     "attributes" : [ "datatype" ],
     "id" : "165"
   }, {
-    "iri" : "https://w3id.org/okn/o/sd#hasFormat",
-    "baseIri" : "https://w3id.org/okn/o/sd",
-    "range" : "169",
-    "label" : {
-      "IRI-based" : "hasFormat",
-      "en" : "has format"
-    },
-    "domain" : "168",
-    "comment" : {
-      "en" : "Format followed by a file. For example, txt, nc, etc."
-    },
-    "attributes" : [ "external", "datatype" ],
-    "id" : "167"
-  }, {
     "iri" : "https://w3id.org/okn/o/sd#memoryRequirements",
     "baseIri" : "https://w3id.org/okn/o/sd",
-    "range" : "171",
+    "range" : "168",
     "label" : {
       "IRI-based" : "memoryRequirements",
       "en" : "memory requirements"
     },
     "domain" : "11",
     "attributes" : [ "external", "datatype" ],
-    "id" : "170"
+    "id" : "167"
+  }, {
+    "iri" : "https://w3id.org/okn/o/sd#hasFormat",
+    "baseIri" : "https://w3id.org/okn/o/sd",
+    "range" : "171",
+    "label" : {
+      "IRI-based" : "hasFormat",
+      "en" : "has format"
+    },
+    "domain" : "170",
+    "comment" : {
+      "en" : "Format followed by a file. For example, txt, nc, etc."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "169"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#hasEquation",
     "baseIri" : "https://w3id.org/okn/o/sdm",
@@ -3302,20 +3372,9 @@
     "attributes" : [ "external", "datatype" ],
     "id" : "177"
   }, {
-    "iri" : "https://w3id.org/okn/o/sdm#hasDimension",
-    "baseIri" : "https://w3id.org/okn/o/sdm",
-    "range" : "181",
-    "label" : {
-      "IRI-based" : "hasDimension",
-      "en" : "has dimension"
-    },
-    "domain" : "114",
-    "attributes" : [ "functional", "datatype" ],
-    "id" : "180"
-  }, {
     "iri" : "https://w3id.org/okn/o/sdm#calibrationMethod",
     "baseIri" : "https://w3id.org/okn/o/sdm",
-    "range" : "183",
+    "range" : "181",
     "label" : {
       "IRI-based" : "calibrationMethod",
       "en" : "calibration method"
@@ -3325,6 +3384,17 @@
       "en" : "Calibration method used for a particular model configuration or setup"
     },
     "attributes" : [ "datatype" ],
+    "id" : "180"
+  }, {
+    "iri" : "https://w3id.org/okn/o/sdm#hasDimension",
+    "baseIri" : "https://w3id.org/okn/o/sdm",
+    "range" : "183",
+    "label" : {
+      "IRI-based" : "hasDimension",
+      "en" : "has dimension"
+    },
+    "domain" : "114",
+    "attributes" : [ "functional", "datatype" ],
     "id" : "182"
   }, {
     "iri" : "http://schema.org/citation",
@@ -3332,6 +3402,11 @@
     "range" : "68",
     "annotations" : {
       "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "http://schema.org/",
@@ -3347,22 +3422,22 @@
   }, {
     "range" : "114",
     "domain" : "187",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "186"
   }, {
-    "range" : "56",
-    "domain" : "55",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "58",
+    "domain" : "57",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "188"
   }, {
     "range" : "184",
     "domain" : "11",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "189"
   }, {
     "range" : "13",
     "domain" : "21",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "190"
   }, {
     "iri" : "http://schema.org/contentLocation",
@@ -3373,12 +3448,12 @@
     },
     "domain" : "39",
     "subproperty" : [ "192" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "191"
   }, {
     "range" : "1",
     "domain" : "114",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "193"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasComponentLocation",
@@ -3397,7 +3472,7 @@
   }, {
     "range" : "19",
     "domain" : "47",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "196"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasInstallationInstructions",
@@ -3426,27 +3501,27 @@
   }, {
     "range" : "19",
     "domain" : "21",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "202"
   }, {
     "range" : "19",
     "domain" : "204",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "203"
   }, {
     "range" : "19",
     "domain" : "35",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "205"
   }, {
     "range" : "19",
     "domain" : "121",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "206"
   }, {
     "range" : "114",
     "domain" : "208",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "207"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#wasDerivedFromSoftware",
@@ -3458,22 +3533,22 @@
     },
     "superproperty" : [ "136" ],
     "domain" : "162",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "137"
   }, {
     "range" : "54",
     "domain" : "17",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "209"
   }, {
     "range" : "211",
     "domain" : "125",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "210"
   }, {
     "range" : "1",
     "domain" : "51",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "212"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#processorRequirements",
@@ -3492,6 +3567,11 @@
     "range" : "216",
     "annotations" : {
       "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://codemeta.github.io/terms/",
+        "type" : "iri"
+      }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "https://codemeta.github.io/terms/",
@@ -3552,7 +3632,7 @@
       "en" : "has source code"
     },
     "domain" : "11",
-    "attributes" : [ "object", "functional", "external" ],
+    "attributes" : [ "external", "functional", "object" ],
     "id" : "225"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#adjustsVariable",
@@ -3566,7 +3646,7 @@
     "comment" : {
       "en" : "Property that links parameter with the variable they adjust. This property can be used when parameters quantify variables without directly representing them. For example, a \"fertilizer percentage adjustment\" parameter can quantify a \"fertilizer price\" variable"
     },
-    "attributes" : [ "object", "functional", "external" ],
+    "attributes" : [ "external", "functional", "object" ],
     "id" : "228"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasInput",
@@ -3580,7 +3660,7 @@
     "comment" : {
       "en" : "Property that links a model configuration to the input types expected by it."
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "229"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#hasCoordinateSystem",
@@ -3629,7 +3709,7 @@
     },
     "superproperty" : [ "127" ],
     "domain" : "11",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "128"
   }, {
     "iri" : "http://schema.org/longitude",
@@ -3649,7 +3729,7 @@
       "IRI-based" : "hasLongName",
       "en" : "has long name"
     },
-    "domain" : "29",
+    "domain" : "31",
     "comment" : {
       "en" : "Properties that relate the variable representation to its long name. The long name is useful for context (e.g., precipitation is less ambiguous than P) but not as precise as the standard name."
     },
@@ -3665,6 +3745,11 @@
         "language" : "undefined",
         "value" : "http://schema.org/",
         "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
       } ]
     },
     "label" : {
@@ -3672,7 +3757,7 @@
     },
     "domain" : "39",
     "subproperty" : [ "145" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "147"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasDefaultValue",
@@ -3689,38 +3774,6 @@
     "attributes" : [ "external", "datatype" ],
     "id" : "246"
   }, {
-    "iri" : "https://w3id.org/okn/o/sd#hasStandardVariable",
-    "baseIri" : "https://w3id.org/okn/o/sd",
-    "range" : "25",
-    "label" : {
-      "IRI-based" : "hasStandardVariable",
-      "en" : "has standard variable"
-    },
-    "domain" : "29",
-    "comment" : {
-      "en" : "the standard name of a variable"
-    },
-    "attributes" : [ "object", "functional", "external" ],
-    "id" : "249"
-  }, {
-    "iri" : "http://www.w3.org/ns/prov#hadPrimarySource",
-    "baseIri" : "http://www.w3.org/ns/prov",
-    "range" : "39",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/prov#",
-        "type" : "iri"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hadPrimarySource"
-    },
-    "domain" : "39",
-    "attributes" : [ "object", "external" ],
-    "id" : "250"
-  }, {
     "iri" : "https://w3id.org/okn/o/sd#fundingGrant",
     "baseIri" : "https://w3id.org/okn/o/sd",
     "range" : "244",
@@ -3733,6 +3786,43 @@
       "en" : "Grant number used for funding"
     },
     "attributes" : [ "external", "datatype" ],
+    "id" : "249"
+  }, {
+    "iri" : "https://w3id.org/okn/o/sd#hasStandardVariable",
+    "baseIri" : "https://w3id.org/okn/o/sd",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "hasStandardVariable",
+      "en" : "has standard variable"
+    },
+    "domain" : "31",
+    "comment" : {
+      "en" : "the standard name of a variable"
+    },
+    "attributes" : [ "external", "functional", "object" ],
+    "id" : "250"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#hadPrimarySource",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "39",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hadPrimarySource"
+    },
+    "domain" : "39",
+    "attributes" : [ "external", "object" ],
     "id" : "251"
   }, {
     "iri" : "http://schema.org/memoryRequirements",
@@ -3740,6 +3830,11 @@
     "range" : "255",
     "annotations" : {
       "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "http://schema.org/",
@@ -3762,6 +3857,11 @@
         "language" : "undefined",
         "value" : "http://schema.org/",
         "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
       } ]
     },
     "label" : {
@@ -3769,7 +3869,7 @@
     },
     "domain" : "39",
     "subproperty" : [ "106" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "108"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasParameter",
@@ -3783,7 +3883,7 @@
     "comment" : {
       "en" : "Property that indicates the parameters of a model configuration"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "256"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasSetup",
@@ -3798,7 +3898,7 @@
     "comment" : {
       "en" : "Property used to define configurations with some fixed resources and values. The rationale of this property is to allow predefined configurations"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "133"
   }, {
     "iri" : "http://schema.org/email",
@@ -3806,6 +3906,11 @@
     "range" : "258",
     "annotations" : {
       "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "http://schema.org/",
@@ -3846,7 +3951,7 @@
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#calibratedVariable",
     "baseIri" : "https://w3id.org/okn/o/sdm",
-    "range" : "29",
+    "range" : "31",
     "label" : {
       "IRI-based" : "calibratedVariable",
       "en" : "calibrated variable"
@@ -3871,16 +3976,16 @@
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasFunding",
     "baseIri" : "https://w3id.org/okn/o/sd",
-    "range" : "39",
+    "range" : "150",
     "label" : {
       "IRI-based" : "hasFunding",
       "en" : "has funding information"
     },
-    "domain" : "39",
+    "domain" : "11",
     "comment" : {
       "en" : "Property that links a software project to its funding information"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "265"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasFixedValue",
@@ -3906,6 +4011,11 @@
         "language" : "undefined",
         "value" : "http://schema.org/",
         "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
       } ]
     },
     "label" : {
@@ -3917,14 +4027,14 @@
   }, {
     "iri" : "https://w3id.org/okn/o/sd#contributor",
     "baseIri" : "https://w3id.org/okn/o/sd",
-    "range" : "55",
+    "range" : "57",
     "label" : {
       "IRI-based" : "contributor",
       "en" : "contributor"
     },
     "superproperty" : [ "273" ],
     "domain" : "11",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "272"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasConstraint",
@@ -3963,7 +4073,7 @@
     "comment" : {
       "en" : "Property that links a model to one of its configurations. A model may have multiple configurations, each of which is unique in terms of the inputs and outputs it uses."
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "280"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#website",
@@ -4013,13 +4123,18 @@
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/prov#",
         "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
       } ]
     },
     "label" : {
       "IRI-based" : "used"
     },
     "domain" : "39",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "286"
   }, {
     "iri" : "http://schema.org/identifier",
@@ -4027,6 +4142,11 @@
     "range" : "288",
     "annotations" : {
       "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "http://schema.org/",
@@ -4049,6 +4169,11 @@
         "language" : "undefined",
         "value" : "http://schema.org/",
         "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
       } ]
     },
     "label" : {
@@ -4063,6 +4188,11 @@
     "range" : "293",
     "annotations" : {
       "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "http://schema.org/",
@@ -4162,7 +4292,7 @@
       "en" : "has contact person"
     },
     "domain" : "11",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "302"
   }, {
     "iri" : "http://www.w3.org/ns/prov#wasGeneratedBy",
@@ -4174,13 +4304,18 @@
         "language" : "undefined",
         "value" : "http://www.w3.org/ns/prov#",
         "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/prov#",
+        "type" : "iri"
       } ]
     },
     "label" : {
       "IRI-based" : "wasGeneratedBy"
     },
     "domain" : "39",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "304"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasExecutionCommand",
@@ -4205,7 +4340,7 @@
       "en" : "has sample execution"
     },
     "domain" : "13",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "307"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#operatingSystems",
@@ -4228,6 +4363,11 @@
         "language" : "undefined",
         "value" : "http://schema.org/",
         "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
       } ]
     },
     "label" : {
@@ -4235,13 +4375,13 @@
     },
     "domain" : "39",
     "subproperty" : [ "272" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "273"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasPresentation",
-    "inverse" : "28",
+    "inverse" : "30",
     "baseIri" : "https://w3id.org/okn/o/sd",
-    "range" : "29",
+    "range" : "31",
     "label" : {
       "IRI-based" : "hasPresentation",
       "en" : "has presentation"
@@ -4250,7 +4390,7 @@
     "comment" : {
       "en" : "Property that links an instance of a dataset (or a dataset specification) to the presentation of a variable contained (or expected to be contained) on it."
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "310"
   }, {
     "iri" : "http://schema.org/license",
@@ -4258,6 +4398,11 @@
     "range" : "104",
     "annotations" : {
       "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "http://schema.org/",
@@ -4280,6 +4425,11 @@
         "language" : "undefined",
         "value" : "http://schema.org/",
         "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
       } ]
     },
     "label" : {
@@ -4294,6 +4444,11 @@
     "range" : "69",
     "annotations" : {
       "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      }, {
         "identifier" : "isDefinedBy",
         "language" : "undefined",
         "value" : "http://schema.org/",
@@ -4318,7 +4473,7 @@
     "comment" : {
       "en" : "Property that links a parameter or an input to a fixed value. For example, in a given configuration a parameter with the planting date for a model could be fixed to avoid the user changing it for that region."
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "314"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasTypicalDataSource",
@@ -4355,6 +4510,11 @@
         "language" : "undefined",
         "value" : "http://schema.org/",
         "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
       } ]
     },
     "label" : {
@@ -4362,7 +4522,7 @@
     },
     "domain" : "39",
     "subproperty" : [ "163" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "164"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#codeRepository",
@@ -4386,7 +4546,7 @@
       "IRI-based" : "email",
       "en" : "email"
     },
-    "domain" : "55",
+    "domain" : "57",
     "attributes" : [ "external", "datatype" ],
     "id" : "318"
   }, {
@@ -4413,6 +4573,11 @@
         "language" : "undefined",
         "value" : "https://codemeta.github.io/terms/",
         "type" : "iri"
+      }, {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://codemeta.github.io/terms/",
+        "type" : "iri"
       } ]
     },
     "label" : {
@@ -4433,7 +4598,7 @@
     "comment" : {
       "en" : "Property that links a software component to other useful software that canbe used to visualize its outputs"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "321"
   } ]
 }

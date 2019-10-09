@@ -122,6 +122,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/okn/o/sd#hasSetup"/>
         <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
         <rdfs:range rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
+        <rdfs:label xml:lang="en">has calibration</rdfs:label>
     </owl:ObjectProperty>
     
 

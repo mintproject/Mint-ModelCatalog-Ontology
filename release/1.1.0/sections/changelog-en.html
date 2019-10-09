@@ -1,0 +1,395 @@
+<html>
+<div id="changelog">
+<h2 id="changes" class="list">Changes from last version</h2>
+<h3 id="changeClass" class="list">Classes</h3>
+<details><summary><u>Modified classes</u></summary>
+<ul><li><a href="#https://w3id.org/okn/o/sd#DatasetSpecification">https://w3id.org/okn/o/sd#DatasetSpecification</a>
+<ul>
+<li>Deleted: rdfs:comment "Class designed to describe a type of input or output used or produced by a model. For example, Topoflow has several inputs. One of them is a text file with precipitation values. The representation of this input is an instance of a dataset specification."@en</li>
+<li>Deleted: rdfs:label "Dataset specification"@en</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#Software">https://w3id.org/okn/o/sd#Software</a>
+<ul>
+<li>Deleted: SubClass of http://schema.org/SoftwareApplication</li>
+<li>Deleted: rdfs:label "Software"@en</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#SoftwareConfiguration">https://w3id.org/okn/o/sd#SoftwareConfiguration</a>
+<ul>
+<li>Deleted: rdfs:label "Software Configuration"@en</li>
+<li>Deleted: rdfs:comment "\"Function\" is part of an Ontosoft extension currently being developed"^^xsd:anyURI</li>
+<li>Deleted: SubClass of https://w3id.org/okn/o/sd#Software</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#VariablePresentation">https://w3id.org/okn/o/sd#VariablePresentation</a>
+<ul>
+<li>Deleted: SubClass of https://w3id.org/okn/o/sd#Variable</li>
+<li>Deleted: rdfs:label "Variable presentation"@en</li>
+<li>Deleted: rdfs:comment "Concept used to represent an instantiation of a variable in an input/output dataset. For example, a model A may use an input file with temperature expressed in Farenheit (variablePresentation1), while a model B may produce an output with temperature in Celsius (variablePresentation2). Both variable presentations refer to the concept of temperature."@en</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Added classes</u></summary>
+<ul><li><a href="#http://schema.org/GeoCoordinates">http://schema.org/GeoCoordinates</a>
+</li>
+<li><a href="#http://schema.org/GeoShape">http://schema.org/GeoShape</a>
+</li>
+<li><a href="#http://schema.org/Place">http://schema.org/Place</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#Image">https://w3id.org/okn/o/sd#Image</a>
+</li>
+<li><a href="#CausalDiagram">https://w3id.org/okn/o/sdm#CausalDiagram</a>
+</li>
+<li><a href="#EmpiricalModel">https://w3id.org/okn/o/sdm#EmpiricalModel</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/okn/o/sdm#Model</li>
+</ul>
+</li>
+<li><a href="#Emulator">https://w3id.org/okn/o/sdm#Emulator</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/okn/o/sdm#Model</li>
+</ul>
+</li>
+<li><a href="#Equation">https://w3id.org/okn/o/sdm#Equation</a>
+</li>
+<li><a href="#GeoCoordinates">https://w3id.org/okn/o/sdm#GeoCoordinates</a>
+<ul>
+<li>Added: SubClass of http://schema.org/GeoCoordinates</li>
+</ul>
+</li>
+<li><a href="#GeoShape">https://w3id.org/okn/o/sdm#GeoShape</a>
+<ul>
+<li>Added: SubClass of http://schema.org/GeoShape</li>
+</ul>
+</li>
+<li><a href="#Grid">https://w3id.org/okn/o/sdm#Grid</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/okn/o/sd#DatasetSpecification</li>
+</ul>
+</li>
+<li><a href="#HybridModel">https://w3id.org/okn/o/sdm#HybridModel</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/okn/o/sdm#Model</li>
+</ul>
+</li>
+<li><a href="#Model">https://w3id.org/okn/o/sdm#Model</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/okn/o/sd#Software</li>
+</ul>
+</li>
+<li><a href="#ModelConfiguration">https://w3id.org/okn/o/sdm#ModelConfiguration</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/okn/o/sdm#Model</li>
+<li>Added: SubClass of https://w3id.org/okn/o/sd#SoftwareConfiguration</li>
+</ul>
+</li>
+<li><a href="#PointBasedGrid">https://w3id.org/okn/o/sdm#PointBasedGrid</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/okn/o/sdm#Grid</li>
+</ul>
+</li>
+<li><a href="#Process">https://w3id.org/okn/o/sdm#Process</a>
+</li>
+<li><a href="#Region">https://w3id.org/okn/o/sdm#Region</a>
+<ul>
+<li>Added: SubClass of http://schema.org/Place</li>
+</ul>
+</li>
+<li><a href="#SpatialResolution">https://w3id.org/okn/o/sdm#SpatialResolution</a>
+</li>
+<li><a href="#SpatiallyDistributedGrid">https://w3id.org/okn/o/sdm#SpatiallyDistributedGrid</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/okn/o/sdm#Grid</li>
+</ul>
+</li>
+<li><a href="#Theory-GuidedModel">https://w3id.org/okn/o/sdm#Theory-GuidedModel</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/okn/o/sdm#Model</li>
+</ul>
+</li>
+<li><a href="#TimeInterval">https://w3id.org/okn/o/sdm#TimeInterval</a>
+</li>
+</ul></details><details><summary><u>Deleted classes</u></summary>
+<ul><li><a href="#http://qudt.org/schema/qudt/Unit">http://qudt.org/schema/qudt/Unit</a>
+</li>
+<li><a href="#http://schema.org/Dataset">http://schema.org/Dataset</a>
+</li>
+<li><a href="#http://schema.org/SoftwareApplication">http://schema.org/SoftwareApplication</a>
+</li>
+<li><a href="#http://www.geoscienceontology.org/geo-upper#Variable">http://www.geoscienceontology.org/geo-upper#Variable</a>
+</li>
+<li><a href="#http://www.w3.org/ns/dcat#Dataset">http://www.w3.org/ns/dcat#Dataset</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#DataStructureDefinition">https://w3id.org/okn/o/sd#DataStructureDefinition</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#GSNVariable">https://w3id.org/okn/o/sd#GSNVariable</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#ICASAVariable">https://w3id.org/okn/o/sd#ICASAVariable</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#Parameter">https://w3id.org/okn/o/sd#Parameter</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#SoftwareImage">https://w3id.org/okn/o/sd#SoftwareImage</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#SoftwareVersion">https://w3id.org/okn/o/sd#SoftwareVersion</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#StandardVariable">https://w3id.org/okn/o/sd#StandardVariable</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#Unit">https://w3id.org/okn/o/sd#Unit</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#Variable">https://w3id.org/okn/o/sd#Variable</a>
+</li>
+</ul></details><h3 id="changeProp" class="list">Object Properties</h3>
+<details><summary><u>Added properties</u></summary>
+<ul><li><a href="#http://schema.org/contentLocation">http://schema.org/contentLocation</a>
+</li>
+<li><a href="#http://schema.org/geo">http://schema.org/geo</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#hasSetup">https://w3id.org/okn/o/sd#hasSetup</a>
+</li>
+<li><a href="#calibratedVariable">https://w3id.org/okn/o/sdm#calibratedVariable</a>
+<ul>
+<li>Added: Range https://w3id.org/okn/o/sd#VariablePresentation</li>
+<li>Added: domain https://w3id.org/okn/o/sdm#ModelConfiguration</li>
+</ul>
+</li>
+<li><a href="#calibrationTargetVariable">https://w3id.org/okn/o/sdm#calibrationTargetVariable</a>
+<ul>
+<li>Added: domain https://w3id.org/okn/o/sdm#ModelConfiguration</li>
+<li>Added: Range https://w3id.org/okn/o/sd#VariablePresentation</li>
+</ul>
+</li>
+<li><a href="#geo">https://w3id.org/okn/o/sdm#geo</a>
+<ul>
+<li>Added: domain https://w3id.org/okn/o/sdm#Region</li>
+<li>Added: Range Union of (https://w3id.org/okn/o/sdm#GeoCoordinates, https://w3id.org/okn/o/sdm#GeoShape)</li>
+<li>Added: SubProperty of http://schema.org/geo</li>
+</ul>
+</li>
+<li><a href="#hasCalibration">https://w3id.org/okn/o/sdm#hasCalibration</a>
+<ul>
+<li>Added: SubProperty of https://w3id.org/okn/o/sd#hasSetup</li>
+<li>Added: domain https://w3id.org/okn/o/sdm#ModelConfiguration</li>
+<li>Added: Range https://w3id.org/okn/o/sdm#ModelConfiguration</li>
+</ul>
+</li>
+<li><a href="#hasCausalDiagram">https://w3id.org/okn/o/sdm#hasCausalDiagram</a>
+<ul>
+<li>Added: domain https://w3id.org/okn/o/sdm#ModelConfiguration</li>
+<li>Added: Range https://w3id.org/okn/o/sdm#CausalDiagram</li>
+</ul>
+</li>
+<li><a href="#hasEquation">https://w3id.org/okn/o/sdm#hasEquation</a>
+<ul>
+<li>Added: domain https://w3id.org/okn/o/sdm#Model</li>
+<li>Added: Range https://w3id.org/okn/o/sdm#Equation</li>
+</ul>
+</li>
+<li><a href="#hasExplanationDiagram">https://w3id.org/okn/o/sdm#hasExplanationDiagram</a>
+<ul>
+<li>Added: Range https://w3id.org/okn/o/sd#Image</li>
+<li>Added: domain https://w3id.org/okn/o/sdm#Model</li>
+</ul>
+</li>
+<li><a href="#hasGrid">https://w3id.org/okn/o/sdm#hasGrid</a>
+<ul>
+<li>Added: domain https://w3id.org/okn/o/sdm#Model</li>
+<li>Added: Range https://w3id.org/okn/o/sdm#Grid</li>
+</ul>
+</li>
+<li><a href="#hasOutputTimeInterval">https://w3id.org/okn/o/sdm#hasOutputTimeInterval</a>
+<ul>
+<li>Added: domain https://w3id.org/okn/o/sdm#ModelConfiguration</li>
+<li>Added: Range https://w3id.org/okn/o/sdm#TimeInterval</li>
+</ul>
+</li>
+<li><a href="#hasPart">https://w3id.org/okn/o/sdm#hasPart</a>
+<ul>
+<li>Added: Range Union of (https://w3id.org/okn/o/sd#VariablePresentation, https://w3id.org/okn/o/sdm#Process)</li>
+<li>Added: domain https://w3id.org/okn/o/sdm#CausalDiagram</li>
+</ul>
+</li>
+<li><a href="#hasProcess">https://w3id.org/okn/o/sdm#hasProcess</a>
+<ul>
+<li>Added: domain https://w3id.org/okn/o/sdm#ModelConfiguration</li>
+<li>Added: Range https://w3id.org/okn/o/sdm#Process</li>
+</ul>
+</li>
+<li><a href="#hasRegion">https://w3id.org/okn/o/sdm#hasRegion</a>
+<ul>
+<li>Added: Range https://w3id.org/okn/o/sdm#Region</li>
+<li>Added: domain https://w3id.org/okn/o/sdm#ModelConfiguration</li>
+<li>Added: SubProperty of http://schema.org/contentLocation</li>
+</ul>
+</li>
+<li><a href="#influences">https://w3id.org/okn/o/sdm#influences</a>
+<ul>
+<li>Added: domain https://w3id.org/okn/o/sdm#Process</li>
+<li>Added: Range https://w3id.org/okn/o/sdm#Process</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Deleted properties</u></summary>
+<ul><li><a href="#http://ontosoft.org/software#hasContainer">http://ontosoft.org/software#hasContainer</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#hadGrid">https://w3id.org/okn/o/sd#hadGrid</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#hasConfiguration">https://w3id.org/okn/o/sd#hasConfiguration</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#hasDataset">https://w3id.org/okn/o/sd#hasDataset</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#hasFileStructure">https://w3id.org/okn/o/sd#hasFileStructure</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#hasInput">https://w3id.org/okn/o/sd#hasInput</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#hasOutput">https://w3id.org/okn/o/sd#hasOutput</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#hasParameter">https://w3id.org/okn/o/sd#hasParameter</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#hasPresentation">https://w3id.org/okn/o/sd#hasPresentation</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#hasSoftwareVersion">https://w3id.org/okn/o/sd#hasSoftwareVersion</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#hasStandardVariable">https://w3id.org/okn/o/sd#hasStandardVariable</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#usesUnit">https://w3id.org/okn/o/sd#usesUnit</a>
+</li>
+</ul></details><h3 id="changeDataProp" class="list">Data Properties</h3>
+<details><summary><u>Added data properties</u></summary>
+<ul><li><a href="#http://schema.org/box">http://schema.org/box</a>
+</li>
+<li><a href="#http://schema.org/elevation">http://schema.org/elevation</a>
+</li>
+<li><a href="#http://schema.org/latitude">http://schema.org/latitude</a>
+</li>
+<li><a href="#http://schema.org/longitude">http://schema.org/longitude</a>
+</li>
+<li><a href="#box">https://w3id.org/okn/o/sdm#box</a>
+<ul>
+<li>Added: Domain https://w3id.org/okn/o/sdm#GeoShape</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: SubProperty of http://schema.org/box</li>
+</ul>
+</li>
+<li><a href="#calibrationInterval">https://w3id.org/okn/o/sdm#calibrationInterval</a>
+<ul>
+<li>Added: Domain https://w3id.org/okn/o/sdm#ModelConfiguration</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+</ul>
+</li>
+<li><a href="#calibrationMethod">https://w3id.org/okn/o/sdm#calibrationMethod</a>
+<ul>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: Domain https://w3id.org/okn/o/sdm#ModelConfiguration</li>
+</ul>
+</li>
+<li><a href="#elevation">https://w3id.org/okn/o/sdm#elevation</a>
+<ul>
+<li>Added: Domain Union of (https://w3id.org/okn/o/sdm#GeoCoordinates, https://w3id.org/okn/o/sdm#GeoShape)</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: SubProperty of http://schema.org/elevation</li>
+</ul>
+</li>
+<li><a href="#hasCoordinateSystem">https://w3id.org/okn/o/sdm#hasCoordinateSystem</a>
+<ul>
+<li>Added: FunctionalDataProperty FunctionalDataProperty(&lt;https://w3id.org/okn/o/sdm#hasCoordinateSystem&gt;)</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: Domain https://w3id.org/okn/o/sdm#Grid</li>
+</ul>
+</li>
+<li><a href="#hasDimension">https://w3id.org/okn/o/sdm#hasDimension</a>
+<ul>
+<li>Added: Domain https://w3id.org/okn/o/sdm#Grid</li>
+<li>Added: FunctionalDataProperty FunctionalDataProperty(&lt;https://w3id.org/okn/o/sdm#hasDimension&gt;)</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+</ul>
+</li>
+<li><a href="#hasModelCategory">https://w3id.org/okn/o/sdm#hasModelCategory</a>
+<ul>
+<li>Added: Domain https://w3id.org/okn/o/sdm#Model</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+</ul>
+</li>
+<li><a href="#hasModelResultTable">https://w3id.org/okn/o/sdm#hasModelResultTable</a>
+<ul>
+<li>Added: Domain https://w3id.org/okn/o/sdm#ModelConfiguration</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+</ul>
+</li>
+<li><a href="#hasShape">https://w3id.org/okn/o/sdm#hasShape</a>
+<ul>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: Domain https://w3id.org/okn/o/sdm#Grid</li>
+</ul>
+</li>
+<li><a href="#hasSpatialResolution">https://w3id.org/okn/o/sdm#hasSpatialResolution</a>
+<ul>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: Domain https://w3id.org/okn/o/sdm#Grid</li>
+</ul>
+</li>
+<li><a href="#latitude">https://w3id.org/okn/o/sdm#latitude</a>
+<ul>
+<li>Added: Domain Union of (https://w3id.org/okn/o/sdm#GeoCoordinates, https://w3id.org/okn/o/sdm#GeoShape)</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: SubProperty of http://schema.org/latitude</li>
+</ul>
+</li>
+<li><a href="#longitude">https://w3id.org/okn/o/sdm#longitude</a>
+<ul>
+<li>Added: SubProperty of http://schema.org/longitude</li>
+<li>Added: Domain Union of (https://w3id.org/okn/o/sdm#GeoCoordinates, https://w3id.org/okn/o/sdm#GeoShape)</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+</ul>
+</li>
+<li><a href="#parameterAssignmentMethod">https://w3id.org/okn/o/sdm#parameterAssignmentMethod</a>
+<ul>
+<li>Added: Domain https://w3id.org/okn/o/sdm#ModelConfiguration</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+</ul>
+</li>
+<li><a href="#validUntil">https://w3id.org/okn/o/sdm#validUntil</a>
+<ul>
+<li>Added: Domain https://w3id.org/okn/o/sdm#ModelConfiguration</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#dateTime</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Deleted data properties</u></summary>
+<ul><li><a href="#http://ontosoft.org/software#hasExecutionCommand">http://ontosoft.org/software#hasExecutionCommand</a>
+</li>
+<li><a href="#http://ontosoft.org/software#hasIdentifier">http://ontosoft.org/software#hasIdentifier</a>
+</li>
+<li><a href="#http://ontosoft.org/software#hasImplementationScriptLocation">http://ontosoft.org/software#hasImplementationScriptLocation</a>
+</li>
+<li><a href="#http://ontosoft.org/software#hasInstallationInstructions">http://ontosoft.org/software#hasInstallationInstructions</a>
+</li>
+<li><a href="#http://purl.org/dc/terms/description">http://purl.org/dc/terms/description</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#hasAssumption">https://w3id.org/okn/o/sd#hasAssumption</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#hasComponentLocation">https://w3id.org/okn/o/sd#hasComponentLocation</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#hasConstraint">https://w3id.org/okn/o/sd#hasConstraint</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#hasDataType">https://w3id.org/okn/o/sd#hasDataType</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#hasDefaultValue">https://w3id.org/okn/o/sd#hasDefaultValue</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#hasDimensionality">https://w3id.org/okn/o/sd#hasDimensionality</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#hasDocumentation">https://w3id.org/okn/o/sd#hasDocumentation</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#hasFormat">https://w3id.org/okn/o/sd#hasFormat</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#hasLongName">https://w3id.org/okn/o/sd#hasLongName</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#hasMaximumAcceptedValue">https://w3id.org/okn/o/sd#hasMaximumAcceptedValue</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#hasMinimumAcceptedValue">https://w3id.org/okn/o/sd#hasMinimumAcceptedValue</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#hasShortName">https://w3id.org/okn/o/sd#hasShortName</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#hasSupportScriptLocation">https://w3id.org/okn/o/sd#hasSupportScriptLocation</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#hasVersionId">https://w3id.org/okn/o/sd#hasVersionId</a>
+</li>
+</ul></details></div>
+<html>

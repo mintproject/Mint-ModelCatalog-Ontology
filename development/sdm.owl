@@ -1,642 +1,501 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/okn/o/sdm#"
-     xml:base="https://w3id.org/okn/o/sdm"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:terms="http://purl.org/dc/terms/">
-    <owl:Ontology rdf:about="https://w3id.org/okn/o/sdm">
-        <owl:versionIRI rdf:resource="https://w3id.org/okn/o/sdm/1.1.0"/>
-        <owl:imports rdf:resource="https://w3id.org/okn/o/sd/1.2.0"/>
-        <dc:abstract xml:lang="en">The Software Description Ontology for Models (SDM) expands the software description ontology (SD) to add information about scientific software models. Examples of scientific software models are hydrology models, agriculture models or economy models.</dc:abstract>
-        <dc:contributor xml:lang="en">Armen Kemanian</dc:contributor>
-        <dc:contributor xml:lang="en">Christopher Duffy</dc:contributor>
-        <dc:contributor xml:lang="en">Kelly Cobourn</dc:contributor>
-        <dc:contributor xml:lang="en">Scott Peckham</dc:contributor>
-        <dc:contributor xml:lang="en">Yolanda Gil</dc:contributor>
-        <dc:creator xml:lang="en">Daniel Garijo</dc:creator>
-        <dc:creator xml:lang="en">Deborah Khider</dc:creator>
-        <dc:license xml:lang="en">&lt;http://creativecommons.org/licenses/by/2.0/&gt;</dc:license>
-        <dc:title xml:lang="en">The Software Description Ontology for Models</dc:title>
-        <terms:license rdf:resource="&lt;http://creativecommons.org/licenses/by/2.0/&gt;"/>
-        <vann:preferredNamespacePrefix xml:lang="en">sdm</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/okn/o/sdm#"/>
-        <owl:priorVersion rdf:resource="https://w3id.org/okn/o/sdm/1.0.0"/>
-        <owl:versionInfo xml:lang="en">1.1.0</owl:versionInfo>
-    </owl:Ontology>
-    
+@prefix : <https://w3id.org/okn/o/sdm#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@base <https://w3id.org/okn/o/sdm> .
+
+<https://w3id.org/okn/o/sdm> rdf:type owl:Ontology ;
+                              owl:versionIRI <https://w3id.org/okn/o/sdm/1.2.0> ;
+                              owl:imports <https://w3id.org/okn/o/sd/1.2.0> ;
+                              dc:abstract "The Software Description Ontology for Models (SDM) expands the software description ontology (SD) to add information about scientific software models. Examples of scientific software models are hydrology models, agriculture models or economy models."@en ;
+                              dc:contributor "Armen Kemanian"@en ,
+                                             "Christopher Duffy"@en ,
+                                             "Kelly Cobourn"@en ,
+                                             "Scott Peckham"@en ;
+                              dc:creator "Daniel Garijo"@en ,
+                                         "Deborah Khider"@en ,
+                                         "Yolanda Gil"@en ;
+                              dc:license "<http://creativecommons.org/licenses/by/2.0/>"@en ;
+                              dc:title "The Software Description Ontology for Models"@en ;
+                              terms:license <http://creativecommons.org/licenses/by/2.0/> ;
+                              vann:preferredNamespacePrefix "sdm" ;
+                              vann:preferredNamespaceUri : ;
+                              owl:priorVersion <https://w3id.org/okn/o/sdm/1.1.0> ;
+                              owl:versionInfo "1.2.0"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://schema.org/contentLocation
+<http://schema.org/contentLocation> rdf:type owl:ObjectProperty .
+
+
+###  http://schema.org/geo
+<http://schema.org/geo> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/okn/o/sdm#calibratedVariable
+:calibratedVariable rdf:type owl:ObjectProperty ;
+                    rdfs:domain :ModelConfiguration ;
+                    rdfs:range <https://w3id.org/okn/o/sd#VariablePresentation> ;
+                    rdfs:comment "Variable that was calibrated in this particular model configuration calibration"@en ;
+                    rdfs:label "calibrated variable"@en .
+
+
+###  https://w3id.org/okn/o/sdm#calibrationTargetVariable
+:calibrationTargetVariable rdf:type owl:ObjectProperty ;
+                           rdfs:domain :ModelConfiguration ;
+                           rdfs:range <https://w3id.org/okn/o/sd#VariablePresentation> ;
+                           rdfs:comment "Variable for which the model was calibrated for. For example, in a hydrology model one calibrate the predicted river width by varying hydrologic conductivity"@en ;
+                           rdfs:label "calibration target variable"@en .
+
+
+###  https://w3id.org/okn/o/sdm#geo
+:geo rdf:type owl:ObjectProperty ;
+     rdfs:subPropertyOf <http://schema.org/geo> ;
+     rdfs:domain :Region ;
+     rdfs:range [ rdf:type owl:Class ;
+                  owl:unionOf ( :GeoCoordinates
+                                :GeoShape
+                              )
+                ] ;
+     rdfs:label "geo"@en .
+
+
+###  https://w3id.org/okn/o/sdm#hasCalibration
+:hasCalibration rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf <https://w3id.org/okn/o/sd#hasSetup> ;
+                rdfs:domain :ModelConfiguration ;
+                rdfs:range :ModelConfiguration ;
+                rdfs:label "has calibration"@en .
+
+
+###  https://w3id.org/okn/o/sdm#hasCausalDiagram
+:hasCausalDiagram rdf:type owl:ObjectProperty ;
+                  rdfs:domain :ModelConfiguration ;
+                  rdfs:range :CausalDiagram ;
+                  rdfs:comment "Diagram associated to a model configuration"@en ;
+                  rdfs:label "has causal diagram"@en .
+
+
+###  https://w3id.org/okn/o/sdm#hasEquation
+:hasEquation rdf:type owl:ObjectProperty ;
+             rdfs:domain :Model ;
+             rdfs:range :Equation ;
+             rdfs:comment "Equations used in the model"@en ;
+             rdfs:label "has equation"@en .
 
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+###  https://w3id.org/okn/o/sdm#hasExplanationDiagram
+:hasExplanationDiagram rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Model ;
+                       rdfs:range <https://w3id.org/okn/o/sd#Image> ;
+                       rdfs:comment "Diagram used to explain the behavior of the model"@en ;
+                       rdfs:label "has explanation diagram"@en .
 
-    
 
+###  https://w3id.org/okn/o/sdm#hasGrid
+:hasGrid rdf:type owl:ObjectProperty ;
+         rdfs:domain :Model ;
+         rdfs:range :Grid ;
+         rdfs:comment "Grid information about the model"@en ;
+         rdfs:label "has grid"@en .
 
-    <!-- http://purl.org/dc/elements/1.1/title -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
-    
-
-
-    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
-    
+###  https://w3id.org/okn/o/sdm#hasOutputTimeInterval
+:hasOutputTimeInterval rdf:type owl:ObjectProperty ;
+                       rdfs:domain :ModelConfiguration ;
+                       rdfs:range :TimeInterval ;
+                       rdfs:label "has ourput time interval"@en .
 
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+###  https://w3id.org/okn/o/sdm#hasPart
+:hasPart rdf:type owl:ObjectProperty ;
+         rdfs:domain :CausalDiagram ;
+         rdfs:range [ rdf:type owl:Class ;
+                      owl:unionOf ( <https://w3id.org/okn/o/sd#VariablePresentation>
+                                    :Process
+                                  )
+                    ] ;
+         rdfs:label "has part"@en .
 
-    
 
+###  https://w3id.org/okn/o/sdm#hasProcess
+:hasProcess rdf:type owl:ObjectProperty ;
+            rdfs:domain :ModelConfiguration ;
+            rdfs:range :Process ;
+            rdfs:label "has process"@en .
 
-    <!-- http://schema.org/contentLocation -->
 
-    <owl:ObjectProperty rdf:about="http://schema.org/contentLocation"/>
-    
-
+###  https://w3id.org/okn/o/sdm#hasRegion
+:hasRegion rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf <http://schema.org/contentLocation> ;
+           rdfs:domain :ModelConfiguration ;
+           rdfs:range :Region ;
+           rdfs:comment "Property linking a region to a model configuration/calibration. This property implies that the described model configuration is prepared to execute in that target region"@en .
 
-    <!-- http://schema.org/geo -->
 
-    <owl:ObjectProperty rdf:about="http://schema.org/geo"/>
-    
+###  https://w3id.org/okn/o/sdm#influences
+:influences rdf:type owl:ObjectProperty ;
+            rdfs:domain :Process ;
+            rdfs:range :Process ;
+            rdfs:label "influences"@en .
 
 
-    <!-- https://w3id.org/okn/o/sdm#calibratedVariable -->
+###  https://w3id.org/okn/o/sdm#intervalUnit
+:intervalUnit rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf <https://w3id.org/okn/o/sd#usesUnit> ;
+              rdfs:domain :TimeInterval ;
+              rdfs:range <http://qudt.org/schema/qudt/Unit> ;
+              rdfs:comment "Unit used in an interval (e.g., month)"@en ;
+              rdfs:label "interval unit"@en .
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#calibratedVariable">
-        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
-        <rdfs:range rdf:resource="https://w3id.org/okn/o/sd#VariablePresentation"/>
-        <rdfs:comment xml:lang="en">Variable that was calibrated in this particular model configuration calibration</rdfs:comment>
-        <rdfs:label xml:lang="en">calibrated variable</rdfs:label>
-    </owl:ObjectProperty>
-    
 
+###  https://w3id.org/okn/o/sdm#relevantForIntervention
+:relevantForIntervention rdf:type owl:ObjectProperty ;
+                         rdfs:domain <https://w3id.org/okn/o/sd#Parameter> ;
+                         rdfs:range :Intervention ;
+                         rdfs:comment "Property that links a parameter to the intervention it is relevant for."@en ;
+                         rdfs:label "relevant for intervention"@en .
 
-    <!-- https://w3id.org/okn/o/sdm#calibrationTargetVariable -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#calibrationTargetVariable">
-        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
-        <rdfs:range rdf:resource="https://w3id.org/okn/o/sd#VariablePresentation"/>
-        <rdfs:comment xml:lang="en">Variable for which the model was calibrated for. For example, in a hydrology model one calibrate the predicted river width by varying hydrologic conductivity</rdfs:comment>
-        <rdfs:label xml:lang="en">calibration target variable</rdfs:label>
-    </owl:ObjectProperty>
-    
-
+###  https://w3id.org/okn/o/sdm#usefulForCalculatingIndex
+:usefulForCalculatingIndex rdf:type owl:ObjectProperty ;
+                           rdfs:domain :Model ;
+                           rdfs:range :Index ;
+                           rdfs:comment "Property that indicates that a model (or any of its products) can be used to calculate a particular index. The rationale for this property is that indices are usually not caluclated by models, but by post-processing steps."@en ;
+                           rdfs:label "useful for calculating index"@en .
 
-    <!-- https://w3id.org/okn/o/sdm#geo -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#geo">
-        <rdfs:subPropertyOf rdf:resource="http://schema.org/geo"/>
-        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Region"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/okn/o/sdm#GeoCoordinates"/>
-                    <rdf:Description rdf:about="https://w3id.org/okn/o/sdm#GeoShape"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-    </owl:ObjectProperty>
-    
+#################################################################
+#    Data properties
+#################################################################
 
-
-    <!-- https://w3id.org/okn/o/sdm#hasCalibration -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasCalibration">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/okn/o/sd#hasSetup"/>
-        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
-        <rdfs:range rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
-        <rdfs:label xml:lang="en">has calibration</rdfs:label>
-    </owl:ObjectProperty>
-    
+###  http://schema.org/box
+<http://schema.org/box> rdf:type owl:DatatypeProperty .
 
 
-    <!-- https://w3id.org/okn/o/sdm#hasCausalDiagram -->
+###  http://schema.org/elevation
+<http://schema.org/elevation> rdf:type owl:DatatypeProperty .
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasCausalDiagram">
-        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
-        <rdfs:range rdf:resource="https://w3id.org/okn/o/sdm#CausalDiagram"/>
-        <rdfs:comment xml:lang="en">Diagram associated to a model configuration</rdfs:comment>
-        <rdfs:label xml:lang="en">has causal diagram</rdfs:label>
-    </owl:ObjectProperty>
-    
-
 
-    <!-- https://w3id.org/okn/o/sdm#hasEquation -->
+###  http://schema.org/latitude
+<http://schema.org/latitude> rdf:type owl:DatatypeProperty .
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasEquation">
-        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
-        <rdfs:range rdf:resource="https://w3id.org/okn/o/sdm#Equation"/>
-        <rdfs:comment xml:lang="en">Equations used in the model</rdfs:comment>
-        <rdfs:label xml:lang="en">has equation</rdfs:label>
-    </owl:ObjectProperty>
-    
 
+###  http://schema.org/longitude
+<http://schema.org/longitude> rdf:type owl:DatatypeProperty .
 
-    <!-- https://w3id.org/okn/o/sdm#hasExplanationDiagram -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasExplanationDiagram">
-        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
-        <rdfs:range rdf:resource="https://w3id.org/okn/o/sd#Image"/>
-        <rdfs:comment xml:lang="en">Diagram used to explain the behavior of the model</rdfs:comment>
-        <rdfs:label xml:lang="en">has explanation diagram</rdfs:label>
-    </owl:ObjectProperty>
-    
+###  https://w3id.org/okn/o/sdm#box
+:box rdf:type owl:DatatypeProperty ;
+     rdfs:subPropertyOf <http://schema.org/box> ;
+     rdfs:domain :GeoShape ;
+     rdfs:range xsd:string .
 
 
-    <!-- https://w3id.org/okn/o/sdm#hasGrid -->
+###  https://w3id.org/okn/o/sdm#calibrationInterval
+:calibrationInterval rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :ModelConfiguration ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Property that represents the temporal interval used to calibrate a model"@en ;
+                     rdfs:label "calibration interval"@en .
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasGrid">
-        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
-        <rdfs:range rdf:resource="https://w3id.org/okn/o/sdm#Grid"/>
-        <rdfs:comment xml:lang="en">Grid information about the model</rdfs:comment>
-        <rdfs:label xml:lang="en">has grid</rdfs:label>
-    </owl:ObjectProperty>
-    
 
+###  https://w3id.org/okn/o/sdm#calibrationMethod
+:calibrationMethod rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :ModelConfiguration ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Calibration method used for a particular model configuration or setup"@en ;
+                   rdfs:label "calibration method"@en .
 
-    <!-- https://w3id.org/okn/o/sdm#hasOutputTimeInterval -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasOutputTimeInterval">
-        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
-        <rdfs:range rdf:resource="https://w3id.org/okn/o/sdm#TimeInterval"/>
-        <rdfs:label xml:lang="en">has ourput time interval</rdfs:label>
-    </owl:ObjectProperty>
-    
+###  https://w3id.org/okn/o/sdm#elevation
+:elevation rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf <http://schema.org/elevation> ;
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( :GeoCoordinates
+                                       :GeoShape
+                                     )
+                       ] ;
+           rdfs:range xsd:string .
 
 
-    <!-- https://w3id.org/okn/o/sdm#hasPart -->
+###  https://w3id.org/okn/o/sdm#hasCoordinateSystem
+:hasCoordinateSystem rdf:type owl:DatatypeProperty ,
+                              owl:FunctionalProperty ;
+                     rdfs:domain :Grid ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Coordinate system used in a grid"@en ;
+                     rdfs:label "has coordinate system"@en .
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasPart">
-        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#CausalDiagram"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/okn/o/sd#VariablePresentation"/>
-                    <rdf:Description rdf:about="https://w3id.org/okn/o/sdm#Process"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-        <rdfs:label xml:lang="en">has part</rdfs:label>
-    </owl:ObjectProperty>
-    
 
+###  https://w3id.org/okn/o/sdm#hasDimension
+:hasDimension rdf:type owl:DatatypeProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain :Grid ;
+              rdfs:range xsd:string ;
+              rdfs:label "has dimension"@en .
 
-    <!-- https://w3id.org/okn/o/sdm#hasProcess -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasProcess">
-        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
-        <rdfs:range rdf:resource="https://w3id.org/okn/o/sdm#Process"/>
-        <rdfs:label xml:lang="en">has process</rdfs:label>
-    </owl:ObjectProperty>
-    
+###  https://w3id.org/okn/o/sdm#hasModelCategory
+:hasModelCategory rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Model ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "has model category"@en .
 
 
-    <!-- https://w3id.org/okn/o/sdm#hasRegion -->
+###  https://w3id.org/okn/o/sdm#hasModelResultTable
+:hasModelResultTable rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :ModelConfiguration ;
+                     rdfs:range xsd:string ;
+                     rdfs:label "has model result table"@en .
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasRegion">
-        <rdfs:subPropertyOf rdf:resource="http://schema.org/contentLocation"/>
-        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
-        <rdfs:range rdf:resource="https://w3id.org/okn/o/sdm#Region"/>
-        <rdfs:comment xml:lang="en">Property linking a region to a model configuration/calibration. This property implies that the described model configuration is prepared to execute in that target region</rdfs:comment>
-    </owl:ObjectProperty>
-    
 
+###  https://w3id.org/okn/o/sdm#hasShape
+:hasShape rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Grid ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Grids may be: rectangular, triangular, hexagonal, hybrid, unstructured, block structure, etc."@en ;
+          rdfs:label "has shape"@en .
 
-    <!-- https://w3id.org/okn/o/sdm#influences -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#influences">
-        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Process"/>
-        <rdfs:range rdf:resource="https://w3id.org/okn/o/sdm#Process"/>
-        <rdfs:label xml:lang="en">influences</rdfs:label>
-    </owl:ObjectProperty>
-    
+###  https://w3id.org/okn/o/sdm#hasSpatialResolution
+:hasSpatialResolution rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Grid ;
+                      rdfs:range xsd:string ;
+                      rdfs:label "has spatial resolution"@en .
 
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+###  https://w3id.org/okn/o/sdm#intervalValue
+:intervalValue rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf <https://w3id.org/okn/o/sd#value> ;
+               rdfs:domain :TimeInterval ;
+               rdfs:range [ rdf:type rdfs:Datatype ;
+                            owl:unionOf ( xsd:integer
+                                          xsd:string
+                                        )
+                          ] ;
+               rdfs:comment "Value used in the time interval of a model (e.g., 1 month, 5 days, 'harvest cycle')"@en ;
+               rdfs:label "interval value"@en .
 
-    
 
+###  https://w3id.org/okn/o/sdm#latitude
+:latitude rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf <http://schema.org/latitude> ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( :GeoCoordinates
+                                      :GeoShape
+                                    )
+                      ] ;
+          rdfs:range xsd:string .
 
-    <!-- http://schema.org/box -->
 
-    <owl:DatatypeProperty rdf:about="http://schema.org/box"/>
-    
+###  https://w3id.org/okn/o/sdm#longitude
+:longitude rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf <http://schema.org/longitude> ;
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( :GeoCoordinates
+                                       :GeoShape
+                                     )
+                       ] ;
+           rdfs:range xsd:string .
 
 
-    <!-- http://schema.org/elevation -->
+###  https://w3id.org/okn/o/sdm#parameterAssignmentMethod
+:parameterAssignmentMethod rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :ModelConfiguration ;
+                           rdfs:range xsd:string ;
+                           rdfs:label "parameter assignment method"@en .
 
-    <owl:DatatypeProperty rdf:about="http://schema.org/elevation"/>
-    
 
+###  https://w3id.org/okn/o/sdm#validUntil
+:validUntil rdf:type owl:DatatypeProperty ;
+            rdfs:domain :ModelConfiguration ;
+            rdfs:range xsd:dateTime ;
+            rdfs:comment "Date until which the calibration of a model is valid. For example, a trained model with data from 2005-2010 may only be valid for predictions until 2015."@en ;
+            rdfs:label "valid until"@en .
 
-    <!-- http://schema.org/latitude -->
 
-    <owl:DatatypeProperty rdf:about="http://schema.org/latitude"/>
-    
+#################################################################
+#    Classes
+#################################################################
 
+###  http://schema.org/GeoCoordinates
+<http://schema.org/GeoCoordinates> rdf:type owl:Class ;
+                                   rdfs:isDefinedBy <http://schema.org/> .
 
-    <!-- http://schema.org/longitude -->
 
-    <owl:DatatypeProperty rdf:about="http://schema.org/longitude"/>
-    
+###  http://schema.org/GeoShape
+<http://schema.org/GeoShape> rdf:type owl:Class .
 
 
-    <!-- https://w3id.org/okn/o/sdm#box -->
+###  http://schema.org/Place
+<http://schema.org/Place> rdf:type owl:Class .
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#box">
-        <rdfs:subPropertyOf rdf:resource="http://schema.org/box"/>
-        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#GeoShape"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
 
+###  https://w3id.org/okn/o/sd#DatasetSpecification
+<https://w3id.org/okn/o/sd#DatasetSpecification> rdf:type owl:Class .
 
-    <!-- https://w3id.org/okn/o/sdm#calibrationInterval -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#calibrationInterval">
-        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Property that represents the temporal interval used to calibrate a model</rdfs:comment>
-        <rdfs:label xml:lang="en">calibration interval</rdfs:label>
-    </owl:DatatypeProperty>
-    
+###  https://w3id.org/okn/o/sd#Image
+<https://w3id.org/okn/o/sd#Image> rdf:type owl:Class .
 
 
-    <!-- https://w3id.org/okn/o/sdm#calibrationMethod -->
+###  https://w3id.org/okn/o/sd#Software
+<https://w3id.org/okn/o/sd#Software> rdf:type owl:Class .
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#calibrationMethod">
-        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Calibration method used for a particular model configuration or setup</rdfs:comment>
-        <rdfs:label xml:lang="en">calibration method</rdfs:label>
-    </owl:DatatypeProperty>
-    
 
+###  https://w3id.org/okn/o/sd#SoftwareConfiguration
+<https://w3id.org/okn/o/sd#SoftwareConfiguration> rdf:type owl:Class .
 
-    <!-- https://w3id.org/okn/o/sdm#elevation -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#elevation">
-        <rdfs:subPropertyOf rdf:resource="http://schema.org/elevation"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/okn/o/sdm#GeoCoordinates"/>
-                    <rdf:Description rdf:about="https://w3id.org/okn/o/sdm#GeoShape"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
+###  https://w3id.org/okn/o/sd#VariablePresentation
+<https://w3id.org/okn/o/sd#VariablePresentation> rdf:type owl:Class .
 
 
-    <!-- https://w3id.org/okn/o/sdm#hasCoordinateSystem -->
+###  https://w3id.org/okn/o/sdm#CausalDiagram
+:CausalDiagram rdf:type owl:Class .
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#hasCoordinateSystem">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Grid"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Coordinate system used in a grid</rdfs:comment>
-        <rdfs:label xml:lang="en">has coordinate system</rdfs:label>
-    </owl:DatatypeProperty>
-    
 
+###  https://w3id.org/okn/o/sdm#EmpiricalModel
+:EmpiricalModel rdf:type owl:Class ;
+                rdfs:subClassOf :Model ;
+                rdfs:comment "Model based on observations."@en ;
+                rdfs:label "Empirical model"@en .
 
-    <!-- https://w3id.org/okn/o/sdm#hasDimension -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#hasDimension">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Grid"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">has dimension</rdfs:label>
-    </owl:DatatypeProperty>
-    
+###  https://w3id.org/okn/o/sdm#Emulator
+:Emulator rdf:type owl:Class ;
+          rdfs:subClassOf :Model ;
+          rdfs:comment "Type of models that emulates the behavior of another model. For example, an emulator can be a machine learning model trained on the output runs of a hydrology model"@en ;
+          rdfs:label "Emulator"@en .
 
 
-    <!-- https://w3id.org/okn/o/sdm#hasModelCategory -->
+###  https://w3id.org/okn/o/sdm#Equation
+:Equation rdf:type owl:Class .
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#hasModelCategory">
-        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">has model category</rdfs:label>
-    </owl:DatatypeProperty>
-    
 
+###  https://w3id.org/okn/o/sdm#FarmingPractices
+:FarmingPractices rdf:type owl:Class ;
+                  rdfs:subClassOf :Intervention ;
+                  rdfs:comment "Any interventions that affects farming practices"@en ;
+                  rdfs:label "Farming practices"@en .
 
-    <!-- https://w3id.org/okn/o/sdm#hasModelResultTable -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#hasModelResultTable">
-        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">has model result table</rdfs:label>
-    </owl:DatatypeProperty>
-    
+###  https://w3id.org/okn/o/sdm#GeoCoordinates
+:GeoCoordinates rdf:type owl:Class ;
+                rdfs:subClassOf <http://schema.org/GeoCoordinates> ;
+                rdfs:label "GeoCoordinates"@en .
 
 
-    <!-- https://w3id.org/okn/o/sdm#hasShape -->
+###  https://w3id.org/okn/o/sdm#GeoShape
+:GeoShape rdf:type owl:Class ;
+          rdfs:subClassOf <http://schema.org/GeoShape> ;
+          rdfs:label "GeoShape"@en .
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#hasShape">
-        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Grid"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Grids may be: rectangular, triangular, hexagonal, hybrid, unstructured, block structure, etc.</rdfs:comment>
-        <rdfs:label xml:lang="en">has shape</rdfs:label>
-    </owl:DatatypeProperty>
-    
 
+###  https://w3id.org/okn/o/sdm#Grid
+:Grid rdf:type owl:Class ;
+      rdfs:subClassOf <https://w3id.org/okn/o/sd#DatasetSpecification> ;
+      rdfs:label "Grid"@en .
 
-    <!-- https://w3id.org/okn/o/sdm#hasSpatialResolution -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#hasSpatialResolution">
-        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Grid"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">has spatial resolution</rdfs:label>
-    </owl:DatatypeProperty>
-    
+###  https://w3id.org/okn/o/sdm#HybridModel
+:HybridModel rdf:type owl:Class ;
+             rdfs:subClassOf :Model ;
+             rdfs:comment "A model based on empirical observations and theory."@en ;
+             rdfs:label "Hybrid model"@en .
 
 
-    <!-- https://w3id.org/okn/o/sdm#latitude -->
+###  https://w3id.org/okn/o/sdm#Index
+:Index rdf:type owl:Class ;
+       rdfs:comment "A number (such as a ratio) derived from a series of observations and used as an indicator or measure (https://www.merriam-webster.com/dictionary/index)"@en ;
+       rdfs:label "Index" .
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#latitude">
-        <rdfs:subPropertyOf rdf:resource="http://schema.org/latitude"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/okn/o/sdm#GeoCoordinates"/>
-                    <rdf:Description rdf:about="https://w3id.org/okn/o/sdm#GeoShape"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
 
+###  https://w3id.org/okn/o/sdm#Intervention
+:Intervention rdf:type owl:Class ;
+              rdfs:comment "Interference by a policy maker or modeler by modifying a variable or parameter of a model"@en ;
+              rdfs:label "Intervention"@en .
 
-    <!-- https://w3id.org/okn/o/sdm#longitude -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#longitude">
-        <rdfs:subPropertyOf rdf:resource="http://schema.org/longitude"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/okn/o/sdm#GeoCoordinates"/>
-                    <rdf:Description rdf:about="https://w3id.org/okn/o/sdm#GeoShape"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
+###  https://w3id.org/okn/o/sdm#Model
+:Model rdf:type owl:Class ;
+       rdfs:subClassOf <https://w3id.org/okn/o/sd#Software> ;
+       rdfs:comment "A mathematical description of a process (e.g., hydrological, agricultural, social, etc.)"@en ;
+       rdfs:label "Model"@en .
 
 
-    <!-- https://w3id.org/okn/o/sdm#parameterAssignmentMethod -->
+###  https://w3id.org/okn/o/sdm#ModelConfiguration
+:ModelConfiguration rdf:type owl:Class ;
+                    rdfs:subClassOf <https://w3id.org/okn/o/sd#SoftwareConfiguration> ,
+                                    :Model ;
+                    rdfs:comment "A model configuration is a way of exposing a particular functionality of a model."@en ;
+                    rdfs:label "Model configuration"@en .
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#parameterAssignmentMethod">
-        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">parameter assignment method</rdfs:label>
-    </owl:DatatypeProperty>
-    
 
+###  https://w3id.org/okn/o/sdm#PointBasedGrid
+:PointBasedGrid rdf:type owl:Class ;
+                rdfs:subClassOf :Grid ;
+                rdfs:label "Point Based Grid"@en .
 
-    <!-- https://w3id.org/okn/o/sdm#validUntil -->
 
-    <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#validUntil">
-        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:comment xml:lang="en">Date until which the calibration of a model is valid. For example, a trained model with data from 2005-2010 may only be valid for predictions until 2015.</rdfs:comment>
-        <rdfs:label xml:lang="en">valid until</rdfs:label>
-    </owl:DatatypeProperty>
-    
+###  https://w3id.org/okn/o/sdm#Process
+:Process rdf:type owl:Class .
 
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+###  https://w3id.org/okn/o/sdm#Region
+:Region rdf:type owl:Class ;
+        rdfs:subClassOf <http://schema.org/Place> .
 
-    
 
+###  https://w3id.org/okn/o/sdm#SpatialResolution
+:SpatialResolution rdf:type owl:Class .
 
-    <!-- http://schema.org/GeoCoordinates -->
 
-    <owl:Class rdf:about="http://schema.org/GeoCoordinates">
-        <rdfs:isDefinedBy rdf:resource="http://schema.org/"/>
-    </owl:Class>
-    
+###  https://w3id.org/okn/o/sdm#SpatiallyDistributedGrid
+:SpatiallyDistributedGrid rdf:type owl:Class ;
+                          rdfs:subClassOf :Grid ;
+                          rdfs:label "Spatially Distributed Grid"@en .
 
 
-    <!-- http://schema.org/GeoShape -->
+###  https://w3id.org/okn/o/sdm#Subsidy
+:Subsidy rdf:type owl:Class ;
+         rdfs:subClassOf :Intervention ;
+         rdfs:comment "Interventions that affect the subsidy of a resource (e.g., fertilizer)"@en ;
+         rdfs:label "Subsidy"@en .
 
-    <owl:Class rdf:about="http://schema.org/GeoShape"/>
-    
 
+###  https://w3id.org/okn/o/sdm#Theory-GuidedModel
+:Theory-GuidedModel rdf:type owl:Class ;
+                    rdfs:subClassOf :Model ;
+                    rdfs:comment "A model guided by mathematical equations that attempt to represent one or more natural processes."@en ;
+                    rdfs:label "Theory guided model"@en .
 
-    <!-- http://schema.org/Place -->
 
-    <owl:Class rdf:about="http://schema.org/Place"/>
-    
+###  https://w3id.org/okn/o/sdm#TimeInterval
+:TimeInterval rdf:type owl:Class ;
+              rdfs:comment "Time interval at which a model produces output. For example, a model may produce outputs for every simulated day, hour, etc."@en ;
+              rdfs:label "Time Interval"@en .
 
 
-    <!-- https://w3id.org/okn/o/sd#DatasetSpecification -->
-
-    <owl:Class rdf:about="https://w3id.org/okn/o/sd#DatasetSpecification"/>
-    
-
-
-    <!-- https://w3id.org/okn/o/sd#Image -->
-
-    <owl:Class rdf:about="https://w3id.org/okn/o/sd#Image"/>
-    
-
-
-    <!-- https://w3id.org/okn/o/sd#Software -->
-
-    <owl:Class rdf:about="https://w3id.org/okn/o/sd#Software"/>
-    
-
-
-    <!-- https://w3id.org/okn/o/sd#SoftwareConfiguration -->
-
-    <owl:Class rdf:about="https://w3id.org/okn/o/sd#SoftwareConfiguration"/>
-    
-
-
-    <!-- https://w3id.org/okn/o/sd#VariablePresentation -->
-
-    <owl:Class rdf:about="https://w3id.org/okn/o/sd#VariablePresentation"/>
-    
-
-
-    <!-- https://w3id.org/okn/o/sdm#CausalDiagram -->
-
-    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#CausalDiagram"/>
-    
-
-
-    <!-- https://w3id.org/okn/o/sdm#EmpiricalModel -->
-
-    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#EmpiricalModel">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
-        <rdfs:comment xml:lang="en">Model based on observations.</rdfs:comment>
-        <rdfs:label xml:lang="en">Empirical model</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/okn/o/sdm#Emulator -->
-
-    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#Emulator">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
-        <rdfs:comment xml:lang="en">Type of models that emulates the behavior of another model. For example, an emulator can be a machine learning model trained on the output runs of a hydrology model</rdfs:comment>
-        <rdfs:label xml:lang="en">Emulator</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/okn/o/sdm#Equation -->
-
-    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#Equation"/>
-    
-
-
-    <!-- https://w3id.org/okn/o/sdm#GeoCoordinates -->
-
-    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#GeoCoordinates">
-        <rdfs:subClassOf rdf:resource="http://schema.org/GeoCoordinates"/>
-        <rdfs:label xml:lang="en">GeoCoordinates</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/okn/o/sdm#GeoShape -->
-
-    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#GeoShape">
-        <rdfs:subClassOf rdf:resource="http://schema.org/GeoShape"/>
-        <rdfs:label xml:lang="en">GeoShape</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/okn/o/sdm#Grid -->
-
-    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#Grid">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/okn/o/sd#DatasetSpecification"/>
-        <rdfs:label xml:lang="en">Grid</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/okn/o/sdm#HybridModel -->
-
-    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#HybridModel">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
-        <rdfs:comment xml:lang="en">A model based on empirical observations and theory.</rdfs:comment>
-        <rdfs:label xml:lang="en">Hybrid model</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/okn/o/sdm#Model -->
-
-    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#Model">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/okn/o/sd#Software"/>
-        <rdfs:comment xml:lang="en">A mathematical description of a process (e.g., hydrological, agricultural, social, etc.)</rdfs:comment>
-        <rdfs:label xml:lang="en">Model</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/okn/o/sdm#ModelConfiguration -->
-
-    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#ModelConfiguration">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/okn/o/sd#SoftwareConfiguration"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
-        <rdfs:comment xml:lang="en">A model configuration is a way of exposing a particular functionality of a model.</rdfs:comment>
-        <rdfs:label xml:lang="en">Model configuration</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/okn/o/sdm#PointBasedGrid -->
-
-    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#PointBasedGrid">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/okn/o/sdm#Grid"/>
-        <rdfs:label xml:lang="en">Point Based Grid</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/okn/o/sdm#Process -->
-
-    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#Process"/>
-    
-
-
-    <!-- https://w3id.org/okn/o/sdm#Region -->
-
-    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#Region">
-        <rdfs:subClassOf rdf:resource="http://schema.org/Place"/>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/okn/o/sdm#SpatialResolution -->
-
-    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#SpatialResolution"/>
-    
-
-
-    <!-- https://w3id.org/okn/o/sdm#SpatiallyDistributedGrid -->
-
-    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#SpatiallyDistributedGrid">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/okn/o/sdm#Grid"/>
-        <rdfs:label xml:lang="en">Spatially Distributed Grid</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/okn/o/sdm#Theory-GuidedModel -->
-
-    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#Theory-GuidedModel">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
-        <rdfs:comment xml:lang="en">A model guided by mathematical equations that attempt to represent one or more natural processes.</rdfs:comment>
-        <rdfs:label xml:lang="en">Theory guided model</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/okn/o/sdm#TimeInterval -->
-
-    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#TimeInterval"/>
-</rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
-
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

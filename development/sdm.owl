@@ -54,7 +54,7 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/okn/o/sdm#calibratedVariable
 :calibratedVariable rdf:type owl:ObjectProperty ;
-                    rdfs:domain :ModelConfiguration ;
+                    rdfs:domain :ModelConfigurationSetup ;
                     rdfs:range <https://w3id.org/okn/o/sd#VariablePresentation> ;
                     rdfs:comment "Variable that was calibrated in this particular model configuration calibration"@en ;
                     rdfs:label "calibrated variable"@en .
@@ -62,7 +62,7 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/okn/o/sdm#calibrationTargetVariable
 :calibrationTargetVariable rdf:type owl:ObjectProperty ;
-                           rdfs:domain :ModelConfiguration ;
+                           rdfs:domain :ModelConfigurationSetup ;
                            rdfs:range <https://w3id.org/okn/o/sd#VariablePresentation> ;
                            rdfs:comment "Variable for which the model was calibrated for. For example, in a hydrology model one calibrate the predicted river width by varying hydrologic conductivity"@en ;
                            rdfs:label "calibration target variable"@en .
@@ -78,14 +78,6 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
                               )
                 ] ;
      rdfs:label "geo"@en .
-
-
-###  https://w3id.org/okn/o/sdm#hasCalibration
-:hasCalibration rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf <https://w3id.org/okn/o/sd#hasSetup> ;
-                rdfs:domain :ModelConfiguration ;
-                rdfs:range :ModelConfiguration ;
-                rdfs:label "has calibration"@en .
 
 
 ###  https://w3id.org/okn/o/sdm#hasCausalDiagram
@@ -214,7 +206,7 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/okn/o/sdm#calibrationInterval
 :calibrationInterval rdf:type owl:DatatypeProperty ;
-                     rdfs:domain :ModelConfiguration ;
+                     rdfs:domain :ModelConfigurationSetup ;
                      rdfs:range xsd:string ;
                      rdfs:comment "Property that represents the temporal interval used to calibrate a model"@en ;
                      rdfs:label "calibration interval"@en .
@@ -222,7 +214,7 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/okn/o/sdm#calibrationMethod
 :calibrationMethod rdf:type owl:DatatypeProperty ;
-                   rdfs:domain :ModelConfiguration ;
+                   rdfs:domain :ModelConfigurationSetup ;
                    rdfs:range xsd:string ;
                    rdfs:comment "Calibration method used for a particular model configuration or setup"@en ;
                    rdfs:label "calibration method"@en .
@@ -322,14 +314,14 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/okn/o/sdm#parameterAssignmentMethod
 :parameterAssignmentMethod rdf:type owl:DatatypeProperty ;
-                           rdfs:domain :ModelConfiguration ;
+                           rdfs:domain :ModelConfigurationSetup ;
                            rdfs:range xsd:string ;
                            rdfs:label "parameter assignment method"@en .
 
 
 ###  https://w3id.org/okn/o/sdm#validUntil
 :validUntil rdf:type owl:DatatypeProperty ;
-            rdfs:domain :ModelConfiguration ;
+            rdfs:domain :ModelConfigurationSetup ;
             rdfs:range xsd:dateTime ;
             rdfs:comment "Date until which the calibration of a model is valid. For example, a trained model with data from 2005-2010 may only be valid for predictions until 2015."@en ;
             rdfs:label "valid until"@en .
@@ -451,6 +443,17 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
                                     :Model ;
                     rdfs:comment "A model configuration is a way of exposing a particular functionality of a model."@en ;
                     rdfs:label "Model configuration"@en .
+
+
+###  https://w3id.org/okn/o/sdm#ModelConfigurationSetup
+:ModelConfigurationSetup rdf:type owl:Class ;
+                         rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/okn/o/sd#ConfigurationSetup>
+                                                                :ModelConfiguration
+                                                              ) ;
+                                           rdf:type owl:Class
+                                         ] ;
+                         rdfs:comment "Setup of a particular model, that may represent a calibration or a configuration with a set of values for a specific region."@en ;
+                         rdfs:label "Model configuration setup"@en .
 
 
 ###  https://w3id.org/okn/o/sdm#PointBasedGrid

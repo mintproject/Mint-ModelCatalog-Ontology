@@ -133,9 +133,9 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/okn/o/sd#adjustableParameter
 <https://w3id.org/okn/o/sd#adjustableParameter> rdf:type owl:ObjectProperty ;
-                                                rdfs:domain <https://w3id.org/okn/o/sd#SoftwareConfiguration> ;
+                                                rdfs:domain <https://w3id.org/okn/o/sd#ConfigurationSetup> ;
                                                 rdfs:range <https://w3id.org/okn/o/sd#Parameter> ;
-                                                rdfs:comment "Parameter that can be adjusted in a configuration"@en ;
+                                                rdfs:comment "Parameter that can be adjusted in a configuration setup"@en ;
                                                 rdfs:label "adjustable parameter"@en .
 
 
@@ -315,7 +315,7 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/okn/o/sd#hasSetup
 <https://w3id.org/okn/o/sd#hasSetup> rdf:type owl:ObjectProperty ;
                                      rdfs:domain <https://w3id.org/okn/o/sd#SoftwareConfiguration> ;
-                                     rdfs:range <https://w3id.org/okn/o/sd#SoftwareConfiguration> ;
+                                     rdfs:range <https://w3id.org/okn/o/sd#ConfigurationSetup> ;
                                      rdfs:comment "Property used to define configurations with some fixed resources and values. The rationale of this property is to allow predefined configurations"@en ;
                                      rdfs:label "has setup"@en .
 
@@ -409,7 +409,7 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/okn/o/sdm#calibratedVariable
 :calibratedVariable rdf:type owl:ObjectProperty ;
-                    rdfs:domain :ModelConfiguration ;
+                    rdfs:domain :ModelConfigurationSetup ;
                     rdfs:range <https://w3id.org/okn/o/sd#VariablePresentation> ;
                     rdfs:comment "Variable that was calibrated in this particular model configuration calibration"@en ;
                     rdfs:label "calibrated variable"@en .
@@ -417,7 +417,7 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/okn/o/sdm#calibrationTargetVariable
 :calibrationTargetVariable rdf:type owl:ObjectProperty ;
-                           rdfs:domain :ModelConfiguration ;
+                           rdfs:domain :ModelConfigurationSetup ;
                            rdfs:range <https://w3id.org/okn/o/sd#VariablePresentation> ;
                            rdfs:comment "Variable for which the model was calibrated for. For example, in a hydrology model one calibrate the predicted river width by varying hydrologic conductivity"@en ;
                            rdfs:label "calibration target variable"@en .
@@ -433,14 +433,6 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                               )
                 ] ;
      rdfs:label "geo"@en .
-
-
-###  https://w3id.org/okn/o/sdm#hasCalibration
-:hasCalibration rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf <https://w3id.org/okn/o/sd#hasSetup> ;
-                rdfs:domain :ModelConfiguration ;
-                rdfs:range :ModelConfiguration ;
-                rdfs:label "has calibration"@en .
 
 
 ###  https://w3id.org/okn/o/sdm#hasCausalDiagram
@@ -1083,6 +1075,9 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/okn/o/sd#supportDetails
 <https://w3id.org/okn/o/sd#supportDetails> rdf:type owl:DatatypeProperty ;
+                                           rdfs:domain <https://w3id.org/okn/o/sd#Software> ;
+                                           rdfs:range xsd:string ;
+                                           rdfs:comment "Property to link details, such as mailing lists in case a contact person is not provided"@en ;
                                            rdfs:label "support details"@en .
 
 
@@ -1127,7 +1122,7 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/okn/o/sdm#calibrationInterval
 :calibrationInterval rdf:type owl:DatatypeProperty ;
-                     rdfs:domain :ModelConfiguration ;
+                     rdfs:domain :ModelConfigurationSetup ;
                      rdfs:range xsd:string ;
                      rdfs:comment "Property that represents the temporal interval used to calibrate a model"@en ;
                      rdfs:label "calibration interval"@en .
@@ -1135,7 +1130,7 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/okn/o/sdm#calibrationMethod
 :calibrationMethod rdf:type owl:DatatypeProperty ;
-                   rdfs:domain :ModelConfiguration ;
+                   rdfs:domain :ModelConfigurationSetup ;
                    rdfs:range xsd:string ;
                    rdfs:comment "Calibration method used for a particular model configuration or setup"@en ;
                    rdfs:label "calibration method"@en .
@@ -1235,14 +1230,14 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/okn/o/sdm#parameterAssignmentMethod
 :parameterAssignmentMethod rdf:type owl:DatatypeProperty ;
-                           rdfs:domain :ModelConfiguration ;
+                           rdfs:domain :ModelConfigurationSetup ;
                            rdfs:range xsd:string ;
                            rdfs:label "parameter assignment method"@en .
 
 
 ###  https://w3id.org/okn/o/sdm#validUntil
 :validUntil rdf:type owl:DatatypeProperty ;
-            rdfs:domain :ModelConfiguration ;
+            rdfs:domain :ModelConfigurationSetup ;
             rdfs:range xsd:dateTime ;
             rdfs:comment "Date until which the calibration of a model is valid. For example, a trained model with data from 2005-2010 may only be valid for predictions until 2015."@en ;
             rdfs:label "valid until"@en .
@@ -1307,24 +1302,31 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
 <http://www.w3.org/ns/prov#Entity> rdf:type owl:Class .
 
 
+###  https://w3id.org/okn/o/sd#ConfigurationSetup
+<https://w3id.org/okn/o/sd#ConfigurationSetup> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/okn/o/sd#SoftwareConfiguration> ;
+                                               rdfs:comment "Special type of configuration in which some of the inputs or parameters are associated to files or values. A configuration may be associated to multiple setups to facilitate its execution."@en ;
+                                               rdfs:label "Configuration Setup"@en .
+
+
 ###  https://w3id.org/okn/o/sd#DatasetSpecification
 <https://w3id.org/okn/o/sd#DatasetSpecification> rdf:type owl:Class ;
                                                  rdfs:subClassOf <http://purl.org/linked-data/cube#DataStructureDefinition> ;
                                                  rdfs:comment "Class designed to describe a type of input or output used or produced by a model. For example, Topoflow has several inputs. One of them is a text file with precipitation values. The representation of this input is an instance of a dataset specification."@en ;
-                                                 rdfs:label "Dataset specification"@en .
+                                                 rdfs:label "Dataset Specification"@en .
 
 
 ###  https://w3id.org/okn/o/sd#FundingInformation
 <https://w3id.org/okn/o/sd#FundingInformation> rdf:type owl:Class ;
                                                rdfs:comment "A class to represent the funding information of a software project"@en ;
-                                               rdfs:label "Funding information"@en .
+                                               rdfs:label "Funding Information"@en .
 
 
 ###  https://w3id.org/okn/o/sd#ICASAVariable
 <https://w3id.org/okn/o/sd#ICASAVariable> rdf:type owl:Class ;
                                           rdfs:subClassOf <https://w3id.org/okn/o/sd#StandardVariable> ;
                                           rdfs:comment "Variable that follows the ICASA standard for agriculture: https://dssat.net/data/standards_v2"@en ;
-                                          rdfs:label "ICASA variable"@en .
+                                          rdfs:label "ICASA Variable"@en .
 
 
 ###  https://w3id.org/okn/o/sd#Image
@@ -1357,21 +1359,21 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
 <https://w3id.org/okn/o/sd#SVOVariable> rdf:type owl:Class ;
                                         rdfs:subClassOf <https://w3id.org/okn/o/sd#StandardVariable> ;
                                         rdfs:comment "Variable that follows the Scientific Variables Ontology: http://geoscienceontology.org/"@en ;
-                                        rdfs:label "SVO variable"@en .
+                                        rdfs:label "SVO Variable"@en .
 
 
 ###  https://w3id.org/okn/o/sd#SampleExecution
 <https://w3id.org/okn/o/sd#SampleExecution> rdf:type owl:Class ;
                                             rdfs:subClassOf <http://www.w3.org/ns/prov#Activity> ;
                                             rdfs:comment "A sample execution of a given software"@en ;
-                                            rdfs:label "Sample execution"@en .
+                                            rdfs:label "Sample Execution"@en .
 
 
 ###  https://w3id.org/okn/o/sd#SampleResource
 <https://w3id.org/okn/o/sd#SampleResource> rdf:type owl:Class ;
                                            rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
                                            rdfs:comment "A sample resource associated with a software"@en ;
-                                           rdfs:label "Sample resource"@en .
+                                           rdfs:label "Sample Resource"@en .
 
 
 ###  https://w3id.org/okn/o/sd#Software
@@ -1405,14 +1407,14 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
 <https://w3id.org/okn/o/sd#SourceCode> rdf:type owl:Class ;
                                        rdfs:subClassOf <http://schema.org/SoftwareSourceCode> ;
                                        rdfs:comment "Class representing the characteristics of the code associated with a  software component"@en ;
-                                       rdfs:label "Source code"@en .
+                                       rdfs:label "Source Code"@en .
 
 
 ###  https://w3id.org/okn/o/sd#StandardVariable
 <https://w3id.org/okn/o/sd#StandardVariable> rdf:type owl:Class ;
                                              rdfs:subClassOf <https://w3id.org/okn/o/sd#Variable> ;
                                              rdfs:comment "A standard variable, necessary to refer to all the variable using the same nomenclature in a domain ontology"@en ;
-                                             rdfs:label "Standard variable"@en .
+                                             rdfs:label "Standard Variable"@en .
 
 
 ###  https://w3id.org/okn/o/sd#Unit
@@ -1520,6 +1522,17 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                                     :Model ;
                     rdfs:comment "A model configuration is a way of exposing a particular functionality of a model."@en ;
                     rdfs:label "Model configuration"@en .
+
+
+###  https://w3id.org/okn/o/sdm#ModelConfigurationSetup
+:ModelConfigurationSetup rdf:type owl:Class ;
+                         rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/okn/o/sd#ConfigurationSetup>
+                                                                :ModelConfiguration
+                                                              ) ;
+                                           rdf:type owl:Class
+                                         ] ;
+                         rdfs:comment "Setup of a particular model, that may represent a calibration or a configuration with a set of values for a specific region."@en ;
+                         rdfs:label "Model configuration setup"@en .
 
 
 ###  https://w3id.org/okn/o/sdm#PointBasedGrid

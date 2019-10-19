@@ -112,9 +112,9 @@
 # 
 # https://w3id.org/okn/o/sd#adjustableParameter
 <https://w3id.org/okn/o/sd#adjustableParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/okn/o/sd#adjustableParameter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sd#SoftwareConfiguration> .
+<https://w3id.org/okn/o/sd#adjustableParameter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sd#ConfigurationSetup> .
 <https://w3id.org/okn/o/sd#adjustableParameter> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sd#Parameter> .
-<https://w3id.org/okn/o/sd#adjustableParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Parameter that can be adjusted in a configuration"@en .
+<https://w3id.org/okn/o/sd#adjustableParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Parameter that can be adjusted in a configuration setup"@en .
 <https://w3id.org/okn/o/sd#adjustableParameter> <http://www.w3.org/2000/01/rdf-schema#label> "adjustable parameter"@en .
 # 
 # https://w3id.org/okn/o/sd#adjustsVariable
@@ -291,7 +291,7 @@ _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 # https://w3id.org/okn/o/sd#hasSetup
 <https://w3id.org/okn/o/sd#hasSetup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/okn/o/sd#hasSetup> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sd#SoftwareConfiguration> .
-<https://w3id.org/okn/o/sd#hasSetup> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sd#SoftwareConfiguration> .
+<https://w3id.org/okn/o/sd#hasSetup> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sd#ConfigurationSetup> .
 <https://w3id.org/okn/o/sd#hasSetup> <http://www.w3.org/2000/01/rdf-schema#comment> "Property used to define configurations with some fixed resources and values. The rationale of this property is to allow predefined configurations"@en .
 <https://w3id.org/okn/o/sd#hasSetup> <http://www.w3.org/2000/01/rdf-schema#label> "has setup"@en .
 # 
@@ -382,14 +382,14 @@ _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 # 
 # https://w3id.org/okn/o/sdm#calibratedVariable
 <https://w3id.org/okn/o/sdm#calibratedVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/okn/o/sdm#calibratedVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#ModelConfiguration> .
+<https://w3id.org/okn/o/sdm#calibratedVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#ModelConfigurationSetup> .
 <https://w3id.org/okn/o/sdm#calibratedVariable> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sd#VariablePresentation> .
 <https://w3id.org/okn/o/sdm#calibratedVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Variable that was calibrated in this particular model configuration calibration"@en .
 <https://w3id.org/okn/o/sdm#calibratedVariable> <http://www.w3.org/2000/01/rdf-schema#label> "calibrated variable"@en .
 # 
 # https://w3id.org/okn/o/sdm#calibrationTargetVariable
 <https://w3id.org/okn/o/sdm#calibrationTargetVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/okn/o/sdm#calibrationTargetVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#ModelConfiguration> .
+<https://w3id.org/okn/o/sdm#calibrationTargetVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#ModelConfigurationSetup> .
 <https://w3id.org/okn/o/sdm#calibrationTargetVariable> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sd#VariablePresentation> .
 <https://w3id.org/okn/o/sdm#calibrationTargetVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Variable for which the model was calibrated for. For example, in a hydrology model one calibrate the predicted river width by varying hydrologic conductivity"@en .
 <https://w3id.org/okn/o/sdm#calibrationTargetVariable> <http://www.w3.org/2000/01/rdf-schema#label> "calibration target variable"@en .
@@ -408,13 +408,6 @@ _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/okn/o/sdm#GeoShape> .
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <https://w3id.org/okn/o/sdm#geo> <http://www.w3.org/2000/01/rdf-schema#label> "geo"@en .
-# 
-# https://w3id.org/okn/o/sdm#hasCalibration
-<https://w3id.org/okn/o/sdm#hasCalibration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/okn/o/sdm#hasCalibration> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/okn/o/sd#hasSetup> .
-<https://w3id.org/okn/o/sdm#hasCalibration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#ModelConfiguration> .
-<https://w3id.org/okn/o/sdm#hasCalibration> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sdm#ModelConfiguration> .
-<https://w3id.org/okn/o/sdm#hasCalibration> <http://www.w3.org/2000/01/rdf-schema#label> "has calibration"@en .
 # 
 # https://w3id.org/okn/o/sdm#hasCausalDiagram
 <https://w3id.org/okn/o/sdm#hasCausalDiagram> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -1079,6 +1072,9 @@ _:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 # 
 # https://w3id.org/okn/o/sd#supportDetails
 <https://w3id.org/okn/o/sd#supportDetails> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/okn/o/sd#supportDetails> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sd#Software> .
+<https://w3id.org/okn/o/sd#supportDetails> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/okn/o/sd#supportDetails> <http://www.w3.org/2000/01/rdf-schema#comment> "Property to link details, such as mailing lists in case a contact person is not provided"@en .
 <https://w3id.org/okn/o/sd#supportDetails> <http://www.w3.org/2000/01/rdf-schema#label> "support details"@en .
 # 
 # https://w3id.org/okn/o/sd#value
@@ -1141,14 +1137,14 @@ _:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 # 
 # https://w3id.org/okn/o/sdm#calibrationInterval
 <https://w3id.org/okn/o/sdm#calibrationInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/okn/o/sdm#calibrationInterval> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#ModelConfiguration> .
+<https://w3id.org/okn/o/sdm#calibrationInterval> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#ModelConfigurationSetup> .
 <https://w3id.org/okn/o/sdm#calibrationInterval> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/okn/o/sdm#calibrationInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that represents the temporal interval used to calibrate a model"@en .
 <https://w3id.org/okn/o/sdm#calibrationInterval> <http://www.w3.org/2000/01/rdf-schema#label> "calibration interval"@en .
 # 
 # https://w3id.org/okn/o/sdm#calibrationMethod
 <https://w3id.org/okn/o/sdm#calibrationMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/okn/o/sdm#calibrationMethod> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#ModelConfiguration> .
+<https://w3id.org/okn/o/sdm#calibrationMethod> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#ModelConfigurationSetup> .
 <https://w3id.org/okn/o/sdm#calibrationMethod> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/okn/o/sdm#calibrationMethod> <http://www.w3.org/2000/01/rdf-schema#comment> "Calibration method used for a particular model configuration or setup"@en .
 <https://w3id.org/okn/o/sdm#calibrationMethod> <http://www.w3.org/2000/01/rdf-schema#label> "calibration method"@en .
@@ -1253,13 +1249,13 @@ _:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/
 # 
 # https://w3id.org/okn/o/sdm#parameterAssignmentMethod
 <https://w3id.org/okn/o/sdm#parameterAssignmentMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/okn/o/sdm#parameterAssignmentMethod> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#ModelConfiguration> .
+<https://w3id.org/okn/o/sdm#parameterAssignmentMethod> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#ModelConfigurationSetup> .
 <https://w3id.org/okn/o/sdm#parameterAssignmentMethod> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/okn/o/sdm#parameterAssignmentMethod> <http://www.w3.org/2000/01/rdf-schema#label> "parameter assignment method"@en .
 # 
 # https://w3id.org/okn/o/sdm#validUntil
 <https://w3id.org/okn/o/sdm#validUntil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/okn/o/sdm#validUntil> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#ModelConfiguration> .
+<https://w3id.org/okn/o/sdm#validUntil> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#ModelConfigurationSetup> .
 <https://w3id.org/okn/o/sdm#validUntil> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://w3id.org/okn/o/sdm#validUntil> <http://www.w3.org/2000/01/rdf-schema#comment> "Date until which the calibration of a model is valid. For example, a trained model with data from 2005-2010 may only be valid for predictions until 2015."@en .
 <https://w3id.org/okn/o/sdm#validUntil> <http://www.w3.org/2000/01/rdf-schema#label> "valid until"@en .
@@ -1316,22 +1312,28 @@ _:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/
 # http://www.w3.org/ns/prov#Entity
 <http://www.w3.org/ns/prov#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
+# https://w3id.org/okn/o/sd#ConfigurationSetup
+<https://w3id.org/okn/o/sd#ConfigurationSetup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/okn/o/sd#ConfigurationSetup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/okn/o/sd#SoftwareConfiguration> .
+<https://w3id.org/okn/o/sd#ConfigurationSetup> <http://www.w3.org/2000/01/rdf-schema#comment> "Special type of configuration in which some of the inputs or parameters are associated to files or values. A configuration may be associated to multiple setups to facilitate its execution."@en .
+<https://w3id.org/okn/o/sd#ConfigurationSetup> <http://www.w3.org/2000/01/rdf-schema#label> "Configuration Setup"@en .
+# 
 # https://w3id.org/okn/o/sd#DatasetSpecification
 <https://w3id.org/okn/o/sd#DatasetSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/okn/o/sd#DatasetSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linked-data/cube#DataStructureDefinition> .
 <https://w3id.org/okn/o/sd#DatasetSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Class designed to describe a type of input or output used or produced by a model. For example, Topoflow has several inputs. One of them is a text file with precipitation values. The representation of this input is an instance of a dataset specification."@en .
-<https://w3id.org/okn/o/sd#DatasetSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset specification"@en .
+<https://w3id.org/okn/o/sd#DatasetSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset Specification"@en .
 # 
 # https://w3id.org/okn/o/sd#FundingInformation
 <https://w3id.org/okn/o/sd#FundingInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/okn/o/sd#FundingInformation> <http://www.w3.org/2000/01/rdf-schema#comment> "A class to represent the funding information of a software project"@en .
-<https://w3id.org/okn/o/sd#FundingInformation> <http://www.w3.org/2000/01/rdf-schema#label> "Funding information"@en .
+<https://w3id.org/okn/o/sd#FundingInformation> <http://www.w3.org/2000/01/rdf-schema#label> "Funding Information"@en .
 # 
 # https://w3id.org/okn/o/sd#ICASAVariable
 <https://w3id.org/okn/o/sd#ICASAVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/okn/o/sd#ICASAVariable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/okn/o/sd#StandardVariable> .
 <https://w3id.org/okn/o/sd#ICASAVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Variable that follows the ICASA standard for agriculture: https://dssat.net/data/standards_v2"@en .
-<https://w3id.org/okn/o/sd#ICASAVariable> <http://www.w3.org/2000/01/rdf-schema#label> "ICASA variable"@en .
+<https://w3id.org/okn/o/sd#ICASAVariable> <http://www.w3.org/2000/01/rdf-schema#label> "ICASA Variable"@en .
 # 
 # https://w3id.org/okn/o/sd#Image
 <https://w3id.org/okn/o/sd#Image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1359,19 +1361,19 @@ _:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/
 <https://w3id.org/okn/o/sd#SVOVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/okn/o/sd#SVOVariable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/okn/o/sd#StandardVariable> .
 <https://w3id.org/okn/o/sd#SVOVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Variable that follows the Scientific Variables Ontology: http://geoscienceontology.org/"@en .
-<https://w3id.org/okn/o/sd#SVOVariable> <http://www.w3.org/2000/01/rdf-schema#label> "SVO variable"@en .
+<https://w3id.org/okn/o/sd#SVOVariable> <http://www.w3.org/2000/01/rdf-schema#label> "SVO Variable"@en .
 # 
 # https://w3id.org/okn/o/sd#SampleExecution
 <https://w3id.org/okn/o/sd#SampleExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/okn/o/sd#SampleExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
 <https://w3id.org/okn/o/sd#SampleExecution> <http://www.w3.org/2000/01/rdf-schema#comment> "A sample execution of a given software"@en .
-<https://w3id.org/okn/o/sd#SampleExecution> <http://www.w3.org/2000/01/rdf-schema#label> "Sample execution"@en .
+<https://w3id.org/okn/o/sd#SampleExecution> <http://www.w3.org/2000/01/rdf-schema#label> "Sample Execution"@en .
 # 
 # https://w3id.org/okn/o/sd#SampleResource
 <https://w3id.org/okn/o/sd#SampleResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/okn/o/sd#SampleResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
 <https://w3id.org/okn/o/sd#SampleResource> <http://www.w3.org/2000/01/rdf-schema#comment> "A sample resource associated with a software"@en .
-<https://w3id.org/okn/o/sd#SampleResource> <http://www.w3.org/2000/01/rdf-schema#label> "Sample resource"@en .
+<https://w3id.org/okn/o/sd#SampleResource> <http://www.w3.org/2000/01/rdf-schema#label> "Sample Resource"@en .
 # 
 # https://w3id.org/okn/o/sd#Software
 <https://w3id.org/okn/o/sd#Software> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1400,13 +1402,13 @@ _:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/
 <https://w3id.org/okn/o/sd#SourceCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/okn/o/sd#SourceCode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/SoftwareSourceCode> .
 <https://w3id.org/okn/o/sd#SourceCode> <http://www.w3.org/2000/01/rdf-schema#comment> "Class representing the characteristics of the code associated with a  software component"@en .
-<https://w3id.org/okn/o/sd#SourceCode> <http://www.w3.org/2000/01/rdf-schema#label> "Source code"@en .
+<https://w3id.org/okn/o/sd#SourceCode> <http://www.w3.org/2000/01/rdf-schema#label> "Source Code"@en .
 # 
 # https://w3id.org/okn/o/sd#StandardVariable
 <https://w3id.org/okn/o/sd#StandardVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/okn/o/sd#StandardVariable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/okn/o/sd#Variable> .
 <https://w3id.org/okn/o/sd#StandardVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "A standard variable, necessary to refer to all the variable using the same nomenclature in a domain ontology"@en .
-<https://w3id.org/okn/o/sd#StandardVariable> <http://www.w3.org/2000/01/rdf-schema#label> "Standard variable"@en .
+<https://w3id.org/okn/o/sd#StandardVariable> <http://www.w3.org/2000/01/rdf-schema#label> "Standard Variable"@en .
 # 
 # https://w3id.org/okn/o/sd#Unit
 <https://w3id.org/okn/o/sd#Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1497,6 +1499,20 @@ _:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/
 <https://w3id.org/okn/o/sdm#ModelConfiguration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/okn/o/sdm#Model> .
 <https://w3id.org/okn/o/sdm#ModelConfiguration> <http://www.w3.org/2000/01/rdf-schema#comment> "A model configuration is a way of exposing a particular functionality of a model."@en .
 <https://w3id.org/okn/o/sdm#ModelConfiguration> <http://www.w3.org/2000/01/rdf-schema#label> "Model configuration"@en .
+# 
+# https://w3id.org/okn/o/sdm#ModelConfigurationSetup
+<https://w3id.org/okn/o/sdm#ModelConfigurationSetup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/okn/o/sdm#ModelConfigurationSetup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid112 .
+_:genid112 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid114 .
+_:genid114 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid114 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/okn/o/sd#ConfigurationSetup> .
+_:genid114 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid113 .
+_:genid113 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid113 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/okn/o/sdm#ModelConfiguration> .
+_:genid113 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid112 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/okn/o/sdm#ModelConfigurationSetup> <http://www.w3.org/2000/01/rdf-schema#comment> "Setup of a particular model, that may represent a calibration or a configuration with a set of values for a specific region."@en .
+<https://w3id.org/okn/o/sdm#ModelConfigurationSetup> <http://www.w3.org/2000/01/rdf-schema#label> "Model configuration setup"@en .
 # 
 # https://w3id.org/okn/o/sdm#PointBasedGrid
 <https://w3id.org/okn/o/sdm#PointBasedGrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

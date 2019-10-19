@@ -3,7 +3,23 @@
 <h2 id="changes" class="list">Changes from last version</h2>
 <h3 id="changeClass" class="list">Classes</h3>
 <details><summary><u>Modified classes</u></summary>
-<ul><li><a href="#https://w3id.org/okn/o/sd#Image">https://w3id.org/okn/o/sd#Image</a>
+<ul><li><a href="#https://w3id.org/okn/o/sd#DatasetSpecification">https://w3id.org/okn/o/sd#DatasetSpecification</a>
+<ul>
+<li>Added: rdfs:label "Dataset Specification"@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:label "Dataset specification"@en</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#ICASAVariable">https://w3id.org/okn/o/sd#ICASAVariable</a>
+<ul>
+<li>Added: rdfs:label "ICASA Variable"@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:label "ICASA variable"@en</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#Image">https://w3id.org/okn/o/sd#Image</a>
 <ul>
 <li>Added: rdfs:comment "An image (e.g. tiff file) is a type of dataset specification used to define things like soil, crops, etc."@en</li>
 </ul>
@@ -13,15 +29,23 @@
 <li>Added: rdfs:comment "An organized ody of people with a particular purpose"@en</li>
 </ul>
 </li>
+<li><a href="#https://w3id.org/okn/o/sd#SVOVariable">https://w3id.org/okn/o/sd#SVOVariable</a>
+<ul>
+<li>Added: rdfs:label "SVO Variable"@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:label "SVO variable"@en</li>
+</ul>
+</li>
 <li><a href="#https://w3id.org/okn/o/sd#SampleExecution">https://w3id.org/okn/o/sd#SampleExecution</a>
 <ul>
 <li>Added: rdfs:comment "A sample execution of a given software"@en</li>
-<li>Added: rdfs:label "Sample execution"@en</li>
+<li>Added: rdfs:label "Sample Execution"@en</li>
 </ul>
 </li>
 <li><a href="#https://w3id.org/okn/o/sd#SampleResource">https://w3id.org/okn/o/sd#SampleResource</a>
 <ul>
-<li>Added: rdfs:label "Sample resource"@en</li>
+<li>Added: rdfs:label "Sample Resource"@en</li>
 <li>Added: rdfs:comment "A sample resource associated with a software"@en</li>
 </ul>
 </li>
@@ -45,8 +69,16 @@
 </li>
 <li><a href="#https://w3id.org/okn/o/sd#SourceCode">https://w3id.org/okn/o/sd#SourceCode</a>
 <ul>
-<li>Added: rdfs:label "Source code"@en</li>
+<li>Added: rdfs:label "Source Code"@en</li>
 <li>Added: rdfs:comment "Class representing the characteristics of the code associated with a  software component"@en</li>
+</ul>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#StandardVariable">https://w3id.org/okn/o/sd#StandardVariable</a>
+<ul>
+<li>Added: rdfs:label "Standard Variable"@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:label "Standard variable"@en</li>
 </ul>
 </li>
 <li><a href="#https://w3id.org/okn/o/sd#Unit">https://w3id.org/okn/o/sd#Unit</a>
@@ -65,6 +97,11 @@
 <li><a href="#http://schema.org/Place">http://schema.org/Place</a>
 </li>
 <li><a href="#http://www.w3.org/2002/07/owl#Thing">http://www.w3.org/2002/07/owl#Thing</a>
+</li>
+<li><a href="#https://w3id.org/okn/o/sd#ConfigurationSetup">https://w3id.org/okn/o/sd#ConfigurationSetup</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/okn/o/sd#SoftwareConfiguration</li>
+</ul>
 </li>
 <li><a href="#https://w3id.org/okn/o/sd#FundingInformation">https://w3id.org/okn/o/sd#FundingInformation</a>
 </li>
@@ -121,6 +158,10 @@
 <li>Added: SubClass of https://w3id.org/okn/o/sdm#Model</li>
 <li>Added: SubClass of https://w3id.org/okn/o/sd#SoftwareConfiguration</li>
 </ul>
+</li>
+<li><a href="#ModelConfigurationSetup">https://w3id.org/okn/o/sdm#ModelConfigurationSetup</a>
+<ul>
+<li></ul>
 </li>
 <li><a href="#PointBasedGrid">https://w3id.org/okn/o/sdm#PointBasedGrid</a>
 <ul>
@@ -281,8 +322,8 @@
 </li>
 <li><a href="#https://w3id.org/okn/o/sd#adjustableParameter">https://w3id.org/okn/o/sd#adjustableParameter</a>
 <ul>
-<li>Added: domain https://w3id.org/okn/o/sd#SoftwareConfiguration</li>
 <li>Added: Range https://w3id.org/okn/o/sd#Parameter</li>
+<li>Added: domain https://w3id.org/okn/o/sd#ConfigurationSetup</li>
 </ul>
 </li>
 <li><a href="#https://w3id.org/okn/o/sd#copyrightHolder">https://w3id.org/okn/o/sd#copyrightHolder</a>
@@ -311,19 +352,19 @@
 <li><a href="#https://w3id.org/okn/o/sd#hasSetup">https://w3id.org/okn/o/sd#hasSetup</a>
 <ul>
 <li>Added: domain https://w3id.org/okn/o/sd#SoftwareConfiguration</li>
-<li>Added: Range https://w3id.org/okn/o/sd#SoftwareConfiguration</li>
+<li>Added: Range https://w3id.org/okn/o/sd#ConfigurationSetup</li>
 </ul>
 </li>
 <li><a href="#calibratedVariable">https://w3id.org/okn/o/sdm#calibratedVariable</a>
 <ul>
+<li>Added: domain https://w3id.org/okn/o/sdm#ModelConfigurationSetup</li>
 <li>Added: Range https://w3id.org/okn/o/sd#VariablePresentation</li>
-<li>Added: domain https://w3id.org/okn/o/sdm#ModelConfiguration</li>
 </ul>
 </li>
 <li><a href="#calibrationTargetVariable">https://w3id.org/okn/o/sdm#calibrationTargetVariable</a>
 <ul>
-<li>Added: domain https://w3id.org/okn/o/sdm#ModelConfiguration</li>
 <li>Added: Range https://w3id.org/okn/o/sd#VariablePresentation</li>
+<li>Added: domain https://w3id.org/okn/o/sdm#ModelConfigurationSetup</li>
 </ul>
 </li>
 <li><a href="#geo">https://w3id.org/okn/o/sdm#geo</a>
@@ -331,13 +372,6 @@
 <li>Added: domain https://w3id.org/okn/o/sdm#Region</li>
 <li>Added: Range Union of (https://w3id.org/okn/o/sdm#GeoCoordinates, https://w3id.org/okn/o/sdm#GeoShape)</li>
 <li>Added: SubProperty of http://schema.org/geo</li>
-</ul>
-</li>
-<li><a href="#hasCalibration">https://w3id.org/okn/o/sdm#hasCalibration</a>
-<ul>
-<li>Added: SubProperty of https://w3id.org/okn/o/sd#hasSetup</li>
-<li>Added: domain https://w3id.org/okn/o/sdm#ModelConfiguration</li>
-<li>Added: Range https://w3id.org/okn/o/sdm#ModelConfiguration</li>
 </ul>
 </li>
 <li><a href="#hasCausalDiagram">https://w3id.org/okn/o/sdm#hasCausalDiagram</a>
@@ -591,6 +625,13 @@
 <li>Added: rdfs:label "software requirements"@en</li>
 </ul>
 </li>
+<li><a href="#https://w3id.org/okn/o/sd#supportDetails">https://w3id.org/okn/o/sd#supportDetails</a>
+<ul>
+<li>Added: rdfs:comment "Property to link details, such as mailing lists in case a contact person is not provided"@en</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
+<li>Added: Domain https://w3id.org/okn/o/sd#Software</li>
+</ul>
+</li>
 </ul></details><details><summary><u>Added data properties</u></summary>
 <ul><li><a href="#http://schema.org/box">http://schema.org/box</a>
 </li>
@@ -636,14 +677,14 @@
 </li>
 <li><a href="#calibrationInterval">https://w3id.org/okn/o/sdm#calibrationInterval</a>
 <ul>
-<li>Added: Domain https://w3id.org/okn/o/sdm#ModelConfiguration</li>
+<li>Added: Domain https://w3id.org/okn/o/sdm#ModelConfigurationSetup</li>
 <li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
 </ul>
 </li>
 <li><a href="#calibrationMethod">https://w3id.org/okn/o/sdm#calibrationMethod</a>
 <ul>
 <li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
-<li>Added: Domain https://w3id.org/okn/o/sdm#ModelConfiguration</li>
+<li>Added: Domain https://w3id.org/okn/o/sdm#ModelConfigurationSetup</li>
 </ul>
 </li>
 <li><a href="#elevation">https://w3id.org/okn/o/sdm#elevation</a>
@@ -713,14 +754,14 @@
 </li>
 <li><a href="#parameterAssignmentMethod">https://w3id.org/okn/o/sdm#parameterAssignmentMethod</a>
 <ul>
-<li>Added: Domain https://w3id.org/okn/o/sdm#ModelConfiguration</li>
+<li>Added: Domain https://w3id.org/okn/o/sdm#ModelConfigurationSetup</li>
 <li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
 </ul>
 </li>
 <li><a href="#validUntil">https://w3id.org/okn/o/sdm#validUntil</a>
 <ul>
-<li>Added: Domain https://w3id.org/okn/o/sdm#ModelConfiguration</li>
 <li>Added: Range http://www.w3.org/2001/XMLSchema#dateTime</li>
+<li>Added: Domain https://w3id.org/okn/o/sdm#ModelConfigurationSetup</li>
 </ul>
 </li>
 </ul></details></div>

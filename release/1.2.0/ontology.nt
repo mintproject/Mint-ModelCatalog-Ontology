@@ -1,6 +1,6 @@
 <https://w3id.org/okn/o/sdm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://w3id.org/okn/o/sdm> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/okn/o/sdm/1.2.0> .
-<https://w3id.org/okn/o/sdm> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/okn/o/sd/1.2.0> .
+<https://w3id.org/okn/o/sdm> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/okn/o/sd/1.3.0> .
 <https://w3id.org/okn/o/sdm> <http://purl.org/dc/elements/1.1/abstract> "The Software Description Ontology for Models (SDM) expands the software description ontology (SD) to add information about scientific software models. Examples of scientific software models are hydrology models, agriculture models or economy models."@en .
 <https://w3id.org/okn/o/sdm> <http://purl.org/dc/elements/1.1/contributor> "Armen Kemanian"@en .
 <https://w3id.org/okn/o/sdm> <http://purl.org/dc/elements/1.1/contributor> "Christopher Duffy"@en .
@@ -252,6 +252,13 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <https://w3id.org/okn/o/sd#hasParameter> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sd#Parameter> .
 <https://w3id.org/okn/o/sd#hasParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that indicates the parameters of a model configuration"@en .
 <https://w3id.org/okn/o/sd#hasParameter> <http://www.w3.org/2000/01/rdf-schema#label> "has parameter"@en .
+# 
+# https://w3id.org/okn/o/sd#hasPart
+<https://w3id.org/okn/o/sd#hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/okn/o/sd#hasPart> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sd#SampleCollection> .
+<https://w3id.org/okn/o/sd#hasPart> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sd#SampleResource> .
+<https://w3id.org/okn/o/sd#hasPart> <http://www.w3.org/2000/01/rdf-schema#comment> "Property designed to reference the elements included in a sample collection."@en .
+<https://w3id.org/okn/o/sd#hasPart> <http://www.w3.org/2000/01/rdf-schema#label> "has part"@en .
 # 
 # https://w3id.org/okn/o/sd#hasPresentation
 <https://w3id.org/okn/o/sd#hasPresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -692,6 +699,13 @@ _:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <https://w3id.org/okn/o/sd#fundingGrant> <http://www.w3.org/2000/01/rdf-schema#comment> "Grant number used for funding"@en .
 <https://w3id.org/okn/o/sd#fundingGrant> <http://www.w3.org/2000/01/rdf-schema#label> "funding grant"@en .
 # 
+# https://w3id.org/okn/o/sd#hasAcceptedValues
+<https://w3id.org/okn/o/sd#hasAcceptedValues> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/okn/o/sd#hasAcceptedValues> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sd#Parameter> .
+<https://w3id.org/okn/o/sd#hasAcceptedValues> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/okn/o/sd#hasAcceptedValues> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that constraints which values are accepted for a parameter. For example, the name of a crop can only be \"Maize\" or \"Sorghum\""@en .
+<https://w3id.org/okn/o/sd#hasAcceptedValues> <http://www.w3.org/2000/01/rdf-schema#label> "has accepted values"@en .
+# 
 # https://w3id.org/okn/o/sd#hasAssumption
 <https://w3id.org/okn/o/sd#hasAssumption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/okn/o/sd#hasAssumption> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sd#Software> .
@@ -958,6 +972,7 @@ _:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <https://w3id.org/okn/o/sd#hasVersionId> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/identifier> .
 <https://w3id.org/okn/o/sd#hasVersionId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sd#SoftwareVersion> .
 <https://w3id.org/okn/o/sd#hasVersionId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/okn/o/sd#hasVersionId> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifier of the version of this software"@en .
 <https://w3id.org/okn/o/sd#hasVersionId> <http://www.w3.org/2000/01/rdf-schema#label> "has version id"@en .
 # 
 # https://w3id.org/okn/o/sd#identifier
@@ -976,6 +991,7 @@ _:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 _:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/okn/o/sd#Software> .
 _:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <https://w3id.org/okn/o/sd#identifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/okn/o/sd#identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifier of the resource being described"@en .
 <https://w3id.org/okn/o/sd#identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier"@en .
 # 
 # https://w3id.org/okn/o/sd#keywords
@@ -983,6 +999,7 @@ _:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <https://w3id.org/okn/o/sd#keywords> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/keywords> .
 <https://w3id.org/okn/o/sd#keywords> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sd#Software> .
 <https://w3id.org/okn/o/sd#keywords> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/okn/o/sd#keywords> <http://www.w3.org/2000/01/rdf-schema#comment> "Keywords associated with a software component"@en .
 <https://w3id.org/okn/o/sd#keywords> <http://www.w3.org/2000/01/rdf-schema#label> "keywords"@en .
 # 
 # https://w3id.org/okn/o/sd#license
@@ -998,6 +1015,8 @@ _:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 _:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/okn/o/sd#SourceCode> .
 _:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <https://w3id.org/okn/o/sd#license> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/okn/o/sd#license> <http://www.w3.org/2000/01/rdf-schema#comment> "License of a software component or its source code"@en .
+<https://w3id.org/okn/o/sd#license> <http://www.w3.org/2000/01/rdf-schema#label> "license"@en .
 # 
 # https://w3id.org/okn/o/sd#memoryRequirements
 <https://w3id.org/okn/o/sd#memoryRequirements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -1010,6 +1029,7 @@ _:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <https://w3id.org/okn/o/sd#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/okn/o/sd#name> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/name> .
 <https://w3id.org/okn/o/sd#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/okn/o/sd#name> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of the resource"@en .
 <https://w3id.org/okn/o/sd#name> <http://www.w3.org/2000/01/rdf-schema#label> "name"@en .
 # 
 # https://w3id.org/okn/o/sd#operatingSystems
@@ -1061,6 +1081,7 @@ _:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <https://w3id.org/okn/o/sd#shortDescription> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/okn/o/sd#description> .
 <https://w3id.org/okn/o/sd#shortDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sd#Software> .
 <https://w3id.org/okn/o/sd#shortDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/okn/o/sd#shortDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "A summarized description of the resource"@en .
 <https://w3id.org/okn/o/sd#shortDescription> <http://www.w3.org/2000/01/rdf-schema#label> "short description" .
 # 
 # https://w3id.org/okn/o/sd#softwareRequirements
@@ -1110,6 +1131,8 @@ _:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid91 .
 _:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#string> .
 _:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/okn/o/sd#value> <http://www.w3.org/2000/01/rdf-schema#comment> "Value associated to the described entity"@en .
+<https://w3id.org/okn/o/sd#value> <http://www.w3.org/2000/01/rdf-schema#label> "value"@en .
 # 
 # https://w3id.org/okn/o/sd#website
 <https://w3id.org/okn/o/sd#website> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -1362,6 +1385,12 @@ _:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/
 <https://w3id.org/okn/o/sd#SVOVariable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/okn/o/sd#StandardVariable> .
 <https://w3id.org/okn/o/sd#SVOVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Variable that follows the Scientific Variables Ontology: http://geoscienceontology.org/"@en .
 <https://w3id.org/okn/o/sd#SVOVariable> <http://www.w3.org/2000/01/rdf-schema#label> "SVO Variable"@en .
+# 
+# https://w3id.org/okn/o/sd#SampleCollection
+<https://w3id.org/okn/o/sd#SampleCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/okn/o/sd#SampleCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/okn/o/sd#SampleResource> .
+<https://w3id.org/okn/o/sd#SampleCollection> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of resources that are used as sample for running a sfoware component multiple times"@en .
+<https://w3id.org/okn/o/sd#SampleCollection> <http://www.w3.org/2000/01/rdf-schema#label> "Sample Collection"@en .
 # 
 # https://w3id.org/okn/o/sd#SampleExecution
 <https://w3id.org/okn/o/sd#SampleExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

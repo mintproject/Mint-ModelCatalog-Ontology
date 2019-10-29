@@ -742,6 +742,20 @@
     "@id" : "https://w3id.org/okn/o/sd#StandardVariable"
   } ]
 }, {
+  "@id" : "https://w3id.org/okn/o/sd#SampleCollection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A collection of resources that are used as sample for running a sfoware component multiple times"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Sample Collection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/okn/o/sd#SampleResource"
+  } ]
+}, {
   "@id" : "https://w3id.org/okn/o/sd#SampleExecution",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1185,6 +1199,23 @@
     "@id" : "http://www.w3.org/ns/prov#hadPrimarySource"
   } ]
 }, {
+  "@id" : "https://w3id.org/okn/o/sd#hasAcceptedValues",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property that constraints which values are accepted for a parameter. For example, the name of a crop can only be \"Maize\" or \"Sorghum\""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/okn/o/sd#Parameter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has accepted values"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
   "@id" : "https://w3id.org/okn/o/sd#hasAssumption",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1620,6 +1651,23 @@
     "@id" : "https://w3id.org/okn/o/sd#Parameter"
   } ]
 }, {
+  "@id" : "https://w3id.org/okn/o/sd#hasPart",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property designed to reference the elements included in a sample collection."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/okn/o/sd#SampleCollection"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has part"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/okn/o/sd#SampleResource"
+  } ]
+}, {
   "@id" : "https://w3id.org/okn/o/sd#hasPresentation",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1843,6 +1891,10 @@
 }, {
   "@id" : "https://w3id.org/okn/o/sd#hasVersionId",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Identifier of the version of this software"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/okn/o/sd#SoftwareVersion"
   } ],
@@ -1859,6 +1911,10 @@
 }, {
   "@id" : "https://w3id.org/okn/o/sd#identifier",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Identifier of the resource being described"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "_:genid76"
   } ],
@@ -1875,6 +1931,10 @@
 }, {
   "@id" : "https://w3id.org/okn/o/sd#keywords",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Keywords associated with a software component"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/okn/o/sd#Software"
   } ],
@@ -1891,8 +1951,16 @@
 }, {
   "@id" : "https://w3id.org/okn/o/sd#license",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "License of a software component or its source code"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "_:genid80"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "license"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
@@ -1928,6 +1996,10 @@
 }, {
   "@id" : "https://w3id.org/okn/o/sd#name",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Name of the resource"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "name"
@@ -2071,6 +2143,10 @@
 }, {
   "@id" : "https://w3id.org/okn/o/sd#shortDescription",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A summarized description of the resource"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/okn/o/sd#Software"
   } ],
@@ -2136,8 +2212,16 @@
 }, {
   "@id" : "https://w3id.org/okn/o/sd#value",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Value associated to the described entity"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "_:genid86"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "value"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "_:genid90"
@@ -2226,7 +2310,7 @@
     "@id" : "https://w3id.org/okn/o/sdm#"
   } ],
   "http://www.w3.org/2002/07/owl#imports" : [ {
-    "@id" : "https://w3id.org/okn/o/sd/1.2.0"
+    "@id" : "https://w3id.org/okn/o/sd/1.3.0"
   } ],
   "http://www.w3.org/2002/07/owl#priorVersion" : [ {
     "@id" : "https://w3id.org/okn/o/sdm/1.1.0"

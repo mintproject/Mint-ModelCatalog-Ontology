@@ -8,7 +8,7 @@
 
 <https://w3id.org/okn/o/sdm> rdf:type owl:Ontology ;
                               owl:versionIRI <https://w3id.org/okn/o/sdm/1.2.0> ;
-                              owl:imports <https://w3id.org/okn/o/sd/1.2.0> ;
+                              owl:imports <https://w3id.org/okn/o/sd/1.3.0> ;
                               <http://purl.org/dc/elements/1.1/abstract> "The Software Description Ontology for Models (SDM) expands the software description ontology (SD) to add information about scientific software models. Examples of scientific software models are hydrology models, agriculture models or economy models."@en ;
                               <http://purl.org/dc/elements/1.1/contributor> "Armen Kemanian"@en ,
                                                                             "Christopher Duffy"@en ,
@@ -275,6 +275,14 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                                          rdfs:range <https://w3id.org/okn/o/sd#Parameter> ;
                                          rdfs:comment "Property that indicates the parameters of a model configuration"@en ;
                                          rdfs:label "has parameter"@en .
+
+
+###  https://w3id.org/okn/o/sd#hasPart
+<https://w3id.org/okn/o/sd#hasPart> rdf:type owl:ObjectProperty ;
+                                    rdfs:domain <https://w3id.org/okn/o/sd#SampleCollection> ;
+                                    rdfs:range <https://w3id.org/okn/o/sd#SampleResource> ;
+                                    rdfs:comment "Property designed to reference the elements included in a sample collection."@en ;
+                                    rdfs:label "has part"@en .
 
 
 ###  https://w3id.org/okn/o/sd#hasPresentation
@@ -727,6 +735,14 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                                          rdfs:label "funding grant"@en .
 
 
+###  https://w3id.org/okn/o/sd#hasAcceptedValues
+<https://w3id.org/okn/o/sd#hasAcceptedValues> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain <https://w3id.org/okn/o/sd#Parameter> ;
+                                              rdfs:range xsd:string ;
+                                              rdfs:comment "Property that constraints which values are accepted for a parameter. For example, the name of a crop can only be \"Maize\" or \"Sorghum\""@en ;
+                                              rdfs:label "has accepted values"@en .
+
+
 ###  https://w3id.org/okn/o/sd#hasAssumption
 <https://w3id.org/okn/o/sd#hasAssumption> rdf:type owl:DatatypeProperty ;
                                           rdfs:domain <https://w3id.org/okn/o/sd#Software> ;
@@ -962,6 +978,7 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                                          rdfs:subPropertyOf <http://schema.org/identifier> ;
                                          rdfs:domain <https://w3id.org/okn/o/sd#SoftwareVersion> ;
                                          rdfs:range xsd:string ;
+                                         rdfs:comment "Identifier of the version of this software"@en ;
                                          rdfs:label "has version id"@en .
 
 
@@ -975,6 +992,7 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                                                                  )
                                                    ] ;
                                        rdfs:range xsd:string ;
+                                       rdfs:comment "Identifier of the resource being described"@en ;
                                        rdfs:label "identifier"@en .
 
 
@@ -983,6 +1001,7 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                                      rdfs:subPropertyOf <http://schema.org/keywords> ;
                                      rdfs:domain <https://w3id.org/okn/o/sd#Software> ;
                                      rdfs:range xsd:string ;
+                                     rdfs:comment "Keywords associated with a software component"@en ;
                                      rdfs:label "keywords"@en .
 
 
@@ -994,7 +1013,9 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                                                                 <https://w3id.org/okn/o/sd#SourceCode>
                                                               )
                                                 ] ;
-                                    rdfs:range xsd:anyURI .
+                                    rdfs:range xsd:anyURI ;
+                                    rdfs:comment "License of a software component or its source code"@en ;
+                                    rdfs:label "license"@en .
 
 
 ###  https://w3id.org/okn/o/sd#memoryRequirements
@@ -1009,6 +1030,7 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
 <https://w3id.org/okn/o/sd#name> rdf:type owl:DatatypeProperty ;
                                  rdfs:subPropertyOf <http://schema.org/name> ;
                                  rdfs:range xsd:string ;
+                                 rdfs:comment "Name of the resource"@en ;
                                  rdfs:label "name"@en .
 
 
@@ -1062,6 +1084,7 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                                              rdfs:subPropertyOf <https://w3id.org/okn/o/sd#description> ;
                                              rdfs:domain <https://w3id.org/okn/o/sd#Software> ;
                                              rdfs:range xsd:string ;
+                                             rdfs:comment "A summarized description of the resource"@en ;
                                              rdfs:label "short description" .
 
 
@@ -1097,7 +1120,9 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                                                              xsd:int
                                                              xsd:string
                                                            )
-                                             ] .
+                                             ] ;
+                                  rdfs:comment "Value associated to the described entity"@en ;
+                                  rdfs:label "value"@en .
 
 
 ###  https://w3id.org/okn/o/sd#website
@@ -1360,6 +1385,13 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                                         rdfs:subClassOf <https://w3id.org/okn/o/sd#StandardVariable> ;
                                         rdfs:comment "Variable that follows the Scientific Variables Ontology: http://geoscienceontology.org/"@en ;
                                         rdfs:label "SVO Variable"@en .
+
+
+###  https://w3id.org/okn/o/sd#SampleCollection
+<https://w3id.org/okn/o/sd#SampleCollection> rdf:type owl:Class ;
+                                             rdfs:subClassOf <https://w3id.org/okn/o/sd#SampleResource> ;
+                                             rdfs:comment "A collection of resources that are used as sample for running a sfoware component multiple times"@en ;
+                                             rdfs:label "Sample Collection"@en .
 
 
 ###  https://w3id.org/okn/o/sd#SampleExecution

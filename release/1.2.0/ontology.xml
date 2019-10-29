@@ -11,7 +11,7 @@
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/okn/o/sdm">
         <owl:versionIRI rdf:resource="https://w3id.org/okn/o/sdm/1.2.0"/>
-        <owl:imports rdf:resource="https://w3id.org/okn/o/sd/1.2.0"/>
+        <owl:imports rdf:resource="https://w3id.org/okn/o/sd/1.3.0"/>
         <dc:abstract xml:lang="en">The Software Description Ontology for Models (SDM) expands the software description ontology (SD) to add information about scientific software models. Examples of scientific software models are hydrology models, agriculture models or economy models.</dc:abstract>
         <dc:contributor xml:lang="en">Armen Kemanian</dc:contributor>
         <dc:contributor xml:lang="en">Christopher Duffy</dc:contributor>
@@ -448,6 +448,18 @@
         <rdfs:range rdf:resource="https://w3id.org/okn/o/sd#Parameter"/>
         <rdfs:comment xml:lang="en">Property that indicates the parameters of a model configuration</rdfs:comment>
         <rdfs:label xml:lang="en">has parameter</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/okn/o/sd#hasPart -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sd#hasPart">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sd#SampleCollection"/>
+        <rdfs:range rdf:resource="https://w3id.org/okn/o/sd#SampleResource"/>
+        <rdfs:comment xml:lang="en">Property designed to reference the elements included in a sample collection.</rdfs:comment>
+        <rdfs:label xml:lang="en">has part</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1164,6 +1176,18 @@
     
 
 
+    <!-- https://w3id.org/okn/o/sd#hasAcceptedValues -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sd#hasAcceptedValues">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sd#Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Property that constraints which values are accepted for a parameter. For example, the name of a crop can only be &quot;Maize&quot; or &quot;Sorghum&quot;</rdfs:comment>
+        <rdfs:label xml:lang="en">has accepted values</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/okn/o/sd#hasAssumption -->
 
 
@@ -1523,6 +1547,7 @@
         <rdfs:subPropertyOf rdf:resource="http://schema.org/identifier"/>
         <rdfs:domain rdf:resource="https://w3id.org/okn/o/sd#SoftwareVersion"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Identifier of the version of this software</rdfs:comment>
         <rdfs:label xml:lang="en">has version id</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1543,6 +1568,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Identifier of the resource being described</rdfs:comment>
         <rdfs:label xml:lang="en">identifier</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1555,6 +1581,7 @@
         <rdfs:subPropertyOf rdf:resource="http://schema.org/keywords"/>
         <rdfs:domain rdf:resource="https://w3id.org/okn/o/sd#Software"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Keywords associated with a software component</rdfs:comment>
         <rdfs:label xml:lang="en">keywords</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1574,6 +1601,8 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">License of a software component or its source code</rdfs:comment>
+        <rdfs:label xml:lang="en">license</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1596,6 +1625,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sd#name">
         <rdfs:subPropertyOf rdf:resource="http://schema.org/name"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Name of the resource</rdfs:comment>
         <rdfs:label xml:lang="en">name</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1676,6 +1706,7 @@
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/okn/o/sd#description"/>
         <rdfs:domain rdf:resource="https://w3id.org/okn/o/sd#Software"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A summarized description of the resource</rdfs:comment>
         <rdfs:label>short description</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1730,6 +1761,8 @@
                 </owl:unionOf>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:comment xml:lang="en">Value associated to the described entity</rdfs:comment>
+        <rdfs:label xml:lang="en">value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2157,6 +2190,17 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/okn/o/sd#StandardVariable"/>
         <rdfs:comment xml:lang="en">Variable that follows the Scientific Variables Ontology: http://geoscienceontology.org/</rdfs:comment>
         <rdfs:label xml:lang="en">SVO Variable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/okn/o/sd#SampleCollection -->
+
+
+    <owl:Class rdf:about="https://w3id.org/okn/o/sd#SampleCollection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/okn/o/sd#SampleResource"/>
+        <rdfs:comment xml:lang="en">A collection of resources that are used as sample for running a sfoware component multiple times</rdfs:comment>
+        <rdfs:label xml:lang="en">Sample Collection</rdfs:label>
     </owl:Class>
     
 

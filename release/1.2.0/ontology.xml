@@ -687,6 +687,18 @@
     
 
 
+    <!-- https://w3id.org/okn/o/sdm#country -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#country">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Region"/>
+        <rdfs:range rdf:resource="https://w3id.org/okn/o/sdm#Region"/>
+        <rdfs:comment xml:lang="en">Country associated to a region.</rdfs:comment>
+        <rdfs:label xml:lang="en">country</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/okn/o/sdm#geo -->
 
 

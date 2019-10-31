@@ -763,12 +763,14 @@ This section provides details for each class and property defined by The Softwar
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#geo" title="https://w3id.org/okn/o/sdm#geo">geo</a>
+            <a href="#country" title="https://w3id.org/okn/o/sdm#country">country</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#geo" title="https://w3id.org/okn/o/sdm#geo">geo</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#hasRegion" title="https://w3id.org/okn/o/sdm#hasRegion">has region</a>
+            <a href="#country" title="https://w3id.org/okn/o/sdm#country">country</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasRegion" title="https://w3id.org/okn/o/sdm#hasRegion">has region</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -1370,6 +1372,9 @@ This section provides details for each class and property defined by The Softwar
          <a href="#https://w3id.org/okn/o/sd#copyrightYear" title="https://w3id.org/okn/o/sd#copyrightYear">copyright year</a>
       </li>
       <li>
+         <a href="#country" title="https://w3id.org/okn/o/sdm#country">country</a>
+      </li>
+      <li>
          <a href="#https://w3id.org/okn/o/sd#fundingSource" title="https://w3id.org/okn/o/sd#fundingSource">funding source</a>
       </li>
       <li>
@@ -1836,6 +1841,31 @@ This section provides details for each class and property defined by The Softwar
             <dd>
                <a href="#http://schema.org/copyrightYear" title="http://schema.org/copyrightYear">copyright year</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="country">
+      <h3>country<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sdm#country</p>
+      <div class="comment">
+         <span class="markdown">Country associated to a region.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Region" title="https://w3id.org/okn/o/sdm#Region">region</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Region" title="https://w3id.org/okn/o/sdm#Region">region</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>

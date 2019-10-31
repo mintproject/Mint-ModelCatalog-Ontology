@@ -401,6 +401,13 @@ _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <https://w3id.org/okn/o/sdm#calibrationTargetVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Variable for which the model was calibrated for. For example, in a hydrology model one calibrate the predicted river width by varying hydrologic conductivity"@en .
 <https://w3id.org/okn/o/sdm#calibrationTargetVariable> <http://www.w3.org/2000/01/rdf-schema#label> "calibration target variable"@en .
 # 
+# https://w3id.org/okn/o/sdm#country
+<https://w3id.org/okn/o/sdm#country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/okn/o/sdm#country> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#Region> .
+<https://w3id.org/okn/o/sdm#country> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sdm#Region> .
+<https://w3id.org/okn/o/sdm#country> <http://www.w3.org/2000/01/rdf-schema#comment> "Country associated to a region."@en .
+<https://w3id.org/okn/o/sdm#country> <http://www.w3.org/2000/01/rdf-schema#label> "country"@en .
+# 
 # https://w3id.org/okn/o/sdm#geo
 <https://w3id.org/okn/o/sdm#geo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/okn/o/sdm#geo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/geo> .

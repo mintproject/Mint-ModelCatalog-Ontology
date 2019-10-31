@@ -68,6 +68,14 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
                            rdfs:label "calibration target variable"@en .
 
 
+###  https://w3id.org/okn/o/sdm#country
+:country rdf:type owl:ObjectProperty ;
+         rdfs:domain :Region ;
+         rdfs:range :Region ;
+         rdfs:comment "Country associated to a region."@en ;
+         rdfs:label "country"@en .
+
+
 ###  https://w3id.org/okn/o/sdm#geo
 :geo rdf:type owl:ObjectProperty ;
      rdfs:subPropertyOf <http://schema.org/geo> ;

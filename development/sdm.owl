@@ -180,7 +180,7 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/okn/o/sdm#usefulForCalculatingIndex
 :usefulForCalculatingIndex rdf:type owl:ObjectProperty ;
                            rdfs:domain :Model ;
-                           rdfs:range :Index ;
+                           rdfs:range :NumericalIndex ;
                            rdfs:comment "Property that indicates that a model (or any of its products) can be used to calculate a particular index. The rationale for this property is that indices are usually not caluclated by models, but by post-processing steps."@en ;
                            rdfs:label "useful for calculating index"@en .
 
@@ -426,12 +426,6 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
              rdfs:label "Hybrid model"@en .
 
 
-###  https://w3id.org/okn/o/sdm#Index
-:Index rdf:type owl:Class ;
-       rdfs:comment "A number (such as a ratio) derived from a series of observations and used as an indicator or measure (https://www.merriam-webster.com/dictionary/index)"@en ;
-       rdfs:label "Index" .
-
-
 ###  https://w3id.org/okn/o/sdm#Intervention
 :Intervention rdf:type owl:Class ;
               rdfs:comment "Interference by a policy maker or modeler by modifying a variable or parameter of a model"@en ;
@@ -462,6 +456,12 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
                                          ] ;
                          rdfs:comment "Setup of a particular model, that may represent a calibration or a configuration with a set of values for a specific region."@en ;
                          rdfs:label "Model configuration setup"@en .
+
+
+###  https://w3id.org/okn/o/sdm#NumericalIndex
+:NumericalIndex rdf:type owl:Class ;
+                rdfs:comment "A number (such as a ratio) derived from a series of observations and used as an indicator or measure (https://www.merriam-webster.com/dictionary/index)"@en ;
+                rdfs:label "Numerical Index"@en .
 
 
 ###  https://w3id.org/okn/o/sdm#PointBasedGrid

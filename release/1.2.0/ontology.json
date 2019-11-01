@@ -2415,14 +2415,14 @@
     "@id" : "https://w3id.org/okn/o/sdm#Model"
   } ]
 }, {
-  "@id" : "https://w3id.org/okn/o/sdm#Index",
+  "@id" : "https://w3id.org/okn/o/sdm#NumericalIndex",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A number (such as a ratio) derived from a series of observations and used as an indicator or measure (https://www.merriam-webster.com/dictionary/index)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Index"
+    "@value" : "NumericalIndex"
   } ]
 }, {
   "@id" : "https://w3id.org/okn/o/sdm#Intervention",
@@ -3006,7 +3006,7 @@
     "@value" : "useful for calculating index"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/okn/o/sdm#Index"
+    "@id" : "https://w3id.org/okn/o/sdm#NumericalIndex"
   } ]
 }, {
   "@id" : "https://w3id.org/okn/o/sdm#validUntil",

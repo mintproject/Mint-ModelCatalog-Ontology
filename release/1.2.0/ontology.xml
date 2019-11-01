@@ -859,7 +859,7 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#usefulForCalculatingIndex">
         <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
-        <rdfs:range rdf:resource="https://w3id.org/okn/o/sdm#Index"/>
+        <rdfs:range rdf:resource="https://w3id.org/okn/o/sdm#NumericalIndex"/>
         <rdfs:comment xml:lang="en">Property that indicates that a model (or any of its products) can be used to calculate a particular index. The rationale for this property is that indices are usually not caluclated by models, but by post-processing steps.</rdfs:comment>
         <rdfs:label xml:lang="en">useful for calculating index</rdfs:label>
     </owl:ObjectProperty>
@@ -2434,12 +2434,12 @@
     
 
 
-    <!-- https://w3id.org/okn/o/sdm#Index -->
+    <!-- https://w3id.org/okn/o/sdm#NumericalIndex -->
 
 
-    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#Index">
+    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#NumericalIndex">
         <rdfs:comment xml:lang="en">A number (such as a ratio) derived from a series of observations and used as an indicator or measure (https://www.merriam-webster.com/dictionary/index)</rdfs:comment>
-        <rdfs:label>Index</rdfs:label>
+        <rdfs:label>NumericalIndex</rdfs:label>
     </owl:Class>
     
 

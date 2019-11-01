@@ -508,7 +508,7 @@ _:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 # https://w3id.org/okn/o/sdm#usefulForCalculatingIndex
 <https://w3id.org/okn/o/sdm#usefulForCalculatingIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/okn/o/sdm#usefulForCalculatingIndex> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#Model> .
-<https://w3id.org/okn/o/sdm#usefulForCalculatingIndex> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sdm#Index> .
+<https://w3id.org/okn/o/sdm#usefulForCalculatingIndex> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sdm#NumericalIndex> .
 <https://w3id.org/okn/o/sdm#usefulForCalculatingIndex> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that indicates that a model (or any of its products) can be used to calculate a particular index. The rationale for this property is that indices are usually not caluclated by models, but by post-processing steps."@en .
 <https://w3id.org/okn/o/sdm#usefulForCalculatingIndex> <http://www.w3.org/2000/01/rdf-schema#label> "useful for calculating index"@en .
 # 
@@ -1513,10 +1513,10 @@ _:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/
 <https://w3id.org/okn/o/sdm#HybridModel> <http://www.w3.org/2000/01/rdf-schema#comment> "A model based on empirical observations and theory."@en .
 <https://w3id.org/okn/o/sdm#HybridModel> <http://www.w3.org/2000/01/rdf-schema#label> "Hybrid model"@en .
 # 
-# https://w3id.org/okn/o/sdm#Index
-<https://w3id.org/okn/o/sdm#Index> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/okn/o/sdm#Index> <http://www.w3.org/2000/01/rdf-schema#comment> "A number (such as a ratio) derived from a series of observations and used as an indicator or measure (https://www.merriam-webster.com/dictionary/index)"@en .
-<https://w3id.org/okn/o/sdm#Index> <http://www.w3.org/2000/01/rdf-schema#label> "Index" .
+# https://w3id.org/okn/o/sdm#NumericalIndex
+<https://w3id.org/okn/o/sdm#NumericalIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/okn/o/sdm#NumericalIndex> <http://www.w3.org/2000/01/rdf-schema#comment> "A number (such as a ratio) derived from a series of observations and used as an indicator or measure (https://www.merriam-webster.com/dictionary/index)"@en .
+<https://w3id.org/okn/o/sdm#NumericalIndex> <http://www.w3.org/2000/01/rdf-schema#label> "NumericalIndex" .
 # 
 # https://w3id.org/okn/o/sdm#Intervention
 <https://w3id.org/okn/o/sdm#Intervention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

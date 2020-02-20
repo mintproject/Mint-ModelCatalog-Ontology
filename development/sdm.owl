@@ -343,7 +343,7 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
                                )
                  ] ;
      rdfs:range xsd:string ;
-     rdfs:comment "Tag used to annotate a version or a software configuration. This annotation is useful to show which version is the latest, or which version is deprecated"@en ;
+     rdfs:comment "Tag used to annotate a version or a software configuration. This annotation is useful to show which version is the latest, or which version is deprecated. Supported tags are: \"latest\", \"deprecated\""@en ;
      rdfs:label "tag"@en .
 
 

@@ -265,7 +265,7 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
 <https://w3id.org/okn/o/sd#hasOutput> rdf:type owl:ObjectProperty ;
                                       rdfs:domain <https://w3id.org/okn/o/sd#SoftwareConfiguration> ;
                                       rdfs:range <https://w3id.org/okn/o/sd#DatasetSpecification> ;
-                                      rdfs:comment "Preoperty that expresses what are the outputs of a model"@en ;
+                                      rdfs:comment "Property that expresses what are the outputs of a model"@en ;
                                       rdfs:label "has output"@en .
 
 

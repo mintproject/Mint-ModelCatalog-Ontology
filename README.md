@@ -9,4 +9,4 @@ and
 
 https://docs.google.com/document/d/1Q7S16xngZCFNQHDrgJbwK43XQiMfAMVgSRqlMFF4Abc/edit#
 
-Latest Ontology Version URI: https://w3id.org/mint/modelCatalog#
+Latest Ontology Version URI: https://w3id.org/okn/o/sdm

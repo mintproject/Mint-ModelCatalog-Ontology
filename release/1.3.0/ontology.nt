@@ -1577,15 +1577,8 @@ _:genid118 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/
 # 
 # https://w3id.org/okn/o/sdm#ModelConfigurationSetup
 <https://w3id.org/okn/o/sdm#ModelConfigurationSetup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/okn/o/sdm#ModelConfigurationSetup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid120 .
-_:genid120 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid122 .
-_:genid122 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid122 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/okn/o/sd#ConfigurationSetup> .
-_:genid122 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid121 .
-_:genid121 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid121 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/okn/o/sdm#ModelConfiguration> .
-_:genid121 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid120 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/okn/o/sdm#ModelConfigurationSetup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/okn/o/sd#ConfigurationSetup> .
+<https://w3id.org/okn/o/sdm#ModelConfigurationSetup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/okn/o/sdm#ModelConfiguration> .
 <https://w3id.org/okn/o/sdm#ModelConfigurationSetup> <http://www.w3.org/2000/01/rdf-schema#comment> "Setup of a particular model, that may represent a calibration or a configuration with a set of values for a specific region."@en .
 <https://w3id.org/okn/o/sdm#ModelConfigurationSetup> <http://www.w3.org/2000/01/rdf-schema#label> "Model configuration setup"@en .
 # 

@@ -81,16 +81,6 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid120",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/okn/o/sd#ConfigurationSetup"
-    }, {
-      "@id" : "https://w3id.org/okn/o/sdm#ModelConfiguration"
-    } ]
-  } ]
-}, {
   "@id" : "_:genid14",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
@@ -2504,7 +2494,9 @@
     "@value" : "Model configuration setup"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid120"
+    "@id" : "https://w3id.org/okn/o/sd#ConfigurationSetup"
+  }, {
+    "@id" : "https://w3id.org/okn/o/sdm#ModelConfiguration"
   } ]
 }, {
   "@id" : "https://w3id.org/okn/o/sdm#NumericalIndex",

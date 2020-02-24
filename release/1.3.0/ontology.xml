@@ -2519,14 +2519,8 @@
 
 
     <owl:Class rdf:about="https://w3id.org/okn/o/sdm#ModelConfigurationSetup">
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/okn/o/sd#ConfigurationSetup"/>
-                    <rdf:Description rdf:about="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/okn/o/sd#ConfigurationSetup"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
         <rdfs:comment xml:lang="en">Setup of a particular model, that may represent a calibration or a configuration with a set of values for a specific region.</rdfs:comment>
         <rdfs:label xml:lang="en">Model configuration setup</rdfs:label>
     </owl:Class>

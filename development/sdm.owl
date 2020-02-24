@@ -469,11 +469,8 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/okn/o/sdm#ModelConfigurationSetup
 :ModelConfigurationSetup rdf:type owl:Class ;
-                         rdfs:subClassOf [ owl:intersectionOf ( <https://w3id.org/okn/o/sd#ConfigurationSetup>
-                                                                :ModelConfiguration
-                                                              ) ;
-                                           rdf:type owl:Class
-                                         ] ;
+                         rdfs:subClassOf <https://w3id.org/okn/o/sd#ConfigurationSetup> ,
+                                         :ModelConfiguration ;
                          rdfs:comment "Setup of a particular model, that may represent a calibration or a configuration with a set of values for a specific region."@en ;
                          rdfs:label "Model configuration setup"@en .
 

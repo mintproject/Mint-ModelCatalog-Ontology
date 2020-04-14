@@ -349,7 +349,7 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
 <https://w3id.org/okn/o/sd#hasStandardVariable> rdf:type owl:ObjectProperty ,
                                                          owl:FunctionalProperty ;
                                                 rdfs:domain [ rdf:type owl:Class ;
-                                                              owl:unionOf ( <https://w3id.org/okn/o/sd#Index>
+                                                              owl:unionOf ( <https://w3id.org/okn/o/sd#NumericalIndex>
                                                                             <https://w3id.org/okn/o/sd#VariablePresentation>
                                                                           )
                                                             ] ;
@@ -401,7 +401,7 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/okn/o/sd#usefulForCalculatingIndex
 <https://w3id.org/okn/o/sd#usefulForCalculatingIndex> rdf:type owl:ObjectProperty ;
                                                       rdfs:domain <https://w3id.org/okn/o/sd#Software> ;
-                                                      rdfs:range <https://w3id.org/okn/o/sd#Index> ;
+                                                      rdfs:range <https://w3id.org/okn/o/sd#NumericalIndex> ;
                                                       rdfs:comment "Property that indicates that a software component (or any of its outputs) can be used to calculate a particular index. The rationale for this property is that indices are usually calculated by applying post-processing steps to the outputs of a software component."@en ;
                                                       rdfs:label "useful for calculating index" .
 
@@ -715,7 +715,7 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                                                                     <http://qudt.org/schema/qudt/Unit>
                                                                     <http://www.geoscienceontology.org/geo-upper#Variable>
                                                                     owl:Thing
-                                                                    <https://w3id.org/okn/o/sd#Index>
+                                                                    <https://w3id.org/okn/o/sd#NumericalIndex>
                                                                     <https://w3id.org/okn/o/sd#Organization>
                                                                     <https://w3id.org/okn/o/sd#Parameter>
                                                                     <https://w3id.org/okn/o/sd#Person>
@@ -1407,11 +1407,11 @@ owl:priorVersion rdf:type owl:AnnotationProperty .
                                   rdfs:label "Image"@en .
 
 
-###  https://w3id.org/okn/o/sd#Index
-<https://w3id.org/okn/o/sd#Index> rdf:type owl:Class ;
+###  https://w3id.org/okn/o/sd#NumericalIndex
+<https://w3id.org/okn/o/sd#NumericalIndex> rdf:type owl:Class ;
                                   rdfs:subClassOf <https://w3id.org/okn/o/sd#Variable> ;
                                   rdfs:comment "A number (such as a ratio) derived from a series of observations and used as an indicator or measure (https://www.merriam-webster.com/dictionary/index)"@en ;
-                                  rdfs:label "Index"@en .
+                                  rdfs:label "Numerical Index"@en .
 
 
 ###  https://w3id.org/okn/o/sd#Organization

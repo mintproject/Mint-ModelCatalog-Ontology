@@ -10,8 +10,8 @@
 @base <https://w3id.org/okn/o/sdm> .
 
 <https://w3id.org/okn/o/sdm> rdf:type owl:Ontology ;
-                              owl:versionIRI <https://w3id.org/okn/o/sdm/1.5.0-nm> ;
-                              owl:imports <https://w3id.org/okn/o/sd/1.6.0-nm> ;
+                              owl:versionIRI <https://w3id.org/okn/o/sdm/1.6.0-nm> ;
+                              owl:imports <https://w3id.org/okn/o/sd/1.7.0> ;
                               dc:abstract "The Software Description Ontology for Models (SDM) expands the software description ontology (SD) to add information about scientific software models. Examples of scientific software models are hydrology models, agriculture models or economy models."@en ;
                               dc:contributor "Armen Kemanian"@en ,
                                              "Christopher Duffy"@en ,
@@ -24,20 +24,44 @@
                               dc:title "The Software Description Ontology for Models"@en ;
                               terms:license <http://creativecommons.org/licenses/by/2.0/> ;
                               vann:preferredNamespacePrefix "sdm" ;
-                              vann:preferredNamespaceUri "https://w3id.org/okn/o/sdm";
-                              owl:priorVersion <https://w3id.org/okn/o/sdm/1.4.0> ;
-                              owl:versionInfo "1.5.0"@en .
+                              vann:preferredNamespaceUri : ;
+                              owl:priorVersion <https://w3id.org/okn/o/sdm/1.5.0-nm> ;
+                              owl:versionInfo "1.6.0-nm"@en .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
+###  http://purl.org/dc/elements/1.1/abstract
+dc:abstract rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/contributor
+dc:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/license
+dc:license rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/elements/1.1/title
 dc:title rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/license
+terms:license rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
 vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -50,6 +74,10 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
 ###  http://schema.org/geo
 <http://schema.org/geo> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/okn/o/sd#usesUnit
+<https://w3id.org/okn/o/sd#usesUnit> rdf:type owl:ObjectProperty .
 
 
 ###  https://w3id.org/okn/o/sdm#calibratedVariable
@@ -77,6 +105,7 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
                                 :GeoShape
                               )
                 ] ;
+     rdfs:comment "Specific coordinates or shape associated with a region"@en ;
      rdfs:label "geo"@en .
 
 
@@ -86,6 +115,18 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
                   rdfs:range :CausalDiagram ;
                   rdfs:comment "Diagram associated to a model configuration"@en ;
                   rdfs:label "has causal diagram"@en .
+
+
+###  https://w3id.org/okn/o/sdm#hasDiagramPart
+:hasDiagramPart rdf:type owl:ObjectProperty ;
+                rdfs:domain :CausalDiagram ;
+                rdfs:range [ rdf:type owl:Class ;
+                             owl:unionOf ( <https://w3id.org/okn/o/sd#VariablePresentation>
+                                           :Process
+                                         )
+                           ] ;
+                rdfs:comment "Property that links a causal diagram with its constituent nodes" ;
+                rdfs:label "has diagram part"@en .
 
 
 ###  https://w3id.org/okn/o/sdm#hasEquation
@@ -116,24 +157,15 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 :hasOutputTimeInterval rdf:type owl:ObjectProperty ;
                        rdfs:domain :ModelConfiguration ;
                        rdfs:range :TimeInterval ;
+                       rdfs:comment "Time interval used in the model configuration"@en ;
                        rdfs:label "has ourput time interval"@en .
-
-
-###  https://w3id.org/okn/o/sdm#hasPart
-:hasPart rdf:type owl:ObjectProperty ;
-         rdfs:domain :CausalDiagram ;
-         rdfs:range [ rdf:type owl:Class ;
-                      owl:unionOf ( <https://w3id.org/okn/o/sd#VariablePresentation>
-                                    :Process
-                                  )
-                    ] ;
-         rdfs:label "has part"@en .
 
 
 ###  https://w3id.org/okn/o/sdm#hasProcess
 :hasProcess rdf:type owl:ObjectProperty ;
             rdfs:domain :ModelConfiguration ;
             rdfs:range :Process ;
+            rdfs:comment "Property that indicates which physical processes (if any) are associated with a model configuration"@en ;
             rdfs:label "has process"@en .
 
 
@@ -149,6 +181,7 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 :influences rdf:type owl:ObjectProperty ;
             rdfs:domain :Process ;
             rdfs:range :Process ;
+            rdfs:comment "Property that captures if a physical process influences another process"@en ;
             rdfs:label "influences"@en .
 
 
@@ -166,7 +199,7 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
         rdfs:domain :Region ;
         rdfs:range :Region ;
         rdfs:comment "Indicates whether a region is part of another region"@en ;
-        rdfs:label "partOf"@en .
+        rdfs:label "part of"@en .
 
 
 ###  https://w3id.org/okn/o/sdm#relevantForIntervention
@@ -182,19 +215,27 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 #################################################################
 
 ###  http://schema.org/box
-<http://schema.org/box> rdf:type owl:DatatypeProperty .
+<http://schema.org/box> rdf:type owl:DatatypeProperty ;
+                        rdfs:isDefinedBy <http://schema.org/> .
 
 
 ###  http://schema.org/elevation
-<http://schema.org/elevation> rdf:type owl:DatatypeProperty .
+<http://schema.org/elevation> rdf:type owl:DatatypeProperty ;
+                              rdfs:isDefinedBy <http://schema.org/> .
 
 
 ###  http://schema.org/latitude
-<http://schema.org/latitude> rdf:type owl:DatatypeProperty .
+<http://schema.org/latitude> rdf:type owl:DatatypeProperty ;
+                             rdfs:isDefinedBy <http://schema.org/> .
 
 
 ###  http://schema.org/longitude
-<http://schema.org/longitude> rdf:type owl:DatatypeProperty .
+<http://schema.org/longitude> rdf:type owl:DatatypeProperty ;
+                              rdfs:isDefinedBy <http://schema.org/> .
+
+
+###  https://w3id.org/okn/o/sd#value
+<https://w3id.org/okn/o/sd#value> rdf:type owl:DatatypeProperty .
 
 
 ###  https://w3id.org/okn/o/sdm#box
@@ -228,7 +269,9 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
                                        :GeoShape
                                      )
                        ] ;
-           rdfs:range xsd:string .
+           rdfs:range xsd:string ;
+           rdfs:comment "Elevation of a location (WGS84)"@en ;
+           rdfs:label "elevation"@en .
 
 
 ###  https://w3id.org/okn/o/sdm#hasCoordinateSystem
@@ -245,6 +288,7 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
                        owl:FunctionalProperty ;
               rdfs:domain :Grid ;
               rdfs:range xsd:string ;
+              rdfs:comment "Dimension of the grid (2D, 3D)"@en ;
               rdfs:label "has dimension"@en .
 
 
@@ -252,6 +296,7 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 :hasModelCategory rdf:type owl:DatatypeProperty ;
                   rdfs:domain :Model ;
                   rdfs:range xsd:string ;
+                  rdfs:comment "Category associated with a model (e.g., Hydrology)"@en ;
                   rdfs:label "has model category"@en .
 
 
@@ -259,6 +304,7 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 :hasModelResultTable rdf:type owl:DatatypeProperty ;
                      rdfs:domain :ModelConfiguration ;
                      rdfs:range xsd:string ;
+                     rdfs:comment "Sample result table associated with a model configuration"@en ;
                      rdfs:label "has model result table"@en .
 
 
@@ -274,6 +320,7 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 :hasSpatialResolution rdf:type owl:DatatypeProperty ;
                       rdfs:domain :Grid ;
                       rdfs:range xsd:string ;
+                      rdfs:comment "Spatial resolution of a grid (e.g., 50m)"@en ;
                       rdfs:label "has spatial resolution"@en .
 
 
@@ -298,7 +345,9 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
                                       :GeoShape
                                     )
                       ] ;
-          rdfs:range xsd:string .
+          rdfs:range xsd:string ;
+          rdfs:comment "Latitude (coordinates) of a location (WGS84)"@en ;
+          rdfs:label "latitude"@en .
 
 
 ###  https://w3id.org/okn/o/sdm#longitude
@@ -309,13 +358,16 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
                                        :GeoShape
                                      )
                        ] ;
-           rdfs:range xsd:string .
+           rdfs:range xsd:string ;
+           rdfs:comment "Longitude (coordinates) of a location (WGS84)"@en ;
+           rdfs:label "longitude"@en .
 
 
 ###  https://w3id.org/okn/o/sdm#parameterAssignmentMethod
 :parameterAssignmentMethod rdf:type owl:DatatypeProperty ;
                            rdfs:domain :ModelConfigurationSetup ;
                            rdfs:range xsd:string ;
+                           rdfs:comment "Property that indicates how have the parameters assigned in a model configuration (e.g., using an expert guess, by using calibration, etc.)"@en ;
                            rdfs:label "parameter assignment method"@en .
 
 
@@ -331,6 +383,10 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 #    Classes
 #################################################################
 
+###  http://qudt.org/schema/qudt/Unit
+<http://qudt.org/schema/qudt/Unit> rdf:type owl:Class .
+
+
 ###  http://schema.org/GeoCoordinates
 <http://schema.org/GeoCoordinates> rdf:type owl:Class ;
                                    rdfs:isDefinedBy <http://schema.org/> .
@@ -344,12 +400,20 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 <http://schema.org/Place> rdf:type owl:Class .
 
 
+###  https://w3id.org/okn/o/sd#ConfigurationSetup
+<https://w3id.org/okn/o/sd#ConfigurationSetup> rdf:type owl:Class .
+
+
 ###  https://w3id.org/okn/o/sd#DatasetSpecification
 <https://w3id.org/okn/o/sd#DatasetSpecification> rdf:type owl:Class .
 
 
 ###  https://w3id.org/okn/o/sd#Image
 <https://w3id.org/okn/o/sd#Image> rdf:type owl:Class .
+
+
+###  https://w3id.org/okn/o/sd#Parameter
+<https://w3id.org/okn/o/sd#Parameter> rdf:type owl:Class .
 
 
 ###  https://w3id.org/okn/o/sd#Software
@@ -365,7 +429,9 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
 
 ###  https://w3id.org/okn/o/sdm#CausalDiagram
-:CausalDiagram rdf:type owl:Class .
+:CausalDiagram rdf:type owl:Class ;
+               rdfs:comment "Diagram information with the processes and variables associated with a model configuration"@en ;
+               rdfs:label "Causal Diagram"@en .
 
 
 ###  https://w3id.org/okn/o/sdm#EmpiricalModel
@@ -383,24 +449,29 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
 
 ###  https://w3id.org/okn/o/sdm#Equation
-:Equation rdf:type owl:Class .
+:Equation rdf:type owl:Class ;
+          rdfs:comment "Information about the mathematical representation used in a model or model configuration"@en ;
+          rdfs:label "Equation"@en .
 
 
 ###  https://w3id.org/okn/o/sdm#GeoCoordinates
 :GeoCoordinates rdf:type owl:Class ;
                 rdfs:subClassOf <http://schema.org/GeoCoordinates> ;
+                rdfs:comment "Coordinate metadata of a region"@en ;
                 rdfs:label "GeoCoordinates"@en .
 
 
 ###  https://w3id.org/okn/o/sdm#GeoShape
 :GeoShape rdf:type owl:Class ;
           rdfs:subClassOf <http://schema.org/GeoShape> ;
+          rdfs:comment "Shape or polygon of a region in a map"@en ;
           rdfs:label "GeoShape"@en .
 
 
 ###  https://w3id.org/okn/o/sdm#Grid
 :Grid rdf:type owl:Class ;
       rdfs:subClassOf <https://w3id.org/okn/o/sd#DatasetSpecification> ;
+      rdfs:comment "Class that represents the geospatial information associated with a model" ;
       rdfs:label "Grid"@en .
 
 
@@ -443,6 +514,7 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/okn/o/sdm#PointBasedGrid
 :PointBasedGrid rdf:type owl:Class ;
                 rdfs:subClassOf :Grid ;
+                rdfs:comment "A grid that is based on a series if points (or a single point). Typically associated with point-based models"@en ;
                 rdfs:label "Point Based Grid"@en .
 
 
@@ -452,7 +524,9 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/okn/o/sdm#Region
 :Region rdf:type owl:Class ;
-        rdfs:subClassOf <http://schema.org/Place> .
+        rdfs:subClassOf <http://schema.org/Place> ;
+        rdfs:comment "An area or division with some characteristics but not always fixed boundaries"@en ;
+        rdfs:label "Region"@en .
 
 
 ###  https://w3id.org/okn/o/sdm#SpatialResolution
@@ -462,6 +536,7 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/okn/o/sdm#SpatiallyDistributedGrid
 :SpatiallyDistributedGrid rdf:type owl:Class ;
                           rdfs:subClassOf :Grid ;
+                          rdfs:comment "Grid that represents a 2D or 3D space"@en ;
                           rdfs:label "Spatially Distributed Grid"@en .
 
 

@@ -1,0 +1,504 @@
+<https://w3id.org/okn/o/sdm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/okn/o/sdm> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/okn/o/sdm/1.6.0> .
+<https://w3id.org/okn/o/sdm> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/okn/o/sd/1.7.0> .
+<https://w3id.org/okn/o/sdm> <http://purl.org/dc/elements/1.1/abstract> "The Software Description Ontology for Models (SDM) expands the software description ontology (SD) to add information about scientific software models. Examples of scientific software models are hydrology models, agriculture models or economy models."@en .
+<https://w3id.org/okn/o/sdm> <http://purl.org/dc/elements/1.1/contributor> "Armen Kemanian"@en .
+<https://w3id.org/okn/o/sdm> <http://purl.org/dc/elements/1.1/contributor> "Christopher Duffy"@en .
+<https://w3id.org/okn/o/sdm> <http://purl.org/dc/elements/1.1/contributor> "Kelly Cobourn"@en .
+<https://w3id.org/okn/o/sdm> <http://purl.org/dc/elements/1.1/contributor> "Scott Peckham"@en .
+<https://w3id.org/okn/o/sdm> <http://purl.org/dc/elements/1.1/creator> "Daniel Garijo"@en .
+<https://w3id.org/okn/o/sdm> <http://purl.org/dc/elements/1.1/creator> "Deborah Khider"@en .
+<https://w3id.org/okn/o/sdm> <http://purl.org/dc/elements/1.1/creator> "Yolanda Gil"@en .
+<https://w3id.org/okn/o/sdm> <http://purl.org/dc/elements/1.1/license> "<http://creativecommons.org/licenses/by/2.0/>"@en .
+<https://w3id.org/okn/o/sdm> <http://purl.org/dc/elements/1.1/title> "The Software Description Ontology for Models"@en .
+<https://w3id.org/okn/o/sdm> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/2.0/> .
+<https://w3id.org/okn/o/sdm> <http://purl.org/vocab/vann/preferredNamespacePrefix> "sdm" .
+<https://w3id.org/okn/o/sdm> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/okn/o/sdm#> .
+<https://w3id.org/okn/o/sdm> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/okn/o/sdm/1.5.0> .
+<https://w3id.org/okn/o/sdm> <http://www.w3.org/2002/07/owl#versionInfo> "1.6.0"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/abstract
+<http://purl.org/dc/elements/1.1/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/license
+<http://purl.org/dc/elements/1.1/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://schema.org/contentLocation
+<http://schema.org/contentLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://schema.org/geo
+<http://schema.org/geo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/okn/o/sd#usesUnit
+<https://w3id.org/okn/o/sd#usesUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/okn/o/sdm#calibratedVariable
+<https://w3id.org/okn/o/sdm#calibratedVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/okn/o/sdm#calibratedVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#ModelConfigurationSetup> .
+<https://w3id.org/okn/o/sdm#calibratedVariable> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sd#VariablePresentation> .
+<https://w3id.org/okn/o/sdm#calibratedVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Variable that was calibrated in this particular model configuration calibration"@en .
+<https://w3id.org/okn/o/sdm#calibratedVariable> <http://www.w3.org/2000/01/rdf-schema#label> "calibrated variable"@en .
+# 
+# https://w3id.org/okn/o/sdm#calibrationTargetVariable
+<https://w3id.org/okn/o/sdm#calibrationTargetVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/okn/o/sdm#calibrationTargetVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#ModelConfigurationSetup> .
+<https://w3id.org/okn/o/sdm#calibrationTargetVariable> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sd#VariablePresentation> .
+<https://w3id.org/okn/o/sdm#calibrationTargetVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Variable for which the model was calibrated for. For example, in a hydrology model one calibrate the predicted river width by varying hydrologic conductivity"@en .
+<https://w3id.org/okn/o/sdm#calibrationTargetVariable> <http://www.w3.org/2000/01/rdf-schema#label> "calibration target variable"@en .
+# 
+# https://w3id.org/okn/o/sdm#geo
+<https://w3id.org/okn/o/sdm#geo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/okn/o/sdm#geo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/geo> .
+<https://w3id.org/okn/o/sdm#geo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#Region> .
+<https://w3id.org/okn/o/sdm#geo> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/okn/o/sdm#GeoCoordinates> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/okn/o/sdm#GeoShape> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/okn/o/sdm#geo> <http://www.w3.org/2000/01/rdf-schema#comment> "Specific coordinates or shape associated with a region"@en .
+<https://w3id.org/okn/o/sdm#geo> <http://www.w3.org/2000/01/rdf-schema#label> "geo"@en .
+# 
+# https://w3id.org/okn/o/sdm#hasCausalDiagram
+<https://w3id.org/okn/o/sdm#hasCausalDiagram> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/okn/o/sdm#hasCausalDiagram> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#ModelConfiguration> .
+<https://w3id.org/okn/o/sdm#hasCausalDiagram> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sdm#CausalDiagram> .
+<https://w3id.org/okn/o/sdm#hasCausalDiagram> <http://www.w3.org/2000/01/rdf-schema#comment> "Diagram associated to a model configuration"@en .
+<https://w3id.org/okn/o/sdm#hasCausalDiagram> <http://www.w3.org/2000/01/rdf-schema#label> "has causal diagram"@en .
+# 
+# https://w3id.org/okn/o/sdm#hasDiagramPart
+<https://w3id.org/okn/o/sdm#hasDiagramPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/okn/o/sdm#hasDiagramPart> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#CausalDiagram> .
+<https://w3id.org/okn/o/sdm#hasDiagramPart> <http://www.w3.org/2000/01/rdf-schema#range> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/okn/o/sd#VariablePresentation> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/okn/o/sdm#Process> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/okn/o/sdm#hasDiagramPart> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links a causal diagram with its constituent nodes" .
+<https://w3id.org/okn/o/sdm#hasDiagramPart> <http://www.w3.org/2000/01/rdf-schema#label> "has diagram part"@en .
+# 
+# https://w3id.org/okn/o/sdm#hasEquation
+<https://w3id.org/okn/o/sdm#hasEquation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/okn/o/sdm#hasEquation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#Model> .
+<https://w3id.org/okn/o/sdm#hasEquation> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sdm#Equation> .
+<https://w3id.org/okn/o/sdm#hasEquation> <http://www.w3.org/2000/01/rdf-schema#comment> "Equations used in the model"@en .
+<https://w3id.org/okn/o/sdm#hasEquation> <http://www.w3.org/2000/01/rdf-schema#label> "has equation"@en .
+# 
+# https://w3id.org/okn/o/sdm#hasExplanationDiagram
+<https://w3id.org/okn/o/sdm#hasExplanationDiagram> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/okn/o/sdm#hasExplanationDiagram> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#Model> .
+<https://w3id.org/okn/o/sdm#hasExplanationDiagram> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sd#Image> .
+<https://w3id.org/okn/o/sdm#hasExplanationDiagram> <http://www.w3.org/2000/01/rdf-schema#comment> "Diagram used to explain the behavior of the model"@en .
+<https://w3id.org/okn/o/sdm#hasExplanationDiagram> <http://www.w3.org/2000/01/rdf-schema#label> "has explanation diagram"@en .
+# 
+# https://w3id.org/okn/o/sdm#hasGrid
+<https://w3id.org/okn/o/sdm#hasGrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/okn/o/sdm#hasGrid> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#Model> .
+<https://w3id.org/okn/o/sdm#hasGrid> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sdm#Grid> .
+<https://w3id.org/okn/o/sdm#hasGrid> <http://www.w3.org/2000/01/rdf-schema#comment> "Grid information about the model"@en .
+<https://w3id.org/okn/o/sdm#hasGrid> <http://www.w3.org/2000/01/rdf-schema#label> "has grid"@en .
+# 
+# https://w3id.org/okn/o/sdm#hasOutputTimeInterval
+<https://w3id.org/okn/o/sdm#hasOutputTimeInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/okn/o/sdm#hasOutputTimeInterval> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#ModelConfiguration> .
+<https://w3id.org/okn/o/sdm#hasOutputTimeInterval> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sdm#TimeInterval> .
+<https://w3id.org/okn/o/sdm#hasOutputTimeInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "Time interval used in the model configuration"@en .
+<https://w3id.org/okn/o/sdm#hasOutputTimeInterval> <http://www.w3.org/2000/01/rdf-schema#label> "has ourput time interval"@en .
+# 
+# https://w3id.org/okn/o/sdm#hasProcess
+<https://w3id.org/okn/o/sdm#hasProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/okn/o/sdm#hasProcess> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#ModelConfiguration> .
+<https://w3id.org/okn/o/sdm#hasProcess> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sdm#Process> .
+<https://w3id.org/okn/o/sdm#hasProcess> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that indicates which physical processes (if any) are associated with a model configuration"@en .
+<https://w3id.org/okn/o/sdm#hasProcess> <http://www.w3.org/2000/01/rdf-schema#label> "has process"@en .
+# 
+# https://w3id.org/okn/o/sdm#hasRegion
+<https://w3id.org/okn/o/sdm#hasRegion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/okn/o/sdm#hasRegion> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/contentLocation> .
+<https://w3id.org/okn/o/sdm#hasRegion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#ModelConfiguration> .
+<https://w3id.org/okn/o/sdm#hasRegion> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sdm#Region> .
+<https://w3id.org/okn/o/sdm#hasRegion> <http://www.w3.org/2000/01/rdf-schema#comment> "Property linking a region to a model configuration/calibration. This property implies that the described model configuration is prepared to execute in that target region"@en .
+# 
+# https://w3id.org/okn/o/sdm#influences
+<https://w3id.org/okn/o/sdm#influences> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/okn/o/sdm#influences> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#Process> .
+<https://w3id.org/okn/o/sdm#influences> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sdm#Process> .
+<https://w3id.org/okn/o/sdm#influences> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that captures if a physical process influences another process"@en .
+<https://w3id.org/okn/o/sdm#influences> <http://www.w3.org/2000/01/rdf-schema#label> "influences"@en .
+# 
+# https://w3id.org/okn/o/sdm#intervalUnit
+<https://w3id.org/okn/o/sdm#intervalUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/okn/o/sdm#intervalUnit> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/okn/o/sd#usesUnit> .
+<https://w3id.org/okn/o/sdm#intervalUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#TimeInterval> .
+<https://w3id.org/okn/o/sdm#intervalUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/Unit> .
+<https://w3id.org/okn/o/sdm#intervalUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Unit used in an interval (e.g., month)"@en .
+<https://w3id.org/okn/o/sdm#intervalUnit> <http://www.w3.org/2000/01/rdf-schema#label> "interval unit"@en .
+# 
+# https://w3id.org/okn/o/sdm#partOf
+<https://w3id.org/okn/o/sdm#partOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/okn/o/sdm#partOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#Region> .
+<https://w3id.org/okn/o/sdm#partOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sdm#Region> .
+<https://w3id.org/okn/o/sdm#partOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether a region is part of another region"@en .
+<https://w3id.org/okn/o/sdm#partOf> <http://www.w3.org/2000/01/rdf-schema#label> "part of"@en .
+# 
+# https://w3id.org/okn/o/sdm#relevantForIntervention
+<https://w3id.org/okn/o/sdm#relevantForIntervention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/okn/o/sdm#relevantForIntervention> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sd#Parameter> .
+<https://w3id.org/okn/o/sdm#relevantForIntervention> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sdm#Intervention> .
+<https://w3id.org/okn/o/sdm#relevantForIntervention> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links a parameter to the intervention it is relevant for."@en .
+<https://w3id.org/okn/o/sdm#relevantForIntervention> <http://www.w3.org/2000/01/rdf-schema#label> "relevant for intervention"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://schema.org/box
+<http://schema.org/box> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://schema.org/elevation
+<http://schema.org/elevation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://schema.org/latitude
+<http://schema.org/latitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://schema.org/longitude
+<http://schema.org/longitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://w3id.org/okn/o/sd#value
+<https://w3id.org/okn/o/sd#value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://w3id.org/okn/o/sdm#box
+<https://w3id.org/okn/o/sdm#box> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/okn/o/sdm#box> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/box> .
+<https://w3id.org/okn/o/sdm#box> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#GeoShape> .
+<https://w3id.org/okn/o/sdm#box> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/okn/o/sdm#calibrationInterval
+<https://w3id.org/okn/o/sdm#calibrationInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/okn/o/sdm#calibrationInterval> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#ModelConfigurationSetup> .
+<https://w3id.org/okn/o/sdm#calibrationInterval> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/okn/o/sdm#calibrationInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that represents the temporal interval used to calibrate a model"@en .
+<https://w3id.org/okn/o/sdm#calibrationInterval> <http://www.w3.org/2000/01/rdf-schema#label> "calibration interval"@en .
+# 
+# https://w3id.org/okn/o/sdm#calibrationMethod
+<https://w3id.org/okn/o/sdm#calibrationMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/okn/o/sdm#calibrationMethod> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#ModelConfigurationSetup> .
+<https://w3id.org/okn/o/sdm#calibrationMethod> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/okn/o/sdm#calibrationMethod> <http://www.w3.org/2000/01/rdf-schema#comment> "Calibration method used for a particular model configuration or setup"@en .
+<https://w3id.org/okn/o/sdm#calibrationMethod> <http://www.w3.org/2000/01/rdf-schema#label> "calibration method"@en .
+# 
+# https://w3id.org/okn/o/sdm#elevation
+<https://w3id.org/okn/o/sdm#elevation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/okn/o/sdm#elevation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/elevation> .
+<https://w3id.org/okn/o/sdm#elevation> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/okn/o/sdm#GeoCoordinates> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/okn/o/sdm#GeoShape> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/okn/o/sdm#elevation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/okn/o/sdm#elevation> <http://www.w3.org/2000/01/rdf-schema#comment> "Elevation of a location (WGS84)"@en .
+<https://w3id.org/okn/o/sdm#elevation> <http://www.w3.org/2000/01/rdf-schema#label> "elevation"@en .
+# 
+# https://w3id.org/okn/o/sdm#hasCoordinateSystem
+<https://w3id.org/okn/o/sdm#hasCoordinateSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/okn/o/sdm#hasCoordinateSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/okn/o/sdm#hasCoordinateSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#Grid> .
+<https://w3id.org/okn/o/sdm#hasCoordinateSystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/okn/o/sdm#hasCoordinateSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Coordinate system used in a grid"@en .
+<https://w3id.org/okn/o/sdm#hasCoordinateSystem> <http://www.w3.org/2000/01/rdf-schema#label> "has coordinate system"@en .
+# 
+# https://w3id.org/okn/o/sdm#hasDimension
+<https://w3id.org/okn/o/sdm#hasDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/okn/o/sdm#hasDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/okn/o/sdm#hasDimension> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#Grid> .
+<https://w3id.org/okn/o/sdm#hasDimension> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/okn/o/sdm#hasDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "Dimension of the grid (2D, 3D)"@en .
+<https://w3id.org/okn/o/sdm#hasDimension> <http://www.w3.org/2000/01/rdf-schema#label> "has dimension"@en .
+# 
+# https://w3id.org/okn/o/sdm#hasModelCategory
+<https://w3id.org/okn/o/sdm#hasModelCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/okn/o/sdm#hasModelCategory> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#Model> .
+<https://w3id.org/okn/o/sdm#hasModelCategory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/okn/o/sdm#hasModelCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Category associated with a model (e.g., Hydrology)"@en .
+<https://w3id.org/okn/o/sdm#hasModelCategory> <http://www.w3.org/2000/01/rdf-schema#label> "has model category"@en .
+# 
+# https://w3id.org/okn/o/sdm#hasModelResultTable
+<https://w3id.org/okn/o/sdm#hasModelResultTable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/okn/o/sdm#hasModelResultTable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#ModelConfiguration> .
+<https://w3id.org/okn/o/sdm#hasModelResultTable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/okn/o/sdm#hasModelResultTable> <http://www.w3.org/2000/01/rdf-schema#comment> "Sample result table associated with a model configuration"@en .
+<https://w3id.org/okn/o/sdm#hasModelResultTable> <http://www.w3.org/2000/01/rdf-schema#label> "has model result table"@en .
+# 
+# https://w3id.org/okn/o/sdm#hasShape
+<https://w3id.org/okn/o/sdm#hasShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/okn/o/sdm#hasShape> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#Grid> .
+<https://w3id.org/okn/o/sdm#hasShape> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/okn/o/sdm#hasShape> <http://www.w3.org/2000/01/rdf-schema#comment> "Grids may be: rectangular, triangular, hexagonal, hybrid, unstructured, block structure, etc."@en .
+<https://w3id.org/okn/o/sdm#hasShape> <http://www.w3.org/2000/01/rdf-schema#label> "has shape"@en .
+# 
+# https://w3id.org/okn/o/sdm#hasSpatialResolution
+<https://w3id.org/okn/o/sdm#hasSpatialResolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/okn/o/sdm#hasSpatialResolution> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#Grid> .
+<https://w3id.org/okn/o/sdm#hasSpatialResolution> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/okn/o/sdm#hasSpatialResolution> <http://www.w3.org/2000/01/rdf-schema#comment> "Spatial resolution of a grid (e.g., 50m)"@en .
+<https://w3id.org/okn/o/sdm#hasSpatialResolution> <http://www.w3.org/2000/01/rdf-schema#label> "has spatial resolution"@en .
+# 
+# https://w3id.org/okn/o/sdm#intervalValue
+<https://w3id.org/okn/o/sdm#intervalValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/okn/o/sdm#intervalValue> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/okn/o/sd#value> .
+<https://w3id.org/okn/o/sdm#intervalValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#TimeInterval> .
+<https://w3id.org/okn/o/sdm#intervalValue> <http://www.w3.org/2000/01/rdf-schema#range> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+_:genid10 <http://www.w3.org/2002/07/owl#unionOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#integer> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/okn/o/sdm#intervalValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Value used in the time interval of a model (e.g., 1 month, 5 days, 'harvest cycle')"@en .
+<https://w3id.org/okn/o/sdm#intervalValue> <http://www.w3.org/2000/01/rdf-schema#label> "interval value"@en .
+# 
+# https://w3id.org/okn/o/sdm#latitude
+<https://w3id.org/okn/o/sdm#latitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/okn/o/sdm#latitude> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/latitude> .
+<https://w3id.org/okn/o/sdm#latitude> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid13 <http://www.w3.org/2002/07/owl#unionOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/okn/o/sdm#GeoCoordinates> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/okn/o/sdm#GeoShape> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/okn/o/sdm#latitude> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/okn/o/sdm#latitude> <http://www.w3.org/2000/01/rdf-schema#comment> "Latitude (coordinates) of a location (WGS84)"@en .
+<https://w3id.org/okn/o/sdm#latitude> <http://www.w3.org/2000/01/rdf-schema#label> "latitude"@en .
+# 
+# https://w3id.org/okn/o/sdm#longitude
+<https://w3id.org/okn/o/sdm#longitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/okn/o/sdm#longitude> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/longitude> .
+<https://w3id.org/okn/o/sdm#longitude> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid16 <http://www.w3.org/2002/07/owl#unionOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/okn/o/sdm#GeoCoordinates> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/okn/o/sdm#GeoShape> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/okn/o/sdm#longitude> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/okn/o/sdm#longitude> <http://www.w3.org/2000/01/rdf-schema#comment> "Longitude (coordinates) of a location (WGS84)"@en .
+<https://w3id.org/okn/o/sdm#longitude> <http://www.w3.org/2000/01/rdf-schema#label> "longitude"@en .
+# 
+# https://w3id.org/okn/o/sdm#parameterAssignmentMethod
+<https://w3id.org/okn/o/sdm#parameterAssignmentMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/okn/o/sdm#parameterAssignmentMethod> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#ModelConfigurationSetup> .
+<https://w3id.org/okn/o/sdm#parameterAssignmentMethod> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/okn/o/sdm#parameterAssignmentMethod> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that indicates how have the parameters assigned in a model configuration (e.g., using an expert guess, by using calibration, etc.)"@en .
+<https://w3id.org/okn/o/sdm#parameterAssignmentMethod> <http://www.w3.org/2000/01/rdf-schema#label> "parameter assignment method"@en .
+# 
+# https://w3id.org/okn/o/sdm#validUntil
+<https://w3id.org/okn/o/sdm#validUntil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/okn/o/sdm#validUntil> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#ModelConfigurationSetup> .
+<https://w3id.org/okn/o/sdm#validUntil> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/okn/o/sdm#validUntil> <http://www.w3.org/2000/01/rdf-schema#comment> "Date until which the calibration of a model is valid. For example, a trained model with data from 2005-2010 may only be valid for predictions until 2015."@en .
+<https://w3id.org/okn/o/sdm#validUntil> <http://www.w3.org/2000/01/rdf-schema#label> "valid until"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://qudt.org/schema/qudt/Unit
+<http://qudt.org/schema/qudt/Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://schema.org/GeoCoordinates
+<http://schema.org/GeoCoordinates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/GeoCoordinates> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
+# 
+# http://schema.org/GeoShape
+<http://schema.org/GeoShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://schema.org/Place
+<http://schema.org/Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/okn/o/sd#ConfigurationSetup
+<https://w3id.org/okn/o/sd#ConfigurationSetup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/okn/o/sd#DatasetSpecification
+<https://w3id.org/okn/o/sd#DatasetSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/okn/o/sd#Image
+<https://w3id.org/okn/o/sd#Image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/okn/o/sd#Parameter
+<https://w3id.org/okn/o/sd#Parameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/okn/o/sd#Software
+<https://w3id.org/okn/o/sd#Software> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/okn/o/sd#SoftwareConfiguration
+<https://w3id.org/okn/o/sd#SoftwareConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/okn/o/sd#VariablePresentation
+<https://w3id.org/okn/o/sd#VariablePresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/okn/o/sdm#CausalDiagram
+<https://w3id.org/okn/o/sdm#CausalDiagram> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/okn/o/sdm#EmpiricalModel
+<https://w3id.org/okn/o/sdm#EmpiricalModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/okn/o/sdm#EmpiricalModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/okn/o/sdm#Model> .
+<https://w3id.org/okn/o/sdm#EmpiricalModel> <http://www.w3.org/2000/01/rdf-schema#comment> "Model based on observations."@en .
+<https://w3id.org/okn/o/sdm#EmpiricalModel> <http://www.w3.org/2000/01/rdf-schema#label> "Empirical model"@en .
+# 
+# https://w3id.org/okn/o/sdm#Emulator
+<https://w3id.org/okn/o/sdm#Emulator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/okn/o/sdm#Emulator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/okn/o/sdm#Model> .
+<https://w3id.org/okn/o/sdm#Emulator> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of models that emulates the behavior of another model. For example, an emulator can be a machine learning model trained on the output runs of a hydrology model"@en .
+<https://w3id.org/okn/o/sdm#Emulator> <http://www.w3.org/2000/01/rdf-schema#label> "Emulator"@en .
+# 
+# https://w3id.org/okn/o/sdm#Equation
+<https://w3id.org/okn/o/sdm#Equation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/okn/o/sdm#GeoCoordinates
+<https://w3id.org/okn/o/sdm#GeoCoordinates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/okn/o/sdm#GeoCoordinates> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/GeoCoordinates> .
+<https://w3id.org/okn/o/sdm#GeoCoordinates> <http://www.w3.org/2000/01/rdf-schema#comment> "Coordinate metadata of a region"@en .
+<https://w3id.org/okn/o/sdm#GeoCoordinates> <http://www.w3.org/2000/01/rdf-schema#label> "GeoCoordinates"@en .
+# 
+# https://w3id.org/okn/o/sdm#GeoShape
+<https://w3id.org/okn/o/sdm#GeoShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/okn/o/sdm#GeoShape> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/GeoShape> .
+<https://w3id.org/okn/o/sdm#GeoShape> <http://www.w3.org/2000/01/rdf-schema#comment> "Shape or polygon of a region in a map"@en .
+<https://w3id.org/okn/o/sdm#GeoShape> <http://www.w3.org/2000/01/rdf-schema#label> "GeoShape"@en .
+# 
+# https://w3id.org/okn/o/sdm#Grid
+<https://w3id.org/okn/o/sdm#Grid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/okn/o/sdm#Grid> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/okn/o/sd#DatasetSpecification> .
+<https://w3id.org/okn/o/sdm#Grid> <http://www.w3.org/2000/01/rdf-schema#comment> "Class that represents the geospatial information associated with a model" .
+<https://w3id.org/okn/o/sdm#Grid> <http://www.w3.org/2000/01/rdf-schema#label> "Grid"@en .
+# 
+# https://w3id.org/okn/o/sdm#HybridModel
+<https://w3id.org/okn/o/sdm#HybridModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/okn/o/sdm#HybridModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/okn/o/sdm#Model> .
+<https://w3id.org/okn/o/sdm#HybridModel> <http://www.w3.org/2000/01/rdf-schema#comment> "A model based on empirical observations and theory."@en .
+<https://w3id.org/okn/o/sdm#HybridModel> <http://www.w3.org/2000/01/rdf-schema#label> "Hybrid model"@en .
+# 
+# https://w3id.org/okn/o/sdm#Intervention
+<https://w3id.org/okn/o/sdm#Intervention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/okn/o/sdm#Intervention> <http://www.w3.org/2000/01/rdf-schema#comment> "Interference by a policy maker or modeler by modifying a variable or parameter of a model"@en .
+<https://w3id.org/okn/o/sdm#Intervention> <http://www.w3.org/2000/01/rdf-schema#label> "Intervention"@en .
+# 
+# https://w3id.org/okn/o/sdm#Model
+<https://w3id.org/okn/o/sdm#Model> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/okn/o/sdm#Model> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/okn/o/sd#Software> .
+<https://w3id.org/okn/o/sdm#Model> <http://www.w3.org/2000/01/rdf-schema#comment> "A mathematical description of a process (e.g., hydrological, agricultural, social, etc.)"@en .
+<https://w3id.org/okn/o/sdm#Model> <http://www.w3.org/2000/01/rdf-schema#label> "Model"@en .
+# 
+# https://w3id.org/okn/o/sdm#ModelConfiguration
+<https://w3id.org/okn/o/sdm#ModelConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/okn/o/sdm#ModelConfiguration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/okn/o/sd#SoftwareConfiguration> .
+<https://w3id.org/okn/o/sdm#ModelConfiguration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/okn/o/sdm#Model> .
+<https://w3id.org/okn/o/sdm#ModelConfiguration> <http://www.w3.org/2000/01/rdf-schema#comment> "A model configuration is a way of exposing a particular functionality of a model."@en .
+<https://w3id.org/okn/o/sdm#ModelConfiguration> <http://www.w3.org/2000/01/rdf-schema#label> "Model configuration"@en .
+# 
+# https://w3id.org/okn/o/sdm#ModelConfigurationSetup
+<https://w3id.org/okn/o/sdm#ModelConfigurationSetup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/okn/o/sdm#ModelConfigurationSetup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/okn/o/sd#ConfigurationSetup> .
+<https://w3id.org/okn/o/sdm#ModelConfigurationSetup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/okn/o/sdm#ModelConfiguration> .
+<https://w3id.org/okn/o/sdm#ModelConfigurationSetup> <http://www.w3.org/2000/01/rdf-schema#comment> "Setup of a particular model, that may represent a calibration or a configuration with a set of values for a specific region."@en .
+<https://w3id.org/okn/o/sdm#ModelConfigurationSetup> <http://www.w3.org/2000/01/rdf-schema#label> "Model configuration setup"@en .
+# 
+# https://w3id.org/okn/o/sdm#PointBasedGrid
+<https://w3id.org/okn/o/sdm#PointBasedGrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/okn/o/sdm#PointBasedGrid> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/okn/o/sdm#Grid> .
+<https://w3id.org/okn/o/sdm#PointBasedGrid> <http://www.w3.org/2000/01/rdf-schema#comment> "A grid that is based on a series if points (or a single point). Typically associated with point-based models"@en .
+<https://w3id.org/okn/o/sdm#PointBasedGrid> <http://www.w3.org/2000/01/rdf-schema#label> "Point Based Grid"@en .
+# 
+# https://w3id.org/okn/o/sdm#Process
+<https://w3id.org/okn/o/sdm#Process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/okn/o/sdm#Region
+<https://w3id.org/okn/o/sdm#Region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/okn/o/sdm#Region> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Place> .
+<https://w3id.org/okn/o/sdm#Region> <http://www.w3.org/2000/01/rdf-schema#comment> "An area or division with some characteristics but not always fixed boundaries"@en .
+<https://w3id.org/okn/o/sdm#Region> <http://www.w3.org/2000/01/rdf-schema#label> "Region"@en .
+# 
+# https://w3id.org/okn/o/sdm#SpatialResolution
+<https://w3id.org/okn/o/sdm#SpatialResolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/okn/o/sdm#SpatiallyDistributedGrid
+<https://w3id.org/okn/o/sdm#SpatiallyDistributedGrid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/okn/o/sdm#SpatiallyDistributedGrid> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/okn/o/sdm#Grid> .
+<https://w3id.org/okn/o/sdm#SpatiallyDistributedGrid> <http://www.w3.org/2000/01/rdf-schema#comment> "Grid that represents a 2D or 3D space"@en .
+<https://w3id.org/okn/o/sdm#SpatiallyDistributedGrid> <http://www.w3.org/2000/01/rdf-schema#label> "Spatially Distributed Grid"@en .
+# 
+# https://w3id.org/okn/o/sdm#Theory-GuidedModel
+<https://w3id.org/okn/o/sdm#Theory-GuidedModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/okn/o/sdm#Theory-GuidedModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/okn/o/sdm#Model> .
+<https://w3id.org/okn/o/sdm#Theory-GuidedModel> <http://www.w3.org/2000/01/rdf-schema#comment> "A model guided by mathematical equations that attempt to represent one or more natural processes."@en .
+<https://w3id.org/okn/o/sdm#Theory-GuidedModel> <http://www.w3.org/2000/01/rdf-schema#label> "Theory guided model"@en .
+# 
+# https://w3id.org/okn/o/sdm#TimeInterval
+<https://w3id.org/okn/o/sdm#TimeInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/okn/o/sdm#TimeInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "Time interval at which a model produces output. For example, a model may produce outputs for every simulated day, hour, etc."@en .
+<https://w3id.org/okn/o/sdm#TimeInterval> <http://www.w3.org/2000/01/rdf-schema#label> "Time Interval"@en .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

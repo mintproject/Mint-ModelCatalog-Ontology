@@ -99,22 +99,34 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://schema.org/box",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://schema.org/"
+  } ]
 }, {
   "@id" : "http://schema.org/contentLocation",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "http://schema.org/elevation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://schema.org/"
+  } ]
 }, {
   "@id" : "http://schema.org/geo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "http://schema.org/latitude",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://schema.org/"
+  } ]
 }, {
   "@id" : "http://schema.org/longitude",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://schema.org/"
+  } ]
 }, {
   "@id" : "https://w3id.org/okn/o/sd#ConfigurationSetup",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
@@ -204,7 +216,15 @@
   } ]
 }, {
   "@id" : "https://w3id.org/okn/o/sdm#CausalDiagram",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Diagram information with the processes and variables associated with a model configuration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Causal Diagram"
+  } ]
 }, {
   "@id" : "https://w3id.org/okn/o/sdm#EmpiricalModel",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -235,7 +255,15 @@
   } ]
 }, {
   "@id" : "https://w3id.org/okn/o/sdm#Equation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Information about the mathematical representation used in a model or model configuration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Equation"
+  } ]
 }, {
   "@id" : "https://w3id.org/okn/o/sdm#GeoCoordinates",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],

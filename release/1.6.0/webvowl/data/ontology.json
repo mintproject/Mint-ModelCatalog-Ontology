@@ -10,12 +10,6 @@
     "version" : "1.6.0",
     "author" : [ "Yolanda Gil", "Deborah Khider", "Daniel Garijo" ],
     "other" : {
-      "priorVersion" : [ {
-        "identifier" : "priorVersion",
-        "language" : "undefined",
-        "value" : "https://w3id.org/okn/o/sdm/1.5.0",
-        "type" : "iri"
-      } ],
       "license" : [ {
         "identifier" : "license",
         "language" : "en",
@@ -27,7 +21,18 @@
         "value" : "http://creativecommons.org/licenses/by/2.0/",
         "type" : "iri"
       } ],
+      "priorVersion" : [ {
+        "identifier" : "priorVersion",
+        "language" : "undefined",
+        "value" : "https://w3id.org/okn/o/sdm/1.5.0",
+        "type" : "iri"
+      } ],
       "creator" : [ {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Daniel Garijo",
+        "type" : "label"
+      }, {
         "identifier" : "creator",
         "language" : "en",
         "value" : "Yolanda Gil",
@@ -37,16 +42,11 @@
         "language" : "en",
         "value" : "Deborah Khider",
         "type" : "label"
-      }, {
-        "identifier" : "creator",
-        "language" : "en",
-        "value" : "Daniel Garijo",
-        "type" : "label"
       } ],
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "en",
-        "value" : "Christopher Duffy",
+        "value" : "Scott Peckham",
         "type" : "label"
       }, {
         "identifier" : "contributor",
@@ -56,7 +56,7 @@
       }, {
         "identifier" : "contributor",
         "language" : "en",
-        "value" : "Scott Peckham",
+        "value" : "Christopher Duffy",
         "type" : "label"
       }, {
         "identifier" : "contributor",
@@ -76,17 +76,17 @@
         "value" : "1.6.0",
         "type" : "label"
       } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
-        "language" : "undefined",
-        "value" : "https://w3id.org/okn/o/sdm#",
-        "type" : "iri"
-      } ],
       "abstract" : [ {
         "identifier" : "abstract",
         "language" : "en",
         "value" : "The Software Description Ontology for Models (SDM) expands the software description ontology (SD) to add information about scientific software models. Examples of scientific software models are hydrology models, agriculture models or economy models.",
         "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/okn/o/sdm#",
+        "type" : "iri"
       } ],
       "title" : [ {
         "identifier" : "title",
@@ -176,7 +176,7 @@
     "id" : "76",
     "type" : "owl:Class"
   }, {
-    "id" : "81",
+    "id" : "79",
     "type" : "owl:Class"
   }, {
     "id" : "31",
@@ -398,7 +398,7 @@
     "id" : "56",
     "type" : "owl:Class"
   }, {
-    "id" : "80",
+    "id" : "81",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "262",
@@ -880,7 +880,7 @@
       "en" : "Class designed to distinguish the different types of units that are available in variables from datasets or parameters"
     },
     "attributes" : [ "external" ],
-    "id" : "81",
+    "id" : "79",
     "superClasses" : [ "67" ]
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#ModelConfigurationSetup",
@@ -914,7 +914,11 @@
     "baseIri" : "https://w3id.org/okn/o/sdm",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Equation"
+      "IRI-based" : "Equation",
+      "en" : "Equation"
+    },
+    "comment" : {
+      "en" : "Information about the mathematical representation used in a model or model configuration"
     },
     "id" : "162"
   }, {
@@ -1031,12 +1035,12 @@
   }, {
     "instances" : 0,
     "union" : [ "37", "56" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "201"
   }, {
     "instances" : 0,
     "union" : [ "37", "8" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "202"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
@@ -1125,7 +1129,7 @@
   }, {
     "instances" : 0,
     "union" : [ "145", "137", "36", "14", "118", "159", "9", "56", "28", "34" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "219"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
@@ -1262,12 +1266,12 @@
   }, {
     "instances" : 0,
     "union" : [ "37", "56" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "235"
   }, {
     "instances" : 0,
     "union" : [ "37", "56" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "193"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
@@ -1300,12 +1304,12 @@
   }, {
     "instances" : 0,
     "union" : [ "137", "121" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "150"
   }, {
     "instances" : 0,
     "union" : [ "145", "100", "8" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "243"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
@@ -1380,7 +1384,7 @@
   }, {
     "instances" : 0,
     "union" : [ "8", "139" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "254"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#Grid",
@@ -1471,7 +1475,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#float",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "80",
+    "id" : "81",
     "label" : {
       "IRI-based" : "float"
     }
@@ -1520,7 +1524,7 @@
   }, {
     "instances" : 0,
     "union" : [ "121", "56" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "266"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -1549,7 +1553,7 @@
   }, {
     "instances" : 0,
     "union" : [ "14", "118" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "273"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -1568,7 +1572,7 @@
   }, {
     "instances" : 0,
     "union" : [ "14", "159", "28" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "2"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -1629,7 +1633,7 @@
   }, {
     "instances" : 0,
     "union" : [ "59", "61" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "167"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#DataTransformation",
@@ -1677,7 +1681,7 @@
   }, {
     "instances" : 0,
     "union" : [ "59", "61" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "256"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -1729,7 +1733,7 @@
   }, {
     "instances" : 0,
     "union" : [ "59", "61" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "180"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -1769,12 +1773,12 @@
   }, {
     "instances" : 0,
     "union" : [ "14", "159", "28" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "290"
   }, {
     "instances" : 0,
     "union" : [ "137", "85", "9" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "292"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -1818,7 +1822,7 @@
     "label" : {
       "IRI-based" : "Unit"
     },
-    "subClasses" : [ "81" ],
+    "subClasses" : [ "79" ],
     "attributes" : [ "external" ],
     "id" : "67"
   }, {
@@ -2045,7 +2049,11 @@
     "baseIri" : "https://w3id.org/okn/o/sdm",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "CausalDiagram"
+      "IRI-based" : "CausalDiagram",
+      "en" : "Causal Diagram"
+    },
+    "comment" : {
+      "en" : "Diagram information with the processes and variables associated with a model configuration"
     },
     "id" : "199"
   }, {
@@ -2064,42 +2072,42 @@
   }, {
     "instances" : 0,
     "union" : [ "137", "85", "14" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "128"
   }, {
     "instances" : 0,
     "union" : [ "159", "28" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "272"
   }, {
     "instances" : 0,
     "union" : [ "121", "56" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "369"
   }, {
     "instances" : 0,
     "union" : [ "36", "37" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "225"
   }, {
     "instances" : 0,
     "union" : [ "159", "28" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "328"
   }, {
     "instances" : 0,
     "union" : [ "37", "56" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "311"
   }, {
     "instances" : 0,
     "union" : [ "59", "61" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "269"
   }, {
     "instances" : 0,
     "union" : [ "37", "102" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "321"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#VariablePresentation",
@@ -2118,7 +2126,7 @@
   }, {
     "instances" : 0,
     "union" : [ "159", "28" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "64"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#SoftwareConfiguration",
@@ -2138,7 +2146,7 @@
   }, {
     "instances" : 0,
     "union" : [ "159", "28" ],
-    "attributes" : [ "union", "anonymous" ],
+    "attributes" : [ "anonymous", "union" ],
     "id" : "141"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#PointBasedGrid",
@@ -2257,7 +2265,7 @@
     "id" : "78",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "79",
+    "id" : "80",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "82",
@@ -2738,10 +2746,10 @@
     "type" : "owl:objectProperty"
   }, {
     "id" : "363",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "364",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "365",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "366",
     "type" : "owl:datatypeProperty"
@@ -2779,7 +2787,7 @@
     "id" : "142",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "365",
+    "id" : "364",
     "type" : "owl:objectProperty"
   }, {
     "id" : "377",
@@ -2845,6 +2853,14 @@
     "iri" : "http://schema.org/elevation",
     "baseIri" : "http://schema.org",
     "range" : "21",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
     "label" : {
       "IRI-based" : "elevation"
     },
@@ -3055,6 +3071,14 @@
     "iri" : "http://schema.org/latitude",
     "baseIri" : "http://schema.org",
     "range" : "4",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
     "label" : {
       "IRI-based" : "latitude"
     },
@@ -3064,7 +3088,7 @@
   }, {
     "iri" : "https://w3id.org/okn/o/sd#recommendedIncrement",
     "baseIri" : "https://w3id.org/okn/o/sd",
-    "range" : "80",
+    "range" : "81",
     "label" : {
       "IRI-based" : "recommendedIncrement",
       "en" : "recommended increment"
@@ -3074,7 +3098,7 @@
       "en" : "Value that represents how a parameter should be incremented on each iteration of a software component execution. This value is important when preparing execution ensembles automatically, e.g., simulating crop production varying the parameter \"fertilizer amount\" in increments of 10%."
     },
     "attributes" : [ "datatype", "external" ],
-    "id" : "79"
+    "id" : "80"
   }, {
     "iri" : "http://schema.org/screenshot",
     "baseIri" : "http://schema.org",
@@ -3107,22 +3131,22 @@
   }, {
     "range" : "89",
     "domain" : "88",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "87"
   }, {
     "range" : "29",
     "domain" : "28",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "90"
   }, {
     "range" : "92",
     "domain" : "14",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "91"
   }, {
     "range" : "95",
     "domain" : "94",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "93"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#shortDescription",
@@ -3169,42 +3193,42 @@
   }, {
     "range" : "77",
     "domain" : "104",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "103"
   }, {
     "range" : "77",
     "domain" : "51",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "105"
   }, {
     "range" : "77",
     "domain" : "107",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "106"
   }, {
     "range" : "77",
     "domain" : "109",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "108"
   }, {
     "range" : "77",
     "domain" : "76",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "110"
   }, {
     "range" : "89",
     "domain" : "112",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "111"
   }, {
     "range" : "86",
     "domain" : "31",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "113"
   }, {
     "range" : "26",
     "domain" : "9",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "114"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#supportDetails",
@@ -3223,17 +3247,17 @@
   }, {
     "range" : "119",
     "domain" : "118",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "117"
   }, {
     "range" : "121",
     "domain" : "85",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "120"
   }, {
     "range" : "121",
     "domain" : "89",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "122"
   }, {
     "iri" : "http://schema.org/geo",
@@ -3323,7 +3347,7 @@
   }, {
     "range" : "14",
     "domain" : "8",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "135"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasSampleVisualization",
@@ -3342,7 +3366,7 @@
   }, {
     "range" : "14",
     "domain" : "139",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "138"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#copyrightHolder",
@@ -3359,22 +3383,22 @@
   }, {
     "range" : "14",
     "domain" : "77",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "143"
   }, {
     "range" : "146",
     "domain" : "145",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "144"
   }, {
     "range" : "86",
     "domain" : "94",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "147"
   }, {
     "range" : "58",
     "domain" : "59",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "148"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasFormat",
@@ -3393,22 +3417,22 @@
   }, {
     "range" : "71",
     "domain" : "61",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "152"
   }, {
     "range" : "155",
     "domain" : "154",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "153"
   }, {
     "range" : "157",
     "domain" : "121",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "156"
   }, {
     "range" : "160",
     "domain" : "159",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "158"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#hasEquation",
@@ -3427,7 +3451,7 @@
   }, {
     "range" : "14",
     "domain" : "100",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "163"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#issueTracker",
@@ -3469,27 +3493,27 @@
     "comment" : {
       "en" : "Dimension of the grid (2D, 3D)"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "169"
   }, {
     "range" : "9",
     "domain" : "27",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "171"
   }, {
     "range" : "34",
     "domain" : "35",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "172"
   }, {
     "range" : "34",
     "domain" : "36",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "173"
   }, {
     "range" : "34",
     "domain" : "37",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "174"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasInstallationInstructions",
@@ -3521,8 +3545,8 @@
     "id" : "179"
   }, {
     "range" : "67",
-    "domain" : "81",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "79",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "186"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasExecutableInstructions",
@@ -3610,12 +3634,20 @@
     "comment" : {
       "en" : "Property that links parameter with the variable they adjust. This property can be used when parameters quantify variables without directly representing them. For example, a \"fertilizer percentage adjustment\" parameter can quantify a \"fertilizer price\" variable"
     },
-    "attributes" : [ "object", "functional", "external" ],
+    "attributes" : [ "object", "external", "functional" ],
     "id" : "204"
   }, {
     "iri" : "http://schema.org/box",
     "baseIri" : "http://schema.org",
     "range" : "39",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
     "label" : {
       "IRI-based" : "box"
     },
@@ -3640,6 +3672,14 @@
     "iri" : "http://schema.org/longitude",
     "baseIri" : "http://schema.org",
     "range" : "42",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://schema.org/",
+        "type" : "iri"
+      } ]
+    },
     "label" : {
       "IRI-based" : "longitude"
     },
@@ -3690,7 +3730,7 @@
     "comment" : {
       "en" : "the standard name of a variable"
     },
-    "attributes" : [ "object", "functional", "external" ],
+    "attributes" : [ "object", "external", "functional" ],
     "id" : "224"
   }, {
     "iri" : "http://schema.org/author",
@@ -4297,7 +4337,7 @@
     "comment" : {
       "en" : "Function to link a function with its corresponding container"
     },
-    "attributes" : [ "object", "functional", "external" ],
+    "attributes" : [ "object", "external", "functional" ],
     "id" : "309"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasFAQ",
@@ -4316,7 +4356,7 @@
   }, {
     "iri" : "https://w3id.org/okn/o/sd#usesUnit",
     "baseIri" : "https://w3id.org/okn/o/sd",
-    "range" : "81",
+    "range" : "79",
     "label" : {
       "IRI-based" : "usesUnit",
       "en" : "uses unit"
@@ -4326,7 +4366,7 @@
     "comment" : {
       "en" : "Property used to link a variable presentation or time interval to the unit they are represented in"
     },
-    "attributes" : [ "object", "functional", "external" ],
+    "attributes" : [ "object", "external", "functional" ],
     "id" : "68"
   }, {
     "iri" : "http://www.w3.org/ns/prov#value",
@@ -4461,7 +4501,7 @@
     "comment" : {
       "en" : "Relates a dataset specification to the data structure definition"
     },
-    "attributes" : [ "object", "functional", "external" ],
+    "attributes" : [ "object", "external", "functional" ],
     "id" : "322"
   }, {
     "iri" : "http://www.w3.org/ns/prov#wasDerivedFrom",
@@ -4712,7 +4752,7 @@
       "en" : "has source code"
     },
     "domain" : "14",
-    "attributes" : [ "object", "functional", "external" ],
+    "attributes" : [ "object", "external", "functional" ],
     "id" : "342"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasInput",
@@ -4740,7 +4780,7 @@
     "comment" : {
       "en" : "Coordinate system used in a grid"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "344"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#screenshot",
@@ -4910,22 +4950,22 @@
   }, {
     "range" : "51",
     "domain" : "31",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "353"
   }, {
     "range" : "8",
     "domain" : "95",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "354"
   }, {
     "range" : "8",
     "domain" : "51",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "355"
   }, {
     "range" : "8",
     "domain" : "86",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "356"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasConfiguration",
@@ -5020,6 +5060,21 @@
     "attributes" : [ "object", "external" ],
     "id" : "362"
   }, {
+    "iri" : "https://w3id.org/okn/o/sd#hasDataTransformation",
+    "baseIri" : "https://w3id.org/okn/o/sd",
+    "range" : "95",
+    "label" : {
+      "IRI-based" : "hasDataTransformation",
+      "en" : "has data transformation"
+    },
+    "domain" : "121",
+    "subproperty" : [ "364" ],
+    "comment" : {
+      "en" : "Property that associates an input/output with their corresponding data transformation."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "363"
+  }, {
     "iri" : "https://w3id.org/okn/o/sd#description",
     "baseIri" : "https://w3id.org/okn/o/sd",
     "range" : "216",
@@ -5032,22 +5087,7 @@
       "en" : "A description of a resource"
     },
     "attributes" : [ "datatype", "external" ],
-    "id" : "363"
-  }, {
-    "iri" : "https://w3id.org/okn/o/sd#hasDataTransformation",
-    "baseIri" : "https://w3id.org/okn/o/sd",
-    "range" : "95",
-    "label" : {
-      "IRI-based" : "hasDataTransformation",
-      "en" : "has data transformation"
-    },
-    "domain" : "121",
-    "subproperty" : [ "365" ],
-    "comment" : {
-      "en" : "Property that associates an input/output with their corresponding data transformation."
-    },
-    "attributes" : [ "object", "external" ],
-    "id" : "364"
+    "id" : "365"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#calibrationInterval",
     "baseIri" : "https://w3id.org/okn/o/sdm",
@@ -5238,13 +5278,13 @@
       "IRI-based" : "hasDataTransformationSetup",
       "en" : "has data transformation setup"
     },
-    "superproperty" : [ "364" ],
+    "superproperty" : [ "363" ],
     "domain" : "121",
     "comment" : {
       "en" : "Property to link an input/output dataset to the specific data transformation (with URLs"
     },
     "attributes" : [ "object", "external" ],
-    "id" : "365"
+    "id" : "364"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#email",
     "baseIri" : "https://w3id.org/okn/o/sd",

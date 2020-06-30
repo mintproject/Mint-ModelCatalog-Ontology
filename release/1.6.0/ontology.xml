@@ -343,28 +343,36 @@
     <!-- http://schema.org/box -->
 
 
-    <owl:DatatypeProperty rdf:about="http://schema.org/box"/>
+    <owl:DatatypeProperty rdf:about="http://schema.org/box">
+        <rdfs:isDefinedBy rdf:resource="http://schema.org/"/>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://schema.org/elevation -->
 
 
-    <owl:DatatypeProperty rdf:about="http://schema.org/elevation"/>
+    <owl:DatatypeProperty rdf:about="http://schema.org/elevation">
+        <rdfs:isDefinedBy rdf:resource="http://schema.org/"/>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://schema.org/latitude -->
 
 
-    <owl:DatatypeProperty rdf:about="http://schema.org/latitude"/>
+    <owl:DatatypeProperty rdf:about="http://schema.org/latitude">
+        <rdfs:isDefinedBy rdf:resource="http://schema.org/"/>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://schema.org/longitude -->
 
 
-    <owl:DatatypeProperty rdf:about="http://schema.org/longitude"/>
+    <owl:DatatypeProperty rdf:about="http://schema.org/longitude">
+        <rdfs:isDefinedBy rdf:resource="http://schema.org/"/>
+    </owl:DatatypeProperty>
     
 
 
@@ -682,7 +690,10 @@
     <!-- https://w3id.org/okn/o/sdm#CausalDiagram -->
 
 
-    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#CausalDiagram"/>
+    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#CausalDiagram">
+        <rdfs:comment xml:lang="en">Diagram information with the processes and variables associated with a model configuration</rdfs:comment>
+        <rdfs:label xml:lang="en">Causal Diagram</rdfs:label>
+    </owl:Class>
     
 
 
@@ -711,7 +722,10 @@
     <!-- https://w3id.org/okn/o/sdm#Equation -->
 
 
-    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#Equation"/>
+    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#Equation">
+        <rdfs:comment xml:lang="en">Information about the mathematical representation used in a model or model configuration</rdfs:comment>
+        <rdfs:label xml:lang="en">Equation</rdfs:label>
+    </owl:Class>
     
 
 

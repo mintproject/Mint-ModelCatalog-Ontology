@@ -4,14 +4,20 @@ This section provides details for each class and property defined by The Softwar
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
+         <a href="#CausalDiagram" title="https://w3id.org/okn/o/sdm#CausalDiagram">Causal Diagram</a>
+      </li>
+      <li>
          <a href="#EmpiricalModel" title="https://w3id.org/okn/o/sdm#EmpiricalModel">Empirical model</a>
       </li>
       <li>
          <a href="#Emulator" title="https://w3id.org/okn/o/sdm#Emulator">Emulator</a>
       </li>
       <li>
+         <a href="#Equation" title="https://w3id.org/okn/o/sdm#Equation">Equation</a>
+      </li>
+      <li>
          <a href="#http://schema.org/GeoCoordinates" title="http://schema.org/GeoCoordinates">
-            <span>geo coordinates</span>
+            <span>geo coordinates (schema)</span>
          </a>
       </li>
       <li>
@@ -56,6 +62,29 @@ This section provides details for each class and property defined by The Softwar
          <a href="#TimeInterval" title="https://w3id.org/okn/o/sdm#TimeInterval">Time Interval</a>
       </li>
    </ul>
+   <div class="entity" id="CausalDiagram">
+      <h3>Causal Diagram<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sdm#CausalDiagram</p>
+      <div class="comment">
+         <span class="markdown">Diagram information with the processes and variables associated with a model configuration</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasDiagramPart" title="https://w3id.org/okn/o/sdm#hasDiagramPart">has diagram part</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasCausalDiagram" title="https://w3id.org/okn/o/sdm#hasCausalDiagram">has causal diagram</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="EmpiricalModel">
       <h3>Empirical model<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -89,6 +118,24 @@ This section provides details for each class and property defined by The Softwar
          <dd>
             <a href="#Model" title="https://w3id.org/okn/o/sdm#Model">Model</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Equation">
+      <h3>Equation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sdm#Equation</p>
+      <div class="comment">
+         <span class="markdown">Information about the mathematical representation used in a model or model configuration</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasEquation" title="https://w3id.org/okn/o/sdm#hasEquation">has equation</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -167,7 +214,7 @@ This section provides details for each class and property defined by The Softwar
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted" title="https://w3id.org/okn/o/sd#DatasetSpecification">dataset specification</span>
+            <a href="https://w3id.org/okn/o/sd#DatasetSpecification">dataset specification</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -242,7 +289,7 @@ This section provides details for each class and property defined by The Softwar
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted" title="https://w3id.org/okn/o/sd#Software">software</span>
+            <a href="https://w3id.org/okn/o/sd#Software">software</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -278,7 +325,7 @@ This section provides details for each class and property defined by The Softwar
          <dt>has super-classes</dt>
          <dd>
             <a href="#Model" title="https://w3id.org/okn/o/sdm#Model">Model</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted" title="https://w3id.org/okn/o/sd#SoftwareConfiguration">software configuration</span>
+            <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/okn/o/sd#SoftwareConfiguration">software configuration</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -312,7 +359,7 @@ This section provides details for each class and property defined by The Softwar
          <dt>has super-classes</dt>
          <dd>
             <a href="#ModelConfiguration" title="https://w3id.org/okn/o/sdm#ModelConfiguration">Model configuration</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted" title="https://w3id.org/okn/o/sd#ConfigurationSetup">configuration setup</span>
+            <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/okn/o/sd#ConfigurationSetup">configuration setup</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -510,7 +557,7 @@ This section provides details for each class and property defined by The Softwar
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="https://w3id.org/okn/o/sd#VariablePresentation">variable presentation</span>
+               <a href="https://w3id.org/okn/o/sd#VariablePresentation">variable presentation</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -536,7 +583,7 @@ This section provides details for each class and property defined by The Softwar
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="https://w3id.org/okn/o/sd#VariablePresentation">variable presentation</span>
+               <a href="https://w3id.org/okn/o/sd#VariablePresentation">variable presentation</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -594,7 +641,7 @@ This section provides details for each class and property defined by The Softwar
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="https://w3id.org/okn/o/sdm#CausalDiagram">causal diagram</span>
+               <a href="#CausalDiagram" title="https://w3id.org/okn/o/sdm#CausalDiagram">Causal Diagram</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -614,12 +661,12 @@ This section provides details for each class and property defined by The Softwar
          <dl>
             <dt>has domain</dt>
             <dd>
-               <span class="dotted" title="https://w3id.org/okn/o/sdm#CausalDiagram">causal diagram</span>
+               <a href="#CausalDiagram" title="https://w3id.org/okn/o/sdm#CausalDiagram">Causal Diagram</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="https://w3id.org/okn/o/sd#VariablePresentation">variable presentation</span>
+               <a href="https://w3id.org/okn/o/sd#VariablePresentation">variable presentation</a>
                <sup class="type-c" title="class">c</sup> 
                <span class="logic">or</span> 
                <span class="dotted" title="https://w3id.org/okn/o/sdm#Process">process</span>
@@ -647,7 +694,7 @@ This section provides details for each class and property defined by The Softwar
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="https://w3id.org/okn/o/sdm#Equation">equation</span>
+               <a href="#Equation" title="https://w3id.org/okn/o/sdm#Equation">Equation</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -672,7 +719,7 @@ This section provides details for each class and property defined by The Softwar
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="https://w3id.org/okn/o/sd#Image">image</span>
+               <a href="https://w3id.org/okn/o/sd#Image">image</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -822,7 +869,7 @@ This section provides details for each class and property defined by The Softwar
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="https://w3id.org/okn/o/sd#usesUnit">uses unit</span>
+               <a href="https://w3id.org/okn/o/sd#usesUnit">uses unit</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
             <dt>has domain</dt>
@@ -877,7 +924,7 @@ This section provides details for each class and property defined by The Softwar
          <dl>
             <dt>has domain</dt>
             <dd>
-               <span class="dotted" title="https://w3id.org/okn/o/sd#Parameter">parameter</span>
+               <a href="https://w3id.org/okn/o/sd#Parameter">parameter</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -893,7 +940,7 @@ This section provides details for each class and property defined by The Softwar
    <ul class="hlist">
       <li>
          <a href="#http://schema.org/box" title="http://schema.org/box">
-            <span>box</span>
+            <span>box (schema)</span>
          </a>
       </li>
       <li>
@@ -909,7 +956,7 @@ This section provides details for each class and property defined by The Softwar
       </li>
       <li>
          <a href="#http://schema.org/elevation" title="http://schema.org/elevation">
-            <span>elevation</span>
+            <span>elevation (schema)</span>
          </a>
       </li>
       <li>
@@ -938,7 +985,7 @@ This section provides details for each class and property defined by The Softwar
       </li>
       <li>
          <a href="#http://schema.org/latitude" title="http://schema.org/latitude">
-            <span>latitude</span>
+            <span>latitude (schema)</span>
          </a>
       </li>
       <li>
@@ -946,7 +993,7 @@ This section provides details for each class and property defined by The Softwar
       </li>
       <li>
          <a href="#http://schema.org/longitude" title="http://schema.org/longitude">
-            <span>longitude</span>
+            <span>longitude (schema)</span>
          </a>
       </li>
       <li>
@@ -1276,7 +1323,7 @@ This section provides details for each class and property defined by The Softwar
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="https://w3id.org/okn/o/sd#value">value</span>
+               <a href="https://w3id.org/okn/o/sd#value">value</a>
                <sup class="type-dp" title="data property">dp</sup>
             </dd>
             <dt>has domain</dt>

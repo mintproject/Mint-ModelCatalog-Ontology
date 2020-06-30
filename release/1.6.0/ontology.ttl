@@ -212,19 +212,23 @@
 #################################################################
 
 ###  http://schema.org/box
-<http://schema.org/box> rdf:type owl:DatatypeProperty .
+<http://schema.org/box> rdf:type owl:DatatypeProperty ;
+                        rdfs:isDefinedBy <http://schema.org/> .
 
 
 ###  http://schema.org/elevation
-<http://schema.org/elevation> rdf:type owl:DatatypeProperty .
+<http://schema.org/elevation> rdf:type owl:DatatypeProperty ;
+                              rdfs:isDefinedBy <http://schema.org/> .
 
 
 ###  http://schema.org/latitude
-<http://schema.org/latitude> rdf:type owl:DatatypeProperty .
+<http://schema.org/latitude> rdf:type owl:DatatypeProperty ;
+                             rdfs:isDefinedBy <http://schema.org/> .
 
 
 ###  http://schema.org/longitude
-<http://schema.org/longitude> rdf:type owl:DatatypeProperty .
+<http://schema.org/longitude> rdf:type owl:DatatypeProperty ;
+                              rdfs:isDefinedBy <http://schema.org/> .
 
 
 ###  https://w3id.org/okn/o/sd#value
@@ -422,7 +426,9 @@
 
 
 ###  https://w3id.org/okn/o/sdm#CausalDiagram
-:CausalDiagram rdf:type owl:Class .
+:CausalDiagram rdf:type owl:Class ;
+               rdfs:comment "Diagram information with the processes and variables associated with a model configuration"@en ;
+               rdfs:label "Causal Diagram"@en .
 
 
 ###  https://w3id.org/okn/o/sdm#EmpiricalModel
@@ -440,7 +446,9 @@
 
 
 ###  https://w3id.org/okn/o/sdm#Equation
-:Equation rdf:type owl:Class .
+:Equation rdf:type owl:Class ;
+          rdfs:comment "Information about the mathematical representation used in a model or model configuration"@en ;
+          rdfs:label "Equation"@en .
 
 
 ###  https://w3id.org/okn/o/sdm#GeoCoordinates

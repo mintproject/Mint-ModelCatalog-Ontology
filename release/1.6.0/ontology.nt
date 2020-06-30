@@ -201,15 +201,19 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # http://schema.org/box
 <http://schema.org/box> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/box> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
 # 
 # http://schema.org/elevation
 <http://schema.org/elevation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/elevation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
 # 
 # http://schema.org/latitude
 <http://schema.org/latitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/latitude> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
 # 
 # http://schema.org/longitude
 <http://schema.org/longitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/longitude> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.org/> .
 # 
 # https://w3id.org/okn/o/sd#value
 <https://w3id.org/okn/o/sd#value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -401,6 +405,8 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 # 
 # https://w3id.org/okn/o/sdm#CausalDiagram
 <https://w3id.org/okn/o/sdm#CausalDiagram> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/okn/o/sdm#CausalDiagram> <http://www.w3.org/2000/01/rdf-schema#comment> "Diagram information with the processes and variables associated with a model configuration"@en .
+<https://w3id.org/okn/o/sdm#CausalDiagram> <http://www.w3.org/2000/01/rdf-schema#label> "Causal Diagram"@en .
 # 
 # https://w3id.org/okn/o/sdm#EmpiricalModel
 <https://w3id.org/okn/o/sdm#EmpiricalModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -416,6 +422,8 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 # 
 # https://w3id.org/okn/o/sdm#Equation
 <https://w3id.org/okn/o/sdm#Equation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/okn/o/sdm#Equation> <http://www.w3.org/2000/01/rdf-schema#comment> "Information about the mathematical representation used in a model or model configuration"@en .
+<https://w3id.org/okn/o/sdm#Equation> <http://www.w3.org/2000/01/rdf-schema#label> "Equation"@en .
 # 
 # https://w3id.org/okn/o/sdm#GeoCoordinates
 <https://w3id.org/okn/o/sdm#GeoCoordinates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

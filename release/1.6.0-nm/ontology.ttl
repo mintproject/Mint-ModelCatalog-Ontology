@@ -1,30 +1,27 @@
 @prefix : <https://w3id.org/okn/o/sdm#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix vann: <http://purl.org/vocab/vann/> .
-@prefix terms: <http://purl.org/dc/terms/> .
 @base <https://w3id.org/okn/o/sdm> .
 
 <https://w3id.org/okn/o/sdm> rdf:type owl:Ontology ;
                               owl:versionIRI <https://w3id.org/okn/o/sdm/1.6.0-nm> ;
                               owl:imports <https://w3id.org/okn/o/sd/1.7.0> ;
-                              dc:abstract "The Software Description Ontology for Models (SDM) expands the software description ontology (SD) to add information about scientific software models. Examples of scientific software models are hydrology models, agriculture models or economy models."@en ;
-                              dc:contributor "Armen Kemanian"@en ,
-                                             "Christopher Duffy"@en ,
-                                             "Kelly Cobourn"@en ,
-                                             "Scott Peckham"@en ;
-                              dc:creator "Daniel Garijo"@en ,
-                                         "Deborah Khider"@en ,
-                                         "Yolanda Gil"@en ;
-                              dc:license "<http://creativecommons.org/licenses/by/2.0/>"@en ;
-                              dc:title "The Software Description Ontology for Models"@en ;
-                              terms:license <http://creativecommons.org/licenses/by/2.0/> ;
-                              vann:preferredNamespacePrefix "sdm" ;
-                              vann:preferredNamespaceUri : ;
+                              <http://purl.org/dc/elements/1.1/abstract> "The Software Description Ontology for Models (SDM) expands the software description ontology (SD) to add information about scientific software models. Examples of scientific software models are hydrology models, agriculture models or economy models."@en ;
+                              <http://purl.org/dc/elements/1.1/contributor> "Armen Kemanian"@en ,
+                                                                            "Christopher Duffy"@en ,
+                                                                            "Kelly Cobourn"@en ,
+                                                                            "Scott Peckham"@en ;
+                              <http://purl.org/dc/elements/1.1/creator> "Daniel Garijo"@en ,
+                                                                        "Deborah Khider"@en ,
+                                                                        "Yolanda Gil"@en ;
+                              <http://purl.org/dc/elements/1.1/license> "<http://creativecommons.org/licenses/by/2.0/>"@en ;
+                              <http://purl.org/dc/elements/1.1/title> "The Software Description Ontology for Models"@en ;
+                              <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/2.0/> ;
+                              <http://purl.org/vocab/vann/preferredNamespacePrefix> "sdm" ;
+                              <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
                               owl:priorVersion <https://w3id.org/okn/o/sdm/1.5.0-nm> ;
                               owl:versionInfo "1.6.0-nm"@en .
 
@@ -33,35 +30,35 @@
 #################################################################
 
 ###  http://purl.org/dc/elements/1.1/abstract
-dc:abstract rdf:type owl:AnnotationProperty .
+<http://purl.org/dc/elements/1.1/abstract> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/contributor
-dc:contributor rdf:type owl:AnnotationProperty .
+<http://purl.org/dc/elements/1.1/contributor> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/creator
-dc:creator rdf:type owl:AnnotationProperty .
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/license
-dc:license rdf:type owl:AnnotationProperty .
+<http://purl.org/dc/elements/1.1/license> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/title
-dc:title rdf:type owl:AnnotationProperty .
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/license
-terms:license rdf:type owl:AnnotationProperty .
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
-vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespaceUri
-vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -508,4 +505,4 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
               rdfs:label "Time Interval"@en .
 
 
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

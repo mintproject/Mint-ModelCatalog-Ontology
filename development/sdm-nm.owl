@@ -10,8 +10,8 @@
 @base <https://w3id.org/okn/o/sdm> .
 
 <https://w3id.org/okn/o/sdm> rdf:type owl:Ontology ;
-                              owl:versionIRI <https://w3id.org/okn/o/sdm/1.6.0-nm> ;
-                              owl:imports <https://w3id.org/okn/o/sd/1.7.0> ;
+                              owl:versionIRI <https://w3id.org/okn/o/sdm/1.7.0-nm> ;
+                              owl:imports <https://w3id.org/okn/o/sd/1.8.0-nm> ;
                               dc:abstract "The Software Description Ontology for Models (SDM) expands the software description ontology (SD) to add information about scientific software models. Examples of scientific software models are hydrology models, agriculture models or economy models."@en ;
                               dc:contributor "Armen Kemanian"@en ,
                                              "Christopher Duffy"@en ,
@@ -25,8 +25,8 @@
                               terms:license <http://creativecommons.org/licenses/by/2.0/> ;
                               vann:preferredNamespacePrefix "sdm" ;
                               vann:preferredNamespaceUri : ;
-                              owl:priorVersion <https://w3id.org/okn/o/sdm/1.5.0-nm> ;
-                              owl:versionInfo "1.6.0-nm"@en .
+                              owl:priorVersion <https://w3id.org/okn/o/sdm/1.6.0-nm> ;
+                              owl:versionInfo "1.7.0-nm"@en .
 
 #################################################################
 #    Annotation properties
@@ -148,6 +148,14 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
          rdfs:label "has grid"@en .
 
 
+###  https://w3id.org/okn/o/sdm#hasModelCategory
+:hasModelCategory rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Model ;
+                  rdfs:range :ModelCategory ;
+                  rdfs:comment "Category associated with a model (e.g., Hydrology, etc.)"@en ;
+                  rdfs:label "has model category"@en .
+
+
 ###  https://w3id.org/okn/o/sdm#hasOutputTimeInterval
 :hasOutputTimeInterval rdf:type owl:ObjectProperty ;
                        rdfs:domain :ModelConfiguration ;
@@ -203,6 +211,14 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
                          rdfs:range :Intervention ;
                          rdfs:comment "Property that links a parameter to the intervention it is relevant for."@en ;
                          rdfs:label "relevant for intervention"@en .
+
+
+###  https://w3id.org/okn/o/sdm#usesModel
+:usesModel rdf:type owl:ObjectProperty ;
+           rdfs:domain :CoupledModel ;
+           rdfs:range :Model ;
+           rdfs:comment "Property that describes which models are used by a coupled model"@en ;
+           rdfs:label "uses model"@en .
 
 
 #################################################################
@@ -263,14 +279,6 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
               rdfs:range xsd:string ;
               rdfs:comment "Dimension of the grid (2D, 3D)"@en ;
               rdfs:label "has dimension"@en .
-
-
-###  https://w3id.org/okn/o/sdm#hasModelCategory
-:hasModelCategory rdf:type owl:DatatypeProperty ;
-                  rdfs:domain :Model ;
-                  rdfs:range xsd:string ;
-                  rdfs:comment "Category associated with a model (e.g., Hydrology)"@en ;
-                  rdfs:label "has model category"@en .
 
 
 ###  https://w3id.org/okn/o/sdm#hasModelResultTable
@@ -392,6 +400,13 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
                rdfs:label "Causal Diagram"@en .
 
 
+###  https://w3id.org/okn/o/sdm#CoupledModel
+:CoupledModel rdf:type owl:Class ;
+              rdfs:subClassOf :Model ;
+              rdfs:comment "Model that incorporates the coupling of two or more existing models"@en ;
+              rdfs:label "Coupled model"@en .
+
+
 ###  https://w3id.org/okn/o/sdm#EmpiricalModel
 :EmpiricalModel rdf:type owl:Class ;
                 rdfs:subClassOf :Model ;
@@ -449,6 +464,12 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
        rdfs:subClassOf <https://w3id.org/okn/o/sd#Software> ;
        rdfs:comment "A mathematical description of a process (e.g., hydrological, agricultural, social, etc.)"@en ;
        rdfs:label "Model"@en .
+
+
+###  https://w3id.org/okn/o/sdm#ModelCategory
+:ModelCategory rdf:type owl:Class ;
+               rdfs:comment "Class used to represent a category of a model (e.g., Hydrology, Agriculture, etc.)"@en ;
+               rdfs:label "Model category"@en .
 
 
 ###  https://w3id.org/okn/o/sdm#ModelConfiguration

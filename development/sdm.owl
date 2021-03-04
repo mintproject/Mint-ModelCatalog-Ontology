@@ -210,6 +210,14 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
         rdfs:label "part of"@en .
 
 
+###  https://w3id.org/okn/o/sdm#parentCategory
+:parentCategory rdf:type owl:ObjectProperty ;
+                rdfs:domain :Category ;
+                rdfs:range :Category ;
+                rdfs:comment "Indicates this subcategory parent category"@en ;
+                rdfs:label "parent category"@en .
+
+
 ###  https://w3id.org/okn/o/sdm#relevantForIntervention
 :relevantForIntervention rdf:type owl:ObjectProperty ;
                          rdfs:domain <https://w3id.org/okn/o/sd#Parameter> ;
@@ -220,7 +228,7 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/okn/o/sdm#usesModel
 :usesModel rdf:type owl:ObjectProperty ;
-           rdfs:domain :CoupledModel ;
+           rdfs:domain :Model ;
            rdfs:range :Model ;
            rdfs:comment "Property that describes which models are used by a coupled model"@en ;
            rdfs:label "uses model"@en .
@@ -385,6 +393,37 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
             rdfs:range xsd:dateTime ;
             rdfs:comment "Date until which the calibration of a model is valid. For example, a trained model with data from 2005-2010 may only be valid for predictions until 2015."@en ;
             rdfs:label "valid until"@en .
+
+
+###  https://w3id.org/okn/o/sdm#runtimeEstimation
+:runtimeEstimation rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Model ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Property that indicates the estimated time it will take to run this model."@en ;
+                   rdfs:label "runtime estimation"@en .
+                   
+
+###  https://w3id.org/okn/o/sdm#parameterization 
+:parameterization rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Model ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment ""@en ;
+                  rdfs:label "parameterization"@en .
+
+
+###  https://w3id.org/okn/o/sdm#limitations
+:limitations rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Model ;
+             rdfs:range xsd:string ;
+             rdfs:comment ""@en ;
+             rdfs:label "limitations"@en .
+
+###  https://w3id.org/okn/o/sdm#theoreticalBasis
+:theoreticalBasis rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Model ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment ""@en ;
+                  rdfs:label "theoretical basis"@en .
 
 
 #################################################################

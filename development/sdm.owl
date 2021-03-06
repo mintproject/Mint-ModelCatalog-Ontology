@@ -16,6 +16,7 @@
                               dc:contributor "Armen Kemanian"@en ,
                                              "Christopher Duffy"@en ,
                                              "Kelly Cobourn"@en ,
+                                             "Hernán Vargas"@en ,
                                              "Scott Peckham"@en ;
                               dc:creator "Daniel Garijo"@en ,
                                          "Deborah Khider"@en ,
@@ -202,6 +203,14 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
               rdfs:label "interval unit"@en .
 
 
+###  https://w3id.org/okn/o/sdm#parentCategory
+:parentCategory rdf:type owl:ObjectProperty ;
+                rdfs:domain :Category ;
+                rdfs:range :Category ;
+                rdfs:comment "Indicates the parent category of a given category"@en ;
+                rdfs:label "parent category"@en .
+
+
 ###  https://w3id.org/okn/o/sdm#partOf
 :partOf rdf:type owl:ObjectProperty ;
         rdfs:domain :Region ;
@@ -220,7 +229,7 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/okn/o/sdm#usesModel
 :usesModel rdf:type owl:ObjectProperty ;
-           rdfs:domain :CoupledModel ;
+           rdfs:domain :Model ;
            rdfs:range :Model ;
            rdfs:comment "Property that describes which models are used by a coupled model"@en ;
            rdfs:label "uses model"@en .
@@ -358,6 +367,14 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
           rdfs:label "latitude"@en .
 
 
+###  https://w3id.org/okn/o/sdm#limitations
+:limitations rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Model ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Limitations of a model"@en ;
+             rdfs:label "limitations"@en .
+
+
 ###  https://w3id.org/okn/o/sdm#longitude
 :longitude rdf:type owl:DatatypeProperty ;
            rdfs:subPropertyOf <http://schema.org/longitude> ;
@@ -377,6 +394,30 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
                            rdfs:range xsd:string ;
                            rdfs:comment "Property that indicates how have the parameters assigned in a model configuration (e.g., using an expert guess, by using calibration, etc.)"@en ;
                            rdfs:label "parameter assignment method"@en .
+
+
+###  https://w3id.org/okn/o/sdm#parameterization
+:parameterization rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Model ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Property that indicates more details about the parametrization of a model"@en ;
+                  rdfs:label "parameterization"@en .
+
+
+###  https://w3id.org/okn/o/sdm#runtimeEstimation
+:runtimeEstimation rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Model ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Property that indicates the estimated time it will take to run this model."@en ;
+                   rdfs:label "runtime estimation"@en .
+
+
+###  https://w3id.org/okn/o/sdm#theoreticalBasis
+:theoreticalBasis rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Model ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment ""@en ;
+                  rdfs:label "theoretical basis"@en .
 
 
 ###  https://w3id.org/okn/o/sdm#validUntil
@@ -434,6 +475,10 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/okn/o/sd#VariablePresentation
 <https://w3id.org/okn/o/sd#VariablePresentation> rdf:type owl:Class .
+
+
+###  https://w3id.org/okn/o/sdm#Category
+:Category rdf:type owl:Class .
 
 
 ###  https://w3id.org/okn/o/sdm#CausalDiagram

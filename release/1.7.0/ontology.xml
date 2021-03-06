@@ -15,6 +15,7 @@
         <dc:abstract xml:lang="en">The Software Description Ontology for Models (SDM) expands the software description ontology (SD) to add information about scientific software models. Examples of scientific software models are hydrology models, agriculture models or economy models.</dc:abstract>
         <dc:contributor xml:lang="en">Armen Kemanian</dc:contributor>
         <dc:contributor xml:lang="en">Christopher Duffy</dc:contributor>
+        <dc:contributor xml:lang="en">Hernán Vargas</dc:contributor>
         <dc:contributor xml:lang="en">Kelly Cobourn</dc:contributor>
         <dc:contributor xml:lang="en">Scott Peckham</dc:contributor>
         <dc:creator xml:lang="en">Daniel Garijo</dc:creator>
@@ -25,7 +26,7 @@
         <terms:license rdf:resource="http://creativecommons.org/licenses/by/2.0/"/>
         <vann:preferredNamespacePrefix>sdm</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="https://w3id.org/okn/o/sdm#"/>
-        <owl:priorVersion rdf:resource="https://w3id.org/okn/o/sdm/1.6.0"/>
+        <owl:priorVersion rdf:resource="https://w3id.org/okn/o/sdm/1.7.0"/>
         <owl:versionInfo xml:lang="en">1.7.0</owl:versionInfo>
     </owl:Ontology>
     
@@ -316,6 +317,18 @@
     
 
 
+    <!-- https://w3id.org/okn/o/sdm#parentCategory -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#parentCategory">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Category"/>
+        <rdfs:range rdf:resource="https://w3id.org/okn/o/sdm#Category"/>
+        <rdfs:comment xml:lang="en">Indicates the parent category of a given category</rdfs:comment>
+        <rdfs:label xml:lang="en">parent category</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/okn/o/sdm#partOf -->
 
 
@@ -344,7 +357,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#usesModel">
-        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#CoupledModel"/>
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
         <rdfs:range rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
         <rdfs:comment xml:lang="en">Property that describes which models are used by a coupled model</rdfs:comment>
         <rdfs:label xml:lang="en">uses model</rdfs:label>
@@ -564,6 +577,18 @@
     
 
 
+    <!-- https://w3id.org/okn/o/sdm#limitations -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#limitations">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Limitations of a model</rdfs:comment>
+        <rdfs:label xml:lang="en">limitations</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/okn/o/sdm#longitude -->
 
 
@@ -592,6 +617,42 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Property that indicates how have the parameters assigned in a model configuration (e.g., using an expert guess, by using calibration, etc.)</rdfs:comment>
         <rdfs:label xml:lang="en">parameter assignment method</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#parameterization -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#parameterization">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Property that indicates more details about the parametrization of a model</rdfs:comment>
+        <rdfs:label xml:lang="en">parameterization</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#runtimeEstimation -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#runtimeEstimation">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Property that indicates the estimated time it will take to run this model.</rdfs:comment>
+        <rdfs:label xml:lang="en">runtime estimation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#theoreticalBasis -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#theoreticalBasis">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">theoretical basis</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -696,6 +757,13 @@
 
 
     <owl:Class rdf:about="https://w3id.org/okn/o/sd#VariablePresentation"/>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#Category -->
+
+
+    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#Category"/>
     
 
 
@@ -920,6 +988,6 @@
 
 
 
-<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
+<!-- Generated by the OWL API (version 5.1.14.2020-04-18T20:17:57Z) https://github.com/owlcs/owlapi/ -->
 
 

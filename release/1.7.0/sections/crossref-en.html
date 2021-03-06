@@ -1,6 +1,6 @@
 <h2 id="crossreference" class="list">Cross reference for The Software Description Ontology for Models classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 This section provides details for each class and property defined by The Software Description Ontology for Models.
-<div id="classes">
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
@@ -106,11 +106,6 @@ This section provides details for each class and property defined by The Softwar
          <dd>
             <a href="#Model" title="https://w3id.org/okn/o/sdm#Model">Model</a>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#usesModel" title="https://w3id.org/okn/o/sdm#usesModel">uses model</a>
-            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -343,6 +338,11 @@ This section provides details for each class and property defined by The Softwar
             <sup class="type-op" title="object property">op</sup>, <a href="#hasExplanationDiagram" title="https://w3id.org/okn/o/sdm#hasExplanationDiagram">has explanation diagram</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasGrid" title="https://w3id.org/okn/o/sdm#hasGrid">has grid</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasModelCategory" title="https://w3id.org/okn/o/sdm#hasModelCategory">has model category</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#limitations" title="https://w3id.org/okn/o/sdm#limitations">limitations</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#parameterization" title="https://w3id.org/okn/o/sdm#parameterization">parameterization</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#runtimeEstimation" title="https://w3id.org/okn/o/sdm#runtimeEstimation">runtime estimation</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#theoreticalBasis" title="https://w3id.org/okn/o/sdm#theoreticalBasis">theoretical basis</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#usesModel" title="https://w3id.org/okn/o/sdm#usesModel">uses model</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
@@ -549,7 +549,7 @@ This section provides details for each class and property defined by The Softwar
          </dd>
       </dl>
    </div>
-</div><div id="objectproperties">
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
@@ -596,6 +596,9 @@ This section provides details for each class and property defined by The Softwar
       </li>
       <li>
          <a href="#intervalUnit" title="https://w3id.org/okn/o/sdm#intervalUnit">interval unit</a>
+      </li>
+      <li>
+         <a href="#parentCategory" title="https://w3id.org/okn/o/sdm#parentCategory">parent category</a>
       </li>
       <li>
          <a href="#partOf" title="https://w3id.org/okn/o/sdm#partOf">part of</a>
@@ -1005,6 +1008,35 @@ This section provides details for each class and property defined by The Softwar
          </dl>
       </div>
    </div>
+   <div class="entity" id="parentCategory">
+      <h3>parent category<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sdm#parentCategory</p>
+      <div class="comment">
+         <span class="markdown">Indicates the parent category of a given category</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="https://w3id.org/okn/o/sdm#Category"
+                  target="_blank"
+                  title="https://w3id.org/okn/o/sdm#Category">category</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="https://w3id.org/okn/o/sdm#Category"
+                  target="_blank"
+                  title="https://w3id.org/okn/o/sdm#Category">category</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="partOf">
       <h3>part of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1071,7 +1103,7 @@ This section provides details for each class and property defined by The Softwar
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#CoupledModel" title="https://w3id.org/okn/o/sdm#CoupledModel">Coupled model</a>
+               <a href="#Model" title="https://w3id.org/okn/o/sdm#Model">Model</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1082,17 +1114,17 @@ This section provides details for each class and property defined by The Softwar
          </dl>
       </div>
    </div>
-</div><div id="dataproperties">
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
          <a href="#http://schema.org/box" title="http://schema.org/box">
-            <span>box (schema)</span>
+            <span>box</span>
          </a>
       </li>
       <li>
          <a href="#box" title="https://w3id.org/okn/o/sdm#box">
-            <span>box (sdm)</span>
+            <span>box</span>
          </a>
       </li>
       <li>
@@ -1136,6 +1168,9 @@ This section provides details for each class and property defined by The Softwar
          <a href="#latitude" title="https://w3id.org/okn/o/sdm#latitude">latitude</a>
       </li>
       <li>
+         <a href="#limitations" title="https://w3id.org/okn/o/sdm#limitations">limitations</a>
+      </li>
+      <li>
          <a href="#http://schema.org/longitude" title="http://schema.org/longitude">
             <span>longitude</span>
          </a>
@@ -1146,6 +1181,15 @@ This section provides details for each class and property defined by The Softwar
       <li>
          <a href="#parameterAssignmentMethod"
             title="https://w3id.org/okn/o/sdm#parameterAssignmentMethod">parameter assignment method</a>
+      </li>
+      <li>
+         <a href="#parameterization" title="https://w3id.org/okn/o/sdm#parameterization">parameterization</a>
+      </li>
+      <li>
+         <a href="#runtimeEstimation" title="https://w3id.org/okn/o/sdm#runtimeEstimation">runtime estimation</a>
+      </li>
+      <li>
+         <a href="#theoreticalBasis" title="https://w3id.org/okn/o/sdm#theoreticalBasis">theoretical basis</a>
       </li>
       <li>
          <a href="#validUntil" title="https://w3id.org/okn/o/sdm#validUntil">valid until</a>
@@ -1325,7 +1369,8 @@ This section provides details for each class and property defined by The Softwar
       </div>
       <div class="description">
          <p>
-            <strong>has characteristics:</strong> functional</p>
+            <strong>has characteristics:
+                </strong> functional</p>
          <dl>
             <dt>has domain</dt>
             <dd>
@@ -1353,7 +1398,8 @@ This section provides details for each class and property defined by The Softwar
       </div>
       <div class="description">
          <p>
-            <strong>has characteristics:</strong> functional</p>
+            <strong>has characteristics:
+                </strong> functional</p>
          <dl>
             <dt>has domain</dt>
             <dd>
@@ -1541,6 +1587,32 @@ This section provides details for each class and property defined by The Softwar
          </dl>
       </div>
    </div>
+   <div class="entity" id="limitations">
+      <h3>limitations<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sdm#limitations</p>
+      <div class="comment">
+         <span class="markdown">Limitations of a model</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Model" title="https://w3id.org/okn/o/sdm#Model">Model</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="http://schema.org/longitude">
       <h3>longitude<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -1614,6 +1686,84 @@ This section provides details for each class and property defined by The Softwar
             <dd>
                <a href="#ModelConfigurationSetup"
                   title="https://w3id.org/okn/o/sdm#ModelConfigurationSetup">Model configuration setup</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="parameterization">
+      <h3>parameterization<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sdm#parameterization</p>
+      <div class="comment">
+         <span class="markdown">Property that indicates more details about the parametrization of a model</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Model" title="https://w3id.org/okn/o/sdm#Model">Model</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="runtimeEstimation">
+      <h3>runtime estimation<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sdm#runtimeEstimation</p>
+      <div class="comment">
+         <span class="markdown">Property that indicates the estimated time it will take to run this model.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Model" title="https://w3id.org/okn/o/sdm#Model">Model</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="theoreticalBasis">
+      <h3>theoretical basis<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sdm#theoreticalBasis</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Model" title="https://w3id.org/okn/o/sdm#Model">Model</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>

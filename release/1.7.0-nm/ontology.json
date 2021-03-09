@@ -130,6 +130,9 @@
     "@value" : "Christopher Duffy"
   }, {
     "@language" : "en",
+    "@value" : "Hernán Vargas"
+  }, {
+    "@language" : "en",
     "@value" : "Kelly Cobourn"
   }, {
     "@language" : "en",
@@ -175,9 +178,6 @@
     "@language" : "en",
     "@value" : "1.7.0-nm"
   } ]
-}, {
-  "@id" : "https://w3id.org/okn/o/sdm#Category",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://w3id.org/okn/o/sdm#CausalDiagram",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -926,14 +926,14 @@
     "@value" : "Indicates this subcategory parent category"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/okn/o/sdm#Category"
+    "@id" : "https://w3id.org/okn/o/sdm#ModelCategory"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "parent category"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/okn/o/sdm#Category"
+    "@id" : "https://w3id.org/okn/o/sdm#ModelCategory"
   } ]
 }, {
   "@id" : "https://w3id.org/okn/o/sdm#partOf",

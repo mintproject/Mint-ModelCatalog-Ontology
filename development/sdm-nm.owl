@@ -16,6 +16,7 @@
                               dc:contributor "Armen Kemanian"@en ,
                                              "Christopher Duffy"@en ,
                                              "Kelly Cobourn"@en ,
+                                             "Hernán Vargas"@en ,
                                              "Scott Peckham"@en ;
                               dc:creator "Daniel Garijo"@en ,
                                          "Deborah Khider"@en ,
@@ -207,8 +208,8 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/okn/o/sdm#parentCategory
 :parentCategory rdf:type owl:ObjectProperty ;
-                rdfs:domain :Category ;
-                rdfs:range :Category ;
+                rdfs:domain :ModelCategory ;
+                rdfs:range :ModelCategory ;
                 rdfs:comment "Indicates this subcategory parent category"@en ;
                 rdfs:label "parent category"@en .
 

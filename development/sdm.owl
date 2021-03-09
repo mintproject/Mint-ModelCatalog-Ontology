@@ -205,8 +205,8 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/okn/o/sdm#parentCategory
 :parentCategory rdf:type owl:ObjectProperty ;
-                rdfs:domain :Category ;
-                rdfs:range :Category ;
+                rdfs:domain :ModelCategory ;
+                rdfs:range :ModelCategory ;
                 rdfs:comment "Indicates the parent category of a given category"@en ;
                 rdfs:label "parent category"@en .
 
@@ -475,10 +475,6 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
 ###  https://w3id.org/okn/o/sd#VariablePresentation
 <https://w3id.org/okn/o/sd#VariablePresentation> rdf:type owl:Class .
-
-
-###  https://w3id.org/okn/o/sdm#Category
-:Category rdf:type owl:Class .
 
 
 ###  https://w3id.org/okn/o/sdm#CausalDiagram

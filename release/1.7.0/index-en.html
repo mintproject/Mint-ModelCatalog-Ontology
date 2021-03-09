@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/okn/o/sdm","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/okn/o/sdm","name":"The Software Description Ontology for Models", "headline":"The Software Description Ontology for Models (SDM) expands the software description ontology (SD) to add information about scientific software models. Examples of scientific software models are hydrology models, agriculture models or economy models.", "datePublished":"September 30th, 2020", "version":"1.7.0", "license":"http://creativecommons.org/licenses/by/2.0/", "author":[{"@type":"Person","name":"Daniel Garijo"},{"@type":"Person","name":"Deborah Khider"},{"@type":"Person","name":"Yolanda Gil"}], "contributor":[{"@type":"Person","name":"Armen Kemanian"},{"@type":"Person","name":"Christopher Duffy"},{"@type":"Person","name":"Kelly Cobourn"},{"@type":"Person","name":"Scott Peckham"}]}</script>
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"https://w3id.org/okn/o/sdm","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/okn/o/sdm","name":"The Software Description Ontology for Models", "headline":"The Software Description Ontology for Models (SDM) expands the software description ontology (SD) to add information about scientific software models. Examples of scientific software models are hydrology models, agriculture models or economy models.", "datePublished":"Mon Mar 08 22:20:25 CLST 2021", "version":"1.7.0", "license":"http://creativecommons.org/licenses/by/2.0/", "author":[{"@type":"Person","name":"Daniel Garijo"},{"@type":"Person","name":"Deborah Khider"},{"@type":"Person","name":"Yolanda Gil"}], "contributor":[{"@type":"Person","name":"Armen Kemanian"},{"@type":"Person","name":"Christopher Duffy"},{"@type":"Person","name":"Hernán Vargas"},{"@type":"Person","name":"Kelly Cobourn"},{"@type":"Person","name":"Scott Peckham"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -48,8 +48,6 @@ function loadTOC(){
       $("#abstract").load("sections/abstract-en.html"); 
       $("#introduction").load("sections/introduction-en.html"); 
       $("#overview").load("sections/overview-en.html"); 
-      $("#description").load("sections/description-en.html"); 
-      $("#references").load("sections/references-en.html"); 
       $("#changelog").load("sections/changelog-en.html"); 
       $("#crossref").load("sections/crossref-en.html", null, loadHash); 
     });
@@ -61,7 +59,7 @@ function loadTOC(){
 <div class="head">
 <div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
 <h1>The Software Description Ontology for Models</h1>
-<h2>Release  September 30th, 2020</h2>
+<h2>Release March, 2021</h2>
 
 
 <dl>
@@ -70,14 +68,14 @@ function loadTOC(){
 <dt>Latest version:</dt>
 <dd><a href="https://w3id.org/okn/o/sdm">https://w3id.org/okn/o/sdm</a></dd>
 <dt>Previous version:</dt>
-<dd><a href="https://w3id.org/okn/o/sdm/1.6.0">https://w3id.org/okn/o/sdm/1.6.0</a></dd>
+<dd><a href="https://w3id.org/okn/o/sdm/1.7.0">https://w3id.org/okn/o/sdm/1.7.0</a></dd>
 <dt>Revision:</dt>
 <dd>1.7.0</dd>
 <dt>Authors:</dt>
 <dd>Daniel Garijo</dd><dd>Deborah Khider</dd><dd>Yolanda Gil</dd>
 
 <dt>Contributors:</dt>
-<dd>Armen Kemanian</dd><dd>Christopher Duffy</dd><dd>Kelly Cobourn</dd><dd>Scott Peckham</dd>
+<dd>Armen Kemanian</dd><dd>Christopher Duffy</dd><dd>Hernán Vargas</dd><dd>Kelly Cobourn</dd><dd>Scott Peckham</dd>
 
 <dt>Imported Ontologies:</dt>
 <dd><a href="https://w3id.org/okn/o/sd">The software description ontology (sd)</a></dd>
@@ -97,14 +95,12 @@ function loadTOC(){
 </div>     <div id="abstract"></div>
 <div id="toc"></div>     <div id="introduction"></div>
      <div id="overview"></div>
-     <div id="description"></div>
      <div id="crossref"></div>
-     <div id="references"></div>
      <div id="changelog"></div>
-<div id="acknowledgments">
-<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div id="acknowledgements">
+<h2 id="ack" class="list">Acknowledgements <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <p>
-The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document. Document generated with <a href="https://github.com/dgarijo/Widoco">Widoco</a>.</p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
 </div>
 
 

@@ -349,7 +349,7 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <https://w3id.org/okn/o/sdm#limitations> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/okn/o/sdm#limitations> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#Model> .
 <https://w3id.org/okn/o/sdm#limitations> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/okn/o/sdm#limitations> <http://www.w3.org/2000/01/rdf-schema#comment> "Limitations of a model"@en .
+<https://w3id.org/okn/o/sdm#limitations> <http://www.w3.org/2000/01/rdf-schema#comment> "Known restrictions (i.e. cases where the model is known not to be reliable or shouldn't be used)"@en .
 <https://w3id.org/okn/o/sdm#limitations> <http://www.w3.org/2000/01/rdf-schema#label> "limitations"@en .
 # 
 # https://w3id.org/okn/o/sdm#longitude
@@ -379,21 +379,21 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <https://w3id.org/okn/o/sdm#parameterization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/okn/o/sdm#parameterization> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#Model> .
 <https://w3id.org/okn/o/sdm#parameterization> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/okn/o/sdm#parameterization> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that indicates more details about the parametrization of a model"@en .
+<https://w3id.org/okn/o/sdm#parameterization> <http://www.w3.org/2000/01/rdf-schema#comment> "Were there any simplifications made to processes to make the model more efficient"@en .
 <https://w3id.org/okn/o/sdm#parameterization> <http://www.w3.org/2000/01/rdf-schema#label> "parameterization"@en .
 # 
 # https://w3id.org/okn/o/sdm#runtimeEstimation
 <https://w3id.org/okn/o/sdm#runtimeEstimation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/okn/o/sdm#runtimeEstimation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#Model> .
 <https://w3id.org/okn/o/sdm#runtimeEstimation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/okn/o/sdm#runtimeEstimation> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that indicates the estimated time it will take to run this model."@en .
+<https://w3id.org/okn/o/sdm#runtimeEstimation> <http://www.w3.org/2000/01/rdf-schema#comment> "An estimate of the time required to run example codes or other known configurations"@en .
 <https://w3id.org/okn/o/sdm#runtimeEstimation> <http://www.w3.org/2000/01/rdf-schema#label> "runtime estimation"@en .
 # 
 # https://w3id.org/okn/o/sdm#theoreticalBasis
 <https://w3id.org/okn/o/sdm#theoreticalBasis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/okn/o/sdm#theoreticalBasis> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#Model> .
 <https://w3id.org/okn/o/sdm#theoreticalBasis> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/okn/o/sdm#theoreticalBasis> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
+<https://w3id.org/okn/o/sdm#theoreticalBasis> <http://www.w3.org/2000/01/rdf-schema#comment> "What is the theory behind the processes described in the model"@en .
 <https://w3id.org/okn/o/sdm#theoreticalBasis> <http://www.w3.org/2000/01/rdf-schema#label> "theoretical basis"@en .
 # 
 # https://w3id.org/okn/o/sdm#validUntil

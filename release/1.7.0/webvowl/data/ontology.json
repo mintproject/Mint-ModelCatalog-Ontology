@@ -30,12 +30,12 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "en",
-        "value" : "Yolanda Gil",
+        "value" : "Daniel Garijo",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "en",
-        "value" : "Daniel Garijo",
+        "value" : "Yolanda Gil",
         "type" : "label"
       }, {
         "identifier" : "creator",
@@ -44,11 +44,6 @@
         "type" : "label"
       } ],
       "contributor" : [ {
-        "identifier" : "contributor",
-        "language" : "en",
-        "value" : "Hernán Vargas",
-        "type" : "label"
-      }, {
         "identifier" : "contributor",
         "language" : "en",
         "value" : "Scott Peckham",
@@ -61,12 +56,17 @@
       }, {
         "identifier" : "contributor",
         "language" : "en",
-        "value" : "Armen Kemanian",
+        "value" : "Christopher Duffy",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "en",
-        "value" : "Christopher Duffy",
+        "value" : "Hernán Vargas",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "en",
+        "value" : "Armen Kemanian",
         "type" : "label"
       } ],
       "preferredNamespacePrefix" : [ {
@@ -74,6 +74,12 @@
         "language" : "undefined",
         "value" : "sdm",
         "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/okn/o/sdm#",
+        "type" : "iri"
       } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
@@ -86,12 +92,6 @@
         "language" : "en",
         "value" : "The Software Description Ontology for Models (SDM) expands the software description ontology (SD) to add information about scientific software models. Examples of scientific software models are hydrology models, agriculture models or economy models.",
         "type" : "label"
-      } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
-        "language" : "undefined",
-        "value" : "https://w3id.org/okn/o/sdm#",
-        "type" : "iri"
       } ],
       "title" : [ {
         "identifier" : "title",
@@ -142,13 +142,13 @@
     "id" : "44",
     "type" : "rdfs:Literal"
   }, {
+    "id" : "20",
+    "type" : "owl:Thing"
+  }, {
     "id" : "45",
     "type" : "rdfs:Literal"
   }, {
     "id" : "46",
-    "type" : "rdfs:Literal"
-  }, {
-    "id" : "47",
     "type" : "rdfs:Literal"
   }, {
     "id" : "21",
@@ -157,23 +157,23 @@
     "id" : "23",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "48",
+    "id" : "47",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "50",
+    "id" : "49",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "51",
     "type" : "rdfs:Literal"
   }, {
     "id" : "52",
     "type" : "rdfs:Literal"
   }, {
-    "id" : "53",
-    "type" : "rdfs:Literal"
-  }, {
-    "id" : "62",
+    "id" : "61",
     "type" : "owl:Class"
   }, {
-    "id" : "20",
-    "type" : "owl:Thing"
+    "id" : "66",
+    "type" : "rdfs:Literal"
   }, {
     "id" : "75",
     "type" : "owl:Class"
@@ -187,7 +187,7 @@
     "id" : "83",
     "type" : "owl:Class"
   }, {
-    "id" : "35",
+    "id" : "37",
     "type" : "owl:Class"
   }, {
     "id" : "101",
@@ -328,7 +328,7 @@
     "id" : "227",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "65",
+    "id" : "64",
     "type" : "owl:Class"
   }, {
     "id" : "117",
@@ -340,10 +340,10 @@
     "id" : "235",
     "type" : "owl:unionOf"
   }, {
-    "id" : "61",
+    "id" : "60",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "58",
+    "id" : "57",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "178",
@@ -352,7 +352,7 @@
     "id" : "236",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "195",
+    "id" : "194",
     "type" : "owl:unionOf"
   }, {
     "id" : "213",
@@ -364,7 +364,7 @@
     "id" : "157",
     "type" : "owl:unionOf"
   }, {
-    "id" : "38",
+    "id" : "35",
     "type" : "owl:Class"
   }, {
     "id" : "241",
@@ -424,7 +424,7 @@
     "id" : "85",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "60",
+    "id" : "59",
     "type" : "owl:Class"
   }, {
     "id" : "77",
@@ -487,7 +487,7 @@
     "id" : "280",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "36",
+    "id" : "38",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "256",
@@ -502,7 +502,7 @@
     "id" : "284",
     "type" : "owl:Class"
   }, {
-    "id" : "55",
+    "id" : "54",
     "type" : "owl:Class"
   }, {
     "id" : "286",
@@ -529,13 +529,13 @@
     "id" : "181",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "56",
+    "id" : "55",
     "type" : "owl:Class"
   }, {
     "id" : "292",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "66",
+    "id" : "65",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "254",
@@ -610,7 +610,7 @@
     "id" : "108",
     "type" : "owl:Class"
   }, {
-    "id" : "63",
+    "id" : "62",
     "type" : "owl:Class"
   }, {
     "id" : "110",
@@ -787,6 +787,13 @@
       "undefined" : "Literal"
     }
   }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "20",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "id" : "45",
     "label" : {
@@ -796,13 +803,6 @@
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "id" : "46",
-    "label" : {
-      "IRI-based" : "Literal",
-      "undefined" : "Literal"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "47",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -823,14 +823,21 @@
     }
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "48",
+    "id" : "47",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
     }
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "50",
+    "id" : "49",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "51",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -838,13 +845,6 @@
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "id" : "52",
-    "label" : {
-      "IRI-based" : "Literal",
-      "undefined" : "Literal"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "53",
     "label" : {
       "IRI-based" : "Literal",
       "undefined" : "Literal"
@@ -864,15 +864,15 @@
     "label" : {
       "IRI-based" : "GeoCoordinates"
     },
-    "subClasses" : [ "63" ],
+    "subClasses" : [ "62" ],
     "attributes" : [ "external" ],
-    "id" : "62"
+    "id" : "61"
   }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
-    "id" : "20",
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "66",
     "label" : {
-      "undefined" : "Thing"
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
     }
   }, {
     "iri" : "http://schema.org/GeoShape",
@@ -881,7 +881,7 @@
     "label" : {
       "IRI-based" : "GeoShape"
     },
-    "subClasses" : [ "65" ],
+    "subClasses" : [ "64" ],
     "attributes" : [ "external" ],
     "id" : "75"
   }, {
@@ -896,7 +896,7 @@
       "en" : "A model based on empirical observations and theory."
     },
     "id" : "80",
-    "superClasses" : [ "38" ]
+    "superClasses" : [ "35" ]
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#ModelCategory",
     "baseIri" : "https://w3id.org/okn/o/sdm",
@@ -934,8 +934,8 @@
     "comment" : {
       "en" : "Setup of a particular model, that may represent a calibration or a configuration with a set of values for a specific region."
     },
-    "id" : "35",
-    "superClasses" : [ "55", "30" ]
+    "id" : "37",
+    "superClasses" : [ "54", "30" ]
   }, {
     "iri" : "https://w3id.org/okn/o/sd#SoftwareImage",
     "baseIri" : "https://w3id.org/okn/o/sd",
@@ -1051,7 +1051,7 @@
       "en" : "Model that incorporates the coupling of two or more existing models"
     },
     "id" : "114",
-    "superClasses" : [ "38" ]
+    "superClasses" : [ "35" ]
   }, {
     "iri" : "https://w3id.org/okn/o/sd#StandardVariable",
     "baseIri" : "https://w3id.org/okn/o/sd",
@@ -1079,7 +1079,7 @@
     },
     "attributes" : [ "external" ],
     "id" : "186",
-    "superClasses" : [ "60" ]
+    "superClasses" : [ "59" ]
   }, {
     "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
     "id" : "189",
@@ -1130,8 +1130,8 @@
     "id" : "27"
   }, {
     "instances" : 0,
-    "union" : [ "43", "60" ],
-    "attributes" : [ "anonymous", "union" ],
+    "union" : [ "43", "59" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "199"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -1164,7 +1164,7 @@
   }, {
     "instances" : 0,
     "union" : [ "43", "8" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "204"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -1203,8 +1203,8 @@
     }
   }, {
     "instances" : 0,
-    "union" : [ "122", "142", "42", "14", "107", "152", "9", "60", "32", "40" ],
-    "attributes" : [ "anonymous", "union" ],
+    "union" : [ "122", "142", "42", "14", "107", "152", "9", "59", "32", "40" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "218"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -1308,7 +1308,7 @@
     "comment" : {
       "en" : "Shape or polygon of a region in a map"
     },
-    "id" : "65",
+    "id" : "64",
     "superClasses" : [ "75" ]
   }, {
     "iri" : "https://w3id.org/okn/o/sd#SoftwareVersion",
@@ -1333,20 +1333,20 @@
     }
   }, {
     "instances" : 0,
-    "union" : [ "43", "60" ],
-    "attributes" : [ "anonymous", "union" ],
+    "union" : [ "43", "59" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "235"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#float",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "61",
+    "id" : "60",
     "label" : {
       "IRI-based" : "float"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "58",
+    "id" : "57",
     "label" : {
       "IRI-based" : "string"
     }
@@ -1366,9 +1366,9 @@
     }
   }, {
     "instances" : 0,
-    "union" : [ "43", "60" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "195"
+    "union" : [ "43", "59" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "194"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -1386,7 +1386,7 @@
   }, {
     "instances" : 0,
     "union" : [ "142", "110" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "157"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#Model",
@@ -1396,11 +1396,11 @@
       "IRI-based" : "Model",
       "en" : "Model"
     },
-    "subClasses" : [ "114", "91", "55", "94", "96", "80" ],
+    "subClasses" : [ "114", "91", "54", "94", "96", "80" ],
     "comment" : {
       "en" : "A mathematical description of a process (e.g., hydrological, agricultural, social, etc.)"
     },
-    "id" : "38",
+    "id" : "35",
     "superClasses" : [ "14" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -1433,7 +1433,7 @@
   }, {
     "instances" : 0,
     "union" : [ "122", "101", "8" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "246"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -1577,7 +1577,7 @@
       "en" : "A parameter of the model."
     },
     "attributes" : [ "external" ],
-    "id" : "60"
+    "id" : "59"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -1594,8 +1594,8 @@
     }
   }, {
     "instances" : 0,
-    "union" : [ "110", "60" ],
-    "attributes" : [ "anonymous", "union" ],
+    "union" : [ "110", "59" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "263"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -1652,7 +1652,7 @@
   }, {
     "instances" : 0,
     "union" : [ "14", "107" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "272"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -1671,7 +1671,7 @@
   }, {
     "instances" : 0,
     "union" : [ "14", "152", "32" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "2"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -1703,8 +1703,8 @@
     }
   }, {
     "instances" : 0,
-    "union" : [ "63", "65" ],
-    "attributes" : [ "anonymous", "union" ],
+    "union" : [ "62", "64" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "169"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -1716,14 +1716,14 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "36",
+    "id" : "38",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "instances" : 0,
-    "union" : [ "63", "65" ],
-    "attributes" : [ "anonymous", "union" ],
+    "union" : [ "62", "64" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "256"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -1762,12 +1762,12 @@
       "IRI-based" : "ModelConfiguration",
       "en" : "Model configuration"
     },
-    "subClasses" : [ "35" ],
+    "subClasses" : [ "37" ],
     "comment" : {
       "en" : "A model configuration is a way of exposing a particular functionality of a model."
     },
-    "id" : "55",
-    "superClasses" : [ "8", "38" ]
+    "id" : "54",
+    "superClasses" : [ "8", "35" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -1798,8 +1798,8 @@
     }
   }, {
     "instances" : 0,
-    "union" : [ "63", "65" ],
-    "attributes" : [ "anonymous", "union" ],
+    "union" : [ "62", "64" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "180"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -1833,7 +1833,7 @@
     "comment" : {
       "en" : "Time interval at which a model produces output. For example, a model may produce outputs for every simulated day, hour, etc."
     },
-    "id" : "56"
+    "id" : "55"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -1844,7 +1844,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "66",
+    "id" : "65",
     "label" : {
       "IRI-based" : "string"
     }
@@ -1886,17 +1886,17 @@
   }, {
     "instances" : 0,
     "union" : [ "8", "117", "30" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "278"
   }, {
     "instances" : 0,
     "union" : [ "14", "152", "32" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "300"
   }, {
     "instances" : 0,
     "union" : [ "142", "89", "9" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "302"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#EmpiricalModel",
@@ -1910,7 +1910,7 @@
       "en" : "Model based on observations."
     },
     "id" : "96",
-    "superClasses" : [ "38" ]
+    "superClasses" : [ "35" ]
   }, {
     "iri" : "http://qudt.org/schema/qudt/Unit",
     "baseIri" : "http://qudt.org/schema/qudt",
@@ -1941,7 +1941,7 @@
       "en" : "Type of models that emulates the behavior of another model. For example, an emulator can be a machine learning model trained on the output runs of a hydrology model"
     },
     "id" : "91",
-    "superClasses" : [ "38" ]
+    "superClasses" : [ "35" ]
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#Intervention",
     "baseIri" : "https://w3id.org/okn/o/sdm",
@@ -2051,7 +2051,7 @@
       "IRI-based" : "Software",
       "en" : "Software"
     },
-    "subClasses" : [ "101", "8", "117", "38" ],
+    "subClasses" : [ "101", "8", "117", "35" ],
     "comment" : {
       "en" : "The set of instructions that indicate a machine how to work. In this ontology software is a general concept which acts as a superclass for software versions, docker images, data transformations, etc."
     },
@@ -2079,7 +2079,7 @@
       "IRI-based" : "ConfigurationSetup",
       "en" : "Configuration Setup"
     },
-    "subClasses" : [ "125", "35" ],
+    "subClasses" : [ "125", "37" ],
     "comment" : {
       "en" : "Special type of configuration in which some of the inputs or parameters are associated to files or values. A configuration may be associated to multiple setups to facilitate its execution."
     },
@@ -2098,7 +2098,7 @@
       "en" : "A model guided by mathematical equations that attempt to represent one or more natural processes."
     },
     "id" : "94",
-    "superClasses" : [ "38" ]
+    "superClasses" : [ "35" ]
   }, {
     "iri" : "http://schema.org/SoftwareSourceCode",
     "baseIri" : "http://schema.org",
@@ -2120,8 +2120,8 @@
     "comment" : {
       "en" : "Coordinate metadata of a region"
     },
-    "id" : "63",
-    "superClasses" : [ "62" ]
+    "id" : "62",
+    "superClasses" : [ "61" ]
   }, {
     "iri" : "https://w3id.org/okn/o/sd#DatasetSpecification",
     "baseIri" : "https://w3id.org/okn/o/sd",
@@ -2179,42 +2179,42 @@
   }, {
     "instances" : 0,
     "union" : [ "142", "89", "14" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "131"
   }, {
     "instances" : 0,
     "union" : [ "152", "32" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "274"
   }, {
     "instances" : 0,
-    "union" : [ "110", "60" ],
-    "attributes" : [ "anonymous", "union" ],
+    "union" : [ "110", "59" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "389"
   }, {
     "instances" : 0,
     "union" : [ "42", "43" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "225"
   }, {
     "instances" : 0,
     "union" : [ "152", "32" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "337"
   }, {
     "instances" : 0,
-    "union" : [ "43", "60" ],
-    "attributes" : [ "anonymous", "union" ],
+    "union" : [ "43", "59" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "318"
   }, {
     "instances" : 0,
-    "union" : [ "63", "65" ],
-    "attributes" : [ "anonymous", "union" ],
+    "union" : [ "62", "64" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "270"
   }, {
     "instances" : 0,
     "union" : [ "43", "103" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "331"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#VariablePresentation",
@@ -2233,7 +2233,7 @@
   }, {
     "instances" : 0,
     "union" : [ "152", "32" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "68"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#SoftwareConfiguration",
@@ -2243,7 +2243,7 @@
       "IRI-based" : "SoftwareConfiguration",
       "en" : "Software Configuration"
     },
-    "subClasses" : [ "284", "55", "30" ],
+    "subClasses" : [ "284", "54", "30" ],
     "comment" : {
       "en" : "A software configuration represents a particular way of invoking a function of a software component. A software configuration exposes the precise inputs and outputs that are used for that function. Multiple software configurations may be associated to a software component. A software configuration facilitates the encapsulation of software, and it can be used to represent components of scientific workflows."
     },
@@ -2253,7 +2253,7 @@
   }, {
     "instances" : 0,
     "union" : [ "152", "32" ],
-    "attributes" : [ "anonymous", "union" ],
+    "attributes" : [ "union", "anonymous" ],
     "id" : "147"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#PointBasedGrid",
@@ -2337,27 +2337,27 @@
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "34",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "37",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "49",
+    "id" : "36",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "51",
+    "id" : "48",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "54",
+    "id" : "50",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "53",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "57",
+    "id" : "56",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "59",
+    "id" : "58",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "64",
+    "id" : "63",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "67",
@@ -2528,7 +2528,7 @@
     "id" : "193",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "194",
+    "id" : "195",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "196",
@@ -2598,10 +2598,10 @@
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "258",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "259",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "261",
     "type" : "owl:datatypeProperty"
@@ -2909,10 +2909,10 @@
     "id" : "391",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "392",
+    "id" : "243",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "243",
+    "id" : "392",
     "type" : "owl:objectProperty"
   }, {
     "id" : "393",
@@ -2951,7 +2951,7 @@
     "comment" : {
       "en" : "Identifier of the resource being described"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "1"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasSampleResult",
@@ -2965,7 +2965,7 @@
     "comment" : {
       "undefined" : "Property designed to link a software configuration to a sample resource resulting from its execution"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "7"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasPurpose",
@@ -2979,7 +2979,7 @@
     "comment" : {
       "en" : "Objective or main functionality that can be achieved by running this software"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "13"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasAssumption",
@@ -2993,7 +2993,7 @@
     "comment" : {
       "en" : "Assumptions of a software, e.g. the solver being used for a particular model, the source of the data (e.g., all data must have a given resolution), etc."
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "17"
   }, {
     "iri" : "http://schema.org/elevation",
@@ -3011,7 +3011,7 @@
       "IRI-based" : "elevation"
     },
     "domain" : "20",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "19"
   }, {
     "iri" : "http://schema.org/programmingLanguage",
@@ -3029,7 +3029,7 @@
       "IRI-based" : "programmingLanguage"
     },
     "domain" : "20",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "22"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
@@ -3040,7 +3040,7 @@
     },
     "domain" : "20",
     "subproperty" : [ "25", "26" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "24"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#status",
@@ -3054,40 +3054,40 @@
     "comment" : {
       "en" : "Data property to indicate the status of a configuration setups. For example, to indicate that a setup has been executed in a platform, that the setup should notbe shown to users (it's an auxiliary setup), etc."
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "29"
-  }, {
-    "iri" : "https://w3id.org/okn/o/sdm#parameterAssignmentMethod",
-    "baseIri" : "https://w3id.org/okn/o/sdm",
-    "range" : "36",
-    "label" : {
-      "IRI-based" : "parameterAssignmentMethod",
-      "en" : "parameter assignment method"
-    },
-    "domain" : "35",
-    "comment" : {
-      "en" : "Property that indicates how have the parameters assigned in a model configuration (e.g., using an expert guess, by using calibration, etc.)"
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "34"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#usesModel",
     "baseIri" : "https://w3id.org/okn/o/sdm",
-    "range" : "38",
+    "range" : "35",
     "label" : {
       "IRI-based" : "usesModel",
       "en" : "uses model"
     },
-    "domain" : "38",
+    "domain" : "35",
     "comment" : {
       "en" : "Property that describes which models are used by a coupled model"
     },
     "attributes" : [ "object" ],
-    "id" : "37"
+    "id" : "34"
+  }, {
+    "iri" : "https://w3id.org/okn/o/sdm#parameterAssignmentMethod",
+    "baseIri" : "https://w3id.org/okn/o/sdm",
+    "range" : "38",
+    "label" : {
+      "IRI-based" : "parameterAssignmentMethod",
+      "en" : "parameter assignment method"
+    },
+    "domain" : "37",
+    "comment" : {
+      "en" : "Property that indicates how have the parameters assigned in a model configuration (e.g., using an expert guess, by using calibration, etc.)"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "36"
   }, {
     "iri" : "http://schema.org/description",
     "baseIri" : "http://schema.org",
-    "range" : "50",
+    "range" : "49",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3100,12 +3100,12 @@
       "IRI-based" : "description"
     },
     "domain" : "20",
-    "attributes" : [ "datatype", "external" ],
-    "id" : "49"
+    "attributes" : [ "external", "datatype" ],
+    "id" : "48"
   }, {
     "iri" : "http://schema.org/codeRepository",
     "baseIri" : "http://schema.org",
-    "range" : "52",
+    "range" : "51",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3118,26 +3118,26 @@
       "IRI-based" : "codeRepository"
     },
     "domain" : "20",
-    "attributes" : [ "datatype", "external" ],
-    "id" : "51"
+    "attributes" : [ "external", "datatype" ],
+    "id" : "50"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#hasOutputTimeInterval",
     "baseIri" : "https://w3id.org/okn/o/sdm",
-    "range" : "56",
+    "range" : "55",
     "label" : {
       "IRI-based" : "hasOutputTimeInterval",
       "en" : "has ourput time interval"
     },
-    "domain" : "55",
+    "domain" : "54",
     "comment" : {
       "en" : "Time interval used in the model configuration"
     },
     "attributes" : [ "object" ],
-    "id" : "54"
+    "id" : "53"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasShortName",
     "baseIri" : "https://w3id.org/okn/o/sd",
-    "range" : "58",
+    "range" : "57",
     "label" : {
       "IRI-based" : "hasShortName",
       "en" : "has short name"
@@ -3146,32 +3146,32 @@
     "comment" : {
       "en" : "A short name (e.g., temperature) capturing the high-level concept of the variable"
     },
-    "attributes" : [ "datatype", "external" ],
-    "id" : "57"
+    "attributes" : [ "external", "datatype" ],
+    "id" : "56"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasStepSize",
     "baseIri" : "https://w3id.org/okn/o/sd",
-    "range" : "61",
+    "range" : "60",
     "label" : {
       "IRI-based" : "hasStepSize",
       "en" : "has step size"
     },
-    "domain" : "60",
+    "domain" : "59",
     "comment" : {
       "en" : "Property that determines what are the increments (step size) that are commonly used to vary a parameter. This is commonly used for automatically setting up software tests. For example, if I want to set up a model and try 30 reasonable values on a parameter, I may use the default value and the step size to create the appropriate increments. If the step size is 0.1 and the default value is 0, then I will will be able to create setups: 0, 0.1, 0.2...2.9,3"
     },
-    "attributes" : [ "datatype", "external" ],
-    "id" : "59"
+    "attributes" : [ "external", "datatype" ],
+    "id" : "58"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#box",
     "baseIri" : "https://w3id.org/okn/o/sdm",
-    "range" : "66",
+    "range" : "65",
     "label" : {
       "IRI-based" : "box"
     },
-    "domain" : "65",
+    "domain" : "64",
     "attributes" : [ "datatype" ],
-    "id" : "64"
+    "id" : "63"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#author",
     "baseIri" : "https://w3id.org/okn/o/sd",
@@ -3185,7 +3185,7 @@
     "comment" : {
       "en" : "The creator of a software component"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "67"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#intervalUnit",
@@ -3196,7 +3196,7 @@
       "en" : "interval unit"
     },
     "superproperty" : [ "72" ],
-    "domain" : "56",
+    "domain" : "55",
     "comment" : {
       "en" : "Unit used in an interval (e.g., month)"
     },
@@ -3214,7 +3214,7 @@
     "comment" : {
       "en" : "How to cite this software"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "73"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#readme",
@@ -3228,7 +3228,7 @@
     "comment" : {
       "en" : "URl to the readme file of a software component"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "76"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasDataType",
@@ -3238,11 +3238,11 @@
       "IRI-based" : "hasDataType",
       "en" : "has data type"
     },
-    "domain" : "60",
+    "domain" : "59",
     "comment" : {
       "en" : "Property that indicates the data type of a parameter"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "78"
   }, {
     "iri" : "http://schema.org/latitude",
@@ -3260,7 +3260,7 @@
       "IRI-based" : "latitude"
     },
     "domain" : "20",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "81"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#recommendedIncrement",
@@ -3270,11 +3270,11 @@
       "IRI-based" : "recommendedIncrement",
       "en" : "recommended increment"
     },
-    "domain" : "60",
+    "domain" : "59",
     "comment" : {
       "en" : "Value that represents how a parameter should be incremented on each iteration of a software component execution. This value is important when preparing execution ensembles automatically, e.g., simulating crop production varying the parameter \"fertilizer amount\" in increments of 10%."
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "84"
   }, {
     "iri" : "http://schema.org/screenshot",
@@ -3293,7 +3293,7 @@
     },
     "domain" : "20",
     "subproperty" : [ "87" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "86"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#logo",
@@ -3307,27 +3307,27 @@
     "comment" : {
       "en" : "Property that links to the image used as logo for a software component"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "88"
   }, {
-    "range" : "38",
+    "range" : "35",
     "domain" : "91",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "90"
   }, {
-    "range" : "38",
-    "domain" : "55",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "35",
+    "domain" : "54",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "92"
   }, {
-    "range" : "38",
+    "range" : "35",
     "domain" : "94",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "93"
   }, {
-    "range" : "38",
+    "range" : "35",
     "domain" : "96",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "95"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#shortDescription",
@@ -3341,7 +3341,7 @@
     "comment" : {
       "en" : "A summarized description of the resource"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "97"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#dataCatalogIdentifier",
@@ -3355,7 +3355,7 @@
     "comment" : {
       "en" : "An identifier for resources with metadata entries in a data catalog"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "99"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#influences",
@@ -3373,43 +3373,43 @@
     "id" : "102"
   }, {
     "range" : "30",
-    "domain" : "35",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "37",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "104"
   }, {
     "range" : "27",
     "domain" : "9",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "105"
   }, {
     "range" : "108",
     "domain" : "107",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "106"
   }, {
     "range" : "110",
     "domain" : "89",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "109"
   }, {
     "range" : "110",
     "domain" : "112",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "111"
   }, {
-    "range" : "38",
+    "range" : "35",
     "domain" : "114",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "113"
   }, {
     "range" : "14",
     "domain" : "8",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "115"
   }, {
     "range" : "14",
     "domain" : "117",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "116"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#supportDetails",
@@ -3423,22 +3423,22 @@
     "comment" : {
       "en" : "Property to link details, such as mailing lists in case a contact person is not provided"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "118"
   }, {
     "range" : "14",
-    "domain" : "38",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "120"
   }, {
     "range" : "123",
     "domain" : "122",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "121"
   }, {
     "range" : "30",
     "domain" : "125",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "124"
   }, {
     "iri" : "http://schema.org/geo",
@@ -3449,7 +3449,7 @@
     },
     "domain" : "20",
     "subproperty" : [ "127" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "126"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#referencePublication",
@@ -3463,7 +3463,7 @@
     "comment" : {
       "en" : "Main publication to cite for this software component"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "128"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hadPrimarySource",
@@ -3478,7 +3478,7 @@
     "comment" : {
       "en" : "Property to identify the original source of the information of the annotated resource. It could be a web page, an organization, a person, some experiment notes, etc."
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "130"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#copyrightYear",
@@ -3492,7 +3492,7 @@
     "comment" : {
       "en" : "Year in which the software component was copyrighted"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "134"
   }, {
     "iri" : "http://schema.org/name",
@@ -3510,7 +3510,7 @@
       "IRI-based" : "name"
     },
     "domain" : "20",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "136"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasSupportScriptLocation",
@@ -3524,12 +3524,12 @@
     "comment" : {
       "en" : "Property that links to the location of scripts that may be used from the main runnable script."
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "138"
   }, {
     "range" : "75",
-    "domain" : "65",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "64",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "140"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasSampleVisualization",
@@ -3543,12 +3543,12 @@
     "comment" : {
       "en" : "A typical sample visualization of the software outputs"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "141"
   }, {
     "range" : "145",
     "domain" : "144",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "143"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#copyrightHolder",
@@ -3563,27 +3563,27 @@
     "comment" : {
       "en" : "Copyright holder for a software component"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "146"
   }, {
     "range" : "150",
     "domain" : "110",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "149"
   }, {
     "range" : "153",
     "domain" : "152",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "151"
   }, {
     "range" : "14",
     "domain" : "101",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "154"
   }, {
     "range" : "71",
     "domain" : "83",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "155"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasFormat",
@@ -3597,27 +3597,27 @@
     "comment" : {
       "en" : "Format followed by a file. For example, txt, nc, etc."
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "156"
   }, {
     "range" : "9",
     "domain" : "28",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "159"
   }, {
     "range" : "40",
     "domain" : "41",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "160"
   }, {
     "range" : "40",
     "domain" : "42",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "161"
   }, {
     "range" : "40",
     "domain" : "43",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "162"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#hasEquation",
@@ -3627,16 +3627,16 @@
       "IRI-based" : "hasEquation",
       "en" : "has equation"
     },
-    "domain" : "38",
+    "domain" : "35",
     "comment" : {
       "en" : "Equations used in the model"
     },
     "attributes" : [ "object" ],
     "id" : "163"
   }, {
-    "range" : "62",
-    "domain" : "63",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "61",
+    "domain" : "62",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "165"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#issueTracker",
@@ -3650,7 +3650,7 @@
     "comment" : {
       "en" : "Pointer to the issue tracker of a software component"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "166"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#longitude",
@@ -3692,7 +3692,7 @@
     "comment" : {
       "en" : "Instructions required to install this particular piece of software. Installation instructions usually are available in a human-readable manner."
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "177"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#elevation",
@@ -3720,8 +3720,22 @@
     "comment" : {
       "en" : "Instructions that indicate how a software component should be executed. The difference with `hasExecutionCommand` is that the execution instructions aim to be human-readable, and have explanations between the different commands and instructions"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "187"
+  }, {
+    "iri" : "https://w3id.org/okn/o/sd#hasMaximumAcceptedValue",
+    "baseIri" : "https://w3id.org/okn/o/sd",
+    "range" : "66",
+    "label" : {
+      "IRI-based" : "hasMaximumAcceptedValue",
+      "en" : "has maximum accepted value"
+    },
+    "domain" : "194",
+    "comment" : {
+      "en" : "Maximum accepted value of a variable presentation (or a parameter)"
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "193"
   }, {
     "iri" : "https://codemeta.github.io/terms/referencePublication",
     "baseIri" : "https://codemeta.github.io/terms",
@@ -3738,22 +3752,8 @@
       "IRI-based" : "referencePublication"
     },
     "domain" : "20",
-    "attributes" : [ "datatype", "external" ],
-    "id" : "193"
-  }, {
-    "iri" : "https://w3id.org/okn/o/sd#hasMaximumAcceptedValue",
-    "baseIri" : "https://w3id.org/okn/o/sd",
-    "range" : "46",
-    "label" : {
-      "IRI-based" : "hasMaximumAcceptedValue",
-      "en" : "has maximum accepted value"
-    },
-    "domain" : "195",
-    "comment" : {
-      "en" : "Maximum accepted value of a variable presentation (or a parameter)"
-    },
-    "attributes" : [ "datatype", "external" ],
-    "id" : "194"
+    "attributes" : [ "external", "datatype" ],
+    "id" : "195"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasPart",
     "baseIri" : "https://w3id.org/okn/o/sd",
@@ -3766,7 +3766,7 @@
     "comment" : {
       "en" : "Property designed to reference the elements included in a sample collection."
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "196"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#hasCausalDiagram",
@@ -3776,7 +3776,7 @@
       "IRI-based" : "hasCausalDiagram",
       "en" : "has causal diagram"
     },
-    "domain" : "55",
+    "domain" : "54",
     "comment" : {
       "en" : "Diagram associated to a model configuration"
     },
@@ -3790,16 +3790,16 @@
       "IRI-based" : "adjustsVariable",
       "en" : "adjusts variable"
     },
-    "domain" : "60",
+    "domain" : "59",
     "comment" : {
       "en" : "Property that links parameter with the variable they adjust. This property can be used when parameters quantify variables without directly representing them. For example, a \"fertilizer percentage adjustment\" parameter can quantify a \"fertilizer price\" variable"
     },
-    "attributes" : [ "functional", "object", "external" ],
+    "attributes" : [ "external", "functional", "object" ],
     "id" : "203"
   }, {
     "iri" : "http://schema.org/box",
     "baseIri" : "http://schema.org",
-    "range" : "48",
+    "range" : "47",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3812,7 +3812,7 @@
       "IRI-based" : "box"
     },
     "domain" : "20",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "208"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasDocumentation",
@@ -3826,12 +3826,12 @@
     "comment" : {
       "en" : "Pointer to the documentation of the model"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "209"
   }, {
     "iri" : "http://schema.org/longitude",
     "baseIri" : "http://schema.org",
-    "range" : "53",
+    "range" : "52",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -3844,7 +3844,7 @@
       "IRI-based" : "longitude"
     },
     "domain" : "20",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "211"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasLongName",
@@ -3858,7 +3858,7 @@
     "comment" : {
       "en" : "Properties that relate the variable representation to its long name. The long name is useful for context (e.g., precipitation is less ambiguous than P) but not as precise as the standard name."
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "212"
   }, {
     "iri" : "https://codemeta.github.io/terms/issueTracker",
@@ -3876,7 +3876,7 @@
       "IRI-based" : "issueTracker"
     },
     "domain" : "20",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "214"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#availableInRegistry",
@@ -3890,7 +3890,7 @@
     "comment" : {
       "en" : "Property that indicates in which registry the software image being described can be found. For example, https://hub.docker.com"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "215"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasStandardVariable",
@@ -3904,7 +3904,7 @@
     "comment" : {
       "en" : "the standard name of a variable"
     },
-    "attributes" : [ "functional", "object", "external" ],
+    "attributes" : [ "external", "functional", "object" ],
     "id" : "224"
   }, {
     "iri" : "http://schema.org/author",
@@ -3923,7 +3923,7 @@
     },
     "domain" : "20",
     "subproperty" : [ "67" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "69"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasSetup",
@@ -3937,7 +3937,7 @@
     "comment" : {
       "en" : "Property used to define configurations with some fixed resources and values. The rationale of this property is to allow predefined configurations"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "228"
   }, {
     "iri" : "http://schema.org/email",
@@ -3955,7 +3955,7 @@
       "IRI-based" : "email"
     },
     "domain" : "20",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "229"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#hasRegion",
@@ -3965,7 +3965,7 @@
       "IRI-based" : "hasRegion"
     },
     "superproperty" : [ "231" ],
-    "domain" : "55",
+    "domain" : "54",
     "comment" : {
       "en" : "Property linking a region to a model configuration/calibration. This property implies that the described model configuration is prepared to execute in that target region"
     },
@@ -3987,7 +3987,7 @@
       "IRI-based" : "readme"
     },
     "domain" : "20",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "232"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#name",
@@ -4001,7 +4001,7 @@
     "comment" : {
       "en" : "Name of the resource"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "233"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#hasSpatialResolution",
@@ -4025,11 +4025,11 @@
       "IRI-based" : "hasFixedValue",
       "en" : "has fixed value"
     },
-    "domain" : "60",
+    "domain" : "59",
     "comment" : {
       "en" : "Value of a parameter in a software setup."
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "239"
   }, {
     "iri" : "http://schema.org/operatingSystems",
@@ -4047,7 +4047,7 @@
       "IRI-based" : "operatingSystems"
     },
     "domain" : "20",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "240"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#contributor",
@@ -4062,7 +4062,7 @@
     "comment" : {
       "en" : "Contributor to a software component"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "242"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#keywords",
@@ -4076,7 +4076,7 @@
     "comment" : {
       "en" : "Keywords associated with a software component"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "247"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#latitude",
@@ -4093,6 +4093,20 @@
     "attributes" : [ "datatype" ],
     "id" : "255"
   }, {
+    "iri" : "https://w3id.org/okn/o/sd#hasUsageNotes",
+    "baseIri" : "https://w3id.org/okn/o/sd",
+    "range" : "226",
+    "label" : {
+      "IRI-based" : "hasUsageNotes",
+      "en" : "has usage notes"
+    },
+    "domain" : "14",
+    "comment" : {
+      "en" : "Property that describes the usage considerations of a particular software. These notes capture the rationale of for that software configuration, along with an explanation for sample inputs, things to consider when running the model with data, etc."
+    },
+    "attributes" : [ "external", "datatype" ],
+    "id" : "258"
+  }, {
     "iri" : "http://www.w3.org/ns/prov#used",
     "baseIri" : "http://www.w3.org/ns/prov",
     "range" : "20",
@@ -4108,21 +4122,7 @@
       "IRI-based" : "used"
     },
     "domain" : "20",
-    "attributes" : [ "object", "external" ],
-    "id" : "258"
-  }, {
-    "iri" : "https://w3id.org/okn/o/sd#hasUsageNotes",
-    "baseIri" : "https://w3id.org/okn/o/sd",
-    "range" : "226",
-    "label" : {
-      "IRI-based" : "hasUsageNotes",
-      "en" : "has usage notes"
-    },
-    "domain" : "14",
-    "comment" : {
-      "en" : "Property that describes the usage considerations of a particular software. These notes capture the rationale of for that software configuration, along with an explanation for sample inputs, things to consider when running the model with data, etc."
-    },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "259"
   }, {
     "iri" : "http://schema.org/datePublished",
@@ -4140,7 +4140,7 @@
       "IRI-based" : "datePublished"
     },
     "domain" : "20",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "261"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasExecutableNotebook",
@@ -4154,7 +4154,7 @@
     "comment" : {
       "en" : "Property that links a software component with an executable notebook (e.g., Jupyter notebook) that illustrates how to use it in an executable manner."
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "269"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#geo",
@@ -4183,7 +4183,7 @@
     "comment" : {
       "en" : "Contact person responsible for a software component"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "273"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#tag",
@@ -4197,7 +4197,7 @@
     "comment" : {
       "en" : "Tag used to annotate a version or a software configuration. This annotation is useful to show which version is the latest, or which version is deprecated. Supported tags are: \"latest\", \"deprecated\""
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "277"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasExecutionCommand",
@@ -4211,7 +4211,7 @@
     "comment" : {
       "en" : "Execution instructions on how to run the image"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "282"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasBuildFile",
@@ -4225,7 +4225,7 @@
     "comment" : {
       "en" : "A file (e.g., Dockerfile) with executable instructions indicating how a Software Image or a Software component is built"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "283"
   }, {
     "iri" : "http://schema.org/license",
@@ -4243,7 +4243,7 @@
       "IRI-based" : "license"
     },
     "domain" : "20",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "285"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasFixedResource",
@@ -4257,7 +4257,7 @@
     "comment" : {
       "en" : "Property that links a parameter or an input to a fixed value. For example, in a given configuration a parameter with the planting date for a model could be fixed to avoid the user changing it for that region."
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "289"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasImplementationScriptLocation",
@@ -4271,7 +4271,7 @@
     "comment" : {
       "en" : "Property that points to the main runnable script for the current function"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "291"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#limitations",
@@ -4281,9 +4281,9 @@
       "IRI-based" : "limitations",
       "en" : "limitations"
     },
-    "domain" : "38",
+    "domain" : "35",
     "comment" : {
-      "en" : "Limitations of a model"
+      "en" : "Known restrictions (i.e. cases where the model is known not to be reliable or shouldn't be used)"
     },
     "attributes" : [ "datatype" ],
     "id" : "293"
@@ -4299,7 +4299,7 @@
     "comment" : {
       "en" : "URL to the code repository of a software component"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "294"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#intervalValue",
@@ -4309,7 +4309,7 @@
       "IRI-based" : "intervalValue",
       "en" : "interval value"
     },
-    "domain" : "56",
+    "domain" : "55",
     "comment" : {
       "en" : "Value used in the time interval of a model (e.g., 1 month, 5 days, 'harvest cycle')"
     },
@@ -4328,7 +4328,7 @@
     "comment" : {
       "en" : "Property that links a setup to a previous version of that setup. This property is needed (for example) when creating snapshots of setups."
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "297"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasMinimumAcceptedValue",
@@ -4342,7 +4342,7 @@
     "comment" : {
       "en" : "Minimum accepted value of a variable presentation (or a parameter)"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "299"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#compatibleVisualizationSoftware",
@@ -4356,7 +4356,7 @@
     "comment" : {
       "en" : "Property that links a software component to other useful software that canbe used to visualize its outputs"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "301"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasDimensionality",
@@ -4370,7 +4370,7 @@
     "comment" : {
       "en" : "Property to indicate dimensionality of the input or output of a dataset specification"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "303"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#hasProcess",
@@ -4380,7 +4380,7 @@
       "IRI-based" : "hasProcess",
       "en" : "has process"
     },
-    "domain" : "55",
+    "domain" : "54",
     "comment" : {
       "en" : "Property that indicates which physical processes (if any) are associated with a model configuration"
     },
@@ -4398,12 +4398,12 @@
     "comment" : {
       "en" : "Associates a presentation with a dataset where the presentation occurs"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "305"
   }, {
     "iri" : "http://schema.org/copyrightYear",
     "baseIri" : "http://schema.org",
-    "range" : "47",
+    "range" : "46",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -4416,7 +4416,7 @@
       "IRI-based" : "copyrightYear"
     },
     "domain" : "20",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "306"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#hasExplanationDiagram",
@@ -4426,7 +4426,7 @@
       "IRI-based" : "hasExplanationDiagram",
       "en" : "has explanation diagram"
     },
-    "domain" : "38",
+    "domain" : "35",
     "comment" : {
       "en" : "Diagram used to explain the behavior of the model"
     },
@@ -4444,7 +4444,7 @@
     "comment" : {
       "en" : "An example explaining a scenario where the software component was used in plain language."
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "308"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasVersionId",
@@ -4458,7 +4458,7 @@
     "comment" : {
       "en" : "Identifier of the version of this software"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "309"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasOutput",
@@ -4472,7 +4472,7 @@
     "comment" : {
       "en" : "Property that expresses what are the outputs of a model"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "310"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasDownloadInstructions",
@@ -4486,7 +4486,7 @@
     "comment" : {
       "en" : "Instructions needed to download a software component. The difference with `hasDownloadURL` is that this property captures the human readable instructions required to download software. For example, sometimes an authentication is needed, users need to fill in a form, etc."
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "312"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasDownloadURL",
@@ -4500,7 +4500,7 @@
     "comment" : {
       "en" : "Download URL where to obtain the source/executable of the software"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "313"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#hasModelResultTable",
@@ -4510,7 +4510,7 @@
       "IRI-based" : "hasModelResultTable",
       "en" : "has model result table"
     },
-    "domain" : "55",
+    "domain" : "54",
     "comment" : {
       "en" : "Sample result table associated with a model configuration"
     },
@@ -4532,7 +4532,7 @@
       "IRI-based" : "keywords"
     },
     "domain" : "20",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "315"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasSoftwareImage",
@@ -4546,7 +4546,7 @@
     "comment" : {
       "en" : "Function to link a function with its corresponding container"
     },
-    "attributes" : [ "functional", "object", "external" ],
+    "attributes" : [ "external", "functional", "object" ],
     "id" : "316"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasFAQ",
@@ -4560,7 +4560,7 @@
     "comment" : {
       "en" : "Frequently asked questions about a software"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "317"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#usesUnit",
@@ -4575,7 +4575,7 @@
     "comment" : {
       "en" : "Property used to link a variable presentation or time interval to the unit they are represented in"
     },
-    "attributes" : [ "functional", "object", "external" ],
+    "attributes" : [ "external", "functional", "object" ],
     "id" : "72"
   }, {
     "iri" : "http://www.w3.org/ns/prov#value",
@@ -4593,7 +4593,7 @@
       "IRI-based" : "value"
     },
     "domain" : "20",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "322"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#relevantForIntervention",
@@ -4603,7 +4603,7 @@
       "IRI-based" : "relevantForIntervention",
       "en" : "relevant for intervention"
     },
-    "domain" : "60",
+    "domain" : "59",
     "comment" : {
       "en" : "Property that links a parameter to the intervention it is relevant for."
     },
@@ -4617,7 +4617,7 @@
       "IRI-based" : "hasGrid",
       "en" : "has grid"
     },
-    "domain" : "38",
+    "domain" : "35",
     "comment" : {
       "en" : "Grid information about the model"
     },
@@ -4631,7 +4631,7 @@
       "IRI-based" : "validUntil",
       "en" : "valid until"
     },
-    "domain" : "35",
+    "domain" : "37",
     "comment" : {
       "en" : "Date until which the calibration of a model is valid. For example, a trained model with data from 2005-2010 may only be valid for predictions until 2015."
     },
@@ -4649,7 +4649,7 @@
     "comment" : {
       "en" : "Property designed to link a software component with its corresponding versions"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "326"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#programmingLanguage",
@@ -4663,7 +4663,7 @@
     "comment" : {
       "en" : "Language used to code a software component"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "327"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasAcceptedValues",
@@ -4673,11 +4673,11 @@
       "IRI-based" : "hasAcceptedValues",
       "en" : "has accepted values"
     },
-    "domain" : "60",
+    "domain" : "59",
     "comment" : {
       "en" : "Property that constraints which values are accepted for a parameter. For example, the name of a crop can only be \"Maize\" or \"Sorghum\""
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "328"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#dateCreated",
@@ -4691,7 +4691,7 @@
     "comment" : {
       "en" : "Date when a software component was created"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "329"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#hasDiagramPart",
@@ -4719,7 +4719,7 @@
     "comment" : {
       "en" : "Relates a dataset specification to the data structure definition"
     },
-    "attributes" : [ "functional", "object", "external" ],
+    "attributes" : [ "external", "functional", "object" ],
     "id" : "332"
   }, {
     "iri" : "http://www.w3.org/ns/prov#wasDerivedFrom",
@@ -4738,12 +4738,12 @@
     },
     "domain" : "20",
     "subproperty" : [ "333", "297" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "298"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#adjustableParameter",
     "baseIri" : "https://w3id.org/okn/o/sd",
-    "range" : "60",
+    "range" : "59",
     "label" : {
       "IRI-based" : "adjustableParameter",
       "en" : "adjustable parameter"
@@ -4752,7 +4752,7 @@
     "comment" : {
       "en" : "Parameter that can be adjusted in a configuration setup"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "334"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#calibrationTargetVariable",
@@ -4762,7 +4762,7 @@
       "IRI-based" : "calibrationTargetVariable",
       "en" : "calibration target variable"
     },
-    "domain" : "35",
+    "domain" : "37",
     "comment" : {
       "en" : "Variable for which the model was calibrated for. For example, in a hydrology model one calibrate the predicted river width by varying hydrologic conductivity"
     },
@@ -4781,7 +4781,7 @@
     "comment" : {
       "en" : "Publisher organization or person responsible for a software component"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "336"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#fundingSource",
@@ -4796,7 +4796,7 @@
     "comment" : {
       "en" : "Link to the organization funding a software component"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "26"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#softwareRequirements",
@@ -4810,7 +4810,7 @@
     "comment" : {
       "en" : "Software requirements needed to install a software component"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "340"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#value",
@@ -4824,7 +4824,7 @@
     "comment" : {
       "en" : "Value associated to the described entity"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "341"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#hasModelCategory",
@@ -4834,7 +4834,7 @@
       "IRI-based" : "hasModelCategory",
       "en" : "has model category"
     },
-    "domain" : "38",
+    "domain" : "35",
     "comment" : {
       "en" : "Category associated with a model (e.g., Hydrology, etc.)"
     },
@@ -4852,7 +4852,7 @@
     "comment" : {
       "en" : "Memory requirements of a software"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "343"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#partOf",
@@ -4880,7 +4880,7 @@
     "comment" : {
       "en" : "License of a software component or its source code"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "345"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#calibrationMethod",
@@ -4890,7 +4890,7 @@
       "IRI-based" : "calibrationMethod",
       "en" : "calibration method"
     },
-    "domain" : "35",
+    "domain" : "37",
     "comment" : {
       "en" : "Calibration method used for a particular model configuration or setup"
     },
@@ -4912,7 +4912,7 @@
       "IRI-based" : "citation"
     },
     "domain" : "20",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "347"
   }, {
     "iri" : "http://schema.org/contentLocation",
@@ -4923,7 +4923,7 @@
     },
     "domain" : "20",
     "subproperty" : [ "230" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "231"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasComponentLocation",
@@ -4937,7 +4937,7 @@
     "comment" : {
       "en" : "Location of the aggregation of all the files needed to execute the component. Usually a zip file including the run script and support scripts, including specification files"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "348"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#wasDerivedFromSoftware",
@@ -4952,7 +4952,7 @@
     "comment" : {
       "en" : "Property that identifies the software used to create a visualization"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "333"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#processorRequirements",
@@ -4966,7 +4966,7 @@
     "comment" : {
       "en" : "Processor requirements of a software component"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "349"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#runtimeEstimation",
@@ -4976,9 +4976,9 @@
       "IRI-based" : "runtimeEstimation",
       "en" : "runtime estimation"
     },
-    "domain" : "38",
+    "domain" : "35",
     "comment" : {
-      "en" : "Property that indicates the estimated time it will take to run this model."
+      "en" : "An estimate of the time required to run example codes or other known configurations"
     },
     "attributes" : [ "datatype" ],
     "id" : "350"
@@ -4994,7 +4994,7 @@
     "comment" : {
       "en" : "Date when a software component was published"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "351"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasSourceCode",
@@ -5008,7 +5008,7 @@
     "comment" : {
       "en" : "Property designed to link a software with its software source code (which may reside in a code repository such as GitHub)"
     },
-    "attributes" : [ "functional", "object", "external" ],
+    "attributes" : [ "external", "functional", "object" ],
     "id" : "352"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasInput",
@@ -5022,7 +5022,7 @@
     "comment" : {
       "en" : "Property that links a model configuration to the input types expected by it."
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "353"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#hasCoordinateSystem",
@@ -5051,7 +5051,7 @@
     "comment" : {
       "en" : "Image illustrating a snapshot of the target software"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "87"
   }, {
     "iri" : "http://schema.org/publisher",
@@ -5070,7 +5070,7 @@
     },
     "domain" : "20",
     "subproperty" : [ "336" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "338"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#pathLocation",
@@ -5084,7 +5084,7 @@
     "comment" : {
       "en" : "Property that indicates the relative path of an input or output with respect to the folder structure of the executable. \n\nFor example, let's assume we have an input that has to exist in the folder `/datasets` or the executable will not work. This property ensures that this knowledge is captured for a given software component execution.\n\nIn this case the property would capture this as follows:\n\n```\n:input_prep a sd:DatasetSpecification .\n:input_prep rdfs:label \"precipitation file\" .\n:input_precip sd:pathLocation \"/datasets/\".\n```"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "355"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasDefaultValue",
@@ -5098,7 +5098,7 @@
     "comment" : {
       "en" : "Default accepted value of a variable presentation (or a parameter)"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "356"
   }, {
     "iri" : "http://www.w3.org/ns/prov#hadPrimarySource",
@@ -5117,7 +5117,7 @@
     },
     "domain" : "20",
     "subproperty" : [ "130" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "133"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#fundingGrant",
@@ -5131,7 +5131,7 @@
     "comment" : {
       "en" : "Grant number used for funding"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "357"
   }, {
     "iri" : "http://schema.org/memoryRequirements",
@@ -5149,7 +5149,7 @@
       "IRI-based" : "memoryRequirements"
     },
     "domain" : "14",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "358"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#isTransformedFrom",
@@ -5164,12 +5164,12 @@
     "comment" : {
       "en" : "Property that links a dataset specification from a model configuration or setup to the output from a target data transformation. This occurs when a data transformation produces several outputs, but only one of them is the one needed for a model"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "25"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasParameter",
     "baseIri" : "https://w3id.org/okn/o/sd",
-    "range" : "60",
+    "range" : "59",
     "label" : {
       "IRI-based" : "hasParameter",
       "en" : "has parameter"
@@ -5178,12 +5178,12 @@
     "comment" : {
       "en" : "Property that indicates the parameters of a model configuration"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "359"
   }, {
     "range" : "8",
     "domain" : "30",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "360"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#calibratedVariable",
@@ -5193,7 +5193,7 @@
       "IRI-based" : "calibratedVariable",
       "en" : "calibrated variable"
     },
-    "domain" : "35",
+    "domain" : "37",
     "comment" : {
       "en" : "Variable that was calibrated in this particular model configuration calibration"
     },
@@ -5211,22 +5211,22 @@
     "comment" : {
       "en" : "Property that links a software project to its funding information"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "362"
   }, {
-    "range" : "55",
-    "domain" : "35",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "54",
+    "domain" : "37",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "363"
   }, {
     "range" : "8",
     "domain" : "284",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "364"
   }, {
     "range" : "8",
-    "domain" : "55",
-    "attributes" : [ "anonymous", "object" ],
+    "domain" : "54",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "365"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasConstraint",
@@ -5240,32 +5240,32 @@
     "comment" : {
       "en" : "Constraint or rule associated to a  variable or software configuration. For example: \"This model accepts only monthly data\", or \"all inputs of this model configuration must share the same location\". More structured restrictions, such as Jena rules or SWRL rules may also be captured with this property"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "366"
   }, {
-    "range" : "38",
+    "range" : "35",
     "domain" : "80",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "367"
   }, {
     "range" : "112",
     "domain" : "253",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "368"
   }, {
     "range" : "112",
     "domain" : "254",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "369"
   }, {
     "range" : "33",
     "domain" : "32",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "370"
   }, {
-    "range" : "60",
+    "range" : "59",
     "domain" : "186",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "371"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#parameterization",
@@ -5275,21 +5275,21 @@
       "IRI-based" : "parameterization",
       "en" : "parameterization"
     },
-    "domain" : "38",
+    "domain" : "35",
     "comment" : {
-      "en" : "Property that indicates more details about the parametrization of a model"
+      "en" : "Were there any simplifications made to processes to make the model more efficient"
     },
     "attributes" : [ "datatype" ],
     "id" : "372"
   }, {
     "range" : "271",
     "domain" : "14",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "373"
   }, {
     "range" : "284",
     "domain" : "125",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "374"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasConfiguration",
@@ -5303,7 +5303,7 @@
     "comment" : {
       "en" : "Property that links a model to one of its configurations. A model may have multiple configurations, each of which is unique in terms of the inputs and outputs it uses."
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "375"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#website",
@@ -5317,7 +5317,7 @@
     "comment" : {
       "en" : "Website of the software"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "376"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#parentCategory",
@@ -5349,7 +5349,7 @@
       "IRI-based" : "identifier"
     },
     "domain" : "20",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "378"
   }, {
     "iri" : "http://schema.org/processorRequirements",
@@ -5367,7 +5367,7 @@
       "IRI-based" : "processorRequirements"
     },
     "domain" : "20",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "379"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#position",
@@ -5381,7 +5381,7 @@
     "comment" : {
       "en" : "Position of the parameter or input/output in the model configuration. This property is needed to know how to organize the I/O of the component on execution"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "380"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#usefulForCalculatingIndex",
@@ -5395,7 +5395,7 @@
     "comment" : {
       "en" : "Property that indicates that a software component (or any of its outputs) can be used to calculate a particular index. The rationale for this property is that indices are usually calculated by applying post-processing steps to the outputs of a software component."
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "381"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasDataTransformation",
@@ -5410,7 +5410,7 @@
     "comment" : {
       "en" : "Property that associates an input/output with their corresponding data transformation."
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "382"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#description",
@@ -5424,7 +5424,7 @@
     "comment" : {
       "en" : "A description of a resource"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "384"
   }, {
     "iri" : "https://w3id.org/okn/o/sdm#calibrationInterval",
@@ -5434,7 +5434,7 @@
       "IRI-based" : "calibrationInterval",
       "en" : "calibration interval"
     },
-    "domain" : "35",
+    "domain" : "37",
     "comment" : {
       "en" : "Property that represents the temporal interval used to calibrate a model"
     },
@@ -5448,8 +5448,10 @@
       "IRI-based" : "theoreticalBasis",
       "en" : "theoretical basis"
     },
-    "domain" : "38",
-    "comment" : { },
+    "domain" : "35",
+    "comment" : {
+      "en" : "What is the theory behind the processes described in the model"
+    },
     "attributes" : [ "datatype" ],
     "id" : "386"
   }, {
@@ -5482,7 +5484,7 @@
       "IRI-based" : "wasGeneratedBy"
     },
     "domain" : "20",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "388"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasSampleExecution",
@@ -5496,7 +5498,7 @@
     "comment" : {
       "en" : "Property pointing to a sample execution of a software configuration"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "390"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#operatingSystems",
@@ -5510,23 +5512,8 @@
     "comment" : {
       "en" : "Operating systems under which a software component can operate"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "391"
-  }, {
-    "iri" : "https://w3id.org/okn/o/sd#hasPresentation",
-    "inverse" : "305",
-    "baseIri" : "https://w3id.org/okn/o/sd",
-    "range" : "43",
-    "label" : {
-      "IRI-based" : "hasPresentation",
-      "en" : "has presentation"
-    },
-    "domain" : "389",
-    "comment" : {
-      "en" : "Property that links an instance of a dataset (or a dataset specification) to the presentation of a variable contained (or expected to be contained) on it."
-    },
-    "attributes" : [ "object", "external" ],
-    "id" : "392"
   }, {
     "iri" : "http://schema.org/contributor",
     "baseIri" : "http://schema.org",
@@ -5544,8 +5531,23 @@
     },
     "domain" : "20",
     "subproperty" : [ "242" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "243"
+  }, {
+    "iri" : "https://w3id.org/okn/o/sd#hasPresentation",
+    "inverse" : "305",
+    "baseIri" : "https://w3id.org/okn/o/sd",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "hasPresentation",
+      "en" : "has presentation"
+    },
+    "domain" : "389",
+    "comment" : {
+      "en" : "Property that links an instance of a dataset (or a dataset specification) to the presentation of a variable contained (or expected to be contained) on it."
+    },
+    "attributes" : [ "external", "object" ],
+    "id" : "392"
   }, {
     "iri" : "http://schema.org/dateCreated",
     "baseIri" : "http://schema.org",
@@ -5562,7 +5564,7 @@
       "IRI-based" : "dateCreated"
     },
     "domain" : "20",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "393"
   }, {
     "iri" : "http://schema.org/softwareRequirements",
@@ -5580,7 +5582,7 @@
       "IRI-based" : "softwareRequirements"
     },
     "domain" : "20",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "394"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#doi",
@@ -5594,7 +5596,7 @@
     "comment" : {
       "en" : "Digital Object Identifier associated with a software component"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "395"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasTypicalDataSource",
@@ -5608,7 +5610,7 @@
     "comment" : {
       "en" : "Typical data sources that are used by a software component"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "396"
   }, {
     "iri" : "http://schema.org/copyrightHolder",
@@ -5627,7 +5629,7 @@
     },
     "domain" : "20",
     "subproperty" : [ "146" ],
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "148"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#hasDataTransformationSetup",
@@ -5642,7 +5644,7 @@
     "comment" : {
       "en" : "Property to link an input/output dataset to the specific data transformation (with URLs"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "383"
   }, {
     "iri" : "https://w3id.org/okn/o/sd#email",
@@ -5656,7 +5658,7 @@
     "comment" : {
       "en" : "Email of a person"
     },
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "397"
   }, {
     "iri" : "https://codemeta.github.io/terms/funding",
@@ -5674,7 +5676,7 @@
       "IRI-based" : "funding"
     },
     "domain" : "20",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "external", "datatype" ],
     "id" : "398"
   } ]
 }

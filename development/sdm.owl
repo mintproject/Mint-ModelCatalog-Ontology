@@ -371,7 +371,7 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 :limitations rdf:type owl:DatatypeProperty ;
              rdfs:domain :Model ;
              rdfs:range xsd:string ;
-             rdfs:comment "Limitations of a model"@en ;
+             rdfs:comment "Known restrictions (i.e. cases where the model is known not to be reliable or shouldn't be used)"@en ;
              rdfs:label "limitations"@en .
 
 
@@ -400,7 +400,7 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 :parameterization rdf:type owl:DatatypeProperty ;
                   rdfs:domain :Model ;
                   rdfs:range xsd:string ;
-                  rdfs:comment "Property that indicates more details about the parametrization of a model"@en ;
+                  rdfs:comment "Were there any simplifications made to processes to make the model more efficient"@en ;
                   rdfs:label "parameterization"@en .
 
 
@@ -408,7 +408,7 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 :runtimeEstimation rdf:type owl:DatatypeProperty ;
                    rdfs:domain :Model ;
                    rdfs:range xsd:string ;
-                   rdfs:comment "Property that indicates the estimated time it will take to run this model."@en ;
+                   rdfs:comment "An estimate of the time required to run example codes or other known configurations"@en ;
                    rdfs:label "runtime estimation"@en .
 
 
@@ -416,7 +416,7 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 :theoreticalBasis rdf:type owl:DatatypeProperty ;
                   rdfs:domain :Model ;
                   rdfs:range xsd:string ;
-                  rdfs:comment ""@en ;
+                  rdfs:comment "What is the theory behind the processes described in the model"@en ;
                   rdfs:label "theoretical basis"@en .
 
 

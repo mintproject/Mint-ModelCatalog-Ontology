@@ -68,6 +68,20 @@
 # https://w3id.org/okn/o/sd#usesUnit
 <https://w3id.org/okn/o/sd#usesUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
+# https://w3id.org/okn/o/sdm#hasInputVariable
+<https://w3id.org/okn/o/sdm#hasInputVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/okn/o/sdm#hasInputVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#Model> .
+<https://w3id.org/okn/o/sdm#hasInputVariable> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sd#VariablePresentation> .
+<https://w3id.org/okn/o/sdm#hasInputVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Variable that is used as input for this model"@en .
+<https://w3id.org/okn/o/sdm#hasInputVariable> <http://www.w3.org/2000/01/rdf-schema#label> "has input variable"@en .
+# 
+# https://w3id.org/okn/o/sdm#hasOutputVariable
+<https://w3id.org/okn/o/sdm#hasOutputVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/okn/o/sdm#hasOutputVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#Model> .
+<https://w3id.org/okn/o/sdm#hasOutputVariable> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sd#VariablePresentation> .
+<https://w3id.org/okn/o/sdm#hasOutputVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Variable that is used as output for this model"@en .
+<https://w3id.org/okn/o/sdm#hasOutputVariable> <http://www.w3.org/2000/01/rdf-schema#label> "has output variable"@en .
+# 
 # https://w3id.org/okn/o/sdm#calibratedVariable
 <https://w3id.org/okn/o/sdm#calibratedVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/okn/o/sdm#calibratedVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#ModelConfigurationSetup> .
@@ -157,9 +171,9 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # https://w3id.org/okn/o/sdm#hasProcess
 <https://w3id.org/okn/o/sdm#hasProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/okn/o/sdm#hasProcess> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#ModelConfiguration> .
+<https://w3id.org/okn/o/sdm#hasProcess> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#Model> .
 <https://w3id.org/okn/o/sdm#hasProcess> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sdm#Process> .
-<https://w3id.org/okn/o/sdm#hasProcess> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that indicates which physical processes (if any) are associated with a model configuration"@en .
+<https://w3id.org/okn/o/sdm#hasProcess> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that indicates which physical processes (if any) are associated with a model"@en .
 <https://w3id.org/okn/o/sdm#hasProcess> <http://www.w3.org/2000/01/rdf-schema#label> "has process"@en .
 # 
 # https://w3id.org/okn/o/sdm#hasRegion

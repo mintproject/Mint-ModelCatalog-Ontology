@@ -78,6 +78,22 @@
 <https://w3id.org/okn/o/sd#usesUnit> rdf:type owl:ObjectProperty .
 
 
+###  https://w3id.org/okn/o/sdm#hasInputVariable
+:hasInputVariable rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Model ;
+                  rdfs:range <https://w3id.org/okn/o/sd#VariablePresentation> ;
+                  rdfs:comment "Variable that is used as input for this model"@en ;
+                  rdfs:label "has input variable"@en .
+
+
+###  https://w3id.org/okn/o/sdm#hasOutputVariable
+:hasOutputVariable rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Model ;
+                   rdfs:range <https://w3id.org/okn/o/sd#VariablePresentation> ;
+                   rdfs:comment "Variable that is used as output for this model"@en ;
+                   rdfs:label "has output variable"@en .
+
+
 ###  https://w3id.org/okn/o/sdm#calibratedVariable
 :calibratedVariable rdf:type owl:ObjectProperty ;
                     rdfs:domain :ModelConfigurationSetup ;
@@ -169,9 +185,9 @@
 
 ###  https://w3id.org/okn/o/sdm#hasProcess
 :hasProcess rdf:type owl:ObjectProperty ;
-            rdfs:domain :ModelConfiguration ;
+            rdfs:domain :Model ;
             rdfs:range :Process ;
-            rdfs:comment "Property that indicates which physical processes (if any) are associated with a model configuration"@en ;
+            rdfs:comment "Property that indicates which physical processes (if any) are associated with a model"@en ;
             rdfs:label "has process"@en .
 
 

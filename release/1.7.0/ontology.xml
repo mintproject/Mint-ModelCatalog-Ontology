@@ -133,6 +133,30 @@
     
 
 
+    <!-- https://w3id.org/okn/o/sdm#hasInputVariable -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasInputVariable">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
+        <rdfs:range rdf:resource="https://w3id.org/okn/o/sd#VariablePresentation"/>
+        <rdfs:comment xml:lang="en">Variable that is used as output for this model</rdfs:comment>
+        <rdfs:label xml:lang="en">has input variable</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#hasOutputVariable -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasOutputVariable">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
+        <rdfs:range rdf:resource="https://w3id.org/okn/o/sd#VariablePresentation"/>
+        <rdfs:comment xml:lang="en">Variable that is used as output for this model</rdfs:comment>
+        <rdfs:label xml:lang="en">has output variable</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/okn/o/sdm#calibratedVariable -->
 
 
@@ -272,9 +296,9 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasProcess">
-        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
         <rdfs:range rdf:resource="https://w3id.org/okn/o/sdm#Process"/>
-        <rdfs:comment xml:lang="en">Property that indicates which physical processes (if any) are associated with a model configuration</rdfs:comment>
+        <rdfs:comment xml:lang="en">Property that indicates which physical processes (if any) are associated with a model</rdfs:comment>
         <rdfs:label xml:lang="en">has process</rdfs:label>
     </owl:ObjectProperty>
     

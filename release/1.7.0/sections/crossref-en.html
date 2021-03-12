@@ -331,7 +331,10 @@ This section provides details for each class and property defined by The Softwar
             <a href="#hasEquation" title="https://w3id.org/okn/o/sdm#hasEquation">has equation</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasExplanationDiagram" title="https://w3id.org/okn/o/sdm#hasExplanationDiagram">has explanation diagram</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasGrid" title="https://w3id.org/okn/o/sdm#hasGrid">has grid</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasInputVariable" title="https://w3id.org/okn/o/sdm#hasInputVariable">has input variable</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasModelCategory" title="https://w3id.org/okn/o/sdm#hasModelCategory">has model category</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasOutputVariable" title="https://w3id.org/okn/o/sdm#hasOutputVariable">has output variable</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasProcess" title="https://w3id.org/okn/o/sdm#hasProcess">has process</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#limitations" title="https://w3id.org/okn/o/sdm#limitations">limitations</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#parameterization" title="https://w3id.org/okn/o/sdm#parameterization">parameterization</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#runtimeEstimation" title="https://w3id.org/okn/o/sdm#runtimeEstimation">runtime estimation</a>
@@ -398,7 +401,6 @@ This section provides details for each class and property defined by The Softwar
             <a href="#hasCausalDiagram" title="https://w3id.org/okn/o/sdm#hasCausalDiagram">has causal diagram</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasModelResultTable" title="https://w3id.org/okn/o/sdm#hasModelResultTable">has model result table</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#hasOutputTimeInterval" title="https://w3id.org/okn/o/sdm#hasOutputTimeInterval">has ourput time interval</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasProcess" title="https://w3id.org/okn/o/sdm#hasProcess">has process</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasRegion" title="https://w3id.org/okn/o/sdm#hasRegion">has region</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
@@ -572,10 +574,16 @@ This section provides details for each class and property defined by The Softwar
          <a href="#hasGrid" title="https://w3id.org/okn/o/sdm#hasGrid">has grid</a>
       </li>
       <li>
+         <a href="#hasInputVariable" title="https://w3id.org/okn/o/sdm#hasInputVariable">has input variable</a>
+      </li>
+      <li>
          <a href="#hasModelCategory" title="https://w3id.org/okn/o/sdm#hasModelCategory">has model category</a>
       </li>
       <li>
          <a href="#hasOutputTimeInterval" title="https://w3id.org/okn/o/sdm#hasOutputTimeInterval">has ourput time interval</a>
+      </li>
+      <li>
+         <a href="#hasOutputVariable" title="https://w3id.org/okn/o/sdm#hasOutputVariable">has output variable</a>
       </li>
       <li>
          <a href="#hasProcess" title="https://w3id.org/okn/o/sdm#hasProcess">has process</a>
@@ -818,6 +826,31 @@ This section provides details for each class and property defined by The Softwar
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasInputVariable">
+      <h3>has input variable<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sdm#hasInputVariable</p>
+      <div class="comment">
+         <span class="markdown">Variable that is used as input for this model</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Model" title="https://w3id.org/okn/o/sdm#Model">Model</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/okn/o/sd#VariablePresentation">variable presentation</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasModelCategory">
       <h3>has model category<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -868,6 +901,31 @@ This section provides details for each class and property defined by The Softwar
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasOutputVariable">
+      <h3>has output variable<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sdm#hasOutputVariable</p>
+      <div class="comment">
+         <span class="markdown">Variable that is used as output for this model</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Model" title="https://w3id.org/okn/o/sdm#Model">Model</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/okn/o/sd#VariablePresentation">variable presentation</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasProcess">
       <h3>has process<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -876,13 +934,13 @@ This section provides details for each class and property defined by The Softwar
       <p>
          <strong>IRI:</strong> https://w3id.org/okn/o/sdm#hasProcess</p>
       <div class="comment">
-         <span class="markdown">Property that indicates which physical processes (if any) are associated with a model configuration</span>
+         <span class="markdown">Property that indicates which physical processes (if any) are associated with a model</span>
       </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#ModelConfiguration" title="https://w3id.org/okn/o/sdm#ModelConfiguration">Model configuration</a>
+               <a href="#Model" title="https://w3id.org/okn/o/sdm#Model">Model</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>

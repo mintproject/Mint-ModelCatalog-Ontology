@@ -659,6 +659,23 @@
     "@id" : "https://w3id.org/okn/o/sdm#Grid"
   } ]
 }, {
+  "@id" : "https://w3id.org/okn/o/sdm#hasInputVariable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Variable that is used as input for this model"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/okn/o/sdm#Model"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has input variable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/okn/o/sd#VariablePresentation"
+  } ]
+}, {
   "@id" : "https://w3id.org/okn/o/sdm#hasModelCategory",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -710,14 +727,31 @@
     "@id" : "https://w3id.org/okn/o/sdm#TimeInterval"
   } ]
 }, {
+  "@id" : "https://w3id.org/okn/o/sdm#hasOutputVariable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Variable that is used as output for this model"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/okn/o/sdm#Model"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has output variable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/okn/o/sd#VariablePresentation"
+  } ]
+}, {
   "@id" : "https://w3id.org/okn/o/sdm#hasProcess",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Property that indicates which physical processes (if any) are associated with a model configuration"
+    "@value" : "Property that indicates which physical processes (if any) are associated with a model"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/okn/o/sdm#ModelConfiguration"
+    "@id" : "https://w3id.org/okn/o/sdm#Model"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -855,7 +889,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : ""
+    "@value" : "Known restrictions (i.e. cases where the model is known not to be reliable or shouldn't be used)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/okn/o/sdm#Model"
@@ -906,7 +940,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : ""
+    "@value" : "Were there any simplifications made to processes to make the model more efficient"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/okn/o/sdm#Model"
@@ -974,7 +1008,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Property that indicates the estimated time it will take to run this model."
+    "@value" : "An estimate of the time required to run example codes or other known configurations"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/okn/o/sdm#Model"
@@ -991,7 +1025,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : ""
+    "@value" : "What is the theory behind the processes described in the model"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/okn/o/sdm#Model"

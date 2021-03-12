@@ -146,6 +146,14 @@
          rdfs:label "has grid"@en .
 
 
+###  https://w3id.org/okn/o/sdm#hasInputVariable
+:hasInputVariable rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Model ;
+                  rdfs:range <https://w3id.org/okn/o/sd#VariablePresentation> ;
+                  rdfs:comment "Variable that is used as input for this model"@en ;
+                  rdfs:label "has input variable"@en .
+
+
 ###  https://w3id.org/okn/o/sdm#hasModelCategory
 :hasModelCategory rdf:type owl:ObjectProperty ;
                   rdfs:domain :Model ;
@@ -162,11 +170,19 @@
                        rdfs:label "has ourput time interval"@en .
 
 
+###  https://w3id.org/okn/o/sdm#hasOutputVariable
+:hasOutputVariable rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Model ;
+                   rdfs:range <https://w3id.org/okn/o/sd#VariablePresentation> ;
+                   rdfs:comment "Variable that is used as output for this model"@en ;
+                   rdfs:label "has output variable"@en .
+
+
 ###  https://w3id.org/okn/o/sdm#hasProcess
 :hasProcess rdf:type owl:ObjectProperty ;
-            rdfs:domain :ModelConfiguration ;
+            rdfs:domain :Model ;
             rdfs:range :Process ;
-            rdfs:comment "Property that indicates which physical processes (if any) are associated with a model configuration"@en ;
+            rdfs:comment "Property that indicates which physical processes (if any) are associated with a model"@en ;
             rdfs:label "has process"@en .
 
 
@@ -340,7 +356,7 @@
 :limitations rdf:type owl:DatatypeProperty ;
              rdfs:domain :Model ;
              rdfs:range xsd:string ;
-             rdfs:comment ""@en ;
+             rdfs:comment "Known restrictions (i.e. cases where the model is known not to be reliable or shouldn't be used)"@en ;
              rdfs:label "limitations"@en .
 
 
@@ -368,7 +384,7 @@
 :parameterization rdf:type owl:DatatypeProperty ;
                   rdfs:domain :Model ;
                   rdfs:range xsd:string ;
-                  rdfs:comment ""@en ;
+                  rdfs:comment "Were there any simplifications made to processes to make the model more efficient"@en ;
                   rdfs:label "parameterization"@en .
 
 
@@ -376,7 +392,7 @@
 :runtimeEstimation rdf:type owl:DatatypeProperty ;
                    rdfs:domain :Model ;
                    rdfs:range xsd:string ;
-                   rdfs:comment "Property that indicates the estimated time it will take to run this model."@en ;
+                   rdfs:comment "An estimate of the time required to run example codes or other known configurations"@en ;
                    rdfs:label "runtime estimation"@en .
 
 
@@ -384,7 +400,7 @@
 :theoreticalBasis rdf:type owl:DatatypeProperty ;
                   rdfs:domain :Model ;
                   rdfs:range xsd:string ;
-                  rdfs:comment ""@en ;
+                  rdfs:comment "What is the theory behind the processes described in the model"@en ;
                   rdfs:label "theoretical basis"@en .
 
 

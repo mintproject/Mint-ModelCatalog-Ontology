@@ -236,6 +236,18 @@
     
 
 
+    <!-- https://w3id.org/okn/o/sdm#hasInputVariable -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasInputVariable">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
+        <rdfs:range rdf:resource="https://w3id.org/okn/o/sd#VariablePresentation"/>
+        <rdfs:comment xml:lang="en">Variable that is used as input for this model</rdfs:comment>
+        <rdfs:label xml:lang="en">has input variable</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/okn/o/sdm#hasModelCategory -->
 
 
@@ -260,13 +272,25 @@
     
 
 
+    <!-- https://w3id.org/okn/o/sdm#hasOutputVariable -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasOutputVariable">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
+        <rdfs:range rdf:resource="https://w3id.org/okn/o/sd#VariablePresentation"/>
+        <rdfs:comment xml:lang="en">Variable that is used as output for this model</rdfs:comment>
+        <rdfs:label xml:lang="en">has output variable</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/okn/o/sdm#hasProcess -->
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasProcess">
-        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
         <rdfs:range rdf:resource="https://w3id.org/okn/o/sdm#Process"/>
-        <rdfs:comment xml:lang="en">Property that indicates which physical processes (if any) are associated with a model configuration</rdfs:comment>
+        <rdfs:comment xml:lang="en">Property that indicates which physical processes (if any) are associated with a model</rdfs:comment>
         <rdfs:label xml:lang="en">has process</rdfs:label>
     </owl:ObjectProperty>
     
@@ -536,7 +560,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#limitations">
         <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:comment xml:lang="en">Known restrictions (i.e. cases where the model is known not to be reliable or shouldn&apos;t be used)</rdfs:comment>
         <rdfs:label xml:lang="en">limitations</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -579,7 +603,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#parameterization">
         <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:comment xml:lang="en">Were there any simplifications made to processes to make the model more efficient</rdfs:comment>
         <rdfs:label xml:lang="en">parameterization</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -591,7 +615,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#runtimeEstimation">
         <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Property that indicates the estimated time it will take to run this model.</rdfs:comment>
+        <rdfs:comment xml:lang="en">An estimate of the time required to run example codes or other known configurations</rdfs:comment>
         <rdfs:label xml:lang="en">runtime estimation</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -603,7 +627,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#theoreticalBasis">
         <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:comment xml:lang="en">What is the theory behind the processes described in the model</rdfs:comment>
         <rdfs:label xml:lang="en">theoretical basis</rdfs:label>
     </owl:DatatypeProperty>
     

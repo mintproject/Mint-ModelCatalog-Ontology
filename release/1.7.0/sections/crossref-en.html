@@ -7,6 +7,9 @@ This section provides details for each class and property defined by The Softwar
          <a href="#CausalDiagram" title="https://w3id.org/okn/o/sdm#CausalDiagram">Causal Diagram</a>
       </li>
       <li>
+         <a href="#Constraint" title="https://w3id.org/okn/o/sdm#Constraint">Constraint</a>
+      </li>
+      <li>
          <a href="#CoupledModel" title="https://w3id.org/okn/o/sdm#CoupledModel">Coupled model</a>
       </li>
       <li>
@@ -87,6 +90,31 @@ This section provides details for each class and property defined by The Softwar
          <dt>is in range of</dt>
          <dd>
             <a href="#hasCausalDiagram" title="https://w3id.org/okn/o/sdm#hasCausalDiagram">has causal diagram</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Constraint">
+      <h3>Constraint<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sdm#Constraint</p>
+      <div class="comment">
+         <span class="markdown">Data constraints of a configuration</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasMaximumValue" title="https://w3id.org/okn/o/sdm#hasMaximumValue">has maximun value</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasMinimumValue" title="https://w3id.org/okn/o/sdm#hasMinimumValue">has minimun value</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasVariable" title="https://w3id.org/okn/o/sdm#hasVariable">has presentation</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasConstraint" title="https://w3id.org/okn/o/sdm#hasConstraint">has constraint</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -399,8 +427,9 @@ This section provides details for each class and property defined by The Softwar
          <dt>is in domain of</dt>
          <dd>
             <a href="#hasCausalDiagram" title="https://w3id.org/okn/o/sdm#hasCausalDiagram">has causal diagram</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasConstraint" title="https://w3id.org/okn/o/sdm#hasConstraint">has constraint</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasModelResultTable" title="https://w3id.org/okn/o/sdm#hasModelResultTable">has model result table</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasOutputTimeInterval" title="https://w3id.org/okn/o/sdm#hasOutputTimeInterval">has ourput time interval</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasOutputTimeInterval" title="https://w3id.org/okn/o/sdm#hasOutputTimeInterval">has output time interval</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasRegion" title="https://w3id.org/okn/o/sdm#hasRegion">has region</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
@@ -540,7 +569,7 @@ This section provides details for each class and property defined by The Softwar
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#hasOutputTimeInterval" title="https://w3id.org/okn/o/sdm#hasOutputTimeInterval">has ourput time interval</a>
+            <a href="#hasOutputTimeInterval" title="https://w3id.org/okn/o/sdm#hasOutputTimeInterval">has output time interval</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -562,6 +591,9 @@ This section provides details for each class and property defined by The Softwar
          <a href="#hasCausalDiagram" title="https://w3id.org/okn/o/sdm#hasCausalDiagram">has causal diagram</a>
       </li>
       <li>
+         <a href="#hasConstraint" title="https://w3id.org/okn/o/sdm#hasConstraint">has constraint</a>
+      </li>
+      <li>
          <a href="#hasDiagramPart" title="https://w3id.org/okn/o/sdm#hasDiagramPart">has diagram part</a>
       </li>
       <li>
@@ -577,13 +609,26 @@ This section provides details for each class and property defined by The Softwar
          <a href="#hasInputVariable" title="https://w3id.org/okn/o/sdm#hasInputVariable">has input variable</a>
       </li>
       <li>
+         <a href="#hasMaximumValue" title="https://w3id.org/okn/o/sdm#hasMaximumValue">
+            <span>has maximun value</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasMinimumValue" title="https://w3id.org/okn/o/sdm#hasMinimumValue">
+            <span>has minimun value</span>
+         </a>
+      </li>
+      <li>
          <a href="#hasModelCategory" title="https://w3id.org/okn/o/sdm#hasModelCategory">has model category</a>
       </li>
       <li>
-         <a href="#hasOutputTimeInterval" title="https://w3id.org/okn/o/sdm#hasOutputTimeInterval">has ourput time interval</a>
+         <a href="#hasOutputTimeInterval" title="https://w3id.org/okn/o/sdm#hasOutputTimeInterval">has output time interval</a>
       </li>
       <li>
          <a href="#hasOutputVariable" title="https://w3id.org/okn/o/sdm#hasOutputVariable">has output variable</a>
+      </li>
+      <li>
+         <a href="#hasVariable" title="https://w3id.org/okn/o/sdm#hasVariable">has presentation</a>
       </li>
       <li>
          <a href="#hasProcess" title="https://w3id.org/okn/o/sdm#hasProcess">has process</a>
@@ -723,6 +768,31 @@ This section provides details for each class and property defined by The Softwar
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasConstraint">
+      <h3>has constraint<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sdm#hasConstraint</p>
+      <div class="comment">
+         <span class="markdown">Data constraints for this configuration</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ModelConfiguration" title="https://w3id.org/okn/o/sdm#ModelConfiguration">Model configuration</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Constraint" title="https://w3id.org/okn/o/sdm#Constraint">Constraint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasDiagramPart">
       <h3>has diagram part<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -851,6 +921,48 @@ This section provides details for each class and property defined by The Softwar
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasMaximumValue">
+      <h3>has maximun value<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sdm#hasMaximumValue</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Constraint" title="https://w3id.org/okn/o/sdm#Constraint">Constraint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>
+               <a href="#hasMaximumValue">data property</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasMinimumValue">
+      <h3>has minimun value<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sdm#hasMinimumValue</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Constraint" title="https://w3id.org/okn/o/sdm#Constraint">Constraint</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>
+               <a href="#hasMinimumValue">data property</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasModelCategory">
       <h3>has model category<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -877,7 +989,7 @@ This section provides details for each class and property defined by The Softwar
       </div>
    </div>
    <div class="entity" id="hasOutputTimeInterval">
-      <h3>has ourput time interval<sup class="type-op" title="object property">op</sup>
+      <h3>has output time interval<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
@@ -916,6 +1028,31 @@ This section provides details for each class and property defined by The Softwar
             <dt>has domain</dt>
             <dd>
                <a href="#Model" title="https://w3id.org/okn/o/sdm#Model">Model</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/okn/o/sd#VariablePresentation">variable presentation</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasVariable">
+      <h3>has presentation<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sdm#hasVariable</p>
+      <div class="comment">
+         <span class="markdown">Property that links a constraint to the presentation of a variable that will test it</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Constraint" title="https://w3id.org/okn/o/sdm#Constraint">Constraint</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1170,6 +1307,16 @@ This section provides details for each class and property defined by The Softwar
          <a href="#hasDimension" title="https://w3id.org/okn/o/sdm#hasDimension">has dimension</a>
       </li>
       <li>
+         <a href="#hasMaximumValue" title="https://w3id.org/okn/o/sdm#hasMaximumValue">
+            <span>has maximun value</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasMinimumValue" title="https://w3id.org/okn/o/sdm#hasMinimumValue">
+            <span>has minimun value</span>
+         </a>
+      </li>
+      <li>
          <a href="#hasModelResultTable" title="https://w3id.org/okn/o/sdm#hasModelResultTable">has model result table</a>
       </li>
       <li>
@@ -1419,6 +1566,46 @@ This section provides details for each class and property defined by The Softwar
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasMaximumValue">
+      <h3>has maximun value<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sdm#hasMaximumValue</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>
+               <a href="#hasMaximumValue">object property</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasMinimumValue">
+      <h3>has minimun value<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/okn/o/sdm#hasMinimumValue</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>
+               <a href="#hasMinimumValue">object property</a>
             </dd>
          </dl>
       </div>

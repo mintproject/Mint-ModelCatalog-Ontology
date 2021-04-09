@@ -133,30 +133,6 @@
     
 
 
-    <!-- https://w3id.org/okn/o/sdm#hasInputVariable -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasInputVariable">
-        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
-        <rdfs:range rdf:resource="https://w3id.org/okn/o/sd#VariablePresentation"/>
-        <rdfs:comment xml:lang="en">Variable that is used as output for this model</rdfs:comment>
-        <rdfs:label xml:lang="en">has input variable</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/okn/o/sdm#hasOutputVariable -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasOutputVariable">
-        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
-        <rdfs:range rdf:resource="https://w3id.org/okn/o/sd#VariablePresentation"/>
-        <rdfs:comment xml:lang="en">Variable that is used as output for this model</rdfs:comment>
-        <rdfs:label xml:lang="en">has output variable</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/okn/o/sdm#calibratedVariable -->
 
 
@@ -268,6 +244,18 @@
     
 
 
+    <!-- https://w3id.org/okn/o/sdm#hasInputVariable -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasInputVariable">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
+        <rdfs:range rdf:resource="https://w3id.org/okn/o/sd#VariablePresentation"/>
+        <rdfs:comment xml:lang="en">Variable that is used as input for this model</rdfs:comment>
+        <rdfs:label xml:lang="en">has input variable</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/okn/o/sdm#hasModelCategory -->
 
 
@@ -287,7 +275,19 @@
         <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#ModelConfiguration"/>
         <rdfs:range rdf:resource="https://w3id.org/okn/o/sdm#TimeInterval"/>
         <rdfs:comment xml:lang="en">Time interval used in the model configuration</rdfs:comment>
-        <rdfs:label xml:lang="en">has ourput time interval</rdfs:label>
+        <rdfs:label xml:lang="en">has output time interval</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/okn/o/sdm#hasOutputVariable -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasOutputVariable">
+        <rdfs:domain rdf:resource="https://w3id.org/okn/o/sdm#Model"/>
+        <rdfs:range rdf:resource="https://w3id.org/okn/o/sd#VariablePresentation"/>
+        <rdfs:comment xml:lang="en">Variable that is used as output for this model</rdfs:comment>
+        <rdfs:label xml:lang="en">has output variable</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1008,6 +1008,26 @@
         <rdfs:comment xml:lang="en">Time interval at which a model produces output. For example, a model may produce outputs for every simulated day, hour, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Time Interval</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="https://w3id.org/okn/o/sdm#hasMaximumValue">
+        <rdfs:comment xml:lang="en">Maximum value that a variable can take in this constraint</rdfs:comment>
+        <rdfs:label xml:lang="en">has maximun value</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/okn/o/sdm#hasMinimumValue">
+        <rdfs:comment xml:lang="en">Minimum value that a variable can take in this constraint</rdfs:comment>
+        <rdfs:label xml:lang="en">has minimun value</rdfs:label>
+    </rdf:Description>
 </rdf:RDF>
 
 

@@ -248,6 +248,22 @@
            rdfs:label "uses model"@en .
 
 
+###  https://w3id.org/okn/o/sdm#hasConstraint
+:hasConstraint rdf:type owl:ObjectProperty ;
+               rdfs:domain :ModelConfiguration ;
+               rdfs:range :Constraint ;
+               rdfs:comment "Data constraints for this configuration"@en ;
+               rdfs:label "has constraint"@en .
+
+
+###  https://w3id.org/okn/o/sdm#hasVariable
+:hasVariable rdf:type owl:ObjectProperty ;
+             rdfs:domain :Constraint ;
+             rdfs:range <https://w3id.org/okn/o/sd#VariablePresentation> ;
+             rdfs:comment "Property that links a constraint to the presentation of a variable that will test it"@en ;
+             rdfs:label "has presentation"@en .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -574,6 +590,12 @@
                rdfs:label "Model category"@en .
 
 
+###  https://w3id.org/okn/o/sdm#Constraint
+:Constraint rdf:type owl:Class ;
+            rdfs:comment "Data constraints of a configuration"@en ;
+            rdfs:label "Constraint"@en .
+
+
 ###  https://w3id.org/okn/o/sdm#ModelConfiguration
 :ModelConfiguration rdf:type owl:Class ;
                     rdfs:subClassOf <https://w3id.org/okn/o/sd#SoftwareConfiguration> ,
@@ -632,15 +654,18 @@
               rdfs:label "Time Interval"@en .
 
 
-#################################################################
-#    Annotations
-#################################################################
-
-:hasMaximumValue rdfs:comment "Maximum value that a variable can take in this constraint"@en ;
+###  https://w3id.org/okn/o/sdm#hasMaximumValue
+:hasMaximumValue rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Constraint ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Maximum value that a variable can take in this constraint"@en ;
                  rdfs:label "has maximun value"@en .
 
-
-:hasMinimumValue rdfs:comment "Minimum value that a variable can take in this constraint"@en ;
+###  https://w3id.org/okn/o/sdm#hasMinimumValue
+:hasMinimumValue rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Constraint ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Minimum value that a variable can take in this constraint"@en ;
                  rdfs:label "has minimun value"@en .
 
 

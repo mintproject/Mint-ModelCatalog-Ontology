@@ -186,7 +186,7 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
              rdfs:domain :Constraint ;
              rdfs:range <https://w3id.org/okn/o/sd#VariablePresentation> ;
              rdfs:comment "Property that links a constraint to the presentation of a variable that will test it"@en ;
-             rdfs:label "has presentation"@en .
+             rdfs:label "has variable"@en .
 
 
 ###  https://w3id.org/okn/o/sdm#hasOutputTimeInterval
@@ -430,7 +430,7 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
 
 ###  https://w3id.org/okn/o/sdm#hasMinimumValue
-:hasMinimumValue rdf:type owl:ObjectProperty ;
+:hasMinimumValue rdf:type owl:DatatypeProperty ;
                  rdfs:domain :Constraint ;
                  rdfs:range xsd:string ;
                  rdfs:comment "Minimum value that a variable can take in this constraint"@en ;
@@ -438,7 +438,7 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
 
 ###  https://w3id.org/okn/o/sdm#hasMaximumValue
-:hasMaximumValue rdf:type owl:ObjectProperty ;
+:hasMaximumValue rdf:type owl:DatatypeProperty ;
                  rdfs:domain :Constraint ;
                  rdfs:range xsd:string ;
                  rdfs:comment "Maximum value that a variable can take in this constraint"@en ;

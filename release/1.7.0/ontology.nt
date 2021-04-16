@@ -226,6 +226,20 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <https://w3id.org/okn/o/sdm#usesModel> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that describes which models are used by a coupled model"@en .
 <https://w3id.org/okn/o/sdm#usesModel> <http://www.w3.org/2000/01/rdf-schema#label> "uses model"@en .
 # 
+# https://w3id.org/okn/o/sdm#hasConstraint
+<https://w3id.org/okn/o/sdm#hasConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/okn/o/sdm#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#ModelConfiguration> .
+<https://w3id.org/okn/o/sdm#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sdm#Constraint> .
+<https://w3id.org/okn/o/sdm#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "Data constraints for this configuration"@en .
+<https://w3id.org/okn/o/sdm#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "has constraint"@en .
+# 
+# https://w3id.org/okn/o/sdm#hasVariable
+<https://w3id.org/okn/o/sdm#hasVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/okn/o/sdm#hasVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#Constraint> .
+<https://w3id.org/okn/o/sdm#hasVariable> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sd#VariablePresentation> .
+<https://w3id.org/okn/o/sdm#hasVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links a constraint to the presentation of a variable that will test it"@en .
+<https://w3id.org/okn/o/sdm#hasVariable> <http://www.w3.org/2000/01/rdf-schema#label> "has presentation"@en .
+# 
 # 
 # 
 # #################################################################
@@ -460,9 +474,6 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 # https://w3id.org/okn/o/sd#VariablePresentation
 <https://w3id.org/okn/o/sd#VariablePresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
-# https://w3id.org/okn/o/sdm#Category
-<https://w3id.org/okn/o/sdm#Category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-# 
 # https://w3id.org/okn/o/sdm#CausalDiagram
 <https://w3id.org/okn/o/sdm#CausalDiagram> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/okn/o/sdm#CausalDiagram> <http://www.w3.org/2000/01/rdf-schema#comment> "Diagram information with the processes and variables associated with a model configuration"@en .
@@ -531,6 +542,11 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <https://w3id.org/okn/o/sdm#ModelCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Class used to represent a category of a model (e.g., Hydrology, Agriculture, etc.)"@en .
 <https://w3id.org/okn/o/sdm#ModelCategory> <http://www.w3.org/2000/01/rdf-schema#label> "Model category"@en .
 # 
+# https://w3id.org/okn/o/sdm#ModelCategory
+<https://w3id.org/okn/o/sdm#Constraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/okn/o/sdm#Constraint> <http://www.w3.org/2000/01/rdf-schema#comment> "Data constraints of a configuration"@en .
+<https://w3id.org/okn/o/sdm#Constraint> <http://www.w3.org/2000/01/rdf-schema#label> "Constraint"@en .
+# 
 # https://w3id.org/okn/o/sdm#ModelConfiguration
 <https://w3id.org/okn/o/sdm#ModelConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/okn/o/sdm#ModelConfiguration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/okn/o/sd#SoftwareConfiguration> .
@@ -579,20 +595,20 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <https://w3id.org/okn/o/sdm#TimeInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/okn/o/sdm#TimeInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "Time interval at which a model produces output. For example, a model may produce outputs for every simulated day, hour, etc."@en .
 <https://w3id.org/okn/o/sdm#TimeInterval> <http://www.w3.org/2000/01/rdf-schema#label> "Time Interval"@en .
-# 
-# 
-# 
-# #################################################################
-# #
-# #    Annotations
-# #
-# #################################################################
-# 
-# 
+#
+# https://w3id.org/okn/o/sdm#hasMaximumValue
+<https://w3id.org/okn/o/sdm#hasMaximumValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/okn/o/sdm#hasMaximumValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#Constraint> .
+<https://w3id.org/okn/o/sdm#hasMaximumValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/okn/o/sdm#hasMaximumValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum value that a variable can take in this constraint"@en .
 <https://w3id.org/okn/o/sdm#hasMaximumValue> <http://www.w3.org/2000/01/rdf-schema#label> "has maximun value"@en .
 # 
+# https://w3id.org/okn/o/sdm#hasMinimumValue
+<https://w3id.org/okn/o/sdm#hasMinimumValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/okn/o/sdm#hasMinimumValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#Constraint> .
+<https://w3id.org/okn/o/sdm#hasMinimumValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/okn/o/sdm#hasMinimumValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Minimum value that a variable can take in this constraint"@en .
-<https://w3id.org/okn/o/sdm#hasMinimumValue> <http://www.w3.org/2000/01/rdf-schema#label> "has minimun value"@en .
+<https://w3id.org/okn/o/sdm#hasMinimumValue> <http://www.w3.org/2000/01/rdf-schema#label> "has minimum value"@en .
+# 
 # 
 # Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

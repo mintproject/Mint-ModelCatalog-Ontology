@@ -110,6 +110,14 @@
                   rdfs:label "has causal diagram"@en .
 
 
+###  https://w3id.org/okn/o/sdm#hasConstraint
+:hasConstraint rdf:type owl:ObjectProperty ;
+               rdfs:domain :ModelConfiguration ;
+               rdfs:range :Constraint ;
+               rdfs:comment "Data constraints for this configuration"@en ;
+               rdfs:label "has constraint"@en .
+
+
 ###  https://w3id.org/okn/o/sdm#hasDiagramPart
 :hasDiagramPart rdf:type owl:ObjectProperty ;
                 rdfs:domain :CausalDiagram ;
@@ -167,7 +175,7 @@
                        rdfs:domain :ModelConfiguration ;
                        rdfs:range :TimeInterval ;
                        rdfs:comment "Time interval used in the model configuration"@en ;
-                       rdfs:label "has ourput time interval"@en .
+                       rdfs:label "has output time interval"@en .
 
 
 ###  https://w3id.org/okn/o/sdm#hasOutputVariable
@@ -192,6 +200,14 @@
            rdfs:domain :ModelConfiguration ;
            rdfs:range :Region ;
            rdfs:comment "Property linking a region to a model configuration/calibration. This property implies that the described model configuration is prepared to execute in that target region"@en .
+
+
+###  https://w3id.org/okn/o/sdm#hasVariable
+:hasVariable rdf:type owl:ObjectProperty ;
+             rdfs:domain :Constraint ;
+             rdfs:range <https://w3id.org/okn/o/sd#VariablePresentation> ;
+             rdfs:comment "Property that links a constraint to the presentation of a variable that will test it"@en ;
+             rdfs:label "has variable"@en .
 
 
 ###  https://w3id.org/okn/o/sdm#influences
@@ -301,6 +317,22 @@
               rdfs:range xsd:string ;
               rdfs:comment "Dimension of the grid (2D, 3D)"@en ;
               rdfs:label "has dimension"@en .
+
+
+###  https://w3id.org/okn/o/sdm#hasMaximumValue
+:hasMaximumValue rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Constraint ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Maximum value that a variable can take in this constraint"@en ;
+                 rdfs:label "has maximun value"@en .
+
+
+###  https://w3id.org/okn/o/sdm#hasMinimumValue
+:hasMinimumValue rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Constraint ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Minimum value that a variable can take in this constraint"@en ;
+                 rdfs:label "has minimun value"@en .
 
 
 ###  https://w3id.org/okn/o/sdm#hasModelResultTable
@@ -452,6 +484,12 @@
 :CausalDiagram rdf:type owl:Class ;
                rdfs:comment "Diagram information with the processes and variables associated with a model configuration"@en ;
                rdfs:label "Causal Diagram"@en .
+
+
+###  https://w3id.org/okn/o/sdm#Constraint
+:Constraint rdf:type owl:Class ;
+            rdfs:comment "Data constraints of a configuration"@en ;
+            rdfs:label "Constraint"@en .
 
 
 ###  https://w3id.org/okn/o/sdm#CoupledModel

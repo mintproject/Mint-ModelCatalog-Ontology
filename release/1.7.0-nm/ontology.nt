@@ -101,13 +101,6 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <https://w3id.org/okn/o/sdm#hasCausalDiagram> <http://www.w3.org/2000/01/rdf-schema#comment> "Diagram associated to a model configuration"@en .
 <https://w3id.org/okn/o/sdm#hasCausalDiagram> <http://www.w3.org/2000/01/rdf-schema#label> "has causal diagram"@en .
 # 
-# https://w3id.org/okn/o/sdm#hasConstraint
-<https://w3id.org/okn/o/sdm#hasConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/okn/o/sdm#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#ModelConfiguration> .
-<https://w3id.org/okn/o/sdm#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sdm#Constraint> .
-<https://w3id.org/okn/o/sdm#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "Data constraints for this configuration"@en .
-<https://w3id.org/okn/o/sdm#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "has constraint"@en .
-# 
 # https://w3id.org/okn/o/sdm#hasDiagramPart
 <https://w3id.org/okn/o/sdm#hasDiagramPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/okn/o/sdm#hasDiagramPart> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#CausalDiagram> .
@@ -185,13 +178,6 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <https://w3id.org/okn/o/sdm#hasRegion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#ModelConfiguration> .
 <https://w3id.org/okn/o/sdm#hasRegion> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sdm#Region> .
 <https://w3id.org/okn/o/sdm#hasRegion> <http://www.w3.org/2000/01/rdf-schema#comment> "Property linking a region to a model configuration/calibration. This property implies that the described model configuration is prepared to execute in that target region"@en .
-# 
-# https://w3id.org/okn/o/sdm#hasVariable
-<https://w3id.org/okn/o/sdm#hasVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/okn/o/sdm#hasVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#Constraint> .
-<https://w3id.org/okn/o/sdm#hasVariable> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/okn/o/sd#VariablePresentation> .
-<https://w3id.org/okn/o/sdm#hasVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that links a constraint to the presentation of a variable that will test it"@en .
-<https://w3id.org/okn/o/sdm#hasVariable> <http://www.w3.org/2000/01/rdf-schema#label> "has variable"@en .
 # 
 # https://w3id.org/okn/o/sdm#influences
 <https://w3id.org/okn/o/sdm#influences> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -297,20 +283,6 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <https://w3id.org/okn/o/sdm#hasDimension> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/okn/o/sdm#hasDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "Dimension of the grid (2D, 3D)"@en .
 <https://w3id.org/okn/o/sdm#hasDimension> <http://www.w3.org/2000/01/rdf-schema#label> "has dimension"@en .
-# 
-# https://w3id.org/okn/o/sdm#hasMaximumValue
-<https://w3id.org/okn/o/sdm#hasMaximumValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/okn/o/sdm#hasMaximumValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#Constraint> .
-<https://w3id.org/okn/o/sdm#hasMaximumValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/okn/o/sdm#hasMaximumValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum value that a variable can take in this constraint"@en .
-<https://w3id.org/okn/o/sdm#hasMaximumValue> <http://www.w3.org/2000/01/rdf-schema#label> "has maximun value"@en .
-# 
-# https://w3id.org/okn/o/sdm#hasMinimumValue
-<https://w3id.org/okn/o/sdm#hasMinimumValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/okn/o/sdm#hasMinimumValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/okn/o/sdm#Constraint> .
-<https://w3id.org/okn/o/sdm#hasMinimumValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/okn/o/sdm#hasMinimumValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Minimum value that a variable can take in this constraint"@en .
-<https://w3id.org/okn/o/sdm#hasMinimumValue> <http://www.w3.org/2000/01/rdf-schema#label> "has minimun value"@en .
 # 
 # https://w3id.org/okn/o/sdm#hasModelResultTable
 <https://w3id.org/okn/o/sdm#hasModelResultTable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -458,11 +430,6 @@ _:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <https://w3id.org/okn/o/sdm#CausalDiagram> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/okn/o/sdm#CausalDiagram> <http://www.w3.org/2000/01/rdf-schema#comment> "Diagram information with the processes and variables associated with a model configuration"@en .
 <https://w3id.org/okn/o/sdm#CausalDiagram> <http://www.w3.org/2000/01/rdf-schema#label> "Causal Diagram"@en .
-# 
-# https://w3id.org/okn/o/sdm#Constraint
-<https://w3id.org/okn/o/sdm#Constraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/okn/o/sdm#Constraint> <http://www.w3.org/2000/01/rdf-schema#comment> "Data constraints of a configuration"@en .
-<https://w3id.org/okn/o/sdm#Constraint> <http://www.w3.org/2000/01/rdf-schema#label> "Constraint"@en .
 # 
 # https://w3id.org/okn/o/sdm#CoupledModel
 <https://w3id.org/okn/o/sdm#CoupledModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

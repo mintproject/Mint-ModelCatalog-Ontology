@@ -10,8 +10,8 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/okn/o/sdm">
-        <owl:versionIRI rdf:resource="https://w3id.org/okn/o/sdm/1.7.0"/>
-        <owl:imports rdf:resource="https://w3id.org/okn/o/sd/1.8.0"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/okn/o/sdm/1.8.0"/>
+        <owl:imports rdf:resource="https://w3id.org/okn/o/sd/1.9.0"/>
         <dc:abstract xml:lang="en">The Software Description Ontology for Models (SDM) expands the software description ontology (SD) to add information about scientific software models. Examples of scientific software models are hydrology models, agriculture models or economy models.</dc:abstract>
         <dc:contributor xml:lang="en">Armen Kemanian</dc:contributor>
         <dc:contributor xml:lang="en">Christopher Duffy</dc:contributor>
@@ -27,7 +27,7 @@
         <vann:preferredNamespacePrefix>sdm</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="https://w3id.org/okn/o/sdm#"/>
         <owl:priorVersion rdf:resource="https://w3id.org/okn/o/sdm/1.7.0"/>
-        <owl:versionInfo xml:lang="en">1.7.0</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">1.8.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -189,13 +189,6 @@
     
 
 
-    <!-- https://w3id.org/okn/o/sdm#hasConstraint -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasConstraint"/>
-    
-
-
     <!-- https://w3id.org/okn/o/sdm#hasDiagramPart -->
 
 
@@ -320,13 +313,6 @@
         <rdfs:range rdf:resource="https://w3id.org/okn/o/sdm#Region"/>
         <rdfs:comment xml:lang="en">Property linking a region to a model configuration/calibration. This property implies that the described model configuration is prepared to execute in that target region</rdfs:comment>
     </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/okn/o/sdm#hasVariable -->
-
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/okn/o/sdm#hasVariable"/>
     
 
 
@@ -536,20 +522,6 @@
         <rdfs:comment xml:lang="en">Dimension of the grid (2D, 3D)</rdfs:comment>
         <rdfs:label xml:lang="en">has dimension</rdfs:label>
     </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/okn/o/sdm#hasMaximumValue -->
-
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#hasMaximumValue"/>
-    
-
-
-    <!-- https://w3id.org/okn/o/sdm#hasMinimumValue -->
-
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/okn/o/sdm#hasMinimumValue"/>
     
 
 
@@ -812,13 +784,6 @@
     
 
 
-    <!-- https://w3id.org/okn/o/sdm#Category -->
-
-
-    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#Category"/>
-    
-
-
     <!-- https://w3id.org/okn/o/sdm#CausalDiagram -->
 
 
@@ -826,13 +791,6 @@
         <rdfs:comment xml:lang="en">Diagram information with the processes and variables associated with a model configuration</rdfs:comment>
         <rdfs:label xml:lang="en">Causal Diagram</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- https://w3id.org/okn/o/sdm#Constraint -->
-
-
-    <owl:Class rdf:about="https://w3id.org/okn/o/sdm#Constraint"/>
     
 
 

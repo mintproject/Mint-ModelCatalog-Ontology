@@ -205,21 +205,18 @@
     "@id" : "https://w3id.org/okn/o/sdm#"
   } ],
   "http://www.w3.org/2002/07/owl#imports" : [ {
-    "@id" : "https://w3id.org/okn/o/sd/1.8.0"
+    "@id" : "https://w3id.org/okn/o/sd/1.9.0"
   } ],
   "http://www.w3.org/2002/07/owl#priorVersion" : [ {
     "@id" : "https://w3id.org/okn/o/sdm/1.7.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://w3id.org/okn/o/sdm/1.7.0"
+    "@id" : "https://w3id.org/okn/o/sdm/1.8.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "en",
-    "@value" : "1.7.0"
+    "@value" : "1.8.0"
   } ]
-}, {
-  "@id" : "https://w3id.org/okn/o/sdm#Category",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://w3id.org/okn/o/sdm#CausalDiagram",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -231,9 +228,6 @@
     "@language" : "en",
     "@value" : "Causal Diagram"
   } ]
-}, {
-  "@id" : "https://w3id.org/okn/o/sdm#Constraint",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://w3id.org/okn/o/sdm#CoupledModel",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -621,9 +615,6 @@
     "@id" : "https://w3id.org/okn/o/sdm#CausalDiagram"
   } ]
 }, {
-  "@id" : "https://w3id.org/okn/o/sdm#hasConstraint",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
-}, {
   "@id" : "https://w3id.org/okn/o/sdm#hasCoordinateSystem",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -741,12 +732,6 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/okn/o/sd#VariablePresentation"
   } ]
-}, {
-  "@id" : "https://w3id.org/okn/o/sdm#hasMaximumValue",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
-}, {
-  "@id" : "https://w3id.org/okn/o/sdm#hasMinimumValue",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
   "@id" : "https://w3id.org/okn/o/sdm#hasModelCategory",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
@@ -882,9 +867,6 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
-}, {
-  "@id" : "https://w3id.org/okn/o/sdm#hasVariable",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "https://w3id.org/okn/o/sdm#influences",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
